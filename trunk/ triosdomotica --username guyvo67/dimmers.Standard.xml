@@ -1,0 +1,1906 @@
+<!-- DWF2XML 2.00.01 - Raisonance Dwarf information extractor -->
+<aoffile Filename="dimmers" dwarf="1">
+ <modulelist>
+  <module Name="C:\cortex\dimmers\src\dimmers_adc.c" >
+   <type Family="Base" Name="long int" ID="37"/>
+   <type Family="Base" Name="short int" ID="44"/>
+   <type Family="Base" Name="signed char" ID="51"/>
+   <type Family="Base" Name="long unsigned int" ID="69"/>
+   <type Family="typedef" Name="u32" Line="64" ID="58" toTI="69"/>
+   <type Family="Base" Name="short unsigned int" ID="87"/>
+   <type Family="typedef" Name="u16" Line="65" ID="76" toTI="87"/>
+   <type Family="Base" Name="unsigned char" ID="104"/>
+   <type Family="typedef" Name="u8" Line="66" ID="94" toTI="104"/>
+   <type Family="typedef" Name="bool" Line="80" ID="137" toTI="116"/>
+   <type Family="typedef" Name="FunctionalState" Line="84" ID="190" toTI="169"/>
+   <type Family="ComponentList" Line="62" ID="201">
+    <Component Name="SR" TI="209" Line="63" Offs="0"/>
+    <Component Name="CR1" TI="222" Line="64" Offs="4"/>
+    <Component Name="CR2" TI="236" Line="65" Offs="8"/>
+    <Component Name="SMPR1" TI="250" Line="66" Offs="12"/>
+    <Component Name="SMPR2" TI="264" Line="67" Offs="16"/>
+    <Component Name="JOFR1" TI="278" Line="68" Offs="20"/>
+    <Component Name="JOFR2" TI="292" Line="69" Offs="24"/>
+    <Component Name="JOFR3" TI="306" Line="70" Offs="28"/>
+    <Component Name="JOFR4" TI="320" Line="71" Offs="32"/>
+    <Component Name="HTR" TI="334" Line="72" Offs="36"/>
+    <Component Name="LTR" TI="348" Line="73" Offs="40"/>
+    <Component Name="SQR1" TI="362" Line="74" Offs="44"/>
+    <Component Name="SQR2" TI="376" Line="75" Offs="48"/>
+    <Component Name="SQR3" TI="390" Line="76" Offs="52"/>
+    <Component Name="JSQR" TI="404" Line="77" Offs="56"/>
+    <Component Name="JDR1" TI="418" Line="78" Offs="60"/>
+    <Component Name="JDR2" TI="432" Line="79" Offs="64"/>
+    <Component Name="JDR3" TI="446" Line="80" Offs="68"/>
+    <Component Name="JDR4" TI="460" Line="81" Offs="72"/>
+    <Component Name="DR" TI="474" Line="82" Offs="76"/>
+   </type>
+   <type Family="ComponentList" Line="268" ID="491">
+    <Component Name="CCR" TI="500" Line="269" Offs="0"/>
+    <Component Name="CNDTR" TI="515" Line="270" Offs="4"/>
+    <Component Name="CPAR" TI="530" Line="271" Offs="8"/>
+    <Component Name="CMAR" TI="545" Line="272" Offs="12"/>
+   </type>
+   <type Family="ComponentList" Line="52" ID="561">
+    <Component Name="ADC_Mode" TI="569" Line="53" Offs="0"/>
+    <Component Name="ADC_ScanConvMode" TI="583" Line="54" Offs="4"/>
+    <Component Name="ADC_ContinuousConvMode" TI="597" Line="55" Offs="5"/>
+    <Component Name="ADC_ExternalTrigConv" TI="611" Line="56" Offs="8"/>
+    <Component Name="ADC_DataAlign" TI="625" Line="57" Offs="12"/>
+    <Component Name="ADC_NbrOfChannel" TI="639" Line="58" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="ADC_InitTypeDef" Line="59" ID="654" toTI="561"/>
+   <type Family="ComponentList" Line="52" ID="665">
+    <Component Name="DMA_PeripheralBaseAddr" TI="673" Line="53" Offs="0"/>
+    <Component Name="DMA_MemoryBaseAddr" TI="687" Line="54" Offs="4"/>
+    <Component Name="DMA_DIR" TI="701" Line="55" Offs="8"/>
+    <Component Name="DMA_BufferSize" TI="715" Line="56" Offs="12"/>
+    <Component Name="DMA_PeripheralInc" TI="729" Line="57" Offs="16"/>
+    <Component Name="DMA_MemoryInc" TI="743" Line="58" Offs="20"/>
+    <Component Name="DMA_PeripheralDataSize" TI="757" Line="59" Offs="24"/>
+    <Component Name="DMA_MemoryDataSize" TI="771" Line="60" Offs="28"/>
+    <Component Name="DMA_Mode" TI="785" Line="61" Offs="32"/>
+    <Component Name="DMA_Priority" TI="799" Line="62" Offs="36"/>
+    <Component Name="DMA_M2M" TI="813" Line="63" Offs="40"/>
+   </type>
+   <type Family="typedef" Name="DMA_InitTypeDef" Line="64" ID="828" toTI="665"/>
+   <function Name="AdcEnable" TI="0" FileName="C:\cortex\dimmers\src\dimmers_adc.c" Line="132">
+    <parameter Name="enable" TI="137" FileName="C:\cortex\dimmers\src\dimmers_adc.c" Line="132" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="AdcCalibration" TI="0" FileName="C:\cortex\dimmers\src\dimmers_adc.c" Line="111">
+   </function >
+   <function Name="AdcInit" TI="0" FileName="C:\cortex\dimmers\src\dimmers_adc.c" Line="74">
+    <variable Name="x_ADC_InitStructure" FileName="C:\cortex\dimmers\src\dimmers_adc.c" Line="75" Addr="0x34000004" TI="654"/>
+   </function >
+   <function Name="AdcDmaInit" TI="0" FileName="C:\cortex\dimmers\src\dimmers_adc.c" Line="25">
+   <type Family="Pointer" TI="1037" toTI="76"/>
+    <parameter Name="temp" TI="1037" FileName="C:\cortex\dimmers\src\dimmers_adc.c" Line="25" Addr="0x0" Param="Yes"/>
+    <parameter Name="zerocross" TI="1037" FileName="C:\cortex\dimmers\src\dimmers_adc.c" Line="25" Addr="0x1" Param="Yes"/>
+    <variable Name="x_DMA_InitStructure" FileName="C:\cortex\dimmers\src\dimmers_adc.c" Line="27" Addr="0x3400000C" TI="828"/>
+   </function >
+  </module>
+  <module Name="C:\cortex\dimmers\src\dimmers_exti.c" >
+   <type Family="Base" Name="long int" ID="1081"/>
+   <type Family="Base" Name="short int" ID="1088"/>
+   <type Family="Base" Name="signed char" ID="1095"/>
+   <type Family="Base" Name="long unsigned int" ID="1113"/>
+   <type Family="typedef" Name="u32" Line="64" ID="1102" toTI="1113"/>
+   <type Family="Base" Name="short unsigned int" ID="1120"/>
+   <type Family="Base" Name="unsigned char" ID="1137"/>
+   <type Family="typedef" Name="u8" Line="66" ID="1127" toTI="1137"/>
+   <type Family="typedef" Name="FunctionalState" Line="84" ID="1165" toTI="1144"/>
+   <type Family="typedef" Name="EXTIMode_TypeDef" Line="55" ID="1200" toTI="1179"/>
+   <type Family="typedef" Name="EXTITrigger_TypeDef" Line="65" ID="1238" toTI="1211"/>
+   <type Family="ComponentList" Line="73" ID="1249">
+    <Component Name="EXTI_Line" TI="1257" Line="74" Offs="0"/>
+    <Component Name="EXTI_Mode" TI="1271" Line="75" Offs="4"/>
+    <Component Name="EXTI_Trigger" TI="1285" Line="76" Offs="5"/>
+    <Component Name="EXTI_LineCmd" TI="1299" Line="77" Offs="6"/>
+   </type>
+   <type Family="typedef" Name="EXTI_InitTypeDef" Line="78" ID="1314" toTI="1249"/>
+   <type Family="ComponentList" Name="TExti" Line="16" ID="1325">
+    <Component Name="extidef" TI="1337" Line="17" Offs="0"/>
+    <Component Name="extigpiox" TI="1351" Line="18" Offs="8"/>
+    <Component Name="extipinx" TI="1365" Line="19" Offs="9"/>
+   </type>
+   <type Family="typedef" Name="TExti" Line="20" ID="1380" toTI="1325"/>
+   <function Name="ExtiInit" TI="0" FileName="C:\cortex\dimmers\src\dimmers_exti.c" Line="63">
+    <variable Name="x_EXTI_InitStructure" FileName="C:\cortex\dimmers\src\dimmers_exti.c" Line="65" Addr="0x34000000" TI="1314"/>
+   </function >
+   <type Family="array" ID="1493" toTI="1380"/>
+   <variable Name="gx_extis" FileName="C:\cortex\dimmers\src\dimmers_exti.c" Line="22" Addr="0x20000000" TI="1493"/>
+   <variable Name="gx_extis_disable" FileName="C:\cortex\dimmers\src\dimmers_exti.c" Line="31" Addr="0x20000048" TI="1493"/>
+  </module>
+  <module Name="C:\cortex\dimmers\src\dimmers_gpio.c" >
+   <type Family="Base" Name="long int" ID="1583"/>
+   <type Family="Base" Name="short int" ID="1590"/>
+   <type Family="Base" Name="signed char" ID="1597"/>
+   <type Family="Base" Name="long unsigned int" ID="1604"/>
+   <type Family="Base" Name="short unsigned int" ID="1622"/>
+   <type Family="typedef" Name="u16" Line="65" ID="1611" toTI="1622"/>
+   <type Family="Base" Name="unsigned char" ID="1639"/>
+   <type Family="typedef" Name="u8" Line="66" ID="1629" toTI="1639"/>
+   <type Family="ComponentList" Line="360" ID="1675">
+    <Component Name="CRL" TI="1684" Line="361" Offs="0"/>
+    <Component Name="CRH" TI="1699" Line="362" Offs="4"/>
+    <Component Name="IDR" TI="1714" Line="363" Offs="8"/>
+    <Component Name="ODR" TI="1729" Line="364" Offs="12"/>
+    <Component Name="BSRR" TI="1744" Line="365" Offs="16"/>
+    <Component Name="BRR" TI="1759" Line="366" Offs="20"/>
+    <Component Name="LCKR" TI="1774" Line="367" Offs="24"/>
+   </type>
+   <type Family="typedef" Name="GPIO_TypeDef" Line="368" ID="1790" toTI="1675"/>
+   <type Family="typedef" Name="GPIOSpeed_TypeDef" Line="64" ID="1829" toTI="1802"/>
+   <type Family="typedef" Name="GPIOMode_TypeDef" Line="79" ID="1898" toTI="1840"/>
+   <type Family="ComponentList" Line="88" ID="1909">
+    <Component Name="GPIO_Pin" TI="1917" Line="89" Offs="0"/>
+    <Component Name="GPIO_Speed" TI="1931" Line="90" Offs="2"/>
+    <Component Name="GPIO_Mode" TI="1945" Line="91" Offs="3"/>
+   </type>
+   <type Family="typedef" Name="GPIO_InitTypeDef" Line="92" ID="1960" toTI="1909"/>
+   <type Family="typedef" Name="DIP_STATE" Line="14" ID="1991" toTI="1971"/>
+   <type Family="ComponentList" Name="GpioDef" Line="20" ID="2002">
+    <Component Name="pindef" TI="2014" Line="21" Offs="0"/>
+   <type Family="Pointer" TI="2043" toTI="1790"/>
+    <Component Name="portdef" TI="2028" Line="22" Offs="4"/>
+   </type>
+   <type Family="typedef" Name="GpioDef" Line="23" ID="2049" toTI="2002"/>
+   <function Name="GpioGetDipState" TI="1991" FileName="C:\cortex\dimmers\src\dimmers_gpio.c" Line="110">
+    <parameter Name="dip" TI="1611" FileName="C:\cortex\dimmers\src\dimmers_gpio.c" Line="110" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="GpioClockSet" TI="0" FileName="C:\cortex\dimmers\src\dimmers_gpio.c" Line="94">
+   </function >
+   <function Name="GpioInit" TI="0" FileName="C:\cortex\dimmers\src\dimmers_gpio.c" Line="74">
+    <variable Name="u8_gp" FileName="C:\cortex\dimmers\src\dimmers_gpio.c" Line="75" Addr="0x4" TI="1629"/>
+    <variable Name="x_init" FileName="C:\cortex\dimmers\src\dimmers_gpio.c" Line="76" Addr="0x34000004" TI="1960"/>
+    <variable Name="s" FileName="C:\cortex\dimmers\src\dimmers_gpio.c" Line="77" Addr="0x34000010" TI="1646"/>
+   </function >
+   <variable Name="GPIO_InitStructure" FileName="C:\cortex\dimmers\src\dimmers_gpio.c" Line="19" Addr="0x0" TI="1960"/>
+   <type Family="array" ID="2210" toTI="2049"/>
+   <variable Name="gx_gpios" FileName="C:\cortex\dimmers\src\dimmers_gpio.c" Line="30" Addr="0x20000090" TI="2210"/>
+  </module>
+  <module Name="C:\cortex\dimmers\src\dimmers_nvic.c" >
+   <type Family="Base" Name="long int" ID="2282"/>
+   <type Family="Base" Name="short int" ID="2289"/>
+   <type Family="Base" Name="signed char" ID="2296"/>
+   <type Family="Base" Name="long unsigned int" ID="2303"/>
+   <type Family="Base" Name="short unsigned int" ID="2310"/>
+   <type Family="Base" Name="unsigned char" ID="2327"/>
+   <type Family="typedef" Name="u8" Line="66" ID="2317" toTI="2327"/>
+   <type Family="typedef" Name="FunctionalState" Line="84" ID="2355" toTI="2334"/>
+   <type Family="ComponentList" Line="52" ID="2369">
+    <Component Name="NVIC_IRQChannel" TI="2377" Line="53" Offs="0"/>
+    <Component Name="NVIC_IRQChannelPreemptionPriority" TI="2391" Line="54" Offs="1"/>
+    <Component Name="NVIC_IRQChannelSubPriority" TI="2405" Line="55" Offs="2"/>
+    <Component Name="NVIC_IRQChannelCmd" TI="2419" Line="56" Offs="3"/>
+   </type>
+   <type Family="typedef" Name="NVIC_InitTypeDef" Line="57" ID="2434" toTI="2369"/>
+   <function Name="NvicInit" TI="0" FileName="C:\cortex\dimmers\src\dimmers_nvic.c" Line="52">
+    <variable Name="x_NVIC_InitStructure" FileName="C:\cortex\dimmers\src\dimmers_nvic.c" Line="55" Addr="0x34000004" TI="2434"/>
+   </function >
+   <type Family="array" ID="2496" toTI="2434"/>
+   <variable Name="gx_nvics" FileName="C:\cortex\dimmers\src\dimmers_nvic.c" Line="27" Addr="0x20000160" TI="2496"/>
+  </module>
+  <module Name="C:\cortex\dimmers\src\dimmers_rcc.c" >
+   <type Family="Base" Name="long int" ID="2568"/>
+   <type Family="Base" Name="short int" ID="2575"/>
+   <type Family="Base" Name="signed char" ID="2582"/>
+   <type Family="Base" Name="long unsigned int" ID="2600"/>
+   <type Family="typedef" Name="u32" Line="64" ID="2589" toTI="2600"/>
+   <type Family="Base" Name="short unsigned int" ID="2607"/>
+   <type Family="Base" Name="unsigned char" ID="2614"/>
+   <type Family="typedef" Name="bool" Line="80" ID="2642" toTI="2621"/>
+   <type Family="typedef" Name="ErrorStatus" Line="87" ID="2716" toTI="2695"/>
+   <type Family="ComponentList" Line="51" ID="2730">
+    <Component Name="SYSCLK_Frequency" TI="2738" Line="52" Offs="0"/>
+    <Component Name="HCLK_Frequency" TI="2752" Line="53" Offs="4"/>
+    <Component Name="PCLK1_Frequency" TI="2766" Line="54" Offs="8"/>
+    <Component Name="PCLK2_Frequency" TI="2780" Line="55" Offs="12"/>
+    <Component Name="ADCCLK_Frequency" TI="2794" Line="56" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="RCC_ClocksTypeDef" Line="57" ID="2809" toTI="2730"/>
+   <function Name="RccInit" TI="0" FileName="C:\cortex\dimmers\src\dimmers_rcc.c" Line="37">
+   </function >
+  </module>
+  <module Name="C:\cortex\dimmers\src\dimmers_tim.c" >
+   <type Family="Base" Name="long int" ID="2976"/>
+   <type Family="Base" Name="short int" ID="2983"/>
+   <type Family="Base" Name="signed char" ID="2990"/>
+   <type Family="Base" Name="long unsigned int" ID="3008"/>
+   <type Family="typedef" Name="u32" Line="64" ID="2997" toTI="3008"/>
+   <type Family="Base" Name="short unsigned int" ID="3026"/>
+   <type Family="typedef" Name="u16" Line="65" ID="3015" toTI="3026"/>
+   <type Family="Base" Name="unsigned char" ID="3043"/>
+   <type Family="typedef" Name="u8" Line="66" ID="3033" toTI="3043"/>
+   <type Family="typedef" Name="FunctionalState" Line="84" ID="3076" toTI="3055"/>
+   <type Family="ComponentList" Line="549" ID="3090">
+    <Component Name="CR1" TI="3099" Line="550" Offs="0"/>
+    <Component Name="RESERVED0" TI="3114" Line="551" Offs="2"/>
+    <Component Name="CR2" TI="3129" Line="552" Offs="4"/>
+    <Component Name="RESERVED1" TI="3144" Line="553" Offs="6"/>
+    <Component Name="SMCR" TI="3159" Line="554" Offs="8"/>
+    <Component Name="RESERVED2" TI="3174" Line="555" Offs="10"/>
+    <Component Name="DIER" TI="3189" Line="556" Offs="12"/>
+    <Component Name="RESERVED3" TI="3204" Line="557" Offs="14"/>
+    <Component Name="SR" TI="3219" Line="558" Offs="16"/>
+    <Component Name="RESERVED4" TI="3233" Line="559" Offs="18"/>
+    <Component Name="EGR" TI="3248" Line="560" Offs="20"/>
+    <Component Name="RESERVED5" TI="3263" Line="561" Offs="22"/>
+    <Component Name="CCMR1" TI="3278" Line="562" Offs="24"/>
+    <Component Name="RESERVED6" TI="3293" Line="563" Offs="26"/>
+    <Component Name="CCMR2" TI="3308" Line="564" Offs="28"/>
+    <Component Name="RESERVED7" TI="3323" Line="565" Offs="30"/>
+    <Component Name="CCER" TI="3338" Line="566" Offs="32"/>
+    <Component Name="RESERVED8" TI="3353" Line="567" Offs="34"/>
+    <Component Name="CNT" TI="3368" Line="568" Offs="36"/>
+    <Component Name="RESERVED9" TI="3383" Line="569" Offs="38"/>
+    <Component Name="PSC" TI="3398" Line="570" Offs="40"/>
+    <Component Name="RESERVED10" TI="3413" Line="571" Offs="42"/>
+    <Component Name="ARR" TI="3428" Line="572" Offs="44"/>
+    <Component Name="RESERVED11" TI="3443" Line="573" Offs="46"/>
+    <Component Name="RCR" TI="3458" Line="574" Offs="48"/>
+    <Component Name="RESERVED12" TI="3473" Line="575" Offs="50"/>
+    <Component Name="CCR1" TI="3488" Line="576" Offs="52"/>
+    <Component Name="RESERVED13" TI="3503" Line="577" Offs="54"/>
+    <Component Name="CCR2" TI="3518" Line="578" Offs="56"/>
+    <Component Name="RESERVED14" TI="3533" Line="579" Offs="58"/>
+    <Component Name="CCR3" TI="3548" Line="580" Offs="60"/>
+    <Component Name="RESERVED15" TI="3563" Line="581" Offs="62"/>
+    <Component Name="CCR4" TI="3578" Line="582" Offs="64"/>
+    <Component Name="RESERVED16" TI="3593" Line="583" Offs="66"/>
+    <Component Name="BDTR" TI="3608" Line="584" Offs="68"/>
+    <Component Name="RESERVED17" TI="3623" Line="585" Offs="70"/>
+    <Component Name="DCR" TI="3638" Line="586" Offs="72"/>
+    <Component Name="RESERVED18" TI="3653" Line="587" Offs="74"/>
+    <Component Name="DMAR" TI="3668" Line="588" Offs="76"/>
+    <Component Name="RESERVED19" TI="3683" Line="589" Offs="78"/>
+   </type>
+   <type Family="ComponentList" Line="53" ID="3699">
+    <Component Name="TIM_Prescaler" TI="3707" Line="54" Offs="0"/>
+    <Component Name="TIM_CounterMode" TI="3721" Line="55" Offs="2"/>
+    <Component Name="TIM_Period" TI="3735" Line="56" Offs="4"/>
+    <Component Name="TIM_ClockDivision" TI="3749" Line="57" Offs="6"/>
+    <Component Name="TIM_RepetitionCounter" TI="3763" Line="58" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="TIM_TimeBaseInitTypeDef" Line="59" ID="3778" toTI="3699"/>
+   <type Family="ComponentList" Line="63" ID="3789">
+    <Component Name="TIM_OCMode" TI="3797" Line="64" Offs="0"/>
+    <Component Name="TIM_OutputState" TI="3811" Line="65" Offs="2"/>
+    <Component Name="TIM_OutputNState" TI="3825" Line="66" Offs="4"/>
+    <Component Name="TIM_Pulse" TI="3839" Line="67" Offs="6"/>
+    <Component Name="TIM_OCPolarity" TI="3853" Line="68" Offs="8"/>
+    <Component Name="TIM_OCNPolarity" TI="3867" Line="69" Offs="10"/>
+    <Component Name="TIM_OCIdleState" TI="3881" Line="70" Offs="12"/>
+    <Component Name="TIM_OCNIdleState" TI="3895" Line="71" Offs="14"/>
+   </type>
+   <type Family="typedef" Name="TIM_OCInitTypeDef" Line="72" ID="3910" toTI="3789"/>
+   <type Family="Pointer" TI="3932" toTI="3938"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="3921" toTI="3932"/>
+   <type Family="Pointer" TI="3932" toTI="3938"/>
+   <type Family="Pointer" TI="3961" toTI="3967"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="3950" toTI="3961"/>
+   <type Family="Pointer" TI="3961" toTI="3967"/>
+   <type Family="Base" Name="int" ID="3979"/>
+   <type Family="Base" Name="unsigned int" ID="3986"/>
+   <type Family="Base" Name="long long int" ID="3993"/>
+   <type Family="Base" Name="long long unsigned int" ID="4000"/>
+   <type Family="Base" Name="char" ID="4007"/>
+   <type Family="Base" Name="double" ID="4014"/>
+   <type Family="Base" Name="float" ID="4021"/>
+   <type Family="Base" Name="long double" ID="4028"/>
+   <function Name="ComparesToArrayOfFunctions" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="372">
+   </function >
+   <function Name="CompareStatesToArrayOfFunctions" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="382">
+   </function >
+   <function Name="TimResetAll" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="392">
+   </function >
+   <function Name="TimGetHoldValue" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="291">
+    <parameter Name="set" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="291" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="TimSetCompareSetHold6" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="361">
+    <parameter Name="set" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="361" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="TimSetCompareSetHold5" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="349">
+    <parameter Name="set" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="349" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="TimSetCompareSetHold4" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="337">
+    <parameter Name="set" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="337" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="TimSetCompareSetHold3" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="325">
+    <parameter Name="set" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="325" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="TimSetCompareSetHold2" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="313">
+    <parameter Name="set" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="313" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="TimSetCompareSetHold1" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="301">
+    <parameter Name="set" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="301" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="TimStartAll" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="282">
+   </function >
+   <function Name="SetTimIntCompare6" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="278">
+    <parameter Name="NewState" TI="3076" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="278" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="SetTimIntCompare5" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="274">
+    <parameter Name="NewState" TI="3076" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="274" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="SetTimIntCompare4" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="270">
+    <parameter Name="NewState" TI="3076" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="270" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="SetTimIntCompare3" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="266">
+    <parameter Name="NewState" TI="3076" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="266" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="SetTimIntCompare2" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="262">
+    <parameter Name="NewState" TI="3076" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="262" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="SetTimIntCompare1" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="258">
+    <parameter Name="NewState" TI="3076" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="258" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="TimSetInitCompareSetHold6" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="217">
+    <parameter Name="set" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="217" Addr="0x0" Param="Yes"/>
+    <variable Name="TIM_OCInitStructure" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="219" Addr="0x34000000" TI="3910"/>
+   </function >
+   <function Name="TimSetInitCompareSetHold4" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="179">
+    <parameter Name="set" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="179" Addr="0x0" Param="Yes"/>
+    <variable Name="TIM_OCInitStructure" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="181" Addr="0x34000000" TI="3910"/>
+   </function >
+   <function Name="TimSetInitCompareSetHold2" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="142">
+    <parameter Name="set" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="142" Addr="0x0" Param="Yes"/>
+    <variable Name="TIM_OCInitStructure" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="144" Addr="0x34000000" TI="3910"/>
+   </function >
+   <function Name="TimSetInitCompareSetHold5" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="198">
+    <parameter Name="set" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="198" Addr="0x0" Param="Yes"/>
+    <variable Name="TIM_OCInitStructure" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="200" Addr="0x34000000" TI="3910"/>
+   </function >
+   <function Name="TimSetInitCompareSetHold3" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="160">
+    <parameter Name="set" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="160" Addr="0x0" Param="Yes"/>
+    <variable Name="TIM_OCInitStructure" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="162" Addr="0x34000000" TI="3910"/>
+   </function >
+   <function Name="TimSetInitCompareSetHold1" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="123">
+    <parameter Name="set" TI="3015" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="123" Addr="0x0" Param="Yes"/>
+    <variable Name="TIM_OCInitStructure" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="125" Addr="0x34000000" TI="3910"/>
+   </function >
+   <function Name="TimSetConfigTimer4" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="79">
+    <parameter Name="period" TI="2997" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="79" Addr="0x0" Param="Yes"/>
+    <variable Name="TIM_TimeBaseStructure" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="81" Addr="0x34000006" TI="3778"/>
+   </function >
+   <function Name="TimSetConfigTimer3" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="67">
+    <parameter Name="period" TI="2997" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="67" Addr="0x0" Param="Yes"/>
+    <variable Name="TIM_TimeBaseStructure" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="69" Addr="0x34000006" TI="3778"/>
+   </function >
+   <function Name="TimSetConfigTimer2" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="55">
+    <parameter Name="period" TI="2997" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="55" Addr="0x0" Param="Yes"/>
+    <variable Name="TIM_TimeBaseStructure" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="57" Addr="0x34000006" TI="3778"/>
+   </function >
+   <function Name="TimSetConfigTimer1" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="43">
+    <parameter Name="period" TI="2997" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="43" Addr="0x0" Param="Yes"/>
+    <variable Name="TIM_TimeBaseStructure" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="45" Addr="0x34000006" TI="3778"/>
+   </function >
+   <function Name="TimSetClockTimer4" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="27">
+   </function >
+   <function Name="TimSetClockTimer3" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="24">
+   </function >
+   <function Name="TimSetClockTimer2" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="21">
+   </function >
+   <function Name="TimSetClockTimer1" TI="0" FileName="C:\cortex\dimmers\src\dimmers_tim.c" Line="18">
+   </function >
+   <type Family="Pointer" TI="3932" toTI="3938"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="3921" toTI="3932"/>
+   <type Family="array" ID="5708" toTI="3921"/>
+   <type Family="Pointer" TI="3932" toTI="3938"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="3921" toTI="3932"/>
+   <type Family="array" ID="5708" toTI="3921"/>
+   <type Family="Pointer" TI="3961" toTI="3967"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="3950" toTI="3961"/>
+   <type Family="array" ID="5737" toTI="3950"/>
+   <type Family="Pointer" TI="3961" toTI="3967"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="3950" toTI="3961"/>
+   <type Family="array" ID="5737" toTI="3950"/>
+  </module>
+  <module Name="C:\cortex\dimmers\src\dimmers_wdg.c" >
+   <type Family="Base" Name="long int" ID="5804"/>
+   <type Family="Base" Name="short int" ID="5811"/>
+   <type Family="Base" Name="signed char" ID="5818"/>
+   <type Family="Base" Name="long unsigned int" ID="5825"/>
+   <type Family="Base" Name="short unsigned int" ID="5832"/>
+   <type Family="Base" Name="unsigned char" ID="5839"/>
+   <function Name="WdgSet" TI="0" FileName="C:\cortex\dimmers\src\dimmers_wdg.c" Line="25">
+   </function >
+  </module>
+  <module Name="C:\cortex\dimmers\src\fir_stm32.s" >
+  </module>
+  <module Name="C:\cortex\dimmers\src\main.c" >
+   <type Family="Base" Name="long int" ID="6022"/>
+   <type Family="Base" Name="short int" ID="6040"/>
+   <type Family="typedef" Name="s16" Line="49" ID="6029" toTI="6040"/>
+   <type Family="Base" Name="signed char" ID="6047"/>
+   <type Family="Base" Name="long unsigned int" ID="6054"/>
+   <type Family="Base" Name="short unsigned int" ID="6072"/>
+   <type Family="typedef" Name="u16" Line="65" ID="6061" toTI="6072"/>
+   <type Family="Base" Name="unsigned char" ID="6089"/>
+   <type Family="typedef" Name="u8" Line="66" ID="6079" toTI="6089"/>
+   <type Family="typedef" Name="bool" Line="80" ID="6127" toTI="6106"/>
+   <type Family="typedef" Name="FunctionalState" Line="84" ID="6159" toTI="6138"/>
+   <type Family="ComponentList" Line="62" ID="6170">
+    <Component Name="SR" TI="6178" Line="63" Offs="0"/>
+    <Component Name="CR1" TI="6191" Line="64" Offs="4"/>
+    <Component Name="CR2" TI="6205" Line="65" Offs="8"/>
+    <Component Name="SMPR1" TI="6219" Line="66" Offs="12"/>
+    <Component Name="SMPR2" TI="6233" Line="67" Offs="16"/>
+    <Component Name="JOFR1" TI="6247" Line="68" Offs="20"/>
+    <Component Name="JOFR2" TI="6261" Line="69" Offs="24"/>
+    <Component Name="JOFR3" TI="6275" Line="70" Offs="28"/>
+    <Component Name="JOFR4" TI="6289" Line="71" Offs="32"/>
+    <Component Name="HTR" TI="6303" Line="72" Offs="36"/>
+    <Component Name="LTR" TI="6317" Line="73" Offs="40"/>
+    <Component Name="SQR1" TI="6331" Line="74" Offs="44"/>
+    <Component Name="SQR2" TI="6345" Line="75" Offs="48"/>
+    <Component Name="SQR3" TI="6359" Line="76" Offs="52"/>
+    <Component Name="JSQR" TI="6373" Line="77" Offs="56"/>
+    <Component Name="JDR1" TI="6387" Line="78" Offs="60"/>
+    <Component Name="JDR2" TI="6401" Line="79" Offs="64"/>
+    <Component Name="JDR3" TI="6415" Line="80" Offs="68"/>
+    <Component Name="JDR4" TI="6429" Line="81" Offs="72"/>
+    <Component Name="DR" TI="6443" Line="82" Offs="76"/>
+   </type>
+   <type Family="ComponentList" Line="360" ID="6460">
+    <Component Name="CRL" TI="6469" Line="361" Offs="0"/>
+    <Component Name="CRH" TI="6484" Line="362" Offs="4"/>
+    <Component Name="IDR" TI="6499" Line="363" Offs="8"/>
+    <Component Name="ODR" TI="6514" Line="364" Offs="12"/>
+    <Component Name="BSRR" TI="6529" Line="365" Offs="16"/>
+    <Component Name="BRR" TI="6544" Line="366" Offs="20"/>
+    <Component Name="LCKR" TI="6559" Line="367" Offs="24"/>
+   </type>
+   <type Family="ComponentList" Line="549" ID="6575">
+    <Component Name="CR1" TI="6584" Line="550" Offs="0"/>
+    <Component Name="RESERVED0" TI="6599" Line="551" Offs="2"/>
+    <Component Name="CR2" TI="6614" Line="552" Offs="4"/>
+    <Component Name="RESERVED1" TI="6629" Line="553" Offs="6"/>
+    <Component Name="SMCR" TI="6644" Line="554" Offs="8"/>
+    <Component Name="RESERVED2" TI="6659" Line="555" Offs="10"/>
+    <Component Name="DIER" TI="6674" Line="556" Offs="12"/>
+    <Component Name="RESERVED3" TI="6689" Line="557" Offs="14"/>
+    <Component Name="SR" TI="6704" Line="558" Offs="16"/>
+    <Component Name="RESERVED4" TI="6718" Line="559" Offs="18"/>
+    <Component Name="EGR" TI="6733" Line="560" Offs="20"/>
+    <Component Name="RESERVED5" TI="6748" Line="561" Offs="22"/>
+    <Component Name="CCMR1" TI="6763" Line="562" Offs="24"/>
+    <Component Name="RESERVED6" TI="6778" Line="563" Offs="26"/>
+    <Component Name="CCMR2" TI="6793" Line="564" Offs="28"/>
+    <Component Name="RESERVED7" TI="6808" Line="565" Offs="30"/>
+    <Component Name="CCER" TI="6823" Line="566" Offs="32"/>
+    <Component Name="RESERVED8" TI="6838" Line="567" Offs="34"/>
+    <Component Name="CNT" TI="6853" Line="568" Offs="36"/>
+    <Component Name="RESERVED9" TI="6868" Line="569" Offs="38"/>
+    <Component Name="PSC" TI="6883" Line="570" Offs="40"/>
+    <Component Name="RESERVED10" TI="6898" Line="571" Offs="42"/>
+    <Component Name="ARR" TI="6913" Line="572" Offs="44"/>
+    <Component Name="RESERVED11" TI="6928" Line="573" Offs="46"/>
+    <Component Name="RCR" TI="6943" Line="574" Offs="48"/>
+    <Component Name="RESERVED12" TI="6958" Line="575" Offs="50"/>
+    <Component Name="CCR1" TI="6973" Line="576" Offs="52"/>
+    <Component Name="RESERVED13" TI="6988" Line="577" Offs="54"/>
+    <Component Name="CCR2" TI="7003" Line="578" Offs="56"/>
+    <Component Name="RESERVED14" TI="7018" Line="579" Offs="58"/>
+    <Component Name="CCR3" TI="7033" Line="580" Offs="60"/>
+    <Component Name="RESERVED15" TI="7048" Line="581" Offs="62"/>
+    <Component Name="CCR4" TI="7063" Line="582" Offs="64"/>
+    <Component Name="RESERVED16" TI="7078" Line="583" Offs="66"/>
+    <Component Name="BDTR" TI="7093" Line="584" Offs="68"/>
+    <Component Name="RESERVED17" TI="7108" Line="585" Offs="70"/>
+    <Component Name="DCR" TI="7123" Line="586" Offs="72"/>
+    <Component Name="RESERVED18" TI="7138" Line="587" Offs="74"/>
+    <Component Name="DMAR" TI="7153" Line="588" Offs="76"/>
+    <Component Name="RESERVED19" TI="7168" Line="589" Offs="78"/>
+   </type>
+   <type Family="Pointer" TI="7257" toTI="7263"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="7246" toTI="7257"/>
+   <type Family="Pointer" TI="7257" toTI="7263"/>
+   <type Family="Pointer" TI="7286" toTI="7292"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="7275" toTI="7286"/>
+   <type Family="Pointer" TI="7286" toTI="7292"/>
+   <type Family="Base" Name="int" ID="7304"/>
+   <type Family="Base" Name="unsigned int" ID="7311"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="7320" toTI="7318"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="7331" toTI="7318"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="7331" toTI="7318"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="7342" toTI="7331"/>
+   <type Family="typedef" Name="SWITCHER_TYPE" Line="59" ID="7374" toTI="7353"/>
+   <type Family="typedef" Name="LIGHT_DIRECTION" Line="60" ID="7405" toTI="7385"/>
+   <type Family="ComponentList" Name="TlightProperties" Line="73" ID="7416">
+    <Component Name="value" TI="7428" Line="74" Offs="0"/>
+    <Component Name="min" TI="7442" Line="75" Offs="2"/>
+    <Component Name="max" TI="7456" Line="76" Offs="4"/>
+    <Component Name="step" TI="7470" Line="77" Offs="6"/>
+    <Component Name="outputpin" TI="7484" Line="78" Offs="8"/>
+    <Component Name="inputpin" TI="7498" Line="79" Offs="10"/>
+    <Component Name="type" TI="7512" Line="80" Offs="12"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="7331" toTI="7318"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="7342" toTI="7331"/>
+    <Component Name="sync" TI="7526" Line="81" Offs="16"/>
+   <type Family="Pointer" TI="7257" toTI="7263"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="7246" toTI="7257"/>
+    <Component Name="compare" TI="7540" Line="82" Offs="20"/>
+   <type Family="Pointer" TI="7286" toTI="7292"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="7275" toTI="7286"/>
+    <Component Name="comparestate" TI="7554" Line="83" Offs="24"/>
+   </type>
+   <type Family="typedef" Name="TLightProperties" Line="84" ID="7569" toTI="7416"/>
+   <type Family="Pointer" TI="7591" toTI="7416"/>
+   <type Family="typedef" Name="pTLightProperties" Line="84" ID="7580" toTI="7591"/>
+   <function Name="UtilUpdateLightFromButton" TI="0" FileName="C:\cortex\dimmers\src\main.c" Line="97">
+    <parameter Name="plight" TI="7580" FileName="C:\cortex\dimmers\src\main.c" Line="97" Addr="0x0" Param="Yes"/>
+    <parameter Name="value" TI="6061" FileName="C:\cortex\dimmers\src\main.c" Line="97" Addr="0x1" Param="Yes"/>
+   </function >
+   <function Name="vSendUpdateTask" TI="0" FileName="C:\cortex\dimmers\src\main.c" Line="511">
+   <type Family="Pointer" TI="7318" toTI="0"/>
+    <parameter Name="params" TI="7318" FileName="C:\cortex\dimmers\src\main.c" Line="511" Addr="0x0" Param="Yes"/>
+    <variable Name="temp" FileName="C:\cortex\dimmers\src\main.c" Line="108" Addr="0x34000004" TI="0"/>
+   </function >
+   <function Name="vButtonDimmerTask" TI="0" FileName="C:\cortex\dimmers\src\main.c" Line="351">
+   <type Family="Pointer" TI="7318" toTI="0"/>
+    <parameter Name="params" TI="7318" FileName="C:\cortex\dimmers\src\main.c" Line="351" Addr="0x0" Param="Yes"/>
+    <variable Name="pLight" FileName="C:\cortex\dimmers\src\main.c" Line="352" Addr="0x5" TI="7580"/>
+    <variable Name="cycle" FileName="C:\cortex\dimmers\src\main.c" Line="353" Addr="0x6" TI="6079"/>
+    <variable Name="temp_value" FileName="C:\cortex\dimmers\src\main.c" Line="354" Addr="0x4" TI="6061"/>
+    <variable Name="dir" FileName="C:\cortex\dimmers\src\main.c" Line="355" Addr="0x8" TI="7405"/>
+   </function >
+   <function Name="vButtonToggleTask" TI="0" FileName="C:\cortex\dimmers\src\main.c" Line="299">
+   <type Family="Pointer" TI="7318" toTI="0"/>
+    <parameter Name="params" TI="7318" FileName="C:\cortex\dimmers\src\main.c" Line="299" Addr="0x0" Param="Yes"/>
+    <variable Name="pLight" FileName="C:\cortex\dimmers\src\main.c" Line="301" Addr="0x0" TI="7580"/>
+   </function >
+   <function Name="vRefreshTask" TI="0" FileName="C:\cortex\dimmers\src\main.c" Line="469">
+   <type Family="Pointer" TI="7318" toTI="0"/>
+    <parameter Name="params" TI="7318" FileName="C:\cortex\dimmers\src\main.c" Line="469" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="vI2C2ReceiveTask" TI="0" FileName="C:\cortex\dimmers\src\main.c" Line="454">
+   <type Family="Pointer" TI="7318" toTI="0"/>
+    <parameter Name="params" TI="7318" FileName="C:\cortex\dimmers\src\main.c" Line="454" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="vInitDimmerValues" TI="0" FileName="C:\cortex\dimmers\src\main.c" Line="330">
+   <type Family="Pointer" TI="7318" toTI="0"/>
+    <parameter Name="params" TI="7318" FileName="C:\cortex\dimmers\src\main.c" Line="330" Addr="0x0" Param="Yes"/>
+    <variable Name="pLight" FileName="C:\cortex\dimmers\src\main.c" Line="331" Addr="0x4" TI="7580"/>
+   </function >
+   <function Name="vTaskInitSystem" TI="0" FileName="C:\cortex\dimmers\src\main.c" Line="147">
+   <type Family="Pointer" TI="7318" toTI="0"/>
+    <parameter Name="params" TI="7318" FileName="C:\cortex\dimmers\src\main.c" Line="147" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="main" TI="7304" FileName="C:\cortex\dimmers\src\main.c" Line="71">
+   </function >
+   <type Family="Pointer" TI="7257" toTI="7263"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="7246" toTI="7257"/>
+   <type Family="array" ID="8438" toTI="7246"/>
+   <type Family="Pointer" TI="7257" toTI="7263"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="7246" toTI="7257"/>
+   <type Family="array" ID="8438" toTI="7246"/>
+   <type Family="Pointer" TI="7286" toTI="7292"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="7275" toTI="7286"/>
+   <type Family="array" ID="8467" toTI="7275"/>
+   <type Family="Pointer" TI="7286" toTI="7292"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="7275" toTI="7286"/>
+   <type Family="array" ID="8467" toTI="7275"/>
+   <type Family="array" ID="8496" toTI="7569"/>
+   <type Family="array" ID="8546" toTI="6029"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="7320" toTI="7318"/>
+   <type Family="array" ID="8647" toTI="7320"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="7320" toTI="7318"/>
+   <type Family="array" ID="8647" toTI="7320"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="7320" toTI="7318"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="7320" toTI="7318"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="7320" toTI="7318"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="7331" toTI="7318"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="7342" toTI="7331"/>
+   <type Family="array" ID="8715" toTI="7342"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="7331" toTI="7318"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="7342" toTI="7331"/>
+   <type Family="array" ID="8715" toTI="7342"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="7331" toTI="7318"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="7342" toTI="7331"/>
+   <type Family="Pointer" TI="7318" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="7331" toTI="7318"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="7342" toTI="7331"/>
+   <variable Name="count" FileName="C:\cortex\dimmers\src\main.c" Line="52" Addr="0x0" TI="6096"/>
+  </module>
+  <module Name="C:\cortex\dimmers\src\memshift.s" >
+  </module>
+  <module Name="C:\cortex\dimmers\src\stm32f10x_it.c" >
+   <type Family="Base" Name="long int" ID="8929"/>
+   <type Family="typedef" Name="s32" Line="48" ID="8918" toTI="8929"/>
+   <type Family="Base" Name="short int" ID="8947"/>
+   <type Family="typedef" Name="s16" Line="49" ID="8936" toTI="8947"/>
+   <type Family="Base" Name="signed char" ID="8954"/>
+   <type Family="Base" Name="long unsigned int" ID="8972"/>
+   <type Family="typedef" Name="u32" Line="64" ID="8961" toTI="8972"/>
+   <type Family="Base" Name="short unsigned int" ID="8990"/>
+   <type Family="typedef" Name="u16" Line="65" ID="8979" toTI="8990"/>
+   <type Family="Base" Name="unsigned char" ID="9007"/>
+   <type Family="typedef" Name="u8" Line="66" ID="8997" toTI="9007"/>
+   <type Family="typedef" Name="bool" Line="80" ID="9045" toTI="9024"/>
+   <type Family="typedef" Name="FunctionalState" Line="84" ID="9098" toTI="9077"/>
+   <type Family="ComponentList" Line="62" ID="9109">
+    <Component Name="SR" TI="9117" Line="63" Offs="0"/>
+    <Component Name="CR1" TI="9130" Line="64" Offs="4"/>
+    <Component Name="CR2" TI="9144" Line="65" Offs="8"/>
+    <Component Name="SMPR1" TI="9158" Line="66" Offs="12"/>
+    <Component Name="SMPR2" TI="9172" Line="67" Offs="16"/>
+    <Component Name="JOFR1" TI="9186" Line="68" Offs="20"/>
+    <Component Name="JOFR2" TI="9200" Line="69" Offs="24"/>
+    <Component Name="JOFR3" TI="9214" Line="70" Offs="28"/>
+    <Component Name="JOFR4" TI="9228" Line="71" Offs="32"/>
+    <Component Name="HTR" TI="9242" Line="72" Offs="36"/>
+    <Component Name="LTR" TI="9256" Line="73" Offs="40"/>
+    <Component Name="SQR1" TI="9270" Line="74" Offs="44"/>
+    <Component Name="SQR2" TI="9284" Line="75" Offs="48"/>
+    <Component Name="SQR3" TI="9298" Line="76" Offs="52"/>
+    <Component Name="JSQR" TI="9312" Line="77" Offs="56"/>
+    <Component Name="JDR1" TI="9326" Line="78" Offs="60"/>
+    <Component Name="JDR2" TI="9340" Line="79" Offs="64"/>
+    <Component Name="JDR3" TI="9354" Line="80" Offs="68"/>
+    <Component Name="JDR4" TI="9368" Line="81" Offs="72"/>
+    <Component Name="DR" TI="9382" Line="82" Offs="76"/>
+   </type>
+   <type Family="ComponentList" Line="360" ID="9399">
+    <Component Name="CRL" TI="9408" Line="361" Offs="0"/>
+    <Component Name="CRH" TI="9423" Line="362" Offs="4"/>
+    <Component Name="IDR" TI="9438" Line="363" Offs="8"/>
+    <Component Name="ODR" TI="9453" Line="364" Offs="12"/>
+    <Component Name="BSRR" TI="9468" Line="365" Offs="16"/>
+    <Component Name="BRR" TI="9483" Line="366" Offs="20"/>
+    <Component Name="LCKR" TI="9498" Line="367" Offs="24"/>
+   </type>
+   <type Family="ComponentList" Line="379" ID="9514">
+    <Component Name="CR1" TI="9523" Line="380" Offs="0"/>
+    <Component Name="RESERVED0" TI="9538" Line="381" Offs="2"/>
+    <Component Name="CR2" TI="9553" Line="382" Offs="4"/>
+    <Component Name="RESERVED1" TI="9568" Line="383" Offs="6"/>
+    <Component Name="OAR1" TI="9583" Line="384" Offs="8"/>
+    <Component Name="RESERVED2" TI="9598" Line="385" Offs="10"/>
+    <Component Name="OAR2" TI="9613" Line="386" Offs="12"/>
+    <Component Name="RESERVED3" TI="9628" Line="387" Offs="14"/>
+    <Component Name="DR" TI="9643" Line="388" Offs="16"/>
+    <Component Name="RESERVED4" TI="9657" Line="389" Offs="18"/>
+    <Component Name="SR1" TI="9672" Line="390" Offs="20"/>
+    <Component Name="RESERVED5" TI="9687" Line="391" Offs="22"/>
+    <Component Name="SR2" TI="9702" Line="392" Offs="24"/>
+    <Component Name="RESERVED6" TI="9717" Line="393" Offs="26"/>
+    <Component Name="CCR" TI="9732" Line="394" Offs="28"/>
+    <Component Name="RESERVED7" TI="9747" Line="395" Offs="30"/>
+    <Component Name="TRISE" TI="9762" Line="396" Offs="32"/>
+    <Component Name="RESERVED8" TI="9777" Line="397" Offs="34"/>
+   </type>
+   <type Family="ComponentList" Line="549" ID="9793">
+    <Component Name="CR1" TI="9802" Line="550" Offs="0"/>
+    <Component Name="RESERVED0" TI="9817" Line="551" Offs="2"/>
+    <Component Name="CR2" TI="9832" Line="552" Offs="4"/>
+    <Component Name="RESERVED1" TI="9847" Line="553" Offs="6"/>
+    <Component Name="SMCR" TI="9862" Line="554" Offs="8"/>
+    <Component Name="RESERVED2" TI="9877" Line="555" Offs="10"/>
+    <Component Name="DIER" TI="9892" Line="556" Offs="12"/>
+    <Component Name="RESERVED3" TI="9907" Line="557" Offs="14"/>
+    <Component Name="SR" TI="9922" Line="558" Offs="16"/>
+    <Component Name="RESERVED4" TI="9936" Line="559" Offs="18"/>
+    <Component Name="EGR" TI="9951" Line="560" Offs="20"/>
+    <Component Name="RESERVED5" TI="9966" Line="561" Offs="22"/>
+    <Component Name="CCMR1" TI="9981" Line="562" Offs="24"/>
+    <Component Name="RESERVED6" TI="9996" Line="563" Offs="26"/>
+    <Component Name="CCMR2" TI="10011" Line="564" Offs="28"/>
+    <Component Name="RESERVED7" TI="10026" Line="565" Offs="30"/>
+    <Component Name="CCER" TI="10041" Line="566" Offs="32"/>
+    <Component Name="RESERVED8" TI="10056" Line="567" Offs="34"/>
+    <Component Name="CNT" TI="10071" Line="568" Offs="36"/>
+    <Component Name="RESERVED9" TI="10086" Line="569" Offs="38"/>
+    <Component Name="PSC" TI="10101" Line="570" Offs="40"/>
+    <Component Name="RESERVED10" TI="10116" Line="571" Offs="42"/>
+    <Component Name="ARR" TI="10131" Line="572" Offs="44"/>
+    <Component Name="RESERVED11" TI="10146" Line="573" Offs="46"/>
+    <Component Name="RCR" TI="10161" Line="574" Offs="48"/>
+    <Component Name="RESERVED12" TI="10176" Line="575" Offs="50"/>
+    <Component Name="CCR1" TI="10191" Line="576" Offs="52"/>
+    <Component Name="RESERVED13" TI="10206" Line="577" Offs="54"/>
+    <Component Name="CCR2" TI="10221" Line="578" Offs="56"/>
+    <Component Name="RESERVED14" TI="10236" Line="579" Offs="58"/>
+    <Component Name="CCR3" TI="10251" Line="580" Offs="60"/>
+    <Component Name="RESERVED15" TI="10266" Line="581" Offs="62"/>
+    <Component Name="CCR4" TI="10281" Line="582" Offs="64"/>
+    <Component Name="RESERVED16" TI="10296" Line="583" Offs="66"/>
+    <Component Name="BDTR" TI="10311" Line="584" Offs="68"/>
+    <Component Name="RESERVED17" TI="10326" Line="585" Offs="70"/>
+    <Component Name="DCR" TI="10341" Line="586" Offs="72"/>
+    <Component Name="RESERVED18" TI="10356" Line="587" Offs="74"/>
+    <Component Name="DMAR" TI="10371" Line="588" Offs="76"/>
+    <Component Name="RESERVED19" TI="10386" Line="589" Offs="78"/>
+   </type>
+   <type Family="ComponentList" Line="32" ID="10402">
+   <type Family="Pointer" TI="10436" toTI="8979"/>
+    <Component Name="h" TI="10410" Line="33" Offs="0"/>
+    <Component Name="nh" TI="10422" Line="34" Offs="4"/>
+   </type>
+   <type Family="typedef" Name="COEFS" Line="35" ID="10442" toTI="10402"/>
+   <type Family="Pointer" TI="10464" toTI="10470"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="10453" toTI="10464"/>
+   <type Family="Pointer" TI="10464" toTI="10470"/>
+   <type Family="Pointer" TI="10493" toTI="10499"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="10482" toTI="10493"/>
+   <type Family="Pointer" TI="10493" toTI="10499"/>
+   <type Family="Base" Name="int" ID="10511"/>
+   <type Family="Base" Name="unsigned int" ID="10518"/>
+   <type Family="Pointer" TI="10525" toTI="0"/>
+   <type Family="Pointer" TI="10525" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="10527" toTI="10525"/>
+   <type Family="Pointer" TI="10525" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="10527" toTI="10525"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="10538" toTI="10527"/>
+   <type Family="typedef" Name="SWITCHER_TYPE" Line="59" ID="10570" toTI="10549"/>
+   <type Family="ComponentList" Name="TlightProperties" Line="73" ID="10581">
+    <Component Name="value" TI="10593" Line="74" Offs="0"/>
+    <Component Name="min" TI="10607" Line="75" Offs="2"/>
+    <Component Name="max" TI="10621" Line="76" Offs="4"/>
+    <Component Name="step" TI="10635" Line="77" Offs="6"/>
+    <Component Name="outputpin" TI="10649" Line="78" Offs="8"/>
+    <Component Name="inputpin" TI="10663" Line="79" Offs="10"/>
+    <Component Name="type" TI="10677" Line="80" Offs="12"/>
+   <type Family="Pointer" TI="10525" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="10527" toTI="10525"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="10538" toTI="10527"/>
+    <Component Name="sync" TI="10691" Line="81" Offs="16"/>
+   <type Family="Pointer" TI="10464" toTI="10470"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="10453" toTI="10464"/>
+    <Component Name="compare" TI="10705" Line="82" Offs="20"/>
+   <type Family="Pointer" TI="10493" toTI="10499"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="10482" toTI="10493"/>
+    <Component Name="comparestate" TI="10719" Line="83" Offs="24"/>
+   </type>
+   <type Family="typedef" Name="TLightProperties" Line="84" ID="10734" toTI="10581"/>
+   <type Family="ComponentList" Name="TBKPData" Line="89" ID="10745">
+   <type Family="array" ID="10772" toTI="8997"/>
+    <Component Name="values" TI="10757" Line="90" Offs="0"/>
+   </type>
+   <type Family="typedef" Name="TBKPData" Line="91" ID="10788" toTI="10745"/>
+   <function Name="NMIException" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="118">
+   </function >
+   <function Name="HardFaultException" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="129">
+    <variable Name="fault" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="130" Addr="0x200001EC" TI="9014"/>
+   </function >
+   <function Name="MemManageException" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="148">
+   </function >
+   <function Name="BusFaultException" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="163">
+   </function >
+   <function Name="UsageFaultException" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="178">
+   </function >
+   <function Name="DebugMonitor" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="193">
+   </function >
+   <function Name="TAMPER_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="270">
+   </function >
+   <function Name="FLASH_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="312">
+   </function >
+   <function Name="RCC_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="323">
+   </function >
+   <function Name="EXTI0_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="334">
+   </function >
+   <function Name="EXTI1_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="345">
+   </function >
+   <function Name="EXTI2_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="356">
+   </function >
+   <function Name="EXTI3_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="367">
+   </function >
+   <function Name="EXTI4_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="378">
+   </function >
+   <function Name="DMA1_Channel1_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="389">
+   </function >
+   <function Name="DMA1_Channel2_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="400">
+   </function >
+   <function Name="DMA1_Channel3_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="411">
+   </function >
+   <function Name="DMA1_Channel4_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="422">
+   </function >
+   <function Name="DMA1_Channel5_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="433">
+   </function >
+   <function Name="DMA1_Channel6_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="444">
+   </function >
+   <function Name="DMA1_Channel7_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="455">
+   </function >
+   <function Name="USB_HP_CAN_TX_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="479">
+   </function >
+   <function Name="USB_LP_CAN_RX0_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="491">
+   </function >
+   <function Name="CAN_RX1_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="502">
+   </function >
+   <function Name="CAN_SCE_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="513">
+   </function >
+   <function Name="TIM1_BRK_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="588">
+   </function >
+   <function Name="TIM1_TRG_COM_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="614">
+   </function >
+   <function Name="TIM1_CC_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="625">
+   </function >
+   <function Name="SPI1_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="940">
+   </function >
+   <function Name="SPI2_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="951">
+   </function >
+   <function Name="USART1_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="962">
+   </function >
+   <function Name="USART2_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="973">
+   </function >
+   <function Name="USART3_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="984">
+   </function >
+   <function Name="RTCAlarm_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1034">
+   </function >
+   <function Name="USBWakeUp_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1045">
+   </function >
+   <function Name="TIM8_BRK_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1056">
+   </function >
+   <function Name="TIM8_UP_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1068">
+   </function >
+   <function Name="TIM8_TRG_COM_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1080">
+   </function >
+   <function Name="TIM8_CC_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1091">
+   </function >
+   <function Name="FSMC_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1163">
+   </function >
+   <function Name="SDIO_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1174">
+   </function >
+   <function Name="TIM5_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1185">
+   </function >
+   <function Name="SPI3_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1196">
+   </function >
+   <function Name="UART4_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1207">
+   </function >
+   <function Name="UART5_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1218">
+   </function >
+   <function Name="TIM6_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1229">
+   </function >
+   <function Name="TIM7_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1240">
+   </function >
+   <function Name="DMA2_Channel1_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1251">
+   </function >
+   <function Name="DMA2_Channel2_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1262">
+   </function >
+   <function Name="DMA2_Channel3_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1273">
+   </function >
+   <function Name="DMA2_Channel4_5_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1285">
+   </function >
+   <function Name="ADC1_2_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="466">
+   </function >
+   <function Name="ADC3_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1126">
+    <variable Name="tim" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1128" Addr="0x200001F0" TI="9045"/>
+   </function >
+   <function Name="EXTI15_10_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="995">
+    <variable Name="xFromHigher" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="996" Addr="0x200001F4" TI="8929"/>
+   </function >
+   <function Name="EXTI9_5_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="524">
+    <variable Name="xFromHigher" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="525" Addr="0x200001F8" TI="8929"/>
+   </function >
+   <function Name="I2C2_ER_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="912">
+   </function >
+   <function Name="I2C1_ER_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="813">
+   </function >
+   <function Name="I2C2_EV_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="841">
+    <variable Name="evt" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="842" Addr="0x200001FC" TI="8961"/>
+   </function >
+   <function Name="I2C1_EV_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="773">
+    <variable Name="evt" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="774" Addr="0x20000200" TI="8961"/>
+   </function >
+   <function Name="TIM4_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="728">
+    <variable Name="forceHold5" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="729" Addr="0x20000204" TI="9045"/>
+    <variable Name="forceHold6" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="729" Addr="0x20000205" TI="9045"/>
+   </function >
+   <function Name="TIM3_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="683">
+    <variable Name="forceHold3" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="684" Addr="0x20000206" TI="9045"/>
+    <variable Name="forceHold4" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="684" Addr="0x20000207" TI="9045"/>
+   </function >
+   <function Name="TIM2_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="638">
+    <variable Name="forceHold1" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="639" Addr="0x20000208" TI="9045"/>
+    <variable Name="forceHold2" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="639" Addr="0x20000209" TI="9045"/>
+   </function >
+   <function Name="TIM1_UP_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="600">
+   </function >
+   <function Name="RTC_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="281">
+    <variable Name="xFromHigher" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="282" Addr="0x2000020C" TI="8929"/>
+   </function >
+   <function Name="PVD_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="252">
+   </function >
+   <function Name="WWDG_IRQHandler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="237">
+   </function >
+   <type Family="array" ID="12527" toTI="10734"/>
+   <type Family="array" ID="12564" toTI="8936"/>
+   <type Family="array" ID="12587" toTI="8918"/>
+   <type Family="Pointer" TI="10525" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="10527" toTI="10525"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="10538" toTI="10527"/>
+   <type Family="array" ID="12713" toTI="10538"/>
+   <type Family="Pointer" TI="10525" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="10527" toTI="10525"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="10538" toTI="10527"/>
+   <type Family="array" ID="12713" toTI="10538"/>
+   <type Family="Pointer" TI="10525" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="10527" toTI="10525"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="10538" toTI="10527"/>
+   <variable Name="SecTick" FileName="C:\cortex\dimmers\src\stm32f10x_it.c" Line="97" Addr="0x20000210" TI="8961"/>
+  </module>
+  <module Name="C:\cortex\dimmers\src\stm32f10x_vector.c" >
+   <type Family="Base" Name="long int" ID="12811"/>
+   <type Family="Base" Name="short int" ID="12818"/>
+   <type Family="Base" Name="signed char" ID="12825"/>
+   <type Family="Base" Name="long unsigned int" ID="12832"/>
+   <type Family="Base" Name="short unsigned int" ID="12839"/>
+   <type Family="Base" Name="unsigned char" ID="12846"/>
+   <type Family="typedef" Name="bool" Line="80" ID="12874" toTI="12853"/>
+   <type Family="Base" Name="int" ID="12888"/>
+   <type Family="Base" Name="unsigned int" ID="12895"/>
+   <type Family="Pointer" TI="12902" toTI="12908"/>
+   <function Name="Reset_Handler" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_vector.c" Line="154">
+   <type Family="Pointer" TI="12962" toTI="12832"/>
+    <variable Name="pulDest" FileName="C:\cortex\dimmers\src\stm32f10x_vector.c" Line="155" Addr="0x2" TI="12962"/>
+   </function >
+   <type Family="Pointer" TI="12902" toTI="12908"/>
+   <type Family="array" ID="13055" toTI="12902"/>
+   <type Family="Pointer" TI="12902" toTI="12908"/>
+   <type Family="array" ID="13055" toTI="12902"/>
+   <variable Name="g_pfnVectors" FileName="C:\cortex\dimmers\src\stm32f10x_vector.c" Line="66" Addr="0x8000000" TI="13089"/>
+   <type Family="Pointer" TI="12902" toTI="12908"/>
+   <type Family="array" ID="13055" toTI="12902"/>
+  </module>
+  <module Name="C:\cortex\dimmers\src\dimmers_i2c.c" >
+   <type Family="Base" Name="long int" ID="13132"/>
+   <type Family="Base" Name="short int" ID="13139"/>
+   <type Family="Base" Name="signed char" ID="13146"/>
+   <type Family="Base" Name="long unsigned int" ID="13164"/>
+   <type Family="typedef" Name="u32" Line="64" ID="13153" toTI="13164"/>
+   <type Family="Base" Name="short unsigned int" ID="13182"/>
+   <type Family="typedef" Name="u16" Line="65" ID="13171" toTI="13182"/>
+   <type Family="Base" Name="unsigned char" ID="13199"/>
+   <type Family="typedef" Name="u8" Line="66" ID="13189" toTI="13199"/>
+   <type Family="ComponentList" Line="379" ID="13235">
+    <Component Name="CR1" TI="13244" Line="380" Offs="0"/>
+    <Component Name="RESERVED0" TI="13259" Line="381" Offs="2"/>
+    <Component Name="CR2" TI="13274" Line="382" Offs="4"/>
+    <Component Name="RESERVED1" TI="13289" Line="383" Offs="6"/>
+    <Component Name="OAR1" TI="13304" Line="384" Offs="8"/>
+    <Component Name="RESERVED2" TI="13319" Line="385" Offs="10"/>
+    <Component Name="OAR2" TI="13334" Line="386" Offs="12"/>
+    <Component Name="RESERVED3" TI="13349" Line="387" Offs="14"/>
+    <Component Name="DR" TI="13364" Line="388" Offs="16"/>
+    <Component Name="RESERVED4" TI="13378" Line="389" Offs="18"/>
+    <Component Name="SR1" TI="13393" Line="390" Offs="20"/>
+    <Component Name="RESERVED5" TI="13408" Line="391" Offs="22"/>
+    <Component Name="SR2" TI="13423" Line="392" Offs="24"/>
+    <Component Name="RESERVED6" TI="13438" Line="393" Offs="26"/>
+    <Component Name="CCR" TI="13453" Line="394" Offs="28"/>
+    <Component Name="RESERVED7" TI="13468" Line="395" Offs="30"/>
+    <Component Name="TRISE" TI="13483" Line="396" Offs="32"/>
+    <Component Name="RESERVED8" TI="13498" Line="397" Offs="34"/>
+   </type>
+   <type Family="ComponentList" Line="52" ID="13514">
+    <Component Name="I2C_Mode" TI="13522" Line="53" Offs="0"/>
+    <Component Name="I2C_DutyCycle" TI="13536" Line="54" Offs="2"/>
+    <Component Name="I2C_OwnAddress1" TI="13550" Line="55" Offs="4"/>
+    <Component Name="I2C_Ack" TI="13564" Line="56" Offs="6"/>
+    <Component Name="I2C_AcknowledgedAddress" TI="13578" Line="57" Offs="8"/>
+    <Component Name="I2C_ClockSpeed" TI="13592" Line="58" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="I2C_InitTypeDef" Line="59" ID="13607" toTI="13514"/>
+   <function Name="I2CInit" TI="0" FileName="C:\cortex\dimmers\src\dimmers_i2c.c" Line="20">
+    <variable Name="I2C_InitStructure" FileName="C:\cortex\dimmers\src\dimmers_i2c.c" Line="21" Addr="0x34000000" TI="13607"/>
+   </function >
+   <variable Name="I2C1Adr" FileName="C:\cortex\dimmers\src\dimmers_i2c.c" Line="16" Addr="0x20005346" TI="13171"/>
+   <variable Name="I2C2Adr" FileName="C:\cortex\dimmers\src\dimmers_i2c.c" Line="17" Addr="0x20005344" TI="13171"/>
+  </module>
+  <module Name="C:\cortex\dimmers\src\dimmers_bkp.c" >
+   <type Family="Base" Name="long int" ID="14003"/>
+   <type Family="Base" Name="short int" ID="14010"/>
+   <type Family="Base" Name="signed char" ID="14017"/>
+   <type Family="Base" Name="long unsigned int" ID="14024"/>
+   <type Family="Base" Name="short unsigned int" ID="14042"/>
+   <type Family="typedef" Name="u16" Line="65" ID="14031" toTI="14042"/>
+   <type Family="Base" Name="unsigned char" ID="14059"/>
+   <type Family="typedef" Name="u8" Line="66" ID="14049" toTI="14059"/>
+   <type Family="typedef" Name="bool" Line="80" ID="14092" toTI="14071"/>
+   <type Family="typedef" Name="FunctionalState" Line="84" ID="14124" toTI="14103"/>
+   <type Family="Pointer" TI="14158" toTI="14031"/>
+   <type Family="Pointer" TI="14175" toTI="14181"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="14164" toTI="14175"/>
+   <type Family="Pointer" TI="14175" toTI="14181"/>
+   <type Family="Pointer" TI="14204" toTI="14210"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="14193" toTI="14204"/>
+   <type Family="Pointer" TI="14204" toTI="14210"/>
+   <type Family="Base" Name="int" ID="14222"/>
+   <type Family="Base" Name="unsigned int" ID="14229"/>
+   <type Family="Pointer" TI="14236" toTI="0"/>
+   <type Family="Pointer" TI="14236" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="14238" toTI="14236"/>
+   <type Family="Pointer" TI="14236" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="14238" toTI="14236"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="14249" toTI="14238"/>
+   <type Family="typedef" Name="SWITCHER_TYPE" Line="59" ID="14281" toTI="14260"/>
+   <type Family="ComponentList" Name="TLight" Line="63" ID="14292">
+    <Component Name="value" TI="14304" Line="64" Offs="0"/>
+    <Component Name="min" TI="14318" Line="65" Offs="2"/>
+    <Component Name="max" TI="14332" Line="66" Offs="4"/>
+    <Component Name="step" TI="14346" Line="67" Offs="6"/>
+    <Component Name="outputpin" TI="14360" Line="68" Offs="8"/>
+    <Component Name="inputpin" TI="14374" Line="69" Offs="10"/>
+   </type>
+   <type Family="typedef" Name="TLight" Line="70" ID="14389" toTI="14292"/>
+   <type Family="ComponentList" Name="TlightProperties" Line="73" ID="14400">
+    <Component Name="value" TI="14412" Line="74" Offs="0"/>
+    <Component Name="min" TI="14426" Line="75" Offs="2"/>
+    <Component Name="max" TI="14440" Line="76" Offs="4"/>
+    <Component Name="step" TI="14454" Line="77" Offs="6"/>
+    <Component Name="outputpin" TI="14468" Line="78" Offs="8"/>
+    <Component Name="inputpin" TI="14482" Line="79" Offs="10"/>
+    <Component Name="type" TI="14496" Line="80" Offs="12"/>
+   <type Family="Pointer" TI="14236" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="14238" toTI="14236"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="14249" toTI="14238"/>
+    <Component Name="sync" TI="14510" Line="81" Offs="16"/>
+   <type Family="Pointer" TI="14175" toTI="14181"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="14164" toTI="14175"/>
+    <Component Name="compare" TI="14524" Line="82" Offs="20"/>
+   <type Family="Pointer" TI="14204" toTI="14210"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="14193" toTI="14204"/>
+    <Component Name="comparestate" TI="14538" Line="83" Offs="24"/>
+   </type>
+   <type Family="Pointer" TI="14564" toTI="14400"/>
+   <type Family="typedef" Name="pTLightProperties" Line="84" ID="14553" toTI="14564"/>
+   <type Family="ComponentList" Name="TBKPData" Line="89" ID="14570">
+   <type Family="array" ID="14597" toTI="14049"/>
+    <Component Name="values" TI="14582" Line="90" Offs="0"/>
+   </type>
+   <type Family="typedef" Name="TBKPData" Line="91" ID="14613" toTI="14570"/>
+   <type Family="ComponentList" Name="TBKPMemoryMap" Line="93" ID="14624">
+   <type Family="array" ID="14735" toTI="14389"/>
+    <Component Name="light" TI="14636" Line="94" Offs="0"/>
+    <Component Name="ext1" TI="14650" Line="95" Offs="72"/>
+    <Component Name="ext2" TI="14664" Line="96" Offs="74"/>
+    <Component Name="ext3" TI="14678" Line="97" Offs="76"/>
+    <Component Name="ext4" TI="14692" Line="98" Offs="78"/>
+    <Component Name="ext5" TI="14706" Line="99" Offs="80"/>
+    <Component Name="ext6" TI="14720" Line="100" Offs="82"/>
+   </type>
+   <type Family="typedef" Name="TBKPMemoryMap" Line="101" ID="14751" toTI="14624"/>
+   <type Family="Base" Name="long long int" ID="14762"/>
+   <type Family="Base" Name="long long unsigned int" ID="14769"/>
+   <type Family="Base" Name="char" ID="14776"/>
+   <function Name="BkpCopyIntExtMemory" TI="0" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="304">
+   </function >
+   <function Name="BkpFullWriteToBkp" TI="0" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="316">
+    <variable Name="index" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="319" Addr="0x4" TI="14031"/>
+    <variable Name="value" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="320" Addr="0x1" TI="14031"/>
+    <variable Name="swapped" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="308" Addr="0x2" TI="0"/>
+    <variable Name="swapped" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="308" Addr="0x3" TI="0"/>
+    <variable Name="swapped" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="308" Addr="0x3" TI="0"/>
+    <variable Name="swapped" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="308" Addr="0x3" TI="0"/>
+    <variable Name="swapped" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="308" Addr="0x3" TI="0"/>
+    <variable Name="ok" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="321" Addr="0x20000214" TI="14092"/>
+   </function >
+   <function Name="BkpSetFactoryDefaultsGeneral" TI="0" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="132">
+   </function >
+   <function Name="BkpSetFactoryDefaultsForLight" TI="0" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="68">
+    <parameter Name="inputpin" TI="14031" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="68" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="BkpFullReadToMemory" TI="0" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="275">
+    <variable Name="index" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="278" Addr="0x4" TI="14031"/>
+   </function >
+   <function Name="BkpWriteGeneralToMemory" TI="0" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="254">
+   </function >
+   <function Name="BkpGetSwitcherType" TI="14281" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="141">
+    <parameter Name="inputpin" TI="14031" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="141" Addr="0x0" Param="Yes"/>
+    <variable Name="flags" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="143" Addr="0x34000014" TI="14066"/>
+   </function >
+   <function Name="BkpWriteLightPropertiesToMemory" TI="0" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="187">
+    <parameter Name="inputpin" TI="14031" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="187" Addr="0x0" Param="Yes"/>
+    <parameter Name="props" TI="14553" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="187" Addr="0x1" Param="Yes"/>
+   </function >
+   <function Name="BkpSetFactoryDefaultsToLights" TI="0" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="261">
+   </function >
+   <function Name="BkpUnlock" TI="0" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="33">
+   </function >
+   <function Name="BkpLock" TI="0" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="28">
+   </function >
+   <function Name="BkpInit" TI="0" FileName="C:\cortex\dimmers\src\dimmers_bkp.c" Line="20">
+   </function >
+  </module>
+  <module Name="C:\cortex\dimmers\src\dimmers_rtc.c" >
+   <type Family="Base" Name="long int" ID="15756"/>
+   <type Family="Base" Name="short int" ID="15763"/>
+   <type Family="Base" Name="signed char" ID="15770"/>
+   <type Family="Base" Name="long unsigned int" ID="15777"/>
+   <type Family="Base" Name="short unsigned int" ID="15784"/>
+   <type Family="Base" Name="unsigned char" ID="15791"/>
+   <function Name="RtcInit" TI="0" FileName="C:\cortex\dimmers\src\dimmers_rtc.c" Line="15">
+   </function >
+  </module>
+  <module Name="C:\cortex\dimmers\src\dimmers_storage.c" >
+   <type Family="Base" Name="long int" ID="15909"/>
+   <type Family="typedef" Name="s32" Line="48" ID="15898" toTI="15909"/>
+   <type Family="Base" Name="short int" ID="15927"/>
+   <type Family="typedef" Name="s16" Line="49" ID="15916" toTI="15927"/>
+   <type Family="Base" Name="signed char" ID="15934"/>
+   <type Family="Base" Name="long unsigned int" ID="15952"/>
+   <type Family="typedef" Name="u32" Line="64" ID="15941" toTI="15952"/>
+   <type Family="Base" Name="short unsigned int" ID="15970"/>
+   <type Family="typedef" Name="u16" Line="65" ID="15959" toTI="15970"/>
+   <type Family="Base" Name="unsigned char" ID="15987"/>
+   <type Family="typedef" Name="u8" Line="66" ID="15977" toTI="15987"/>
+   <type Family="typedef" Name="bool" Line="80" ID="16020" toTI="15999"/>
+   <type Family="typedef" Name="FunctionalState" Line="84" ID="16052" toTI="16031"/>
+   <type Family="ComponentList" Line="32" ID="16066">
+   <type Family="Pointer" TI="16100" toTI="15959"/>
+    <Component Name="h" TI="16074" Line="33" Offs="0"/>
+    <Component Name="nh" TI="16086" Line="34" Offs="4"/>
+   </type>
+   <type Family="typedef" Name="COEFS" Line="35" ID="16106" toTI="16066"/>
+   <type Family="Pointer" TI="16128" toTI="16134"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="16117" toTI="16128"/>
+   <type Family="Pointer" TI="16128" toTI="16134"/>
+   <type Family="Pointer" TI="16157" toTI="16163"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="16146" toTI="16157"/>
+   <type Family="Pointer" TI="16157" toTI="16163"/>
+   <type Family="Base" Name="int" ID="16175"/>
+   <type Family="Base" Name="unsigned int" ID="16182"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="16191" toTI="16189"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="16202" toTI="16189"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="16202" toTI="16189"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="16213" toTI="16202"/>
+   <type Family="typedef" Name="SWITCHER_TYPE" Line="59" ID="16245" toTI="16224"/>
+   <type Family="ComponentList" Name="TLight" Line="63" ID="16256">
+    <Component Name="value" TI="16268" Line="64" Offs="0"/>
+    <Component Name="min" TI="16282" Line="65" Offs="2"/>
+    <Component Name="max" TI="16296" Line="66" Offs="4"/>
+    <Component Name="step" TI="16310" Line="67" Offs="6"/>
+    <Component Name="outputpin" TI="16324" Line="68" Offs="8"/>
+    <Component Name="inputpin" TI="16338" Line="69" Offs="10"/>
+   </type>
+   <type Family="typedef" Name="TLight" Line="70" ID="16353" toTI="16256"/>
+   <type Family="ComponentList" Name="TlightProperties" Line="73" ID="16364">
+    <Component Name="value" TI="16376" Line="74" Offs="0"/>
+    <Component Name="min" TI="16390" Line="75" Offs="2"/>
+    <Component Name="max" TI="16404" Line="76" Offs="4"/>
+    <Component Name="step" TI="16418" Line="77" Offs="6"/>
+    <Component Name="outputpin" TI="16432" Line="78" Offs="8"/>
+    <Component Name="inputpin" TI="16446" Line="79" Offs="10"/>
+    <Component Name="type" TI="16460" Line="80" Offs="12"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="16202" toTI="16189"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="16213" toTI="16202"/>
+    <Component Name="sync" TI="16474" Line="81" Offs="16"/>
+   <type Family="Pointer" TI="16128" toTI="16134"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="16117" toTI="16128"/>
+    <Component Name="compare" TI="16488" Line="82" Offs="20"/>
+   <type Family="Pointer" TI="16157" toTI="16163"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="16146" toTI="16157"/>
+    <Component Name="comparestate" TI="16502" Line="83" Offs="24"/>
+   </type>
+   <type Family="typedef" Name="TLightProperties" Line="84" ID="16517" toTI="16364"/>
+   <type Family="ComponentList" Name="TBKPData" Line="89" ID="16528">
+   <type Family="array" ID="16555" toTI="15977"/>
+    <Component Name="values" TI="16540" Line="90" Offs="0"/>
+   </type>
+   <type Family="typedef" Name="TBKPData" Line="91" ID="16571" toTI="16528"/>
+   <type Family="ComponentList" Name="TBKPMemoryMap" Line="93" ID="16582">
+   <type Family="array" ID="16693" toTI="16353"/>
+    <Component Name="light" TI="16594" Line="94" Offs="0"/>
+    <Component Name="ext1" TI="16608" Line="95" Offs="72"/>
+    <Component Name="ext2" TI="16622" Line="96" Offs="74"/>
+    <Component Name="ext3" TI="16636" Line="97" Offs="76"/>
+    <Component Name="ext4" TI="16650" Line="98" Offs="78"/>
+    <Component Name="ext5" TI="16664" Line="99" Offs="80"/>
+    <Component Name="ext6" TI="16678" Line="100" Offs="82"/>
+   </type>
+   <type Family="typedef" Name="TBKPMemoryMap" Line="101" ID="16709" toTI="16582"/>
+   <type Family="Pointer" TI="16128" toTI="16134"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="16117" toTI="16128"/>
+   <type Family="array" ID="16720" toTI="16117"/>
+   <type Family="Pointer" TI="16128" toTI="16134"/>
+   <type Family="typedef" Name="pfCompareSetAndHoldGeneric" Line="42" ID="16117" toTI="16128"/>
+   <type Family="array" ID="16720" toTI="16117"/>
+   <variable Name="Compares" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="15" Addr="0x20005354" TI="16720"/>
+   <type Family="Pointer" TI="16157" toTI="16163"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="16146" toTI="16157"/>
+   <type Family="array" ID="16754" toTI="16146"/>
+   <type Family="Pointer" TI="16157" toTI="16163"/>
+   <type Family="typedef" Name="pfSetCompareIntGeneric" Line="43" ID="16146" toTI="16157"/>
+   <type Family="array" ID="16754" toTI="16146"/>
+   <variable Name="CompareStates" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="16" Addr="0x20005568" TI="16754"/>
+   <variable Name="ExternData" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="18" Addr="0x200054C0" TI="16571"/>
+   <variable Name="InternData" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="19" Addr="0x20005514" TI="16571"/>
+   <variable Name="BkpMemoryMap" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="20" Addr="0x2000546C" TI="16709"/>
+   <type Family="array" ID="16842" toTI="16517"/>
+   <variable Name="Lights" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="14" Addr="0x20005380" TI="16842"/>
+   <variable Name="TempSensor" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="22" Addr="0x20005428" TI="15916"/>
+   <variable Name="ZeroCross" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="23" Addr="0x20005448" TI="15916"/>
+   <type Family="array" ID="16912" toTI="15916"/>
+   <variable Name="Xi" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="25" Addr="0x20005580" TI="16912"/>
+   <type Family="array" ID="16945" toTI="15898"/>
+   <variable Name="Yi" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="26" Addr="0x2000536C" TI="16945"/>
+   <type Family="array" ID="16978" toTI="15959"/>
+   <variable Name="Ci" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="28" Addr="0x2000019C" TI="16978"/>
+   <variable Name="co" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="38" Addr="0x200001DC" TI="16106"/>
+   <variable Name="RxIdx" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="50" Addr="0x20000224" TI="15959"/>
+   <variable Name="TxIdx" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="51" Addr="0x20000226" TI="15959"/>
+   <variable Name="I2CRecReady" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="53" Addr="0x20000228" TI="16020"/>
+   <variable Name="IsWatchdog" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="54" Addr="0x20000229" TI="16020"/>
+   <variable Name="secs" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="43" Addr="0x20000218" TI="15959"/>
+   <variable Name="theMax" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="44" Addr="0x2000021A" TI="15916"/>
+   <variable Name="theMin" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="45" Addr="0x200001E4" TI="15916"/>
+   <variable Name="theZero" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="46" Addr="0x2000021C" TI="15916"/>
+   <variable Name="counterMinMax" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="47" Addr="0x2000021E" TI="15959"/>
+   <variable Name="ZeroCrossTreshold" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="56" Addr="0x200001E6" TI="15959"/>
+   <variable Name="CountWatchdog" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="57" Addr="0x2000022A" TI="15959"/>
+   <variable Name="PropertyFlags" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="48" Addr="0x20000220" TI="15994"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="16191" toTI="16189"/>
+   <type Family="array" ID="17244" toTI="16191"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="16191" toTI="16189"/>
+   <type Family="array" ID="17244" toTI="16191"/>
+   <variable Name="xButtonTaskHandle" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="59" Addr="0x20005430" TI="17244"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="16191" toTI="16189"/>
+   <variable Name="xI2C1SendTaskHandle" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="61" Addr="0x200055C8" TI="16191"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="16191" toTI="16189"/>
+   <variable Name="xI2C2ReceiveTaskHandle" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="62" Addr="0x2000544C" TI="16191"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="16191" toTI="16189"/>
+   <variable Name="xRefreshTaskHandle" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="64" Addr="0x20005350" TI="16191"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="16191" toTI="16189"/>
+   <variable Name="xSendUpdateTaskHandle" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="66" Addr="0x2000534C" TI="16191"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="16191" toTI="16189"/>
+   <variable Name="xSendStatusTaskHandle" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="67" Addr="0x20005348" TI="16191"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="16202" toTI="16189"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="16213" toTI="16202"/>
+   <type Family="array" ID="17368" toTI="16213"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="16202" toTI="16189"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="16213" toTI="16202"/>
+   <type Family="array" ID="17368" toTI="16213"/>
+   <variable Name="xSemaphoreButtonArrayHandle" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="69" Addr="0x20005454" TI="17368"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="16202" toTI="16189"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="16213" toTI="16202"/>
+   <variable Name="xRefreshSync" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="71" Addr="0x200055CC" TI="16213"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="16202" toTI="16189"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="16213" toTI="16202"/>
+   <variable Name="xI2CSendSync" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="73" Addr="0x20005450" TI="16213"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="16202" toTI="16189"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="16213" toTI="16202"/>
+   <variable Name="xI2CRecvSync" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="74" Addr="0x2000537C" TI="16213"/>
+   <type Family="Pointer" TI="16189" toTI="0"/>
+   <type Family="typedef" Name="xQueueHandle" Line="65" ID="16202" toTI="16189"/>
+   <type Family="typedef" Name="xSemaphoreHandle" Line="61" ID="16213" toTI="16202"/>
+   <variable Name="xBKPsync" FileName="C:\cortex\dimmers\src\dimmers_storage.c" Line="76" Addr="0x2000542C" TI="16213"/>
+  </module>
+  <module Name="C:\cortex\dimmers\rtos\src\croutine.c" >
+   <type Family="Base" Name="int" ID="17512"/>
+   <type Family="Base" Name="unsigned int" ID="17519"/>
+   <type Family="Pointer" TI="17526" toTI="0"/>
+   <type Family="Base" Name="long int" ID="17528"/>
+   <type Family="Base" Name="short int" ID="17535"/>
+   <type Family="Base" Name="signed char" ID="17542"/>
+   <type Family="Base" Name="long unsigned int" ID="17549"/>
+   <type Family="Base" Name="short unsigned int" ID="17556"/>
+   <type Family="Base" Name="unsigned char" ID="17563"/>
+   <type Family="typedef" Name="portTickType" Line="83" ID="17578" toTI="17549"/>
+   <type Family="ComponentList" Name="xLIST_ITEM" Line="97" ID="17589">
+    <Component Name="xItemValue" TI="17601" Line="98" Offs="0"/>
+   <type Family="Pointer" TI="17672" toTI="17678"/>
+    <Component Name="pxNext" TI="17615" Line="99" Offs="4"/>
+    <Component Name="pxPrevious" TI="17629" Line="100" Offs="8"/>
+   <type Family="Pointer" TI="17526" toTI="0"/>
+    <Component Name="pvOwner" TI="17643" Line="101" Offs="12"/>
+   <type Family="Pointer" TI="17526" toTI="0"/>
+    <Component Name="pvContainer" TI="17657" Line="102" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="xListItem" Line="104" ID="17687" toTI="17589"/>
+   <type Family="ComponentList" Name="xMINI_LIST_ITEM" Line="107" ID="17698">
+    <Component Name="xItemValue" TI="17710" Line="108" Offs="0"/>
+    <Component Name="pxNext" TI="17724" Line="109" Offs="4"/>
+    <Component Name="pxPrevious" TI="17738" Line="110" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="xMiniListItem" Line="112" ID="17753" toTI="17698"/>
+   <type Family="ComponentList" Name="xLIST" Line="118" ID="17764">
+    <Component Name="uxNumberOfItems" TI="17776" Line="119" Offs="0"/>
+   <type Family="Pointer" TI="17819" toTI="17825"/>
+    <Component Name="pxIndex" TI="17790" Line="120" Offs="4"/>
+    <Component Name="xListEnd" TI="17804" Line="121" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="xList" Line="122" ID="17835" toTI="17764"/>
+   <type Family="Pointer" TI="17526" toTI="0"/>
+   <type Family="typedef" Name="xCoRoutineHandle" Line="71" ID="17846" toTI="17526"/>
+   <type Family="Pointer" TI="17868" toTI="17874"/>
+   <type Family="typedef" Name="crCOROUTINE_CODE" Line="74" ID="17857" toTI="17868"/>
+   <type Family="Pointer" TI="17868" toTI="17874"/>
+   <type Family="ComponentList" Name="corCoRoutineControlBlock" Line="77" ID="17891">
+   <type Family="Pointer" TI="17868" toTI="17874"/>
+   <type Family="typedef" Name="crCOROUTINE_CODE" Line="74" ID="17857" toTI="17868"/>
+    <Component Name="pxCoRoutineFunction" TI="17903" Line="78" Offs="0"/>
+    <Component Name="xGenericListItem" TI="17917" Line="79" Offs="4"/>
+    <Component Name="xEventListItem" TI="17931" Line="80" Offs="24"/>
+    <Component Name="uxPriority" TI="17945" Line="81" Offs="44"/>
+    <Component Name="uxIndex" TI="17959" Line="82" Offs="48"/>
+    <Component Name="uxState" TI="17973" Line="83" Offs="52"/>
+   </type>
+   <type Family="typedef" Name="corCRCB" Line="84" ID="17988" toTI="17891"/>
+   <type Family="Pointer" TI="18074" toTI="18080"/>
+   <type Family="Pointer" TI="18085" toTI="17988"/>
+   <type Family="Pointer" TI="18156" toTI="17835"/>
+   <type Family="array" ID="18531" toTI="17835"/>
+   <variable Name="pxReadyCoRoutineLists" FileName="C:\cortex\dimmers\rtos\src\croutine.c" Line="66" Addr="0x0" TI="18531"/>
+   <variable Name="xDelayedCoRoutineList1" FileName="C:\cortex\dimmers\rtos\src\croutine.c" Line="67" Addr="0x0" TI="17835"/>
+   <variable Name="xDelayedCoRoutineList2" FileName="C:\cortex\dimmers\rtos\src\croutine.c" Line="68" Addr="0x0" TI="17835"/>
+   <variable Name="pxDelayedCoRoutineList" FileName="C:\cortex\dimmers\rtos\src\croutine.c" Line="69" Addr="0x0" TI="18156"/>
+   <variable Name="pxOverflowDelayedCoRoutineList" FileName="C:\cortex\dimmers\rtos\src\croutine.c" Line="70" Addr="0x0" TI="18156"/>
+   <variable Name="xPendingReadyCoRoutineList" FileName="C:\cortex\dimmers\rtos\src\croutine.c" Line="71" Addr="0x0" TI="17835"/>
+   <variable Name="uxTopCoRoutineReadyPriority" FileName="C:\cortex\dimmers\rtos\src\croutine.c" Line="75" Addr="0x0" TI="17549"/>
+   <variable Name="xCoRoutineTickCount" FileName="C:\cortex\dimmers\rtos\src\croutine.c" Line="76" Addr="0x0" TI="17578"/>
+   <variable Name="xLastTickCount" FileName="C:\cortex\dimmers\rtos\src\croutine.c" Line="76" Addr="0x0" TI="17578"/>
+   <variable Name="xPassedTicks" FileName="C:\cortex\dimmers\rtos\src\croutine.c" Line="76" Addr="0x0" TI="17578"/>
+   <variable Name="pxCurrentCoRoutine" FileName="C:\cortex\dimmers\rtos\src\croutine.c" Line="74" Addr="0x0" TI="18085"/>
+  </module>
+  <module Name="C:\cortex\dimmers\rtos\src\heap_2.c" >
+   <type Family="Base" Name="unsigned int" ID="18784"/>
+   <type Family="typedef" Name="size_t" Line="213" ID="18773" toTI="18784"/>
+   <type Family="Base" Name="signed char" ID="18791"/>
+   <type Family="Base" Name="unsigned char" ID="18798"/>
+   <type Family="Base" Name="short int" ID="18805"/>
+   <type Family="Base" Name="short unsigned int" ID="18812"/>
+   <type Family="Base" Name="int" ID="18819"/>
+   <type Family="Base" Name="long long int" ID="18826"/>
+   <type Family="Base" Name="long long unsigned int" ID="18833"/>
+   <type Family="Base" Name="long int" ID="18840"/>
+   <type Family="Pointer" TI="18850" toTI="0"/>
+   <type Family="Base" Name="long unsigned int" ID="18852"/>
+   <type Family="Pointer" TI="18859" toTI="18798"/>
+   <type Family="Base" Name="char" ID="18865"/>
+   <type Family="ComponentList" Name="xRTOS_HEAP" Line="90" ID="18877">
+    <Component Name="ulDummy" TI="18890" Line="91" Offs="0"/>
+   <type Family="array" ID="18919" toTI="18798"/>
+    <Component Name="ucHeap" TI="18904" Line="92" Offs="4"/>
+   </type>
+   <type Family="ComponentList" Name="A_BLOCK_LINK" Line="98" ID="18936">
+   <type Family="Pointer" TI="18977" toTI="18936"/>
+    <Component Name="pxNextFreeBlock" TI="18948" Line="99" Offs="0"/>
+    <Component Name="xBlockSize" TI="18962" Line="100" Offs="4"/>
+   </type>
+   <type Family="typedef" Name="xBlockLink" Line="101" ID="18983" toTI="18936"/>
+   <function Name="vPortFree" TI="0" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="238">
+   <type Family="Pointer" TI="18850" toTI="0"/>
+    <parameter Name="pv" TI="18850" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="238" Addr="0x0" Param="Yes"/>
+   <type Family="Pointer" TI="19098" toTI="18983"/>
+    <variable Name="pxLink" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="240" Addr="0x5" TI="19098"/>
+    <variable Name="pxIterator" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="254" Addr="0x2" TI="19098"/>
+    <variable Name="xBlockSize" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="254" Addr="0x0" TI="18773"/>
+   </function >
+   <type Family="Pointer" TI="18850" toTI="0"/>
+   <function Name="pvPortMalloc" TI="18850" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="160">
+    <parameter Name="xWantedSize" TI="18773" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="160" Addr="0x0" Param="Yes"/>
+    <variable Name="pxBlock" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="161" Addr="0x2" TI="19098"/>
+    <variable Name="pxPreviousBlock" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="161" Addr="0x0" TI="19098"/>
+    <variable Name="pxNewBlockLink" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="161" Addr="0x1" TI="19098"/>
+   <type Family="Pointer" TI="18850" toTI="0"/>
+    <variable Name="pvReturn" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="163" Addr="0x5" TI="18850"/>
+    <variable Name="pxFirstFreeBlock" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="171" Addr="0x1" TI="19098"/>
+    <variable Name="pxIterator" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="226" Addr="0x2" TI="19098"/>
+    <variable Name="xBlockSize" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="226" Addr="0x4" TI="18773"/>
+    <variable Name="xHeapHasBeenInitialised" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="162" Addr="0x20000234" TI="18840"/>
+   </function >
+   <variable Name="xHeap" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="93" Addr="0x20000238" TI="18877"/>
+   <variable Name="xStart" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="108" Addr="0x2000022C" TI="18983"/>
+   <variable Name="xEnd" FileName="C:\cortex\dimmers\rtos\src\heap_2.c" Line="108" Addr="0x2000523C" TI="18983"/>
+  </module>
+  <module Name="C:\cortex\dimmers\rtos\src\list.c" >
+   <type Family="Base" Name="unsigned int" ID="19396"/>
+   <type Family="Base" Name="signed char" ID="19403"/>
+   <type Family="Base" Name="unsigned char" ID="19410"/>
+   <type Family="Base" Name="short int" ID="19417"/>
+   <type Family="Base" Name="short unsigned int" ID="19424"/>
+   <type Family="Base" Name="int" ID="19431"/>
+   <type Family="Base" Name="long long int" ID="19438"/>
+   <type Family="Base" Name="long long unsigned int" ID="19445"/>
+   <type Family="Base" Name="long int" ID="19452"/>
+   <type Family="Pointer" TI="19462" toTI="0"/>
+   <type Family="Base" Name="long unsigned int" ID="19464"/>
+   <type Family="Base" Name="char" ID="19471"/>
+   <type Family="typedef" Name="portTickType" Line="83" ID="19483" toTI="19464"/>
+   <type Family="ComponentList" Name="xLIST_ITEM" Line="97" ID="19494">
+    <Component Name="xItemValue" TI="19506" Line="98" Offs="0"/>
+   <type Family="Pointer" TI="19577" toTI="19583"/>
+    <Component Name="pxNext" TI="19520" Line="99" Offs="4"/>
+    <Component Name="pxPrevious" TI="19534" Line="100" Offs="8"/>
+   <type Family="Pointer" TI="19462" toTI="0"/>
+    <Component Name="pvOwner" TI="19548" Line="101" Offs="12"/>
+   <type Family="Pointer" TI="19462" toTI="0"/>
+    <Component Name="pvContainer" TI="19562" Line="102" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="xListItem" Line="104" ID="19592" toTI="19494"/>
+   <type Family="ComponentList" Name="xMINI_LIST_ITEM" Line="107" ID="19603">
+    <Component Name="xItemValue" TI="19615" Line="108" Offs="0"/>
+    <Component Name="pxNext" TI="19629" Line="109" Offs="4"/>
+    <Component Name="pxPrevious" TI="19643" Line="110" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="xMiniListItem" Line="112" ID="19658" toTI="19603"/>
+   <type Family="ComponentList" Name="xLIST" Line="118" ID="19669">
+    <Component Name="uxNumberOfItems" TI="19681" Line="119" Offs="0"/>
+   <type Family="Pointer" TI="19724" toTI="19730"/>
+    <Component Name="pxIndex" TI="19695" Line="120" Offs="4"/>
+    <Component Name="xListEnd" TI="19709" Line="121" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="xList" Line="122" ID="19740" toTI="19669"/>
+   <function Name="vListInitialise" TI="0" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="62">
+   <type Family="Pointer" TI="19788" toTI="19740"/>
+    <parameter Name="pxList" TI="19788" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="62" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="vListInitialiseItem" TI="0" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="82">
+   <type Family="Pointer" TI="19831" toTI="19592"/>
+    <parameter Name="pxItem" TI="19831" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="82" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="vListInsertEnd" TI="0" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="89">
+    <parameter Name="pxList" TI="19788" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="89" Addr="0x0" Param="Yes"/>
+    <parameter Name="pxNewListItem" TI="19831" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="89" Addr="0x1" Param="Yes"/>
+    <variable Name="pxIndex" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="90" Addr="0x2" TI="19724"/>
+   </function >
+   <function Name="vListInsert" TI="0" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="112">
+    <parameter Name="pxList" TI="19788" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="112" Addr="0x0" Param="Yes"/>
+    <parameter Name="pxNewListItem" TI="19831" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="112" Addr="0x1" Param="Yes"/>
+    <variable Name="pxIterator" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="113" Addr="0x2" TI="19724"/>
+    <variable Name="xValueOfInsertion" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="114" Addr="0x4" TI="19483"/>
+   </function >
+   <function Name="vListRemove" TI="0" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="153">
+    <parameter Name="pxItemToRemove" TI="19831" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="153" Addr="0x0" Param="Yes"/>
+    <variable Name="pxList" FileName="C:\cortex\dimmers\rtos\src\list.c" Line="154" Addr="0x2" TI="19788"/>
+   </function >
+  </module>
+  <module Name="C:\cortex\dimmers\rtos\src\port.c" >
+   <type Family="Base" Name="int" ID="20064"/>
+   <type Family="Base" Name="unsigned int" ID="20071"/>
+   <type Family="Pointer" TI="20089" toTI="20095"/>
+   <type Family="typedef" Name="pdTASK_CODE" Line="56" ID="20078" toTI="20089"/>
+   <type Family="Pointer" TI="20089" toTI="20095"/>
+   <type Family="Pointer" TI="20107" toTI="0"/>
+   <type Family="Base" Name="long int" ID="20109"/>
+   <type Family="Base" Name="short int" ID="20116"/>
+   <type Family="Base" Name="signed char" ID="20123"/>
+   <type Family="Base" Name="long unsigned int" ID="20130"/>
+   <type Family="Base" Name="short unsigned int" ID="20137"/>
+   <type Family="Base" Name="unsigned char" ID="20144"/>
+   <type Family="Pointer" TI="20230" toTI="20130"/>
+   <function Name="pxPortInitialiseStack" TI="20230" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="113">
+    <parameter Name="pxTopOfStack" TI="20230" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="113" Addr="0x0" Param="Yes"/>
+   <type Family="Pointer" TI="20089" toTI="20095"/>
+   <type Family="typedef" Name="pdTASK_CODE" Line="56" ID="20078" toTI="20089"/>
+    <parameter Name="pxCode" TI="20078" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="113" Addr="0x1" Param="Yes"/>
+   <type Family="Pointer" TI="20107" toTI="0"/>
+    <parameter Name="pvParameters" TI="20107" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="113" Addr="0x2" Param="Yes"/>
+   </function >
+   <function Name="vPortSVCHandler" TI="0" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="130">
+   </function >
+   <function Name="vPortStartFirstTask" TI="0" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="149">
+   </function >
+   <function Name="vPortYieldFromISR" TI="0" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="192">
+   </function >
+   <function Name="vPortEnterCritical" TI="0" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="199">
+   </function >
+   <function Name="vPortExitCritical" TI="0" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="206">
+   </function >
+   <function Name="xPortPendSVHandler" TI="0" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="216">
+   </function >
+   <function Name="xPortStartScheduler" TI="20109" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="164">
+   </function >
+   <function Name="xPortSysTickHandler" TI="0" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="251">
+   </function >
+   <variable Name="uxCriticalNesting" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="88" Addr="0x200001E8" TI="20130"/>
+   <variable Name="ulKernelPriority" FileName="C:\cortex\dimmers\rtos\src\port.c" Line="84" Addr="0x0" TI="20151"/>
+  </module>
+  <module Name="C:\cortex\dimmers\rtos\src\queue.c" >
+   <type Family="Base" Name="unsigned int" ID="20545"/>
+   <type Family="typedef" Name="size_t" Line="213" ID="20534" toTI="20545"/>
+   <type Family="Base" Name="signed char" ID="20552"/>
+   <type Family="Base" Name="unsigned char" ID="20559"/>
+   <type Family="Base" Name="short int" ID="20566"/>
+   <type Family="Base" Name="short unsigned int" ID="20573"/>
+   <type Family="Base" Name="int" ID="20580"/>
+   <type Family="Base" Name="long long int" ID="20587"/>
+   <type Family="Base" Name="long long unsigned int" ID="20594"/>
+   <type Family="Base" Name="long int" ID="20601"/>
+   <type Family="Pointer" TI="20611" toTI="0"/>
+   <type Family="Base" Name="long unsigned int" ID="20613"/>
+   <type Family="Base" Name="char" ID="20620"/>
+   <type Family="typedef" Name="portTickType" Line="83" ID="20632" toTI="20613"/>
+   <type Family="ComponentList" Name="xLIST_ITEM" Line="97" ID="20643">
+    <Component Name="xItemValue" TI="20655" Line="98" Offs="0"/>
+   <type Family="Pointer" TI="20726" toTI="20732"/>
+    <Component Name="pxNext" TI="20669" Line="99" Offs="4"/>
+    <Component Name="pxPrevious" TI="20683" Line="100" Offs="8"/>
+   <type Family="Pointer" TI="20611" toTI="0"/>
+    <Component Name="pvOwner" TI="20697" Line="101" Offs="12"/>
+   <type Family="Pointer" TI="20611" toTI="0"/>
+    <Component Name="pvContainer" TI="20711" Line="102" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="xListItem" Line="104" ID="20741" toTI="20643"/>
+   <type Family="ComponentList" Name="xMINI_LIST_ITEM" Line="107" ID="20752">
+    <Component Name="xItemValue" TI="20764" Line="108" Offs="0"/>
+    <Component Name="pxNext" TI="20778" Line="109" Offs="4"/>
+    <Component Name="pxPrevious" TI="20792" Line="110" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="xMiniListItem" Line="112" ID="20807" toTI="20752"/>
+   <type Family="ComponentList" Name="xLIST" Line="118" ID="20818">
+    <Component Name="uxNumberOfItems" TI="20830" Line="119" Offs="0"/>
+   <type Family="Pointer" TI="20873" toTI="20879"/>
+    <Component Name="pxIndex" TI="20844" Line="120" Offs="4"/>
+    <Component Name="xListEnd" TI="20858" Line="121" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="xList" Line="122" ID="20889" toTI="20818"/>
+   <type Family="ComponentList" Name="xTIME_OUT" Line="90" ID="20900">
+    <Component Name="xOverflowCount" TI="20912" Line="91" Offs="0"/>
+    <Component Name="xTimeOnEntering" TI="20926" Line="92" Offs="4"/>
+   </type>
+   <type Family="typedef" Name="xTimeOutType" Line="93" ID="20941" toTI="20900"/>
+   <type Family="ComponentList" Name="QueueDefinition" Line="89" ID="20952">
+   <type Family="Pointer" TI="21119" toTI="20552"/>
+    <Component Name="pcHead" TI="20964" Line="90" Offs="0"/>
+    <Component Name="pcTail" TI="20978" Line="91" Offs="4"/>
+    <Component Name="pcWriteTo" TI="20992" Line="93" Offs="8"/>
+    <Component Name="pcReadFrom" TI="21006" Line="94" Offs="12"/>
+    <Component Name="xTasksWaitingToSend" TI="21020" Line="96" Offs="16"/>
+    <Component Name="xTasksWaitingToReceive" TI="21034" Line="97" Offs="36"/>
+    <Component Name="uxMessagesWaiting" TI="21048" Line="99" Offs="56"/>
+    <Component Name="uxLength" TI="21062" Line="100" Offs="60"/>
+    <Component Name="uxItemSize" TI="21076" Line="101" Offs="64"/>
+    <Component Name="xRxLock" TI="21090" Line="103" Offs="68"/>
+    <Component Name="xTxLock" TI="21104" Line="104" Offs="72"/>
+   </type>
+   <type Family="typedef" Name="xQUEUE" Line="106" ID="21125" toTI="20952"/>
+   <type Family="Pointer" TI="21147" toTI="21125"/>
+   <type Family="typedef" Name="xQueueHandle" Line="114" ID="21136" toTI="21147"/>
+   <function Name="prvCopyDataFromQueue" TI="0" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="1071">
+    <parameter Name="pxQueue" TI="21495" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="1071" Addr="0x0" Param="Yes"/>
+   <type Family="Pointer" TI="21500" toTI="21506"/>
+    <parameter Name="pvBuffer" TI="21500" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="1071" Addr="0x1" Param="Yes"/>
+   </function >
+   <type Family="Pointer" TI="21500" toTI="21506"/>
+   <type Family="Pointer" TI="20611" toTI="0"/>
+   <type Family="Pointer" TI="21619" toTI="20601"/>
+   <function Name="prvUnlockQueue" TI="0" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="1085">
+    <parameter Name="pxQueue" TI="21136" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="1085" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="xQueueGenericReceive" TI="20601" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="804">
+    <parameter Name="pxQueue" TI="21136" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="804" Addr="0x0" Param="Yes"/>
+   <type Family="Pointer" TI="20611" toTI="0"/>
+    <parameter Name="pvBuffer" TI="21614" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="804" Addr="0x1" Param="Yes"/>
+    <parameter Name="xTicksToWait" TI="20632" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="804" Addr="0x2" Param="Yes"/>
+    <parameter Name="xJustPeeking" TI="20601" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="804" Addr="0x3" Param="Yes"/>
+    <variable Name="xEntryTimeSet" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="805" Addr="0x6" TI="20601"/>
+    <variable Name="xTimeOut" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="806" Addr="0x34000008" TI="20941"/>
+    <variable Name="pcOriginalReadPosition" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="807" Addr="0x4" TI="21119"/>
+   </function >
+   <function Name="prvCopyDataToQueue" TI="0" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="1033">
+    <parameter Name="pxQueue" TI="21147" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="1033" Addr="0x0" Param="Yes"/>
+   <type Family="Pointer" TI="21500" toTI="21506"/>
+    <parameter Name="pvItemToQueue" TI="21500" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="1033" Addr="0x1" Param="Yes"/>
+    <parameter Name="xPosition" TI="20601" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="1033" Addr="0x2" Param="Yes"/>
+   </function >
+   <function Name="xQueueGenericSendFromISR" TI="20601" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="751">
+    <parameter Name="pxQueue" TI="21136" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="751" Addr="0x0" Param="Yes"/>
+   <type Family="Pointer" TI="21500" toTI="21506"/>
+    <parameter Name="pvItemToQueue" TI="22084" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="751" Addr="0x1" Param="Yes"/>
+    <parameter Name="pxHigherPriorityTaskWoken" TI="21619" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="751" Addr="0x2" Param="Yes"/>
+    <parameter Name="xCopyPosition" TI="20601" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="751" Addr="0x3" Param="Yes"/>
+    <variable Name="xReturn" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="752" Addr="0x3" TI="20601"/>
+   </function >
+   <type Family="Pointer" TI="21500" toTI="21506"/>
+   <function Name="xQueueGenericSend" TI="20601" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="443">
+    <parameter Name="pxQueue" TI="21136" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="443" Addr="0x0" Param="Yes"/>
+   <type Family="Pointer" TI="21500" toTI="21506"/>
+    <parameter Name="pvItemToQueue" TI="22084" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="443" Addr="0x1" Param="Yes"/>
+    <parameter Name="xTicksToWait" TI="20632" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="443" Addr="0x2" Param="Yes"/>
+    <parameter Name="xCopyPosition" TI="20601" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="443" Addr="0x3" Param="Yes"/>
+    <variable Name="xEntryTimeSet" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="444" Addr="0x5" TI="20601"/>
+    <variable Name="xTimeOut" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="445" Addr="0x34000008" TI="20941"/>
+   </function >
+   <function Name="xQueueCreateMutex" TI="21136" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="291">
+    <variable Name="pxNewQueue" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="292" Addr="0x5" TI="21147"/>
+   </function >
+   <function Name="xQueueCreate" TI="21136" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="238">
+    <parameter Name="uxQueueLength" TI="20613" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="238" Addr="0x0" Param="Yes"/>
+    <parameter Name="uxItemSize" TI="20613" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="238" Addr="0x1" Param="Yes"/>
+    <variable Name="pxNewQueue" FileName="C:\cortex\dimmers\rtos\src\queue.c" Line="239" Addr="0x4" TI="21147"/>
+   </function >
+  </module>
+  <module Name="C:\cortex\dimmers\rtos\src\tasks.c" >
+   <type Family="Base" Name="unsigned int" ID="22460"/>
+   <type Family="Pointer" TI="22467" toTI="0"/>
+   <type Family="Base" Name="signed char" ID="22469"/>
+   <type Family="Base" Name="unsigned char" ID="22476"/>
+   <type Family="Base" Name="short int" ID="22483"/>
+   <type Family="Base" Name="short unsigned int" ID="22490"/>
+   <type Family="Base" Name="int" ID="22497"/>
+   <type Family="Base" Name="long long int" ID="22504"/>
+   <type Family="Base" Name="long long unsigned int" ID="22511"/>
+   <type Family="Base" Name="long int" ID="22518"/>
+   <type Family="Base" Name="long unsigned int" ID="22528"/>
+   <type Family="Pointer" TI="22535" toTI="22476"/>
+   <type Family="Base" Name="char" ID="22541"/>
+   <type Family="Pointer" TI="22559" toTI="22565"/>
+   <type Family="typedef" Name="pdTASK_CODE" Line="56" ID="22548" toTI="22559"/>
+   <type Family="Pointer" TI="22559" toTI="22565"/>
+   <type Family="typedef" Name="portTickType" Line="83" ID="22597" toTI="22528"/>
+   <type Family="ComponentList" Name="xLIST_ITEM" Line="97" ID="22608">
+    <Component Name="xItemValue" TI="22620" Line="98" Offs="0"/>
+   <type Family="Pointer" TI="22691" toTI="22697"/>
+    <Component Name="pxNext" TI="22634" Line="99" Offs="4"/>
+    <Component Name="pxPrevious" TI="22648" Line="100" Offs="8"/>
+   <type Family="Pointer" TI="22467" toTI="0"/>
+    <Component Name="pvOwner" TI="22662" Line="101" Offs="12"/>
+   <type Family="Pointer" TI="22467" toTI="0"/>
+    <Component Name="pvContainer" TI="22676" Line="102" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="xListItem" Line="104" ID="22706" toTI="22608"/>
+   <type Family="ComponentList" Name="xMINI_LIST_ITEM" Line="107" ID="22717">
+    <Component Name="xItemValue" TI="22729" Line="108" Offs="0"/>
+    <Component Name="pxNext" TI="22743" Line="109" Offs="4"/>
+    <Component Name="pxPrevious" TI="22757" Line="110" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="xMiniListItem" Line="112" ID="22772" toTI="22717"/>
+   <type Family="ComponentList" Name="xLIST" Line="118" ID="22783">
+    <Component Name="uxNumberOfItems" TI="22795" Line="119" Offs="0"/>
+   <type Family="Pointer" TI="22838" toTI="22844"/>
+    <Component Name="pxIndex" TI="22809" Line="120" Offs="4"/>
+    <Component Name="xListEnd" TI="22823" Line="121" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="xList" Line="122" ID="22854" toTI="22783"/>
+   <type Family="Pointer" TI="22467" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="22865" toTI="22467"/>
+   <type Family="ComponentList" Name="xTIME_OUT" Line="90" ID="22876">
+    <Component Name="xOverflowCount" TI="22888" Line="91" Offs="0"/>
+    <Component Name="xTimeOnEntering" TI="22902" Line="92" Offs="4"/>
+   </type>
+   <type Family="typedef" Name="xTimeOutType" Line="93" ID="22917" toTI="22876"/>
+   <type Family="ComponentList" Name="tskTaskControlBlock" Line="71" ID="22928">
+   <type Family="Pointer" TI="23039" toTI="22592"/>
+    <Component Name="pxTopOfStack" TI="22940" Line="72" Offs="0"/>
+    <Component Name="xGenericListItem" TI="22954" Line="73" Offs="4"/>
+    <Component Name="xEventListItem" TI="22968" Line="74" Offs="24"/>
+    <Component Name="uxPriority" TI="22982" Line="75" Offs="44"/>
+   <type Family="Pointer" TI="23045" toTI="22528"/>
+    <Component Name="pxStack" TI="22996" Line="76" Offs="48"/>
+   <type Family="array" ID="23051" toTI="22469"/>
+    <Component Name="pcTaskName" TI="23010" Line="77" Offs="52"/>
+    <Component Name="uxBasePriority" TI="23024" Line="92" Offs="68"/>
+   </type>
+   <type Family="typedef" Name="tskTCB" Line="99" ID="23067" toTI="22928"/>
+   <function Name="xTaskIsTaskSuspended" TI="22518" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="857">
+   <type Family="Pointer" TI="22467" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="22865" toTI="22467"/>
+    <parameter Name="xTask" TI="22865" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="857" Addr="0x0" Param="Yes"/>
+    <variable Name="xReturn" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="858" Addr="0x0" TI="22518"/>
+   <type Family="Pointer" TI="23156" toTI="23162"/>
+   </function >
+   <function Name="vTaskSuspendAll" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1017">
+   </function >
+   <function Name="vTaskSwitchContext" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1394">
+   <type Family="Pointer" TI="23265" toTI="22854"/>
+    <variable Name="pxConstList" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1416" Addr="0x1" TI="23260"/>
+   </function >
+   <function Name="vTaskSetTimeOutState" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1541">
+   <type Family="Pointer" TI="23315" toTI="22917"/>
+    <parameter Name="pxTimeOut" TI="23310" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1541" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="vTaskMissedYield" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1591">
+   </function >
+   <type Family="Pointer" TI="23402" toTI="22587"/>
+   <type Family="Pointer" TI="23483" toTI="23067"/>
+   <type Family="Pointer" TI="22467" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="22865" toTI="22467"/>
+   <function Name="xTaskGetCurrentTaskHandle" TI="22865" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1899">
+   </function >
+   <function Name="xTaskGetSchedulerState" TI="22518" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1913">
+    <variable Name="xReturn" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1914" Addr="0x0" TI="22518"/>
+   </function >
+   <function Name="vTaskPriorityDisinherit" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1973">
+   <type Family="Pointer" TI="22467" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="22865" toTI="22467"/>
+   <type Family="Pointer" TI="23618" toTI="22865"/>
+    <parameter Name="pxMutexHolder" TI="23613" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1973" Addr="0x0" Param="Yes"/>
+   </function >
+   <type Family="Pointer" TI="22467" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="22865" toTI="22467"/>
+   <type Family="Pointer" TI="23618" toTI="22865"/>
+   <type Family="Pointer" TI="22467" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="22865" toTI="22467"/>
+   <type Family="Pointer" TI="23618" toTI="22865"/>
+   <function Name="vTaskPriorityInherit" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1941">
+   <type Family="Pointer" TI="22467" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="22865" toTI="22467"/>
+   <type Family="Pointer" TI="23618" toTI="22865"/>
+    <parameter Name="pxMutexHolder" TI="23613" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1941" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="xTaskRemoveFromEventList" TI="22518" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1494">
+   <type Family="Pointer" TI="23764" toTI="23770"/>
+    <parameter Name="pxEventList" TI="23759" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1494" Addr="0x0" Param="Yes"/>
+    <variable Name="pxUnblockedTCB" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1495" Addr="0x5" TI="23483"/>
+   </function >
+   <function Name="vTaskIncrementTick" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1227">
+    <variable Name="pxTemp" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1236" Addr="0x2" TI="23265"/>
+    <variable Name="pxTCB" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1248" Addr="0x4" TI="23483"/>
+   </function >
+   <function Name="xTaskCheckForTimeOut" TI="22518" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1548">
+    <parameter Name="pxTimeOut" TI="23310" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1548" Addr="0x0" Param="Yes"/>
+   <type Family="Pointer" TI="24017" toTI="22597"/>
+    <parameter Name="pxTicksToWait" TI="24012" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1548" Addr="0x1" Param="Yes"/>
+    <variable Name="xReturn" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1549" Addr="0x4" TI="22518"/>
+   </function >
+   <function Name="vTaskPlaceOnEventList" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1424">
+    <parameter Name="pxEventList" TI="23759" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1424" Addr="0x0" Param="Yes"/>
+    <parameter Name="xTicksToWait" TI="22597" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1424" Addr="0x1" Param="Yes"/>
+    <variable Name="xTimeToWake" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1425" Addr="0x3" TI="22597"/>
+   </function >
+   <function Name="xTaskResumeAll" TI="22518" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1025">
+    <variable Name="pxTCB" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1026" Addr="0x5" TI="23483"/>
+    <variable Name="xAlreadyYielded" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1027" Addr="0x4" TI="22518"/>
+    <variable Name="xYieldRequired" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1042" Addr="0x6" TI="22518"/>
+   </function >
+   <function Name="vTaskResume" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="888">
+   <type Family="Pointer" TI="22467" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="22865" toTI="22467"/>
+    <parameter Name="pxTaskToResume" TI="22865" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="888" Addr="0x0" Param="Yes"/>
+    <variable Name="pxTCB" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="889" Addr="0x5" TI="23483"/>
+   </function >
+   <function Name="vTaskSuspend" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="814">
+   <type Family="Pointer" TI="22467" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="22865" toTI="22467"/>
+    <parameter Name="pxTaskToSuspend" TI="22865" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="814" Addr="0x0" Param="Yes"/>
+    <variable Name="pxTCB" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="815" Addr="0x4" TI="23483"/>
+   </function >
+   <function Name="vTaskDelay" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="626">
+    <parameter Name="xTicksToDelay" TI="22597" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="626" Addr="0x0" Param="Yes"/>
+    <variable Name="xTimeToWake" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="627" Addr="0x4" TI="22597"/>
+   </function >
+   <function Name="vTaskDelete" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="483">
+   <type Family="Pointer" TI="22467" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="22865" toTI="22467"/>
+    <parameter Name="pxTaskToDelete" TI="22865" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="483" Addr="0x0" Param="Yes"/>
+    <variable Name="pxTCB" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="484" Addr="0x4" TI="23483"/>
+   </function >
+   <function Name="prvIdleTask" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1607">
+   <type Family="Pointer" TI="22467" toTI="0"/>
+    <parameter Name="pvParameters" TI="22467" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1607" Addr="0x0" Param="Yes"/>
+    <variable Name="pxTCB" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="1763" Addr="0x4" TI="0"/>
+   </function >
+   <type Family="Pointer" TI="25065" toTI="22577"/>
+   <function Name="xTaskCreate" TI="22518" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="358">
+   <type Family="Pointer" TI="22559" toTI="22565"/>
+   <type Family="typedef" Name="pdTASK_CODE" Line="56" ID="22548" toTI="22559"/>
+    <parameter Name="pvTaskCode" TI="22548" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="358" Addr="0x0" Param="Yes"/>
+    <parameter Name="pcName" TI="25060" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="358" Addr="0x1" Param="Yes"/>
+    <parameter Name="usStackDepth" TI="22490" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="358" Addr="0x2" Param="Yes"/>
+   <type Family="Pointer" TI="22467" toTI="0"/>
+    <parameter Name="pvParameters" TI="22467" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="358" Addr="0x3" Param="Yes"/>
+    <parameter Name="uxPriority" TI="22528" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="358" Addr="0x34000028" Param="Yes"/>
+   <type Family="Pointer" TI="22467" toTI="0"/>
+   <type Family="typedef" Name="xTaskHandle" Line="84" ID="22865" toTI="22467"/>
+   <type Family="Pointer" TI="23618" toTI="22865"/>
+    <parameter Name="pxCreatedTask" TI="23618" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="358" Addr="0x3400002C" Param="Yes"/>
+    <variable Name="xReturn" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="359" Addr="0x0" TI="22518"/>
+    <variable Name="pxNewTCB" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="360" Addr="0x6" TI="23483"/>
+   </function >
+   <function Name="vTaskStartScheduler" TI="0" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="969">
+    <variable Name="xReturn" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="970" Addr="0x0" TI="22518"/>
+   </function >
+   <type Family="array" ID="25417" toTI="22854"/>
+   <variable Name="pxReadyTasksLists" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="115" Addr="0x2000527C" TI="25417"/>
+   <variable Name="xDelayedTaskList1" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="116" Addr="0x20005318" TI="22854"/>
+   <variable Name="xDelayedTaskList2" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="117" Addr="0x2000532C" TI="22854"/>
+   <variable Name="pxDelayedTaskList" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="118" Addr="0x200052F0" TI="25501"/>
+   <variable Name="pxOverflowDelayedTaskList" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="119" Addr="0x200052F4" TI="25501"/>
+   <variable Name="xPendingReadyList" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="120" Addr="0x20005258" TI="22854"/>
+   <variable Name="xTasksWaitingTermination" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="124" Addr="0x200052FC" TI="25557"/>
+   <variable Name="uxTasksDeleted" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="125" Addr="0x20005310" TI="22592"/>
+   <variable Name="xSuspendedTaskList" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="131" Addr="0x20005244" TI="22854"/>
+   <variable Name="uxCurrentNumberOfTasks" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="136" Addr="0x20005270" TI="22592"/>
+   <variable Name="xTickCount" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="137" Addr="0x200052E8" TI="25630"/>
+   <variable Name="uxTopUsedPriority" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="138" Addr="0x20005340" TI="22528"/>
+   <variable Name="uxTopReadyPriority" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="139" Addr="0x20005278" TI="22592"/>
+   <variable Name="xSchedulerRunning" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="140" Addr="0x200052EC" TI="22582"/>
+   <variable Name="uxSchedulerSuspended" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="141" Addr="0x2000526C" TI="22592"/>
+   <variable Name="uxMissedTicks" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="142" Addr="0x200052F8" TI="22592"/>
+   <variable Name="xMissedYield" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="143" Addr="0x20005274" TI="22582"/>
+   <variable Name="xNumOfOverflows" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="144" Addr="0x200052E4" TI="22582"/>
+   <variable Name="uxTaskNumber" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="145" Addr="0x20005314" TI="22528"/>
+   <variable Name="pxCurrentTCB" FileName="C:\cortex\dimmers\rtos\src\tasks.c" Line="111" Addr="0x200052E0" TI="25789"/>
+  </module>
+  <module Name="C:\cortex\dimmers\src\stm32f10x_nvic.c" >
+   <type Family="Base" Name="long int" ID="25832"/>
+   <type Family="Base" Name="short int" ID="25839"/>
+   <type Family="Base" Name="signed char" ID="25846"/>
+   <type Family="Base" Name="long unsigned int" ID="25864"/>
+   <type Family="typedef" Name="u32" Line="64" ID="25853" toTI="25864"/>
+   <type Family="Base" Name="short unsigned int" ID="25882"/>
+   <type Family="typedef" Name="u16" Line="65" ID="25871" toTI="25882"/>
+   <type Family="Base" Name="unsigned char" ID="25899"/>
+   <type Family="typedef" Name="u8" Line="66" ID="25889" toTI="25899"/>
+   <type Family="typedef" Name="ITStatus" Line="82" ID="25937" toTI="25916"/>
+   <type Family="typedef" Name="FunctionalState" Line="84" ID="25969" toTI="25948"/>
+   <type Family="ComponentList" Line="411" ID="25983">
+   <type Family="array" ID="26168" toTI="25864"/>
+    <Component Name="ISER" TI="25993" Line="412" Offs="0"/>
+   <type Family="array" ID="26189" toTI="25853"/>
+    <Component Name="RESERVED0" TI="26008" Line="413" Offs="8"/>
+    <Component Name="ICER" TI="26023" Line="414" Offs="128"/>
+    <Component Name="RSERVED1" TI="26039" Line="415" Offs="136"/>
+    <Component Name="ISPR" TI="26055" Line="416" Offs="256"/>
+    <Component Name="RESERVED2" TI="26071" Line="417" Offs="264"/>
+    <Component Name="ICPR" TI="26087" Line="418" Offs="384"/>
+    <Component Name="RESERVED3" TI="26103" Line="419" Offs="392"/>
+    <Component Name="IABR" TI="26119" Line="420" Offs="512"/>
+   <type Family="array" ID="26225" toTI="25853"/>
+    <Component Name="RESERVED4" TI="26135" Line="421" Offs="520"/>
+   <type Family="array" ID="26241" toTI="25864"/>
+    <Component Name="IPR" TI="26151" Line="422" Offs="768"/>
+   </type>
+   <type Family="ComponentList" Line="426" ID="26262">
+    <Component Name="CPUID" TI="26271" Line="427" Offs="0"/>
+    <Component Name="ICSR" TI="26286" Line="428" Offs="4"/>
+    <Component Name="VTOR" TI="26301" Line="429" Offs="8"/>
+    <Component Name="AIRCR" TI="26316" Line="430" Offs="12"/>
+    <Component Name="SCR" TI="26331" Line="431" Offs="16"/>
+    <Component Name="CCR" TI="26346" Line="432" Offs="20"/>
+   <type Family="array" ID="26482" toTI="25864"/>
+    <Component Name="SHPR" TI="26361" Line="433" Offs="24"/>
+    <Component Name="SHCSR" TI="26376" Line="434" Offs="36"/>
+    <Component Name="CFSR" TI="26391" Line="435" Offs="40"/>
+    <Component Name="HFSR" TI="26406" Line="436" Offs="44"/>
+    <Component Name="DFSR" TI="26421" Line="437" Offs="48"/>
+    <Component Name="MMFAR" TI="26436" Line="438" Offs="52"/>
+    <Component Name="BFAR" TI="26451" Line="439" Offs="56"/>
+    <Component Name="AFSR" TI="26466" Line="440" Offs="60"/>
+   </type>
+   <type Family="ComponentList" Line="52" ID="26503">
+    <Component Name="NVIC_IRQChannel" TI="26511" Line="53" Offs="0"/>
+    <Component Name="NVIC_IRQChannelPreemptionPriority" TI="26525" Line="54" Offs="1"/>
+    <Component Name="NVIC_IRQChannelSubPriority" TI="26539" Line="55" Offs="2"/>
+    <Component Name="NVIC_IRQChannelCmd" TI="26553" Line="56" Offs="3"/>
+   </type>
+   <type Family="typedef" Name="NVIC_InitTypeDef" Line="57" ID="26568" toTI="26503"/>
+   <function Name="NVIC_PriorityGroupConfig" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_nvic.c" Line="98">
+    <parameter Name="NVIC_PriorityGroup" TI="25853" FileName="C:\cortex\dimmers\src\stm32f10x_nvic.c" Line="98" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="NVIC_Init" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_nvic.c" Line="117">
+   <type Family="Pointer" TI="26798" toTI="26568"/>
+    <parameter Name="NVIC_InitStruct" TI="26798" FileName="C:\cortex\dimmers\src\stm32f10x_nvic.c" Line="117" Addr="0x0" Param="Yes"/>
+    <variable Name="tmppriority" FileName="C:\cortex\dimmers\src\stm32f10x_nvic.c" Line="118" Addr="0x2" TI="25853"/>
+    <variable Name="tmpreg" FileName="C:\cortex\dimmers\src\stm32f10x_nvic.c" Line="118" Addr="0x1" TI="25853"/>
+    <variable Name="tmpmask" FileName="C:\cortex\dimmers\src\stm32f10x_nvic.c" Line="118" Addr="0x2" TI="25853"/>
+   </function >
+   <function Name="NVIC_SetVectorTable" TI="0" FileName="C:\cortex\dimmers\src\stm32f10x_nvic.c" Line="394">
+    <parameter Name="NVIC_VectTab" TI="25853" FileName="C:\cortex\dimmers\src\stm32f10x_nvic.c" Line="394" Addr="0x0" Param="Yes"/>
+    <parameter Name="Offset" TI="25853" FileName="C:\cortex\dimmers\src\stm32f10x_nvic.c" Line="394" Addr="0x1" Param="Yes"/>
+   </function >
+  </module>
+ </modulelist>
+</aoffile>
+

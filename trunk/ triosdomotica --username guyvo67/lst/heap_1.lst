@@ -1,0 +1,154 @@
+
+D:\cortex\dimmers\hex\heap_1.o:     file format elf32-littlearm
+D:\cortex\dimmers\hex\heap_1.o
+
+Disassembly of section .text.pvPortMalloc:
+
+00000000 <pvPortMalloc>:
+pvPortMalloc():
+D:\cortex\dimmers\rtos\src/heap_1.c:111
+
+static size_t xNextFreeByte = ( size_t ) 0;
+/*-----------------------------------------------------------*/
+
+void *pvPortMalloc( size_t xWantedSize )
+{
+   0:	b580      	push	{r7, lr}
+   2:	b084      	sub	sp, #16
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\cortex\dimmers\rtos\src/heap_1.c:112
+void *pvReturn = NULL; 
+   8:	f04f 0300 	mov.w	r3, #0	; 0x0
+   c:	60fb      	str	r3, [r7, #12]
+D:\cortex\dimmers\rtos\src/heap_1.c:116
+
+	/* Ensure that blocks are always aligned to the required number of bytes. */
+	#if portBYTE_ALIGNMENT != 1
+		if( xWantedSize & heapBYTE_ALIGNMENT_MASK )
+   e:	687b      	ldr	r3, [r7, #4]
+  10:	f003 0303 	and.w	r3, r3, #3	; 0x3
+  14:	2b00      	cmp	r3, #0
+  16:	d005      	beq.n	24 <pvPortMalloc+0x24>
+D:\cortex\dimmers\rtos\src/heap_1.c:119
+		{
+			/* Byte alignment required. */
+			xWantedSize += ( portBYTE_ALIGNMENT - ( xWantedSize & heapBYTE_ALIGNMENT_MASK ) );
+  18:	687b      	ldr	r3, [r7, #4]
+  1a:	f023 0303 	bic.w	r3, r3, #3	; 0x3
+  1e:	f103 0304 	add.w	r3, r3, #4	; 0x4
+  22:	607b      	str	r3, [r7, #4]
+D:\cortex\dimmers\rtos\src/heap_1.c:123
+		}
+	#endif
+
+	vTaskSuspendAll();
+  24:	f7ff fffe 	bl	0 <vTaskSuspendAll>
+D:\cortex\dimmers\rtos\src/heap_1.c:126
+	{
+		/* Check there is enough room left for the allocation. */
+		if( ( ( xNextFreeByte + xWantedSize ) < configTOTAL_HEAP_SIZE ) &&
+  28:	f240 0300 	movw	r3, #0	; 0x0
+  2c:	f2c0 0300 	movt	r3, #0	; 0x0
+  30:	681a      	ldr	r2, [r3, #0]
+  32:	687b      	ldr	r3, [r7, #4]
+  34:	441a      	add	r2, r3
+  36:	f244 33ff 	movw	r3, #17407	; 0x43ff
+  3a:	429a      	cmp	r2, r3
+  3c:	d821      	bhi.n	82 <pvPortMalloc+0x82>
+  3e:	f240 0300 	movw	r3, #0	; 0x0
+  42:	f2c0 0300 	movt	r3, #0	; 0x0
+  46:	681a      	ldr	r2, [r3, #0]
+  48:	687b      	ldr	r3, [r7, #4]
+  4a:	441a      	add	r2, r3
+  4c:	f240 0300 	movw	r3, #0	; 0x0
+  50:	f2c0 0300 	movt	r3, #0	; 0x0
+  54:	681b      	ldr	r3, [r3, #0]
+  56:	429a      	cmp	r2, r3
+  58:	d913      	bls.n	82 <pvPortMalloc+0x82>
+D:\cortex\dimmers\rtos\src/heap_1.c:131
+			( ( xNextFreeByte + xWantedSize ) > xNextFreeByte )	)/* Check for overflow. */
+		{
+			/* Return the next free byte then increment the index past this
+			block. */
+			pvReturn = &( xHeap.ucHeap[ xNextFreeByte ] );
+  5a:	f240 0300 	movw	r3, #0	; 0x0
+  5e:	f2c0 0300 	movt	r3, #0	; 0x0
+  62:	681a      	ldr	r2, [r3, #0]
+  64:	4b0b      	ldr	r3, [pc, #44]	(94 <pvPortMalloc+0x94>)
+  66:	4413      	add	r3, r2
+  68:	60fb      	str	r3, [r7, #12]
+D:\cortex\dimmers\rtos\src/heap_1.c:132
+			xNextFreeByte += xWantedSize;			
+  6a:	f240 0300 	movw	r3, #0	; 0x0
+  6e:	f2c0 0300 	movt	r3, #0	; 0x0
+  72:	681a      	ldr	r2, [r3, #0]
+  74:	687b      	ldr	r3, [r7, #4]
+  76:	441a      	add	r2, r3
+  78:	f240 0300 	movw	r3, #0	; 0x0
+  7c:	f2c0 0300 	movt	r3, #0	; 0x0
+  80:	601a      	str	r2, [r3, #0]
+D:\cortex\dimmers\rtos\src/heap_1.c:135
+		}	
+	}
+	xTaskResumeAll();
+  82:	f7ff fffe 	bl	0 <xTaskResumeAll>
+D:\cortex\dimmers\rtos\src/heap_1.c:137
+
+	return pvReturn;
+  86:	68fb      	ldr	r3, [r7, #12]
+D:\cortex\dimmers\rtos\src/heap_1.c:138
+}
+  88:	4618      	mov	r0, r3
+  8a:	f107 0710 	add.w	r7, r7, #16	; 0x10
+  8e:	46bd      	mov	sp, r7
+  90:	bd80      	pop	{r7, pc}
+  92:	46c0      	nop			(mov r8, r8)
+  94:	00000008 	.word	0x00000008
+Disassembly of section .text.vPortFree:
+
+00000000 <vPortFree>:
+vPortFree():
+D:\cortex\dimmers\rtos\src/heap_1.c:142
+/*-----------------------------------------------------------*/
+
+void vPortFree( void *pv )
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\cortex\dimmers\rtos\src/heap_1.c:147
+	/* Memory cannot be freed using this scheme.  See heap_2.c and heap_3.c 
+	for alternative implementations, and the memory management pages of 
+	http://www.FreeRTOS.org for more information. */
+	( void ) pv;
+}
+   8:	f107 070c 	add.w	r7, r7, #12	; 0xc
+   c:	46bd      	mov	sp, r7
+   e:	bc80      	pop	{r7}
+  10:	4770      	bx	lr
+  12:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.vPortInitialiseBlocks:
+
+00000000 <vPortInitialiseBlocks>:
+vPortInitialiseBlocks():
+D:\cortex\dimmers\rtos\src/heap_1.c:151
+/*-----------------------------------------------------------*/
+
+void vPortInitialiseBlocks( void )
+{
+   0:	b480      	push	{r7}
+   2:	af00      	add	r7, sp, #0
+D:\cortex\dimmers\rtos\src/heap_1.c:153
+	/* Only required when static memory is not cleared. */
+	xNextFreeByte = ( size_t ) 0;
+   4:	f240 0300 	movw	r3, #0	; 0x0
+   8:	f2c0 0300 	movt	r3, #0	; 0x0
+   c:	f04f 0200 	mov.w	r2, #0	; 0x0
+  10:	601a      	str	r2, [r3, #0]
+D:\cortex\dimmers\rtos\src/heap_1.c:154
+}
+  12:	46bd      	mov	sp, r7
+  14:	bc80      	pop	{r7}
+  16:	4770      	bx	lr

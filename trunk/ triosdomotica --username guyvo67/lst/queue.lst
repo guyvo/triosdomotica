@@ -1,0 +1,1461 @@
+
+C:\cortex\dimmers\hex\queue.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\queue.o
+
+Disassembly of section .text.uxQueueMessagesWaitingFromISR:
+
+00000000 <uxQueueMessagesWaitingFromISR>:
+uxQueueMessagesWaitingFromISR():
+C:\cortex\dimmers\rtos\src/queue.c:1017
+
+unsigned portBASE_TYPE uxQueueMessagesWaitingFromISR( const xQueueHandle pxQueue )
+{
+unsigned portBASE_TYPE uxReturn;
+
+	uxReturn = pxQueue->uxMessagesWaiting;
+   0:	6b80      	ldr	r0, [r0, #56]
+C:\cortex\dimmers\rtos\src/queue.c:1020
+
+	return uxReturn;
+}
+   2:	4770      	bx	lr
+Disassembly of section .text.xQueueIsQueueEmptyFromISR:
+
+00000000 <xQueueIsQueueEmptyFromISR>:
+xQueueIsQueueEmptyFromISR():
+C:\cortex\dimmers\rtos\src/queue.c:1164
+
+signed portBASE_TYPE xQueueIsQueueEmptyFromISR( const xQueueHandle pxQueue )
+{
+signed portBASE_TYPE xReturn;
+
+	xReturn = ( pxQueue->uxMessagesWaiting == ( unsigned portBASE_TYPE ) 0 );
+   0:	6b80      	ldr	r0, [r0, #56]
+C:\cortex\dimmers\rtos\src/queue.c:1167
+
+	return xReturn;
+}
+   2:	f1d0 0001 	rsbs	r0, r0, #1	; 0x1
+   6:	bf38      	it	cc
+   8:	2000      	movcc	r0, #0
+   a:	4770      	bx	lr
+Disassembly of section .text.xQueueIsQueueFullFromISR:
+
+00000000 <xQueueIsQueueFullFromISR>:
+xQueueIsQueueFullFromISR():
+C:\cortex\dimmers\rtos\src/queue.c:1186
+
+signed portBASE_TYPE xQueueIsQueueFullFromISR( const xQueueHandle pxQueue )
+{
+signed portBASE_TYPE xReturn;
+
+	xReturn = ( pxQueue->uxMessagesWaiting == pxQueue->uxLength );
+   0:	6b83      	ldr	r3, [r0, #56]
+   2:	6bc0      	ldr	r0, [r0, #60]
+C:\cortex\dimmers\rtos\src/queue.c:1189
+
+	return xReturn;
+}
+   4:	4283      	cmp	r3, r0
+   6:	bf14      	ite	ne
+   8:	2000      	movne	r0, #0
+   a:	2001      	moveq	r0, #1
+   c:	4770      	bx	lr
+   e:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.vQueueDelete:
+
+00000000 <vQueueDelete>:
+vQueueDelete():
+C:\cortex\dimmers\rtos\src/queue.c:1024
+	return uxReturn;
+}
+/*-----------------------------------------------------------*/
+
+void vQueueDelete( xQueueHandle pxQueue )
+{
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+C:\cortex\dimmers\rtos\src/queue.c:1027
+	traceQUEUE_DELETE( pxQueue );
+	vQueueUnregisterQueue( pxQueue );
+	vPortFree( pxQueue->pcHead );
+   4:	6800      	ldr	r0, [r0, #0]
+   6:	f7ff fffe 	bl	0 <vPortFree>
+C:\cortex\dimmers\rtos\src/queue.c:1028
+	vPortFree( pxQueue );
+   a:	4620      	mov	r0, r4
+   c:	f7ff fffe 	bl	0 <vPortFree>
+C:\cortex\dimmers\rtos\src/queue.c:1029
+}
+  10:	bd10      	pop	{r4, pc}
+  12:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.uxQueueMessagesWaiting:
+
+00000000 <uxQueueMessagesWaiting>:
+uxQueueMessagesWaiting():
+C:\cortex\dimmers\rtos\src/queue.c:1002
+	return xReturn;
+}
+/*-----------------------------------------------------------*/
+
+unsigned portBASE_TYPE uxQueueMessagesWaiting( const xQueueHandle pxQueue )
+{
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+C:\cortex\dimmers\rtos\src/queue.c:1005
+unsigned portBASE_TYPE uxReturn;
+
+	taskENTER_CRITICAL();
+   4:	f7ff fffe 	bl	0 <vPortEnterCritical>
+C:\cortex\dimmers\rtos\src/queue.c:1006
+		uxReturn = pxQueue->uxMessagesWaiting;
+   8:	6ba4      	ldr	r4, [r4, #56]
+C:\cortex\dimmers\rtos\src/queue.c:1007
+	taskEXIT_CRITICAL();
+   a:	f7ff fffe 	bl	0 <vPortExitCritical>
+C:\cortex\dimmers\rtos\src/queue.c:1010
+
+	return uxReturn;
+}
+   e:	4620      	mov	r0, r4
+  10:	bd10      	pop	{r4, pc}
+  12:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.prvCopyDataFromQueue:
+
+00000000 <prvCopyDataFromQueue>:
+prvCopyDataFromQueue():
+C:\cortex\dimmers\rtos\src/queue.c:1071
+	++( pxQueue->uxMessagesWaiting );
+}
+/*-----------------------------------------------------------*/
+
+static void prvCopyDataFromQueue( xQUEUE * const pxQueue, const void *pvBuffer )
+{
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	4608      	mov	r0, r1
+C:\cortex\dimmers\rtos\src/queue.c:1072
+	if( pxQueue->uxQueueType != queueQUEUE_IS_MUTEX )
+   6:	6821      	ldr	r1, [r4, #0]
+   8:	b159      	cbz	r1, 22 <prvCopyDataFromQueue+0x22>
+C:\cortex\dimmers\rtos\src/queue.c:1074
+	{
+		pxQueue->pcReadFrom += pxQueue->uxItemSize;
+   a:	68e3      	ldr	r3, [r4, #12]
+   c:	6c22      	ldr	r2, [r4, #64]
+   e:	189b      	adds	r3, r3, r2
+C:\cortex\dimmers\rtos\src/queue.c:1075
+		if( pxQueue->pcReadFrom >= pxQueue->pcTail )
+  10:	6862      	ldr	r2, [r4, #4]
+C:\cortex\dimmers\rtos\src/queue.c:1074
+
+static void prvCopyDataFromQueue( xQUEUE * const pxQueue, const void *pvBuffer )
+{
+	if( pxQueue->uxQueueType != queueQUEUE_IS_MUTEX )
+	{
+		pxQueue->pcReadFrom += pxQueue->uxItemSize;
+  12:	60e3      	str	r3, [r4, #12]
+C:\cortex\dimmers\rtos\src/queue.c:1075
+		if( pxQueue->pcReadFrom >= pxQueue->pcTail )
+  14:	4293      	cmp	r3, r2
+C:\cortex\dimmers\rtos\src/queue.c:1077
+		{
+			pxQueue->pcReadFrom = pxQueue->pcHead;
+  16:	bf28      	it	cs
+  18:	60e1      	strcs	r1, [r4, #12]
+C:\cortex\dimmers\rtos\src/queue.c:1079
+		}
+		memcpy( ( void * ) pvBuffer, ( void * ) pxQueue->pcReadFrom, ( unsigned ) pxQueue->uxItemSize );
+  1a:	68e1      	ldr	r1, [r4, #12]
+  1c:	6c22      	ldr	r2, [r4, #64]
+  1e:	f7ff fffe 	bl	0 <memcpy>
+C:\cortex\dimmers\rtos\src/queue.c:1081
+	}
+}
+  22:	bd10      	pop	{r4, pc}
+Disassembly of section .text.xQueueReceiveFromISR:
+
+00000000 <xQueueReceiveFromISR>:
+xQueueReceiveFromISR():
+C:\cortex\dimmers\rtos\src/queue.c:951
+	}
+}
+/*-----------------------------------------------------------*/
+
+signed portBASE_TYPE xQueueReceiveFromISR( xQueueHandle pxQueue, void * const pvBuffer, signed portBASE_TYPE *pxTaskWoken )
+{
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4604      	mov	r4, r0
+   4:	4615      	mov	r5, r2
+C:\cortex\dimmers\rtos\src/queue.c:955
+signed portBASE_TYPE xReturn;
+unsigned portBASE_TYPE uxSavedInterruptStatus;
+
+	uxSavedInterruptStatus = portSET_INTERRUPT_MASK_FROM_ISR();
+   6:	f04f 00bf 	mov.w	r0, #191	; 0xbf
+   a:	f380 8811 	msr	BASEPRI, r0
+C:\cortex\dimmers\rtos\src/queue.c:958
+	{
+		/* We cannot block from an ISR, so check there is data available. */
+		if( pxQueue->uxMessagesWaiting > ( unsigned portBASE_TYPE ) 0 )
+   e:	6ba0      	ldr	r0, [r4, #56]
+  10:	b908      	cbnz	r0, 16 <xQueueReceiveFromISR+0x16>
+  12:	4603      	mov	r3, r0
+  14:	e016      	b.n	44 <xQueueReceiveFromISR+0x44>
+C:\cortex\dimmers\rtos\src/queue.c:962
+		{
+			traceQUEUE_RECEIVE_FROM_ISR( pxQueue );
+
+			prvCopyDataFromQueue( pxQueue, pvBuffer );
+  16:	4620      	mov	r0, r4
+  18:	f7ff fffe 	bl	0 <xQueueReceiveFromISR>
+C:\cortex\dimmers\rtos\src/queue.c:963
+			--( pxQueue->uxMessagesWaiting );
+  1c:	6ba3      	ldr	r3, [r4, #56]
+  1e:	3b01      	subs	r3, #1
+  20:	63a3      	str	r3, [r4, #56]
+C:\cortex\dimmers\rtos\src/queue.c:968
+
+			/* If the queue is locked we will not modify the event list.  Instead
+			we update the lock count so the task that unlocks the queue will know
+			that an ISR has removed data while the queue was locked. */
+			if( pxQueue->xRxLock == queueUNLOCKED )
+  22:	6c63      	ldr	r3, [r4, #68]
+  24:	f1b3 3fff 	cmp.w	r3, #4294967295	; 0xffffffff
+  28:	d109      	bne.n	3e <xQueueReceiveFromISR+0x3e>
+C:\cortex\dimmers\rtos\src/queue.c:970
+			{
+				if( !listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToSend ) ) )
+  2a:	6923      	ldr	r3, [r4, #16]
+  2c:	b14b      	cbz	r3, 42 <xQueueReceiveFromISR+0x42>
+C:\cortex\dimmers\rtos\src/queue.c:972
+				{
+					if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToSend ) ) != pdFALSE )
+  2e:	f104 0010 	add.w	r0, r4, #16	; 0x10
+  32:	f7ff fffe 	bl	0 <xTaskRemoveFromEventList>
+  36:	b120      	cbz	r0, 42 <xTaskRemoveFromEventList+0x42>
+C:\cortex\dimmers\rtos\src/queue.c:976
+					{
+						/* The task waiting has a higher priority than us so
+						force a context switch. */
+						*pxTaskWoken = pdTRUE;
+  38:	2301      	movs	r3, #1
+  3a:	602b      	str	r3, [r5, #0]
+  3c:	e002      	b.n	44 <xTaskRemoveFromEventList+0x44>
+C:\cortex\dimmers\rtos\src/queue.c:984
+			}
+			else
+			{
+				/* Increment the lock count so the task that unlocks the queue
+				knows that data was removed while it was locked. */
+				++( pxQueue->xRxLock );
+  3e:	3301      	adds	r3, #1
+  40:	6463      	str	r3, [r4, #68]
+  42:	2301      	movs	r3, #1
+C:\cortex\dimmers\rtos\src/queue.c:995
+		{
+			xReturn = pdFAIL;
+			traceQUEUE_RECEIVE_FROM_ISR_FAILED( pxQueue );
+		}
+	}
+	portCLEAR_INTERRUPT_MASK_FROM_ISR( uxSavedInterruptStatus );
+  44:	f04f 0000 	mov.w	r0, #0	; 0x0
+  48:	f380 8811 	msr	BASEPRI, r0
+C:\cortex\dimmers\rtos\src/queue.c:998
+
+	return xReturn;
+}
+  4c:	4618      	mov	r0, r3
+  4e:	bd70      	pop	{r4, r5, r6, pc}
+Disassembly of section .text.prvUnlockQueue:
+
+00000000 <prvUnlockQueue>:
+prvUnlockQueue():
+C:\cortex\dimmers\rtos\src/queue.c:1085
+	}
+}
+/*-----------------------------------------------------------*/
+
+static void prvUnlockQueue( xQueueHandle pxQueue )
+{
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4604      	mov	r4, r0
+C:\cortex\dimmers\rtos\src/queue.c:1103
+			blocked waiting for data to become available? */
+			if( !listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToReceive ) ) )
+			{
+				/* Tasks that are removed from the event list will get added to
+				the pending ready list as the scheduler is still suspended. */
+				if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToReceive ) ) != pdFALSE )
+   4:	f104 0524 	add.w	r5, r4, #36	; 0x24
+C:\cortex\dimmers\rtos\src/queue.c:1092
+
+	/* The lock counts contains the number of extra data items placed or
+	removed from the queue while the queue was locked.  When a queue is
+	locked items can be added or removed, but the event lists cannot be
+	updated. */
+	taskENTER_CRITICAL();
+   8:	f7ff fffe 	bl	0 <vPortEnterCritical>
+   c:	e00a      	b.n	24 <prvUnlockQueue+0x24>
+C:\cortex\dimmers\rtos\src/queue.c:1099
+		/* See if data was added to the queue while it was locked. */
+		while( pxQueue->xTxLock > queueLOCKED_UNMODIFIED )
+		{
+			/* Data was posted while the queue was locked.  Are any tasks
+			blocked waiting for data to become available? */
+			if( !listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToReceive ) ) )
+   e:	6a63      	ldr	r3, [r4, #36]
+  10:	b15b      	cbz	r3, 2a <prvUnlockQueue+0x2a>
+C:\cortex\dimmers\rtos\src/queue.c:1103
+			{
+				/* Tasks that are removed from the event list will get added to
+				the pending ready list as the scheduler is still suspended. */
+				if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToReceive ) ) != pdFALSE )
+  12:	4628      	mov	r0, r5
+  14:	f7ff fffe 	bl	0 <xTaskRemoveFromEventList>
+  18:	b108      	cbz	r0, 6 <vTaskMissedYield+0x6>
+C:\cortex\dimmers\rtos\src/queue.c:1107
+				{
+					/* The task waiting has a higher priority so record that a
+					context	switch is required. */
+					vTaskMissedYield();
+  1a:	f7ff fffe 	bl	0 <vTaskMissedYield>
+C:\cortex\dimmers\rtos\src/queue.c:1110
+				}
+
+				--( pxQueue->xTxLock );
+  1e:	6ca3      	ldr	r3, [r4, #72]
+  20:	3b01      	subs	r3, #1
+  22:	64a3      	str	r3, [r4, #72]
+C:\cortex\dimmers\rtos\src/queue.c:1095
+	locked items can be added or removed, but the event lists cannot be
+	updated. */
+	taskENTER_CRITICAL();
+	{
+		/* See if data was added to the queue while it was locked. */
+		while( pxQueue->xTxLock > queueLOCKED_UNMODIFIED )
+  24:	6ca3      	ldr	r3, [r4, #72]
+  26:	2b00      	cmp	r3, #0
+  28:	dcf1      	bgt.n	e <prvUnlockQueue+0xe>
+C:\cortex\dimmers\rtos\src/queue.c:1118
+			{
+				break;
+			}
+		}
+
+		pxQueue->xTxLock = queueUNLOCKED;
+  2a:	f04f 33ff 	mov.w	r3, #4294967295	; 0xffffffff
+  2e:	64a3      	str	r3, [r4, #72]
+C:\cortex\dimmers\rtos\src/queue.c:1120
+	}
+	taskEXIT_CRITICAL();
+  30:	f7ff fffe 	bl	0 <vPortExitCritical>
+C:\cortex\dimmers\rtos\src/queue.c:1129
+	{
+		while( pxQueue->xRxLock > queueLOCKED_UNMODIFIED )
+		{
+			if( !listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToSend ) ) )
+			{
+				if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToSend ) ) != pdFALSE )
+  34:	f104 0510 	add.w	r5, r4, #16	; 0x10
+C:\cortex\dimmers\rtos\src/queue.c:1123
+		pxQueue->xTxLock = queueUNLOCKED;
+	}
+	taskEXIT_CRITICAL();
+
+	/* Do the same for the Rx lock. */
+	taskENTER_CRITICAL();
+  38:	f7ff fffe 	bl	0 <vPortEnterCritical>
+  3c:	e00a      	b.n	54 <prvUnlockQueue+0x54>
+C:\cortex\dimmers\rtos\src/queue.c:1127
+	{
+		while( pxQueue->xRxLock > queueLOCKED_UNMODIFIED )
+		{
+			if( !listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToSend ) ) )
+  3e:	6923      	ldr	r3, [r4, #16]
+  40:	b15b      	cbz	r3, 5a <prvUnlockQueue+0x5a>
+C:\cortex\dimmers\rtos\src/queue.c:1129
+			{
+				if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToSend ) ) != pdFALSE )
+  42:	4628      	mov	r0, r5
+  44:	f7ff fffe 	bl	0 <xTaskRemoveFromEventList>
+  48:	b108      	cbz	r0, 6 <vTaskMissedYield+0x6>
+C:\cortex\dimmers\rtos\src/queue.c:1131
+				{
+					vTaskMissedYield();
+  4a:	f7ff fffe 	bl	0 <vTaskMissedYield>
+C:\cortex\dimmers\rtos\src/queue.c:1134
+				}
+
+				--( pxQueue->xRxLock );
+  4e:	6c63      	ldr	r3, [r4, #68]
+  50:	3b01      	subs	r3, #1
+  52:	6463      	str	r3, [r4, #68]
+C:\cortex\dimmers\rtos\src/queue.c:1125
+	taskEXIT_CRITICAL();
+
+	/* Do the same for the Rx lock. */
+	taskENTER_CRITICAL();
+	{
+		while( pxQueue->xRxLock > queueLOCKED_UNMODIFIED )
+  54:	6c63      	ldr	r3, [r4, #68]
+  56:	2b00      	cmp	r3, #0
+  58:	dcf1      	bgt.n	3e <prvUnlockQueue+0x3e>
+C:\cortex\dimmers\rtos\src/queue.c:1142
+			{
+				break;
+			}
+		}
+
+		pxQueue->xRxLock = queueUNLOCKED;
+  5a:	f04f 33ff 	mov.w	r3, #4294967295	; 0xffffffff
+  5e:	6463      	str	r3, [r4, #68]
+C:\cortex\dimmers\rtos\src/queue.c:1144
+	}
+	taskEXIT_CRITICAL();
+  60:	f7ff fffe 	bl	0 <vPortExitCritical>
+C:\cortex\dimmers\rtos\src/queue.c:1145
+}
+  64:	bd70      	pop	{r4, r5, r6, pc}
+  66:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.xQueueGenericReceive:
+
+00000000 <xQueueGenericReceive>:
+xQueueGenericReceive():
+C:\cortex\dimmers\rtos\src/queue.c:804
+	return xReturn;
+}
+/*-----------------------------------------------------------*/
+
+signed portBASE_TYPE xQueueGenericReceive( xQueueHandle pxQueue, void * const pvBuffer, portTickType xTicksToWait, portBASE_TYPE xJustPeeking )
+{
+   0:	e92d 43f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
+   4:	b085      	sub	sp, #20
+   6:	4605      	mov	r5, r0
+   8:	4688      	mov	r8, r1
+   a:	9201      	str	r2, [sp, #4]
+   c:	4699      	mov	r9, r3
+C:\cortex\dimmers\rtos\src/queue.c:925
+						portEXIT_CRITICAL();
+					}
+				}
+				#endif
+
+				vTaskPlaceOnEventList( &( pxQueue->xTasksWaitingToReceive ), xTicksToWait );
+   e:	f100 0724 	add.w	r7, r0, #36	; 0x24
+  12:	2600      	movs	r6, #0
+  14:	e000      	b.n	18 <xQueueGenericReceive+0x18>
+  16:	2601      	movs	r6, #1
+C:\cortex\dimmers\rtos\src/queue.c:815
+	statements within the function itself.  This is done in the interest
+	of execution time efficiency. */
+
+	for( ;; )
+	{
+		taskENTER_CRITICAL();
+  18:	f7ff fffe 	bl	0 <vPortEnterCritical>
+C:\cortex\dimmers\rtos\src/queue.c:819
+		{
+  			/* Is there space on the queue now?  To be running we must be
+  			the highest priority task wanting to access the queue. */		
+			if( pxQueue->uxMessagesWaiting > ( unsigned portBASE_TYPE ) 0 )
+  1c:	6bab      	ldr	r3, [r5, #56]
+  1e:	b32b      	cbz	r3, 6c <xQueueGenericReceive+0x6c>
+C:\cortex\dimmers\rtos\src/queue.c:824
+			{
+				/* Remember our read position in case we are just peeking. */
+				pcOriginalReadPosition = pxQueue->pcReadFrom;
+
+				prvCopyDataFromQueue( pxQueue, pvBuffer );
+  20:	4628      	mov	r0, r5
+  22:	4641      	mov	r1, r8
+C:\cortex\dimmers\rtos\src/queue.c:822
+  			/* Is there space on the queue now?  To be running we must be
+  			the highest priority task wanting to access the queue. */		
+			if( pxQueue->uxMessagesWaiting > ( unsigned portBASE_TYPE ) 0 )
+			{
+				/* Remember our read position in case we are just peeking. */
+				pcOriginalReadPosition = pxQueue->pcReadFrom;
+  24:	68ec      	ldr	r4, [r5, #12]
+C:\cortex\dimmers\rtos\src/queue.c:824
+
+				prvCopyDataFromQueue( pxQueue, pvBuffer );
+  26:	f7ff fffe 	bl	0 <xQueueGenericReceive>
+C:\cortex\dimmers\rtos\src/queue.c:826
+
+				if( xJustPeeking == pdFALSE )
+  2a:	f1b9 0f00 	cmp.w	r9, #0	; 0x0
+  2e:	d110      	bne.n	52 <xQueueGenericReceive+0x52>
+C:\cortex\dimmers\rtos\src/queue.c:831
+				{
+					traceQUEUE_RECEIVE( pxQueue );
+
+					/* We are actually removing data. */
+					--( pxQueue->uxMessagesWaiting );
+  30:	6bab      	ldr	r3, [r5, #56]
+  32:	3b01      	subs	r3, #1
+  34:	63ab      	str	r3, [r5, #56]
+C:\cortex\dimmers\rtos\src/queue.c:835
+
+					#if ( configUSE_MUTEXES == 1 )
+					{
+						if( pxQueue->uxQueueType == queueQUEUE_IS_MUTEX )
+  36:	682b      	ldr	r3, [r5, #0]
+  38:	b913      	cbnz	r3, 40 <xQueueGenericReceive+0x40>
+C:\cortex\dimmers\rtos\src/queue.c:839
+						{
+							/* Record the information required to implement
+							priority inheritance should it become necessary. */
+							pxQueue->pxMutexHolder = xTaskGetCurrentTaskHandle();
+  3a:	f7ff fffe 	bl	0 <xTaskGetCurrentTaskHandle>
+  3e:	6068      	str	r0, [r5, #4]
+C:\cortex\dimmers\rtos\src/queue.c:844
+						}
+					}
+					#endif
+
+					if( listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToSend ) ) == pdFALSE )
+  40:	692b      	ldr	r3, [r5, #16]
+  42:	b17b      	cbz	r3, 64 <xQueueGenericReceive+0x64>
+C:\cortex\dimmers\rtos\src/queue.c:846
+					{
+						if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToSend ) ) == pdTRUE )
+  44:	f105 0010 	add.w	r0, r5, #16	; 0x10
+  48:	f7ff fffe 	bl	0 <xTaskRemoveFromEventList>
+  4c:	2801      	cmp	r0, #1
+  4e:	d109      	bne.n	64 <xQueueGenericReceive+0x64>
+  50:	e006      	b.n	60 <xQueueGenericReceive+0x60>
+C:\cortex\dimmers\rtos\src/queue.c:862
+					pointer. */
+					pxQueue->pcReadFrom = pcOriginalReadPosition;
+
+					/* The data is being left in the queue, so see if there are
+					any other tasks waiting for the data. */
+					if( !listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToReceive ) ) )
+  52:	6a6b      	ldr	r3, [r5, #36]
+C:\cortex\dimmers\rtos\src/queue.c:858
+				{
+					traceQUEUE_PEEK( pxQueue );
+
+					/* We are not removing the data, so reset our read
+					pointer. */
+					pxQueue->pcReadFrom = pcOriginalReadPosition;
+  54:	60ec      	str	r4, [r5, #12]
+C:\cortex\dimmers\rtos\src/queue.c:862
+
+					/* The data is being left in the queue, so see if there are
+					any other tasks waiting for the data. */
+					if( !listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToReceive ) ) )
+  56:	b12b      	cbz	r3, 64 <xQueueGenericReceive+0x64>
+C:\cortex\dimmers\rtos\src/queue.c:866
+					{
+						/* Tasks that are removed from the event list will get added to
+						the pending ready list as the scheduler is still suspended. */
+						if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToReceive ) ) != pdFALSE )
+  58:	4638      	mov	r0, r7
+  5a:	f7ff fffe 	bl	0 <xTaskRemoveFromEventList>
+  5e:	b108      	cbz	r0, 6 <vPortYieldFromISR+0x6>
+C:\cortex\dimmers\rtos\src/queue.c:869
+						{
+							/* The task waiting has a higher priority than this task. */
+							taskYIELD();
+  60:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+C:\cortex\dimmers\rtos\src/queue.c:875
+						}
+					}
+
+				}
+
+				taskEXIT_CRITICAL();
+  64:	f7ff fffe 	bl	0 <vPortExitCritical>
+  68:	2001      	movs	r0, #1
+  6a:	e04b      	b.n	104 <xQueueGenericReceive+0x104>
+C:\cortex\dimmers\rtos\src/queue.c:880
+				return pdPASS;
+			}
+			else
+			{
+				if( xTicksToWait == ( portTickType ) 0 )
+  6c:	9c01      	ldr	r4, [sp, #4]
+  6e:	b91c      	cbnz	r4, 78 <xQueueGenericReceive+0x78>
+C:\cortex\dimmers\rtos\src/queue.c:884
+				{
+					/* The queue was empty and no block time is specified (or 
+					the block time has expired) so leave now. */				
+					taskEXIT_CRITICAL();
+  70:	f7ff fffe 	bl	0 <vPortExitCritical>
+  74:	4620      	mov	r0, r4
+  76:	e045      	b.n	104 <xQueueGenericReceive+0x104>
+C:\cortex\dimmers\rtos\src/queue.c:888
+					traceQUEUE_RECEIVE_FAILED( pxQueue );
+					return errQUEUE_EMPTY;
+				}
+				else if( xEntryTimeSet == pdFALSE )
+  78:	b916      	cbnz	r6, 80 <xQueueGenericReceive+0x80>
+C:\cortex\dimmers\rtos\src/queue.c:892
+				{
+					/* The queue was empty and a block time was specified so
+					configure the timeout structure. */				
+					vTaskSetTimeOutState( &xTimeOut );
+  7a:	a802      	add	r0, sp, #8
+  7c:	f7ff fffe 	bl	0 <vTaskSetTimeOutState>
+C:\cortex\dimmers\rtos\src/queue.c:897
+					xEntryTimeSet = pdTRUE;
+				}
+			}
+		}
+		taskEXIT_CRITICAL();
+  80:	f7ff fffe 	bl	0 <vPortExitCritical>
+C:\cortex\dimmers\rtos\src/queue.c:902
+
+		/* Interrupts and other tasks can send to and receive from the queue
+		now the critical section has been exited. */
+
+		vTaskSuspendAll();
+  84:	f7ff fffe 	bl	0 <vTaskSuspendAll>
+C:\cortex\dimmers\rtos\src/queue.c:903
+		prvLockQueue( pxQueue );
+  88:	f7ff fffe 	bl	0 <vPortEnterCritical>
+  8c:	6c6b      	ldr	r3, [r5, #68]
+  8e:	f1b3 3fff 	cmp.w	r3, #4294967295	; 0xffffffff
+  92:	d101      	bne.n	98 <xQueueGenericReceive+0x98>
+  94:	3301      	adds	r3, #1
+  96:	646b      	str	r3, [r5, #68]
+  98:	6cab      	ldr	r3, [r5, #72]
+  9a:	f1b3 3fff 	cmp.w	r3, #4294967295	; 0xffffffff
+  9e:	d101      	bne.n	a4 <xQueueGenericReceive+0xa4>
+  a0:	3301      	adds	r3, #1
+  a2:	64ab      	str	r3, [r5, #72]
+  a4:	f7ff fffe 	bl	0 <vPortExitCritical>
+C:\cortex\dimmers\rtos\src/queue.c:906
+
+		/* Update the timeout state to see if it has expired yet. */
+		if( xTaskCheckForTimeOut( &xTimeOut, &xTicksToWait ) == pdFALSE )
+  a8:	a802      	add	r0, sp, #8
+  aa:	a901      	add	r1, sp, #4
+  ac:	f7ff fffe 	bl	0 <xTaskCheckForTimeOut>
+  b0:	bb10      	cbnz	r0, 48 <vPortEnterCritical+0x48>
+prvIsQueueEmpty():
+C:\cortex\dimmers\rtos\src/queue.c:1152
+
+static signed portBASE_TYPE prvIsQueueEmpty( const xQueueHandle pxQueue )
+{
+signed portBASE_TYPE xReturn;
+
+	taskENTER_CRITICAL();
+  b2:	f7ff fffe 	bl	0 <vPortEnterCritical>
+C:\cortex\dimmers\rtos\src/queue.c:1153
+		xReturn = ( pxQueue->uxMessagesWaiting == ( unsigned portBASE_TYPE ) 0 );
+  b6:	6bac      	ldr	r4, [r5, #56]
+C:\cortex\dimmers\rtos\src/queue.c:1154
+	taskEXIT_CRITICAL();
+  b8:	f7ff fffe 	bl	0 <vPortExitCritical>
+xQueueGenericReceive():
+C:\cortex\dimmers\rtos\src/queue.c:908
+		prvLockQueue( pxQueue );
+
+		/* Update the timeout state to see if it has expired yet. */
+		if( xTaskCheckForTimeOut( &xTimeOut, &xTicksToWait ) == pdFALSE )
+		{
+			if( prvIsQueueEmpty( pxQueue ) )
+  bc:	b9b4      	cbnz	r4, ec <xQueueGenericReceive+0xec>
+C:\cortex\dimmers\rtos\src/queue.c:914
+			{
+				traceBLOCKING_ON_QUEUE_RECEIVE( pxQueue );
+
+				#if ( configUSE_MUTEXES == 1 )
+				{
+					if( pxQueue->uxQueueType == queueQUEUE_IS_MUTEX )
+  be:	682b      	ldr	r3, [r5, #0]
+  c0:	b933      	cbnz	r3, d0 <xQueueGenericReceive+0xd0>
+C:\cortex\dimmers\rtos\src/queue.c:916
+					{
+						portENTER_CRITICAL();
+  c2:	f7ff fffe 	bl	0 <vPortEnterCritical>
+C:\cortex\dimmers\rtos\src/queue.c:918
+						{
+							vTaskPriorityInherit( ( void * ) pxQueue->pxMutexHolder );
+  c6:	6868      	ldr	r0, [r5, #4]
+  c8:	f7ff fffe 	bl	0 <vTaskPriorityInherit>
+C:\cortex\dimmers\rtos\src/queue.c:920
+						}
+						portEXIT_CRITICAL();
+  cc:	f7ff fffe 	bl	0 <vPortExitCritical>
+C:\cortex\dimmers\rtos\src/queue.c:925
+					}
+				}
+				#endif
+
+				vTaskPlaceOnEventList( &( pxQueue->xTasksWaitingToReceive ), xTicksToWait );
+  d0:	4638      	mov	r0, r7
+  d2:	9901      	ldr	r1, [sp, #4]
+  d4:	f7ff fffe 	bl	0 <vTaskPlaceOnEventList>
+C:\cortex\dimmers\rtos\src/queue.c:926
+				prvUnlockQueue( pxQueue );
+  d8:	4628      	mov	r0, r5
+  da:	f7ff fffe 	bl	0 <xQueueGenericReceive>
+C:\cortex\dimmers\rtos\src/queue.c:927
+				if( !xTaskResumeAll() )
+  de:	f7ff fffe 	bl	0 <xTaskResumeAll>
+  e2:	2800      	cmp	r0, #0
+  e4:	d197      	bne.n	16 <xQueueGenericReceive+0x16>
+C:\cortex\dimmers\rtos\src/queue.c:929
+				{
+					taskYIELD();
+  e6:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+  ea:	e794      	b.n	16 <xQueueGenericReceive+0x16>
+C:\cortex\dimmers\rtos\src/queue.c:935
+				}
+			}
+			else
+			{
+				/* Try again. */
+				prvUnlockQueue( pxQueue );
+  ec:	4628      	mov	r0, r5
+  ee:	f7ff fffe 	bl	0 <xQueueGenericReceive>
+C:\cortex\dimmers\rtos\src/queue.c:936
+				( void ) xTaskResumeAll();
+  f2:	f7ff fffe 	bl	0 <xTaskResumeAll>
+  f6:	e78e      	b.n	16 <xQueueGenericReceive+0x16>
+C:\cortex\dimmers\rtos\src/queue.c:941
+			}
+		}
+		else
+		{
+			prvUnlockQueue( pxQueue );
+  f8:	4628      	mov	r0, r5
+  fa:	f7ff fffe 	bl	0 <xQueueGenericReceive>
+C:\cortex\dimmers\rtos\src/queue.c:942
+			( void ) xTaskResumeAll();
+  fe:	f7ff fffe 	bl	0 <xTaskResumeAll>
+ 102:	2000      	movs	r0, #0
+C:\cortex\dimmers\rtos\src/queue.c:947
+			traceQUEUE_RECEIVE_FAILED( pxQueue );
+			return errQUEUE_EMPTY;
+		}
+	}
+}
+ 104:	b005      	add	sp, #20
+ 106:	e8bd 83f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, pc}
+ 10a:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.prvCopyDataToQueue:
+
+00000000 <prvCopyDataToQueue>:
+prvCopyDataToQueue():
+C:\cortex\dimmers\rtos\src/queue.c:1033
+	vPortFree( pxQueue );
+}
+/*-----------------------------------------------------------*/
+
+static void prvCopyDataToQueue( xQUEUE *pxQueue, const void *pvItemToQueue, portBASE_TYPE xPosition )
+{
+   0:	4613      	mov	r3, r2
+C:\cortex\dimmers\rtos\src/queue.c:1034
+	if( pxQueue->uxItemSize == ( unsigned portBASE_TYPE ) 0 )
+   2:	6c02      	ldr	r2, [r0, #64]
+C:\cortex\dimmers\rtos\src/queue.c:1033
+	vPortFree( pxQueue );
+}
+/*-----------------------------------------------------------*/
+
+static void prvCopyDataToQueue( xQUEUE *pxQueue, const void *pvItemToQueue, portBASE_TYPE xPosition )
+{
+   4:	b570      	push	{r4, r5, r6, lr}
+   6:	4604      	mov	r4, r0
+C:\cortex\dimmers\rtos\src/queue.c:1034
+	if( pxQueue->uxItemSize == ( unsigned portBASE_TYPE ) 0 )
+   8:	b932      	cbnz	r2, 18 <prvCopyDataToQueue+0x18>
+C:\cortex\dimmers\rtos\src/queue.c:1038
+	{
+		#if ( configUSE_MUTEXES == 1 )
+		{
+			if( pxQueue->uxQueueType == queueQUEUE_IS_MUTEX )
+   a:	6805      	ldr	r5, [r0, #0]
+   c:	bb05      	cbnz	r5, 50 <prvCopyDataToQueue+0x50>
+C:\cortex\dimmers\rtos\src/queue.c:1041
+			{
+				/* The mutex is no longer being held. */
+				vTaskPriorityDisinherit( ( void * ) pxQueue->pxMutexHolder );
+   e:	6840      	ldr	r0, [r0, #4]
+  10:	f7ff fffe 	bl	0 <vTaskPriorityDisinherit>
+C:\cortex\dimmers\rtos\src/queue.c:1042
+                pxQueue->pxMutexHolder = NULL;
+  14:	6065      	str	r5, [r4, #4]
+  16:	e01b      	b.n	50 <prvCopyDataToQueue+0x50>
+C:\cortex\dimmers\rtos\src/queue.c:1047
+			}
+		}
+		#endif
+	}
+	else if( xPosition == queueSEND_TO_BACK )
+  18:	b963      	cbnz	r3, 34 <prvCopyDataToQueue+0x34>
+C:\cortex\dimmers\rtos\src/queue.c:1049
+	{
+		memcpy( ( void * ) pxQueue->pcWriteTo, pvItemToQueue, ( unsigned ) pxQueue->uxItemSize );
+  1a:	6880      	ldr	r0, [r0, #8]
+  1c:	f7ff fffe 	bl	0 <memcpy>
+C:\cortex\dimmers\rtos\src/queue.c:1050
+		pxQueue->pcWriteTo += pxQueue->uxItemSize;
+  20:	68a3      	ldr	r3, [r4, #8]
+  22:	6c22      	ldr	r2, [r4, #64]
+  24:	189b      	adds	r3, r3, r2
+C:\cortex\dimmers\rtos\src/queue.c:1051
+		if( pxQueue->pcWriteTo >= pxQueue->pcTail )
+  26:	6862      	ldr	r2, [r4, #4]
+C:\cortex\dimmers\rtos\src/queue.c:1050
+		#endif
+	}
+	else if( xPosition == queueSEND_TO_BACK )
+	{
+		memcpy( ( void * ) pxQueue->pcWriteTo, pvItemToQueue, ( unsigned ) pxQueue->uxItemSize );
+		pxQueue->pcWriteTo += pxQueue->uxItemSize;
+  28:	60a3      	str	r3, [r4, #8]
+C:\cortex\dimmers\rtos\src/queue.c:1051
+		if( pxQueue->pcWriteTo >= pxQueue->pcTail )
+  2a:	4293      	cmp	r3, r2
+  2c:	d310      	bcc.n	50 <prvCopyDataToQueue+0x50>
+C:\cortex\dimmers\rtos\src/queue.c:1053
+		{
+			pxQueue->pcWriteTo = pxQueue->pcHead;
+  2e:	6823      	ldr	r3, [r4, #0]
+  30:	60a3      	str	r3, [r4, #8]
+  32:	e00d      	b.n	50 <prvCopyDataToQueue+0x50>
+C:\cortex\dimmers\rtos\src/queue.c:1058
+		}
+	}
+	else
+	{
+		memcpy( ( void * ) pxQueue->pcReadFrom, pvItemToQueue, ( unsigned ) pxQueue->uxItemSize );
+  34:	68c0      	ldr	r0, [r0, #12]
+  36:	f7ff fffe 	bl	0 <memcpy>
+C:\cortex\dimmers\rtos\src/queue.c:1059
+		pxQueue->pcReadFrom -= pxQueue->uxItemSize;
+  3a:	6c23      	ldr	r3, [r4, #64]
+C:\cortex\dimmers\rtos\src/queue.c:1060
+		if( pxQueue->pcReadFrom < pxQueue->pcHead )
+  3c:	6822      	ldr	r2, [r4, #0]
+C:\cortex\dimmers\rtos\src/queue.c:1059
+		}
+	}
+	else
+	{
+		memcpy( ( void * ) pxQueue->pcReadFrom, pvItemToQueue, ( unsigned ) pxQueue->uxItemSize );
+		pxQueue->pcReadFrom -= pxQueue->uxItemSize;
+  3e:	4259      	negs	r1, r3
+  40:	68e3      	ldr	r3, [r4, #12]
+  42:	185b      	adds	r3, r3, r1
+C:\cortex\dimmers\rtos\src/queue.c:1060
+		if( pxQueue->pcReadFrom < pxQueue->pcHead )
+  44:	4293      	cmp	r3, r2
+C:\cortex\dimmers\rtos\src/queue.c:1059
+		}
+	}
+	else
+	{
+		memcpy( ( void * ) pxQueue->pcReadFrom, pvItemToQueue, ( unsigned ) pxQueue->uxItemSize );
+		pxQueue->pcReadFrom -= pxQueue->uxItemSize;
+  46:	60e3      	str	r3, [r4, #12]
+C:\cortex\dimmers\rtos\src/queue.c:1060
+		if( pxQueue->pcReadFrom < pxQueue->pcHead )
+  48:	d202      	bcs.n	50 <memcpy+0x50>
+C:\cortex\dimmers\rtos\src/queue.c:1062
+		{
+			pxQueue->pcReadFrom = ( pxQueue->pcTail - pxQueue->uxItemSize );
+  4a:	6863      	ldr	r3, [r4, #4]
+  4c:	185b      	adds	r3, r3, r1
+  4e:	60e3      	str	r3, [r4, #12]
+C:\cortex\dimmers\rtos\src/queue.c:1066
+		}
+	}
+
+	++( pxQueue->uxMessagesWaiting );
+  50:	6ba3      	ldr	r3, [r4, #56]
+  52:	3301      	adds	r3, #1
+  54:	63a3      	str	r3, [r4, #56]
+C:\cortex\dimmers\rtos\src/queue.c:1067
+}
+  56:	bd70      	pop	{r4, r5, r6, pc}
+Disassembly of section .text.xQueueGenericSendFromISR:
+
+00000000 <xQueueGenericSendFromISR>:
+xQueueGenericSendFromISR():
+C:\cortex\dimmers\rtos\src/queue.c:751
+
+#endif /* configUSE_ALTERNATIVE_API */
+/*-----------------------------------------------------------*/
+
+signed portBASE_TYPE xQueueGenericSendFromISR( xQueueHandle pxQueue, const void * const pvItemToQueue, signed portBASE_TYPE *pxHigherPriorityTaskWoken, portBASE_TYPE xCopyPosition )
+{
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	469c      	mov	ip, r3
+   4:	4604      	mov	r4, r0
+   6:	4615      	mov	r5, r2
+C:\cortex\dimmers\rtos\src/queue.c:760
+	/* Similar to xQueueGenericSend, except we don't block if there is no room
+	in the queue.  Also we don't directly wake a task that was blocked on a
+	queue read, instead we return a flag to say whether a context switch is
+	required or not (i.e. has a task with a higher priority than us been woken
+	by this	post). */
+	uxSavedInterruptStatus = portSET_INTERRUPT_MASK_FROM_ISR();
+   8:	f04f 00bf 	mov.w	r0, #191	; 0xbf
+   c:	f380 8811 	msr	BASEPRI, r0
+C:\cortex\dimmers\rtos\src/queue.c:762
+	{
+		if( pxQueue->uxMessagesWaiting < pxQueue->uxLength )
+  10:	6ba2      	ldr	r2, [r4, #56]
+  12:	6be3      	ldr	r3, [r4, #60]
+  14:	429a      	cmp	r2, r3
+  16:	d301      	bcc.n	1c <xQueueGenericSendFromISR+0x1c>
+  18:	2300      	movs	r3, #0
+  1a:	e014      	b.n	46 <xQueueGenericSendFromISR+0x46>
+C:\cortex\dimmers\rtos\src/queue.c:766
+		{
+			traceQUEUE_SEND_FROM_ISR( pxQueue );
+
+			prvCopyDataToQueue( pxQueue, pvItemToQueue, xCopyPosition );
+  1c:	4620      	mov	r0, r4
+  1e:	4662      	mov	r2, ip
+  20:	f7ff fffe 	bl	0 <xQueueGenericSendFromISR>
+C:\cortex\dimmers\rtos\src/queue.c:770
+
+			/* If the queue is locked we do not alter the event list.  This will
+			be done when the queue is unlocked later. */
+			if( pxQueue->xTxLock == queueUNLOCKED )
+  24:	6ca3      	ldr	r3, [r4, #72]
+  26:	f1b3 3fff 	cmp.w	r3, #4294967295	; 0xffffffff
+  2a:	d109      	bne.n	40 <xQueueGenericSendFromISR+0x40>
+C:\cortex\dimmers\rtos\src/queue.c:772
+			{
+				if( !listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToReceive ) ) )
+  2c:	6a63      	ldr	r3, [r4, #36]
+  2e:	b14b      	cbz	r3, 44 <xQueueGenericSendFromISR+0x44>
+C:\cortex\dimmers\rtos\src/queue.c:774
+				{
+					if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToReceive ) ) != pdFALSE )
+  30:	f104 0024 	add.w	r0, r4, #36	; 0x24
+  34:	f7ff fffe 	bl	0 <xTaskRemoveFromEventList>
+  38:	b120      	cbz	r0, 44 <xTaskRemoveFromEventList+0x44>
+C:\cortex\dimmers\rtos\src/queue.c:778
+					{
+						/* The task waiting has a higher priority so record that a
+						context	switch is required. */
+						*pxHigherPriorityTaskWoken = pdTRUE;
+  3a:	2301      	movs	r3, #1
+  3c:	602b      	str	r3, [r5, #0]
+  3e:	e002      	b.n	46 <xTaskRemoveFromEventList+0x46>
+C:\cortex\dimmers\rtos\src/queue.c:786
+			}
+			else
+			{
+				/* Increment the lock count so the task that unlocks the queue
+				knows that data was posted while it was locked. */
+				++( pxQueue->xTxLock );
+  40:	3301      	adds	r3, #1
+  42:	64a3      	str	r3, [r4, #72]
+  44:	2301      	movs	r3, #1
+C:\cortex\dimmers\rtos\src/queue.c:797
+		{
+			traceQUEUE_SEND_FROM_ISR_FAILED( pxQueue );
+			xReturn = errQUEUE_FULL;
+		}
+	}
+	portCLEAR_INTERRUPT_MASK_FROM_ISR( uxSavedInterruptStatus );
+  46:	f04f 0000 	mov.w	r0, #0	; 0x0
+  4a:	f380 8811 	msr	BASEPRI, r0
+C:\cortex\dimmers\rtos\src/queue.c:800
+
+	return xReturn;
+}
+  4e:	4618      	mov	r0, r3
+  50:	bd70      	pop	{r4, r5, r6, pc}
+  52:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.xQueueGenericSend:
+
+00000000 <xQueueGenericSend>:
+xQueueGenericSend():
+C:\cortex\dimmers\rtos\src/queue.c:443
+
+#endif /* configUSE_COUNTING_SEMAPHORES */
+/*-----------------------------------------------------------*/
+
+signed portBASE_TYPE xQueueGenericSend( xQueueHandle pxQueue, const void * const pvItemToQueue, portTickType xTicksToWait, portBASE_TYPE xCopyPosition )
+{
+   0:	e92d 43f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
+   4:	b085      	sub	sp, #20
+   6:	4606      	mov	r6, r0
+   8:	4689      	mov	r9, r1
+   a:	9201      	str	r2, [sp, #4]
+   c:	4698      	mov	r8, r3
+C:\cortex\dimmers\rtos\src/queue.c:512
+		if( xTaskCheckForTimeOut( &xTimeOut, &xTicksToWait ) == pdFALSE )
+		{
+			if( prvIsQueueFull( pxQueue ) )
+			{		
+				traceBLOCKING_ON_QUEUE_SEND( pxQueue );
+				vTaskPlaceOnEventList( &( pxQueue->xTasksWaitingToSend ), xTicksToWait );
+   e:	f100 0710 	add.w	r7, r0, #16	; 0x10
+  12:	2500      	movs	r5, #0
+  14:	e000      	b.n	18 <xQueueGenericSend+0x18>
+  16:	2501      	movs	r5, #1
+C:\cortex\dimmers\rtos\src/queue.c:453
+	statements within the function itself.  This is done in the interest
+	of execution time efficiency. */
+
+	for( ;; )
+	{
+		taskENTER_CRITICAL();
+  18:	f7ff fffe 	bl	0 <vPortEnterCritical>
+C:\cortex\dimmers\rtos\src/queue.c:457
+		{
+  			/* Is there room on the queue now?  To be running we must be
+  			the highest priority task wanting to access the queue. */
+			if( pxQueue->uxMessagesWaiting < pxQueue->uxLength )
+  1c:	6bb2      	ldr	r2, [r6, #56]
+  1e:	6bf3      	ldr	r3, [r6, #60]
+  20:	429a      	cmp	r2, r3
+  22:	d212      	bcs.n	4a <xQueueGenericSend+0x4a>
+C:\cortex\dimmers\rtos\src/queue.c:460
+			{
+				traceQUEUE_SEND( pxQueue );
+				prvCopyDataToQueue( pxQueue, pvItemToQueue, xCopyPosition );
+  24:	4630      	mov	r0, r6
+  26:	4649      	mov	r1, r9
+  28:	4642      	mov	r2, r8
+  2a:	f7ff fffe 	bl	0 <xQueueGenericSend>
+C:\cortex\dimmers\rtos\src/queue.c:464
+
+				/* If there was a task waiting for data to arrive on the
+				queue then unblock it now. */
+				if( listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToReceive ) ) == pdFALSE )
+  2e:	6a73      	ldr	r3, [r6, #36]
+  30:	b13b      	cbz	r3, 42 <xQueueGenericSend+0x42>
+C:\cortex\dimmers\rtos\src/queue.c:466
+				{
+					if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToReceive ) ) == pdTRUE )
+  32:	f106 0024 	add.w	r0, r6, #36	; 0x24
+  36:	f7ff fffe 	bl	0 <xTaskRemoveFromEventList>
+  3a:	2801      	cmp	r0, #1
+  3c:	d101      	bne.n	42 <xQueueGenericSend+0x42>
+C:\cortex\dimmers\rtos\src/queue.c:472
+					{
+						/* The unblocked task has a priority higher than
+						our own so yield immediately.  Yes it is ok to do
+						this from within the critical section - the kernel
+						takes care of that. */
+						taskYIELD();
+  3e:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+C:\cortex\dimmers\rtos\src/queue.c:476
+					}
+				}
+
+				taskEXIT_CRITICAL();
+  42:	f7ff fffe 	bl	0 <vPortExitCritical>
+  46:	2001      	movs	r0, #1
+  48:	e044      	b.n	d4 <xQueueGenericSend+0xd4>
+C:\cortex\dimmers\rtos\src/queue.c:481
+				return pdPASS;
+			}
+			else
+			{
+				if( xTicksToWait == ( portTickType ) 0 )
+  4a:	9c01      	ldr	r4, [sp, #4]
+  4c:	b91c      	cbnz	r4, 56 <xQueueGenericSend+0x56>
+C:\cortex\dimmers\rtos\src/queue.c:485
+				{
+					/* The queue was full and no block time is specified (or 
+					the block time has expired) so leave now. */
+					taskEXIT_CRITICAL();
+  4e:	f7ff fffe 	bl	0 <vPortExitCritical>
+  52:	4620      	mov	r0, r4
+  54:	e03e      	b.n	d4 <xQueueGenericSend+0xd4>
+C:\cortex\dimmers\rtos\src/queue.c:489
+					traceQUEUE_SEND_FAILED( pxQueue );
+					return errQUEUE_FULL;
+				}
+				else if( xEntryTimeSet == pdFALSE )
+  56:	b915      	cbnz	r5, 5e <xQueueGenericSend+0x5e>
+C:\cortex\dimmers\rtos\src/queue.c:493
+				{
+					/* The queue was full and a block time was specified so
+					configure the timeout structure. */
+					vTaskSetTimeOutState( &xTimeOut );
+  58:	a802      	add	r0, sp, #8
+  5a:	f7ff fffe 	bl	0 <vTaskSetTimeOutState>
+C:\cortex\dimmers\rtos\src/queue.c:498
+					xEntryTimeSet = pdTRUE;
+				}
+			}
+		}
+		taskEXIT_CRITICAL();	
+  5e:	f7ff fffe 	bl	0 <vPortExitCritical>
+C:\cortex\dimmers\rtos\src/queue.c:503
+
+		/* Interrupts and other tasks can send to and receive from the queue
+		now the critical section has been exited. */
+
+		vTaskSuspendAll();
+  62:	f7ff fffe 	bl	0 <vTaskSuspendAll>
+C:\cortex\dimmers\rtos\src/queue.c:504
+		prvLockQueue( pxQueue );
+  66:	f7ff fffe 	bl	0 <vPortEnterCritical>
+  6a:	6c73      	ldr	r3, [r6, #68]
+  6c:	f1b3 3fff 	cmp.w	r3, #4294967295	; 0xffffffff
+  70:	d101      	bne.n	76 <xQueueGenericSend+0x76>
+  72:	3301      	adds	r3, #1
+  74:	6473      	str	r3, [r6, #68]
+  76:	6cb3      	ldr	r3, [r6, #72]
+  78:	f1b3 3fff 	cmp.w	r3, #4294967295	; 0xffffffff
+  7c:	d101      	bne.n	82 <xQueueGenericSend+0x82>
+  7e:	3301      	adds	r3, #1
+  80:	64b3      	str	r3, [r6, #72]
+  82:	f7ff fffe 	bl	0 <vPortExitCritical>
+C:\cortex\dimmers\rtos\src/queue.c:507
+
+		/* Update the timeout state to see if it has expired yet. */
+		if( xTaskCheckForTimeOut( &xTimeOut, &xTicksToWait ) == pdFALSE )
+  86:	a802      	add	r0, sp, #8
+  88:	a901      	add	r1, sp, #4
+  8a:	f7ff fffe 	bl	0 <xTaskCheckForTimeOut>
+  8e:	b9d8      	cbnz	r0, 3a <vPortEnterCritical+0x3a>
+prvIsQueueFull():
+C:\cortex\dimmers\rtos\src/queue.c:1174
+
+static signed portBASE_TYPE prvIsQueueFull( const xQueueHandle pxQueue )
+{
+signed portBASE_TYPE xReturn;
+
+	taskENTER_CRITICAL();
+  90:	f7ff fffe 	bl	0 <vPortEnterCritical>
+C:\cortex\dimmers\rtos\src/queue.c:1175
+		xReturn = ( pxQueue->uxMessagesWaiting == pxQueue->uxLength );
+  94:	6bb5      	ldr	r5, [r6, #56]
+  96:	6bf4      	ldr	r4, [r6, #60]
+C:\cortex\dimmers\rtos\src/queue.c:1176
+	taskEXIT_CRITICAL();
+  98:	f7ff fffe 	bl	0 <vPortExitCritical>
+xQueueGenericSend():
+C:\cortex\dimmers\rtos\src/queue.c:509
+		prvLockQueue( pxQueue );
+
+		/* Update the timeout state to see if it has expired yet. */
+		if( xTaskCheckForTimeOut( &xTimeOut, &xTicksToWait ) == pdFALSE )
+		{
+			if( prvIsQueueFull( pxQueue ) )
+  9c:	42a5      	cmp	r5, r4
+  9e:	d10d      	bne.n	bc <xQueueGenericSend+0xbc>
+C:\cortex\dimmers\rtos\src/queue.c:512
+			{		
+				traceBLOCKING_ON_QUEUE_SEND( pxQueue );
+				vTaskPlaceOnEventList( &( pxQueue->xTasksWaitingToSend ), xTicksToWait );
+  a0:	4638      	mov	r0, r7
+  a2:	9901      	ldr	r1, [sp, #4]
+  a4:	f7ff fffe 	bl	0 <vTaskPlaceOnEventList>
+C:\cortex\dimmers\rtos\src/queue.c:519
+				/* Unlocking the queue means queue events can effect the
+				event list.  It is possible	that interrupts occurring now
+				remove this task from the event	list again - but as the
+				scheduler is suspended the task will go onto the pending
+				ready last instead of the actual ready list. */
+				prvUnlockQueue( pxQueue );
+  a8:	4630      	mov	r0, r6
+  aa:	f7ff fffe 	bl	0 <xQueueGenericSend>
+C:\cortex\dimmers\rtos\src/queue.c:526
+				/* Resuming the scheduler will move tasks from the pending
+				ready list into the ready list - so it is feasible that this
+				task is already in a ready list before it yields - in which
+				case the yield will not cause a context switch unless there
+				is also a higher priority task in the pending ready list. */
+				if( !xTaskResumeAll() )
+  ae:	f7ff fffe 	bl	0 <xTaskResumeAll>
+  b2:	2800      	cmp	r0, #0
+  b4:	d1af      	bne.n	16 <xQueueGenericSend+0x16>
+C:\cortex\dimmers\rtos\src/queue.c:528
+				{
+					taskYIELD();
+  b6:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+  ba:	e7ac      	b.n	16 <xQueueGenericSend+0x16>
+C:\cortex\dimmers\rtos\src/queue.c:534
+				}
+			}
+			else
+			{
+				/* Try again. */
+				prvUnlockQueue( pxQueue );
+  bc:	4630      	mov	r0, r6
+  be:	f7ff fffe 	bl	0 <xQueueGenericSend>
+C:\cortex\dimmers\rtos\src/queue.c:535
+				( void ) xTaskResumeAll();			
+  c2:	f7ff fffe 	bl	0 <xTaskResumeAll>
+  c6:	e7a6      	b.n	16 <xQueueGenericSend+0x16>
+C:\cortex\dimmers\rtos\src/queue.c:541
+			}
+		}
+		else
+		{
+			/* The timeout has expired. */
+			prvUnlockQueue( pxQueue );
+  c8:	4630      	mov	r0, r6
+  ca:	f7ff fffe 	bl	0 <xQueueGenericSend>
+C:\cortex\dimmers\rtos\src/queue.c:542
+			( void ) xTaskResumeAll();
+  ce:	f7ff fffe 	bl	0 <xTaskResumeAll>
+  d2:	2000      	movs	r0, #0
+C:\cortex\dimmers\rtos\src/queue.c:547
+			traceQUEUE_SEND_FAILED( pxQueue );
+			return errQUEUE_FULL;
+		}
+	}
+}
+  d4:	b005      	add	sp, #20
+  d6:	e8bd 83f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, pc}
+  da:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.xQueueCreateMutex:
+
+00000000 <xQueueCreateMutex>:
+xQueueCreateMutex():
+C:\cortex\dimmers\rtos\src/queue.c:291
+/*-----------------------------------------------------------*/
+
+#if ( configUSE_MUTEXES == 1 )
+
+	xQueueHandle xQueueCreateMutex( void )
+	{
+   0:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\rtos\src/queue.c:295
+	xQUEUE *pxNewQueue;
+
+		/* Allocate the new queue structure. */
+		pxNewQueue = ( xQUEUE * ) pvPortMalloc( sizeof( xQUEUE ) );
+   2:	204c      	movs	r0, #76
+   4:	f7ff fffe 	bl	0 <pvPortMalloc>
+C:\cortex\dimmers\rtos\src/queue.c:296
+		if( pxNewQueue != NULL )
+   8:	4605      	mov	r5, r0
+   a:	b1d0      	cbz	r0, 42 <xQueueCreateMutex+0x42>
+C:\cortex\dimmers\rtos\src/queue.c:311
+
+			/* Each mutex has a length of 1 (like a binary semaphore) and
+			an item size of 0 as nothing is actually copied into or out
+			of the mutex. */
+			pxNewQueue->uxMessagesWaiting = 0;
+			pxNewQueue->uxLength = 1;
+   c:	2301      	movs	r3, #1
+C:\cortex\dimmers\rtos\src/queue.c:299
+		/* Allocate the new queue structure. */
+		pxNewQueue = ( xQUEUE * ) pvPortMalloc( sizeof( xQUEUE ) );
+		if( pxNewQueue != NULL )
+		{
+			/* Information required for priority inheritance. */
+			pxNewQueue->pxMutexHolder = NULL;
+   e:	2400      	movs	r4, #0
+C:\cortex\dimmers\rtos\src/queue.c:311
+
+			/* Each mutex has a length of 1 (like a binary semaphore) and
+			an item size of 0 as nothing is actually copied into or out
+			of the mutex. */
+			pxNewQueue->uxMessagesWaiting = 0;
+			pxNewQueue->uxLength = 1;
+  10:	63c3      	str	r3, [r0, #60]
+C:\cortex\dimmers\rtos\src/queue.c:313
+			pxNewQueue->uxItemSize = 0;
+			pxNewQueue->xRxLock = queueUNLOCKED;
+  12:	f04f 33ff 	mov.w	r3, #4294967295	; 0xffffffff
+  16:	6443      	str	r3, [r0, #68]
+C:\cortex\dimmers\rtos\src/queue.c:314
+			pxNewQueue->xTxLock = queueUNLOCKED;
+  18:	6483      	str	r3, [r0, #72]
+C:\cortex\dimmers\rtos\src/queue.c:299
+		/* Allocate the new queue structure. */
+		pxNewQueue = ( xQUEUE * ) pvPortMalloc( sizeof( xQUEUE ) );
+		if( pxNewQueue != NULL )
+		{
+			/* Information required for priority inheritance. */
+			pxNewQueue->pxMutexHolder = NULL;
+  1a:	6044      	str	r4, [r0, #4]
+C:\cortex\dimmers\rtos\src/queue.c:300
+			pxNewQueue->uxQueueType = queueQUEUE_IS_MUTEX;
+  1c:	6004      	str	r4, [r0, #0]
+C:\cortex\dimmers\rtos\src/queue.c:304
+
+			/* Queues used as a mutex no data is actually copied into or out
+			of the queue. */
+			pxNewQueue->pcWriteTo = NULL;
+  1e:	6084      	str	r4, [r0, #8]
+C:\cortex\dimmers\rtos\src/queue.c:305
+			pxNewQueue->pcReadFrom = NULL;
+  20:	60c4      	str	r4, [r0, #12]
+C:\cortex\dimmers\rtos\src/queue.c:310
+
+			/* Each mutex has a length of 1 (like a binary semaphore) and
+			an item size of 0 as nothing is actually copied into or out
+			of the mutex. */
+			pxNewQueue->uxMessagesWaiting = 0;
+  22:	6384      	str	r4, [r0, #56]
+C:\cortex\dimmers\rtos\src/queue.c:312
+			pxNewQueue->uxLength = 1;
+			pxNewQueue->uxItemSize = 0;
+  24:	6404      	str	r4, [r0, #64]
+C:\cortex\dimmers\rtos\src/queue.c:317
+			pxNewQueue->xRxLock = queueUNLOCKED;
+			pxNewQueue->xTxLock = queueUNLOCKED;
+
+			/* Ensure the event queues start with the correct state. */
+			vListInitialise( &( pxNewQueue->xTasksWaitingToSend ) );
+  26:	f100 0010 	add.w	r0, r0, #16	; 0x10
+  2a:	f7ff fffe 	bl	0 <vListInitialise>
+C:\cortex\dimmers\rtos\src/queue.c:318
+			vListInitialise( &( pxNewQueue->xTasksWaitingToReceive ) );
+  2e:	f105 0024 	add.w	r0, r5, #36	; 0x24
+  32:	f7ff fffe 	bl	0 <vListInitialise>
+C:\cortex\dimmers\rtos\src/queue.c:321
+
+			/* Start with the semaphore in the expected state. */
+			xQueueGenericSend( pxNewQueue, NULL, 0, queueSEND_TO_BACK );
+  36:	4628      	mov	r0, r5
+  38:	4621      	mov	r1, r4
+  3a:	4622      	mov	r2, r4
+  3c:	4623      	mov	r3, r4
+  3e:	f7ff fffe 	bl	0 <xQueueCreateMutex>
+C:\cortex\dimmers\rtos\src/queue.c:331
+		{
+			traceCREATE_MUTEX_FAILED();
+		}
+
+		return pxNewQueue;
+	}
+  42:	4628      	mov	r0, r5
+  44:	bd70      	pop	{r4, r5, r6, pc}
+  46:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.xQueueCreate:
+
+00000000 <xQueueCreate>:
+xQueueCreate():
+C:\cortex\dimmers\rtos\src/queue.c:238
+/*-----------------------------------------------------------
+ * PUBLIC QUEUE MANAGEMENT API documented in queue.h
+ *----------------------------------------------------------*/
+
+xQueueHandle xQueueCreate( unsigned portBASE_TYPE uxQueueLength, unsigned portBASE_TYPE uxItemSize )
+{
+   0:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+   4:	4688      	mov	r8, r1
+C:\cortex\dimmers\rtos\src/queue.c:243
+xQUEUE *pxNewQueue;
+size_t xQueueSizeInBytes;
+
+	/* Allocate the new queue structure. */
+	if( uxQueueLength > ( unsigned portBASE_TYPE ) 0 )
+   6:	4606      	mov	r6, r0
+   8:	b908      	cbnz	r0, e <xQueueCreate+0xe>
+   a:	4604      	mov	r4, r0
+   c:	e029      	b.n	62 <xQueueCreate+0x62>
+C:\cortex\dimmers\rtos\src/queue.c:245
+	{
+		pxNewQueue = ( xQUEUE * ) pvPortMalloc( sizeof( xQUEUE ) );
+   e:	204c      	movs	r0, #76
+  10:	f7ff fffe 	bl	0 <pvPortMalloc>
+C:\cortex\dimmers\rtos\src/queue.c:246
+		if( pxNewQueue != NULL )
+  14:	4604      	mov	r4, r0
+  16:	b320      	cbz	r0, 62 <xQueueCreate+0x62>
+C:\cortex\dimmers\rtos\src/queue.c:250
+		{
+			/* Create the list of pointers to queue items.  The queue is one byte
+			longer than asked for to make wrap checking easier/faster. */
+			xQueueSizeInBytes = ( size_t ) ( uxQueueLength * uxItemSize ) + ( size_t ) 1;
+  18:	fb06 f708 	mul.w	r7, r6, r8
+C:\cortex\dimmers\rtos\src/queue.c:252
+
+			pxNewQueue->pcHead = ( signed portCHAR * ) pvPortMalloc( xQueueSizeInBytes );
+  1c:	1c78      	adds	r0, r7, #1
+  1e:	f7ff fffe 	bl	0 <pvPortMalloc>
+  22:	4605      	mov	r5, r0
+  24:	6020      	str	r0, [r4, #0]
+C:\cortex\dimmers\rtos\src/queue.c:253
+			if( pxNewQueue->pcHead != NULL )
+  26:	b1c0      	cbz	r0, 5a <xQueueCreate+0x5a>
+C:\cortex\dimmers\rtos\src/queue.c:257
+			{
+				/* Initialise the queue members as described above where the
+				queue type is defined. */
+				pxNewQueue->pcTail = pxNewQueue->pcHead + ( uxQueueLength * uxItemSize );
+  28:	19c3      	adds	r3, r0, r7
+  2a:	6063      	str	r3, [r4, #4]
+C:\cortex\dimmers\rtos\src/queue.c:258
+				pxNewQueue->uxMessagesWaiting = 0;
+  2c:	2300      	movs	r3, #0
+  2e:	63a3      	str	r3, [r4, #56]
+C:\cortex\dimmers\rtos\src/queue.c:260
+				pxNewQueue->pcWriteTo = pxNewQueue->pcHead;
+				pxNewQueue->pcReadFrom = pxNewQueue->pcHead + ( ( uxQueueLength - 1 ) * uxItemSize );
+  30:	1e73      	subs	r3, r6, #1
+  32:	fb08 0303 	mla	r3, r8, r3, r0
+  36:	60e3      	str	r3, [r4, #12]
+C:\cortex\dimmers\rtos\src/queue.c:263
+				pxNewQueue->uxLength = uxQueueLength;
+				pxNewQueue->uxItemSize = uxItemSize;
+				pxNewQueue->xRxLock = queueUNLOCKED;
+  38:	f04f 33ff 	mov.w	r3, #4294967295	; 0xffffffff
+C:\cortex\dimmers\rtos\src/queue.c:259
+			{
+				/* Initialise the queue members as described above where the
+				queue type is defined. */
+				pxNewQueue->pcTail = pxNewQueue->pcHead + ( uxQueueLength * uxItemSize );
+				pxNewQueue->uxMessagesWaiting = 0;
+				pxNewQueue->pcWriteTo = pxNewQueue->pcHead;
+  3c:	60a0      	str	r0, [r4, #8]
+C:\cortex\dimmers\rtos\src/queue.c:261
+				pxNewQueue->pcReadFrom = pxNewQueue->pcHead + ( ( uxQueueLength - 1 ) * uxItemSize );
+				pxNewQueue->uxLength = uxQueueLength;
+  3e:	63e6      	str	r6, [r4, #60]
+C:\cortex\dimmers\rtos\src/queue.c:267
+				pxNewQueue->uxItemSize = uxItemSize;
+				pxNewQueue->xRxLock = queueUNLOCKED;
+				pxNewQueue->xTxLock = queueUNLOCKED;
+
+				/* Likewise ensure the event queues start with the correct state. */
+				vListInitialise( &( pxNewQueue->xTasksWaitingToSend ) );
+  40:	f104 0010 	add.w	r0, r4, #16	; 0x10
+C:\cortex\dimmers\rtos\src/queue.c:262
+				pxNewQueue->pcTail = pxNewQueue->pcHead + ( uxQueueLength * uxItemSize );
+				pxNewQueue->uxMessagesWaiting = 0;
+				pxNewQueue->pcWriteTo = pxNewQueue->pcHead;
+				pxNewQueue->pcReadFrom = pxNewQueue->pcHead + ( ( uxQueueLength - 1 ) * uxItemSize );
+				pxNewQueue->uxLength = uxQueueLength;
+				pxNewQueue->uxItemSize = uxItemSize;
+  44:	f8c4 8040 	str.w	r8, [r4, #64]
+C:\cortex\dimmers\rtos\src/queue.c:263
+				pxNewQueue->xRxLock = queueUNLOCKED;
+  48:	6463      	str	r3, [r4, #68]
+C:\cortex\dimmers\rtos\src/queue.c:264
+				pxNewQueue->xTxLock = queueUNLOCKED;
+  4a:	64a3      	str	r3, [r4, #72]
+C:\cortex\dimmers\rtos\src/queue.c:267
+
+				/* Likewise ensure the event queues start with the correct state. */
+				vListInitialise( &( pxNewQueue->xTasksWaitingToSend ) );
+  4c:	f7ff fffe 	bl	0 <vListInitialise>
+C:\cortex\dimmers\rtos\src/queue.c:268
+				vListInitialise( &( pxNewQueue->xTasksWaitingToReceive ) );
+  50:	f104 0024 	add.w	r0, r4, #36	; 0x24
+  54:	f7ff fffe 	bl	0 <vListInitialise>
+  58:	e003      	b.n	62 <xQueueCreate+0x62>
+C:\cortex\dimmers\rtos\src/queue.c:277
+				return  pxNewQueue;
+			}
+			else
+			{
+				traceQUEUE_CREATE_FAILED();
+				vPortFree( pxNewQueue );
+  5a:	4620      	mov	r0, r4
+  5c:	f7ff fffe 	bl	0 <vPortFree>
+  60:	462c      	mov	r4, r5
+C:\cortex\dimmers\rtos\src/queue.c:285
+	}
+
+	/* Will only reach here if we could not allocate enough memory or no memory
+	was required. */
+	return NULL;
+}
+  62:	4620      	mov	r0, r4
+  64:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}

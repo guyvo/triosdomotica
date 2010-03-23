@@ -1,0 +1,2272 @@
+
+C:\cortex\dimmers\hex\main.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\main.o
+
+Disassembly of section .text.vApplicationTickHook:
+
+00000000 <vApplicationTickHook>:
+vApplicationTickHook():
+C:\cortex\dimmers\src/main.c:293
+    vTaskDelete(NULL);
+}
+
+void vApplicationTickHook (void){
+    //GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.vApplicationIdleHook:
+
+00000000 <vApplicationIdleHook>:
+vApplicationIdleHook():
+C:\cortex\dimmers\src/main.c:297
+
+void vApplicationIdleHook(void){
+    //GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.vTestButtonTask:
+
+00000000 <vTestButtonTask>:
+vTestButtonTask():
+C:\cortex\dimmers\src/main.c:682
+                GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
+            
+    }
+}
+
+void vTestButtonTask (void * params){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/main.c:686
+
+    while (1){
+    
+        EXTI_GenerateSWInterrupt(EXTI_Line6);
+   2:	2040      	movs	r0, #64
+   4:	f7ff fffe 	bl	0 <EXTI_GenerateSWInterrupt>
+C:\cortex\dimmers\src/main.c:687
+        vTaskDelay(100);
+   8:	2064      	movs	r0, #100
+   a:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:688
+        EXTI_GenerateSWInterrupt(EXTI_Line6);
+   e:	2040      	movs	r0, #64
+  10:	f7ff fffe 	bl	0 <EXTI_GenerateSWInterrupt>
+C:\cortex\dimmers\src/main.c:689
+        vTaskDelay(100);
+  14:	2064      	movs	r0, #100
+  16:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:690
+        EXTI_GenerateSWInterrupt(EXTI_Line7);
+  1a:	2080      	movs	r0, #128
+  1c:	f7ff fffe 	bl	0 <EXTI_GenerateSWInterrupt>
+C:\cortex\dimmers\src/main.c:691
+        vTaskDelay(100);
+  20:	2064      	movs	r0, #100
+  22:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:692
+        EXTI_GenerateSWInterrupt(EXTI_Line7);
+  26:	2080      	movs	r0, #128
+  28:	f7ff fffe 	bl	0 <EXTI_GenerateSWInterrupt>
+C:\cortex\dimmers\src/main.c:693
+        vTaskDelay(100);
+  2c:	2064      	movs	r0, #100
+  2e:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:694
+        EXTI_GenerateSWInterrupt(EXTI_Line8);
+  32:	f44f 7080 	mov.w	r0, #256	; 0x100
+  36:	f7ff fffe 	bl	0 <EXTI_GenerateSWInterrupt>
+C:\cortex\dimmers\src/main.c:695
+        vTaskDelay(100);
+  3a:	2064      	movs	r0, #100
+  3c:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:696
+        EXTI_GenerateSWInterrupt(EXTI_Line8);
+  40:	f44f 7080 	mov.w	r0, #256	; 0x100
+  44:	f7ff fffe 	bl	0 <EXTI_GenerateSWInterrupt>
+C:\cortex\dimmers\src/main.c:697
+        vTaskDelay(100);
+  48:	2064      	movs	r0, #100
+  4a:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:698
+        EXTI_GenerateSWInterrupt(EXTI_Line9);
+  4e:	f44f 7000 	mov.w	r0, #512	; 0x200
+  52:	f7ff fffe 	bl	0 <EXTI_GenerateSWInterrupt>
+C:\cortex\dimmers\src/main.c:699
+        vTaskDelay(100);
+  56:	2064      	movs	r0, #100
+  58:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:700
+        EXTI_GenerateSWInterrupt(EXTI_Line9);
+  5c:	f44f 7000 	mov.w	r0, #512	; 0x200
+  60:	f7ff fffe 	bl	0 <EXTI_GenerateSWInterrupt>
+C:\cortex\dimmers\src/main.c:701
+        vTaskDelay(100);
+  64:	2064      	movs	r0, #100
+  66:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:702
+        EXTI_GenerateSWInterrupt(EXTI_Line10);
+  6a:	f44f 6080 	mov.w	r0, #1024	; 0x400
+  6e:	f7ff fffe 	bl	0 <EXTI_GenerateSWInterrupt>
+C:\cortex\dimmers\src/main.c:703
+        vTaskDelay(100);
+  72:	2064      	movs	r0, #100
+  74:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:704
+        EXTI_GenerateSWInterrupt(EXTI_Line10);
+  78:	f44f 6080 	mov.w	r0, #1024	; 0x400
+  7c:	f7ff fffe 	bl	0 <EXTI_GenerateSWInterrupt>
+C:\cortex\dimmers\src/main.c:705
+        vTaskDelay(100);
+  80:	2064      	movs	r0, #100
+  82:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:706
+        EXTI_GenerateSWInterrupt(EXTI_Line11);
+  86:	f44f 6000 	mov.w	r0, #2048	; 0x800
+  8a:	f7ff fffe 	bl	0 <EXTI_GenerateSWInterrupt>
+C:\cortex\dimmers\src/main.c:707
+        vTaskDelay(100);
+  8e:	2064      	movs	r0, #100
+  90:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:708
+        EXTI_GenerateSWInterrupt(EXTI_Line11);
+  94:	f44f 6000 	mov.w	r0, #2048	; 0x800
+  98:	f7ff fffe 	bl	0 <EXTI_GenerateSWInterrupt>
+C:\cortex\dimmers\src/main.c:709
+        vTaskDelay(100);
+  9c:	2064      	movs	r0, #100
+  9e:	f7ff fffe 	bl	0 <vTaskDelay>
+  a2:	e7ae      	b.n	2 <vTaskDelay+0x2>
+Disassembly of section .text.UtilUpdateLightFromButton:
+
+00000000 <UtilUpdateLightFromButton>:
+UtilUpdateLightFromButton():
+C:\cortex\dimmers\src/main.c:97
+    vTaskStartScheduler();
+
+    while (1);
+}
+
+static void UtilUpdateLightFromButton ( pTLightProperties plight, u16 value ) {
+   0:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\src/main.c:99
+
+    plight->compare( value );
+   2:	6943      	ldr	r3, [r0, #20]
+C:\cortex\dimmers\src/main.c:97
+    vTaskStartScheduler();
+
+    while (1);
+}
+
+static void UtilUpdateLightFromButton ( pTLightProperties plight, u16 value ) {
+   4:	4605      	mov	r5, r0
+C:\cortex\dimmers\src/main.c:99
+
+    plight->compare( value );
+   6:	4608      	mov	r0, r1
+C:\cortex\dimmers\src/main.c:97
+    vTaskStartScheduler();
+
+    while (1);
+}
+
+static void UtilUpdateLightFromButton ( pTLightProperties plight, u16 value ) {
+   8:	460c      	mov	r4, r1
+C:\cortex\dimmers\src/main.c:99
+
+    plight->compare( value );
+   a:	4798      	blx	r3
+C:\cortex\dimmers\src/main.c:100
+    vTaskDelay(LIGHT_UPDATE_DELAY);
+   c:	2014      	movs	r0, #20
+   e:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:101
+    plight->value = value;
+  12:	802c      	strh	r4, [r5, #0]
+C:\cortex\dimmers\src/main.c:103
+
+}
+  14:	bd70      	pop	{r4, r5, r6, pc}
+  16:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.vtest_buttons_with_delay:
+
+00000000 <vtest_buttons_with_delay>:
+vtest_buttons_with_delay():
+C:\cortex\dimmers\src/main.c:637
+            GPIO_WriteBit(GPIOC, GPIO_Pin_3, (BitAction)0);
+    
+    }
+}
+
+void vtest_buttons_with_delay (void  * params ){
+   0:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\src/main.c:644
+
+    while(1){    
+    
+        error=TRUE;
+    
+            vTaskDelay(20);
+   2:	2014      	movs	r0, #20
+   4:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:646
+            
+            if ( GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_6) == ON ){
+   8:	483e      	ldr	r0, [pc, #248]	(104 <vtest_buttons_with_delay+0x104>)
+   a:	2140      	movs	r1, #64
+   c:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  10:	4604      	mov	r4, r0
+  12:	b108      	cbz	r0, 18 <vtest_buttons_with_delay+0x18>
+  14:	2401      	movs	r4, #1
+  16:	e00a      	b.n	2e <vtest_buttons_with_delay+0x2e>
+C:\cortex\dimmers\src/main.c:647
+                GPIO_WriteBit(GPIOC, GPIO_Pin_0, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_0))));
+  18:	2101      	movs	r1, #1
+  1a:	483a      	ldr	r0, [pc, #232]	(104 <vtest_buttons_with_delay+0x104>)
+  1c:	f7ff fffe 	bl	0 <GPIO_ReadOutputDataBit>
+  20:	f1c0 0201 	rsb	r2, r0, #1	; 0x1
+  24:	2101      	movs	r1, #1
+  26:	4837      	ldr	r0, [pc, #220]	(104 <vtest_buttons_with_delay+0x104>)
+  28:	b2d2      	uxtb	r2, r2
+  2a:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:651
+                error = FALSE;
+            }
+            
+            if ( GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_7) == ON ){
+  2e:	4835      	ldr	r0, [pc, #212]	(104 <vtest_buttons_with_delay+0x104>)
+  30:	2180      	movs	r1, #128
+  32:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  36:	4605      	mov	r5, r0
+  38:	b958      	cbnz	r0, 52 <vtest_buttons_with_delay+0x52>
+C:\cortex\dimmers\src/main.c:652
+                GPIO_WriteBit(GPIOC, GPIO_Pin_1, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_1))));
+  3a:	2102      	movs	r1, #2
+  3c:	4831      	ldr	r0, [pc, #196]	(104 <vtest_buttons_with_delay+0x104>)
+  3e:	f7ff fffe 	bl	0 <GPIO_ReadOutputDataBit>
+  42:	f1c0 0201 	rsb	r2, r0, #1	; 0x1
+  46:	2102      	movs	r1, #2
+  48:	482e      	ldr	r0, [pc, #184]	(104 <vtest_buttons_with_delay+0x104>)
+  4a:	b2d2      	uxtb	r2, r2
+  4c:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+  50:	462c      	mov	r4, r5
+C:\cortex\dimmers\src/main.c:656
+                error = FALSE;
+            }
+            
+            if ( GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_8) == ON ){
+  52:	482c      	ldr	r0, [pc, #176]	(104 <vtest_buttons_with_delay+0x104>)
+  54:	f44f 7180 	mov.w	r1, #256	; 0x100
+  58:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  5c:	4605      	mov	r5, r0
+  5e:	b958      	cbnz	r0, 78 <vtest_buttons_with_delay+0x78>
+C:\cortex\dimmers\src/main.c:657
+                GPIO_WriteBit(GPIOC, GPIO_Pin_2, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_2))));
+  60:	2104      	movs	r1, #4
+  62:	4828      	ldr	r0, [pc, #160]	(104 <vtest_buttons_with_delay+0x104>)
+  64:	f7ff fffe 	bl	0 <GPIO_ReadOutputDataBit>
+  68:	f1c0 0201 	rsb	r2, r0, #1	; 0x1
+  6c:	2104      	movs	r1, #4
+  6e:	4825      	ldr	r0, [pc, #148]	(104 <vtest_buttons_with_delay+0x104>)
+  70:	b2d2      	uxtb	r2, r2
+  72:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+  76:	462c      	mov	r4, r5
+C:\cortex\dimmers\src/main.c:661
+                error = FALSE;
+            }
+            
+            if ( GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_9) == ON ){
+  78:	4822      	ldr	r0, [pc, #136]	(104 <vtest_buttons_with_delay+0x104>)
+  7a:	f44f 7100 	mov.w	r1, #512	; 0x200
+  7e:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  82:	4605      	mov	r5, r0
+  84:	b958      	cbnz	r0, 9e <vtest_buttons_with_delay+0x9e>
+C:\cortex\dimmers\src/main.c:662
+                GPIO_WriteBit(GPIOC, GPIO_Pin_3, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_3))));
+  86:	2108      	movs	r1, #8
+  88:	481e      	ldr	r0, [pc, #120]	(104 <vtest_buttons_with_delay+0x104>)
+  8a:	f7ff fffe 	bl	0 <GPIO_ReadOutputDataBit>
+  8e:	f1c0 0201 	rsb	r2, r0, #1	; 0x1
+  92:	2108      	movs	r1, #8
+  94:	481b      	ldr	r0, [pc, #108]	(104 <vtest_buttons_with_delay+0x104>)
+  96:	b2d2      	uxtb	r2, r2
+  98:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+  9c:	462c      	mov	r4, r5
+C:\cortex\dimmers\src/main.c:666
+                error = FALSE;
+            }
+            
+            if ( GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_10) == ON ){
+  9e:	4819      	ldr	r0, [pc, #100]	(104 <vtest_buttons_with_delay+0x104>)
+  a0:	f44f 6180 	mov.w	r1, #1024	; 0x400
+  a4:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  a8:	4605      	mov	r5, r0
+  aa:	b958      	cbnz	r0, c4 <vtest_buttons_with_delay+0xc4>
+C:\cortex\dimmers\src/main.c:667
+                GPIO_WriteBit(GPIOC, GPIO_Pin_4, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_4))));
+  ac:	2110      	movs	r1, #16
+  ae:	4815      	ldr	r0, [pc, #84]	(104 <vtest_buttons_with_delay+0x104>)
+  b0:	f7ff fffe 	bl	0 <GPIO_ReadOutputDataBit>
+  b4:	f1c0 0201 	rsb	r2, r0, #1	; 0x1
+  b8:	2110      	movs	r1, #16
+  ba:	4812      	ldr	r0, [pc, #72]	(104 <vtest_buttons_with_delay+0x104>)
+  bc:	b2d2      	uxtb	r2, r2
+  be:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+  c2:	462c      	mov	r4, r5
+C:\cortex\dimmers\src/main.c:671
+                error = FALSE;
+            }
+
+            if ( GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_11) == ON ){
+  c4:	480f      	ldr	r0, [pc, #60]	(104 <vtest_buttons_with_delay+0x104>)
+  c6:	f44f 6100 	mov.w	r1, #2048	; 0x800
+  ca:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  ce:	b940      	cbnz	r0, e2 <vtest_buttons_with_delay+0xe2>
+C:\cortex\dimmers\src/main.c:672
+                GPIO_WriteBit(GPIOC, GPIO_Pin_5, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_5))));
+  d0:	2120      	movs	r1, #32
+  d2:	480c      	ldr	r0, [pc, #48]	(104 <vtest_buttons_with_delay+0x104>)
+  d4:	f7ff fffe 	bl	0 <GPIO_ReadOutputDataBit>
+  d8:	2120      	movs	r1, #32
+  da:	f1c0 0201 	rsb	r2, r0, #1	; 0x1
+  de:	4809      	ldr	r0, [pc, #36]	(104 <vtest_buttons_with_delay+0x104>)
+  e0:	e00b      	b.n	fa <vtest_buttons_with_delay+0xfa>
+C:\cortex\dimmers\src/main.c:676
+                error = FALSE;
+            }
+            
+            if (error)
+  e2:	2c00      	cmp	r4, #0
+  e4:	d08d      	beq.n	2 <vtest_buttons_with_delay+0x2>
+C:\cortex\dimmers\src/main.c:677
+                GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
+  e6:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  ea:	4806      	ldr	r0, [pc, #24]	(1c <GPIO_ReadOutputDataBit+0x1c>)
+  ec:	f7ff fffe 	bl	0 <GPIO_ReadOutputDataBit>
+  f0:	f1c0 0201 	rsb	r2, r0, #1	; 0x1
+  f4:	4803      	ldr	r0, [pc, #12]	(104 <vtest_buttons_with_delay+0x104>)
+  f6:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  fa:	b2d2      	uxtb	r2, r2
+  fc:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+ 100:	e77f      	b.n	2 <GPIO_WriteBit+0x2>
+ 102:	46c0      	nop			(mov r8, r8)
+ 104:	40011000 	.word	0x40011000
+Disassembly of section .text.vtest_buttons_leds:
+
+00000000 <vtest_buttons_leds>:
+vtest_buttons_leds():
+C:\cortex\dimmers\src/main.c:553
+
+        vTaskDelay(10);  
+    }
+}
+
+void vtest_buttons_leds (void * params){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/main.c:557
+
+    while (1){
+    
+        if ( GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_6) == ON )
+   2:	4866      	ldr	r0, [pc, #408]	(19c <vtest_buttons_leds+0x19c>)
+   4:	2140      	movs	r1, #64
+   6:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+   a:	b918      	cbnz	r0, 14 <vtest_buttons_leds+0x14>
+C:\cortex\dimmers\src/main.c:558
+            GPIO_WriteBit(GPIOC, GPIO_Pin_0, (BitAction)1);
+   c:	2101      	movs	r1, #1
+   e:	4863      	ldr	r0, [pc, #396]	(19c <vtest_buttons_leds+0x19c>)
+  10:	460a      	mov	r2, r1
+  12:	e002      	b.n	1a <vtest_buttons_leds+0x1a>
+C:\cortex\dimmers\src/main.c:560
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_0, (BitAction)0);
+  14:	4861      	ldr	r0, [pc, #388]	(19c <vtest_buttons_leds+0x19c>)
+  16:	2101      	movs	r1, #1
+  18:	2200      	movs	r2, #0
+  1a:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:562
+
+        if ( GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_7) == ON )
+  1e:	485f      	ldr	r0, [pc, #380]	(19c <vtest_buttons_leds+0x19c>)
+  20:	2180      	movs	r1, #128
+  22:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  26:	b918      	cbnz	r0, 30 <vtest_buttons_leds+0x30>
+C:\cortex\dimmers\src/main.c:563
+            GPIO_WriteBit(GPIOC, GPIO_Pin_1, (BitAction)1);
+  28:	485c      	ldr	r0, [pc, #368]	(19c <vtest_buttons_leds+0x19c>)
+  2a:	2102      	movs	r1, #2
+  2c:	2201      	movs	r2, #1
+  2e:	e002      	b.n	36 <vtest_buttons_leds+0x36>
+C:\cortex\dimmers\src/main.c:565
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_1, (BitAction)0);
+  30:	485a      	ldr	r0, [pc, #360]	(19c <vtest_buttons_leds+0x19c>)
+  32:	2102      	movs	r1, #2
+  34:	2200      	movs	r2, #0
+  36:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:567
+        
+        if ( GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_8) == ON )
+  3a:	4858      	ldr	r0, [pc, #352]	(19c <vtest_buttons_leds+0x19c>)
+  3c:	f44f 7180 	mov.w	r1, #256	; 0x100
+  40:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  44:	b918      	cbnz	r0, 4e <vtest_buttons_leds+0x4e>
+C:\cortex\dimmers\src/main.c:568
+            GPIO_WriteBit(GPIOC, GPIO_Pin_2, (BitAction)1);
+  46:	4855      	ldr	r0, [pc, #340]	(19c <vtest_buttons_leds+0x19c>)
+  48:	2104      	movs	r1, #4
+  4a:	2201      	movs	r2, #1
+  4c:	e002      	b.n	54 <vtest_buttons_leds+0x54>
+C:\cortex\dimmers\src/main.c:570
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_2, (BitAction)0);
+  4e:	4853      	ldr	r0, [pc, #332]	(19c <vtest_buttons_leds+0x19c>)
+  50:	2104      	movs	r1, #4
+  52:	2200      	movs	r2, #0
+  54:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:572
+
+        if ( GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_9) == ON )
+  58:	4850      	ldr	r0, [pc, #320]	(19c <vtest_buttons_leds+0x19c>)
+  5a:	f44f 7100 	mov.w	r1, #512	; 0x200
+  5e:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  62:	b918      	cbnz	r0, 6c <vtest_buttons_leds+0x6c>
+C:\cortex\dimmers\src/main.c:573
+            GPIO_WriteBit(GPIOC, GPIO_Pin_3, (BitAction)1);
+  64:	484d      	ldr	r0, [pc, #308]	(19c <vtest_buttons_leds+0x19c>)
+  66:	2108      	movs	r1, #8
+  68:	2201      	movs	r2, #1
+  6a:	e002      	b.n	72 <vtest_buttons_leds+0x72>
+C:\cortex\dimmers\src/main.c:575
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_3, (BitAction)0);
+  6c:	484b      	ldr	r0, [pc, #300]	(19c <vtest_buttons_leds+0x19c>)
+  6e:	2108      	movs	r1, #8
+  70:	2200      	movs	r2, #0
+  72:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:577
+
+        if ( GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_10) == ON )
+  76:	4849      	ldr	r0, [pc, #292]	(19c <vtest_buttons_leds+0x19c>)
+  78:	f44f 6180 	mov.w	r1, #1024	; 0x400
+  7c:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  80:	b918      	cbnz	r0, 8a <vtest_buttons_leds+0x8a>
+C:\cortex\dimmers\src/main.c:578
+            GPIO_WriteBit(GPIOC, GPIO_Pin_4, (BitAction)1);
+  82:	4846      	ldr	r0, [pc, #280]	(19c <vtest_buttons_leds+0x19c>)
+  84:	2110      	movs	r1, #16
+  86:	2201      	movs	r2, #1
+  88:	e002      	b.n	90 <vtest_buttons_leds+0x90>
+C:\cortex\dimmers\src/main.c:580
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_4, (BitAction)0);
+  8a:	4844      	ldr	r0, [pc, #272]	(19c <vtest_buttons_leds+0x19c>)
+  8c:	2110      	movs	r1, #16
+  8e:	2200      	movs	r2, #0
+  90:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:582
+
+        if ( GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_11) == ON )
+  94:	4841      	ldr	r0, [pc, #260]	(19c <vtest_buttons_leds+0x19c>)
+  96:	f44f 6100 	mov.w	r1, #2048	; 0x800
+  9a:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  9e:	b918      	cbnz	r0, a8 <vtest_buttons_leds+0xa8>
+C:\cortex\dimmers\src/main.c:583
+            GPIO_WriteBit(GPIOC, GPIO_Pin_5, (BitAction)1);
+  a0:	483e      	ldr	r0, [pc, #248]	(19c <vtest_buttons_leds+0x19c>)
+  a2:	2120      	movs	r1, #32
+  a4:	2201      	movs	r2, #1
+  a6:	e002      	b.n	ae <vtest_buttons_leds+0xae>
+C:\cortex\dimmers\src/main.c:585
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_5, (BitAction)0);
+  a8:	483c      	ldr	r0, [pc, #240]	(19c <vtest_buttons_leds+0x19c>)
+  aa:	2120      	movs	r1, #32
+  ac:	2200      	movs	r2, #0
+  ae:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:591
+        
+     
+        // INTEGRATIONS TEST DIP
+        // toggle leds when one of 4 dip is active
+     
+        if ( GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_12) == ON )
+  b2:	483b      	ldr	r0, [pc, #236]	(1a0 <vtest_buttons_leds+0x1a0>)
+  b4:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  b8:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  bc:	b918      	cbnz	r0, c6 <vtest_buttons_leds+0xc6>
+C:\cortex\dimmers\src/main.c:592
+            GPIO_WriteBit(GPIOC, GPIO_Pin_0, (BitAction)1);
+  be:	2101      	movs	r1, #1
+  c0:	4836      	ldr	r0, [pc, #216]	(19c <vtest_buttons_leds+0x19c>)
+  c2:	460a      	mov	r2, r1
+  c4:	e002      	b.n	cc <vtest_buttons_leds+0xcc>
+C:\cortex\dimmers\src/main.c:594
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_0, (BitAction)0);
+  c6:	4835      	ldr	r0, [pc, #212]	(19c <vtest_buttons_leds+0x19c>)
+  c8:	2101      	movs	r1, #1
+  ca:	2200      	movs	r2, #0
+  cc:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:596
+
+        if ( GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_13) == ON )
+  d0:	4833      	ldr	r0, [pc, #204]	(1a0 <vtest_buttons_leds+0x1a0>)
+  d2:	f44f 5100 	mov.w	r1, #8192	; 0x2000
+  d6:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  da:	b918      	cbnz	r0, e4 <vtest_buttons_leds+0xe4>
+C:\cortex\dimmers\src/main.c:597
+            GPIO_WriteBit(GPIOC, GPIO_Pin_1, (BitAction)1);
+  dc:	482f      	ldr	r0, [pc, #188]	(19c <vtest_buttons_leds+0x19c>)
+  de:	2102      	movs	r1, #2
+  e0:	2201      	movs	r2, #1
+  e2:	e002      	b.n	ea <vtest_buttons_leds+0xea>
+C:\cortex\dimmers\src/main.c:599
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_1, (BitAction)0);
+  e4:	482d      	ldr	r0, [pc, #180]	(19c <vtest_buttons_leds+0x19c>)
+  e6:	2102      	movs	r1, #2
+  e8:	2200      	movs	r2, #0
+  ea:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:601
+        
+        if ( GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_14) == ON )
+  ee:	482c      	ldr	r0, [pc, #176]	(1a0 <vtest_buttons_leds+0x1a0>)
+  f0:	f44f 4180 	mov.w	r1, #16384	; 0x4000
+  f4:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  f8:	b918      	cbnz	r0, 102 <vtest_buttons_leds+0x102>
+C:\cortex\dimmers\src/main.c:602
+            GPIO_WriteBit(GPIOC, GPIO_Pin_2, (BitAction)1);
+  fa:	4828      	ldr	r0, [pc, #160]	(19c <vtest_buttons_leds+0x19c>)
+  fc:	2104      	movs	r1, #4
+  fe:	2201      	movs	r2, #1
+ 100:	e002      	b.n	108 <vtest_buttons_leds+0x108>
+C:\cortex\dimmers\src/main.c:604
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_2, (BitAction)0);
+ 102:	4826      	ldr	r0, [pc, #152]	(19c <vtest_buttons_leds+0x19c>)
+ 104:	2104      	movs	r1, #4
+ 106:	2200      	movs	r2, #0
+ 108:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:606
+
+        if ( GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_15) == ON )
+ 10c:	4824      	ldr	r0, [pc, #144]	(1a0 <vtest_buttons_leds+0x1a0>)
+ 10e:	f44f 4100 	mov.w	r1, #32768	; 0x8000
+ 112:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+ 116:	b918      	cbnz	r0, 120 <vtest_buttons_leds+0x120>
+C:\cortex\dimmers\src/main.c:607
+            GPIO_WriteBit(GPIOC, GPIO_Pin_3, (BitAction)1);
+ 118:	4820      	ldr	r0, [pc, #128]	(19c <vtest_buttons_leds+0x19c>)
+ 11a:	2108      	movs	r1, #8
+ 11c:	2201      	movs	r2, #1
+ 11e:	e002      	b.n	126 <vtest_buttons_leds+0x126>
+C:\cortex\dimmers\src/main.c:609
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_3, (BitAction)0);
+ 120:	481e      	ldr	r0, [pc, #120]	(19c <vtest_buttons_leds+0x19c>)
+ 122:	2108      	movs	r1, #8
+ 124:	2200      	movs	r2, #0
+ 126:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:614
+      
+        // INTEGRATIONS TEST DIP
+        // toggle leds when one of 4 spares is active
+     
+        if ( GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_4) == ON )
+ 12a:	481e      	ldr	r0, [pc, #120]	(1a4 <vtest_buttons_leds+0x1a4>)
+ 12c:	2110      	movs	r1, #16
+ 12e:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+ 132:	b918      	cbnz	r0, 13c <vtest_buttons_leds+0x13c>
+C:\cortex\dimmers\src/main.c:615
+            GPIO_WriteBit(GPIOC, GPIO_Pin_0, (BitAction)1);
+ 134:	2101      	movs	r1, #1
+ 136:	4819      	ldr	r0, [pc, #100]	(19c <vtest_buttons_leds+0x19c>)
+ 138:	460a      	mov	r2, r1
+ 13a:	e002      	b.n	142 <vtest_buttons_leds+0x142>
+C:\cortex\dimmers\src/main.c:617
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_0, (BitAction)0);
+ 13c:	4817      	ldr	r0, [pc, #92]	(19c <vtest_buttons_leds+0x19c>)
+ 13e:	2101      	movs	r1, #1
+ 140:	2200      	movs	r2, #0
+ 142:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:619
+
+        if ( GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_5) == ON )
+ 146:	4817      	ldr	r0, [pc, #92]	(1a4 <vtest_buttons_leds+0x1a4>)
+ 148:	2120      	movs	r1, #32
+ 14a:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+ 14e:	b918      	cbnz	r0, 158 <vtest_buttons_leds+0x158>
+C:\cortex\dimmers\src/main.c:620
+            GPIO_WriteBit(GPIOC, GPIO_Pin_1, (BitAction)1);
+ 150:	4812      	ldr	r0, [pc, #72]	(19c <vtest_buttons_leds+0x19c>)
+ 152:	2102      	movs	r1, #2
+ 154:	2201      	movs	r2, #1
+ 156:	e002      	b.n	15e <vtest_buttons_leds+0x15e>
+C:\cortex\dimmers\src/main.c:622
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_1, (BitAction)0);
+ 158:	4810      	ldr	r0, [pc, #64]	(19c <vtest_buttons_leds+0x19c>)
+ 15a:	2102      	movs	r1, #2
+ 15c:	2200      	movs	r2, #0
+ 15e:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:624
+        
+        if ( GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_6) == ON )
+ 162:	4810      	ldr	r0, [pc, #64]	(1a4 <vtest_buttons_leds+0x1a4>)
+ 164:	2140      	movs	r1, #64
+ 166:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+ 16a:	b918      	cbnz	r0, 174 <vtest_buttons_leds+0x174>
+C:\cortex\dimmers\src/main.c:625
+            GPIO_WriteBit(GPIOC, GPIO_Pin_2, (BitAction)1);
+ 16c:	480b      	ldr	r0, [pc, #44]	(19c <vtest_buttons_leds+0x19c>)
+ 16e:	2104      	movs	r1, #4
+ 170:	2201      	movs	r2, #1
+ 172:	e002      	b.n	17a <vtest_buttons_leds+0x17a>
+C:\cortex\dimmers\src/main.c:627
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_2, (BitAction)0);
+ 174:	4809      	ldr	r0, [pc, #36]	(19c <vtest_buttons_leds+0x19c>)
+ 176:	2104      	movs	r1, #4
+ 178:	2200      	movs	r2, #0
+ 17a:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:629
+
+        if ( GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_7) == ON )
+ 17e:	4809      	ldr	r0, [pc, #36]	(1a4 <vtest_buttons_leds+0x1a4>)
+ 180:	2180      	movs	r1, #128
+ 182:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+ 186:	b918      	cbnz	r0, 190 <vtest_buttons_leds+0x190>
+C:\cortex\dimmers\src/main.c:630
+            GPIO_WriteBit(GPIOC, GPIO_Pin_3, (BitAction)1);
+ 188:	4804      	ldr	r0, [pc, #16]	(19c <vtest_buttons_leds+0x19c>)
+ 18a:	2108      	movs	r1, #8
+ 18c:	2201      	movs	r2, #1
+ 18e:	e002      	b.n	196 <vtest_buttons_leds+0x196>
+C:\cortex\dimmers\src/main.c:632
+        else
+            GPIO_WriteBit(GPIOC, GPIO_Pin_3, (BitAction)0);
+ 190:	4802      	ldr	r0, [pc, #8]	(19c <vtest_buttons_leds+0x19c>)
+ 192:	2108      	movs	r1, #8
+ 194:	2200      	movs	r2, #0
+ 196:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+ 19a:	e732      	b.n	2 <GPIO_WriteBit+0x2>
+ 19c:	40011000 	.word	0x40011000
+ 1a0:	40010c00 	.word	0x40010c00
+ 1a4:	40010800 	.word	0x40010800
+Disassembly of section .text.vTestDipTask:
+
+00000000 <vTestDipTask>:
+vTestDipTask():
+C:\cortex\dimmers\src/main.c:527
+    
+        GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
+    }
+}
+
+void vTestDipTask ( void * params ){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/main.c:529
+    while (1){
+        if ( GpioGetDipState(DIP_SWITCH_1) == ON )
+   2:	f44f 5080 	mov.w	r0, #4096	; 0x1000
+   6:	f7ff fffe 	bl	0 <GpioGetDipState>
+   a:	b918      	cbnz	r0, 14 <vTestDipTask+0x14>
+C:\cortex\dimmers\src/main.c:530
+            GPIO_WriteBit(GPIOA, GPIO_Pin_7, (BitAction) 1);
+   c:	481b      	ldr	r0, [pc, #108]	(7c <vTestDipTask+0x7c>)
+   e:	2180      	movs	r1, #128
+  10:	2201      	movs	r2, #1
+  12:	e002      	b.n	1a <vTestDipTask+0x1a>
+C:\cortex\dimmers\src/main.c:532
+        else
+            GPIO_WriteBit(GPIOA, GPIO_Pin_7, (BitAction) 0);
+  14:	4819      	ldr	r0, [pc, #100]	(7c <vTestDipTask+0x7c>)
+  16:	2180      	movs	r1, #128
+  18:	2200      	movs	r2, #0
+  1a:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:534
+
+        if ( GpioGetDipState(DIP_SWITCH_2) == ON )
+  1e:	f44f 5000 	mov.w	r0, #8192	; 0x2000
+  22:	f7ff fffe 	bl	0 <GpioGetDipState>
+  26:	b918      	cbnz	r0, 30 <vTestDipTask+0x30>
+C:\cortex\dimmers\src/main.c:535
+            GPIO_WriteBit(GPIOA, GPIO_Pin_6, (BitAction) 1);
+  28:	4814      	ldr	r0, [pc, #80]	(7c <vTestDipTask+0x7c>)
+  2a:	2140      	movs	r1, #64
+  2c:	2201      	movs	r2, #1
+  2e:	e002      	b.n	36 <vTestDipTask+0x36>
+C:\cortex\dimmers\src/main.c:537
+        else
+            GPIO_WriteBit(GPIOA, GPIO_Pin_6, (BitAction) 0);
+  30:	4812      	ldr	r0, [pc, #72]	(7c <vTestDipTask+0x7c>)
+  32:	2140      	movs	r1, #64
+  34:	2200      	movs	r2, #0
+  36:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:539
+        
+        if ( GpioGetDipState(DIP_SWITCH_3) == ON )
+  3a:	f44f 4080 	mov.w	r0, #16384	; 0x4000
+  3e:	f7ff fffe 	bl	0 <GpioGetDipState>
+  42:	b918      	cbnz	r0, 4c <vTestDipTask+0x4c>
+C:\cortex\dimmers\src/main.c:540
+            GPIO_WriteBit(GPIOA, GPIO_Pin_5, (BitAction) 1);
+  44:	480d      	ldr	r0, [pc, #52]	(7c <vTestDipTask+0x7c>)
+  46:	2120      	movs	r1, #32
+  48:	2201      	movs	r2, #1
+  4a:	e002      	b.n	52 <vTestDipTask+0x52>
+C:\cortex\dimmers\src/main.c:542
+        else
+            GPIO_WriteBit(GPIOA, GPIO_Pin_5, (BitAction) 0);
+  4c:	480b      	ldr	r0, [pc, #44]	(7c <vTestDipTask+0x7c>)
+  4e:	2120      	movs	r1, #32
+  50:	2200      	movs	r2, #0
+  52:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:544
+        
+        if ( GpioGetDipState(DIP_SWITCH_4) == ON )
+  56:	f44f 4000 	mov.w	r0, #32768	; 0x8000
+  5a:	f7ff fffe 	bl	0 <GpioGetDipState>
+  5e:	b918      	cbnz	r0, 68 <vTestDipTask+0x68>
+C:\cortex\dimmers\src/main.c:545
+            GPIO_WriteBit(GPIOA, GPIO_Pin_4, (BitAction) 1);
+  60:	4806      	ldr	r0, [pc, #24]	(7c <vTestDipTask+0x7c>)
+  62:	2110      	movs	r1, #16
+  64:	2201      	movs	r2, #1
+  66:	e002      	b.n	6e <vTestDipTask+0x6e>
+C:\cortex\dimmers\src/main.c:547
+        else
+            GPIO_WriteBit(GPIOA, GPIO_Pin_4, (BitAction) 0);
+  68:	4804      	ldr	r0, [pc, #16]	(7c <vTestDipTask+0x7c>)
+  6a:	2110      	movs	r1, #16
+  6c:	2200      	movs	r2, #0
+  6e:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:549
+
+        vTaskDelay(10);  
+  72:	200a      	movs	r0, #10
+  74:	f7ff fffe 	bl	0 <vTaskDelay>
+  78:	e7c3      	b.n	2 <vTaskDelay+0x2>
+  7a:	46c0      	nop			(mov r8, r8)
+  7c:	40010800 	.word	0x40010800
+Disassembly of section .text.vSendUpdateTask:
+
+00000000 <vSendUpdateTask>:
+vSendUpdateTask():
+C:\cortex\dimmers\src/main.c:511
+            GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
+     }
+     
+}
+
+void vSendUpdateTask ( void * params ){
+   0:	b530      	push	{r4, r5, lr}
+   2:	b089      	sub	sp, #36
+C:\cortex\dimmers\src/main.c:514
+
+    while (1){
+        vTaskSuspend(NULL);
+   4:	2000      	movs	r0, #0
+   6:	f7ff fffe 	bl	0 <vTaskSuspend>
+C:\cortex\dimmers\src/main.c:516
+
+        BkpUnlock ();
+   a:	f7ff fffe 	bl	0 <BkpUnlock>
+C:\cortex\dimmers\src/main.c:517
+            xSemaphoreTake( xBKPsync , portMAX_DELAY );
+   e:	4b39      	ldr	r3, [pc, #228]	(f4 <vSendUpdateTask+0xf4>)
+  10:	2100      	movs	r1, #0
+  12:	6818      	ldr	r0, [r3, #0]
+  14:	f04f 32ff 	mov.w	r2, #4294967295	; 0xffffffff
+  18:	460b      	mov	r3, r1
+  1a:	f7ff fffe 	bl	0 <xQueueGenericReceive>
+C:\cortex\dimmers\src/main.c:518
+                BkpFullWriteToBkp ();
+  1e:	f7ff fffe 	bl	0 <BkpFullWriteToBkp>
+  22:	4d35      	ldr	r5, [pc, #212]	(f8 <vSendUpdateTask+0xf8>)
+  24:	462c      	mov	r4, r5
+UtilUpdateLightsFromI2C():
+C:\cortex\dimmers\src/main.c:111
+    
+    u8  idx;
+    TLightProperties temp;
+
+    for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++){
+        BkpWriteLightPropertiesToMemory ( Lights[idx].inputpin , &temp ); 
+  26:	8960      	ldrh	r0, [r4, #10]
+  28:	a901      	add	r1, sp, #4
+  2a:	f7ff fffe 	bl	0 <BkpWriteLightPropertiesToMemory>
+C:\cortex\dimmers\src/main.c:112
+        Lights[idx].compare ( temp.value );
+  2e:	f8bd 0004 	ldrh.w	r0, [sp, #4]
+  32:	6963      	ldr	r3, [r4, #20]
+  34:	4798      	blx	r3
+C:\cortex\dimmers\src/main.c:114
+        // adapt states
+        if ( temp.value == LIGHT_ON ){
+  36:	f8bd 0004 	ldrh.w	r0, [sp, #4]
+  3a:	b9b0      	cbnz	r0, 6a <vSendUpdateTask+0x6a>
+C:\cortex\dimmers\src/main.c:115
+            Lights[idx].comparestate(DISABLE);
+  3c:	69a3      	ldr	r3, [r4, #24]
+  3e:	4798      	blx	r3
+  40:	e001      	b.n	46 <vSendUpdateTask+0x46>
+C:\cortex\dimmers\src/main.c:116
+            WAIT_ZERO_CROSS;
+  42:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+  46:	4b2d      	ldr	r3, [pc, #180]	(fc <vSendUpdateTask+0xfc>)
+  48:	f9b3 1000 	ldrsh.w	r1, [r3]
+  4c:	4b2c      	ldr	r3, [pc, #176]	(100 <vSendUpdateTask+0x100>)
+  4e:	f9b3 2000 	ldrsh.w	r2, [r3]
+  52:	f102 0308 	add.w	r3, r2, #8	; 0x8
+  56:	4299      	cmp	r1, r3
+  58:	dcf3      	bgt.n	42 <vSendUpdateTask+0x42>
+  5a:	f1a2 0308 	sub.w	r3, r2, #8	; 0x8
+  5e:	4299      	cmp	r1, r3
+  60:	dbef      	blt.n	42 <vSendUpdateTask+0x42>
+C:\cortex\dimmers\src/main.c:117
+            GPIO_WriteBit(GPIOC, Lights[idx].outputpin , (BitAction) 1 );
+  62:	4828      	ldr	r0, [pc, #160]	(104 <vSendUpdateTask+0x104>)
+  64:	8921      	ldrh	r1, [r4, #8]
+  66:	2201      	movs	r2, #1
+  68:	e01a      	b.n	a0 <vSendUpdateTask+0xa0>
+C:\cortex\dimmers\src/main.c:119
+        }
+        else if ( temp.value == LIGHT_OFF ){
+  6a:	f242 7310 	movw	r3, #10000	; 0x2710
+  6e:	4298      	cmp	r0, r3
+  70:	69a3      	ldr	r3, [r4, #24]
+  72:	d118      	bne.n	a6 <vSendUpdateTask+0xa6>
+C:\cortex\dimmers\src/main.c:120
+            Lights[idx].comparestate(DISABLE);
+  74:	2000      	movs	r0, #0
+  76:	4798      	blx	r3
+  78:	e001      	b.n	7e <vSendUpdateTask+0x7e>
+C:\cortex\dimmers\src/main.c:121
+            WAIT_ZERO_CROSS;
+  7a:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+  7e:	4b1f      	ldr	r3, [pc, #124]	(fc <vSendUpdateTask+0xfc>)
+  80:	f9b3 1000 	ldrsh.w	r1, [r3]
+  84:	4b1e      	ldr	r3, [pc, #120]	(100 <vSendUpdateTask+0x100>)
+  86:	f9b3 2000 	ldrsh.w	r2, [r3]
+  8a:	f102 0308 	add.w	r3, r2, #8	; 0x8
+  8e:	4299      	cmp	r1, r3
+  90:	dcf3      	bgt.n	7a <vSendUpdateTask+0x7a>
+  92:	f1a2 0308 	sub.w	r3, r2, #8	; 0x8
+  96:	4299      	cmp	r1, r3
+  98:	dbef      	blt.n	7a <vSendUpdateTask+0x7a>
+C:\cortex\dimmers\src/main.c:122
+            GPIO_WriteBit(GPIOC, Lights[idx].outputpin , (BitAction) 0 );        }
+  9a:	481a      	ldr	r0, [pc, #104]	(104 <vSendUpdateTask+0x104>)
+  9c:	8921      	ldrh	r1, [r4, #8]
+  9e:	2200      	movs	r2, #0
+  a0:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+  a4:	e001      	b.n	aa <vSendUpdateTask+0xaa>
+C:\cortex\dimmers\src/main.c:124
+        else{
+            Lights[idx].comparestate(ENABLE); 
+  a6:	2001      	movs	r0, #1
+  a8:	4798      	blx	r3
+C:\cortex\dimmers\src/main.c:110
+static void UtilUpdateLightsFromI2C ( void ) {
+    
+    u8  idx;
+    TLightProperties temp;
+
+    for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++){
+  aa:	4b17      	ldr	r3, [pc, #92]	(108 <vSendUpdateTask+0x108>)
+C:\cortex\dimmers\src/main.c:124
+        else if ( temp.value == LIGHT_OFF ){
+            Lights[idx].comparestate(DISABLE);
+            WAIT_ZERO_CROSS;
+            GPIO_WriteBit(GPIOC, Lights[idx].outputpin , (BitAction) 0 );        }
+        else{
+            Lights[idx].comparestate(ENABLE); 
+  ac:	341c      	adds	r4, #28
+C:\cortex\dimmers\src/main.c:110
+static void UtilUpdateLightsFromI2C ( void ) {
+    
+    u8  idx;
+    TLightProperties temp;
+
+    for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++){
+  ae:	429c      	cmp	r4, r3
+  b0:	d1b9      	bne.n	26 <vSendUpdateTask+0x26>
+C:\cortex\dimmers\src/main.c:128
+        else{
+            Lights[idx].comparestate(ENABLE); 
+        }
+    }
+
+    vTaskDelay(LIGHT_UPDATE_DELAY);
+  b2:	2014      	movs	r0, #20
+  b4:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:131
+
+    for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++)
+        BkpWriteLightPropertiesToMemory ( Lights[idx].inputpin , &Lights[idx] );
+  b8:	8968      	ldrh	r0, [r5, #10]
+  ba:	4629      	mov	r1, r5
+  bc:	351c      	adds	r5, #28
+  be:	f7ff fffe 	bl	0 <BkpWriteLightPropertiesToMemory>
+C:\cortex\dimmers\src/main.c:130
+        }
+    }
+
+    vTaskDelay(LIGHT_UPDATE_DELAY);
+
+    for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++)
+  c2:	42a5      	cmp	r5, r4
+  c4:	d1f8      	bne.n	b8 <vSendUpdateTask+0xb8>
+vSendUpdateTask():
+C:\cortex\dimmers\src/main.c:520
+
+        BkpUnlock ();
+            xSemaphoreTake( xBKPsync , portMAX_DELAY );
+                BkpFullWriteToBkp ();
+                UtilUpdateLightsFromI2C ();
+            xSemaphoreGive ( xBKPsync );
+  c6:	4b0b      	ldr	r3, [pc, #44]	(f4 <vSendUpdateTask+0xf4>)
+  c8:	2100      	movs	r1, #0
+  ca:	460a      	mov	r2, r1
+  cc:	6818      	ldr	r0, [r3, #0]
+  ce:	460b      	mov	r3, r1
+  d0:	f7ff fffe 	bl	0 <xQueueGenericSend>
+C:\cortex\dimmers\src/main.c:521
+        BkpLock();
+  d4:	f7ff fffe 	bl	0 <BkpLock>
+C:\cortex\dimmers\src/main.c:523
+    
+        GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
+  d8:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  dc:	4809      	ldr	r0, [pc, #36]	(28 <GPIO_ReadOutputDataBit+0x28>)
+  de:	f7ff fffe 	bl	0 <GPIO_ReadOutputDataBit>
+  e2:	f1c0 0201 	rsb	r2, r0, #1	; 0x1
+  e6:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  ea:	4806      	ldr	r0, [pc, #24]	(104 <vSendUpdateTask+0x104>)
+  ec:	b2d2      	uxtb	r2, r2
+  ee:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+  f2:	e787      	b.n	ffffff12 <xBKPsync+0xffffff12>
+	...
+ 104:	40011000 	.word	0x40011000
+ 108:	000000a8 	.word	0x000000a8
+Disassembly of section .text.vButtonDimmerTask:
+
+00000000 <vButtonDimmerTask>:
+vButtonDimmerTask():
+C:\cortex\dimmers\src/main.c:351
+
+    vTaskDelete(NULL);
+}
+
+void vButtonDimmerTask ( void * params )
+{
+   0:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+   4:	4605      	mov	r5, r0
+C:\cortex\dimmers\src/main.c:352
+    pTLightProperties pLight = (pTLightProperties)params;
+   6:	f04f 0801 	mov.w	r8, #1	; 0x1
+C:\cortex\dimmers\src/main.c:359
+    u16 temp_value;
+    LIGHT_DIRECTION dir = UP;
+   
+    while(1){
+        
+        xSemaphoreTake( pLight->sync , portMAX_DELAY );
+   a:	2100      	movs	r1, #0
+   c:	460b      	mov	r3, r1
+   e:	f04f 32ff 	mov.w	r2, #4294967295	; 0xffffffff
+  12:	6928      	ldr	r0, [r5, #16]
+  14:	f7ff fffe 	bl	0 <xQueueGenericReceive>
+C:\cortex\dimmers\src/main.c:361
+        
+        vTaskDelay(BUTTON_DELAY);
+  18:	2028      	movs	r0, #40
+  1a:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:365
+    
+        temp_value = pLight->value;
+    
+        if ( pLight->type == BUTTON_TYPE ){
+  1e:	7b2b      	ldrb	r3, [r5, #12]
+C:\cortex\dimmers\src/main.c:363
+        
+        xSemaphoreTake( pLight->sync , portMAX_DELAY );
+        
+        vTaskDelay(BUTTON_DELAY);
+    
+        temp_value = pLight->value;
+  20:	882c      	ldrh	r4, [r5, #0]
+C:\cortex\dimmers\src/main.c:365
+    
+        if ( pLight->type == BUTTON_TYPE ){
+  22:	2b00      	cmp	r3, #0
+  24:	f040 80ab 	bne.w	17e <vButtonDimmerTask+0x17e>
+C:\cortex\dimmers\src/main.c:367
+        
+            if ( GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == ON ){
+  28:	4861      	ldr	r0, [pc, #388]	(1b0 <vButtonDimmerTask+0x1b0>)
+  2a:	8969      	ldrh	r1, [r5, #10]
+  2c:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  30:	2800      	cmp	r0, #0
+  32:	d1ea      	bne.n	a <vButtonDimmerTask+0xa>
+  34:	4606      	mov	r6, r0
+C:\cortex\dimmers\src/main.c:371
+                
+                /// check for push/long push
+                for ( cycle = 0 ; cycle < BUTTON_COUNT_DELAY ; cycle++){
+                    vTaskDelay(BUTTON_DELAY_WAIT);
+  36:	2064      	movs	r0, #100
+  38:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:372
+                    if ( GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == ON )
+  3c:	485c      	ldr	r0, [pc, #368]	(1b0 <vButtonDimmerTask+0x1b0>)
+  3e:	8969      	ldrh	r1, [r5, #10]
+  40:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  44:	b918      	cbnz	r0, 4e <vButtonDimmerTask+0x4e>
+C:\cortex\dimmers\src/main.c:370
+        if ( pLight->type == BUTTON_TYPE ){
+        
+            if ( GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == ON ){
+                
+                /// check for push/long push
+                for ( cycle = 0 ; cycle < BUTTON_COUNT_DELAY ; cycle++){
+  46:	1c73      	adds	r3, r6, #1
+  48:	b2de      	uxtb	r6, r3
+  4a:	2e0a      	cmp	r6, #10
+  4c:	d1f3      	bne.n	36 <vButtonDimmerTask+0x36>
+C:\cortex\dimmers\src/main.c:379
+                    else
+                        break;
+                }
+                
+                /// dim push
+                if ( (GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == ON) && (cycle == BUTTON_COUNT_DELAY ) ){
+  4e:	4858      	ldr	r0, [pc, #352]	(1b0 <vButtonDimmerTask+0x1b0>)
+  50:	8969      	ldrh	r1, [r5, #10]
+  52:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  56:	4607      	mov	r7, r0
+  58:	2800      	cmp	r0, #0
+  5a:	d144      	bne.n	e6 <vButtonDimmerTask+0xe6>
+  5c:	2e0a      	cmp	r6, #10
+  5e:	d142      	bne.n	e6 <vButtonDimmerTask+0xe6>
+C:\cortex\dimmers\src/main.c:381
+                    
+                    if ( temp_value == LIGHT_OFF ){
+  60:	f242 7310 	movw	r3, #10000	; 0x2710
+  64:	429c      	cmp	r4, r3
+  66:	d108      	bne.n	7a <vButtonDimmerTask+0x7a>
+C:\cortex\dimmers\src/main.c:382
+                        pLight->comparestate(ENABLE);
+  68:	3001      	adds	r0, #1
+  6a:	69ab      	ldr	r3, [r5, #24]
+  6c:	4798      	blx	r3
+C:\cortex\dimmers\src/main.c:383
+                        GPIO_WriteBit(GPIOC, pLight->outputpin, (BitAction) 0 );
+  6e:	4850      	ldr	r0, [pc, #320]	(1b0 <vButtonDimmerTask+0x1b0>)
+  70:	8929      	ldrh	r1, [r5, #8]
+  72:	463a      	mov	r2, r7
+  74:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+  78:	e02d      	b.n	d6 <vButtonDimmerTask+0xd6>
+C:\cortex\dimmers\src/main.c:385
+                    }
+                    else if ( temp_value == LIGHT_ON ){
+  7a:	2c00      	cmp	r4, #0
+  7c:	d12b      	bne.n	d6 <vButtonDimmerTask+0xd6>
+C:\cortex\dimmers\src/main.c:386
+                        pLight->comparestate(ENABLE);
+  7e:	69ab      	ldr	r3, [r5, #24]
+  80:	2001      	movs	r0, #1
+  82:	4798      	blx	r3
+  84:	e027      	b.n	d6 <vButtonDimmerTask+0xd6>
+C:\cortex\dimmers\src/main.c:391
+                    }                    
+                
+                    while ( GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == ON ){
+
+                        vTaskDelay(BUTTON_DELAY_DIMMING);
+  86:	2064      	movs	r0, #100
+  88:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:393
+
+                        if ( temp_value == LIGHT_OFF  ){
+  8c:	f242 7310 	movw	r3, #10000	; 0x2710
+  90:	429c      	cmp	r4, r3
+  92:	d101      	bne.n	98 <vButtonDimmerTask+0x98>
+C:\cortex\dimmers\src/main.c:394
+                            temp_value = pLight->min;
+  94:	886c      	ldrh	r4, [r5, #2]
+  96:	e01a      	b.n	ce <vButtonDimmerTask+0xce>
+  98:	88ab      	ldrh	r3, [r5, #4]
+C:\cortex\dimmers\src/main.c:396
+                        }
+                        else if ( temp_value == LIGHT_ON ){
+  9a:	b90c      	cbnz	r4, a0 <vButtonDimmerTask+0xa0>
+C:\cortex\dimmers\src/main.c:397
+                            temp_value = pLight->max;
+  9c:	461c      	mov	r4, r3
+  9e:	e016      	b.n	ce <vButtonDimmerTask+0xce>
+C:\cortex\dimmers\src/main.c:400
+                        }
+                        else{
+                            if ( temp_value <= pLight->max ){
+  a0:	42a3      	cmp	r3, r4
+  a2:	d301      	bcc.n	a8 <vButtonDimmerTask+0xa8>
+C:\cortex\dimmers\src/main.c:401
+                                temp_value +=  pLight->step;
+  a4:	88eb      	ldrh	r3, [r5, #6]
+  a6:	e00f      	b.n	c8 <vButtonDimmerTask+0xc8>
+C:\cortex\dimmers\src/main.c:404
+                                dir = DOWN;
+                            }
+                            else if( temp_value >= pLight->min ){
+  a8:	886b      	ldrh	r3, [r5, #2]
+  aa:	42a3      	cmp	r3, r4
+  ac:	d805      	bhi.n	ba <vButtonDimmerTask+0xba>
+C:\cortex\dimmers\src/main.c:405
+                                temp_value -=  pLight->step;
+  ae:	88eb      	ldrh	r3, [r5, #6]
+  b0:	f04f 0801 	mov.w	r8, #1	; 0x1
+  b4:	1ae3      	subs	r3, r4, r3
+  b6:	b29c      	uxth	r4, r3
+  b8:	e009      	b.n	ce <vButtonDimmerTask+0xce>
+C:\cortex\dimmers\src/main.c:409
+                                dir = UP;
+                            }
+                            else{
+                                if ( dir == UP ){
+  ba:	f1b8 0f01 	cmp.w	r8, #1	; 0x1
+  be:	88eb      	ldrh	r3, [r5, #6]
+  c0:	d102      	bne.n	c8 <vButtonDimmerTask+0xc8>
+C:\cortex\dimmers\src/main.c:410
+                                    temp_value -=  pLight->step;                                
+  c2:	1ae3      	subs	r3, r4, r3
+  c4:	b29c      	uxth	r4, r3
+  c6:	e002      	b.n	ce <vButtonDimmerTask+0xce>
+C:\cortex\dimmers\src/main.c:413
+                                }
+                                else if ( dir == DOWN ){
+                                    temp_value +=  pLight->step;
+  c8:	18e3      	adds	r3, r4, r3
+  ca:	b29c      	uxth	r4, r3
+  cc:	46b0      	mov	r8, r6
+C:\cortex\dimmers\src/main.c:418
+                                }
+                            }
+                        }
+                        
+                        UtilUpdateLightFromButton(pLight , temp_value );
+  ce:	4628      	mov	r0, r5
+  d0:	4621      	mov	r1, r4
+  d2:	f7ff fffe 	bl	0 <vButtonDimmerTask>
+C:\cortex\dimmers\src/main.c:389
+                    }
+                    else if ( temp_value == LIGHT_ON ){
+                        pLight->comparestate(ENABLE);
+                    }                    
+                
+                    while ( GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == ON ){
+  d6:	4836      	ldr	r0, [pc, #216]	(1b0 <vButtonDimmerTask+0x1b0>)
+  d8:	8969      	ldrh	r1, [r5, #10]
+  da:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  de:	4606      	mov	r6, r0
+  e0:	2800      	cmp	r0, #0
+  e2:	d0d0      	beq.n	86 <vButtonDimmerTask+0x86>
+  e4:	e791      	b.n	a <vButtonDimmerTask+0xa>
+C:\cortex\dimmers\src/main.c:423
+                        UtilUpdateLightFromButton(pLight , temp_value );
+                    }
+                }
+                /// toggle push
+                else{
+                    if ( temp_value == LIGHT_OFF  ){
+  e6:	f242 7310 	movw	r3, #10000	; 0x2710
+  ea:	429c      	cmp	r4, r3
+  ec:	d117      	bne.n	11e <vButtonDimmerTask+0x11e>
+  ee:	e001      	b.n	f4 <vButtonDimmerTask+0xf4>
+C:\cortex\dimmers\src/main.c:424
+                        WAIT_ZERO_CROSS;
+  f0:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+  f4:	4b2f      	ldr	r3, [pc, #188]	(1b4 <vButtonDimmerTask+0x1b4>)
+  f6:	f9b3 1000 	ldrsh.w	r1, [r3]
+  fa:	4b2f      	ldr	r3, [pc, #188]	(1b8 <vButtonDimmerTask+0x1b8>)
+  fc:	f9b3 2000 	ldrsh.w	r2, [r3]
+ 100:	f102 0308 	add.w	r3, r2, #8	; 0x8
+ 104:	4299      	cmp	r1, r3
+ 106:	dcf3      	bgt.n	f0 <vButtonDimmerTask+0xf0>
+ 108:	f1a2 0308 	sub.w	r3, r2, #8	; 0x8
+ 10c:	4299      	cmp	r1, r3
+ 10e:	dbef      	blt.n	f0 <vButtonDimmerTask+0xf0>
+C:\cortex\dimmers\src/main.c:425
+                        GPIO_WriteBit(GPIOC, pLight->outputpin, (BitAction)(1));
+ 110:	8929      	ldrh	r1, [r5, #8]
+ 112:	4827      	ldr	r0, [pc, #156]	(1b0 <vButtonDimmerTask+0x1b0>)
+ 114:	2201      	movs	r2, #1
+ 116:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+ 11a:	2100      	movs	r1, #0
+ 11c:	e02d      	b.n	17a <vButtonDimmerTask+0x17a>
+C:\cortex\dimmers\src/main.c:428
+                        temp_value = LIGHT_ON;
+                    }
+                    else if ( temp_value == LIGHT_ON ){
+ 11e:	b114      	cbz	r4, 126 <vButtonDimmerTask+0x126>
+ 120:	e010      	b.n	144 <vButtonDimmerTask+0x144>
+C:\cortex\dimmers\src/main.c:429
+                        WAIT_ZERO_CROSS;
+ 122:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+ 126:	4b23      	ldr	r3, [pc, #140]	(1b4 <vButtonDimmerTask+0x1b4>)
+ 128:	f9b3 1000 	ldrsh.w	r1, [r3]
+ 12c:	4b22      	ldr	r3, [pc, #136]	(1b8 <vButtonDimmerTask+0x1b8>)
+ 12e:	f9b3 2000 	ldrsh.w	r2, [r3]
+ 132:	f102 0308 	add.w	r3, r2, #8	; 0x8
+ 136:	4299      	cmp	r1, r3
+ 138:	dcf3      	bgt.n	122 <vButtonDimmerTask+0x122>
+ 13a:	f1a2 0308 	sub.w	r3, r2, #8	; 0x8
+ 13e:	4299      	cmp	r1, r3
+ 140:	dbef      	blt.n	122 <vButtonDimmerTask+0x122>
+ 142:	e013      	b.n	16c <vButtonDimmerTask+0x16c>
+C:\cortex\dimmers\src/main.c:435
+                        GPIO_WriteBit(GPIOC, pLight->outputpin, (BitAction)(0));
+                        temp_value = LIGHT_OFF;
+                    }
+                    else{
+                        temp_value = LIGHT_OFF;
+                        pLight->comparestate(DISABLE);
+ 144:	69ab      	ldr	r3, [r5, #24]
+ 146:	2000      	movs	r0, #0
+ 148:	4798      	blx	r3
+ 14a:	e001      	b.n	150 <vButtonDimmerTask+0x150>
+C:\cortex\dimmers\src/main.c:436
+                        WAIT_ZERO_CROSS;
+ 14c:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+ 150:	4b18      	ldr	r3, [pc, #96]	(1b4 <vButtonDimmerTask+0x1b4>)
+ 152:	f9b3 1000 	ldrsh.w	r1, [r3]
+ 156:	4b18      	ldr	r3, [pc, #96]	(1b8 <vButtonDimmerTask+0x1b8>)
+ 158:	f9b3 2000 	ldrsh.w	r2, [r3]
+ 15c:	f102 0308 	add.w	r3, r2, #8	; 0x8
+ 160:	4299      	cmp	r1, r3
+ 162:	dcf3      	bgt.n	14c <vButtonDimmerTask+0x14c>
+ 164:	f1a2 0308 	sub.w	r3, r2, #8	; 0x8
+ 168:	4299      	cmp	r1, r3
+ 16a:	dbef      	blt.n	14c <vButtonDimmerTask+0x14c>
+C:\cortex\dimmers\src/main.c:437
+                        GPIO_WriteBit(GPIOC, pLight->outputpin, (BitAction) 0 );
+ 16c:	8929      	ldrh	r1, [r5, #8]
+ 16e:	4810      	ldr	r0, [pc, #64]	(1b0 <vButtonDimmerTask+0x1b0>)
+ 170:	2200      	movs	r2, #0
+ 172:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+ 176:	f242 7110 	movw	r1, #10000	; 0x2710
+C:\cortex\dimmers\src/main.c:439
+                    }
+                    UtilUpdateLightFromButton(pLight , temp_value );
+ 17a:	4628      	mov	r0, r5
+ 17c:	e014      	b.n	1a8 <vButtonDimmerTask+0x1a8>
+C:\cortex\dimmers\src/main.c:443
+                 }
+            }
+        }
+        else if ( pLight->type == SWITCH_TYPE ){
+ 17e:	2b01      	cmp	r3, #1
+ 180:	f47f af43 	bne.w	a <vButtonDimmerTask+0xa>
+C:\cortex\dimmers\src/main.c:444
+            if ( GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == CLOSED ){
+ 184:	480a      	ldr	r0, [pc, #40]	(1b0 <vButtonDimmerTask+0x1b0>)
+ 186:	8969      	ldrh	r1, [r5, #10]
+ 188:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+ 18c:	b910      	cbnz	r0, 194 <vButtonDimmerTask+0x194>
+C:\cortex\dimmers\src/main.c:445
+                UtilUpdateLightFromButton(pLight , pLight->max );
+ 18e:	4628      	mov	r0, r5
+ 190:	88a9      	ldrh	r1, [r5, #4]
+ 192:	e009      	b.n	1a8 <vButtonDimmerTask+0x1a8>
+C:\cortex\dimmers\src/main.c:447
+            }
+            else if ( GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == OPEN ){
+ 194:	4806      	ldr	r0, [pc, #24]	(1b0 <vButtonDimmerTask+0x1b0>)
+ 196:	8969      	ldrh	r1, [r5, #10]
+ 198:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+ 19c:	2801      	cmp	r0, #1
+ 19e:	f47f af34 	bne.w	a <vButtonDimmerTask+0xa>
+C:\cortex\dimmers\src/main.c:448
+                UtilUpdateLightFromButton(pLight , LIGHT_OFF );
+ 1a2:	4628      	mov	r0, r5
+ 1a4:	f242 7110 	movw	r1, #10000	; 0x2710
+ 1a8:	f7ff fffe 	bl	0 <vButtonDimmerTask>
+ 1ac:	e72d      	b.n	a <vButtonDimmerTask+0xa>
+ 1ae:	46c0      	nop			(mov r8, r8)
+ 1b0:	40011000 	.word	0x40011000
+	...
+Disassembly of section .text.vButtonToggleTask:
+
+00000000 <vButtonToggleTask>:
+vButtonToggleTask():
+C:\cortex\dimmers\src/main.c:299
+
+void vApplicationIdleHook(void){
+    //GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
+}
+
+void vButtonToggleTask  ( void * params ){
+   0:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\src/main.c:303
+
+    pTLightProperties pLight = (pTLightProperties)params;
+    
+    pLight->comparestate(DISABLE);
+   2:	6983      	ldr	r3, [r0, #24]
+C:\cortex\dimmers\src/main.c:299
+
+void vApplicationIdleHook(void){
+    //GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
+}
+
+void vButtonToggleTask  ( void * params ){
+   4:	4605      	mov	r5, r0
+C:\cortex\dimmers\src/main.c:303
+
+    pTLightProperties pLight = (pTLightProperties)params;
+    
+    pLight->comparestate(DISABLE);
+   6:	2000      	movs	r0, #0
+   8:	4798      	blx	r3
+C:\cortex\dimmers\src/main.c:307
+
+    while (1){
+  
+        xSemaphoreTake(pLight->sync,portMAX_DELAY);
+   a:	2100      	movs	r1, #0
+   c:	f04f 32ff 	mov.w	r2, #4294967295	; 0xffffffff
+  10:	460b      	mov	r3, r1
+  12:	6928      	ldr	r0, [r5, #16]
+  14:	f7ff fffe 	bl	0 <xQueueGenericReceive>
+C:\cortex\dimmers\src/main.c:309
+    
+        vTaskDelay(BUTTON_DELAY);
+  18:	2028      	movs	r0, #40
+  1a:	f7ff fffe 	bl	0 <vTaskDelay>
+C:\cortex\dimmers\src/main.c:311
+        
+        if ( pLight->type == BUTTON_TYPE ){
+  1e:	7b2c      	ldrb	r4, [r5, #12]
+  20:	b97c      	cbnz	r4, 42 <vButtonToggleTask+0x42>
+C:\cortex\dimmers\src/main.c:312
+            if ( GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == ON ){
+  22:	4818      	ldr	r0, [pc, #96]	(84 <vButtonToggleTask+0x84>)
+  24:	8969      	ldrh	r1, [r5, #10]
+  26:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  2a:	bb18      	cbnz	r0, 74 <vButtonToggleTask+0x74>
+C:\cortex\dimmers\src/main.c:313
+                GPIO_WriteBit(GPIOC, pLight->outputpin, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC,  pLight->outputpin))));
+  2c:	892c      	ldrh	r4, [r5, #8]
+  2e:	4815      	ldr	r0, [pc, #84]	(84 <vButtonToggleTask+0x84>)
+  30:	4621      	mov	r1, r4
+  32:	f7ff fffe 	bl	0 <GPIO_ReadOutputDataBit>
+  36:	f1c0 0201 	rsb	r2, r0, #1	; 0x1
+  3a:	4621      	mov	r1, r4
+  3c:	4811      	ldr	r0, [pc, #68]	(84 <vButtonToggleTask+0x84>)
+  3e:	b2d2      	uxtb	r2, r2
+  40:	e009      	b.n	56 <vButtonToggleTask+0x56>
+C:\cortex\dimmers\src/main.c:316
+            }
+        }
+        else if ( pLight->type == SWITCH_TYPE ){
+  42:	2c01      	cmp	r4, #1
+  44:	d116      	bne.n	74 <vButtonToggleTask+0x74>
+C:\cortex\dimmers\src/main.c:317
+            if ( GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == CLOSED ){
+  46:	480f      	ldr	r0, [pc, #60]	(84 <vButtonToggleTask+0x84>)
+  48:	8969      	ldrh	r1, [r5, #10]
+  4a:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  4e:	b928      	cbnz	r0, 5c <vButtonToggleTask+0x5c>
+C:\cortex\dimmers\src/main.c:318
+                GPIO_WriteBit(GPIOC, pLight->outputpin, (BitAction) 1 );
+  50:	480c      	ldr	r0, [pc, #48]	(84 <vButtonToggleTask+0x84>)
+  52:	8929      	ldrh	r1, [r5, #8]
+  54:	4622      	mov	r2, r4
+  56:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+  5a:	e00b      	b.n	74 <vButtonToggleTask+0x74>
+C:\cortex\dimmers\src/main.c:320
+            }
+            else if ( GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == OPEN ){
+  5c:	4809      	ldr	r0, [pc, #36]	(84 <vButtonToggleTask+0x84>)
+  5e:	8969      	ldrh	r1, [r5, #10]
+  60:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  64:	2801      	cmp	r0, #1
+  66:	d105      	bne.n	74 <vButtonToggleTask+0x74>
+C:\cortex\dimmers\src/main.c:321
+                GPIO_WriteBit(GPIOC, pLight->outputpin, (BitAction) 0 );
+  68:	4806      	ldr	r0, [pc, #24]	(84 <vButtonToggleTask+0x84>)
+  6a:	8929      	ldrh	r1, [r5, #8]
+  6c:	2200      	movs	r2, #0
+  6e:	e7f2      	b.n	56 <vButtonToggleTask+0x56>
+C:\cortex\dimmers\src/main.c:325
+            }
+        }
+        while ( GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == ON )
+            taskYIELD();
+  70:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+C:\cortex\dimmers\src/main.c:324
+            }
+            else if ( GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == OPEN ){
+                GPIO_WriteBit(GPIOC, pLight->outputpin, (BitAction) 0 );
+            }
+        }
+        while ( GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == ON )
+  74:	4803      	ldr	r0, [pc, #12]	(84 <vButtonToggleTask+0x84>)
+  76:	8969      	ldrh	r1, [r5, #10]
+  78:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
+  7c:	2800      	cmp	r0, #0
+  7e:	d1c4      	bne.n	a <GPIO_ReadInputDataBit+0xa>
+  80:	e7f6      	b.n	70 <GPIO_ReadInputDataBit+0x70>
+  82:	46c0      	nop			(mov r8, r8)
+  84:	40011000 	.word	0x40011000
+Disassembly of section .text.vRefreshTask:
+
+00000000 <vRefreshTask>:
+vRefreshTask():
+C:\cortex\dimmers\src/main.c:469
+        
+        vTaskDelay(10);
+    }
+}
+
+void vRefreshTask ( void * params ){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/main.c:476
+    u8 idx;
+    
+
+     while (1){
+    
+        xSemaphoreTake( xRefreshSync , portMAX_DELAY );
+   2:	4b30      	ldr	r3, [pc, #192]	(c4 <vRefreshTask+0xc4>)
+   4:	2100      	movs	r1, #0
+   6:	6818      	ldr	r0, [r3, #0]
+   8:	f04f 32ff 	mov.w	r2, #4294967295	; 0xffffffff
+   c:	460b      	mov	r3, r1
+   e:	f7ff fffe 	bl	0 <xQueueGenericReceive>
+C:\cortex\dimmers\src/main.c:478
+        
+            xSemaphoreTake( xBKPsync , portMAX_DELAY );
+  12:	4b2d      	ldr	r3, [pc, #180]	(c8 <vRefreshTask+0xc8>)
+  14:	2100      	movs	r1, #0
+  16:	6818      	ldr	r0, [r3, #0]
+  18:	f04f 32ff 	mov.w	r2, #4294967295	; 0xffffffff
+  1c:	460b      	mov	r3, r1
+  1e:	f7ff fffe 	bl	0 <xQueueGenericReceive>
+  22:	2000      	movs	r0, #0
+C:\cortex\dimmers\src/main.c:482
+
+            /// ensure correct light values for compare match
+            for (idx=LIGHT1_INDEX ; idx < LIGHT6_INDEX + 1 ; idx++){
+                if ( ! CHECK_LIGHT_VALUE( Lights[idx].value ) ){
+  24:	4b29      	ldr	r3, [pc, #164]	(cc <vRefreshTask+0xcc>)
+  26:	f641 723e 	movw	r2, #7998	; 0x1f3e
+  2a:	5a19      	ldrh	r1, [r3, r0]
+  2c:	181c      	adds	r4, r3, r0
+  2e:	f5a1 737a 	sub.w	r3, r1, #1000	; 0x3e8
+  32:	3b01      	subs	r3, #1
+  34:	b29b      	uxth	r3, r3
+  36:	4293      	cmp	r3, r2
+  38:	d905      	bls.n	46 <vRefreshTask+0x46>
+  3a:	f242 7310 	movw	r3, #10000	; 0x2710
+  3e:	4299      	cmp	r1, r3
+  40:	d001      	beq.n	46 <vRefreshTask+0x46>
+  42:	b101      	cbz	r1, 46 <vRefreshTask+0x46>
+C:\cortex\dimmers\src/main.c:483
+                    Lights[idx].value = LIGHT_OFF;
+  44:	8023      	strh	r3, [r4, #0]
+  46:	301c      	adds	r0, #28
+C:\cortex\dimmers\src/main.c:481
+        xSemaphoreTake( xRefreshSync , portMAX_DELAY );
+        
+            xSemaphoreTake( xBKPsync , portMAX_DELAY );
+
+            /// ensure correct light values for compare match
+            for (idx=LIGHT1_INDEX ; idx < LIGHT6_INDEX + 1 ; idx++){
+  48:	28a8      	cmp	r0, #168
+  4a:	d1eb      	bne.n	24 <vRefreshTask+0x24>
+C:\cortex\dimmers\src/main.c:493
+            ADC_SoftwareStartConvCmd(ADC1, ENABLE);
+        
+            BkpUnlock ();
+        
+            // update values into bkp domain
+            BKP_WriteBackupRegister(POS_VALUE_LIGHT_1, Lights[LIGHT1_INDEX].value);
+  4c:	4c1f      	ldr	r4, [pc, #124]	(cc <vRefreshTask+0xcc>)
+C:\cortex\dimmers\src/main.c:488
+                    Lights[idx].value = LIGHT_OFF;
+                }
+            }
+        
+            // refresh tempSensor value
+            ADC_SoftwareStartConvCmd(ADC1, ENABLE);
+  4e:	2101      	movs	r1, #1
+  50:	481f      	ldr	r0, [pc, #124]	(d0 <vRefreshTask+0xd0>)
+  52:	f7ff fffe 	bl	0 <ADC_SoftwareStartConvCmd>
+C:\cortex\dimmers\src/main.c:490
+        
+            BkpUnlock ();
+  56:	f7ff fffe 	bl	0 <BkpUnlock>
+C:\cortex\dimmers\src/main.c:493
+        
+            // update values into bkp domain
+            BKP_WriteBackupRegister(POS_VALUE_LIGHT_1, Lights[LIGHT1_INDEX].value);
+  5a:	2004      	movs	r0, #4
+  5c:	8821      	ldrh	r1, [r4, #0]
+  5e:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
+C:\cortex\dimmers\src/main.c:494
+            BKP_WriteBackupRegister(POS_VALUE_LIGHT_2, Lights[LIGHT2_INDEX].value);
+  62:	201c      	movs	r0, #28
+  64:	8ba1      	ldrh	r1, [r4, #28]
+  66:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
+C:\cortex\dimmers\src/main.c:495
+            BKP_WriteBackupRegister(POS_VALUE_LIGHT_3, Lights[LIGHT3_INDEX].value);
+  6a:	2048      	movs	r0, #72
+  6c:	8f21      	ldrh	r1, [r4, #56]
+  6e:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
+C:\cortex\dimmers\src/main.c:496
+            BKP_WriteBackupRegister(POS_VALUE_LIGHT_4, Lights[LIGHT4_INDEX].value);
+  72:	2060      	movs	r0, #96
+  74:	f8b4 1054 	ldrh.w	r1, [r4, #84]
+  78:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
+C:\cortex\dimmers\src/main.c:497
+            BKP_WriteBackupRegister(POS_VALUE_LIGHT_5, Lights[LIGHT5_INDEX].value);
+  7c:	2078      	movs	r0, #120
+  7e:	f8b4 1070 	ldrh.w	r1, [r4, #112]
+  82:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
+C:\cortex\dimmers\src/main.c:498
+            BKP_WriteBackupRegister(POS_VALUE_LIGHT_6, Lights[LIGHT6_INDEX].value);
+  86:	2090      	movs	r0, #144
+  88:	f8b4 108c 	ldrh.w	r1, [r4, #140]
+  8c:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
+C:\cortex\dimmers\src/main.c:500
+        
+            BkpFullReadToMemory();
+  90:	f7ff fffe 	bl	0 <BkpFullReadToMemory>
+C:\cortex\dimmers\src/main.c:502
+            
+            BkpLock();
+  94:	f7ff fffe 	bl	0 <BkpLock>
+C:\cortex\dimmers\src/main.c:504
+        
+            xSemaphoreGive ( xBKPsync );
+  98:	4b0b      	ldr	r3, [pc, #44]	(c8 <vRefreshTask+0xc8>)
+  9a:	2100      	movs	r1, #0
+  9c:	460a      	mov	r2, r1
+  9e:	6818      	ldr	r0, [r3, #0]
+  a0:	460b      	mov	r3, r1
+  a2:	f7ff fffe 	bl	0 <xQueueGenericSend>
+C:\cortex\dimmers\src/main.c:506
+        
+            GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
+  a6:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  aa:	480a      	ldr	r0, [pc, #40]	(2c <GPIO_ReadOutputDataBit+0x2c>)
+  ac:	f7ff fffe 	bl	0 <GPIO_ReadOutputDataBit>
+  b0:	f1c0 0201 	rsb	r2, r0, #1	; 0x1
+  b4:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  b8:	4806      	ldr	r0, [pc, #24]	(d4 <vRefreshTask+0xd4>)
+  ba:	b2d2      	uxtb	r2, r2
+  bc:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+  c0:	e79f      	b.n	2 <vRefreshTask+0x2>
+  c2:	46c0      	nop			(mov r8, r8)
+	...
+  d0:	40012400 	.word	0x40012400
+  d4:	40011000 	.word	0x40011000
+Disassembly of section .text.vI2C2ReceiveTask:
+
+00000000 <vI2C2ReceiveTask>:
+vI2C2ReceiveTask():
+C:\cortex\dimmers\src/main.c:454
+            }
+        }
+    }
+}
+
+void vI2C2ReceiveTask ( void * params ){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/main.c:458
+   
+    while (1){
+        
+        if ( I2CRecReady )
+   2:	4a07      	ldr	r2, [pc, #28]	(20 <vI2C2ReceiveTask+0x20>)
+   4:	7813      	ldrb	r3, [r2, #0]
+   6:	b13b      	cbz	r3, 18 <vI2C2ReceiveTask+0x18>
+C:\cortex\dimmers\src/main.c:460
+        {
+            I2CRecReady = FALSE;
+   8:	2300      	movs	r3, #0
+   a:	7013      	strb	r3, [r2, #0]
+C:\cortex\dimmers\src/main.c:461
+            RxIdx = 0;
+   c:	4a05      	ldr	r2, [pc, #20]	(24 <vI2C2ReceiveTask+0x24>)
+   e:	8013      	strh	r3, [r2, #0]
+C:\cortex\dimmers\src/main.c:462
+            vTaskResume ( xSendUpdateTaskHandle );
+  10:	4b05      	ldr	r3, [pc, #20]	(28 <vI2C2ReceiveTask+0x28>)
+  12:	6818      	ldr	r0, [r3, #0]
+  14:	f7ff fffe 	bl	0 <vTaskResume>
+C:\cortex\dimmers\src/main.c:465
+        }
+        
+        vTaskDelay(10);
+  18:	200a      	movs	r0, #10
+  1a:	f7ff fffe 	bl	0 <vTaskDelay>
+  1e:	e7f0      	b.n	ffffffe4 <I2CRecReady+0xffffffe4>
+	...
+Disassembly of section .text.vInitDimmerValues:
+
+00000000 <vInitDimmerValues>:
+vInitDimmerValues():
+C:\cortex\dimmers\src/main.c:330
+            taskYIELD();
+    }
+}
+
+void vInitDimmerValues ( void * params )
+{
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/main.c:333
+    pTLightProperties pLight = (pTLightProperties)params;
+
+    if ( pLight->value == LIGHT_ON ){
+   4:	8800      	ldrh	r0, [r0, #0]
+   6:	b9b0      	cbnz	r0, 36 <vInitDimmerValues+0x36>
+C:\cortex\dimmers\src/main.c:334
+        pLight->comparestate(DISABLE);
+   8:	69a3      	ldr	r3, [r4, #24]
+   a:	4798      	blx	r3
+   c:	e001      	b.n	12 <vInitDimmerValues+0x12>
+C:\cortex\dimmers\src/main.c:335
+        WAIT_ZERO_CROSS;
+   e:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+  12:	4b1e      	ldr	r3, [pc, #120]	(8c <vInitDimmerValues+0x8c>)
+  14:	f9b3 1000 	ldrsh.w	r1, [r3]
+  18:	4b1d      	ldr	r3, [pc, #116]	(90 <vInitDimmerValues+0x90>)
+  1a:	f9b3 2000 	ldrsh.w	r2, [r3]
+  1e:	f102 0308 	add.w	r3, r2, #8	; 0x8
+  22:	4299      	cmp	r1, r3
+  24:	dcf3      	bgt.n	e <vInitDimmerValues+0xe>
+  26:	f1a2 0308 	sub.w	r3, r2, #8	; 0x8
+  2a:	4299      	cmp	r1, r3
+  2c:	dbef      	blt.n	e <vInitDimmerValues+0xe>
+C:\cortex\dimmers\src/main.c:336
+        GPIO_WriteBit(GPIOC, pLight->outputpin, (BitAction) 1 );
+  2e:	4819      	ldr	r0, [pc, #100]	(94 <vInitDimmerValues+0x94>)
+  30:	8921      	ldrh	r1, [r4, #8]
+  32:	2201      	movs	r2, #1
+  34:	e01a      	b.n	6c <vInitDimmerValues+0x6c>
+C:\cortex\dimmers\src/main.c:338
+    }
+    else if ( pLight->value == LIGHT_OFF ){
+  36:	f242 7310 	movw	r3, #10000	; 0x2710
+  3a:	4298      	cmp	r0, r3
+  3c:	d119      	bne.n	72 <vInitDimmerValues+0x72>
+C:\cortex\dimmers\src/main.c:339
+        pLight->comparestate(DISABLE);
+  3e:	69a3      	ldr	r3, [r4, #24]
+  40:	2000      	movs	r0, #0
+  42:	4798      	blx	r3
+  44:	e001      	b.n	4a <vInitDimmerValues+0x4a>
+C:\cortex\dimmers\src/main.c:340
+        WAIT_ZERO_CROSS;
+  46:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+  4a:	4b10      	ldr	r3, [pc, #64]	(8c <vInitDimmerValues+0x8c>)
+  4c:	f9b3 1000 	ldrsh.w	r1, [r3]
+  50:	4b0f      	ldr	r3, [pc, #60]	(90 <vInitDimmerValues+0x90>)
+  52:	f9b3 2000 	ldrsh.w	r2, [r3]
+  56:	f102 0308 	add.w	r3, r2, #8	; 0x8
+  5a:	4299      	cmp	r1, r3
+  5c:	dcf3      	bgt.n	46 <vInitDimmerValues+0x46>
+  5e:	f1a2 0308 	sub.w	r3, r2, #8	; 0x8
+  62:	4299      	cmp	r1, r3
+  64:	dbef      	blt.n	46 <vInitDimmerValues+0x46>
+C:\cortex\dimmers\src/main.c:341
+        GPIO_WriteBit(GPIOC, pLight->outputpin, (BitAction) 0 );
+  66:	480b      	ldr	r0, [pc, #44]	(94 <vInitDimmerValues+0x94>)
+  68:	8921      	ldrh	r1, [r4, #8]
+  6a:	2200      	movs	r2, #0
+  6c:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+  70:	e008      	b.n	84 <vInitDimmerValues+0x84>
+C:\cortex\dimmers\src/main.c:343
+    }
+    else if ( ( pLight->value <= pLight->min ) && ( pLight->value >= pLight->max ) ){
+  72:	8863      	ldrh	r3, [r4, #2]
+  74:	4283      	cmp	r3, r0
+  76:	d305      	bcc.n	84 <vInitDimmerValues+0x84>
+  78:	88a3      	ldrh	r3, [r4, #4]
+  7a:	4283      	cmp	r3, r0
+  7c:	d802      	bhi.n	84 <vInitDimmerValues+0x84>
+C:\cortex\dimmers\src/main.c:344
+        pLight->comparestate(ENABLE);
+  7e:	69a3      	ldr	r3, [r4, #24]
+  80:	2001      	movs	r0, #1
+  82:	4798      	blx	r3
+C:\cortex\dimmers\src/main.c:347
+    }    
+
+    vTaskDelete(NULL);
+  84:	2000      	movs	r0, #0
+  86:	f7ff fffe 	bl	0 <vTaskDelete>
+C:\cortex\dimmers\src/main.c:348
+}
+  8a:	bd10      	pop	{r4, pc}
+	...
+  94:	40011000 	.word	0x40011000
+Disassembly of section .text.vTaskInitSystem:
+
+00000000 <vTaskInitSystem>:
+vTaskInitSystem():
+C:\cortex\dimmers\src/main.c:147
+    BkpWriteLightPropertiesToMemory ( PIN_BUTTON_6 , &Lights[LIGHT6_INDEX] ); 
+    BkpWriteGeneralToMemory();    
+
+}
+
+void vTaskInitSystem ( void * params ){
+   0:	b573      	push	{r0, r1, r4, r5, r6, lr}
+C:\cortex\dimmers\src/main.c:151
+
+    u8  idx;
+
+    ComparesToArrayOfFunctions ();
+   2:	f7ff fffe 	bl	0 <ComparesToArrayOfFunctions>
+C:\cortex\dimmers\src/main.c:152
+    CompareStatesToArrayOfFunctions();
+   6:	f7ff fffe 	bl	0 <CompareStatesToArrayOfFunctions>
+   a:	4e99      	ldr	r6, [pc, #612]	(270 <vTaskInitSystem+0x270>)
+   c:	2400      	movs	r4, #0
+   e:	4635      	mov	r5, r6
+C:\cortex\dimmers\src/main.c:155
+
+    for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++){
+        vSemaphoreCreateBinary ( xSemaphoreButtonArrayHandle[idx] );
+  10:	2001      	movs	r0, #1
+  12:	2100      	movs	r1, #0
+  14:	f7ff fffe 	bl	0 <xQueueCreate>
+  18:	4b96      	ldr	r3, [pc, #600]	(274 <vTaskInitSystem+0x274>)
+  1a:	5118      	str	r0, [r3, r4]
+  1c:	b120      	cbz	r0, 28 <vTaskInitSystem+0x28>
+  1e:	2100      	movs	r1, #0
+  20:	460a      	mov	r2, r1
+  22:	460b      	mov	r3, r1
+  24:	f7ff fffe 	bl	0 <xQueueGenericSend>
+C:\cortex\dimmers\src/main.c:156
+        Lights[idx].compare = Compares[idx];
+  28:	4b93      	ldr	r3, [pc, #588]	(278 <vTaskInitSystem+0x278>)
+  2a:	591b      	ldr	r3, [r3, r4]
+  2c:	616b      	str	r3, [r5, #20]
+C:\cortex\dimmers\src/main.c:157
+        Lights[idx].comparestate = CompareStates[idx];
+  2e:	4b93      	ldr	r3, [pc, #588]	(27c <vTaskInitSystem+0x27c>)
+  30:	591b      	ldr	r3, [r3, r4]
+  32:	61ab      	str	r3, [r5, #24]
+C:\cortex\dimmers\src/main.c:158
+        Lights[idx].sync = xSemaphoreButtonArrayHandle[idx];
+  34:	4b8f      	ldr	r3, [pc, #572]	(274 <vTaskInitSystem+0x274>)
+  36:	591b      	ldr	r3, [r3, r4]
+  38:	3404      	adds	r4, #4
+  3a:	612b      	str	r3, [r5, #16]
+  3c:	351c      	adds	r5, #28
+C:\cortex\dimmers\src/main.c:154
+    u8  idx;
+
+    ComparesToArrayOfFunctions ();
+    CompareStatesToArrayOfFunctions();
+
+    for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++){
+  3e:	2c18      	cmp	r4, #24
+  40:	d1e6      	bne.n	10 <vTaskInitSystem+0x10>
+C:\cortex\dimmers\src/main.c:161
+        Lights[idx].compare = Compares[idx];
+        Lights[idx].comparestate = CompareStates[idx];
+        Lights[idx].sync = xSemaphoreButtonArrayHandle[idx];
+    }
+
+    vSemaphoreCreateBinary ( xRefreshSync );
+  42:	2001      	movs	r0, #1
+  44:	2100      	movs	r1, #0
+  46:	f7ff fffe 	bl	0 <xQueueCreate>
+  4a:	4b8d      	ldr	r3, [pc, #564]	(280 <vTaskInitSystem+0x280>)
+  4c:	6018      	str	r0, [r3, #0]
+  4e:	b120      	cbz	r0, 5a <vTaskInitSystem+0x5a>
+  50:	2100      	movs	r1, #0
+  52:	460a      	mov	r2, r1
+  54:	460b      	mov	r3, r1
+  56:	f7ff fffe 	bl	0 <xQueueGenericSend>
+C:\cortex\dimmers\src/main.c:162
+    xBKPsync = xSemaphoreCreateMutex();
+  5a:	f7ff fffe 	bl	0 <xQueueCreateMutex>
+  5e:	4b89      	ldr	r3, [pc, #548]	(284 <vTaskInitSystem+0x284>)
+UtilWriteBackupDomainToMemory():
+C:\cortex\dimmers\src/main.c:137
+    
+}
+
+static void UtilWriteBackupDomainToMemory ( void ){
+
+    BkpWriteLightPropertiesToMemory ( PIN_BUTTON_1 , &Lights[LIGHT1_INDEX] ); 
+  60:	4c83      	ldr	r4, [pc, #524]	(270 <vTaskInitSystem+0x270>)
+vTaskInitSystem():
+C:\cortex\dimmers\src/main.c:162
+        Lights[idx].comparestate = CompareStates[idx];
+        Lights[idx].sync = xSemaphoreButtonArrayHandle[idx];
+    }
+
+    vSemaphoreCreateBinary ( xRefreshSync );
+    xBKPsync = xSemaphoreCreateMutex();
+  62:	6018      	str	r0, [r3, #0]
+C:\cortex\dimmers\src/main.c:164
+
+    RccInit();
+  64:	f7ff fffe 	bl	0 <RccInit>
+C:\cortex\dimmers\src/main.c:165
+    GpioClockSet();
+  68:	f7ff fffe 	bl	0 <GpioClockSet>
+C:\cortex\dimmers\src/main.c:166
+    GpioInit();
+  6c:	f7ff fffe 	bl	0 <GpioInit>
+C:\cortex\dimmers\src/main.c:167
+    NvicInit();
+  70:	f7ff fffe 	bl	0 <NvicInit>
+C:\cortex\dimmers\src/main.c:168
+    ExtiInit();
+  74:	f7ff fffe 	bl	0 <ExtiInit>
+C:\cortex\dimmers\src/main.c:169
+    BkpInit();
+  78:	f7ff fffe 	bl	0 <BkpInit>
+C:\cortex\dimmers\src/main.c:170
+    I2CInit();
+  7c:	f7ff fffe 	bl	0 <I2CInit>
+C:\cortex\dimmers\src/main.c:171
+    AdcDmaInit( &TempSensor , &ZeroCross );
+  80:	4981      	ldr	r1, [pc, #516]	(288 <vTaskInitSystem+0x288>)
+  82:	4882      	ldr	r0, [pc, #520]	(28c <vTaskInitSystem+0x28c>)
+  84:	f7ff fffe 	bl	0 <AdcDmaInit>
+C:\cortex\dimmers\src/main.c:172
+    AdcInit();
+  88:	f7ff fffe 	bl	0 <AdcInit>
+C:\cortex\dimmers\src/main.c:173
+    AdcEnable(ENABLE);
+  8c:	2001      	movs	r0, #1
+  8e:	f7ff fffe 	bl	0 <AdcEnable>
+C:\cortex\dimmers\src/main.c:174
+    AdcCalibration();
+  92:	f7ff fffe 	bl	0 <AdcCalibration>
+C:\cortex\dimmers\src/main.c:175
+    RtcInit ();
+  96:	f7ff fffe 	bl	0 <RtcInit>
+C:\cortex\dimmers\src/main.c:177
+
+    PWR_PVDLevelConfig (PWR_PVDLevel_2V9);
+  9a:	20e0      	movs	r0, #224
+  9c:	f7ff fffe 	bl	0 <PWR_PVDLevelConfig>
+C:\cortex\dimmers\src/main.c:178
+    PWR_PVDCmd(ENABLE);
+  a0:	2001      	movs	r0, #1
+  a2:	f7ff fffe 	bl	0 <PWR_PVDCmd>
+C:\cortex\dimmers\src/main.c:180
+
+    BkpSetFactoryDefaultsToLights();
+  a6:	f7ff fffe 	bl	0 <BkpSetFactoryDefaultsToLights>
+C:\cortex\dimmers\src/main.c:181
+    BkpFullReadToMemory();
+  aa:	f7ff fffe 	bl	0 <BkpFullReadToMemory>
+C:\cortex\dimmers\src/main.c:182
+    BkpCopyIntExtMemory();
+  ae:	f7ff fffe 	bl	0 <BkpCopyIntExtMemory>
+UtilWriteBackupDomainToMemory():
+C:\cortex\dimmers\src/main.c:137
+    
+}
+
+static void UtilWriteBackupDomainToMemory ( void ){
+
+    BkpWriteLightPropertiesToMemory ( PIN_BUTTON_1 , &Lights[LIGHT1_INDEX] ); 
+  b2:	2040      	movs	r0, #64
+  b4:	4621      	mov	r1, r4
+  b6:	f7ff fffe 	bl	0 <BkpWriteLightPropertiesToMemory>
+C:\cortex\dimmers\src/main.c:138
+    BkpWriteLightPropertiesToMemory ( PIN_BUTTON_2 , &Lights[LIGHT2_INDEX] );
+  ba:	2080      	movs	r0, #128
+  bc:	f104 011c 	add.w	r1, r4, #28	; 0x1c
+  c0:	f7ff fffe 	bl	0 <BkpWriteLightPropertiesToMemory>
+C:\cortex\dimmers\src/main.c:139
+    BkpWriteLightPropertiesToMemory ( PIN_BUTTON_3 , &Lights[LIGHT3_INDEX] ); 
+  c4:	f104 0138 	add.w	r1, r4, #56	; 0x38
+  c8:	f44f 7080 	mov.w	r0, #256	; 0x100
+  cc:	f7ff fffe 	bl	0 <BkpWriteLightPropertiesToMemory>
+C:\cortex\dimmers\src/main.c:140
+    BkpWriteLightPropertiesToMemory ( PIN_BUTTON_4 , &Lights[LIGHT4_INDEX] ); 
+  d0:	f104 0154 	add.w	r1, r4, #84	; 0x54
+  d4:	f44f 7000 	mov.w	r0, #512	; 0x200
+  d8:	f7ff fffe 	bl	0 <BkpWriteLightPropertiesToMemory>
+C:\cortex\dimmers\src/main.c:141
+    BkpWriteLightPropertiesToMemory ( PIN_BUTTON_5 , &Lights[LIGHT5_INDEX] ); 
+  dc:	f104 0170 	add.w	r1, r4, #112	; 0x70
+  e0:	f44f 6080 	mov.w	r0, #1024	; 0x400
+  e4:	f7ff fffe 	bl	0 <BkpWriteLightPropertiesToMemory>
+C:\cortex\dimmers\src/main.c:142
+    BkpWriteLightPropertiesToMemory ( PIN_BUTTON_6 , &Lights[LIGHT6_INDEX] ); 
+  e8:	f104 018c 	add.w	r1, r4, #140	; 0x8c
+  ec:	f44f 6000 	mov.w	r0, #2048	; 0x800
+  f0:	f7ff fffe 	bl	0 <BkpWriteLightPropertiesToMemory>
+C:\cortex\dimmers\src/main.c:143
+    BkpWriteGeneralToMemory();    
+  f4:	f7ff fffe 	bl	0 <BkpWriteGeneralToMemory>
+vTaskInitSystem():
+C:\cortex\dimmers\src/main.c:186
+    BkpFullReadToMemory();
+    BkpCopyIntExtMemory();
+
+    UtilWriteBackupDomainToMemory();
+
+    TimSetClockTimer1();
+  f8:	f7ff fffe 	bl	0 <TimSetClockTimer1>
+C:\cortex\dimmers\src/main.c:187
+    TimSetClockTimer2();
+  fc:	f7ff fffe 	bl	0 <TimSetClockTimer2>
+C:\cortex\dimmers\src/main.c:188
+    TimSetClockTimer3();
+ 100:	f7ff fffe 	bl	0 <TimSetClockTimer3>
+C:\cortex\dimmers\src/main.c:189
+    TimSetClockTimer4();
+ 104:	f7ff fffe 	bl	0 <TimSetClockTimer4>
+C:\cortex\dimmers\src/main.c:191
+
+    TimSetConfigTimer1(TIM_PERIODE_25_MICRO);
+ 108:	2018      	movs	r0, #24
+ 10a:	f7ff fffe 	bl	0 <TimSetConfigTimer1>
+C:\cortex\dimmers\src/main.c:192
+    TimSetConfigTimer2(TIM_PERIODE_10_MILLI);
+ 10e:	f242 700f 	movw	r0, #9999	; 0x270f
+ 112:	f7ff fffe 	bl	0 <TimSetConfigTimer2>
+C:\cortex\dimmers\src/main.c:193
+    TimSetConfigTimer3(TIM_PERIODE_10_MILLI);
+ 116:	f242 700f 	movw	r0, #9999	; 0x270f
+ 11a:	f7ff fffe 	bl	0 <TimSetConfigTimer3>
+C:\cortex\dimmers\src/main.c:194
+    TimSetConfigTimer4(TIM_PERIODE_10_MILLI);
+ 11e:	f242 700f 	movw	r0, #9999	; 0x270f
+ 122:	f7ff fffe 	bl	0 <TimSetConfigTimer4>
+C:\cortex\dimmers\src/main.c:196
+    
+    TimSetInitCompareSetHold1( Lights[LIGHT1_INDEX].value );
+ 126:	8820      	ldrh	r0, [r4, #0]
+ 128:	f7ff fffe 	bl	0 <TimSetInitCompareSetHold1>
+C:\cortex\dimmers\src/main.c:197
+    TimSetInitCompareSetHold2( Lights[LIGHT2_INDEX].value );
+ 12c:	8ba0      	ldrh	r0, [r4, #28]
+ 12e:	f7ff fffe 	bl	0 <TimSetInitCompareSetHold2>
+C:\cortex\dimmers\src/main.c:198
+    TimSetInitCompareSetHold3( Lights[LIGHT3_INDEX].value );
+ 132:	8f20      	ldrh	r0, [r4, #56]
+ 134:	f7ff fffe 	bl	0 <TimSetInitCompareSetHold3>
+C:\cortex\dimmers\src/main.c:199
+    TimSetInitCompareSetHold4( Lights[LIGHT4_INDEX].value );
+ 138:	f8b4 0054 	ldrh.w	r0, [r4, #84]
+ 13c:	f7ff fffe 	bl	0 <TimSetInitCompareSetHold4>
+C:\cortex\dimmers\src/main.c:200
+    TimSetInitCompareSetHold5( Lights[LIGHT5_INDEX].value );
+ 140:	f8b4 0070 	ldrh.w	r0, [r4, #112]
+ 144:	f7ff fffe 	bl	0 <TimSetInitCompareSetHold5>
+C:\cortex\dimmers\src/main.c:201
+    TimSetInitCompareSetHold6( Lights[LIGHT6_INDEX].value );
+ 148:	f8b4 008c 	ldrh.w	r0, [r4, #140]
+ 14c:	f7ff fffe 	bl	0 <TimSetInitCompareSetHold6>
+C:\cortex\dimmers\src/main.c:204
+    
+    //TimSetInterruptAllEnabled();
+    TIM_ITConfig(TIM1, TIM_IT_Update , ENABLE);
+ 150:	2101      	movs	r1, #1
+ 152:	484f      	ldr	r0, [pc, #316]	(290 <vTaskInitSystem+0x290>)
+ 154:	460a      	mov	r2, r1
+ 156:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/main.c:205
+    TimStartAll();
+ 15a:	f7ff fffe 	bl	0 <TimStartAll>
+ 15e:	e001      	b.n	6 <vPortYieldFromISR+0x6>
+C:\cortex\dimmers\src/main.c:207
+   
+    while ( counterMinMax < SAMPLES_MIN_MAX/2 ) taskYIELD() ;
+ 160:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+ 164:	4b4b      	ldr	r3, [pc, #300]	(294 <vTaskInitSystem+0x294>)
+ 166:	881a      	ldrh	r2, [r3, #0]
+ 168:	f644 631f 	movw	r3, #19999	; 0x4e1f
+ 16c:	429a      	cmp	r2, r3
+ 16e:	d9f7      	bls.n	160 <vTaskInitSystem+0x160>
+C:\cortex\dimmers\src/main.c:210
+    
+    
+    if (( GpioGetDipState(FACTORY_DEFAULT_SWITCH) == ON ) ||
+ 170:	f44f 5080 	mov.w	r0, #4096	; 0x1000
+ 174:	f7ff fffe 	bl	0 <GpioGetDipState>
+ 178:	b148      	cbz	r0, 18e <vTaskInitSystem+0x18e>
+ 17a:	4b47      	ldr	r3, [pc, #284]	(298 <vTaskInitSystem+0x298>)
+ 17c:	f9b3 3000 	ldrsh.w	r3, [r3]
+ 180:	f5b3 6f00 	cmp.w	r3, #2048	; 0x800
+ 184:	db03      	blt.n	18e <vTaskInitSystem+0x18e>
+ 186:	4b45      	ldr	r3, [pc, #276]	(29c <vTaskInitSystem+0x29c>)
+ 188:	781b      	ldrb	r3, [r3, #0]
+ 18a:	2b01      	cmp	r3, #1
+ 18c:	d113      	bne.n	1b6 <vTaskInitSystem+0x1b6>
+ 18e:	2400      	movs	r4, #0
+C:\cortex\dimmers\src/main.c:216
+        ( theZero < MIN_ADC_LEVEL ) ||
+        ( IsWatchdog == TRUE ) )
+    {
+    
+        for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++){
+            if ( xSemaphoreButtonArrayHandle[idx] != NULL ){
+ 190:	4b38      	ldr	r3, [pc, #224]	(274 <vTaskInitSystem+0x274>)
+ 192:	591b      	ldr	r3, [r3, r4]
+ 194:	b153      	cbz	r3, 1ac <vTaskInitSystem+0x1ac>
+C:\cortex\dimmers\src/main.c:217
+                xTaskCreate
+ 196:	2302      	movs	r3, #2
+ 198:	9300      	str	r3, [sp, #0]
+ 19a:	4b41      	ldr	r3, [pc, #260]	(2a0 <vTaskInitSystem+0x2a0>)
+ 19c:	4841      	ldr	r0, [pc, #260]	(2a4 <vTaskInitSystem+0x2a4>)
+ 19e:	191b      	adds	r3, r3, r4
+ 1a0:	9301      	str	r3, [sp, #4]
+ 1a2:	4941      	ldr	r1, [pc, #260]	(2a8 <vTaskInitSystem+0x2a8>)
+ 1a4:	2280      	movs	r2, #128
+ 1a6:	4633      	mov	r3, r6
+ 1a8:	f7ff fffe 	bl	0 <xTaskCreate>
+ 1ac:	3404      	adds	r4, #4
+ 1ae:	361c      	adds	r6, #28
+C:\cortex\dimmers\src/main.c:215
+    if (( GpioGetDipState(FACTORY_DEFAULT_SWITCH) == ON ) ||
+        ( theZero < MIN_ADC_LEVEL ) ||
+        ( IsWatchdog == TRUE ) )
+    {
+    
+        for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++){
+ 1b0:	2c18      	cmp	r4, #24
+ 1b2:	d1ed      	bne.n	190 <vTaskInitSystem+0x190>
+ 1b4:	e03f      	b.n	236 <vTaskInitSystem+0x236>
+ 1b6:	2400      	movs	r4, #0
+C:\cortex\dimmers\src/main.c:231
+        }
+    }
+    else{
+    
+        for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++){
+            if ( xSemaphoreButtonArrayHandle[idx] != NULL ){
+ 1b8:	4b2e      	ldr	r3, [pc, #184]	(274 <vTaskInitSystem+0x274>)
+ 1ba:	591b      	ldr	r3, [r3, r4]
+ 1bc:	b1a3      	cbz	r3, 1e8 <vTaskInitSystem+0x1e8>
+C:\cortex\dimmers\src/main.c:232
+                xTaskCreate
+ 1be:	2303      	movs	r3, #3
+ 1c0:	9300      	str	r3, [sp, #0]
+ 1c2:	2300      	movs	r3, #0
+ 1c4:	9301      	str	r3, [sp, #4]
+ 1c6:	4939      	ldr	r1, [pc, #228]	(2ac <vTaskInitSystem+0x2ac>)
+ 1c8:	2280      	movs	r2, #128
+ 1ca:	4633      	mov	r3, r6
+ 1cc:	4838      	ldr	r0, [pc, #224]	(2b0 <vTaskInitSystem+0x2b0>)
+ 1ce:	f7ff fffe 	bl	0 <xTaskCreate>
+C:\cortex\dimmers\src/main.c:240
+                    ( signed portCHAR * ) "InitDimmerValues",
+                    configMINIMAL_STACK_SIZE, &Lights[idx],
+                    BUTTON_TASK_PRIORITY + 1,
+                    NULL
+                );            
+                xTaskCreate
+ 1d2:	2302      	movs	r3, #2
+ 1d4:	9300      	str	r3, [sp, #0]
+ 1d6:	4b32      	ldr	r3, [pc, #200]	(2a0 <vTaskInitSystem+0x2a0>)
+ 1d8:	4836      	ldr	r0, [pc, #216]	(2b4 <vTaskInitSystem+0x2b4>)
+ 1da:	191b      	adds	r3, r3, r4
+ 1dc:	9301      	str	r3, [sp, #4]
+ 1de:	4936      	ldr	r1, [pc, #216]	(2b8 <vTaskInitSystem+0x2b8>)
+ 1e0:	2280      	movs	r2, #128
+ 1e2:	4633      	mov	r3, r6
+ 1e4:	f7ff fffe 	bl	0 <xTaskCreate>
+ 1e8:	3404      	adds	r4, #4
+ 1ea:	361c      	adds	r6, #28
+C:\cortex\dimmers\src/main.c:230
+            }
+        }
+    }
+    else{
+    
+        for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++){
+ 1ec:	2c18      	cmp	r4, #24
+ 1ee:	d1e3      	bne.n	1b8 <vTaskInitSystem+0x1b8>
+C:\cortex\dimmers\src/main.c:251
+                    &xButtonTaskHandle[idx]
+                );
+            }
+        }
+    
+        xTaskCreate
+ 1f0:	4b32      	ldr	r3, [pc, #200]	(2bc <vTaskInitSystem+0x2bc>)
+ 1f2:	2401      	movs	r4, #1
+ 1f4:	9301      	str	r3, [sp, #4]
+ 1f6:	4832      	ldr	r0, [pc, #200]	(2c0 <vTaskInitSystem+0x2c0>)
+ 1f8:	2300      	movs	r3, #0
+ 1fa:	4932      	ldr	r1, [pc, #200]	(2c4 <vTaskInitSystem+0x2c4>)
+ 1fc:	2280      	movs	r2, #128
+ 1fe:	9400      	str	r4, [sp, #0]
+ 200:	f7ff fffe 	bl	0 <xTaskCreate>
+C:\cortex\dimmers\src/main.c:261
+            NULL,
+            I2C_RECV_TASK_PRIORITY,
+            &xI2C2ReceiveTaskHandle
+        );
+    
+        if (xRefreshSync != NULL ){
+ 204:	4b1e      	ldr	r3, [pc, #120]	(280 <vTaskInitSystem+0x280>)
+ 206:	681b      	ldr	r3, [r3, #0]
+ 208:	b143      	cbz	r3, 21c <vTaskInitSystem+0x21c>
+C:\cortex\dimmers\src/main.c:262
+            xTaskCreate
+ 20a:	4b2f      	ldr	r3, [pc, #188]	(2c8 <vTaskInitSystem+0x2c8>)
+ 20c:	482f      	ldr	r0, [pc, #188]	(2cc <vTaskInitSystem+0x2cc>)
+ 20e:	9301      	str	r3, [sp, #4]
+ 210:	492f      	ldr	r1, [pc, #188]	(2d0 <vTaskInitSystem+0x2d0>)
+ 212:	2280      	movs	r2, #128
+ 214:	2300      	movs	r3, #0
+ 216:	9400      	str	r4, [sp, #0]
+ 218:	f7ff fffe 	bl	0 <xTaskCreate>
+C:\cortex\dimmers\src/main.c:273
+                1,
+                &xRefreshTaskHandle
+            );
+        };
+        
+        if ( xBKPsync != NULL ){
+ 21c:	4b19      	ldr	r3, [pc, #100]	(284 <vTaskInitSystem+0x284>)
+ 21e:	681b      	ldr	r3, [r3, #0]
+ 220:	b14b      	cbz	r3, 236 <vTaskInitSystem+0x236>
+C:\cortex\dimmers\src/main.c:274
+            xTaskCreate
+ 222:	2301      	movs	r3, #1
+ 224:	9300      	str	r3, [sp, #0]
+ 226:	4b2b      	ldr	r3, [pc, #172]	(2d4 <vTaskInitSystem+0x2d4>)
+ 228:	482b      	ldr	r0, [pc, #172]	(2d8 <vTaskInitSystem+0x2d8>)
+ 22a:	9301      	str	r3, [sp, #4]
+ 22c:	492b      	ldr	r1, [pc, #172]	(2dc <vTaskInitSystem+0x2dc>)
+ 22e:	2280      	movs	r2, #128
+ 230:	2300      	movs	r3, #0
+ 232:	f7ff fffe 	bl	0 <xTaskCreate>
+UtilCountWatchDogAndReset():
+C:\cortex\dimmers\src/main.c:60
+                               ( Xi[0] < ( theZero - ADC_LEVEL_DIF )) )  taskYIELD() ; 
+
+
+static void UtilCountWatchDogAndReset ( void) {
+
+    if ( IsWatchdog == TRUE ){
+ 236:	4d19      	ldr	r5, [pc, #100]	(29c <vTaskInitSystem+0x29c>)
+ 238:	782c      	ldrb	r4, [r5, #0]
+ 23a:	2c01      	cmp	r4, #1
+ 23c:	d111      	bne.n	262 <vTaskInitSystem+0x262>
+C:\cortex\dimmers\src/main.c:61
+        CountWatchdog = BKP_ReadBackupRegister( POS_VALUE_COUNT_WATCHDOG );
+ 23e:	20ac      	movs	r0, #172
+ 240:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
+C:\cortex\dimmers\src/main.c:62
+        CountWatchdog++;
+ 244:	4b26      	ldr	r3, [pc, #152]	(2e0 <vTaskInitSystem+0x2e0>)
+ 246:	1c41      	adds	r1, r0, #1
+ 248:	b289      	uxth	r1, r1
+ 24a:	8019      	strh	r1, [r3, #0]
+C:\cortex\dimmers\src/main.c:63
+        BKP_WriteBackupRegister( POS_VALUE_COUNT_WATCHDOG, CountWatchdog );    
+ 24c:	20ac      	movs	r0, #172
+ 24e:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
+C:\cortex\dimmers\src/main.c:64
+        IsWatchdog = FALSE;
+ 252:	2300      	movs	r3, #0
+ 254:	702b      	strb	r3, [r5, #0]
+C:\cortex\dimmers\src/main.c:65
+        GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)1);
+ 256:	4823      	ldr	r0, [pc, #140]	(2e4 <vTaskInitSystem+0x2e4>)
+ 258:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+ 25c:	4622      	mov	r2, r4
+ 25e:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+vTaskInitSystem():
+C:\cortex\dimmers\src/main.c:287
+            );
+        }
+    }
+
+    UtilCountWatchDogAndReset ();
+    BkpLock();
+ 262:	f7ff fffe 	bl	0 <BkpLock>
+C:\cortex\dimmers\src/main.c:288
+    vTaskDelete(NULL);
+ 266:	2000      	movs	r0, #0
+ 268:	f7ff fffe 	bl	0 <vTaskDelete>
+C:\cortex\dimmers\src/main.c:289
+}
+ 26c:	bd7c      	pop	{r2, r3, r4, r5, r6, pc}
+ 26e:	46c0      	nop			(mov r8, r8)
+	...
+ 290:	40012c00 	.word	0x40012c00
+	...
+ 2ac:	00000011 	.word	0x00000011
+	...
+ 2b8:	00000022 	.word	0x00000022
+	...
+ 2c4:	00000033 	.word	0x00000033
+	...
+ 2d0:	00000043 	.word	0x00000043
+	...
+ 2dc:	0000004f 	.word	0x0000004f
+ 2e0:	00000000 	.word	0x00000000
+ 2e4:	40011000 	.word	0x40011000
+Disassembly of section .text.main:
+
+00000000 <main>:
+main():
+C:\cortex\dimmers\src/main.c:71
+        
+    }
+}
+
+int main(void)
+{
+   0:	b507      	push	{r0, r1, r2, lr}
+C:\cortex\dimmers\src/main.c:78
+#ifdef DEBUG
+  debug();
+#endif
+
+    
+    xTaskCreate
+   2:	2301      	movs	r3, #1
+   4:	4906      	ldr	r1, [pc, #24]	(20 <main+0x20>)
+   6:	2280      	movs	r2, #128
+   8:	9300      	str	r3, [sp, #0]
+   a:	4806      	ldr	r0, [pc, #24]	(24 <main+0x24>)
+   c:	3b01      	subs	r3, #1
+   e:	9301      	str	r3, [sp, #4]
+  10:	f7ff fffe 	bl	0 <xTaskCreate>
+C:\cortex\dimmers\src/main.c:89
+        STARTUP_TASK_PRIORITY,
+        NULL
+    );
+
+#ifdef WATCHDOG_ENABLED
+    WdgSet();
+  14:	f7ff fffe 	bl	0 <WdgSet>
+C:\cortex\dimmers\src/main.c:92
+#endif
+
+    vTaskStartScheduler();
+  18:	f7ff fffe 	bl	0 <vTaskStartScheduler>
+  1c:	e7fe      	b.n	1c <main+0x1c>
+  1e:	46c0      	nop			(mov r8, r8)
+  20:	0000005e 	.word	0x0000005e
+  24:	00000000 	.word	0x00000000
