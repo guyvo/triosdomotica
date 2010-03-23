@@ -2435,7 +2435,7 @@ END GROUP
  .debug_pubnames
                 0x000018b8      0x360 C:\cortex\dimmers\hex\stm32f10x_nvic.o
 
-.debug_info     0x00000000     0x6da8
+.debug_info     0x00000000     0x6da9
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x414 C:\cortex\dimmers\hex\dimmers_adc.o
  .debug_info    0x00000414      0x1f6 C:\cortex\dimmers\hex\dimmers_exti.o
@@ -2447,19 +2447,19 @@ END GROUP
  .debug_info    0x00001704       0x5d C:\cortex\dimmers\hex\fir_stm32.o
  .debug_info    0x00001761      0xaf4 C:\cortex\dimmers\hex\main.o
  .debug_info    0x00002255       0x5c C:\cortex\dimmers\hex\memshift.o
- .debug_info    0x000022b1      0xf35 C:\cortex\dimmers\hex\stm32f10x_it.o
- .debug_info    0x000031e6      0x141 C:\cortex\dimmers\hex\stm32f10x_vector.o
- .debug_info    0x00003327      0x367 C:\cortex\dimmers\hex\dimmers_i2c.o
- .debug_info    0x0000368e      0x6d9 C:\cortex\dimmers\hex\dimmers_bkp.o
- .debug_info    0x00003d67       0x92 C:\cortex\dimmers\hex\dimmers_rtc.o
- .debug_info    0x00003df9      0x64a C:\cortex\dimmers\hex\dimmers_storage.o
- .debug_info    0x00004443      0x4ed C:\cortex\dimmers\hex\croutine.o
- .debug_info    0x00004930      0x26f C:\cortex\dimmers\hex\heap_2.o
- .debug_info    0x00004b9f      0x29c C:\cortex\dimmers\hex\list.o
- .debug_info    0x00004e3b      0x1d6 C:\cortex\dimmers\hex\port.o
- .debug_info    0x00005011      0x786 C:\cortex\dimmers\hex\queue.o
- .debug_info    0x00005797      0xd2c C:\cortex\dimmers\hex\tasks.o
- .debug_info    0x000064c3      0x8e5 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .debug_info    0x000022b1      0xf36 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .debug_info    0x000031e7      0x141 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .debug_info    0x00003328      0x367 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .debug_info    0x0000368f      0x6d9 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .debug_info    0x00003d68       0x92 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .debug_info    0x00003dfa      0x64a C:\cortex\dimmers\hex\dimmers_storage.o
+ .debug_info    0x00004444      0x4ed C:\cortex\dimmers\hex\croutine.o
+ .debug_info    0x00004931      0x26f C:\cortex\dimmers\hex\heap_2.o
+ .debug_info    0x00004ba0      0x29c C:\cortex\dimmers\hex\list.o
+ .debug_info    0x00004e3c      0x1d6 C:\cortex\dimmers\hex\port.o
+ .debug_info    0x00005012      0x786 C:\cortex\dimmers\hex\queue.o
+ .debug_info    0x00005798      0xd2c C:\cortex\dimmers\hex\tasks.o
+ .debug_info    0x000064c4      0x8e5 C:\cortex\dimmers\hex\stm32f10x_nvic.o
 
 .debug_abbrev   0x00000000     0x1d05
  *(.debug_abbrev)
