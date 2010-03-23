@@ -2,7 +2,7 @@
 <Debug>
 	<RFlasher7>
 		<CodeView Focus="2634" TopRow="1205754976" NbPerLine="8" />
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																			
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									
 	</RFlasher7>
 	<dimmers>
 		<CodeView TopRow="134226886" Focus="4294967295" >
@@ -13,12 +13,12 @@
 				<3>603</3>
 				<4>109</4>
 				<5>232</5>
-														
+																												
 			</CodeReport>
-										
+																				
 		</CodeView>
 		<MemoryView Focus="134228124" TopRow="0" NbPerLine="8" />
-						
+												
 	</dimmers>
 	<Flags>
 		<Report>
@@ -42,25 +42,25 @@
 			
 	</Flags>
 	<Views>
-		<View File="C:\cortex\dimmers\src\main.c" Line="54" Index="0" />
-		<View File="C:\cortex\dimmers\src\stm32f10x_vector.c" Line="153" Index="1" />
-		<View File="C:\cortex\dimmers\src\stm32f10x_it.c" Line="73" Index="2" focus="1" />
-		<View File="C:\cortex\dimmers\src\dimmers_nvic.c" Line="37" Index="3" />
+		<View File="C:\cortex\dimmers\src\main.c" Line="53" Index="0" />
+		<View File="C:\cortex\dimmers\src\stm32f10x_vector.c" Line="152" Index="1" />
+		<View File="C:\cortex\dimmers\src\stm32f10x_it.c" Line="72" Index="2" focus="1" />
+		<View File="C:\cortex\dimmers\src\dimmers_nvic.c" Line="36" Index="3" />
 		<View File="C:\cortex\dimmers\src\dimmers_exti.c" Line="0" Index="4" />
-		<View File="C:\cortex\dimmers\src\dimmers_bkp.c" Line="305" Index="5" />
-		<View File="C:\cortex\dimmers\include\dimmers_bkp.h" Line="81" Index="6" />
-		<View File="C:\cortex\dimmers\rtos\src\tasks.c" Line="1623" Index="7" />
+		<View File="C:\cortex\dimmers\src\dimmers_bkp.c" Line="304" Index="5" />
+		<View File="C:\cortex\dimmers\include\dimmers_bkp.h" Line="80" Index="6" />
+		<View File="C:\cortex\dimmers\rtos\src\tasks.c" Line="1622" Index="7" />
 		<View File="C:\cortex\dimmers\include\dimmers_tim.h" Line="0" Index="8" />
 		<View File="C:\cortex\dimmers\include\dimmers_gpio.h" Line="0" Index="9" />
-		<View File="C:\cortex\dimmers\include\dimmers_storage.h" Line="109" Index="10" />
-		<View File="C:\cortex\dimmers\src\dimmers_adc.c" Line="59" Index="11" />
-		<View File="C:\cortex\dimmers\include\dimmers_adc.h" Line="18" Index="12" />
-		<View File="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_adc.h" Line="166" Index="13" />
+		<View File="C:\cortex\dimmers\include\dimmers_storage.h" Line="108" Index="10" />
+		<View File="C:\cortex\dimmers\src\dimmers_adc.c" Line="58" Index="11" />
+		<View File="C:\cortex\dimmers\include\dimmers_adc.h" Line="17" Index="12" />
+		<View File="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_adc.h" Line="165" Index="13" />
 		<View File="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_gpio.h" Line="0" Index="14" />
-		<View File="C:\cortex\dimmers\src\dimmers_gpio.c" Line="102" Index="15" />
-		<View File="C:\cortex\dimmers\src\dimmers_storage.c" Line="21" Index="16" />
+		<View File="C:\cortex\dimmers\src\dimmers_gpio.c" Line="101" Index="15" />
+		<View File="C:\cortex\dimmers\src\dimmers_storage.c" Line="20" Index="16" />
 		<View File="C:\cortex\dimmers\src\dimmers_tim.c" Line="0" Index="17" />
-		<View File="C:\cortex\dimmers\include\stm32f10x_conf.h" Line="56" Index="18" />
+		<View File="C:\cortex\dimmers\include\stm32f10x_conf.h" Line="55" Index="18" />
 		<View File="C:\cortex\dimmers\src\dimmers_rcc.c" Line="0" Index="19" />
 	</Views>
 	<FindStrings>
