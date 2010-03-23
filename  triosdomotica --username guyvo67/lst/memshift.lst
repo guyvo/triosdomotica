@@ -1,0 +1,44 @@
+
+C:\cortex\dimmers\hex\memshift.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\memshift.o
+
+Disassembly of section .text:
+
+00000000 <mem_shift>:
+mem_shift():
+C:\cortex\dimmers\src/memshift.s:33
+;*
+;* C interface	  : void mem_shift(void * buffer , u32 size) 
+;*******************************************************************************/
+
+mem_shift:
+		STMDB   sp!, {r4-r11, lr}   /* save context */
+   0:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+C:\cortex\dimmers\src/memshift.s:34
+        ADD		r1,r1,r0			/* r1 end of the buffer */
+   4:	4401      	add	r1, r0
+C:\cortex\dimmers\src/memshift.s:35
+		SUB		r1,r1,#4            /* r1 points to second last halfword */
+   6:	f1a1 0104 	sub.w	r1, r1, #4	; 0x4
+C:\cortex\dimmers\src/memshift.s:36
+        ADD		r2,r1,#2            /* r2 points to last halfword */
+   a:	f101 0202 	add.w	r2, r1, #2	; 0x2
+
+0000000e <shift1>:
+shift1():
+C:\cortex\dimmers\src/memshift.s:38
+shift1:
+		ldr.w	r3,[r1],#-2				/* copy from second last to last word */
+   e:	f851 3902 	ldr.w	r3, [r1], #-2
+C:\cortex\dimmers\src/memshift.s:39
+        str.W	r3,[r2],#-2
+  12:	f842 3902 	str.w	r3, [r2], #-2
+C:\cortex\dimmers\src/memshift.s:40
+        CMP		r0,r2               /* dest = origin ? */
+  16:	4290      	cmp	r0, r2
+C:\cortex\dimmers\src/memshift.s:41
+        BNE		shift1              /* if not cont moving */
+  18:	d1f9      	bne.n	e <shift1>
+C:\cortex\dimmers\src/memshift.s:42
+		LDMIA   sp!, {r4-r11, pc}	/* recall context */
+  1a:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}

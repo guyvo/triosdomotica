@@ -1,0 +1,2722 @@
+Archive member included because of file (symbol)
+
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+                              C:\cortex\dimmers\hex\dimmers_adc.o (DMA_DeInit)
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+                              C:\cortex\dimmers\hex\dimmers_exti.o (EXTI_Init)
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+                              C:\cortex\dimmers\hex\dimmers_rcc.o (FLASH_SetLatency)
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                              C:\cortex\dimmers\hex\dimmers_gpio.o (GPIO_Init)
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                              C:\cortex\dimmers\hex\stm32f10x_it.o (I2C_Cmd)
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+                              C:\cortex\dimmers\hex\dimmers_bkp.o (PWR_BackupAccessCmd)
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                              C:\cortex\dimmers\hex\dimmers_rcc.o (RCC_DeInit)
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+                              C:\cortex\dimmers\hex\dimmers_rtc.o (RTC_ITConfig)
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                              C:\cortex\dimmers\hex\dimmers_tim.o (TIM_TimeBaseInit)
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+                              C:\cortex\dimmers\hex\dimmers_wdg.o (WWDG_SetPrescaler)
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+                              C:\cortex\dimmers\hex\dimmers_adc.o (ADC_Init)
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+                              C:\cortex\dimmers\hex\main.o (BKP_WriteBackupRegister)
+C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
+                              C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o) (__WFI)
+c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                              C:\cortex\dimmers\hex\dimmers_bkp.o (memcpy)
+c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                              C:\cortex\dimmers\hex\tasks.o (memset)
+c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strncpy.o)
+                              C:\cortex\dimmers\hex\tasks.o (strncpy)
+c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_tanh.o)
+                              C:\cortex\dimmers\hex\dimmers_tim.o (tanh)
+c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_expm1.o)
+                              c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_tanh.o) (expm1)
+c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_fabs.o)
+                              c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_tanh.o) (fabs)
+c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+                              C:\cortex\dimmers\hex\dimmers_tim.o (__aeabi_dsub)
+c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+                              C:\cortex\dimmers\hex\dimmers_tim.o (__aeabi_dmul)
+c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
+                              c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_expm1.o) (__aeabi_dcmplt)
+c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
+                              c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_expm1.o) (__aeabi_d2iz)
+c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunsdfsi.o)
+                              C:\cortex\dimmers\hex\dimmers_tim.o (__aeabi_d2uiz)
+
+Allocating common symbols
+Common symbol       size              file
+
+xSendStatusTaskHandle
+                    0x4               C:\cortex\dimmers\hex\dimmers_storage.o
+xSendUpdateTaskHandle
+                    0x4               C:\cortex\dimmers\hex\dimmers_storage.o
+xRefreshTaskHandle  0x4               C:\cortex\dimmers\hex\dimmers_storage.o
+Compares            0x18              C:\cortex\dimmers\hex\dimmers_storage.o
+Yi                  0x10              C:\cortex\dimmers\hex\dimmers_storage.o
+xI2CRecvSync        0x4               C:\cortex\dimmers\hex\dimmers_storage.o
+Lights              0xa8              C:\cortex\dimmers\hex\dimmers_storage.o
+TempSensor          0x2               C:\cortex\dimmers\hex\dimmers_storage.o
+I2C2Adr             0x2               C:\cortex\dimmers\hex\dimmers_i2c.o
+xBKPsync            0x4               C:\cortex\dimmers\hex\dimmers_storage.o
+I2C1Adr             0x2               C:\cortex\dimmers\hex\dimmers_i2c.o
+xButtonTaskHandle   0x18              C:\cortex\dimmers\hex\dimmers_storage.o
+ZeroCross           0x2               C:\cortex\dimmers\hex\dimmers_storage.o
+xI2C2ReceiveTaskHandle
+                    0x4               C:\cortex\dimmers\hex\dimmers_storage.o
+xI2CSendSync        0x4               C:\cortex\dimmers\hex\dimmers_storage.o
+xSemaphoreButtonArrayHandle
+                    0x18              C:\cortex\dimmers\hex\dimmers_storage.o
+BkpMemoryMap        0x54              C:\cortex\dimmers\hex\dimmers_storage.o
+ExternData          0x54              C:\cortex\dimmers\hex\dimmers_storage.o
+GPIO_InitStructure  0x4               C:\cortex\dimmers\hex\dimmers_gpio.o
+InternData          0x54              C:\cortex\dimmers\hex\dimmers_storage.o
+CompareStates       0x18              C:\cortex\dimmers\hex\dimmers_storage.o
+Xi                  0x46              C:\cortex\dimmers\hex\dimmers_storage.o
+xI2C1SendTaskHandle
+                    0x4               C:\cortex\dimmers\hex\dimmers_storage.o
+xRefreshSync        0x4               C:\cortex\dimmers\hex\dimmers_storage.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_adc.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_adc.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_adc.o
+ .text.AdcReadTempValue
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_adc.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_exti.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_exti.o
+ .text.ExtiDisable
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_exti.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_gpio.o
+ COMMON         0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_nvic.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_nvic.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .text.RccSetUnsetCSS
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .text.RccGetClockSpeeds
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .text.TimSetClockTimer5
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .text.TimSetClockTimer6
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .text.TimSetClockTimer7
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .text.TimSetClockTimer8
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .text.TimSetConfigTimer5
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .text.TimSetConfigTimer6
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .text.TimSetConfigTimer7
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .text.TimSetConfigTimer8
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .text.TimDisableInterruptsCompare
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .text.TimSetInterruptAllEnabled
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .text.TimSetPreloadAllOn
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .text.TimDisablePreload
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_wdg.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_wdg.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_wdg.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\fir_stm32.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\fir_stm32.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\main.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\main.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\main.o
+ .text.vApplicationTickHook
+                0x00000000        0x0 C:\cortex\dimmers\hex\main.o
+ .text.vApplicationIdleHook
+                0x00000000        0x0 C:\cortex\dimmers\hex\main.o
+ .text.vTestButtonTask
+                0x00000000        0x0 C:\cortex\dimmers\hex\main.o
+ .text.vtest_buttons_with_delay
+                0x00000000        0x0 C:\cortex\dimmers\hex\main.o
+ .text.vtest_buttons_leds
+                0x00000000        0x0 C:\cortex\dimmers\hex\main.o
+ .text.vTestDipTask
+                0x00000000        0x0 C:\cortex\dimmers\hex\main.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\memshift.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\memshift.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .text.SVCHandler
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .text.PendSVC  0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .text.SysTickHandler
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .text.I2C1GetAddressHeader
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .text.I2C1GetAddress
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .text.I2C2GetAddressHeader
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .text.I2C2GetAddress
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .text.I2C1GetAddressHeaderRx
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .text.I2C1GetAddressRx
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .text.I2C2GetAddressHeaderRx2
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .text.I2C2GetAddressRx2
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .text.I2C2GetAddressHeaderRx
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .text.I2C2GetAddressRx
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .text.I2CSetPECOn
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .text.UtilSwab
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .text.BkpFormat
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .text.BkpVerify
+                0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\dimmers_storage.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\croutine.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\croutine.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\croutine.o
+ .text.xCoRoutineRemoveFromEventList
+                0x00000000        0x0 C:\cortex\dimmers\hex\croutine.o
+ .text.vCoRoutineSchedule
+                0x00000000        0x0 C:\cortex\dimmers\hex\croutine.o
+ .text.vCoRoutineAddToDelayedList
+                0x00000000        0x0 C:\cortex\dimmers\hex\croutine.o
+ .text.xCoRoutineCreate
+                0x00000000        0x0 C:\cortex\dimmers\hex\croutine.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\heap_2.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\heap_2.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\list.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\list.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\list.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\port.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\port.o
+ .text.vPortEndScheduler
+                0x00000000        0x0 C:\cortex\dimmers\hex\port.o
+ .rodata        0x00000000        0x0 C:\cortex\dimmers\hex\port.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\queue.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\queue.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\queue.o
+ .text.uxQueueMessagesWaitingFromISR
+                0x00000000        0x0 C:\cortex\dimmers\hex\queue.o
+ .text.xQueueIsQueueEmptyFromISR
+                0x00000000        0x0 C:\cortex\dimmers\hex\queue.o
+ .text.xQueueIsQueueFullFromISR
+                0x00000000        0x0 C:\cortex\dimmers\hex\queue.o
+ .text.vQueueDelete
+                0x00000000        0x0 C:\cortex\dimmers\hex\queue.o
+ .text.uxQueueMessagesWaiting
+                0x00000000        0x0 C:\cortex\dimmers\hex\queue.o
+ .text.xQueueReceiveFromISR
+                0x00000000        0x0 C:\cortex\dimmers\hex\queue.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .text.uxTaskGetNumberOfTasks
+                0x00000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .text.usTaskCheckFreeStackSpace
+                0x00000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .text.uxTaskGetStackHighWaterMark
+                0x00000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .text.xTaskResumeFromISR
+                0x00000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .text.xTaskGetTickCount
+                0x00000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .text.uxTaskPriorityGet
+                0x00000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .text.vTaskPrioritySet
+                0x00000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .text.vTaskDelayUntil
+                0x00000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .text.vTaskEndScheduler
+                0x00000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .text          0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .data          0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .bss           0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_DeInit
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_SCBDeInit
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_StructInit
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_GetCurrentPendingIRQChannel
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_GetIRQChannelPendingBitStatus
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_SetIRQChannelPendingBit
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_ClearIRQChannelPendingBit
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_GetCurrentActiveHandler
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_GetIRQChannelActiveBitStatus
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_GetCPUID
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_GenerateSystemReset
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_GenerateCoreReset
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_SystemLPConfig
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_SystemHandlerConfig
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_SystemHandlerPriorityConfig
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_GetSystemHandlerPendingBitStatus
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_SetSystemHandlerPendingBit
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_ClearSystemHandlerPendingBit
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_GetSystemHandlerActiveBitStatus
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_GetFaultHandlerSources
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_GetFaultAddress
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_GetBASEPRI
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_BASEPRICONFIG
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_RESETFAULTMASK
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_SETFAULTMASK
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_RESETPRIMASK
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text.NVIC_SETPRIMASK
+                0x00000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .text.DMA_StructInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .text.DMA_ITConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .text.DMA_GetCurrDataCounter
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .text.DMA_GetFlagStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .text.DMA_ClearFlag
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .text.DMA_GetITStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .text.DMA_ClearITPendingBit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .text.EXTI_DeInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .text.EXTI_StructInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .text.EXTI_GenerateSWInterrupt
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .text.EXTI_GetFlagStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .text.EXTI_ClearFlag
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+ .text.FLASH_HalfCycleAccessCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_StructInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_ReadInputData
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_ReadOutputData
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_Write
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_PinLockConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_EventOutputConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_EventOutputCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_PinRemapConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_AFIODeInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text.GPIO_DeInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_StructInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_DMACmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_DMALastTransferCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_GenerateSTART
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_OwnAddress2Config
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_DualAddressCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_GeneralCallCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_ReadRegister
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_SoftwareResetCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_SMBusAlertConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_TransmitPEC
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_PECPositionConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_CalculatePEC
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_GetPEC
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_ARPCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_FastModeDutyCycleConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_CheckEvent
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_GetFlagStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text.I2C_DeInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .text.PWR_WakeUpPinCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .text.PWR_EnterSTANDBYMode
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .text.PWR_EnterSTOPMode
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .text.PWR_DeInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_AdjustHSICalibrationValue
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_HSICmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_ITConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_USBCLKConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_LSICmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_APB2PeriphResetCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_APB1PeriphResetCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_BackupResetCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_ClockSecuritySystemCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_MCOConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_ClearFlag
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_GetITStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text.RCC_ClearITPendingBit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .text.RTC_EnterConfigMode
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .text.RTC_ExitConfigMode
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .text.RTC_GetCounter
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .text.RTC_SetCounter
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .text.RTC_SetAlarm
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .text.RTC_GetDivider
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .text.RTC_GetFlagStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .text.RTC_ClearFlag
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ICInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_PWMIConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_BDTRConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_OCStructInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ICStructInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_BDTRStructInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_CtrlPWMOutputs
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_GenerateEvent
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_DMAConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_DMACmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_InternalClockConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ITRxExternalClockConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_TIxExternalClockConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ETRClockMode1Config
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ETRClockMode2Config
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ETRConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_PrescalerConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_CounterModeConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SelectInputTrigger
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_EncoderInterfaceConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ForcedOC1Config
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ForcedOC2Config
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ForcedOC3Config
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ForcedOC4Config
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ARRPreloadConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SelectCOM
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SelectCCDMA
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_CCPreloadControl
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_OC1FastConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_OC2FastConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_OC3FastConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_OC4FastConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ClearOC1Ref
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ClearOC2Ref
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ClearOC3Ref
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ClearOC4Ref
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_OC1PolarityConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_OC1NPolarityConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_OC2PolarityConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_OC2NPolarityConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_OC3PolarityConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_OC3NPolarityConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_OC4PolarityConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_CCxCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_CCxNCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SelectOCxM
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_UpdateDisableConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_UpdateRequestConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SelectHallSensor
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SelectOnePulseMode
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SelectOutputTrigger
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SelectSlaveMode
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SelectMasterSlaveMode
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SetAutoreload
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SetIC1Prescaler
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SetIC2Prescaler
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SetIC3Prescaler
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SetIC4Prescaler
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_SetClockDivision
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_GetCapture1
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_GetCapture2
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_GetCapture3
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_GetCapture4
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_GetPrescaler
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_GetFlagStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_ClearFlag
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text.TIM_DeInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .text.WWDG_GetFlagStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .text.WWDG_DeInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_StructInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_GetSoftwareStartConvStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_DiscModeChannelCountConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_DiscModeCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_ExternalTrigConvCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_GetConversionValue
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_GetDualModeConversionValue
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_AutoInjectedConvCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_InjectedDiscModeCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_ExternalTrigInjectedConvConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_ExternalTrigInjectedConvCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_SoftwareStartInjectedConvCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_GetSoftwareStartInjectedConvCmdStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_InjectedChannelConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_InjectedSequencerLengthConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_SetInjectedOffset
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_GetInjectedConversionValue
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_AnalogWatchdogCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_AnalogWatchdogThresholdsConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_AnalogWatchdogSingleChannelConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_GetFlagStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_ClearFlag
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_GetITStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text.ADC_DeInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .text.BKP_TamperPinLevelConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .text.BKP_TamperPinCmd
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .text.BKP_ITConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .text.BKP_RTCOutputConfig
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .text.BKP_SetRTCCalibrationValue
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .text.BKP_GetFlagStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .text.BKP_GetITStatus
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .text.BKP_ClearITPendingBit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .text.BKP_DeInit
+                0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .text          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
+ .data          0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
+ .bss           0x00000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
+ .data          0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .vfp11_veneer  0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .janus_2cc_veneer
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .v4_bx         0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .debug_frame   0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .vfp11_veneer  0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .janus_2cc_veneer
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .v4_bx         0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strncpy.o)
+ .bss           0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strncpy.o)
+ .debug_frame   0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strncpy.o)
+ .ARM.attributes
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strncpy.o)
+ .vfp11_veneer  0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strncpy.o)
+ .janus_2cc_veneer
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strncpy.o)
+ .v4_bx         0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strncpy.o)
+ .data          0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_tanh.o)
+ .bss           0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_tanh.o)
+ .debug_frame   0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_tanh.o)
+ .ARM.attributes
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_tanh.o)
+ .vfp11_veneer  0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_tanh.o)
+ .janus_2cc_veneer
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_tanh.o)
+ .v4_bx         0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_tanh.o)
+ .data          0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_expm1.o)
+ .bss           0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_expm1.o)
+ .debug_frame   0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_expm1.o)
+ .ARM.attributes
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_expm1.o)
+ .vfp11_veneer  0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_expm1.o)
+ .janus_2cc_veneer
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_expm1.o)
+ .v4_bx         0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_expm1.o)
+ .data          0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_fabs.o)
+ .bss           0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_fabs.o)
+ .debug_frame   0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_fabs.o)
+ .ARM.attributes
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_fabs.o)
+ .vfp11_veneer  0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_fabs.o)
+ .janus_2cc_veneer
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_fabs.o)
+ .v4_bx         0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_fabs.o)
+ .data          0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .vfp11_veneer  0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .janus_2cc_veneer
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .v4_bx         0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .data          0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .bss           0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .vfp11_veneer  0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .janus_2cc_veneer
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .v4_bx         0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .data          0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .bss           0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .vfp11_veneer  0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .janus_2cc_veneer
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .v4_bx         0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .data          0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
+ .bss           0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
+ .vfp11_veneer  0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
+ .janus_2cc_veneer
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
+ .v4_bx         0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
+ .data          0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunsdfsi.o)
+ .bss           0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunsdfsi.o)
+ .ARM.attributes
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunsdfsi.o)
+ .vfp11_veneer  0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunsdfsi.o)
+ .janus_2cc_veneer
+                0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunsdfsi.o)
+ .v4_bx         0x00000000        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunsdfsi.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x20000000         0x00010000         xrw
+FLASH            0x08000000         0x00080000         xr
+STARTFLASH       0x00000000         0x00000000         xr
+CRPPATCH         0x00000000         0x00000000         r
+FLASHPATCH       0x00000000         0x00000000         r
+ENDFLASH         0x00000000         0x00000000         xr
+FLASHB1          0x00000000         0x00000000         xr
+EXTMEMB0         0x00000000         0x00000000         xr
+EXTMEMB1         0x00000000         0x00000000         xr
+EXTMEMB2         0x00000000         0x00000000         xr
+EXTMEMB3         0x00000000         0x00000000         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD C:\cortex\dimmers\hex\dimmers_adc.o
+LOAD C:\cortex\dimmers\hex\dimmers_exti.o
+LOAD C:\cortex\dimmers\hex\dimmers_gpio.o
+LOAD C:\cortex\dimmers\hex\dimmers_nvic.o
+LOAD C:\cortex\dimmers\hex\dimmers_rcc.o
+LOAD C:\cortex\dimmers\hex\dimmers_tim.o
+LOAD C:\cortex\dimmers\hex\dimmers_wdg.o
+LOAD C:\cortex\dimmers\hex\fir_stm32.o
+LOAD C:\cortex\dimmers\hex\main.o
+LOAD C:\cortex\dimmers\hex\memshift.o
+LOAD C:\cortex\dimmers\hex\stm32f10x_it.o
+LOAD C:\cortex\dimmers\hex\stm32f10x_vector.o
+LOAD C:\cortex\dimmers\hex\dimmers_i2c.o
+LOAD C:\cortex\dimmers\hex\dimmers_bkp.o
+LOAD C:\cortex\dimmers\hex\dimmers_rtc.o
+LOAD C:\cortex\dimmers\hex\dimmers_storage.o
+LOAD C:\cortex\dimmers\hex\croutine.o
+LOAD C:\cortex\dimmers\hex\heap_2.o
+LOAD C:\cortex\dimmers\hex\list.o
+LOAD C:\cortex\dimmers\hex\port.o
+LOAD C:\cortex\dimmers\hex\queue.o
+LOAD C:\cortex\dimmers\hex\tasks.o
+LOAD C:\cortex\dimmers\hex\stm32f10x_nvic.o
+START GROUP
+LOAD C:\Program Files\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib
+LOAD C:\Program Files\Raisonance\Ride\Lib\ARM\smallprintf_thumb.a
+LOAD C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib
+LOAD c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a
+LOAD c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a
+END GROUP
+                0x00000400                __Stack_Size = 0x400
+                0x00000400                PROVIDE (_Stack_Size, __Stack_Size)
+                0x2000fc00                __Stack_Init = (_estack - __Stack_Size)
+                0x2000fc00                PROVIDE (_Stack_Init, __Stack_Init)
+                0x00000100                _Minimum_Stack_Size = 0x100
+                0x00000000                PROVIDE (Undefined_Handler, 0x0)
+                0x00000000                PROVIDE (SWI_Handler, 0x0)
+                0x00000000                PROVIDE (IRQ_Handler, 0x0)
+                0x00000000                PROVIDE (Prefetch_Handler, 0x0)
+                0x00000000                PROVIDE (Abort_Handler, 0x0)
+                0x00000000                PROVIDE (FIQ_Handler, 0x0)
+                0x00000000                PROVIDE (NMIException, 0x0)
+                0x00000000                PROVIDE (NMI_Handler, 0x0)
+                0x00000000                PROVIDE (HardFaultException, 0x0)
+                0x00000000                PROVIDE (HardFault_Handler, 0x0)
+                0x00000000                PROVIDE (MemManageException, 0x0)
+                0x00000000                PROVIDE (MemManage_Handler, 0x0)
+                0x00000000                PROVIDE (BusFaultException, 0x0)
+                0x00000000                PROVIDE (BusFault_Handler, 0x0)
+                0x00000000                PROVIDE (UsageFaultException, 0x0)
+                0x00000000                PROVIDE (UsageFault_Handler, 0x0)
+                0x00000000                PROVIDE (SVCHandler, 0x0)
+                0x00000000                PROVIDE (SVC_Handler, 0x0)
+                0x00000000                PROVIDE (DebugMonitor, 0x0)
+                0x00000000                PROVIDE (DebugMon_Handler, 0x0)
+                0x00000000                PROVIDE (PendSVC, 0x0)
+                0x00000000                PROVIDE (PendSV_Handler, 0x0)
+                0x00000000                PROVIDE (SysTickHandler, 0x0)
+                0x00000000                PROVIDE (SysTick_Handler, 0x0)
+                0x00000000                PROVIDE (WWDG_IRQHandler, 0x0)
+                0x00000000                PROVIDE (PVD_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TAMPER_IRQHandler, 0x0)
+                0x00000000                PROVIDE (RTC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (FLASH_IRQHandler, 0x0)
+                0x00000000                PROVIDE (RCC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI0_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel6_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel7_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel6_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel7_IRQHandler, 0x0)
+                0x00000000                PROVIDE (ADC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (ADC1_2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_HP_CAN_TX_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_HP_CAN1_TX_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_LP_CAN_RX0_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_LP_CAN1_RX0_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN_RX1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN1_RX1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN_SCE_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN1_SCE_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI9_5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_BRK_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_UP_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_TRG_COM_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_CC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C1_EV_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C1_ER_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C2_EV_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C2_ER_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SPI1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SPI2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USART1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USART2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USART3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI15_10_IRQHandler, 0x0)
+                0x00000000                PROVIDE (RTCAlarm_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USBWakeUp_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM8_BRK_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM8_UP_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM8_TRG_COM_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM8_CC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (ADC3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (FSMC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SDIO_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SPI3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (UART4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (UART5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM6_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM7_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA2_Channel1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA2_Channel2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA2_Channel3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA2_Channel4_5_IRQHandler, 0x0)
+                0x42000000                PERIPH_BB_BASE = 0x42000000
+                0x22000000                SRAM_BB_BASE = 0x22000000
+                0x20000000                SRAM_BASE = 0x20000000
+                0x40000000                PERIPH_BASE = 0x40000000
+                0x40022000                PROVIDE (FLASH_BASE, 0x40022000)
+                0x1ffff800                PROVIDE (OB_BASE, 0x1ffff800)
+                0x40000000                APB1PERIPH_BASE = PERIPH_BASE
+                0x40010000                APB2PERIPH_BASE = (PERIPH_BASE + 0x10000)
+                0x40020000                AHBPERIPH_BASE = (PERIPH_BASE + 0x20000)
+                0x40000000                PROVIDE (TIM2, (APB1PERIPH_BASE + 0x0))
+                0x40000400                PROVIDE (TIM3, (APB1PERIPH_BASE + 0x400))
+                0x40000800                PROVIDE (TIM4, (APB1PERIPH_BASE + 0x800))
+                0x40002800                PROVIDE (RTC, (APB1PERIPH_BASE + 0x2800))
+                0x40002c00                PROVIDE (WWDG, (APB1PERIPH_BASE + 0x2c00))
+                0x40003000                PROVIDE (IWDG, (APB1PERIPH_BASE + 0x3000))
+                0x40003800                PROVIDE (SPI2, (APB1PERIPH_BASE + 0x3800))
+                0x40004400                PROVIDE (USART2, (APB1PERIPH_BASE + 0x4400))
+                0x40004800                PROVIDE (USART3, (APB1PERIPH_BASE + 0x4800))
+                0x40005400                PROVIDE (I2C1, (APB1PERIPH_BASE + 0x5400))
+                0x40005800                PROVIDE (I2C2, (APB1PERIPH_BASE + 0x5800))
+                0x40006400                PROVIDE (CAN, (APB1PERIPH_BASE + 0x6400))
+                0x40006c00                PROVIDE (BKP, (APB1PERIPH_BASE + 0x6c00))
+                0x40007000                PROVIDE (PWR, (APB1PERIPH_BASE + 0x7000))
+                0x40010000                PROVIDE (AFIO, (APB2PERIPH_BASE + 0x0))
+                0x40010400                PROVIDE (EXTI, (APB2PERIPH_BASE + 0x400))
+                0x40010800                PROVIDE (GPIOA, (APB2PERIPH_BASE + 0x800))
+                0x40010c00                PROVIDE (GPIOB, (APB2PERIPH_BASE + 0xc00))
+                0x40011000                PROVIDE (GPIOC, (APB2PERIPH_BASE + 0x1000))
+                0x40011400                PROVIDE (GPIOD, (APB2PERIPH_BASE + 0x1400))
+                0x40011800                PROVIDE (GPIOE, (APB2PERIPH_BASE + 0x1800))
+                0x40012400                PROVIDE (ADC1, (APB2PERIPH_BASE + 0x2400))
+                0x40012800                PROVIDE (ADC2, (APB2PERIPH_BASE + 0x2800))
+                0x40012c00                PROVIDE (TIM1, (APB2PERIPH_BASE + 0x2c00))
+                0x40013000                PROVIDE (SPI1, (APB2PERIPH_BASE + 0x3000))
+                0x40013800                PROVIDE (USART1, (APB2PERIPH_BASE + 0x3800))
+                0x40020000                PROVIDE (DMA, (AHBPERIPH_BASE + 0x0))
+                0x40020008                PROVIDE (DMA_Channel1, (AHBPERIPH_BASE + 0x8))
+                0x4002001c                PROVIDE (DMA_Channel2, (AHBPERIPH_BASE + 0x1c))
+                0x40020030                PROVIDE (DMA_Channel3, (AHBPERIPH_BASE + 0x30))
+                0x40020044                PROVIDE (DMA_Channel4, (AHBPERIPH_BASE + 0x44))
+                0x40020058                PROVIDE (DMA_Channel5, (AHBPERIPH_BASE + 0x58))
+                0x4002006c                PROVIDE (DMA_Channel6, (AHBPERIPH_BASE + 0x6c))
+                0x40020080                PROVIDE (DMA_Channel7, (AHBPERIPH_BASE + 0x80))
+                0x40021000                PROVIDE (RCC, (AHBPERIPH_BASE + 0x1000))
+                0xe000e000                SCS_BASE = 0xe000e000
+                0xe000e010                PROVIDE (SysTick, (SCS_BASE + 0x10))
+                0xe000e100                PROVIDE (NVIC, (SCS_BASE + 0x100))
+                0xe000ed00                PROVIDE (SCB, (SCS_BASE + 0xd00))
+                0x20010000                _estack = 0x20010000
+
+.isr_vector     0x08000000      0x130
+                0x08000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000      0x130 C:\cortex\dimmers\hex\stm32f10x_vector.o
+                0x08000000                g_pfnVectors
+                0x08000130                . = ALIGN (0x4)
+
+.flash_start    0x00000000        0x0
+                0x00000000                . = ALIGN (0x4)
+ *(.flash_start)
+ *(.flash_start.*)
+                0x00000000                . = ALIGN (0x4)
+
+.crp_patch      0x00000000        0x0
+                0x00000000                . = ALIGN (0x4)
+ *(.crp_patch)
+                0x00000000                . = ALIGN (0x4)
+
+.flashtext      0x08000130        0x0
+                0x08000130                . = ALIGN (0x4)
+ *(.flashtext)
+                0x08000130                . = ALIGN (0x4)
+
+.text           0x08000130     0x5344
+                0x08000130                . = ALIGN (0x4)
+ *(.text)
+ .text          0x08000130       0xa6 C:\cortex\dimmers\hex\fir_stm32.o
+                0x08000130                fir_16by16_stm32
+ .text          0x080001d6       0x1e C:\cortex\dimmers\hex\memshift.o
+                0x080001d6                mem_shift
+ .text          0x080001f4       0x98 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                0x080001f4                memcpy
+ .text          0x0800028c       0x88 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                0x0800028c                memset
+ .text          0x08000314       0x84 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strncpy.o)
+                0x08000314                strncpy
+ .text          0x08000398      0x134 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_tanh.o)
+                0x08000398                tanh
+ *fill*         0x080004cc        0x4 00
+ .text          0x080004d0      0x4e0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_expm1.o)
+                0x080004d0                expm1
+ .text          0x080009b0       0x10 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_fabs.o)
+                0x080009b0                fabs
+ .text          0x080009c0      0x370 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+                0x08000cd4                __floatdidf
+                0x08000c64                __floatsidf
+                0x08000c44                __aeabi_ui2d
+                0x080009c0                __aeabi_drsub
+                0x08000c88                __extendsfdf2
+                0x080009cc                __adddf3
+                0x08000c44                __floatunsidf
+                0x080009cc                __aeabi_dadd
+                0x08000cc4                __aeabi_ul2d
+                0x080009c8                __aeabi_dsub
+                0x08000cc4                __floatundidf
+                0x08000c64                __aeabi_i2d
+                0x08000cd4                __aeabi_l2d
+                0x08000c88                __aeabi_f2d
+                0x080009c8                __subdf3
+ .text          0x08000d30      0x424 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+                0x08000f84                __aeabi_ddiv
+                0x08000d30                __aeabi_dmul
+                0x08000f84                __divdf3
+                0x08000d30                __muldf3
+ .text          0x08001154      0x10c c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
+                0x08001224                __aeabi_dcmple
+                0x08001164                __cmpdf2
+                0x08001164                __eqdf2
+                0x08001154                __gtdf2
+                0x080011ec                __aeabi_cdcmple
+                0x080011dc                __aeabi_cdrcmple
+                0x0800115c                __ltdf2
+                0x08001210                __aeabi_dcmplt
+                0x0800115c                __ledf2
+                0x0800124c                __aeabi_dcmpgt
+                0x08001238                __aeabi_dcmpge
+                0x08001164                __nedf2
+                0x080011fc                __aeabi_dcmpeq
+                0x080011ec                __aeabi_cdcmpeq
+                0x08001154                __gedf2
+ .text          0x08001260       0x50 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
+                0x08001260                __fixdfsi
+                0x08001260                __aeabi_d2iz
+ .text          0x080012b0       0x40 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunsdfsi.o)
+                0x080012b0                __fixunsdfsi
+                0x080012b0                __aeabi_d2uiz
+ *(.text.*)
+ .text.AdcEnable
+                0x080012f0       0x20 C:\cortex\dimmers\hex\dimmers_adc.o
+                0x080012f0                AdcEnable
+ .text.AdcCalibration
+                0x08001310       0x4c C:\cortex\dimmers\hex\dimmers_adc.o
+                0x08001310                AdcCalibration
+ .text.AdcInit  0x0800135c       0x90 C:\cortex\dimmers\hex\dimmers_adc.o
+                0x0800135c                AdcInit
+ .text.AdcDmaInit
+                0x080013ec       0xc4 C:\cortex\dimmers\hex\dimmers_adc.o
+                0x080013ec                AdcDmaInit
+ .text.ExtiInit
+                0x080014b0       0x64 C:\cortex\dimmers\hex\dimmers_exti.o
+                0x080014b0                ExtiInit
+ .text.GpioGetDipState
+                0x08001514       0x10 C:\cortex\dimmers\hex\dimmers_gpio.o
+                0x08001514                GpioGetDipState
+ .text.GpioClockSet
+                0x08001524       0x18 C:\cortex\dimmers\hex\dimmers_gpio.o
+                0x08001524                GpioClockSet
+ .text.GpioInit
+                0x0800153c       0x3c C:\cortex\dimmers\hex\dimmers_gpio.o
+                0x0800153c                GpioInit
+ .text.NvicInit
+                0x08001578       0x44 C:\cortex\dimmers\hex\dimmers_nvic.o
+                0x08001578                NvicInit
+ .text.RccInit  0x080015bc       0x70 C:\cortex\dimmers\hex\dimmers_rcc.o
+                0x080015bc                RccInit
+ .text.ComparesToArrayOfFunctions
+                0x0800162c       0x38 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x0800162c                ComparesToArrayOfFunctions
+ .text.CompareStatesToArrayOfFunctions
+                0x08001664       0x38 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001664                CompareStatesToArrayOfFunctions
+ .text.TimResetAll
+                0x0800169c       0x28 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x0800169c                TimResetAll
+ .text.TimGetHoldValue
+                0x080016c4       0x58 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x080016c4                TimGetHoldValue
+ .text.TimSetCompareSetHold6
+                0x0800171c       0x24 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x0800171c                TimSetCompareSetHold6
+ .text.TimSetCompareSetHold5
+                0x08001740       0x24 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001740                TimSetCompareSetHold5
+ .text.TimSetCompareSetHold4
+                0x08001764       0x24 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001764                TimSetCompareSetHold4
+ .text.TimSetCompareSetHold3
+                0x08001788       0x24 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001788                TimSetCompareSetHold3
+ .text.TimSetCompareSetHold2
+                0x080017ac       0x24 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x080017ac                TimSetCompareSetHold2
+ .text.TimSetCompareSetHold1
+                0x080017d0       0x24 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x080017d0                TimSetCompareSetHold1
+ .text.TimStartAll
+                0x080017f4       0x34 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x080017f4                TimStartAll
+ .text.SetTimIntCompare6
+                0x08001828       0x14 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001828                SetTimIntCompare6
+ .text.SetTimIntCompare5
+                0x0800183c       0x14 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x0800183c                SetTimIntCompare5
+ .text.SetTimIntCompare4
+                0x08001850       0x14 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001850                SetTimIntCompare4
+ .text.SetTimIntCompare3
+                0x08001864       0x14 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001864                SetTimIntCompare3
+ .text.SetTimIntCompare2
+                0x08001878       0x10 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001878                SetTimIntCompare2
+ .text.SetTimIntCompare1
+                0x08001888       0x10 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001888                SetTimIntCompare1
+ .text.TimSetInitCompareSetHold6
+                0x08001898       0x58 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001898                TimSetInitCompareSetHold6
+ .text.TimSetInitCompareSetHold4
+                0x080018f0       0x58 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x080018f0                TimSetInitCompareSetHold4
+ .text.TimSetInitCompareSetHold2
+                0x08001948       0x54 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001948                TimSetInitCompareSetHold2
+ .text.TimSetInitCompareSetHold5
+                0x0800199c       0x58 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x0800199c                TimSetInitCompareSetHold5
+ .text.TimSetInitCompareSetHold3
+                0x080019f4       0x58 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x080019f4                TimSetInitCompareSetHold3
+ .text.TimSetInitCompareSetHold1
+                0x08001a4c       0x54 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001a4c                TimSetInitCompareSetHold1
+ .text.TimSetConfigTimer4
+                0x08001aa0       0x38 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001aa0                TimSetConfigTimer4
+ .text.TimSetConfigTimer3
+                0x08001ad8       0x38 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001ad8                TimSetConfigTimer3
+ .text.TimSetConfigTimer2
+                0x08001b10       0x34 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001b10                TimSetConfigTimer2
+ .text.TimSetConfigTimer1
+                0x08001b44       0x38 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001b44                TimSetConfigTimer1
+ .text.TimSetClockTimer4
+                0x08001b7c        0xc C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001b7c                TimSetClockTimer4
+ .text.TimSetClockTimer3
+                0x08001b88        0xc C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001b88                TimSetClockTimer3
+ .text.TimSetClockTimer2
+                0x08001b94        0xc C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001b94                TimSetClockTimer2
+ .text.TimSetClockTimer1
+                0x08001ba0       0x10 C:\cortex\dimmers\hex\dimmers_tim.o
+                0x08001ba0                TimSetClockTimer1
+ .text.WdgSet   0x08001bb0       0x2c C:\cortex\dimmers\hex\dimmers_wdg.o
+                0x08001bb0                WdgSet
+ .text.UtilUpdateLightFromButton
+                0x08001bdc       0x18 C:\cortex\dimmers\hex\main.o
+ .text.vSendUpdateTask
+                0x08001bf4      0x10c C:\cortex\dimmers\hex\main.o
+                0x08001bf4                vSendUpdateTask
+ .text.vButtonDimmerTask
+                0x08001d00      0x1bc C:\cortex\dimmers\hex\main.o
+                0x08001d00                vButtonDimmerTask
+ .text.vButtonToggleTask
+                0x08001ebc       0x88 C:\cortex\dimmers\hex\main.o
+                0x08001ebc                vButtonToggleTask
+ .text.vRefreshTask
+                0x08001f44       0xd8 C:\cortex\dimmers\hex\main.o
+                0x08001f44                vRefreshTask
+ .text.vI2C2ReceiveTask
+                0x0800201c       0x2c C:\cortex\dimmers\hex\main.o
+                0x0800201c                vI2C2ReceiveTask
+ .text.vInitDimmerValues
+                0x08002048       0x98 C:\cortex\dimmers\hex\main.o
+                0x08002048                vInitDimmerValues
+ .text.vTaskInitSystem
+                0x080020e0      0x2e8 C:\cortex\dimmers\hex\main.o
+                0x080020e0                vTaskInitSystem
+ .text.main     0x080023c8       0x28 C:\cortex\dimmers\hex\main.o
+                0x080023c8                main
+ .text.NMIException
+                0x080023f0        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080023f0                NMIException
+ .text.HardFaultException
+                0x080023f4       0x1c C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080023f4                HardFaultException
+ .text.MemManageException
+                0x08002410        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002410                MemManageException
+ .text.BusFaultException
+                0x08002414        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002414                BusFaultException
+ .text.UsageFaultException
+                0x08002418        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002418                UsageFaultException
+ .text.DebugMonitor
+                0x0800241c        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x0800241c                DebugMonitor
+ .text.TAMPER_IRQHandler
+                0x08002420        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002420                TAMPER_IRQHandler
+ .text.FLASH_IRQHandler
+                0x08002424        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002424                FLASH_IRQHandler
+ .text.RCC_IRQHandler
+                0x08002428        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002428                RCC_IRQHandler
+ .text.EXTI0_IRQHandler
+                0x0800242c        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x0800242c                EXTI0_IRQHandler
+ .text.EXTI1_IRQHandler
+                0x08002430        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002430                EXTI1_IRQHandler
+ .text.EXTI2_IRQHandler
+                0x08002434        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002434                EXTI2_IRQHandler
+ .text.EXTI3_IRQHandler
+                0x08002438        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002438                EXTI3_IRQHandler
+ .text.EXTI4_IRQHandler
+                0x0800243c        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x0800243c                EXTI4_IRQHandler
+ .text.DMA1_Channel1_IRQHandler
+                0x08002440        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002440                DMA1_Channel1_IRQHandler
+ .text.DMA1_Channel2_IRQHandler
+                0x08002444        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002444                DMA1_Channel2_IRQHandler
+ .text.DMA1_Channel3_IRQHandler
+                0x08002448        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002448                DMA1_Channel3_IRQHandler
+ .text.DMA1_Channel4_IRQHandler
+                0x0800244c        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x0800244c                DMA1_Channel4_IRQHandler
+ .text.DMA1_Channel5_IRQHandler
+                0x08002450        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002450                DMA1_Channel5_IRQHandler
+ .text.DMA1_Channel6_IRQHandler
+                0x08002454        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002454                DMA1_Channel6_IRQHandler
+ .text.DMA1_Channel7_IRQHandler
+                0x08002458        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002458                DMA1_Channel7_IRQHandler
+ .text.USB_HP_CAN_TX_IRQHandler
+                0x0800245c        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x0800245c                USB_HP_CAN_TX_IRQHandler
+ .text.USB_LP_CAN_RX0_IRQHandler
+                0x08002460        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002460                USB_LP_CAN_RX0_IRQHandler
+ .text.CAN_RX1_IRQHandler
+                0x08002464        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002464                CAN_RX1_IRQHandler
+ .text.CAN_SCE_IRQHandler
+                0x08002468        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002468                CAN_SCE_IRQHandler
+ .text.TIM1_BRK_IRQHandler
+                0x0800246c        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x0800246c                TIM1_BRK_IRQHandler
+ .text.TIM1_TRG_COM_IRQHandler
+                0x08002470        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002470                TIM1_TRG_COM_IRQHandler
+ .text.TIM1_CC_IRQHandler
+                0x08002474        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002474                TIM1_CC_IRQHandler
+ .text.SPI1_IRQHandler
+                0x08002478        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002478                SPI1_IRQHandler
+ .text.SPI2_IRQHandler
+                0x0800247c        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x0800247c                SPI2_IRQHandler
+ .text.USART1_IRQHandler
+                0x08002480        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002480                USART1_IRQHandler
+ .text.USART2_IRQHandler
+                0x08002484        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002484                USART2_IRQHandler
+ .text.USART3_IRQHandler
+                0x08002488        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002488                USART3_IRQHandler
+ .text.RTCAlarm_IRQHandler
+                0x0800248c        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x0800248c                RTCAlarm_IRQHandler
+ .text.USBWakeUp_IRQHandler
+                0x08002490        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002490                USBWakeUp_IRQHandler
+ .text.TIM8_BRK_IRQHandler
+                0x08002494        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002494                TIM8_BRK_IRQHandler
+ .text.TIM8_UP_IRQHandler
+                0x08002498        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002498                TIM8_UP_IRQHandler
+ .text.TIM8_TRG_COM_IRQHandler
+                0x0800249c        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x0800249c                TIM8_TRG_COM_IRQHandler
+ .text.TIM8_CC_IRQHandler
+                0x080024a0        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024a0                TIM8_CC_IRQHandler
+ .text.FSMC_IRQHandler
+                0x080024a4        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024a4                FSMC_IRQHandler
+ .text.SDIO_IRQHandler
+                0x080024a8        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024a8                SDIO_IRQHandler
+ .text.TIM5_IRQHandler
+                0x080024ac        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024ac                TIM5_IRQHandler
+ .text.SPI3_IRQHandler
+                0x080024b0        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024b0                SPI3_IRQHandler
+ .text.UART4_IRQHandler
+                0x080024b4        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024b4                UART4_IRQHandler
+ .text.UART5_IRQHandler
+                0x080024b8        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024b8                UART5_IRQHandler
+ .text.TIM6_IRQHandler
+                0x080024bc        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024bc                TIM6_IRQHandler
+ .text.TIM7_IRQHandler
+                0x080024c0        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024c0                TIM7_IRQHandler
+ .text.DMA2_Channel1_IRQHandler
+                0x080024c4        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024c4                DMA2_Channel1_IRQHandler
+ .text.DMA2_Channel2_IRQHandler
+                0x080024c8        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024c8                DMA2_Channel2_IRQHandler
+ .text.DMA2_Channel3_IRQHandler
+                0x080024cc        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024cc                DMA2_Channel3_IRQHandler
+ .text.DMA2_Channel4_5_IRQHandler
+                0x080024d0        0x4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024d0                DMA2_Channel4_5_IRQHandler
+ .text.ADC1_2_IRQHandler
+                0x080024d4       0x14 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024d4                ADC1_2_IRQHandler
+ .text.ADC3_IRQHandler
+                0x080024e8       0xe4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080024e8                ADC3_IRQHandler
+ .text.EXTI15_10_IRQHandler
+                0x080025cc       0x88 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080025cc                EXTI15_10_IRQHandler
+ .text.EXTI9_5_IRQHandler
+                0x08002654       0xf0 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002654                EXTI9_5_IRQHandler
+ .text.I2C2_ER_IRQHandler
+                0x08002744       0x60 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002744                I2C2_ER_IRQHandler
+ .text.I2C1_ER_IRQHandler
+                0x080027a4       0x60 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x080027a4                I2C1_ER_IRQHandler
+ .text.I2C2_EV_IRQHandler
+                0x08002804      0x190 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002804                I2C2_EV_IRQHandler
+ .text.I2C1_EV_IRQHandler
+                0x08002994       0xb0 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002994                I2C1_EV_IRQHandler
+ .text.TIM4_IRQHandler
+                0x08002a44       0xe4 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002a44                TIM4_IRQHandler
+ .text.TIM3_IRQHandler
+                0x08002b28       0xe0 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002b28                TIM3_IRQHandler
+ .text.TIM2_IRQHandler
+                0x08002c08       0xe8 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002c08                TIM2_IRQHandler
+ .text.TIM1_UP_IRQHandler
+                0x08002cf0       0x1c C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002cf0                TIM1_UP_IRQHandler
+ .text.RTC_IRQHandler
+                0x08002d0c       0x5c C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002d0c                RTC_IRQHandler
+ .text.PVD_IRQHandler
+                0x08002d68       0x38 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002d68                PVD_IRQHandler
+ .text.WWDG_IRQHandler
+                0x08002da0       0x10 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x08002da0                WWDG_IRQHandler
+ .text.Reset_Handler
+                0x08002db0       0x70 C:\cortex\dimmers\hex\stm32f10x_vector.o
+                0x08002db0                Reset_Handler
+ .text.I2CInit  0x08002e20      0x194 C:\cortex\dimmers\hex\dimmers_i2c.o
+                0x08002e20                I2CInit
+ .text.BkpCopyIntExtMemory
+                0x08002fb4       0x18 C:\cortex\dimmers\hex\dimmers_bkp.o
+                0x08002fb4                BkpCopyIntExtMemory
+ .text.BkpFullWriteToBkp
+                0x08002fcc      0x104 C:\cortex\dimmers\hex\dimmers_bkp.o
+                0x08002fcc                BkpFullWriteToBkp
+ .text.BkpSetFactoryDefaultsGeneral
+                0x080030d0       0x24 C:\cortex\dimmers\hex\dimmers_bkp.o
+                0x080030d0                BkpSetFactoryDefaultsGeneral
+ .text.BkpSetFactoryDefaultsForLight
+                0x080030f4      0x158 C:\cortex\dimmers\hex\dimmers_bkp.o
+                0x080030f4                BkpSetFactoryDefaultsForLight
+ .text.BkpFullReadToMemory
+                0x0800324c       0x3c C:\cortex\dimmers\hex\dimmers_bkp.o
+                0x0800324c                BkpFullReadToMemory
+ .text.BkpWriteGeneralToMemory
+                0x08003288       0x20 C:\cortex\dimmers\hex\dimmers_bkp.o
+                0x08003288                BkpWriteGeneralToMemory
+ .text.BkpGetSwitcherType
+                0x080032a8       0x90 C:\cortex\dimmers\hex\dimmers_bkp.o
+                0x080032a8                BkpGetSwitcherType
+ .text.BkpWriteLightPropertiesToMemory
+                0x08003338      0x13c C:\cortex\dimmers\hex\dimmers_bkp.o
+                0x08003338                BkpWriteLightPropertiesToMemory
+ .text.BkpSetFactoryDefaultsToLights
+                0x08003474       0x4c C:\cortex\dimmers\hex\dimmers_bkp.o
+                0x08003474                BkpSetFactoryDefaultsToLights
+ .text.BkpUnlock
+                0x080034c0       0x10 C:\cortex\dimmers\hex\dimmers_bkp.o
+                0x080034c0                BkpUnlock
+ .text.BkpLock  0x080034d0       0x10 C:\cortex\dimmers\hex\dimmers_bkp.o
+                0x080034d0                BkpLock
+ .text.BkpInit  0x080034e0       0x18 C:\cortex\dimmers\hex\dimmers_bkp.o
+                0x080034e0                BkpInit
+ .text.RtcInit  0x080034f8       0x54 C:\cortex\dimmers\hex\dimmers_rtc.o
+                0x080034f8                RtcInit
+ .text.vPortFree
+                0x0800354c       0x30 C:\cortex\dimmers\hex\heap_2.o
+                0x0800354c                vPortFree
+ .text.pvPortMalloc
+                0x0800357c       0xac C:\cortex\dimmers\hex\heap_2.o
+                0x0800357c                pvPortMalloc
+ .text.vListInitialise
+                0x08003628       0x18 C:\cortex\dimmers\hex\list.o
+                0x08003628                vListInitialise
+ .text.vListInitialiseItem
+                0x08003640        0x8 C:\cortex\dimmers\hex\list.o
+                0x08003640                vListInitialiseItem
+ .text.vListInsertEnd
+                0x08003648       0x1c C:\cortex\dimmers\hex\list.o
+                0x08003648                vListInsertEnd
+ .text.vListInsert
+                0x08003664       0x34 C:\cortex\dimmers\hex\list.o
+                0x08003664                vListInsert
+ .text.vListRemove
+                0x08003698       0x20 C:\cortex\dimmers\hex\list.o
+                0x08003698                vListRemove
+ .text.pxPortInitialiseStack
+                0x080036b8       0x20 C:\cortex\dimmers\hex\port.o
+                0x080036b8                pxPortInitialiseStack
+ .text.vPortSVCHandler
+                0x080036d8       0x20 C:\cortex\dimmers\hex\port.o
+                0x080036d8                vPortSVCHandler
+ .text.vPortStartFirstTask
+                0x080036f8       0x10 C:\cortex\dimmers\hex\port.o
+                0x080036f8                vPortStartFirstTask
+ .text.vPortYieldFromISR
+                0x08003708       0x10 C:\cortex\dimmers\hex\port.o
+                0x08003708                vPortYieldFromISR
+ .text.vPortEnterCritical
+                0x08003718       0x18 C:\cortex\dimmers\hex\port.o
+                0x08003718                vPortEnterCritical
+ .text.vPortExitCritical
+                0x08003730       0x18 C:\cortex\dimmers\hex\port.o
+                0x08003730                vPortExitCritical
+ .text.xPortPendSVHandler
+                0x08003748       0x3c C:\cortex\dimmers\hex\port.o
+                0x08003748                xPortPendSVHandler
+ .text.xPortStartScheduler
+                0x08003784       0x40 C:\cortex\dimmers\hex\port.o
+                0x08003784                xPortStartScheduler
+ .text.xPortSysTickHandler
+                0x080037c4       0x24 C:\cortex\dimmers\hex\port.o
+                0x080037c4                xPortSysTickHandler
+ .text.prvCopyDataFromQueue
+                0x080037e8       0x24 C:\cortex\dimmers\hex\queue.o
+ .text.prvUnlockQueue
+                0x0800380c       0x68 C:\cortex\dimmers\hex\queue.o
+ .text.xQueueGenericReceive
+                0x08003874      0x10c C:\cortex\dimmers\hex\queue.o
+                0x08003874                xQueueGenericReceive
+ .text.prvCopyDataToQueue
+                0x08003980       0x58 C:\cortex\dimmers\hex\queue.o
+ .text.xQueueGenericSendFromISR
+                0x080039d8       0x54 C:\cortex\dimmers\hex\queue.o
+                0x080039d8                xQueueGenericSendFromISR
+ .text.xQueueGenericSend
+                0x08003a2c       0xdc C:\cortex\dimmers\hex\queue.o
+                0x08003a2c                xQueueGenericSend
+ .text.xQueueCreateMutex
+                0x08003b08       0x48 C:\cortex\dimmers\hex\queue.o
+                0x08003b08                xQueueCreateMutex
+ .text.xQueueCreate
+                0x08003b50       0x68 C:\cortex\dimmers\hex\queue.o
+                0x08003b50                xQueueCreate
+ .text.xTaskIsTaskSuspended
+                0x08003bb8       0x24 C:\cortex\dimmers\hex\tasks.o
+                0x08003bb8                xTaskIsTaskSuspended
+ .text.vTaskSuspendAll
+                0x08003bdc       0x10 C:\cortex\dimmers\hex\tasks.o
+                0x08003bdc                vTaskSuspendAll
+ .text.vTaskSwitchContext
+                0x08003bec       0x4c C:\cortex\dimmers\hex\tasks.o
+                0x08003bec                vTaskSwitchContext
+ .text.vTaskSetTimeOutState
+                0x08003c38       0x14 C:\cortex\dimmers\hex\tasks.o
+                0x08003c38                vTaskSetTimeOutState
+ .text.vTaskMissedYield
+                0x08003c4c        0xc C:\cortex\dimmers\hex\tasks.o
+                0x08003c4c                vTaskMissedYield
+ .text.xTaskGetCurrentTaskHandle
+                0x08003c58        0xc C:\cortex\dimmers\hex\tasks.o
+                0x08003c58                xTaskGetCurrentTaskHandle
+ .text.xTaskGetSchedulerState
+                0x08003c64       0x18 C:\cortex\dimmers\hex\tasks.o
+                0x08003c64                xTaskGetSchedulerState
+ .text.vTaskPriorityDisinherit
+                0x08003c7c       0x44 C:\cortex\dimmers\hex\tasks.o
+                0x08003c7c                vTaskPriorityDisinherit
+ .text.vTaskPriorityInherit
+                0x08003cc0       0x68 C:\cortex\dimmers\hex\tasks.o
+                0x08003cc0                vTaskPriorityInherit
+ .text.xTaskRemoveFromEventList
+                0x08003d28       0x60 C:\cortex\dimmers\hex\tasks.o
+                0x08003d28                xTaskRemoveFromEventList
+ .text.vTaskIncrementTick
+                0x08003d88       0x9c C:\cortex\dimmers\hex\tasks.o
+                0x08003d88                vTaskIncrementTick
+ .text.xTaskCheckForTimeOut
+                0x08003e24       0x58 C:\cortex\dimmers\hex\tasks.o
+                0x08003e24                xTaskCheckForTimeOut
+ .text.vTaskPlaceOnEventList
+                0x08003e7c       0x5c C:\cortex\dimmers\hex\tasks.o
+                0x08003e7c                vTaskPlaceOnEventList
+ .text.xTaskResumeAll
+                0x08003ed8       0xb4 C:\cortex\dimmers\hex\tasks.o
+                0x08003ed8                xTaskResumeAll
+ .text.vTaskResume
+                0x08003f8c       0x5c C:\cortex\dimmers\hex\tasks.o
+                0x08003f8c                vTaskResume
+ .text.vTaskSuspend
+                0x08003fe8       0x50 C:\cortex\dimmers\hex\tasks.o
+                0x08003fe8                vTaskSuspend
+ .text.vTaskDelay
+                0x08004038       0x4c C:\cortex\dimmers\hex\tasks.o
+                0x08004038                vTaskDelay
+ .text.vTaskDelete
+                0x08004084       0x6c C:\cortex\dimmers\hex\tasks.o
+                0x08004084                vTaskDelete
+ .text.prvIdleTask
+                0x080040f0       0x68 C:\cortex\dimmers\hex\tasks.o
+ .text.xTaskCreate
+                0x08004158      0x16c C:\cortex\dimmers\hex\tasks.o
+                0x08004158                xTaskCreate
+ .text.vTaskStartScheduler
+                0x080042c4       0x40 C:\cortex\dimmers\hex\tasks.o
+                0x080042c4                vTaskStartScheduler
+ .text.NVIC_PriorityGroupConfig
+                0x08004304       0x14 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+                0x08004304                NVIC_PriorityGroupConfig
+ .text.NVIC_Init
+                0x08004318       0x7c C:\cortex\dimmers\hex\stm32f10x_nvic.o
+                0x08004318                NVIC_Init
+ .text.NVIC_SetVectorTable
+                0x08004394       0x14 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+                0x08004394                NVIC_SetVectorTable
+ .text.DMA_DeInit
+                0x080043a8      0x18c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+                0x080043a8                DMA_DeInit
+ .text.DMA_Init
+                0x08004534       0x40 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+                0x08004534                DMA_Init
+ .text.DMA_Cmd  0x08004574       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+                0x08004574                DMA_Cmd
+ .text.EXTI_Init
+                0x0800458c       0x80 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+                0x0800458c                EXTI_Init
+ .text.EXTI_GetITStatus
+                0x0800460c       0x20 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+                0x0800460c                EXTI_GetITStatus
+ .text.EXTI_ClearITPendingBit
+                0x0800462c        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+                0x0800462c                EXTI_ClearITPendingBit
+ .text.FLASH_SetLatency
+                0x08004638       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+                0x08004638                FLASH_SetLatency
+ .text.FLASH_PrefetchBufferCmd
+                0x08004650       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+                0x08004650                FLASH_PrefetchBufferCmd
+ .text.GPIO_Init
+                0x08004668       0xd8 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x08004668                GPIO_Init
+ .text.GPIO_ReadInputDataBit
+                0x08004740        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x08004740                GPIO_ReadInputDataBit
+ .text.GPIO_ReadOutputDataBit
+                0x0800474c        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x0800474c                GPIO_ReadOutputDataBit
+ .text.GPIO_SetBits
+                0x08004758        0x4 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x08004758                GPIO_SetBits
+ .text.GPIO_ResetBits
+                0x0800475c        0x4 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x0800475c                GPIO_ResetBits
+ .text.GPIO_WriteBit
+                0x08004760        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x08004760                GPIO_WriteBit
+ .text.GPIO_EXTILineConfig
+                0x0800476c       0x34 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x0800476c                GPIO_EXTILineConfig
+ .text.I2C_Cmd  0x080047a0       0x1c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                0x080047a0                I2C_Cmd
+ .text.I2C_GenerateSTOP
+                0x080047bc       0x1c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                0x080047bc                I2C_GenerateSTOP
+ .text.I2C_AcknowledgeConfig
+                0x080047d8       0x1c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                0x080047d8                I2C_AcknowledgeConfig
+ .text.I2C_ITConfig
+                0x080047f4       0x1c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                0x080047f4                I2C_ITConfig
+ .text.I2C_SendData
+                0x08004810        0x4 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                0x08004810                I2C_SendData
+ .text.I2C_ReceiveData
+                0x08004814        0x8 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                0x08004814                I2C_ReceiveData
+ .text.I2C_Send7bitAddress
+                0x0800481c       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                0x0800481c                I2C_Send7bitAddress
+ .text.I2C_StretchClockCmd
+                0x0800482c       0x1c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                0x0800482c                I2C_StretchClockCmd
+ .text.I2C_GetLastEvent
+                0x08004848       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                0x08004848                I2C_GetLastEvent
+ .text.I2C_ClearFlag
+                0x0800485c        0x8 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                0x0800485c                I2C_ClearFlag
+ .text.I2C_GetITStatus
+                0x08004864       0x20 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                0x08004864                I2C_GetITStatus
+ .text.I2C_ClearITPendingBit
+                0x08004884        0x8 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                0x08004884                I2C_ClearITPendingBit
+ .text.I2C_Init
+                0x0800488c       0xf4 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+                0x0800488c                I2C_Init
+ .text.PWR_BackupAccessCmd
+                0x08004980        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+                0x08004980                PWR_BackupAccessCmd
+ .text.PWR_PVDCmd
+                0x0800498c        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+                0x0800498c                PWR_PVDCmd
+ .text.PWR_PVDLevelConfig
+                0x08004998       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+                0x08004998                PWR_PVDLevelConfig
+ .text.PWR_GetFlagStatus
+                0x080049ac       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+                0x080049ac                PWR_GetFlagStatus
+ .text.PWR_ClearFlag
+                0x080049c0       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+                0x080049c0                PWR_ClearFlag
+ .text.RCC_DeInit
+                0x080049d4       0x44 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x080049d4                RCC_DeInit
+ .text.RCC_HSEConfig
+                0x08004a18       0x38 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004a18                RCC_HSEConfig
+ .text.RCC_WaitForHSEStartUp
+                0x08004a50       0x40 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004a50                RCC_WaitForHSEStartUp
+ .text.RCC_PLLConfig
+                0x08004a90       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004a90                RCC_PLLConfig
+ .text.RCC_PLLCmd
+                0x08004aa8        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004aa8                RCC_PLLCmd
+ .text.RCC_SYSCLKConfig
+                0x08004ab4       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004ab4                RCC_SYSCLKConfig
+ .text.RCC_GetSYSCLKSource
+                0x08004ac8       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004ac8                RCC_GetSYSCLKSource
+ .text.RCC_HCLKConfig
+                0x08004ad8       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004ad8                RCC_HCLKConfig
+ .text.RCC_PCLK1Config
+                0x08004aec       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004aec                RCC_PCLK1Config
+ .text.RCC_PCLK2Config
+                0x08004b00       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004b00                RCC_PCLK2Config
+ .text.RCC_ADCCLKConfig
+                0x08004b18       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004b18                RCC_ADCCLKConfig
+ .text.RCC_LSEConfig
+                0x08004b2c       0x20 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004b2c                RCC_LSEConfig
+ .text.RCC_RTCCLKConfig
+                0x08004b4c       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004b4c                RCC_RTCCLKConfig
+ .text.RCC_RTCCLKCmd
+                0x08004b5c        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004b5c                RCC_RTCCLKCmd
+ .text.RCC_GetClocksFreq
+                0x08004b68       0xb0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004b68                RCC_GetClocksFreq
+ .text.RCC_AHBPeriphClockCmd
+                0x08004c18       0x28 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004c18                RCC_AHBPeriphClockCmd
+ .text.RCC_APB2PeriphClockCmd
+                0x08004c40       0x28 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004c40                RCC_APB2PeriphClockCmd
+ .text.RCC_APB1PeriphClockCmd
+                0x08004c68       0x28 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004c68                RCC_APB1PeriphClockCmd
+ .text.RCC_GetFlagStatus
+                0x08004c90       0x3c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+                0x08004c90                RCC_GetFlagStatus
+ .text.RTC_ITConfig
+                0x08004ccc       0x2c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+                0x08004ccc                RTC_ITConfig
+ .text.RTC_SetPrescaler
+                0x08004cf8       0x2c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+                0x08004cf8                RTC_SetPrescaler
+ .text.RTC_WaitForLastTask
+                0x08004d24       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+                0x08004d24                RTC_WaitForLastTask
+ .text.RTC_WaitForSynchro
+                0x08004d38       0x20 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+                0x08004d38                RTC_WaitForSynchro
+ .text.RTC_GetITStatus
+                0x08004d58       0x28 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+                0x08004d58                RTC_GetITStatus
+ .text.RTC_ClearITPendingBit
+                0x08004d80       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+                0x08004d80                RTC_ClearITPendingBit
+ .text.TIM_TimeBaseInit
+                0x08004d94       0x5c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x08004d94                TIM_TimeBaseInit
+ .text.TIM_OC1Init
+                0x08004df0       0xbc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x08004df0                TIM_OC1Init
+ .text.TIM_OC2Init
+                0x08004eac       0xc4 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x08004eac                TIM_OC2Init
+ .text.TIM_OC3Init
+                0x08004f70       0xc0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x08004f70                TIM_OC3Init
+ .text.TIM_OC4Init
+                0x08005030       0xa0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x08005030                TIM_OC4Init
+ .text.TIM_TimeBaseStructInit
+                0x080050d0       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x080050d0                TIM_TimeBaseStructInit
+ .text.TIM_Cmd  0x080050e4       0x1c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x080050e4                TIM_Cmd
+ .text.TIM_ITConfig
+                0x08005100       0x1c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x08005100                TIM_ITConfig
+ .text.TIM_OC1PreloadConfig
+                0x0800511c       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x0800511c                TIM_OC1PreloadConfig
+ .text.TIM_OC2PreloadConfig
+                0x0800512c       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x0800512c                TIM_OC2PreloadConfig
+ .text.TIM_OC3PreloadConfig
+                0x08005140       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x08005140                TIM_OC3PreloadConfig
+ .text.TIM_OC4PreloadConfig
+                0x08005150       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x08005150                TIM_OC4PreloadConfig
+ .text.TIM_SetCounter
+                0x08005164        0x4 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x08005164                TIM_SetCounter
+ .text.TIM_SetCompare1
+                0x08005168        0x4 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x08005168                TIM_SetCompare1
+ .text.TIM_SetCompare2
+                0x0800516c        0x4 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x0800516c                TIM_SetCompare2
+ .text.TIM_SetCompare3
+                0x08005170        0x4 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x08005170                TIM_SetCompare3
+ .text.TIM_SetCompare4
+                0x08005174        0x8 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x08005174                TIM_SetCompare4
+ .text.TIM_GetCounter
+                0x0800517c        0x8 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x0800517c                TIM_GetCounter
+ .text.TIM_GetITStatus
+                0x08005184       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x08005184                TIM_GetITStatus
+ .text.TIM_ClearITPendingBit
+                0x0800519c        0x8 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+                0x0800519c                TIM_ClearITPendingBit
+ .text.WWDG_SetPrescaler
+                0x080051a4       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+                0x080051a4                WWDG_SetPrescaler
+ .text.WWDG_SetWindowValue
+                0x080051b8       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+                0x080051b8                WWDG_SetWindowValue
+ .text.WWDG_EnableIT
+                0x080051d0       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+                0x080051d0                WWDG_EnableIT
+ .text.WWDG_SetCounter
+                0x080051e0       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+                0x080051e0                WWDG_SetCounter
+ .text.WWDG_Enable
+                0x080051f0       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+                0x080051f0                WWDG_Enable
+ .text.WWDG_ClearFlag
+                0x08005200       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+                0x08005200                WWDG_ClearFlag
+ .text.ADC_Init
+                0x08005210       0x4c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+                0x08005210                ADC_Init
+ .text.ADC_Cmd  0x0800525c       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+                0x0800525c                ADC_Cmd
+ .text.ADC_DMACmd
+                0x08005274       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+                0x08005274                ADC_DMACmd
+ .text.ADC_ITConfig
+                0x0800528c       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+                0x0800528c                ADC_ITConfig
+ .text.ADC_ResetCalibration
+                0x080052a4        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+                0x080052a4                ADC_ResetCalibration
+ .text.ADC_GetResetCalibrationStatus
+                0x080052b0        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+                0x080052b0                ADC_GetResetCalibrationStatus
+ .text.ADC_StartCalibration
+                0x080052bc        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+                0x080052bc                ADC_StartCalibration
+ .text.ADC_GetCalibrationStatus
+                0x080052c8        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+                0x080052c8                ADC_GetCalibrationStatus
+ .text.ADC_SoftwareStartConvCmd
+                0x080052d4       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+                0x080052d4                ADC_SoftwareStartConvCmd
+ .text.ADC_RegularChannelConfig
+                0x080052ec       0xa4 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+                0x080052ec                ADC_RegularChannelConfig
+ .text.ADC_TempSensorVrefintCmd
+                0x08005390       0x28 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+                0x08005390                ADC_TempSensorVrefintCmd
+ .text.ADC_ClearITPendingBit
+                0x080053b8        0x8 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+                0x080053b8                ADC_ClearITPendingBit
+ .text.BKP_WriteBackupRegister
+                0x080053c0        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+                0x080053c0                BKP_WriteBackupRegister
+ .text.BKP_ReadBackupRegister
+                0x080053cc       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+                0x080053cc                BKP_ReadBackupRegister
+ .text.BKP_ClearFlag
+                0x080053dc       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+                0x080053dc                BKP_ClearFlag
+ *(.rodata)
+ .rodata        0x080053f0       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ *(.rodata*)
+ .rodata.str1.1
+                0x08005404       0x6a C:\cortex\dimmers\hex\main.o
+ .rodata.str1.1
+                0x0800546e        0x5 C:\cortex\dimmers\hex\tasks.o
+ *(.glue_7)
+ *fill*         0x08005473        0x1 00
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_adc.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_exti.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_nvic.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_wdg.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\fir_stm32.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\main.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\memshift.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_storage.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\croutine.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\heap_2.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\list.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\port.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\queue.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\tasks.o
+ .glue_7        0x08005474        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .glue_7        0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .glue_7        0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .glue_7        0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+ .glue_7        0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .glue_7        0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .glue_7        0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .glue_7        0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .glue_7        0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .glue_7        0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .glue_7        0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .glue_7        0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .glue_7        0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .glue_7        0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
+ .glue_7        0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .glue_7        0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .glue_7        0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strncpy.o)
+ .glue_7        0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_tanh.o)
+ .glue_7        0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_expm1.o)
+ .glue_7        0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_fabs.o)
+ .glue_7        0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .glue_7        0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .glue_7        0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .glue_7        0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
+ .glue_7        0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunsdfsi.o)
+ *(.glue_7t)
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_adc.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_exti.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_nvic.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_wdg.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\fir_stm32.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\main.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\memshift.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\dimmers_storage.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\croutine.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\heap_2.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\list.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\port.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\queue.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\tasks.o
+ .glue_7t       0x08005474        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .glue_7t       0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .glue_7t       0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .glue_7t       0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+ .glue_7t       0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .glue_7t       0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .glue_7t       0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .glue_7t       0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .glue_7t       0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .glue_7t       0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .glue_7t       0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .glue_7t       0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .glue_7t       0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .glue_7t       0x08005474        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
+ .glue_7t       0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .glue_7t       0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .glue_7t       0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strncpy.o)
+ .glue_7t       0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_tanh.o)
+ .glue_7t       0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_expm1.o)
+ .glue_7t       0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a(lib_a-s_fabs.o)
+ .glue_7t       0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .glue_7t       0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .glue_7t       0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .glue_7t       0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
+ .glue_7t       0x08005474        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixunsdfsi.o)
+                0x08005474                . = ALIGN (0x4)
+                0x08005474                _etext = .
+                0x08005474                _sidata = _etext
+
+.vfp11_veneer   0x20000000        0x0
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_adc.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_exti.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_nvic.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_wdg.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\fir_stm32.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\main.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\memshift.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_storage.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\croutine.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\heap_2.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\list.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\port.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\queue.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .vfp11_veneer  0x20000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
+
+.janus_2cc_veneer
+                0x20000000        0x0
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_adc.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_exti.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_nvic.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_wdg.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\fir_stm32.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\main.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\memshift.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_storage.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\croutine.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\heap_2.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\list.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\port.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\queue.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .janus_2cc_veneer
+                0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
+
+.v4_bx          0x20000000        0x0
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_adc.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_exti.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_nvic.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_tim.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_wdg.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\fir_stm32.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\main.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\memshift.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\dimmers_storage.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\croutine.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\heap_2.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\list.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\port.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\queue.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\tasks.o
+ .v4_bx         0x20000000        0x0 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .v4_bx         0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .v4_bx         0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .v4_bx         0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+ .v4_bx         0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .v4_bx         0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .v4_bx         0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .v4_bx         0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .v4_bx         0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .v4_bx         0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .v4_bx         0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .v4_bx         0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .v4_bx         0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .v4_bx         0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
+
+.flashpatch     0x00000000        0x0
+                0x00000000                . = ALIGN (0x4)
+ *(.flashpatch)
+                0x00000000                . = ALIGN (0x4)
+
+.endflash       0x00000000        0x0
+                0x00000000                . = ALIGN (0x4)
+ *(.endflash)
+                0x00000000                . = ALIGN (0x4)
+
+.data           0x20000000      0x1ec load address 0x08005474
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _sdata = .
+ *(.data)
+ .data          0x20000000       0x90 C:\cortex\dimmers\hex\dimmers_exti.o
+                0x20000048                gx_extis_disable
+                0x20000000                gx_extis
+ .data          0x20000090       0xd0 C:\cortex\dimmers\hex\dimmers_gpio.o
+                0x20000090                gx_gpios
+ .data          0x20000160       0x3c C:\cortex\dimmers\hex\dimmers_nvic.o
+                0x20000160                gx_nvics
+ .data          0x2000019c       0x4c C:\cortex\dimmers\hex\dimmers_storage.o
+                0x200001e6                ZeroCrossTreshold
+                0x2000019c                Ci
+                0x200001dc                co
+                0x200001e4                theMin
+ .data          0x200001e8        0x4 C:\cortex\dimmers\hex\port.o
+ *(.data.*)
+ *(.RAMtext)
+                0x200001ec                . = ALIGN (0x4)
+                0x200001ec                _edata = .
+
+.bss            0x200001ec     0x53e4 load address 0x08005660
+                0x200001ec                . = ALIGN (0x4)
+                0x200001ec                _sbss = .
+ *(.bss)
+ .bss           0x200001ec       0x28 C:\cortex\dimmers\hex\stm32f10x_it.o
+                0x20000210                SecTick
+ .bss           0x20000214        0x1 C:\cortex\dimmers\hex\dimmers_bkp.o
+ *fill*         0x20000215        0x3 00
+ .bss           0x20000218       0x14 C:\cortex\dimmers\hex\dimmers_storage.o
+                0x20000220                PropertyFlags
+                0x20000218                secs
+                0x2000021c                theZero
+                0x20000224                RxIdx
+                0x2000021a                theMax
+                0x20000226                TxIdx
+                0x20000228                I2CRecReady
+                0x2000022a                CountWatchdog
+                0x2000021e                counterMinMax
+                0x20000229                IsWatchdog
+ .bss           0x2000022c     0x5018 C:\cortex\dimmers\hex\heap_2.o
+ .bss           0x20005244      0x100 C:\cortex\dimmers\hex\tasks.o
+                0x200052e0                pxCurrentTCB
+ *(COMMON)
+ COMMON         0x20005344        0x4 C:\cortex\dimmers\hex\dimmers_i2c.o
+                0x20005344                I2C2Adr
+                0x20005346                I2C1Adr
+ COMMON         0x20005348      0x288 C:\cortex\dimmers\hex\dimmers_storage.o
+                0x20005348                xSendStatusTaskHandle
+                0x2000534c                xSendUpdateTaskHandle
+                0x20005350                xRefreshTaskHandle
+                0x20005354                Compares
+                0x2000536c                Yi
+                0x2000537c                xI2CRecvSync
+                0x20005380                Lights
+                0x20005428                TempSensor
+                0x2000542c                xBKPsync
+                0x20005430                xButtonTaskHandle
+                0x20005448                ZeroCross
+                0x2000544c                xI2C2ReceiveTaskHandle
+                0x20005450                xI2CSendSync
+                0x20005454                xSemaphoreButtonArrayHandle
+                0x2000546c                BkpMemoryMap
+                0x200054c0                ExternData
+                0x20005514                InternData
+                0x20005568                CompareStates
+                0x20005580                Xi
+                0x200055c8                xI2C1SendTaskHandle
+                0x200055cc                xRefreshSync
+                0x200055d0                . = ALIGN (0x4)
+                0x200055d0                _ebss = .
+                0x200055d0                PROVIDE (end, _ebss)
+                0x200055d0                PROVIDE (_end, _ebss)
+
+._usrstack      0x200055d0      0x100 load address 0x0800aa44
+                0x200055d0                . = ALIGN (0x4)
+                0x200055d0                _susrstack = .
+                0x200056d0                . = (. + _Minimum_Stack_Size)
+ *fill*         0x200055d0      0x100 00
+                0x200056d0                . = ALIGN (0x4)
+                0x200056d0                _eusrstack = .
+
+.b1text
+ *(.b1text)
+ *(.b1rodata)
+ *(.b1rodata*)
+
+.eb0text
+ *(.eb0text)
+ *(.eb0rodata)
+ *(.eb0rodata*)
+
+.eb1text
+ *(.eb1text)
+ *(.eb1rodata)
+ *(.eb1rodata*)
+
+.eb2text
+ *(.eb2text)
+ *(.eb2rodata)
+ *(.eb2rodata*)
+
+.eb3text
+ *(.eb3text)
+ *(.eb3rodata)
+ *(.eb3rodata*)
+                0x200056d0                __exidx_start = .
+                0x200056d0                __exidx_end = .
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x56a
+ *(.comment)
+ .comment       0x00000000       0x2a C:\cortex\dimmers\hex\dimmers_adc.o
+ .comment       0x0000002a       0x2a C:\cortex\dimmers\hex\dimmers_exti.o
+ .comment       0x00000054       0x2a C:\cortex\dimmers\hex\dimmers_gpio.o
+ .comment       0x0000007e       0x2a C:\cortex\dimmers\hex\dimmers_nvic.o
+ .comment       0x000000a8       0x2a C:\cortex\dimmers\hex\dimmers_rcc.o
+ .comment       0x000000d2       0x2a C:\cortex\dimmers\hex\dimmers_tim.o
+ .comment       0x000000fc       0x2a C:\cortex\dimmers\hex\dimmers_wdg.o
+ .comment       0x00000126       0x2a C:\cortex\dimmers\hex\main.o
+ .comment       0x00000150       0x2a C:\cortex\dimmers\hex\stm32f10x_it.o
+ .comment       0x0000017a       0x2a C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .comment       0x000001a4       0x2a C:\cortex\dimmers\hex\dimmers_i2c.o
+ .comment       0x000001ce       0x2a C:\cortex\dimmers\hex\dimmers_bkp.o
+ .comment       0x000001f8       0x2a C:\cortex\dimmers\hex\dimmers_rtc.o
+ .comment       0x00000222       0x2a C:\cortex\dimmers\hex\dimmers_storage.o
+ .comment       0x0000024c       0x2a C:\cortex\dimmers\hex\croutine.o
+ .comment       0x00000276       0x2a C:\cortex\dimmers\hex\heap_2.o
+ .comment       0x000002a0       0x2a C:\cortex\dimmers\hex\list.o
+ .comment       0x000002ca       0x2a C:\cortex\dimmers\hex\port.o
+ .comment       0x000002f4       0x2a C:\cortex\dimmers\hex\queue.o
+ .comment       0x0000031e       0x2a C:\cortex\dimmers\hex\tasks.o
+ .comment       0x00000348       0x2a C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .comment       0x00000372       0x2a C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .comment       0x0000039c       0x2a C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .comment       0x000003c6       0x2a C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+ .comment       0x000003f0       0x2a C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .comment       0x0000041a       0x2a C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .comment       0x00000444       0x2a C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .comment       0x0000046e       0x2a C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .comment       0x00000498       0x2a C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .comment       0x000004c2       0x2a C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .comment       0x000004ec       0x2a C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .comment       0x00000516       0x2a C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .comment       0x00000540       0x2a C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0xa70
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x40 C:\cortex\dimmers\hex\dimmers_adc.o
+ .debug_aranges
+                0x00000040       0x28 C:\cortex\dimmers\hex\dimmers_exti.o
+ .debug_aranges
+                0x00000068       0x30 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .debug_aranges
+                0x00000098       0x20 C:\cortex\dimmers\hex\dimmers_nvic.o
+ .debug_aranges
+                0x000000b8       0x30 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .debug_aranges
+                0x000000e8      0x170 C:\cortex\dimmers\hex\dimmers_tim.o
+ .debug_aranges
+                0x00000258       0x20 C:\cortex\dimmers\hex\dimmers_wdg.o
+ .debug_aranges
+                0x00000278       0x20 C:\cortex\dimmers\hex\fir_stm32.o
+ .debug_aranges
+                0x00000298       0x90 C:\cortex\dimmers\hex\main.o
+ .debug_aranges
+                0x00000328       0x20 C:\cortex\dimmers\hex\memshift.o
+ .debug_aranges
+                0x00000348      0x240 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .debug_aranges
+                0x00000588       0x20 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .debug_aranges
+                0x000005a8       0x78 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .debug_aranges
+                0x00000620       0x90 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .debug_aranges
+                0x000006b0       0x20 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .debug_aranges
+                0x000006d0       0x38 C:\cortex\dimmers\hex\croutine.o
+ .debug_aranges
+                0x00000708       0x28 C:\cortex\dimmers\hex\heap_2.o
+ .debug_aranges
+                0x00000730       0x40 C:\cortex\dimmers\hex\list.o
+ .debug_aranges
+                0x00000770       0x68 C:\cortex\dimmers\hex\port.o
+ .debug_aranges
+                0x000007d8       0x88 C:\cortex\dimmers\hex\queue.o
+ .debug_aranges
+                0x00000860      0x108 C:\cortex\dimmers\hex\tasks.o
+ .debug_aranges
+                0x00000968      0x108 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+
+.debug_pubnames
+                0x00000000     0x1c18
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x63 C:\cortex\dimmers\hex\dimmers_adc.o
+ .debug_pubnames
+                0x00000063       0x51 C:\cortex\dimmers\hex\dimmers_exti.o
+ .debug_pubnames
+                0x000000b4       0x68 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .debug_pubnames
+                0x0000011c       0x2c C:\cortex\dimmers\hex\dimmers_nvic.o
+ .debug_pubnames
+                0x00000148       0x47 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .debug_pubnames
+                0x0000018f      0x430 C:\cortex\dimmers\hex\dimmers_tim.o
+ .debug_pubnames
+                0x000005bf       0x1d C:\cortex\dimmers\hex\dimmers_wdg.o
+ .debug_pubnames
+                0x000005dc      0x140 C:\cortex\dimmers\hex\main.o
+ .debug_pubnames
+                0x0000071c      0x648 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .debug_pubnames
+                0x00000d64       0x35 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .debug_pubnames
+                0x00000d99      0x130 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .debug_pubnames
+                0x00000ec9      0x163 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .debug_pubnames
+                0x0000102c       0x1e C:\cortex\dimmers\hex\dimmers_rtc.o
+ .debug_pubnames
+                0x0000104a      0x242 C:\cortex\dimmers\hex\dimmers_storage.o
+ .debug_pubnames
+                0x0000128c       0x96 C:\cortex\dimmers\hex\croutine.o
+ .debug_pubnames
+                0x00001322       0x31 C:\cortex\dimmers\hex\heap_2.o
+ .debug_pubnames
+                0x00001353       0x71 C:\cortex\dimmers\hex\list.o
+ .debug_pubnames
+                0x000013c4      0x10d C:\cortex\dimmers\hex\port.o
+ .debug_pubnames
+                0x000014d1      0x127 C:\cortex\dimmers\hex\queue.o
+ .debug_pubnames
+                0x000015f8      0x2c0 C:\cortex\dimmers\hex\tasks.o
+ .debug_pubnames
+                0x000018b8      0x360 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+
+.debug_info     0x00000000     0x6da8
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x414 C:\cortex\dimmers\hex\dimmers_adc.o
+ .debug_info    0x00000414      0x1f6 C:\cortex\dimmers\hex\dimmers_exti.o
+ .debug_info    0x0000060a      0x2bb C:\cortex\dimmers\hex\dimmers_gpio.o
+ .debug_info    0x000008c5      0x11e C:\cortex\dimmers\hex\dimmers_nvic.o
+ .debug_info    0x000009e3      0x198 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .debug_info    0x00000b7b      0xb0c C:\cortex\dimmers\hex\dimmers_tim.o
+ .debug_info    0x00001687       0x7d C:\cortex\dimmers\hex\dimmers_wdg.o
+ .debug_info    0x00001704       0x5d C:\cortex\dimmers\hex\fir_stm32.o
+ .debug_info    0x00001761      0xaf4 C:\cortex\dimmers\hex\main.o
+ .debug_info    0x00002255       0x5c C:\cortex\dimmers\hex\memshift.o
+ .debug_info    0x000022b1      0xf35 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .debug_info    0x000031e6      0x141 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .debug_info    0x00003327      0x367 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .debug_info    0x0000368e      0x6d9 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .debug_info    0x00003d67       0x92 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .debug_info    0x00003df9      0x64a C:\cortex\dimmers\hex\dimmers_storage.o
+ .debug_info    0x00004443      0x4ed C:\cortex\dimmers\hex\croutine.o
+ .debug_info    0x00004930      0x26f C:\cortex\dimmers\hex\heap_2.o
+ .debug_info    0x00004b9f      0x29c C:\cortex\dimmers\hex\list.o
+ .debug_info    0x00004e3b      0x1d6 C:\cortex\dimmers\hex\port.o
+ .debug_info    0x00005011      0x786 C:\cortex\dimmers\hex\queue.o
+ .debug_info    0x00005797      0xd2c C:\cortex\dimmers\hex\tasks.o
+ .debug_info    0x000064c3      0x8e5 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+
+.debug_abbrev   0x00000000     0x1d05
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x128 C:\cortex\dimmers\hex\dimmers_adc.o
+ .debug_abbrev  0x00000128       0xd9 C:\cortex\dimmers\hex\dimmers_exti.o
+ .debug_abbrev  0x00000201      0x169 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .debug_abbrev  0x0000036a       0xca C:\cortex\dimmers\hex\dimmers_nvic.o
+ .debug_abbrev  0x00000434       0xed C:\cortex\dimmers\hex\dimmers_rcc.o
+ .debug_abbrev  0x00000521      0x206 C:\cortex\dimmers\hex\dimmers_tim.o
+ .debug_abbrev  0x00000727       0x53 C:\cortex\dimmers\hex\dimmers_wdg.o
+ .debug_abbrev  0x0000077a       0x14 C:\cortex\dimmers\hex\fir_stm32.o
+ .debug_abbrev  0x0000078e      0x287 C:\cortex\dimmers\hex\main.o
+ .debug_abbrev  0x00000a15       0x14 C:\cortex\dimmers\hex\memshift.o
+ .debug_abbrev  0x00000a29      0x1f1 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .debug_abbrev  0x00000c1a       0xe3 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .debug_abbrev  0x00000cfd      0x112 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .debug_abbrev  0x00000e0f      0x22c C:\cortex\dimmers\hex\dimmers_bkp.o
+ .debug_abbrev  0x0000103b       0x5c C:\cortex\dimmers\hex\dimmers_rtc.o
+ .debug_abbrev  0x00001097       0xf6 C:\cortex\dimmers\hex\dimmers_storage.o
+ .debug_abbrev  0x0000118d      0x1eb C:\cortex\dimmers\hex\croutine.o
+ .debug_abbrev  0x00001378      0x13b C:\cortex\dimmers\hex\heap_2.o
+ .debug_abbrev  0x000014b3       0xee C:\cortex\dimmers\hex\list.o
+ .debug_abbrev  0x000015a1      0x115 C:\cortex\dimmers\hex\port.o
+ .debug_abbrev  0x000016b6      0x1aa C:\cortex\dimmers\hex\queue.o
+ .debug_abbrev  0x00001860      0x24c C:\cortex\dimmers\hex\tasks.o
+ .debug_abbrev  0x00001aac      0x259 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+
+.debug_line     0x00000000     0x2b7c
+ *(.debug_line)
+ .debug_line    0x00000000      0x194 C:\cortex\dimmers\hex\dimmers_adc.o
+ .debug_line    0x00000194       0xe6 C:\cortex\dimmers\hex\dimmers_exti.o
+ .debug_line    0x0000027a      0x123 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .debug_line    0x0000039d       0xc2 C:\cortex\dimmers\hex\dimmers_nvic.o
+ .debug_line    0x0000045f       0xe9 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .debug_line    0x00000548      0x4d3 C:\cortex\dimmers\hex\dimmers_tim.o
+ .debug_line    0x00000a1b       0x9f C:\cortex\dimmers\hex\dimmers_wdg.o
+ .debug_line    0x00000aba       0x7d C:\cortex\dimmers\hex\fir_stm32.o
+ .debug_line    0x00000b37      0x388 C:\cortex\dimmers\hex\main.o
+ .debug_line    0x00000ebf       0x58 C:\cortex\dimmers\hex\memshift.o
+ .debug_line    0x00000f17      0x69b C:\cortex\dimmers\hex\stm32f10x_it.o
+ .debug_line    0x000015b2       0xd7 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .debug_line    0x00001689      0x1d8 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .debug_line    0x00001861      0x2ec C:\cortex\dimmers\hex\dimmers_bkp.o
+ .debug_line    0x00001b4d       0xa5 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .debug_line    0x00001bf2      0x11c C:\cortex\dimmers\hex\dimmers_storage.o
+ .debug_line    0x00001d0e      0x147 C:\cortex\dimmers\hex\croutine.o
+ .debug_line    0x00001e55       0xc4 C:\cortex\dimmers\hex\heap_2.o
+ .debug_line    0x00001f19      0x104 C:\cortex\dimmers\hex\list.o
+ .debug_line    0x0000201d      0x144 C:\cortex\dimmers\hex\port.o
+ .debug_line    0x00002161      0x2a8 C:\cortex\dimmers\hex\queue.o
+ .debug_line    0x00002409      0x43a C:\cortex\dimmers\hex\tasks.o
+ .debug_line    0x00002843      0x339 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+
+.debug_frame    0x00000000     0x180c
+ *(.debug_frame)
+ .debug_frame   0x00000000       0xa4 C:\cortex\dimmers\hex\dimmers_adc.o
+ .debug_frame   0x000000a4       0x4c C:\cortex\dimmers\hex\dimmers_exti.o
+ .debug_frame   0x000000f0       0x5c C:\cortex\dimmers\hex\dimmers_gpio.o
+ .debug_frame   0x0000014c       0x2c C:\cortex\dimmers\hex\dimmers_nvic.o
+ .debug_frame   0x00000178       0x60 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .debug_frame   0x000001d8      0x42c C:\cortex\dimmers\hex\dimmers_tim.o
+ .debug_frame   0x00000604       0x28 C:\cortex\dimmers\hex\dimmers_wdg.o
+ .debug_frame   0x0000062c      0x18c C:\cortex\dimmers\hex\main.o
+ .debug_frame   0x000007b8      0x4e8 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .debug_frame   0x00000ca0       0x2c C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .debug_frame   0x00000ccc       0xe8 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .debug_frame   0x00000db4      0x188 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .debug_frame   0x00000f3c       0x28 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .debug_frame   0x00000f64       0x88 C:\cortex\dimmers\hex\croutine.o
+ .debug_frame   0x00000fec       0x48 C:\cortex\dimmers\hex\heap_2.o
+ .debug_frame   0x00001034       0x68 C:\cortex\dimmers\hex\list.o
+ .debug_frame   0x0000109c       0xc8 C:\cortex\dimmers\hex\port.o
+ .debug_frame   0x00001164      0x17c C:\cortex\dimmers\hex\queue.o
+ .debug_frame   0x000012e0      0x2f4 C:\cortex\dimmers\hex\tasks.o
+ .debug_frame   0x000015d4      0x238 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+
+.debug_str      0x00000000     0x2ef8
+ *(.debug_str)
+ .debug_str     0x00000000      0x28f C:\cortex\dimmers\hex\dimmers_adc.o
+                                0x2bc (size before relaxing)
+ .debug_str     0x0000028f      0x15f C:\cortex\dimmers\hex\dimmers_exti.o
+                                0x1dc (size before relaxing)
+ .debug_str     0x000003ee      0x1b2 C:\cortex\dimmers\hex\dimmers_gpio.o
+                                0x21f (size before relaxing)
+ .debug_str     0x000005a0       0xc5 C:\cortex\dimmers\hex\dimmers_nvic.o
+                                0x142 (size before relaxing)
+ .debug_str     0x00000665       0xed C:\cortex\dimmers\hex\dimmers_rcc.o
+                                0x170 (size before relaxing)
+ .debug_str     0x00000752      0x64c C:\cortex\dimmers\hex\dimmers_tim.o
+                                0x6e7 (size before relaxing)
+ .debug_str     0x00000d9e       0x2b C:\cortex\dimmers\hex\dimmers_wdg.o
+                                 0x98 (size before relaxing)
+ .debug_str     0x00000dc9      0x357 C:\cortex\dimmers\hex\main.o
+                                0x5c3 (size before relaxing)
+ .debug_str     0x00001120      0x5cd C:\cortex\dimmers\hex\stm32f10x_it.o
+                                0x91f (size before relaxing)
+ .debug_str     0x000016ed       0x7d C:\cortex\dimmers\hex\stm32f10x_vector.o
+                                0x103 (size before relaxing)
+ .debug_str     0x0000176a      0x182 C:\cortex\dimmers\hex\dimmers_i2c.o
+                                0x259 (size before relaxing)
+ .debug_str     0x000018ec      0x1b3 C:\cortex\dimmers\hex\dimmers_bkp.o
+                                0x392 (size before relaxing)
+ .debug_str     0x00001a9f       0x2c C:\cortex\dimmers\hex\dimmers_rtc.o
+                                 0x9f (size before relaxing)
+ .debug_str     0x00001acb       0x83 C:\cortex\dimmers\hex\dimmers_storage.o
+                                0x38a (size before relaxing)
+ .debug_str     0x00001b4e      0x356 C:\cortex\dimmers\hex\croutine.o
+                                0x3cf (size before relaxing)
+ .debug_str     0x00001ea4      0x128 C:\cortex\dimmers\hex\heap_2.o
+                                0x1bd (size before relaxing)
+ .debug_str     0x00001fcc       0xaa C:\cortex\dimmers\hex\list.o
+                                0x1e8 (size before relaxing)
+ .debug_str     0x00002076      0x147 C:\cortex\dimmers\hex\port.o
+                                0x1ba (size before relaxing)
+ .debug_str     0x000021bd      0x30d C:\cortex\dimmers\hex\queue.o
+                                0x472 (size before relaxing)
+ .debug_str     0x000024ca      0x5b6 C:\cortex\dimmers\hex\tasks.o
+                                0x7d9 (size before relaxing)
+ .debug_str     0x00002a80      0x478 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+                                0x5b5 (size before relaxing)
+
+.debug_loc      0x00000000     0x2aa4
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x10f C:\cortex\dimmers\hex\dimmers_adc.o
+ .debug_loc     0x0000010f       0x3e C:\cortex\dimmers\hex\dimmers_exti.o
+ .debug_loc     0x0000014d       0xb3 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .debug_loc     0x00000200       0x1f C:\cortex\dimmers\hex\dimmers_nvic.o
+ .debug_loc     0x0000021f       0x7c C:\cortex\dimmers\hex\dimmers_rcc.o
+ .debug_loc     0x0000029b      0x71c C:\cortex\dimmers\hex\dimmers_tim.o
+ .debug_loc     0x000009b7       0x1f C:\cortex\dimmers\hex\dimmers_wdg.o
+ .debug_loc     0x000009d6      0x366 C:\cortex\dimmers\hex\main.o
+ .debug_loc     0x00000d3c      0x1d1 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .debug_loc     0x00000f0d       0x32 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .debug_loc     0x00000f3f       0x3e C:\cortex\dimmers\hex\dimmers_i2c.o
+ .debug_loc     0x00000f7d      0x440 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .debug_loc     0x000013bd       0x1f C:\cortex\dimmers\hex\dimmers_rtc.o
+ .debug_loc     0x000013dc      0x1a8 C:\cortex\dimmers\hex\croutine.o
+ .debug_loc     0x00001584      0x1e0 C:\cortex\dimmers\hex\heap_2.o
+ .debug_loc     0x00001764       0x3d C:\cortex\dimmers\hex\list.o
+ .debug_loc     0x000017a1       0x7b C:\cortex\dimmers\hex\port.o
+ .debug_loc     0x0000181c      0x621 C:\cortex\dimmers\hex\queue.o
+ .debug_loc     0x00001e3d      0x8f2 C:\cortex\dimmers\hex\tasks.o
+ .debug_loc     0x0000272f      0x375 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+START GROUP
+LOAD c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a
+LOAD c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a
+END GROUP
+OUTPUT(C:\cortex\dimmers\hex\dimmers.elf elf32-littlearm)
+
+.debug_ranges   0x00000000      0xa58
+ .debug_ranges  0x00000000       0x38 C:\cortex\dimmers\hex\dimmers_adc.o
+ .debug_ranges  0x00000038       0x20 C:\cortex\dimmers\hex\dimmers_exti.o
+ .debug_ranges  0x00000058       0x28 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .debug_ranges  0x00000080       0x18 C:\cortex\dimmers\hex\dimmers_nvic.o
+ .debug_ranges  0x00000098       0x28 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .debug_ranges  0x000000c0      0x168 C:\cortex\dimmers\hex\dimmers_tim.o
+ .debug_ranges  0x00000228       0x18 C:\cortex\dimmers\hex\dimmers_wdg.o
+ .debug_ranges  0x00000240       0xa0 C:\cortex\dimmers\hex\main.o
+ .debug_ranges  0x000002e0      0x238 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .debug_ranges  0x00000518       0x18 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .debug_ranges  0x00000530       0x70 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .debug_ranges  0x000005a0       0x88 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .debug_ranges  0x00000628       0x18 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .debug_ranges  0x00000640       0x78 C:\cortex\dimmers\hex\croutine.o
+ .debug_ranges  0x000006b8       0x38 C:\cortex\dimmers\hex\heap_2.o
+ .debug_ranges  0x000006f0       0x38 C:\cortex\dimmers\hex\list.o
+ .debug_ranges  0x00000728       0x60 C:\cortex\dimmers\hex\port.o
+ .debug_ranges  0x00000788       0x80 C:\cortex\dimmers\hex\queue.o
+ .debug_ranges  0x00000808      0x150 C:\cortex\dimmers\hex\tasks.o
+ .debug_ranges  0x00000958      0x100 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x31 C:\cortex\dimmers\hex\dimmers_adc.o
+ .ARM.attributes
+                0x00000031       0x31 C:\cortex\dimmers\hex\dimmers_exti.o
+ .ARM.attributes
+                0x00000062       0x31 C:\cortex\dimmers\hex\dimmers_gpio.o
+ .ARM.attributes
+                0x00000093       0x31 C:\cortex\dimmers\hex\dimmers_nvic.o
+ .ARM.attributes
+                0x000000c4       0x31 C:\cortex\dimmers\hex\dimmers_rcc.o
+ .ARM.attributes
+                0x000000f5       0x31 C:\cortex\dimmers\hex\dimmers_tim.o
+ .ARM.attributes
+                0x00000126       0x31 C:\cortex\dimmers\hex\dimmers_wdg.o
+ .ARM.attributes
+                0x00000157       0x21 C:\cortex\dimmers\hex\fir_stm32.o
+ .ARM.attributes
+                0x00000178       0x31 C:\cortex\dimmers\hex\main.o
+ .ARM.attributes
+                0x000001a9       0x21 C:\cortex\dimmers\hex\memshift.o
+ .ARM.attributes
+                0x000001ca       0x31 C:\cortex\dimmers\hex\stm32f10x_it.o
+ .ARM.attributes
+                0x000001fb       0x31 C:\cortex\dimmers\hex\stm32f10x_vector.o
+ .ARM.attributes
+                0x0000022c       0x31 C:\cortex\dimmers\hex\dimmers_i2c.o
+ .ARM.attributes
+                0x0000025d       0x31 C:\cortex\dimmers\hex\dimmers_bkp.o
+ .ARM.attributes
+                0x0000028e       0x31 C:\cortex\dimmers\hex\dimmers_rtc.o
+ .ARM.attributes
+                0x000002bf       0x2f C:\cortex\dimmers\hex\dimmers_storage.o
+ .ARM.attributes
+                0x000002ee       0x31 C:\cortex\dimmers\hex\croutine.o
+ .ARM.attributes
+                0x0000031f       0x31 C:\cortex\dimmers\hex\heap_2.o
+ .ARM.attributes
+                0x00000350       0x31 C:\cortex\dimmers\hex\list.o
+ .ARM.attributes
+                0x00000381       0x31 C:\cortex\dimmers\hex\port.o
+ .ARM.attributes
+                0x000003b2       0x31 C:\cortex\dimmers\hex\queue.o
+ .ARM.attributes
+                0x000003e3       0x31 C:\cortex\dimmers\hex\tasks.o
+ .ARM.attributes
+                0x00000414       0x31 C:\cortex\dimmers\hex\stm32f10x_nvic.o
+ .ARM.attributes
+                0x00000445       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .ARM.attributes
+                0x00000476       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_exti.o)
+ .ARM.attributes
+                0x000004a7       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+ .ARM.attributes
+                0x000004d8       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .ARM.attributes
+                0x00000509       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_i2c.o)
+ .ARM.attributes
+                0x0000053a       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_pwr.o)
+ .ARM.attributes
+                0x0000056b       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rcc.o)
+ .ARM.attributes
+                0x0000059c       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_rtc.o)
+ .ARM.attributes
+                0x000005cd       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_tim.o)
+ .ARM.attributes
+                0x000005fe       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .ARM.attributes
+                0x0000062f       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_adc.o)
+ .ARM.attributes
+                0x00000660       0x31 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_bkp.o)
+ .ARM.attributes
+                0x00000691       0x21 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)

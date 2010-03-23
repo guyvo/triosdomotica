@@ -1,0 +1,491 @@
+<!-- DWF2XML 2.00.01 - Raisonance Dwarf information extractor -->
+<aoffile Header="dimmers" Path="C:\cortex\dimmers\hex\dimmers.elf">
+ <Def>
+  <Col Header="DeclFile" Desc="File"/>
+  <Col Header="Type" Desc="Type"/>
+  <Col Header="Header" Desc="Name"/>
+ </Def>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="65" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
+ <type Header="bool" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="80" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="84" Pointer="No"/>
+ <type Header="ADC_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_adc.h" DeclLine="59" Pointer="No"/>
+ <type Header="DMA_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_dma.h" DeclLine="64" Pointer="No"/>
+ <func Header="AdcEnable" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_adc.c" DeclLine="132"/>
+ <func Header="AdcCalibration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_adc.c" DeclLine="111"/>
+ <func Header="AdcInit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_adc.c" DeclLine="74"/>
+ <func Header="AdcDmaInit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_adc.c" DeclLine="25"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="84" Pointer="No"/>
+ <type Header="EXTIMode_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_exti.h" DeclLine="55" Pointer="No"/>
+ <type Header="EXTITrigger_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_exti.h" DeclLine="65" Pointer="No"/>
+ <type Header="EXTI_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_exti.h" DeclLine="78" Pointer="No"/>
+ <type Header="TExti" Icon="1" Type="type" Desc=": struct TExti" DeclFile="C:\cortex\dimmers\src\dimmers_exti.c" DeclLine="20" Pointer="No"/>
+ <func Header="ExtiInit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_exti.c" DeclLine="63"/>
+ <variable Header="gx_extis" Icon="2" Type="variable" Desc=":   struct TExti[6]" DeclFile="C:\cortex\dimmers\src\dimmers_exti.c" DeclLine="22" Pointer="No"/>
+ <variable Header="gx_extis_disable" Icon="2" Type="variable" Desc=":   struct TExti[6]" DeclFile="C:\cortex\dimmers\src\dimmers_exti.c" DeclLine="31" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="65" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
+ <type Header="GPIO_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_map.h" DeclLine="368" Pointer="No"/>
+ <type Header="GPIOSpeed_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_gpio.h" DeclLine="64" Pointer="No"/>
+ <type Header="GPIOMode_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_gpio.h" DeclLine="79" Pointer="No"/>
+ <type Header="GPIO_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_gpio.h" DeclLine="92" Pointer="No"/>
+ <type Header="DIP_STATE" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\dimmers\include\dimmers_gpio.h" DeclLine="14" Pointer="No"/>
+ <type Header="GpioDef" Icon="1" Type="type" Desc=": struct GpioDef" DeclFile="C:\cortex\dimmers\src\dimmers_gpio.c" DeclLine="23" Pointer="No"/>
+ <func Header="GpioGetDipState" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\dimmers\src\dimmers_gpio.c" DeclLine="110"/>
+ <func Header="GpioClockSet" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_gpio.c" DeclLine="94"/>
+ <func Header="GpioInit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_gpio.c" DeclLine="74"/>
+ <variable Header="GPIO_InitStructure" Icon="2" Type="variable" Desc=":   struct " DeclFile="C:\cortex\dimmers\src\dimmers_gpio.c" DeclLine="19" Pointer="No"/>
+ <variable Header="gx_gpios" Icon="2" Type="variable" Desc=":   struct GpioDef[26]" DeclFile="C:\cortex\dimmers\src\dimmers_gpio.c" DeclLine="30" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="84" Pointer="No"/>
+ <type Header="NVIC_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_nvic.h" DeclLine="57" Pointer="No"/>
+ <func Header="NvicInit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_nvic.c" DeclLine="52"/>
+ <variable Header="gx_nvics" Icon="2" Type="variable" Desc=":   struct [15]" DeclFile="C:\cortex\dimmers\src\dimmers_nvic.c" DeclLine="27" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
+ <type Header="bool" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="80" Pointer="No"/>
+ <type Header="ErrorStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="87" Pointer="No"/>
+ <type Header="RCC_ClocksTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_rcc.h" DeclLine="57" Pointer="No"/>
+ <func Header="RccInit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_rcc.c" DeclLine="37"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="65" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="84" Pointer="No"/>
+ <type Header="TIM_TimeBaseInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_tim.h" DeclLine="59" Pointer="No"/>
+ <type Header="TIM_OCInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_tim.h" DeclLine="72" Pointer="No"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <func Header="ComparesToArrayOfFunctions" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="372"/>
+ <func Header="CompareStatesToArrayOfFunctions" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="382"/>
+ <func Header="TimResetAll" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="392"/>
+ <func Header="TimGetHoldValue" Icon="3" Type="func" Desc=":   unsigned int" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="291"/>
+ <func Header="TimSetCompareSetHold6" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="361"/>
+ <func Header="TimSetCompareSetHold5" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="349"/>
+ <func Header="TimSetCompareSetHold4" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="337"/>
+ <func Header="TimSetCompareSetHold3" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="325"/>
+ <func Header="TimSetCompareSetHold2" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="313"/>
+ <func Header="TimSetCompareSetHold1" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="301"/>
+ <func Header="TimStartAll" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="282"/>
+ <func Header="SetTimIntCompare6" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="278"/>
+ <func Header="SetTimIntCompare5" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="274"/>
+ <func Header="SetTimIntCompare4" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="270"/>
+ <func Header="SetTimIntCompare3" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="266"/>
+ <func Header="SetTimIntCompare2" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="262"/>
+ <func Header="SetTimIntCompare1" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="258"/>
+ <func Header="TimSetInitCompareSetHold6" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="217"/>
+ <func Header="TimSetInitCompareSetHold4" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="179"/>
+ <func Header="TimSetInitCompareSetHold2" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="142"/>
+ <func Header="TimSetInitCompareSetHold5" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="198"/>
+ <func Header="TimSetInitCompareSetHold3" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="160"/>
+ <func Header="TimSetInitCompareSetHold1" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="123"/>
+ <func Header="TimSetConfigTimer4" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="79"/>
+ <func Header="TimSetConfigTimer3" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="67"/>
+ <func Header="TimSetConfigTimer2" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="55"/>
+ <func Header="TimSetConfigTimer1" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="43"/>
+ <func Header="TimSetClockTimer4" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="27"/>
+ <func Header="TimSetClockTimer3" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="24"/>
+ <func Header="TimSetClockTimer2" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="21"/>
+ <func Header="TimSetClockTimer1" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_tim.c" DeclLine="18"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <func Header="WdgSet" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_wdg.c" DeclLine="25"/>
+ <type Header="s16" Icon="1" Type="type" Desc=": int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="49" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="65" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
+ <type Header="bool" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="80" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="84" Pointer="No"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="SWITCHER_TYPE" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="59" Pointer="No"/>
+ <type Header="LIGHT_DIRECTION" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="60" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <type Header="TLightProperties" Icon="1" Type="type" Desc=": struct TlightProperties" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="84" Pointer="No"/>
+ <type Header="pTLightProperties" Icon="1" Type="type" Desc=": struct TlightProperties CODE*" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="84" Pointer="Yes"/>
+ <func Header="UtilUpdateLightFromButton" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\main.c" DeclLine="97"/>
+ <func Header="vSendUpdateTask" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\main.c" DeclLine="511"/>
+ <func Header="vButtonDimmerTask" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\main.c" DeclLine="351"/>
+ <func Header="vButtonToggleTask" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\main.c" DeclLine="299"/>
+ <func Header="vRefreshTask" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\main.c" DeclLine="469"/>
+ <func Header="vI2C2ReceiveTask" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\main.c" DeclLine="454"/>
+ <func Header="vInitDimmerValues" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\main.c" DeclLine="330"/>
+ <func Header="vTaskInitSystem" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\main.c" DeclLine="147"/>
+ <func Header="main" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\dimmers\src\main.c" DeclLine="71"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <variable Header="count" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\src\main.c" DeclLine="52" Pointer="No"/>
+ <type Header="s32" Icon="1" Type="type" Desc=": long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="48" Pointer="No"/>
+ <type Header="s16" Icon="1" Type="type" Desc=": int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="49" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="65" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
+ <type Header="bool" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="80" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="84" Pointer="No"/>
+ <type Header="COEFS" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\dimmers\include\stm32_dsp.h" DeclLine="35" Pointer="No"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="SWITCHER_TYPE" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="59" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <type Header="TLightProperties" Icon="1" Type="type" Desc=": struct TlightProperties" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="84" Pointer="No"/>
+ <type Header="TBKPData" Icon="1" Type="type" Desc=": struct TBKPData" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="91" Pointer="No"/>
+ <func Header="NMIException" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="118"/>
+ <func Header="HardFaultException" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="129"/>
+ <func Header="MemManageException" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="148"/>
+ <func Header="BusFaultException" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="163"/>
+ <func Header="UsageFaultException" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="178"/>
+ <func Header="DebugMonitor" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="193"/>
+ <func Header="TAMPER_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="270"/>
+ <func Header="FLASH_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="312"/>
+ <func Header="RCC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="323"/>
+ <func Header="EXTI0_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="334"/>
+ <func Header="EXTI1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="345"/>
+ <func Header="EXTI2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="356"/>
+ <func Header="EXTI3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="367"/>
+ <func Header="EXTI4_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="378"/>
+ <func Header="DMA1_Channel1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="389"/>
+ <func Header="DMA1_Channel2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="400"/>
+ <func Header="DMA1_Channel3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="411"/>
+ <func Header="DMA1_Channel4_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="422"/>
+ <func Header="DMA1_Channel5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="433"/>
+ <func Header="DMA1_Channel6_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="444"/>
+ <func Header="DMA1_Channel7_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="455"/>
+ <func Header="USB_HP_CAN_TX_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="479"/>
+ <func Header="USB_LP_CAN_RX0_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="491"/>
+ <func Header="CAN_RX1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="502"/>
+ <func Header="CAN_SCE_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="513"/>
+ <func Header="TIM1_BRK_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="588"/>
+ <func Header="TIM1_TRG_COM_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="614"/>
+ <func Header="TIM1_CC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="625"/>
+ <func Header="SPI1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="940"/>
+ <func Header="SPI2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="951"/>
+ <func Header="USART1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="962"/>
+ <func Header="USART2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="973"/>
+ <func Header="USART3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="984"/>
+ <func Header="RTCAlarm_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1034"/>
+ <func Header="USBWakeUp_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1045"/>
+ <func Header="TIM8_BRK_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1056"/>
+ <func Header="TIM8_UP_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1068"/>
+ <func Header="TIM8_TRG_COM_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1080"/>
+ <func Header="TIM8_CC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1091"/>
+ <func Header="FSMC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1163"/>
+ <func Header="SDIO_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1174"/>
+ <func Header="TIM5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1185"/>
+ <func Header="SPI3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1196"/>
+ <func Header="UART4_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1207"/>
+ <func Header="UART5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1218"/>
+ <func Header="TIM6_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1229"/>
+ <func Header="TIM7_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1240"/>
+ <func Header="DMA2_Channel1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1251"/>
+ <func Header="DMA2_Channel2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1262"/>
+ <func Header="DMA2_Channel3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1273"/>
+ <func Header="DMA2_Channel4_5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1285"/>
+ <func Header="ADC1_2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="466"/>
+ <func Header="ADC3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="1126"/>
+ <func Header="EXTI15_10_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="995"/>
+ <func Header="EXTI9_5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="524"/>
+ <func Header="I2C2_ER_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="912"/>
+ <func Header="I2C1_ER_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="813"/>
+ <func Header="I2C2_EV_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="841"/>
+ <func Header="I2C1_EV_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="773"/>
+ <func Header="TIM4_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="728"/>
+ <func Header="TIM3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="683"/>
+ <func Header="TIM2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="638"/>
+ <func Header="TIM1_UP_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="600"/>
+ <func Header="RTC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="281"/>
+ <func Header="PVD_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="252"/>
+ <func Header="WWDG_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="237"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <variable Header="SecTick" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\src\stm32f10x_it.c" DeclLine="97" Pointer="No"/>
+ <type Header="bool" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="80" Pointer="No"/>
+ <func Header="Reset_Handler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_vector.c" DeclLine="154"/>
+ <variable Header="g_pfnVectors" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\stm32f10x_vector.c" DeclLine="66" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="65" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
+ <type Header="I2C_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_i2c.h" DeclLine="59" Pointer="No"/>
+ <func Header="I2CInit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_i2c.c" DeclLine="20"/>
+ <variable Header="I2C1Adr" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="C:\cortex\dimmers\src\dimmers_i2c.c" DeclLine="16" Pointer="No"/>
+ <variable Header="I2C2Adr" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="C:\cortex\dimmers\src\dimmers_i2c.c" DeclLine="17" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="65" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
+ <type Header="bool" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="80" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="84" Pointer="No"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="SWITCHER_TYPE" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="59" Pointer="No"/>
+ <type Header="TLight" Icon="1" Type="type" Desc=": struct TLight" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="70" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <type Header="pTLightProperties" Icon="1" Type="type" Desc=": struct TlightProperties CODE*" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="84" Pointer="Yes"/>
+ <type Header="TBKPData" Icon="1" Type="type" Desc=": struct TBKPData" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="91" Pointer="No"/>
+ <type Header="TBKPMemoryMap" Icon="1" Type="type" Desc=": struct TBKPMemoryMap" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="101" Pointer="No"/>
+ <func Header="BkpCopyIntExtMemory" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_bkp.c" DeclLine="304"/>
+ <func Header="BkpFullWriteToBkp" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_bkp.c" DeclLine="316"/>
+ <func Header="BkpSetFactoryDefaultsGeneral" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_bkp.c" DeclLine="132"/>
+ <func Header="BkpSetFactoryDefaultsForLight" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_bkp.c" DeclLine="68"/>
+ <func Header="BkpFullReadToMemory" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_bkp.c" DeclLine="275"/>
+ <func Header="BkpWriteGeneralToMemory" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_bkp.c" DeclLine="254"/>
+ <func Header="BkpGetSwitcherType" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\dimmers\src\dimmers_bkp.c" DeclLine="141"/>
+ <func Header="BkpWriteLightPropertiesToMemory" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_bkp.c" DeclLine="187"/>
+ <func Header="BkpSetFactoryDefaultsToLights" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_bkp.c" DeclLine="261"/>
+ <func Header="BkpUnlock" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_bkp.c" DeclLine="33"/>
+ <func Header="BkpLock" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_bkp.c" DeclLine="28"/>
+ <func Header="BkpInit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_bkp.c" DeclLine="20"/>
+ <func Header="RtcInit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\dimmers_rtc.c" DeclLine="15"/>
+ <type Header="s32" Icon="1" Type="type" Desc=": long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="48" Pointer="No"/>
+ <type Header="s16" Icon="1" Type="type" Desc=": int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="49" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="65" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
+ <type Header="bool" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="80" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="84" Pointer="No"/>
+ <type Header="COEFS" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\dimmers\include\stm32_dsp.h" DeclLine="35" Pointer="No"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="SWITCHER_TYPE" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="59" Pointer="No"/>
+ <type Header="TLight" Icon="1" Type="type" Desc=": struct TLight" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="70" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <type Header="TLightProperties" Icon="1" Type="type" Desc=": struct TlightProperties" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="84" Pointer="No"/>
+ <type Header="TBKPData" Icon="1" Type="type" Desc=": struct TBKPData" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="91" Pointer="No"/>
+ <type Header="TBKPMemoryMap" Icon="1" Type="type" Desc=": struct TBKPMemoryMap" DeclFile="C:\cortex\dimmers\include\dimmers_storage.h" DeclLine="101" Pointer="No"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <type Header="pfCompareSetAndHoldGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="42" Pointer="No"/>
+ <variable Header="Compares" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="15" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <type Header="pfSetCompareIntGeneric" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\include\dimmers_tim.h" DeclLine="43" Pointer="No"/>
+ <variable Header="CompareStates" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="16" Pointer="No"/>
+ <variable Header="ExternData" Icon="2" Type="variable" Desc=":   struct TBKPData" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="18" Pointer="No"/>
+ <variable Header="InternData" Icon="2" Type="variable" Desc=":   struct TBKPData" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="19" Pointer="No"/>
+ <variable Header="BkpMemoryMap" Icon="2" Type="variable" Desc=":   struct TBKPMemoryMap" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="20" Pointer="No"/>
+ <variable Header="Lights" Icon="2" Type="variable" Desc=":   struct TlightProperties[6]" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="14" Pointer="No"/>
+ <variable Header="TempSensor" Icon="2" Type="variable" Desc=":   int" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="22" Pointer="No"/>
+ <variable Header="ZeroCross" Icon="2" Type="variable" Desc=":   int" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="23" Pointer="No"/>
+ <variable Header="Xi" Icon="2" Type="variable" Desc=":   int[35]" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="25" Pointer="No"/>
+ <variable Header="Yi" Icon="2" Type="variable" Desc=":   long[4]" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="26" Pointer="No"/>
+ <variable Header="Ci" Icon="2" Type="variable" Desc=":   unsigned int[32]" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="28" Pointer="No"/>
+ <variable Header="co" Icon="2" Type="variable" Desc=":   struct " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="38" Pointer="No"/>
+ <variable Header="RxIdx" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="50" Pointer="No"/>
+ <variable Header="TxIdx" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="51" Pointer="No"/>
+ <variable Header="I2CRecReady" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="53" Pointer="No"/>
+ <variable Header="IsWatchdog" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="54" Pointer="No"/>
+ <variable Header="secs" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="43" Pointer="No"/>
+ <variable Header="theMax" Icon="2" Type="variable" Desc=":   int" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="44" Pointer="No"/>
+ <variable Header="theMin" Icon="2" Type="variable" Desc=":   int" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="45" Pointer="No"/>
+ <variable Header="theZero" Icon="2" Type="variable" Desc=":   int" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="46" Pointer="No"/>
+ <variable Header="counterMinMax" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="47" Pointer="No"/>
+ <variable Header="ZeroCrossTreshold" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="56" Pointer="No"/>
+ <variable Header="CountWatchdog" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="57" Pointer="No"/>
+ <variable Header="PropertyFlags" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="48" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <variable Header="xButtonTaskHandle" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="59" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <variable Header="xI2C1SendTaskHandle" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="61" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <variable Header="xI2C2ReceiveTaskHandle" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="62" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <variable Header="xRefreshTaskHandle" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="64" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <variable Header="xSendUpdateTaskHandle" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="66" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <variable Header="xSendStatusTaskHandle" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="67" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <variable Header="xSemaphoreButtonArrayHandle" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="69" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <variable Header="xRefreshSync" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="71" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <variable Header="xI2CSendSync" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="73" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <variable Header="xI2CRecvSync" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="74" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\queue.h" DeclLine="65" Pointer="No"/>
+ <type Header="xSemaphoreHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\semphr.h" DeclLine="61" Pointer="No"/>
+ <variable Header="xBKPsync" Icon="2" Type="variable" Desc=":    " DeclFile="C:\cortex\dimmers\src\dimmers_storage.c" DeclLine="76" Pointer="No"/>
+ <type Header="portTickType" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\dimmers\rtos\include\portmacro.h" DeclLine="83" Pointer="No"/>
+ <type Header="xListItem" Icon="1" Type="type" Desc=": struct xLIST_ITEM" DeclFile="C:\cortex\dimmers\rtos\include\list.h" DeclLine="104" Pointer="No"/>
+ <type Header="xMiniListItem" Icon="1" Type="type" Desc=": struct xMINI_LIST_ITEM" DeclFile="C:\cortex\dimmers\rtos\include\list.h" DeclLine="112" Pointer="No"/>
+ <type Header="xList" Icon="1" Type="type" Desc=": struct xLIST" DeclFile="C:\cortex\dimmers\rtos\include\list.h" DeclLine="122" Pointer="No"/>
+ <type Header="xCoRoutineHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\croutine.h" DeclLine="71" Pointer="No"/>
+ <type Header="crCOROUTINE_CODE" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\croutine.h" DeclLine="74" Pointer="No"/>
+ <type Header="crCOROUTINE_CODE" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\croutine.h" DeclLine="74" Pointer="No"/>
+ <type Header="corCRCB" Icon="1" Type="type" Desc=": struct corCoRoutineControlBlock" DeclFile="C:\cortex\dimmers\rtos\include\croutine.h" DeclLine="84" Pointer="No"/>
+ <variable Header="pxReadyCoRoutineLists" Icon="2" Type="variable" Desc=":   struct xLIST[2]" DeclFile="C:\cortex\dimmers\rtos\src\croutine.c" DeclLine="66" Pointer="No"/>
+ <variable Header="xDelayedCoRoutineList1" Icon="2" Type="variable" Desc=":   struct xLIST" DeclFile="C:\cortex\dimmers\rtos\src\croutine.c" DeclLine="67" Pointer="No"/>
+ <variable Header="xDelayedCoRoutineList2" Icon="2" Type="variable" Desc=":   struct xLIST" DeclFile="C:\cortex\dimmers\rtos\src\croutine.c" DeclLine="68" Pointer="No"/>
+ <variable Header="pxDelayedCoRoutineList" Icon="2" Type="variable" Desc=":   struct xLIST CODE*" DeclFile="C:\cortex\dimmers\rtos\src\croutine.c" DeclLine="69" Pointer="Yes"/>
+ <variable Header="pxOverflowDelayedCoRoutineList" Icon="2" Type="variable" Desc=":   struct xLIST CODE*" DeclFile="C:\cortex\dimmers\rtos\src\croutine.c" DeclLine="70" Pointer="Yes"/>
+ <variable Header="xPendingReadyCoRoutineList" Icon="2" Type="variable" Desc=":   struct xLIST" DeclFile="C:\cortex\dimmers\rtos\src\croutine.c" DeclLine="71" Pointer="No"/>
+ <variable Header="uxTopCoRoutineReadyPriority" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\croutine.c" DeclLine="75" Pointer="No"/>
+ <variable Header="xCoRoutineTickCount" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\croutine.c" DeclLine="76" Pointer="No"/>
+ <variable Header="xLastTickCount" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\croutine.c" DeclLine="76" Pointer="No"/>
+ <variable Header="xPassedTicks" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\croutine.c" DeclLine="76" Pointer="No"/>
+ <variable Header="pxCurrentCoRoutine" Icon="2" Type="variable" Desc=":   struct corCoRoutineControlBlock CODE*" DeclFile="C:\cortex\dimmers\rtos\src\croutine.c" DeclLine="74" Pointer="Yes"/>
+ <type Header="size_t" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stddef.h" DeclLine="213" Pointer="No"/>
+ <type Header="xBlockLink" Icon="1" Type="type" Desc=": struct A_BLOCK_LINK" DeclFile="C:\cortex\dimmers\rtos\src\heap_2.c" DeclLine="101" Pointer="No"/>
+ <func Header="vPortFree" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\heap_2.c" DeclLine="238"/>
+ <func Header="pvPortMalloc" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\heap_2.c" DeclLine="160"/>
+ <variable Header="xHeap" Icon="2" Type="variable" Desc=":   struct xRTOS_HEAP" DeclFile="C:\cortex\dimmers\rtos\src\heap_2.c" DeclLine="93" Pointer="No"/>
+ <variable Header="xStart" Icon="2" Type="variable" Desc=":   struct A_BLOCK_LINK" DeclFile="C:\cortex\dimmers\rtos\src\heap_2.c" DeclLine="108" Pointer="No"/>
+ <variable Header="xEnd" Icon="2" Type="variable" Desc=":   struct A_BLOCK_LINK" DeclFile="C:\cortex\dimmers\rtos\src\heap_2.c" DeclLine="108" Pointer="No"/>
+ <type Header="portTickType" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\dimmers\rtos\include\portmacro.h" DeclLine="83" Pointer="No"/>
+ <type Header="xListItem" Icon="1" Type="type" Desc=": struct xLIST_ITEM" DeclFile="C:\cortex\dimmers\rtos\include\list.h" DeclLine="104" Pointer="No"/>
+ <type Header="xMiniListItem" Icon="1" Type="type" Desc=": struct xMINI_LIST_ITEM" DeclFile="C:\cortex\dimmers\rtos\include\list.h" DeclLine="112" Pointer="No"/>
+ <type Header="xList" Icon="1" Type="type" Desc=": struct xLIST" DeclFile="C:\cortex\dimmers\rtos\include\list.h" DeclLine="122" Pointer="No"/>
+ <func Header="vListInitialise" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\list.c" DeclLine="62"/>
+ <func Header="vListInitialiseItem" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\list.c" DeclLine="82"/>
+ <func Header="vListInsertEnd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\list.c" DeclLine="89"/>
+ <func Header="vListInsert" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\list.c" DeclLine="112"/>
+ <func Header="vListRemove" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\list.c" DeclLine="153"/>
+ <type Header="pdTASK_CODE" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\projdefs.h" DeclLine="56" Pointer="No"/>
+ <func Header="pxPortInitialiseStack" Icon="3" Type="func" Desc=":   unsigned long CODE*" DeclFile="C:\cortex\dimmers\rtos\src\port.c" DeclLine="113"/>
+ <type Header="pdTASK_CODE" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\projdefs.h" DeclLine="56" Pointer="No"/>
+ <func Header="vPortSVCHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\port.c" DeclLine="130"/>
+ <func Header="vPortStartFirstTask" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\port.c" DeclLine="149"/>
+ <func Header="vPortYieldFromISR" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\port.c" DeclLine="192"/>
+ <func Header="vPortEnterCritical" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\port.c" DeclLine="199"/>
+ <func Header="vPortExitCritical" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\port.c" DeclLine="206"/>
+ <func Header="xPortPendSVHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\port.c" DeclLine="216"/>
+ <func Header="xPortStartScheduler" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\dimmers\rtos\src\port.c" DeclLine="164"/>
+ <func Header="xPortSysTickHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\port.c" DeclLine="251"/>
+ <variable Header="uxCriticalNesting" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\port.c" DeclLine="88" Pointer="No"/>
+ <variable Header="ulKernelPriority" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\port.c" DeclLine="84" Pointer="No"/>
+ <type Header="size_t" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stddef.h" DeclLine="213" Pointer="No"/>
+ <type Header="portTickType" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\dimmers\rtos\include\portmacro.h" DeclLine="83" Pointer="No"/>
+ <type Header="xListItem" Icon="1" Type="type" Desc=": struct xLIST_ITEM" DeclFile="C:\cortex\dimmers\rtos\include\list.h" DeclLine="104" Pointer="No"/>
+ <type Header="xMiniListItem" Icon="1" Type="type" Desc=": struct xMINI_LIST_ITEM" DeclFile="C:\cortex\dimmers\rtos\include\list.h" DeclLine="112" Pointer="No"/>
+ <type Header="xList" Icon="1" Type="type" Desc=": struct xLIST" DeclFile="C:\cortex\dimmers\rtos\include\list.h" DeclLine="122" Pointer="No"/>
+ <type Header="xTimeOutType" Icon="1" Type="type" Desc=": struct xTIME_OUT" DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="93" Pointer="No"/>
+ <type Header="xQUEUE" Icon="1" Type="type" Desc=": struct QueueDefinition" DeclFile="C:\cortex\dimmers\rtos\src\queue.c" DeclLine="106" Pointer="No"/>
+ <type Header="xQueueHandle" Icon="1" Type="type" Desc=": struct QueueDefinition CODE*" DeclFile="C:\cortex\dimmers\rtos\src\queue.c" DeclLine="114" Pointer="Yes"/>
+ <func Header="prvCopyDataFromQueue" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\queue.c" DeclLine="1071"/>
+ <func Header="prvUnlockQueue" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\queue.c" DeclLine="1085"/>
+ <func Header="xQueueGenericReceive" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\dimmers\rtos\src\queue.c" DeclLine="804"/>
+ <func Header="prvCopyDataToQueue" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\queue.c" DeclLine="1033"/>
+ <func Header="xQueueGenericSendFromISR" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\dimmers\rtos\src\queue.c" DeclLine="751"/>
+ <func Header="xQueueGenericSend" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\dimmers\rtos\src\queue.c" DeclLine="443"/>
+ <func Header="xQueueCreateMutex" Icon="3" Type="func" Desc=":   struct QueueDefinition CODE*" DeclFile="C:\cortex\dimmers\rtos\src\queue.c" DeclLine="291"/>
+ <func Header="xQueueCreate" Icon="3" Type="func" Desc=":   struct QueueDefinition CODE*" DeclFile="C:\cortex\dimmers\rtos\src\queue.c" DeclLine="238"/>
+ <type Header="pdTASK_CODE" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\projdefs.h" DeclLine="56" Pointer="No"/>
+ <type Header="portTickType" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\dimmers\rtos\include\portmacro.h" DeclLine="83" Pointer="No"/>
+ <type Header="xListItem" Icon="1" Type="type" Desc=": struct xLIST_ITEM" DeclFile="C:\cortex\dimmers\rtos\include\list.h" DeclLine="104" Pointer="No"/>
+ <type Header="xMiniListItem" Icon="1" Type="type" Desc=": struct xMINI_LIST_ITEM" DeclFile="C:\cortex\dimmers\rtos\include\list.h" DeclLine="112" Pointer="No"/>
+ <type Header="xList" Icon="1" Type="type" Desc=": struct xLIST" DeclFile="C:\cortex\dimmers\rtos\include\list.h" DeclLine="122" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <type Header="xTimeOutType" Icon="1" Type="type" Desc=": struct xTIME_OUT" DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="93" Pointer="No"/>
+ <type Header="tskTCB" Icon="1" Type="type" Desc=": struct tskTaskControlBlock" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="99" Pointer="No"/>
+ <func Header="xTaskIsTaskSuspended" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="857"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <func Header="vTaskSuspendAll" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1017"/>
+ <func Header="vTaskSwitchContext" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1394"/>
+ <func Header="vTaskSetTimeOutState" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1541"/>
+ <func Header="vTaskMissedYield" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1591"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <func Header="xTaskGetCurrentTaskHandle" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1899"/>
+ <func Header="xTaskGetSchedulerState" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1913"/>
+ <func Header="vTaskPriorityDisinherit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1973"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <func Header="vTaskPriorityInherit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1941"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <func Header="xTaskRemoveFromEventList" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1494"/>
+ <func Header="vTaskIncrementTick" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1227"/>
+ <func Header="xTaskCheckForTimeOut" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1548"/>
+ <func Header="vTaskPlaceOnEventList" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1424"/>
+ <func Header="xTaskResumeAll" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1025"/>
+ <func Header="vTaskResume" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="888"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <func Header="vTaskSuspend" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="814"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <func Header="vTaskDelay" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="626"/>
+ <func Header="vTaskDelete" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="483"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <func Header="prvIdleTask" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="1607"/>
+ <func Header="xTaskCreate" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="358"/>
+ <type Header="pdTASK_CODE" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\projdefs.h" DeclLine="56" Pointer="No"/>
+ <type Header="xTaskHandle" Icon="1" Type="type" Desc=":  " DeclFile="C:\cortex\dimmers\rtos\include\task.h" DeclLine="84" Pointer="No"/>
+ <func Header="vTaskStartScheduler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="969"/>
+ <variable Header="pxReadyTasksLists" Icon="2" Type="variable" Desc=":   struct xLIST[5]" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="115" Pointer="No"/>
+ <variable Header="xDelayedTaskList1" Icon="2" Type="variable" Desc=":   struct xLIST" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="116" Pointer="No"/>
+ <variable Header="xDelayedTaskList2" Icon="2" Type="variable" Desc=":   struct xLIST" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="117" Pointer="No"/>
+ <variable Header="pxDelayedTaskList" Icon="2" Type="variable" Desc=":   struct xLIST CODE*" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="118" Pointer="Yes"/>
+ <variable Header="pxOverflowDelayedTaskList" Icon="2" Type="variable" Desc=":   struct xLIST CODE*" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="119" Pointer="Yes"/>
+ <variable Header="xPendingReadyList" Icon="2" Type="variable" Desc=":   struct xLIST" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="120" Pointer="No"/>
+ <variable Header="xTasksWaitingTermination" Icon="2" Type="variable" Desc=":   struct xLIST" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="124" Pointer="No"/>
+ <variable Header="uxTasksDeleted" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="125" Pointer="No"/>
+ <variable Header="xSuspendedTaskList" Icon="2" Type="variable" Desc=":   struct xLIST" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="131" Pointer="No"/>
+ <variable Header="uxCurrentNumberOfTasks" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="136" Pointer="No"/>
+ <variable Header="xTickCount" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="137" Pointer="No"/>
+ <variable Header="uxTopUsedPriority" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="138" Pointer="No"/>
+ <variable Header="uxTopReadyPriority" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="139" Pointer="No"/>
+ <variable Header="xSchedulerRunning" Icon="2" Type="variable" Desc=":   long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="140" Pointer="No"/>
+ <variable Header="uxSchedulerSuspended" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="141" Pointer="No"/>
+ <variable Header="uxMissedTicks" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="142" Pointer="No"/>
+ <variable Header="xMissedYield" Icon="2" Type="variable" Desc=":   long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="143" Pointer="No"/>
+ <variable Header="xNumOfOverflows" Icon="2" Type="variable" Desc=":   long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="144" Pointer="No"/>
+ <variable Header="uxTaskNumber" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="145" Pointer="No"/>
+ <variable Header="pxCurrentTCB" Icon="2" Type="variable" Desc=":   struct tskTaskControlBlock CODE*" DeclFile="C:\cortex\dimmers\rtos\src\tasks.c" DeclLine="111" Pointer="Yes"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="65" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="82" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="84" Pointer="No"/>
+ <type Header="NVIC_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_nvic.h" DeclLine="57" Pointer="No"/>
+ <func Header="NVIC_PriorityGroupConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_nvic.c" DeclLine="98"/>
+ <func Header="NVIC_Init" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_nvic.c" DeclLine="117"/>
+ <func Header="NVIC_SetVectorTable" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\dimmers\src\stm32f10x_nvic.c" DeclLine="394"/>
+</aoffile>
+

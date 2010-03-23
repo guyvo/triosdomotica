@@ -1,0 +1,258 @@
+
+C:\cortex\dimmers\hex\heap_2.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\heap_2.o
+
+Disassembly of section .text.vPortFree:
+
+00000000 <vPortFree>:
+vPortFree():
+C:\cortex\dimmers\rtos\src/heap_2.c:238
+	return pvReturn;
+}
+/*-----------------------------------------------------------*/
+
+void vPortFree( void *pv )
+{
+   0:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\rtos\src/heap_2.c:242
+unsigned portCHAR *puc = ( unsigned portCHAR * ) pv;
+xBlockLink *pxLink;
+
+	if( pv )
+   2:	4604      	mov	r4, r0
+   4:	b188      	cbz	r0, 2a <vPortFree+0x2a>
+C:\cortex\dimmers\rtos\src/heap_2.c:249
+		/* The memory being freed will have an xBlockLink structure immediately
+		before it. */
+		puc -= heapSTRUCT_SIZE;
+
+		/* This casting is to keep the compiler from issuing warnings. */
+		pxLink = ( void * ) puc;
+   6:	f1a0 0508 	sub.w	r5, r0, #8	; 0x8
+C:\cortex\dimmers\rtos\src/heap_2.c:251
+
+		vTaskSuspendAll();
+   a:	f7ff fffe 	bl	0 <vTaskSuspendAll>
+C:\cortex\dimmers\rtos\src/heap_2.c:254
+		{				
+			/* Add this block to the list of free blocks. */
+			prvInsertBlockIntoFreeList( ( ( xBlockLink * ) pxLink ) );
+   e:	f854 0c04 	ldr.w	r0, [r4, #-4]
+  12:	4a06      	ldr	r2, [pc, #24]	(2c <vPortFree+0x2c>)
+  14:	6813      	ldr	r3, [r2, #0]
+  16:	4611      	mov	r1, r2
+  18:	461a      	mov	r2, r3
+  1a:	685b      	ldr	r3, [r3, #4]
+  1c:	4283      	cmp	r3, r0
+  1e:	d3f9      	bcc.n	14 <vPortFree+0x14>
+  20:	f844 2c08 	str.w	r2, [r4, #-8]
+  24:	600d      	str	r5, [r1, #0]
+C:\cortex\dimmers\rtos\src/heap_2.c:256
+		}
+		xTaskResumeAll();
+  26:	f7ff fffe 	bl	0 <xTaskResumeAll>
+C:\cortex\dimmers\rtos\src/heap_2.c:258
+	}
+}
+  2a:	bd70      	pop	{r4, r5, r6, pc}
+  2c:	00000000 	.word	0x00000000
+Disassembly of section .text.pvPortMalloc:
+
+00000000 <pvPortMalloc>:
+pvPortMalloc():
+C:\cortex\dimmers\rtos\src/heap_2.c:160
+	pxFirstFreeBlock->pxNextFreeBlock = &xEnd;										\
+}
+/*-----------------------------------------------------------*/
+
+void *pvPortMalloc( size_t xWantedSize )
+{
+   0:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\rtos\src/heap_2.c:169
+
+	vTaskSuspendAll();
+	{
+		/* If this is the first call to malloc then the heap will require
+		initialisation to setup the list of free blocks. */
+		if( xHeapHasBeenInitialised == pdFALSE )
+   2:	4d27      	ldr	r5, [pc, #156]	(a0 <pvPortMalloc+0xa0>)
+C:\cortex\dimmers\rtos\src/heap_2.c:160
+	pxFirstFreeBlock->pxNextFreeBlock = &xEnd;										\
+}
+/*-----------------------------------------------------------*/
+
+void *pvPortMalloc( size_t xWantedSize )
+{
+   4:	4604      	mov	r4, r0
+C:\cortex\dimmers\rtos\src/heap_2.c:165
+xBlockLink *pxBlock, *pxPreviousBlock, *pxNewBlockLink;
+static portBASE_TYPE xHeapHasBeenInitialised = pdFALSE;
+void *pvReturn = NULL;
+
+	vTaskSuspendAll();
+   6:	f7ff fffe 	bl	0 <vTaskSuspendAll>
+C:\cortex\dimmers\rtos\src/heap_2.c:169
+	{
+		/* If this is the first call to malloc then the heap will require
+		initialisation to setup the list of free blocks. */
+		if( xHeapHasBeenInitialised == pdFALSE )
+   a:	68a8      	ldr	r0, [r5, #8]
+   c:	b980      	cbnz	r0, 30 <pvPortMalloc+0x30>
+C:\cortex\dimmers\rtos\src/heap_2.c:171
+		{
+			prvHeapInit();
+   e:	4b25      	ldr	r3, [pc, #148]	(a4 <pvPortMalloc+0xa4>)
+  10:	f44f 42a0 	mov.w	r2, #20480	; 0x5000
+  14:	f8c3 2c34 	str.w	r2, [r3, #3124]
+  18:	f8c3 0c30 	str.w	r0, [r3, #3120]
+  1c:	f503 6343 	add.w	r3, r3, #3120	; 0xc30
+  20:	f105 0110 	add.w	r1, r5, #16	; 0x10
+  24:	612b      	str	r3, [r5, #16]
+C:\cortex\dimmers\rtos\src/heap_2.c:172
+			xHeapHasBeenInitialised = pdTRUE;
+  26:	2301      	movs	r3, #1
+C:\cortex\dimmers\rtos\src/heap_2.c:171
+	{
+		/* If this is the first call to malloc then the heap will require
+		initialisation to setup the list of free blocks. */
+		if( xHeapHasBeenInitialised == pdFALSE )
+		{
+			prvHeapInit();
+  28:	6068      	str	r0, [r5, #4]
+  2a:	6029      	str	r1, [r5, #0]
+  2c:	604a      	str	r2, [r1, #4]
+C:\cortex\dimmers\rtos\src/heap_2.c:172
+			xHeapHasBeenInitialised = pdTRUE;
+  2e:	60ab      	str	r3, [r5, #8]
+C:\cortex\dimmers\rtos\src/heap_2.c:177
+		}
+
+		/* The wanted size is increased so it can contain a xBlockLink
+		structure in addition to the requested amount of bytes. */
+		if( xWantedSize > 0 )
+  30:	b134      	cbz	r4, 40 <pvPortMalloc+0x40>
+C:\cortex\dimmers\rtos\src/heap_2.c:179
+		{
+			xWantedSize += heapSTRUCT_SIZE;
+  32:	3408      	adds	r4, #8
+C:\cortex\dimmers\rtos\src/heap_2.c:182
+
+			/* Ensure that blocks are always aligned to the required number of bytes. */
+			if( xWantedSize & heapBYTE_ALIGNMENT_MASK )
+  34:	f014 0f03 	tst.w	r4, #3	; 0x3
+C:\cortex\dimmers\rtos\src/heap_2.c:185
+			{
+				/* Byte alignment required. */
+				xWantedSize += ( portBYTE_ALIGNMENT - ( xWantedSize & heapBYTE_ALIGNMENT_MASK ) );
+  38:	bf1c      	itt	ne
+  3a:	f024 0303 	bicne.w	r3, r4, #3	; 0x3
+  3e:	1d1c      	addne	r4, r3, #4
+C:\cortex\dimmers\rtos\src/heap_2.c:189
+			}
+		}
+
+		if( ( xWantedSize > 0 ) && ( xWantedSize < configTOTAL_HEAP_SIZE ) )
+  40:	1e62      	subs	r2, r4, #1
+  42:	f644 73fe 	movw	r3, #20478	; 0x4ffe
+  46:	429a      	cmp	r2, r3
+  48:	d825      	bhi.n	96 <pvPortMalloc+0x96>
+C:\cortex\dimmers\rtos\src/heap_2.c:194
+		{
+			/* Blocks are stored in byte order - traverse the list from the start
+			(smallest) block until one of adequate size is found. */
+			pxPreviousBlock = &xStart;
+			pxBlock = xStart.pxNextFreeBlock;
+  4a:	4b15      	ldr	r3, [pc, #84]	(a0 <pvPortMalloc+0xa0>)
+  4c:	681a      	ldr	r2, [r3, #0]
+  4e:	4618      	mov	r0, r3
+C:\cortex\dimmers\rtos\src/heap_2.c:195
+			while( ( pxBlock->xBlockSize < xWantedSize ) && ( pxBlock->pxNextFreeBlock ) )
+  50:	6853      	ldr	r3, [r2, #4]
+  52:	42a3      	cmp	r3, r4
+  54:	d205      	bcs.n	62 <pvPortMalloc+0x62>
+  56:	6813      	ldr	r3, [r2, #0]
+  58:	4611      	mov	r1, r2
+  5a:	b113      	cbz	r3, 62 <pvPortMalloc+0x62>
+  5c:	461a      	mov	r2, r3
+  5e:	4608      	mov	r0, r1
+  60:	e7f6      	b.n	50 <pvPortMalloc+0x50>
+C:\cortex\dimmers\rtos\src/heap_2.c:202
+				pxPreviousBlock = pxBlock;
+				pxBlock = pxBlock->pxNextFreeBlock;
+			}
+
+			/* If we found the end marker then a block of adequate size was not found. */
+			if( pxBlock != &xEnd )
+  62:	4b11      	ldr	r3, [pc, #68]	(a8 <pvPortMalloc+0xa8>)
+  64:	429a      	cmp	r2, r3
+  66:	d016      	beq.n	96 <pvPortMalloc+0x96>
+C:\cortex\dimmers\rtos\src/heap_2.c:206
+			{
+				/* Return the memory space - jumping over the xBlockLink structure
+				at its start. */
+				pvReturn = ( void * ) ( ( ( unsigned portCHAR * ) pxPreviousBlock->pxNextFreeBlock ) + heapSTRUCT_SIZE );
+  68:	6803      	ldr	r3, [r0, #0]
+  6a:	f103 0508 	add.w	r5, r3, #8	; 0x8
+C:\cortex\dimmers\rtos\src/heap_2.c:210
+
+				/* This block is being returned for use so must be taken our of the
+				list of free blocks. */
+				pxPreviousBlock->pxNextFreeBlock = pxBlock->pxNextFreeBlock;
+  6e:	6813      	ldr	r3, [r2, #0]
+  70:	6003      	str	r3, [r0, #0]
+C:\cortex\dimmers\rtos\src/heap_2.c:213
+
+				/* If the block is larger than required it can be split into two. */
+				if( ( pxBlock->xBlockSize - xWantedSize ) > heapMINIMUM_BLOCK_SIZE )
+  72:	6853      	ldr	r3, [r2, #4]
+  74:	1b1b      	subs	r3, r3, r4
+  76:	2b10      	cmp	r3, #16
+  78:	d90e      	bls.n	98 <pvPortMalloc+0x98>
+C:\cortex\dimmers\rtos\src/heap_2.c:218
+				{
+					/* This block is to be split into two.  Create a new block
+					following the number of bytes requested. The void cast is
+					used to prevent byte alignment warnings from the compiler. */
+					pxNewBlockLink = ( void * ) ( ( ( unsigned portCHAR * ) pxBlock ) + xWantedSize );
+  7a:	1911      	adds	r1, r2, r4
+C:\cortex\dimmers\rtos\src/heap_2.c:222
+					
+					/* Calculate the sizes of two blocks split from the single
+					block. */
+					pxNewBlockLink->xBlockSize = pxBlock->xBlockSize - xWantedSize;	
+  7c:	604b      	str	r3, [r1, #4]
+C:\cortex\dimmers\rtos\src/heap_2.c:223
+					pxBlock->xBlockSize = xWantedSize;			
+  7e:	6054      	str	r4, [r2, #4]
+C:\cortex\dimmers\rtos\src/heap_2.c:226
+					
+					/* Insert the new block into the list of free blocks. */
+					prvInsertBlockIntoFreeList( ( pxNewBlockLink ) );
+  80:	684c      	ldr	r4, [r1, #4]
+  82:	4a07      	ldr	r2, [pc, #28]	(a0 <pvPortMalloc+0xa0>)
+  84:	6813      	ldr	r3, [r2, #0]
+  86:	4610      	mov	r0, r2
+  88:	461a      	mov	r2, r3
+  8a:	685b      	ldr	r3, [r3, #4]
+  8c:	42a3      	cmp	r3, r4
+  8e:	d3f9      	bcc.n	84 <pvPortMalloc+0x84>
+  90:	600a      	str	r2, [r1, #0]
+  92:	6001      	str	r1, [r0, #0]
+  94:	e000      	b.n	98 <pvPortMalloc+0x98>
+  96:	2500      	movs	r5, #0
+C:\cortex\dimmers\rtos\src/heap_2.c:231
+				}
+			}
+		}
+	}
+	xTaskResumeAll();
+  98:	f7ff fffe 	bl	0 <xTaskResumeAll>
+C:\cortex\dimmers\rtos\src/heap_2.c:234
+
+	return pvReturn;
+}
+  9c:	4628      	mov	r0, r5
+  9e:	bd70      	pop	{r4, r5, r6, pc}
+  a0:	00000000 	.word	0x00000000
+  a4:	000043e0 	.word	0x000043e0
+  a8:	00005010 	.word	0x00005010

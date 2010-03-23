@@ -1,0 +1,215 @@
+
+C:\cortex\dimmers\hex\dimmers_exti.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\dimmers_exti.o
+
+Disassembly of section .text.ExtiInit:
+
+00000000 <ExtiInit>:
+ExtiInit():
+C:\cortex\dimmers\src/dimmers_exti.c:63
+        x_EXTI_InitStructure.EXTI_LineCmd	= gx_extis_disable[u8_exti].extidef.EXTI_LineCmd;
+        EXTI_Init(&x_EXTI_InitStructure);
+    }
+
+ }
+void ExtiInit (void){
+   0:	b537      	push	{r0, r1, r2, r4, r5, lr}
+   2:	4c16      	ldr	r4, [pc, #88]	(5c <ExtiInit+0x5c>)
+C:\cortex\dimmers\src/dimmers_exti.c:69
+
+  EXTI_InitTypeDef	x_EXTI_InitStructure;
+  u8				u8_exti;
+ 
+  for ( u8_exti=0 ; u8_exti < (sizeof (gx_extis)/sizeof(TExti)) ; u8_exti++ ){
+	GPIO_EXTILineConfig(gx_extis[u8_exti].extigpiox , gx_extis[u8_exti].extipinx );
+   4:	7820      	ldrb	r0, [r4, #0]
+   6:	7861      	ldrb	r1, [r4, #1]
+   8:	f7ff fffe 	bl	0 <GPIO_EXTILineConfig>
+C:\cortex\dimmers\src/dimmers_exti.c:70
+	x_EXTI_InitStructure.EXTI_Line		= gx_extis[u8_exti].extidef.EXTI_Line;
+   c:	f854 3c08 	ldr.w	r3, [r4, #-8]
+C:\cortex\dimmers\src/dimmers_exti.c:74
+	x_EXTI_InitStructure.EXTI_Mode		= gx_extis[u8_exti].extidef.EXTI_Mode;
+	x_EXTI_InitStructure.EXTI_Trigger	= gx_extis[u8_exti].extidef.EXTI_Trigger;
+	x_EXTI_InitStructure.EXTI_LineCmd	= gx_extis[u8_exti].extidef.EXTI_LineCmd;
+	EXTI_Init(&x_EXTI_InitStructure);
+  10:	4668      	mov	r0, sp
+C:\cortex\dimmers\src/dimmers_exti.c:70
+  EXTI_InitTypeDef	x_EXTI_InitStructure;
+  u8				u8_exti;
+ 
+  for ( u8_exti=0 ; u8_exti < (sizeof (gx_extis)/sizeof(TExti)) ; u8_exti++ ){
+	GPIO_EXTILineConfig(gx_extis[u8_exti].extigpiox , gx_extis[u8_exti].extipinx );
+	x_EXTI_InitStructure.EXTI_Line		= gx_extis[u8_exti].extidef.EXTI_Line;
+  12:	9300      	str	r3, [sp, #0]
+C:\cortex\dimmers\src/dimmers_exti.c:71
+	x_EXTI_InitStructure.EXTI_Mode		= gx_extis[u8_exti].extidef.EXTI_Mode;
+  14:	f814 3c04 	ldrb.w	r3, [r4, #-4]
+C:\cortex\dimmers\src/dimmers_exti.c:74
+	x_EXTI_InitStructure.EXTI_Trigger	= gx_extis[u8_exti].extidef.EXTI_Trigger;
+	x_EXTI_InitStructure.EXTI_LineCmd	= gx_extis[u8_exti].extidef.EXTI_LineCmd;
+	EXTI_Init(&x_EXTI_InitStructure);
+  18:	466d      	mov	r5, sp
+C:\cortex\dimmers\src/dimmers_exti.c:71
+  u8				u8_exti;
+ 
+  for ( u8_exti=0 ; u8_exti < (sizeof (gx_extis)/sizeof(TExti)) ; u8_exti++ ){
+	GPIO_EXTILineConfig(gx_extis[u8_exti].extigpiox , gx_extis[u8_exti].extipinx );
+	x_EXTI_InitStructure.EXTI_Line		= gx_extis[u8_exti].extidef.EXTI_Line;
+	x_EXTI_InitStructure.EXTI_Mode		= gx_extis[u8_exti].extidef.EXTI_Mode;
+  1a:	f88d 3004 	strb.w	r3, [sp, #4]
+C:\cortex\dimmers\src/dimmers_exti.c:72
+	x_EXTI_InitStructure.EXTI_Trigger	= gx_extis[u8_exti].extidef.EXTI_Trigger;
+  1e:	f814 3c03 	ldrb.w	r3, [r4, #-3]
+  22:	f88d 3005 	strb.w	r3, [sp, #5]
+C:\cortex\dimmers\src/dimmers_exti.c:73
+	x_EXTI_InitStructure.EXTI_LineCmd	= gx_extis[u8_exti].extidef.EXTI_LineCmd;
+  26:	f814 3c02 	ldrb.w	r3, [r4, #-2]
+C:\cortex\dimmers\src/dimmers_exti.c:74
+	EXTI_Init(&x_EXTI_InitStructure);
+  2a:	340c      	adds	r4, #12
+C:\cortex\dimmers\src/dimmers_exti.c:73
+  for ( u8_exti=0 ; u8_exti < (sizeof (gx_extis)/sizeof(TExti)) ; u8_exti++ ){
+	GPIO_EXTILineConfig(gx_extis[u8_exti].extigpiox , gx_extis[u8_exti].extipinx );
+	x_EXTI_InitStructure.EXTI_Line		= gx_extis[u8_exti].extidef.EXTI_Line;
+	x_EXTI_InitStructure.EXTI_Mode		= gx_extis[u8_exti].extidef.EXTI_Mode;
+	x_EXTI_InitStructure.EXTI_Trigger	= gx_extis[u8_exti].extidef.EXTI_Trigger;
+	x_EXTI_InitStructure.EXTI_LineCmd	= gx_extis[u8_exti].extidef.EXTI_LineCmd;
+  2c:	f88d 3006 	strb.w	r3, [sp, #6]
+C:\cortex\dimmers\src/dimmers_exti.c:74
+	EXTI_Init(&x_EXTI_InitStructure);
+  30:	f7ff fffe 	bl	0 <EXTI_Init>
+C:\cortex\dimmers\src/dimmers_exti.c:68
+void ExtiInit (void){
+
+  EXTI_InitTypeDef	x_EXTI_InitStructure;
+  u8				u8_exti;
+ 
+  for ( u8_exti=0 ; u8_exti < (sizeof (gx_extis)/sizeof(TExti)) ; u8_exti++ ){
+  34:	4b0a      	ldr	r3, [pc, #40]	(60 <ExtiInit+0x60>)
+  36:	429c      	cmp	r4, r3
+  38:	d1e4      	bne.n	4 <ExtiInit+0x4>
+C:\cortex\dimmers\src/dimmers_exti.c:77
+	x_EXTI_InitStructure.EXTI_Trigger	= gx_extis[u8_exti].extidef.EXTI_Trigger;
+	x_EXTI_InitStructure.EXTI_LineCmd	= gx_extis[u8_exti].extidef.EXTI_LineCmd;
+	EXTI_Init(&x_EXTI_InitStructure);
+  }
+    // PVD without pinsource
+    x_EXTI_InitStructure.EXTI_Line = EXTI_Line16;
+  3a:	f44f 3380 	mov.w	r3, #65536	; 0x10000
+  3e:	9300      	str	r3, [sp, #0]
+C:\cortex\dimmers\src/dimmers_exti.c:78
+    x_EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+  40:	f5a3 3380 	sub.w	r3, r3, #65536	; 0x10000
+  44:	f88d 3004 	strb.w	r3, [sp, #4]
+C:\cortex\dimmers\src/dimmers_exti.c:79
+    x_EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
+  48:	330c      	adds	r3, #12
+  4a:	f88d 3005 	strb.w	r3, [sp, #5]
+C:\cortex\dimmers\src/dimmers_exti.c:81
+    x_EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+    EXTI_Init(&x_EXTI_InitStructure);
+  4e:	4668      	mov	r0, sp
+C:\cortex\dimmers\src/dimmers_exti.c:80
+  }
+    // PVD without pinsource
+    x_EXTI_InitStructure.EXTI_Line = EXTI_Line16;
+    x_EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    x_EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
+    x_EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+  50:	2301      	movs	r3, #1
+  52:	f88d 3006 	strb.w	r3, [sp, #6]
+C:\cortex\dimmers\src/dimmers_exti.c:81
+    EXTI_Init(&x_EXTI_InitStructure);
+  56:	f7ff fffe 	bl	0 <EXTI_Init>
+C:\cortex\dimmers\src/dimmers_exti.c:82
+ }
+  5a:	bd3e      	pop	{r1, r2, r3, r4, r5, pc}
+  5c:	00000008 	.word	0x00000008
+  60:	00000050 	.word	0x00000050
+Disassembly of section .text.ExtiDisable:
+
+00000000 <ExtiDisable>:
+ExtiDisable():
+C:\cortex\dimmers\src/dimmers_exti.c:48
+* Description    : Enable & bind the gpio to exti
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void ExtiDisable (void){
+   0:	b513      	push	{r0, r1, r4, lr}
+   2:	4c0e      	ldr	r4, [pc, #56]	(3c <ExtiDisable+0x3c>)
+C:\cortex\dimmers\src/dimmers_exti.c:54
+
+    EXTI_InitTypeDef	x_EXTI_InitStructure;
+    u8				u8_exti;
+ 
+    for ( u8_exti=0 ; u8_exti < (sizeof (gx_extis_disable)/sizeof(TExti)) ; u8_exti++ ){
+        GPIO_EXTILineConfig(gx_extis_disable[u8_exti].extigpiox , gx_extis_disable[u8_exti].extipinx );
+   4:	7820      	ldrb	r0, [r4, #0]
+   6:	7861      	ldrb	r1, [r4, #1]
+   8:	f7ff fffe 	bl	0 <GPIO_EXTILineConfig>
+C:\cortex\dimmers\src/dimmers_exti.c:55
+        x_EXTI_InitStructure.EXTI_Line		= gx_extis_disable[u8_exti].extidef.EXTI_Line;
+   c:	f854 3c08 	ldr.w	r3, [r4, #-8]
+C:\cortex\dimmers\src/dimmers_exti.c:59
+        x_EXTI_InitStructure.EXTI_Mode		= gx_extis_disable[u8_exti].extidef.EXTI_Mode;
+        x_EXTI_InitStructure.EXTI_Trigger	= gx_extis_disable[u8_exti].extidef.EXTI_Trigger;
+        x_EXTI_InitStructure.EXTI_LineCmd	= gx_extis_disable[u8_exti].extidef.EXTI_LineCmd;
+        EXTI_Init(&x_EXTI_InitStructure);
+  10:	4668      	mov	r0, sp
+C:\cortex\dimmers\src/dimmers_exti.c:55
+    EXTI_InitTypeDef	x_EXTI_InitStructure;
+    u8				u8_exti;
+ 
+    for ( u8_exti=0 ; u8_exti < (sizeof (gx_extis_disable)/sizeof(TExti)) ; u8_exti++ ){
+        GPIO_EXTILineConfig(gx_extis_disable[u8_exti].extigpiox , gx_extis_disable[u8_exti].extipinx );
+        x_EXTI_InitStructure.EXTI_Line		= gx_extis_disable[u8_exti].extidef.EXTI_Line;
+  12:	9300      	str	r3, [sp, #0]
+C:\cortex\dimmers\src/dimmers_exti.c:56
+        x_EXTI_InitStructure.EXTI_Mode		= gx_extis_disable[u8_exti].extidef.EXTI_Mode;
+  14:	f814 3c04 	ldrb.w	r3, [r4, #-4]
+  18:	f88d 3004 	strb.w	r3, [sp, #4]
+C:\cortex\dimmers\src/dimmers_exti.c:57
+        x_EXTI_InitStructure.EXTI_Trigger	= gx_extis_disable[u8_exti].extidef.EXTI_Trigger;
+  1c:	f814 3c03 	ldrb.w	r3, [r4, #-3]
+  20:	f88d 3005 	strb.w	r3, [sp, #5]
+C:\cortex\dimmers\src/dimmers_exti.c:58
+        x_EXTI_InitStructure.EXTI_LineCmd	= gx_extis_disable[u8_exti].extidef.EXTI_LineCmd;
+  24:	f814 3c02 	ldrb.w	r3, [r4, #-2]
+C:\cortex\dimmers\src/dimmers_exti.c:59
+        EXTI_Init(&x_EXTI_InitStructure);
+  28:	340c      	adds	r4, #12
+C:\cortex\dimmers\src/dimmers_exti.c:58
+    for ( u8_exti=0 ; u8_exti < (sizeof (gx_extis_disable)/sizeof(TExti)) ; u8_exti++ ){
+        GPIO_EXTILineConfig(gx_extis_disable[u8_exti].extigpiox , gx_extis_disable[u8_exti].extipinx );
+        x_EXTI_InitStructure.EXTI_Line		= gx_extis_disable[u8_exti].extidef.EXTI_Line;
+        x_EXTI_InitStructure.EXTI_Mode		= gx_extis_disable[u8_exti].extidef.EXTI_Mode;
+        x_EXTI_InitStructure.EXTI_Trigger	= gx_extis_disable[u8_exti].extidef.EXTI_Trigger;
+        x_EXTI_InitStructure.EXTI_LineCmd	= gx_extis_disable[u8_exti].extidef.EXTI_LineCmd;
+  2a:	f88d 3006 	strb.w	r3, [sp, #6]
+C:\cortex\dimmers\src/dimmers_exti.c:59
+        EXTI_Init(&x_EXTI_InitStructure);
+  2e:	f7ff fffe 	bl	0 <EXTI_Init>
+C:\cortex\dimmers\src/dimmers_exti.c:53
+void ExtiDisable (void){
+
+    EXTI_InitTypeDef	x_EXTI_InitStructure;
+    u8				u8_exti;
+ 
+    for ( u8_exti=0 ; u8_exti < (sizeof (gx_extis_disable)/sizeof(TExti)) ; u8_exti++ ){
+  32:	4b03      	ldr	r3, [pc, #12]	(40 <ExtiDisable+0x40>)
+  34:	429c      	cmp	r4, r3
+  36:	d1e5      	bne.n	4 <ExtiDisable+0x4>
+C:\cortex\dimmers\src/dimmers_exti.c:62
+        x_EXTI_InitStructure.EXTI_Trigger	= gx_extis_disable[u8_exti].extidef.EXTI_Trigger;
+        x_EXTI_InitStructure.EXTI_LineCmd	= gx_extis_disable[u8_exti].extidef.EXTI_LineCmd;
+        EXTI_Init(&x_EXTI_InitStructure);
+    }
+
+ }
+  38:	bd1c      	pop	{r2, r3, r4, pc}
+  3a:	46c0      	nop			(mov r8, r8)
+  3c:	00000050 	.word	0x00000050
+  40:	00000098 	.word	0x00000098

@@ -1,0 +1,169 @@
+
+C:\cortex\dimmers\hex\fir_stm32.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\fir_stm32.o
+
+Disassembly of section .text:
+
+00000000 <fir_16by16_stm32>:
+fir_16by16_stm32():
+C:\cortex\dimmers\src/fir_stm32.s:46
+;*******************************************************************************/
+/* void fir_16by16_stm32(void *a, void *x, COEFS *c, u32 N) */
+.thumb_func
+fir_16by16_stm32:
+        
+        STMDB   sp!, {r4-r11, lr}   	/* Save context */
+   0:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+C:\cortex\dimmers\src/fir_stm32.s:50
+        
+        /* Get base address and number of coefficients */
+        /* LDMIA   r2, {r2, r4} */          	
+        LDR     r4, [r2, #4]
+   4:	6854      	ldr	r4, [r2, #4]
+C:\cortex\dimmers\src/fir_stm32.s:51
+        LDR     r2, [r2]
+   6:	6812      	ldr	r2, [r2, #0]
+
+00000008 <next_sample>:
+next_sample():
+C:\cortex\dimmers\src/fir_stm32.s:54
+
+next_sample:
+        STMFD   sp!, {r3, r4}
+   8:	e92d 0018 	stmdb	sp!, {r3, r4}
+C:\cortex\dimmers\src/fir_stm32.s:55
+        LDRSH   r5, [r1], #2
+   c:	f931 5b02 	ldrsh.w	r5, [r1], #2
+C:\cortex\dimmers\src/fir_stm32.s:56
+        LDRSH   r6, [r1], #2
+  10:	f931 6b02 	ldrsh.w	r6, [r1], #2
+C:\cortex\dimmers\src/fir_stm32.s:57
+        LDRSH   r7, [r1], #2
+  14:	f931 7b02 	ldrsh.w	r7, [r1], #2
+C:\cortex\dimmers\src/fir_stm32.s:58
+        LDRSH   r14, [r1], #2
+  18:	f931 eb02 	ldrsh.w	lr, [r1], #2
+C:\cortex\dimmers\src/fir_stm32.s:59
+        MOV     r8 , #0
+  1c:	f04f 0800 	mov.w	r8, #0	; 0x0
+C:\cortex\dimmers\src/fir_stm32.s:60
+        MOV     r9, #0
+  20:	f04f 0900 	mov.w	r9, #0	; 0x0
+C:\cortex\dimmers\src/fir_stm32.s:61
+        MOV     r10, #0
+  24:	f04f 0a00 	mov.w	sl, #0	; 0x0
+C:\cortex\dimmers\src/fir_stm32.s:62
+        MOV     r11, #0
+  28:	f04f 0b00 	mov.w	fp, #0	; 0x0
+
+0000002c <next_tap>:
+next_tap():
+C:\cortex\dimmers\src/fir_stm32.s:66
+
+next_tap:
+        /* perform next block of 4x4=16 taps */
+        LDRSH   r3, [r2], #2     	/* Load c_0 */
+  2c:	f932 3b02 	ldrsh.w	r3, [r2], #2
+C:\cortex\dimmers\src/fir_stm32.s:67
+        LDRSH   r12, [r2], #2    	/* Load c_1 */
+  30:	f932 cb02 	ldrsh.w	ip, [r2], #2
+C:\cortex\dimmers\src/fir_stm32.s:68
+        SUBS    r4, r4, #4
+  34:	3c04      	subs	r4, #4
+C:\cortex\dimmers\src/fir_stm32.s:70
+        
+        MLA     r8, r5, r3, r8      /* a_0 += c_0 * x_0 */
+  36:	fb05 8803 	mla	r8, r5, r3, r8
+C:\cortex\dimmers\src/fir_stm32.s:71
+        LDRSH   r5, [r1], #2         	/* Load x_4 (x_0 no more used) */
+  3a:	f931 5b02 	ldrsh.w	r5, [r1], #2
+C:\cortex\dimmers\src/fir_stm32.s:72
+        MLA     r9, r6, r3, r9   	/* a_1 += c_0 * x_1 */
+  3e:	fb06 9903 	mla	r9, r6, r3, r9
+C:\cortex\dimmers\src/fir_stm32.s:73
+        MLA     r10, r7, r3, r10   	/* a_2 += c_0 * x_2 */
+  42:	fb07 aa03 	mla	sl, r7, r3, sl
+C:\cortex\dimmers\src/fir_stm32.s:74
+        MLA     r11, r14, r3, r11   	/* a_3 += c_0 * x_3 */
+  46:	fb0e bb03 	mla	fp, lr, r3, fp
+C:\cortex\dimmers\src/fir_stm32.s:76
+        
+        LDRSH   r3, [r2], #2         	/* Load c_2 */
+  4a:	f932 3b02 	ldrsh.w	r3, [r2], #2
+C:\cortex\dimmers\src/fir_stm32.s:77
+        MLA     r8, r6, r12, r8    	/* a_0 += c_1 * x_1 */
+  4e:	fb06 880c 	mla	r8, r6, ip, r8
+C:\cortex\dimmers\src/fir_stm32.s:78
+        LDRSH   r6, [r1], #2        	/* Load x_5 (x_1 no more used) */
+  52:	f931 6b02 	ldrsh.w	r6, [r1], #2
+C:\cortex\dimmers\src/fir_stm32.s:79
+        MLA     r9, r7, r12, r9  	/* a_1 += c_1 * x_2 */
+  56:	fb07 990c 	mla	r9, r7, ip, r9
+C:\cortex\dimmers\src/fir_stm32.s:80
+        MLA     r10, r14, r12, r10  	/* a_2 += c_1 * x_3 */
+  5a:	fb0e aa0c 	mla	sl, lr, ip, sl
+C:\cortex\dimmers\src/fir_stm32.s:81
+        MLA     r11, r5, r12, r11   	/* a_3 += c_1 * x_4 */
+  5e:	fb05 bb0c 	mla	fp, r5, ip, fp
+C:\cortex\dimmers\src/fir_stm32.s:83
+        
+        LDRSH   r12, [r2], #2        	/* Load c_3 (c_1 no more used) */
+  62:	f932 cb02 	ldrsh.w	ip, [r2], #2
+C:\cortex\dimmers\src/fir_stm32.s:84
+        MLA     r8, r7, r3, r8     	/* a_0 += c_2 * x_2 */
+  66:	fb07 8803 	mla	r8, r7, r3, r8
+C:\cortex\dimmers\src/fir_stm32.s:85
+        LDRSH   r7, [r1], #2        	/* Load x_6 */
+  6a:	f931 7b02 	ldrsh.w	r7, [r1], #2
+C:\cortex\dimmers\src/fir_stm32.s:86
+        MLA     r9, r14, r3, r9   	/* a_1 += c_2 * x_3 */
+  6e:	fb0e 9903 	mla	r9, lr, r3, r9
+C:\cortex\dimmers\src/fir_stm32.s:87
+        MLA     r10, r5, r3, r10    	/* a_2 += c_2 * x_4 */
+  72:	fb05 aa03 	mla	sl, r5, r3, sl
+C:\cortex\dimmers\src/fir_stm32.s:88
+        MLA     r11, r6, r3, r11   	/* a_3 += c_2 * x_5 */ 
+  76:	fb06 bb03 	mla	fp, r6, r3, fp
+C:\cortex\dimmers\src/fir_stm32.s:90
+        
+        MLA     r8, r14, r12, r8    	/* a_0 += c_3 * x_3 */
+  7a:	fb0e 880c 	mla	r8, lr, ip, r8
+C:\cortex\dimmers\src/fir_stm32.s:91
+        LDRSH   r14, [r1], #2        	/* Load x_7 */
+  7e:	f931 eb02 	ldrsh.w	lr, [r1], #2
+C:\cortex\dimmers\src/fir_stm32.s:92
+        MLA     r9, r5, r12, r9   	/* a_1 += c_3 * x_4 */
+  82:	fb05 990c 	mla	r9, r5, ip, r9
+C:\cortex\dimmers\src/fir_stm32.s:93
+        MLA     r10, r6, r12, r10  	/* a_2 += c_3 * x_5 */
+  86:	fb06 aa0c 	mla	sl, r6, ip, sl
+C:\cortex\dimmers\src/fir_stm32.s:94
+        MLA     r11, r7, r12, r11  	/* a_3 += c_3 * x_6 */
+  8a:	fb07 bb0c 	mla	fp, r7, ip, fp
+C:\cortex\dimmers\src/fir_stm32.s:96
+        
+        BGT     next_tap
+  8e:	dccd      	bgt.n	2c <next_tap>
+C:\cortex\dimmers\src/fir_stm32.s:98
+        
+        LDMFD   sp!, {r3, r4}
+  90:	bc18      	pop	{r3, r4}
+C:\cortex\dimmers\src/fir_stm32.s:99
+        STMIA   r0!, {r8, r9, r10, r11}
+  92:	e8a0 0f00 	stmia.w	r0!, {r8, r9, sl, fp}
+C:\cortex\dimmers\src/fir_stm32.s:100
+        SUB     r2, r2, r4, LSL#1  	/* restore coefficient pointer */
+  96:	eba2 0244 	sub.w	r2, r2, r4, lsl #1
+C:\cortex\dimmers\src/fir_stm32.s:101
+        SUB     r1, r1, r4, LSL#1  	/* advance data pointer */ 
+  9a:	eba1 0144 	sub.w	r1, r1, r4, lsl #1
+C:\cortex\dimmers\src/fir_stm32.s:102
+        SUBS    r3, r3, #4        	/* filtered four samples */
+  9e:	3b04      	subs	r3, #4
+C:\cortex\dimmers\src/fir_stm32.s:103
+        BGT     next_sample
+  a0:	dcb2      	bgt.n	8 <next_sample>
+C:\cortex\dimmers\src/fir_stm32.s:105
+
+        LDMIA   sp!, {r4-r11, pc}
+  a2:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
