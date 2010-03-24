@@ -19,8 +19,11 @@ TBKPData        ExternData;
 TBKPData        InternData;
 TBKPMemoryMap   BkpMemoryMap;
 
-s16 TempSensor;
-s16 ZeroCross;
+u16 TempSensor;
+u16 ZeroCross;
+u16 ToggleCount;
+u16 DimmerCount;
+u16 HoursCount;
 
 s16 Xi[35];
 s32 Yi[4];

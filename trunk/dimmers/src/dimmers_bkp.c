@@ -131,10 +131,12 @@ void    BkpSetFactoryDefaultsForLight ( u16 inputpin ){
 
 void    BkpSetFactoryDefaultsGeneral   ( void ){
 
-    BKP_WriteBackupRegister( POS_VALUE_TRESHOLD_ZEROCROSS   ,     DEFAULT_VALUE_TRESHOLD_ZEROCROSS );
-    BKP_WriteBackupRegister( POS_VALUE_GENERAL_FLAGS        ,     DEFAULT_VALUE_GENERAL_FLAGS_BUTTON );
-    BKP_WriteBackupRegister( POS_VALUE_FREE3 ,     DEFAULT_VALUE_FREE3 );
-    BKP_WriteBackupRegister( POS_VALUE_FREE4 ,     DEFAULT_VALUE_FREE4 );
+    BKP_WriteBackupRegister( POS_VALUE_TEMP_SENSOR    , DEFAULT_VALUE_TEMP_SENSOR );
+    BKP_WriteBackupRegister( POS_VALUE_COUNT_WATCHDOG , DEFAULT_VALUE_COUNT_WATCHDOG);
+    BKP_WriteBackupRegister( POS_VALUE_COUNT_TOGGLE   , DEFAULT_VALUE_COUNT_TOGGLE);
+    BKP_WriteBackupRegister( POS_VALUE_COUNT_DIMMER   , DEFAULT_VALUE_COUNT_DIMMER);
+    BKP_WriteBackupRegister( POS_VALUE_COUNT_HOURS    , DEFAULT_VALUE_COUNT_HOURS);
+    BKP_WriteBackupRegister( POS_VALUE_GENERAL_FLAGS  , DEFAULT_VALUE_GENERAL_FLAGS);
 
 }
 
@@ -182,6 +184,15 @@ SWITCHER_TYPE BkpGetSwitcherType (  u16 inputpin ){
         else
             return BUTTON_TYPE;
     }
+}
+
+void    BkpWriteGeneralToMemory ( void ){
+  TempSensor    = BKP_ReadBackupRegister( POS_VALUE_TEMP_SENSOR);
+  CountWatchdog = BKP_ReadBackupRegister( POS_VALUE_COUNT_WATCHDOG );
+  ToggleCount   = BKP_ReadBackupRegister( POS_VALUE_COUNT_TOGGLE );
+  DimmerCount   = BKP_ReadBackupRegister( POS_VALUE_COUNT_DIMMER );
+  HoursCount    = BKP_ReadBackupRegister( POS_VALUE_COUNT_HOURS);
+  PropertyFlags = BKP_ReadBackupRegister( POS_VALUE_GENERAL_FLAGS );
 }
 
 void    BkpWriteLightPropertiesToMemory ( u16 inputpin , pTLightProperties props ){
@@ -249,13 +260,6 @@ void    BkpWriteLightPropertiesToMemory ( u16 inputpin , pTLightProperties props
         props->type     =   BkpGetSwitcherType(inputpin);
     }
 
-}
-
-void    BkpWriteGeneralToMemory ( void ){
-
-    //ZeroCrossTreshold   = BKP_ReadBackupRegister( POS_VALUE_TRESHOLD_ZEROCROSS );
-    CountWatchdog       = BKP_ReadBackupRegister( POS_VALUE_COUNT_WATCHDOG );
-    PropertyFlags       = BKP_ReadBackupRegister( POS_VALUE_GENERAL_FLAGS );
 }
 
 void    BkpSetFactoryDefaultsToLights ( void ){

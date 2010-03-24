@@ -29,17 +29,17 @@ void AdcDmaInit (u16 * temp , u16 * zerocross ){
   RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1 | RCC_AHBPeriph_DMA2, ENABLE);
 
   DMA_DeInit(DMA1_Channel1);
-  x_DMA_InitStructure.DMA_PeripheralBaseAddr	= ADC1_DR_Address;
-  x_DMA_InitStructure.DMA_MemoryBaseAddr 		= (u32)temp;
-  x_DMA_InitStructure.DMA_DIR					= DMA_DIR_PeripheralSRC;
-  x_DMA_InitStructure.DMA_BufferSize			= 1;
-  x_DMA_InitStructure.DMA_PeripheralInc			= DMA_PeripheralInc_Disable;
-  x_DMA_InitStructure.DMA_MemoryInc				= DMA_MemoryInc_Disable;
+  x_DMA_InitStructure.DMA_PeripheralBaseAddr  = ADC1_DR_Address;
+  x_DMA_InitStructure.DMA_MemoryBaseAddr      = (u32)temp;
+  x_DMA_InitStructure.DMA_DIR					        = DMA_DIR_PeripheralSRC;
+  x_DMA_InitStructure.DMA_BufferSize			    = 1;
+  x_DMA_InitStructure.DMA_PeripheralInc			  = DMA_PeripheralInc_Disable;
+  x_DMA_InitStructure.DMA_MemoryInc				    = DMA_MemoryInc_Disable;
   x_DMA_InitStructure.DMA_PeripheralDataSize	= DMA_PeripheralDataSize_HalfWord;
-  x_DMA_InitStructure.DMA_MemoryDataSize		= DMA_MemoryDataSize_HalfWord;
-  x_DMA_InitStructure.DMA_Mode					= DMA_Mode_Circular;
-  x_DMA_InitStructure.DMA_Priority				= DMA_Priority_High;
-  x_DMA_InitStructure.DMA_M2M					= DMA_M2M_Disable;
+  x_DMA_InitStructure.DMA_MemoryDataSize		  = DMA_MemoryDataSize_HalfWord;
+  x_DMA_InitStructure.DMA_Mode					      = DMA_Mode_Circular;
+  x_DMA_InitStructure.DMA_Priority				    = DMA_Priority_Low;
+  x_DMA_InitStructure.DMA_M2M					        = DMA_M2M_Disable;
 
   DMA_Init	(DMA1_Channel1, &x_DMA_InitStructure);
   DMA_Cmd	(DMA1_Channel1, ENABLE);
@@ -48,16 +48,16 @@ void AdcDmaInit (u16 * temp , u16 * zerocross ){
   
   DMA_DeInit(DMA2_Channel5);
   x_DMA_InitStructure.DMA_PeripheralBaseAddr	= ADC3_DR_Address;
-  x_DMA_InitStructure.DMA_MemoryBaseAddr 		= (u32)zerocross;
-  x_DMA_InitStructure.DMA_DIR					= DMA_DIR_PeripheralSRC;
-  x_DMA_InitStructure.DMA_BufferSize			= 1;
-  x_DMA_InitStructure.DMA_PeripheralInc			= DMA_PeripheralInc_Disable;
-  x_DMA_InitStructure.DMA_MemoryInc				= DMA_MemoryInc_Disable;
+  x_DMA_InitStructure.DMA_MemoryBaseAddr 		  = (u32)zerocross;
+  x_DMA_InitStructure.DMA_DIR					        = DMA_DIR_PeripheralSRC;
+  x_DMA_InitStructure.DMA_BufferSize			    = 1;
+  x_DMA_InitStructure.DMA_PeripheralInc			  = DMA_PeripheralInc_Disable;
+  x_DMA_InitStructure.DMA_MemoryInc				    = DMA_MemoryInc_Disable;
   x_DMA_InitStructure.DMA_PeripheralDataSize	= DMA_PeripheralDataSize_HalfWord;
-  x_DMA_InitStructure.DMA_MemoryDataSize		= DMA_MemoryDataSize_HalfWord;
-  x_DMA_InitStructure.DMA_Mode					= DMA_Mode_Circular;
-  x_DMA_InitStructure.DMA_Priority				= DMA_Priority_High;
-  x_DMA_InitStructure.DMA_M2M					= DMA_M2M_Disable;
+  x_DMA_InitStructure.DMA_MemoryDataSize		  = DMA_MemoryDataSize_HalfWord;
+  x_DMA_InitStructure.DMA_Mode					      = DMA_Mode_Circular;
+  x_DMA_InitStructure.DMA_Priority				    = DMA_Priority_High;
+  x_DMA_InitStructure.DMA_M2M					        = DMA_M2M_Disable;
 
   DMA_Init	(DMA2_Channel5, &x_DMA_InitStructure);
   DMA_Cmd	(DMA2_Channel5, ENABLE);

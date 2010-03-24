@@ -6,7 +6,7 @@
 * Description        : backup domain
 ********************************************************************************
   Conditions:
-        cortex RET 42x16bit
+        cortex 103RET 42x16bit
 *******************************************************************************/
 #ifndef __DIMMERSBKP_H
 #define __DIMMERSBKP_H
@@ -32,13 +32,15 @@
 #define DEFAULT_VALUE_OUTPUT_PIN_6          PIN_LIGHT_6
 #define DEFAULT_VALUE_INPUT_PIN_6           PIN_BUTTON_6
 
-#define DEFAULT_VALUE_TRESHOLD_ZEROCROSS    8
-#define DEFAULT_VALUE_COUNT_WATCHDOG        0
-#define DEFAULT_VALUE_FREE2                 0
-#define DEFAULT_VALUE_FREE3                 0
-#define DEFAULT_VALUE_FREE4                 0
 #define DEFAULT_VALUE_GENERAL_FLAGS_BUTTON  0
 #define DEFAULT_VALUE_GENERAL_FLAGS_SWITCH  0x3F
+
+#define DEFAULT_VALUE_TEMP_SENSOR           0
+#define DEFAULT_VALUE_COUNT_WATCHDOG        0
+#define DEFAULT_VALUE_COUNT_TOGGLE          0
+#define DEFAULT_VALUE_COUNT_DIMMER          0
+#define DEFAULT_VALUE_COUNT_HOURS           0
+#define DEFAULT_VALUE_GENERAL_FLAGS         DEFAULT_VALUE_GENERAL_FLAGS_BUTTON
 
 #define POS_VALUE_LIGHT_1                   BKP_DR1
 #define POS_VALUE_MIN_LIGHT_1               BKP_DR2
@@ -82,11 +84,11 @@
 #define POS_VALUE_OUTPUT_PIN_LIGHT_6        BKP_DR35
 #define POS_VALUE_INPUT_PIN_LIGHT_6         BKP_DR36
 
-#define POS_VALUE_TRESHOLD_ZEROCROSS        BKP_DR37
+#define POS_VALUE_TEMP_SENSOR               BKP_DR37
 #define POS_VALUE_COUNT_WATCHDOG            BKP_DR38
-#define POS_VALUE_COUNT_PVD                 BKP_DR39
-#define POS_VALUE_FREE3                     BKP_DR40
-#define POS_VALUE_FREE4                     BKP_DR41
+#define POS_VALUE_COUNT_TOGGLE              BKP_DR39
+#define POS_VALUE_COUNT_DIMMER              BKP_DR40
+#define POS_VALUE_COUNT_HOURS               BKP_DR41
 #define POS_VALUE_GENERAL_FLAGS             BKP_DR42
 
 // little endian
