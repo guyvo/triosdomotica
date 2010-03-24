@@ -41,6 +41,7 @@
 #define MAX_BACKUP_BYTES        84
 #define SAMPLES_MIN_MAX         40000
 #define MIN_ADC_LEVEL           2048
+#define SECONDS_IN_HOUR         3600
 
 #define LIGHT1_INDEX    0
 #define LIGHT2_INDEX    1
@@ -106,8 +107,11 @@ extern TBKPMemoryMap BkpMemoryMap;
 
 extern TLightProperties Lights[];
 
-extern s16 TempSensor;
-extern s16 ZeroCross;
+extern u16 TempSensor;
+extern u16 ZeroCross;
+extern u16 ToggleCount;
+extern u16 DimmerCount;
+extern u16 HoursCount;
 
 extern s16 Xi[];
 extern s32 Yi[];

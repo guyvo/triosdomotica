@@ -6,7 +6,7 @@ Disassembly of section .text.BkpCopyIntExtMemory:
 
 00000000 <BkpCopyIntExtMemory>:
 BkpCopyIntExtMemory():
-C:\cortex\dimmers\src/dimmers_bkp.c:304
+C:\cortex\dimmers\src/dimmers_bkp.c:308
         InternData.values[byteidx++] = (value & 0xFF00) >> 8; 
     #endif  
     }
@@ -14,13 +14,13 @@ C:\cortex\dimmers\src/dimmers_bkp.c:304
 }
 void    BkpCopyIntExtMemory ( void){
    0:	b510      	push	{r4, lr}
-C:\cortex\dimmers\src/dimmers_bkp.c:305
+C:\cortex\dimmers\src/dimmers_bkp.c:309
     memcpy( &ExternData.values[0] , &InternData.values[0] , sizeof(TBKPData));
    2:	4903      	ldr	r1, [pc, #12]	(10 <BkpCopyIntExtMemory+0x10>)
    4:	2254      	movs	r2, #84
    6:	4803      	ldr	r0, [pc, #12]	(14 <BkpCopyIntExtMemory+0x14>)
    8:	f7ff fffe 	bl	0 <memcpy>
-C:\cortex\dimmers\src/dimmers_bkp.c:306
+C:\cortex\dimmers\src/dimmers_bkp.c:310
 }
    c:	bd10      	pop	{r4, pc}
    e:	46c0      	nop			(mov r8, r8)
@@ -29,7 +29,7 @@ Disassembly of section .text.UtilSwab:
 
 00000000 <UtilSwab>:
 UtilSwab():
-C:\cortex\dimmers\src/dimmers_bkp.c:315
+C:\cortex\dimmers\src/dimmers_bkp.c:319
     swab( (u8*) ui, (u8*) &swapped , 2 );
 #else
     swapped = *ui;
@@ -42,7 +42,7 @@ Disassembly of section .text.BkpFullWriteToBkp:
 
 00000000 <BkpFullWriteToBkp>:
 BkpFullWriteToBkp():
-C:\cortex\dimmers\src/dimmers_bkp.c:323
+C:\cortex\dimmers\src/dimmers_bkp.c:327
     u8  byteidx=0;
     u16 index;
     u16 value;
@@ -50,7 +50,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:323
 
     memcpy( (u8 *) &BkpMemoryMap , (u8 * )&ExternData , sizeof (BkpMemoryMap));
    0:	493b      	ldr	r1, [pc, #236]	(f0 <BkpFullWriteToBkp+0xf0>)
-C:\cortex\dimmers\src/dimmers_bkp.c:316
+C:\cortex\dimmers\src/dimmers_bkp.c:320
 #else
     swapped = *ui;
 #endif
@@ -58,7 +58,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:316
 }
 void    BkpFullWriteToBkp ( void ){
    2:	b570      	push	{r4, r5, r6, lr}
-C:\cortex\dimmers\src/dimmers_bkp.c:323
+C:\cortex\dimmers\src/dimmers_bkp.c:327
     u8  byteidx=0;
     u16 index;
     u16 value;
@@ -70,7 +70,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:323
    8:	f7ff fffe 	bl	0 <memcpy>
    c:	493a      	ldr	r1, [pc, #232]	(f8 <BkpFullWriteToBkp+0xf8>)
 UtilSwab():
-C:\cortex\dimmers\src/dimmers_bkp.c:312
+C:\cortex\dimmers\src/dimmers_bkp.c:316
 u16 UtilSwab ( u16 * ui ){
     u16 swapped;
 #ifdef BIG_ENDIAN
@@ -79,7 +79,7 @@ u16 UtilSwab ( u16 * ui ){
     swapped = *ui;
    e:	f831 2c08 	ldrh.w	r2, [r1, #-8]
 BkpFullWriteToBkp():
-C:\cortex\dimmers\src/dimmers_bkp.c:326
+C:\cortex\dimmers\src/dimmers_bkp.c:330
     static bool ok;
 
     memcpy( (u8 *) &BkpMemoryMap , (u8 * )&ExternData , sizeof (BkpMemoryMap));
@@ -97,7 +97,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:326
   28:	2a00      	cmp	r2, #0
   2a:	d13a      	bne.n	a2 <BkpFullWriteToBkp+0xa2>
 UtilSwab():
-C:\cortex\dimmers\src/dimmers_bkp.c:312
+C:\cortex\dimmers\src/dimmers_bkp.c:316
 u16 UtilSwab ( u16 * ui ){
     u16 swapped;
 #ifdef BIG_ENDIAN
@@ -106,7 +106,7 @@ u16 UtilSwab ( u16 * ui ){
     swapped = *ui;
   2c:	f831 3c06 	ldrh.w	r3, [r1, #-6]
 BkpFullWriteToBkp():
-C:\cortex\dimmers\src/dimmers_bkp.c:326
+C:\cortex\dimmers\src/dimmers_bkp.c:330
     static bool ok;
 
     memcpy( (u8 *) &BkpMemoryMap , (u8 * )&ExternData , sizeof (BkpMemoryMap));
@@ -119,7 +119,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:326
   3a:	4293      	cmp	r3, r2
   3c:	d831      	bhi.n	a2 <BkpFullWriteToBkp+0xa2>
 UtilSwab():
-C:\cortex\dimmers\src/dimmers_bkp.c:312
+C:\cortex\dimmers\src/dimmers_bkp.c:316
 u16 UtilSwab ( u16 * ui ){
     u16 swapped;
 #ifdef BIG_ENDIAN
@@ -128,7 +128,7 @@ u16 UtilSwab ( u16 * ui ){
     swapped = *ui;
   3e:	f831 3c04 	ldrh.w	r3, [r1, #-4]
 BkpFullWriteToBkp():
-C:\cortex\dimmers\src/dimmers_bkp.c:326
+C:\cortex\dimmers\src/dimmers_bkp.c:330
     static bool ok;
 
     memcpy( (u8 *) &BkpMemoryMap , (u8 * )&ExternData , sizeof (BkpMemoryMap));
@@ -143,7 +143,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:326
   50:	f5b3 7f7a 	cmp.w	r3, #1000	; 0x3e8
   54:	d225      	bcs.n	a2 <BkpFullWriteToBkp+0xa2>
 UtilSwab():
-C:\cortex\dimmers\src/dimmers_bkp.c:312
+C:\cortex\dimmers\src/dimmers_bkp.c:316
 u16 UtilSwab ( u16 * ui ){
     u16 swapped;
 #ifdef BIG_ENDIAN
@@ -152,7 +152,7 @@ u16 UtilSwab ( u16 * ui ){
     swapped = *ui;
   56:	884b      	ldrh	r3, [r1, #2]
 BkpFullWriteToBkp():
-C:\cortex\dimmers\src/dimmers_bkp.c:326
+C:\cortex\dimmers\src/dimmers_bkp.c:330
     static bool ok;
 
     memcpy( (u8 *) &BkpMemoryMap , (u8 * )&ExternData , sizeof (BkpMemoryMap));
@@ -172,7 +172,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:326
   72:	f5b3 6f00 	cmp.w	r3, #2048	; 0x800
   76:	d114      	bne.n	a2 <BkpFullWriteToBkp+0xa2>
 UtilSwab():
-C:\cortex\dimmers\src/dimmers_bkp.c:312
+C:\cortex\dimmers\src/dimmers_bkp.c:316
 u16 UtilSwab ( u16 * ui ){
     u16 swapped;
 #ifdef BIG_ENDIAN
@@ -181,7 +181,7 @@ u16 UtilSwab ( u16 * ui ){
     swapped = *ui;
   78:	880b      	ldrh	r3, [r1, #0]
 BkpFullWriteToBkp():
-C:\cortex\dimmers\src/dimmers_bkp.c:326
+C:\cortex\dimmers\src/dimmers_bkp.c:330
     static bool ok;
 
     memcpy( (u8 *) &BkpMemoryMap , (u8 * )&ExternData , sizeof (BkpMemoryMap));
@@ -200,7 +200,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:326
   8c:	d001      	beq.n	92 <BkpFullWriteToBkp+0x92>
   8e:	2b20      	cmp	r3, #32
   90:	d107      	bne.n	a2 <BkpFullWriteToBkp+0xa2>
-C:\cortex\dimmers\src/dimmers_bkp.c:325
+C:\cortex\dimmers\src/dimmers_bkp.c:329
     u16 value;
     static bool ok;
 
@@ -208,10 +208,10 @@ C:\cortex\dimmers\src/dimmers_bkp.c:325
 
     for ( index = 0 ; index < MAX_LIGHTS ; index ++ ){
   92:	4b1a      	ldr	r3, [pc, #104]	(fc <BkpFullWriteToBkp+0xfc>)
-C:\cortex\dimmers\src/dimmers_bkp.c:326
+C:\cortex\dimmers\src/dimmers_bkp.c:330
         if (    
   94:	310c      	adds	r1, #12
-C:\cortex\dimmers\src/dimmers_bkp.c:325
+C:\cortex\dimmers\src/dimmers_bkp.c:329
     u16 value;
     static bool ok;
 
@@ -224,7 +224,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:325
   9c:	2301      	movs	r3, #1
   9e:	7013      	strb	r3, [r2, #0]
   a0:	e002      	b.n	a8 <BkpFullWriteToBkp+0xa8>
-C:\cortex\dimmers\src/dimmers_bkp.c:337
+C:\cortex\dimmers\src/dimmers_bkp.c:341
             (CHECK_OUTPUT_PIN ( UtilSwab(&BkpMemoryMap.light[index].outputpin ))) 
             ){ 
             ok = TRUE;
@@ -234,7 +234,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:337
   a2:	4b17      	ldr	r3, [pc, #92]	(100 <BkpFullWriteToBkp+0x100>)
   a4:	2200      	movs	r2, #0
   a6:	701a      	strb	r2, [r3, #0]
-C:\cortex\dimmers\src/dimmers_bkp.c:342
+C:\cortex\dimmers\src/dimmers_bkp.c:346
             break;
         }        
     }
@@ -246,7 +246,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:342
   ae:	d11d      	bne.n	ec <BkpFullWriteToBkp+0xec>
   b0:	4d0f      	ldr	r5, [pc, #60]	(f0 <BkpFullWriteToBkp+0xf0>)
   b2:	2404      	movs	r4, #4
-C:\cortex\dimmers\src/dimmers_bkp.c:352
+C:\cortex\dimmers\src/dimmers_bkp.c:356
         #else
             value  = ExternData.values[byteidx++]; 
             value += ExternData.values[byteidx++] << 8;       
@@ -254,7 +254,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:352
         
             BKP_WriteBackupRegister( index , value );
   b4:	786b      	ldrb	r3, [r5, #1]
-C:\cortex\dimmers\src/dimmers_bkp.c:348
+C:\cortex\dimmers\src/dimmers_bkp.c:352
         for (index = BKP_DR1 ; index <= BKP_DR10 ; index +=4 ){
         #ifdef BIG_ENDIAN
             value  = ExternData.values[byteidx++] << 8; 
@@ -262,7 +262,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:348
         #else
             value  = ExternData.values[byteidx++]; 
   b6:	7829      	ldrb	r1, [r5, #0]
-C:\cortex\dimmers\src/dimmers_bkp.c:352
+C:\cortex\dimmers\src/dimmers_bkp.c:356
             value += ExternData.values[byteidx++] << 8;       
         #endif
         
@@ -271,7 +271,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:352
   ba:	eb01 2103 	add.w	r1, r1, r3, lsl #8
   be:	b289      	uxth	r1, r1
   c0:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
-C:\cortex\dimmers\src/dimmers_bkp.c:343
+C:\cortex\dimmers\src/dimmers_bkp.c:347
             break;
         }        
     }
@@ -285,7 +285,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:343
   cc:	d1f2      	bne.n	b4 <BkpFullWriteToBkp+0xb4>
   ce:	4d08      	ldr	r5, [pc, #32]	(f0 <BkpFullWriteToBkp+0xf0>)
   d0:	3414      	adds	r4, #20
-C:\cortex\dimmers\src/dimmers_bkp.c:363
+C:\cortex\dimmers\src/dimmers_bkp.c:367
             value += ExternData.values[byteidx++];       
         #else
             value  = ExternData.values[byteidx++]; 
@@ -293,7 +293,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:363
         #endif
             BKP_WriteBackupRegister( index , value );
   d2:	7d6b      	ldrb	r3, [r5, #21]
-C:\cortex\dimmers\src/dimmers_bkp.c:360
+C:\cortex\dimmers\src/dimmers_bkp.c:364
         for (index = BKP_DR11 ; index <= BKP_DR42 ; index +=4 ){
         #ifdef BIG_ENDIAN
             value  = ExternData.values[byteidx++] << 8; 
@@ -301,7 +301,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:360
         #else
             value  = ExternData.values[byteidx++]; 
   d4:	7d29      	ldrb	r1, [r5, #20]
-C:\cortex\dimmers\src/dimmers_bkp.c:363
+C:\cortex\dimmers\src/dimmers_bkp.c:367
             value += ExternData.values[byteidx++] << 8;       
         #endif
             BKP_WriteBackupRegister( index , value );
@@ -309,7 +309,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:363
   d8:	eb01 2103 	add.w	r1, r1, r3, lsl #8
   dc:	b289      	uxth	r1, r1
   de:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
-C:\cortex\dimmers\src/dimmers_bkp.c:355
+C:\cortex\dimmers\src/dimmers_bkp.c:359
         #endif
         
             BKP_WriteBackupRegister( index , value );
@@ -321,7 +321,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:355
   e6:	3502      	adds	r5, #2
   e8:	2cc0      	cmp	r4, #192
   ea:	d1f2      	bne.n	d2 <BkpFullWriteToBkp+0xd2>
-C:\cortex\dimmers\src/dimmers_bkp.c:366
+C:\cortex\dimmers\src/dimmers_bkp.c:370
             value += ExternData.values[byteidx++] << 8;       
         #endif
             BKP_WriteBackupRegister( index , value );
@@ -348,29 +348,39 @@ void    BkpSetFactoryDefaultsGeneral   ( void ){
    0:	b510      	push	{r4, lr}
 C:\cortex\dimmers\src/dimmers_bkp.c:134
 
-    BKP_WriteBackupRegister( POS_VALUE_TRESHOLD_ZEROCROSS   ,     DEFAULT_VALUE_TRESHOLD_ZEROCROSS );
+    BKP_WriteBackupRegister( POS_VALUE_TEMP_SENSOR    , DEFAULT_VALUE_TEMP_SENSOR );
    2:	20a8      	movs	r0, #168
-   4:	2108      	movs	r1, #8
+   4:	2100      	movs	r1, #0
    6:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
 C:\cortex\dimmers\src/dimmers_bkp.c:135
-    BKP_WriteBackupRegister( POS_VALUE_GENERAL_FLAGS        ,     DEFAULT_VALUE_GENERAL_FLAGS_BUTTON );
-   a:	20bc      	movs	r0, #188
+    BKP_WriteBackupRegister( POS_VALUE_COUNT_WATCHDOG , DEFAULT_VALUE_COUNT_WATCHDOG);
+   a:	20ac      	movs	r0, #172
    c:	2100      	movs	r1, #0
    e:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
 C:\cortex\dimmers\src/dimmers_bkp.c:136
-    BKP_WriteBackupRegister( POS_VALUE_FREE3 ,     DEFAULT_VALUE_FREE3 );
-  12:	20b4      	movs	r0, #180
+    BKP_WriteBackupRegister( POS_VALUE_COUNT_TOGGLE   , DEFAULT_VALUE_COUNT_TOGGLE);
+  12:	20b0      	movs	r0, #176
   14:	2100      	movs	r1, #0
   16:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
 C:\cortex\dimmers\src/dimmers_bkp.c:137
-    BKP_WriteBackupRegister( POS_VALUE_FREE4 ,     DEFAULT_VALUE_FREE4 );
-  1a:	20b8      	movs	r0, #184
+    BKP_WriteBackupRegister( POS_VALUE_COUNT_DIMMER   , DEFAULT_VALUE_COUNT_DIMMER);
+  1a:	20b4      	movs	r0, #180
   1c:	2100      	movs	r1, #0
   1e:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
+C:\cortex\dimmers\src/dimmers_bkp.c:138
+    BKP_WriteBackupRegister( POS_VALUE_COUNT_HOURS    , DEFAULT_VALUE_COUNT_HOURS);
+  22:	20b8      	movs	r0, #184
+  24:	2100      	movs	r1, #0
+  26:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
 C:\cortex\dimmers\src/dimmers_bkp.c:139
+    BKP_WriteBackupRegister( POS_VALUE_GENERAL_FLAGS  , DEFAULT_VALUE_GENERAL_FLAGS);
+  2a:	20bc      	movs	r0, #188
+  2c:	2100      	movs	r1, #0
+  2e:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
+C:\cortex\dimmers\src/dimmers_bkp.c:141
 
 }
-  22:	bd10      	pop	{r4, pc}
+  32:	bd10      	pop	{r4, pc}
 Disassembly of section .text.BkpSetFactoryDefaultsForLight:
 
 00000000 <BkpSetFactoryDefaultsForLight>:
@@ -678,7 +688,7 @@ Disassembly of section .text.BkpFullReadToMemory:
 
 00000000 <BkpFullReadToMemory>:
 BkpFullReadToMemory():
-C:\cortex\dimmers\src/dimmers_bkp.c:275
+C:\cortex\dimmers\src/dimmers_bkp.c:279
         BkpSetFactoryDefaultsForLight ( PIN_BUTTON_6 );
         BkpSetFactoryDefaultsGeneral();
     }
@@ -688,7 +698,7 @@ void    BkpFullReadToMemory (void){
    0:	b570      	push	{r4, r5, r6, lr}
    2:	4d0d      	ldr	r5, [pc, #52]	(38 <BkpFullReadToMemory+0x38>)
    4:	2404      	movs	r4, #4
-C:\cortex\dimmers\src/dimmers_bkp.c:282
+C:\cortex\dimmers\src/dimmers_bkp.c:286
     u8  byteidx=0;
     u16 index;
     u16 value;
@@ -697,7 +707,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:282
         value = BKP_ReadBackupRegister(index);
    6:	4620      	mov	r0, r4
    8:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
-C:\cortex\dimmers\src/dimmers_bkp.c:281
+C:\cortex\dimmers\src/dimmers_bkp.c:285
 
     u8  byteidx=0;
     u16 index;
@@ -705,7 +715,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:281
 
     for (index = BKP_DR1 ; index <= BKP_DR10 ; index +=4 ){
    c:	1d23      	adds	r3, r4, #4
-C:\cortex\dimmers\src/dimmers_bkp.c:287
+C:\cortex\dimmers\src/dimmers_bkp.c:291
         value = BKP_ReadBackupRegister(index);
     #ifdef BIG_ENDIAN
         InternData.values[byteidx++] = (value & 0xFF00) >> 8; 
@@ -713,7 +723,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:287
     #else
         InternData.values[byteidx++] =  value & 0x00FF; 
    e:	7028      	strb	r0, [r5, #0]
-C:\cortex\dimmers\src/dimmers_bkp.c:281
+C:\cortex\dimmers\src/dimmers_bkp.c:285
 
     u8  byteidx=0;
     u16 index;
@@ -721,7 +731,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:281
 
     for (index = BKP_DR1 ; index <= BKP_DR10 ; index +=4 ){
   10:	b29c      	uxth	r4, r3
-C:\cortex\dimmers\src/dimmers_bkp.c:288
+C:\cortex\dimmers\src/dimmers_bkp.c:292
     #ifdef BIG_ENDIAN
         InternData.values[byteidx++] = (value & 0xFF00) >> 8; 
         InternData.values[byteidx++] =  value & 0x00FF;
@@ -730,7 +740,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:288
         InternData.values[byteidx++] = (value & 0xFF00) >> 8; 
   12:	0a00      	lsrs	r0, r0, #8
   14:	7068      	strb	r0, [r5, #1]
-C:\cortex\dimmers\src/dimmers_bkp.c:281
+C:\cortex\dimmers\src/dimmers_bkp.c:285
 
     u8  byteidx=0;
     u16 index;
@@ -742,7 +752,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:281
   1a:	d1f4      	bne.n	6 <BkpFullReadToMemory+0x6>
   1c:	4d06      	ldr	r5, [pc, #24]	(38 <BkpFullReadToMemory+0x38>)
   1e:	3414      	adds	r4, #20
-C:\cortex\dimmers\src/dimmers_bkp.c:293
+C:\cortex\dimmers\src/dimmers_bkp.c:297
         InternData.values[byteidx++] = (value & 0xFF00) >> 8; 
     #endif    
     }
@@ -751,7 +761,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:293
         value = BKP_ReadBackupRegister(index);
   20:	4620      	mov	r0, r4
   22:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
-C:\cortex\dimmers\src/dimmers_bkp.c:292
+C:\cortex\dimmers\src/dimmers_bkp.c:296
         InternData.values[byteidx++] =  value & 0x00FF; 
         InternData.values[byteidx++] = (value & 0xFF00) >> 8; 
     #endif    
@@ -759,7 +769,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:292
 
     for (index = BKP_DR11 ; index <= BKP_DR42 ; index +=4 ){
   26:	1d23      	adds	r3, r4, #4
-C:\cortex\dimmers\src/dimmers_bkp.c:298
+C:\cortex\dimmers\src/dimmers_bkp.c:302
         value = BKP_ReadBackupRegister(index);
     #ifdef BIG_ENDIAN
         InternData.values[byteidx++] = (value & 0xFF00) >> 8; 
@@ -767,7 +777,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:298
     #else
         InternData.values[byteidx++] =  value & 0x00FF; 
   28:	7528      	strb	r0, [r5, #20]
-C:\cortex\dimmers\src/dimmers_bkp.c:292
+C:\cortex\dimmers\src/dimmers_bkp.c:296
         InternData.values[byteidx++] =  value & 0x00FF; 
         InternData.values[byteidx++] = (value & 0xFF00) >> 8; 
     #endif    
@@ -775,7 +785,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:292
 
     for (index = BKP_DR11 ; index <= BKP_DR42 ; index +=4 ){
   2a:	b29c      	uxth	r4, r3
-C:\cortex\dimmers\src/dimmers_bkp.c:299
+C:\cortex\dimmers\src/dimmers_bkp.c:303
     #ifdef BIG_ENDIAN
         InternData.values[byteidx++] = (value & 0xFF00) >> 8; 
         InternData.values[byteidx++] =  value & 0x00FF; 
@@ -784,7 +794,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:299
         InternData.values[byteidx++] = (value & 0xFF00) >> 8; 
   2c:	0a00      	lsrs	r0, r0, #8
   2e:	7568      	strb	r0, [r5, #21]
-C:\cortex\dimmers\src/dimmers_bkp.c:292
+C:\cortex\dimmers\src/dimmers_bkp.c:296
         InternData.values[byteidx++] =  value & 0x00FF; 
         InternData.values[byteidx++] = (value & 0xFF00) >> 8; 
     #endif    
@@ -794,7 +804,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:292
   30:	3502      	adds	r5, #2
   32:	2cc0      	cmp	r4, #192
   34:	d1f4      	bne.n	20 <BkpFullReadToMemory+0x20>
-C:\cortex\dimmers\src/dimmers_bkp.c:303
+C:\cortex\dimmers\src/dimmers_bkp.c:307
         InternData.values[byteidx++] =  value & 0x00FF; 
         InternData.values[byteidx++] = (value & 0xFF00) >> 8; 
     #endif  
@@ -807,46 +817,68 @@ Disassembly of section .text.BkpWriteGeneralToMemory:
 
 00000000 <BkpWriteGeneralToMemory>:
 BkpWriteGeneralToMemory():
-C:\cortex\dimmers\src/dimmers_bkp.c:254
-        props->type     =   BkpGetSwitcherType(inputpin);
+C:\cortex\dimmers\src/dimmers_bkp.c:189
+        else
+            return BUTTON_TYPE;
     }
-
 }
 
 void    BkpWriteGeneralToMemory ( void ){
    0:	b510      	push	{r4, lr}
-C:\cortex\dimmers\src/dimmers_bkp.c:257
-
-    //ZeroCrossTreshold   = BKP_ReadBackupRegister( POS_VALUE_TRESHOLD_ZEROCROSS );
-    CountWatchdog       = BKP_ReadBackupRegister( POS_VALUE_COUNT_WATCHDOG );
-   2:	20ac      	movs	r0, #172
+C:\cortex\dimmers\src/dimmers_bkp.c:190
+  TempSensor    = BKP_ReadBackupRegister( POS_VALUE_TEMP_SENSOR);
+   2:	20a8      	movs	r0, #168
    4:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
-   8:	4b03      	ldr	r3, [pc, #12]	(18 <BkpWriteGeneralToMemory+0x18>)
+   8:	4b0d      	ldr	r3, [pc, #52]	(40 <BkpWriteGeneralToMemory+0x40>)
    a:	8018      	strh	r0, [r3, #0]
-C:\cortex\dimmers\src/dimmers_bkp.c:258
-    PropertyFlags       = BKP_ReadBackupRegister( POS_VALUE_GENERAL_FLAGS );
-   c:	20bc      	movs	r0, #188
+C:\cortex\dimmers\src/dimmers_bkp.c:191
+  CountWatchdog = BKP_ReadBackupRegister( POS_VALUE_COUNT_WATCHDOG );
+   c:	20ac      	movs	r0, #172
    e:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
-  12:	4b02      	ldr	r3, [pc, #8]	(1c <BkpWriteGeneralToMemory+0x1c>)
-  14:	6018      	str	r0, [r3, #0]
-C:\cortex\dimmers\src/dimmers_bkp.c:259
+  12:	4b0c      	ldr	r3, [pc, #48]	(44 <BkpWriteGeneralToMemory+0x44>)
+  14:	8018      	strh	r0, [r3, #0]
+C:\cortex\dimmers\src/dimmers_bkp.c:192
+  ToggleCount   = BKP_ReadBackupRegister( POS_VALUE_COUNT_TOGGLE );
+  16:	20b0      	movs	r0, #176
+  18:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
+  1c:	4b0a      	ldr	r3, [pc, #40]	(48 <BkpWriteGeneralToMemory+0x48>)
+  1e:	8018      	strh	r0, [r3, #0]
+C:\cortex\dimmers\src/dimmers_bkp.c:193
+  DimmerCount   = BKP_ReadBackupRegister( POS_VALUE_COUNT_DIMMER );
+  20:	20b4      	movs	r0, #180
+  22:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
+  26:	4b09      	ldr	r3, [pc, #36]	(4c <BkpWriteGeneralToMemory+0x4c>)
+  28:	8018      	strh	r0, [r3, #0]
+C:\cortex\dimmers\src/dimmers_bkp.c:194
+  HoursCount    = BKP_ReadBackupRegister( POS_VALUE_COUNT_HOURS);
+  2a:	20b8      	movs	r0, #184
+  2c:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
+  30:	4b07      	ldr	r3, [pc, #28]	(50 <BkpWriteGeneralToMemory+0x50>)
+  32:	8018      	strh	r0, [r3, #0]
+C:\cortex\dimmers\src/dimmers_bkp.c:195
+  PropertyFlags = BKP_ReadBackupRegister( POS_VALUE_GENERAL_FLAGS );
+  34:	20bc      	movs	r0, #188
+  36:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
+  3a:	4b06      	ldr	r3, [pc, #24]	(54 <BkpWriteGeneralToMemory+0x54>)
+  3c:	6018      	str	r0, [r3, #0]
+C:\cortex\dimmers\src/dimmers_bkp.c:196
 }
-  16:	bd10      	pop	{r4, pc}
+  3e:	bd10      	pop	{r4, pc}
 	...
 Disassembly of section .text.BkpGetSwitcherType:
 
 00000000 <BkpGetSwitcherType>:
 BkpGetSwitcherType():
-C:\cortex\dimmers\src/dimmers_bkp.c:141
-    BKP_WriteBackupRegister( POS_VALUE_FREE3 ,     DEFAULT_VALUE_FREE3 );
-    BKP_WriteBackupRegister( POS_VALUE_FREE4 ,     DEFAULT_VALUE_FREE4 );
+C:\cortex\dimmers\src/dimmers_bkp.c:143
+    BKP_WriteBackupRegister( POS_VALUE_COUNT_HOURS    , DEFAULT_VALUE_COUNT_HOURS);
+    BKP_WriteBackupRegister( POS_VALUE_GENERAL_FLAGS  , DEFAULT_VALUE_GENERAL_FLAGS);
 
 }
 
 SWITCHER_TYPE BkpGetSwitcherType (  u16 inputpin ){
    0:	b513      	push	{r0, r1, r4, lr}
    2:	4604      	mov	r4, r0
-C:\cortex\dimmers\src/dimmers_bkp.c:145
+C:\cortex\dimmers\src/dimmers_bkp.c:147
 
     vu32 flags,bits;
 
@@ -854,13 +886,13 @@ C:\cortex\dimmers\src/dimmers_bkp.c:145
    4:	20bc      	movs	r0, #188
    6:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
    a:	4b20      	ldr	r3, [pc, #128]	(8c <BkpGetSwitcherType+0x8c>)
-C:\cortex\dimmers\src/dimmers_bkp.c:149
+C:\cortex\dimmers\src/dimmers_bkp.c:151
 
     flags = BB_GETVARADDR (PropertyFlags);
 
     if ( inputpin == PIN_BUTTON_1 ){
    c:	2c40      	cmp	r4, #64
-C:\cortex\dimmers\src/dimmers_bkp.c:145
+C:\cortex\dimmers\src/dimmers_bkp.c:147
 
 SWITCHER_TYPE BkpGetSwitcherType (  u16 inputpin ){
 
@@ -868,21 +900,21 @@ SWITCHER_TYPE BkpGetSwitcherType (  u16 inputpin ){
 
     PropertyFlags = BKP_ReadBackupRegister( POS_VALUE_GENERAL_FLAGS );
    e:	6018      	str	r0, [r3, #0]
-C:\cortex\dimmers\src/dimmers_bkp.c:147
+C:\cortex\dimmers\src/dimmers_bkp.c:149
 
     flags = BB_GETVARADDR (PropertyFlags);
   10:	9301      	str	r3, [sp, #4]
-C:\cortex\dimmers\src/dimmers_bkp.c:149
+C:\cortex\dimmers\src/dimmers_bkp.c:151
 
     if ( inputpin == PIN_BUTTON_1 ){
   12:	d104      	bne.n	1e <BkpGetSwitcherType+0x1e>
-C:\cortex\dimmers\src/dimmers_bkp.c:150
+C:\cortex\dimmers\src/dimmers_bkp.c:152
         if ( BB_GETBIT (flags,0) == 1 )
   14:	9b01      	ldr	r3, [sp, #4]
   16:	015b      	lsls	r3, r3, #5
   18:	f043 5308 	orr.w	r3, r3, #570425344	; 0x22000000
   1c:	e02f      	b.n	7e <BkpGetSwitcherType+0x7e>
-C:\cortex\dimmers\src/dimmers_bkp.c:155
+C:\cortex\dimmers\src/dimmers_bkp.c:157
             return SWITCH_TYPE;
         else
             return BUTTON_TYPE;
@@ -890,14 +922,14 @@ C:\cortex\dimmers\src/dimmers_bkp.c:155
     else if ( inputpin == PIN_BUTTON_2 ){
   1e:	2c80      	cmp	r4, #128
   20:	d106      	bne.n	30 <BkpGetSwitcherType+0x30>
-C:\cortex\dimmers\src/dimmers_bkp.c:156
+C:\cortex\dimmers\src/dimmers_bkp.c:158
         if ( BB_GETBIT (flags,1) == 1 )
   22:	9b01      	ldr	r3, [sp, #4]
   24:	015b      	lsls	r3, r3, #5
   26:	f043 5308 	orr.w	r3, r3, #570425344	; 0x22000000
   2a:	f043 0304 	orr.w	r3, r3, #4	; 0x4
   2e:	e026      	b.n	7e <BkpGetSwitcherType+0x7e>
-C:\cortex\dimmers\src/dimmers_bkp.c:161
+C:\cortex\dimmers\src/dimmers_bkp.c:163
             return SWITCH_TYPE;
         else
             return BUTTON_TYPE;
@@ -905,14 +937,14 @@ C:\cortex\dimmers\src/dimmers_bkp.c:161
     else if ( inputpin == PIN_BUTTON_3 ){
   30:	f5b4 7f80 	cmp.w	r4, #256	; 0x100
   34:	d106      	bne.n	44 <BkpGetSwitcherType+0x44>
-C:\cortex\dimmers\src/dimmers_bkp.c:162
+C:\cortex\dimmers\src/dimmers_bkp.c:164
         if ( BB_GETBIT (flags,2) == 1 )
   36:	9b01      	ldr	r3, [sp, #4]
   38:	015b      	lsls	r3, r3, #5
   3a:	f043 5308 	orr.w	r3, r3, #570425344	; 0x22000000
   3e:	f043 0308 	orr.w	r3, r3, #8	; 0x8
   42:	e01c      	b.n	7e <BkpGetSwitcherType+0x7e>
-C:\cortex\dimmers\src/dimmers_bkp.c:167
+C:\cortex\dimmers\src/dimmers_bkp.c:169
             return SWITCH_TYPE;
         else
             return BUTTON_TYPE;
@@ -920,14 +952,14 @@ C:\cortex\dimmers\src/dimmers_bkp.c:167
     else if ( inputpin == PIN_BUTTON_4 ){
   44:	f5b4 7f00 	cmp.w	r4, #512	; 0x200
   48:	d106      	bne.n	58 <BkpGetSwitcherType+0x58>
-C:\cortex\dimmers\src/dimmers_bkp.c:168
+C:\cortex\dimmers\src/dimmers_bkp.c:170
         if ( BB_GETBIT (flags,3) == 1 )
   4a:	9b01      	ldr	r3, [sp, #4]
   4c:	015b      	lsls	r3, r3, #5
   4e:	f043 5308 	orr.w	r3, r3, #570425344	; 0x22000000
   52:	f043 030c 	orr.w	r3, r3, #12	; 0xc
   56:	e012      	b.n	7e <BkpGetSwitcherType+0x7e>
-C:\cortex\dimmers\src/dimmers_bkp.c:173
+C:\cortex\dimmers\src/dimmers_bkp.c:175
             return SWITCH_TYPE;
         else
             return BUTTON_TYPE;
@@ -935,14 +967,14 @@ C:\cortex\dimmers\src/dimmers_bkp.c:173
     else if ( inputpin == PIN_BUTTON_5 ){
   58:	f5b4 6f80 	cmp.w	r4, #1024	; 0x400
   5c:	d106      	bne.n	6c <BkpGetSwitcherType+0x6c>
-C:\cortex\dimmers\src/dimmers_bkp.c:174
+C:\cortex\dimmers\src/dimmers_bkp.c:176
         if ( BB_GETBIT (flags,4) == 1 )
   5e:	9b01      	ldr	r3, [sp, #4]
   60:	015b      	lsls	r3, r3, #5
   62:	f043 5308 	orr.w	r3, r3, #570425344	; 0x22000000
   66:	f043 0310 	orr.w	r3, r3, #16	; 0x10
   6a:	e008      	b.n	7e <BkpGetSwitcherType+0x7e>
-C:\cortex\dimmers\src/dimmers_bkp.c:179
+C:\cortex\dimmers\src/dimmers_bkp.c:181
             return SWITCH_TYPE;
         else
             return BUTTON_TYPE;
@@ -950,7 +982,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:179
     else if ( inputpin == PIN_BUTTON_6 ){
   6c:	f5b4 6f00 	cmp.w	r4, #2048	; 0x800
   70:	d10b      	bne.n	8a <BkpGetSwitcherType+0x8a>
-C:\cortex\dimmers\src/dimmers_bkp.c:180
+C:\cortex\dimmers\src/dimmers_bkp.c:182
         if ( BB_GETBIT (flags,5) == 1 )
   72:	9b01      	ldr	r3, [sp, #4]
   74:	015b      	lsls	r3, r3, #5
@@ -962,7 +994,7 @@ C:\cortex\dimmers\src/dimmers_bkp.c:180
   84:	2000      	movne	r0, #0
   86:	2001      	moveq	r0, #1
   88:	e7ff      	b.n	8a <BkpGetSwitcherType+0x8a>
-C:\cortex\dimmers\src/dimmers_bkp.c:185
+C:\cortex\dimmers\src/dimmers_bkp.c:187
             return SWITCH_TYPE;
         else
             return BUTTON_TYPE;
@@ -974,245 +1006,247 @@ Disassembly of section .text.BkpWriteLightPropertiesToMemory:
 
 00000000 <BkpWriteLightPropertiesToMemory>:
 BkpWriteLightPropertiesToMemory():
-C:\cortex\dimmers\src/dimmers_bkp.c:189
+C:\cortex\dimmers\src/dimmers_bkp.c:200
+  PropertyFlags = BKP_ReadBackupRegister( POS_VALUE_GENERAL_FLAGS );
+}
 
 void    BkpWriteLightPropertiesToMemory ( u16 inputpin , pTLightProperties props ){
 
     if ( inputpin == PIN_BUTTON_1 ){
    0:	2840      	cmp	r0, #64
-C:\cortex\dimmers\src/dimmers_bkp.c:187
-        else
-            return BUTTON_TYPE;
-    }
+C:\cortex\dimmers\src/dimmers_bkp.c:198
+  DimmerCount   = BKP_ReadBackupRegister( POS_VALUE_COUNT_DIMMER );
+  HoursCount    = BKP_ReadBackupRegister( POS_VALUE_COUNT_HOURS);
+  PropertyFlags = BKP_ReadBackupRegister( POS_VALUE_GENERAL_FLAGS );
 }
 
 void    BkpWriteLightPropertiesToMemory ( u16 inputpin , pTLightProperties props ){
    2:	b570      	push	{r4, r5, r6, lr}
    4:	4605      	mov	r5, r0
    6:	460c      	mov	r4, r1
-C:\cortex\dimmers\src/dimmers_bkp.c:189
+C:\cortex\dimmers\src/dimmers_bkp.c:200
 
     if ( inputpin == PIN_BUTTON_1 ){
    8:	d115      	bne.n	36 <BkpWriteLightPropertiesToMemory+0x36>
-C:\cortex\dimmers\src/dimmers_bkp.c:191
+C:\cortex\dimmers\src/dimmers_bkp.c:202
     
         props->value    =   BKP_ReadBackupRegister( POS_VALUE_LIGHT_1 );
    a:	2004      	movs	r0, #4
    c:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   10:	8020      	strh	r0, [r4, #0]
-C:\cortex\dimmers\src/dimmers_bkp.c:192
+C:\cortex\dimmers\src/dimmers_bkp.c:203
         props->min      =   BKP_ReadBackupRegister( POS_VALUE_MIN_LIGHT_1 );
   12:	2008      	movs	r0, #8
   14:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   18:	8060      	strh	r0, [r4, #2]
-C:\cortex\dimmers\src/dimmers_bkp.c:193
+C:\cortex\dimmers\src/dimmers_bkp.c:204
         props->max      =   BKP_ReadBackupRegister( POS_VALUE_MAX_LIGHT_1 );
   1a:	200c      	movs	r0, #12
   1c:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   20:	80a0      	strh	r0, [r4, #4]
-C:\cortex\dimmers\src/dimmers_bkp.c:194
+C:\cortex\dimmers\src/dimmers_bkp.c:205
         props->step     =   BKP_ReadBackupRegister( POS_VALUE_STEP_LIGHT_1 );
   22:	2010      	movs	r0, #16
   24:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   28:	80e0      	strh	r0, [r4, #6]
-C:\cortex\dimmers\src/dimmers_bkp.c:195
+C:\cortex\dimmers\src/dimmers_bkp.c:206
         props->outputpin=   BKP_ReadBackupRegister( POS_VALUE_OUTPUT_PIN_LIGHT_1 );
   2a:	2014      	movs	r0, #20
   2c:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   30:	8120      	strh	r0, [r4, #8]
-C:\cortex\dimmers\src/dimmers_bkp.c:196
+C:\cortex\dimmers\src/dimmers_bkp.c:207
         props->inputpin =   BKP_ReadBackupRegister( POS_VALUE_INPUT_PIN_LIGHT_1 );
   32:	2018      	movs	r0, #24
   34:	e07a      	b.n	12c <BkpWriteLightPropertiesToMemory+0x12c>
-C:\cortex\dimmers\src/dimmers_bkp.c:200
+C:\cortex\dimmers\src/dimmers_bkp.c:211
         props->type     =   BkpGetSwitcherType(inputpin);
     
     }
     else if ( inputpin == PIN_BUTTON_2 ){
   36:	2880      	cmp	r0, #128
   38:	d115      	bne.n	66 <BkpWriteLightPropertiesToMemory+0x66>
-C:\cortex\dimmers\src/dimmers_bkp.c:202
+C:\cortex\dimmers\src/dimmers_bkp.c:213
     
         props->value    =   BKP_ReadBackupRegister( POS_VALUE_LIGHT_2 );
   3a:	201c      	movs	r0, #28
   3c:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   40:	8020      	strh	r0, [r4, #0]
-C:\cortex\dimmers\src/dimmers_bkp.c:203
+C:\cortex\dimmers\src/dimmers_bkp.c:214
         props->min      =   BKP_ReadBackupRegister( POS_VALUE_MIN_LIGHT_2 );
   42:	2020      	movs	r0, #32
   44:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   48:	8060      	strh	r0, [r4, #2]
-C:\cortex\dimmers\src/dimmers_bkp.c:204
+C:\cortex\dimmers\src/dimmers_bkp.c:215
         props->max      =   BKP_ReadBackupRegister( POS_VALUE_MAX_LIGHT_2 );
   4a:	2024      	movs	r0, #36
   4c:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   50:	80a0      	strh	r0, [r4, #4]
-C:\cortex\dimmers\src/dimmers_bkp.c:205
+C:\cortex\dimmers\src/dimmers_bkp.c:216
         props->step     =   BKP_ReadBackupRegister( POS_VALUE_STEP_LIGHT_2 );
   52:	2028      	movs	r0, #40
   54:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   58:	80e0      	strh	r0, [r4, #6]
-C:\cortex\dimmers\src/dimmers_bkp.c:206
+C:\cortex\dimmers\src/dimmers_bkp.c:217
         props->outputpin=   BKP_ReadBackupRegister( POS_VALUE_OUTPUT_PIN_LIGHT_2 );
   5a:	2040      	movs	r0, #64
   5c:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   60:	8120      	strh	r0, [r4, #8]
-C:\cortex\dimmers\src/dimmers_bkp.c:207
+C:\cortex\dimmers\src/dimmers_bkp.c:218
         props->inputpin =   BKP_ReadBackupRegister( POS_VALUE_INPUT_PIN_LIGHT_2 );
   62:	2044      	movs	r0, #68
   64:	e062      	b.n	12c <BkpWriteLightPropertiesToMemory+0x12c>
-C:\cortex\dimmers\src/dimmers_bkp.c:211
+C:\cortex\dimmers\src/dimmers_bkp.c:222
         props->type     =   BkpGetSwitcherType(inputpin);
 
     }
     else if ( inputpin == PIN_BUTTON_3 ){
   66:	f5b0 7f80 	cmp.w	r0, #256	; 0x100
   6a:	d115      	bne.n	98 <BkpWriteLightPropertiesToMemory+0x98>
-C:\cortex\dimmers\src/dimmers_bkp.c:213
+C:\cortex\dimmers\src/dimmers_bkp.c:224
     
         props->value    =   BKP_ReadBackupRegister( POS_VALUE_LIGHT_3 );
   6c:	2048      	movs	r0, #72
   6e:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   72:	8020      	strh	r0, [r4, #0]
-C:\cortex\dimmers\src/dimmers_bkp.c:214
+C:\cortex\dimmers\src/dimmers_bkp.c:225
         props->min      =   BKP_ReadBackupRegister( POS_VALUE_MIN_LIGHT_3 );
   74:	204c      	movs	r0, #76
   76:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   7a:	8060      	strh	r0, [r4, #2]
-C:\cortex\dimmers\src/dimmers_bkp.c:215
+C:\cortex\dimmers\src/dimmers_bkp.c:226
         props->max      =   BKP_ReadBackupRegister( POS_VALUE_MAX_LIGHT_3 );
   7c:	2050      	movs	r0, #80
   7e:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   82:	80a0      	strh	r0, [r4, #4]
-C:\cortex\dimmers\src/dimmers_bkp.c:216
+C:\cortex\dimmers\src/dimmers_bkp.c:227
         props->step     =   BKP_ReadBackupRegister( POS_VALUE_STEP_LIGHT_3 );
   84:	2054      	movs	r0, #84
   86:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   8a:	80e0      	strh	r0, [r4, #6]
-C:\cortex\dimmers\src/dimmers_bkp.c:217
+C:\cortex\dimmers\src/dimmers_bkp.c:228
         props->outputpin=   BKP_ReadBackupRegister( POS_VALUE_OUTPUT_PIN_LIGHT_3 );
   8c:	2058      	movs	r0, #88
   8e:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   92:	8120      	strh	r0, [r4, #8]
-C:\cortex\dimmers\src/dimmers_bkp.c:218
+C:\cortex\dimmers\src/dimmers_bkp.c:229
         props->inputpin =   BKP_ReadBackupRegister( POS_VALUE_INPUT_PIN_LIGHT_3 );
   94:	205c      	movs	r0, #92
   96:	e049      	b.n	12c <BkpWriteLightPropertiesToMemory+0x12c>
-C:\cortex\dimmers\src/dimmers_bkp.c:221
+C:\cortex\dimmers\src/dimmers_bkp.c:232
         props->type     =   BkpGetSwitcherType(inputpin);
     }
     else if ( inputpin == PIN_BUTTON_4 ){
   98:	f5b0 7f00 	cmp.w	r0, #512	; 0x200
   9c:	d115      	bne.n	ca <BkpWriteLightPropertiesToMemory+0xca>
-C:\cortex\dimmers\src/dimmers_bkp.c:223
+C:\cortex\dimmers\src/dimmers_bkp.c:234
     
         props->value    =   BKP_ReadBackupRegister( POS_VALUE_LIGHT_4 );
   9e:	2060      	movs	r0, #96
   a0:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   a4:	8020      	strh	r0, [r4, #0]
-C:\cortex\dimmers\src/dimmers_bkp.c:224
+C:\cortex\dimmers\src/dimmers_bkp.c:235
         props->min      =   BKP_ReadBackupRegister( POS_VALUE_MIN_LIGHT_4 );
   a6:	2064      	movs	r0, #100
   a8:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   ac:	8060      	strh	r0, [r4, #2]
-C:\cortex\dimmers\src/dimmers_bkp.c:225
+C:\cortex\dimmers\src/dimmers_bkp.c:236
         props->max      =   BKP_ReadBackupRegister( POS_VALUE_MAX_LIGHT_4 );
   ae:	2068      	movs	r0, #104
   b0:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   b4:	80a0      	strh	r0, [r4, #4]
-C:\cortex\dimmers\src/dimmers_bkp.c:226
+C:\cortex\dimmers\src/dimmers_bkp.c:237
         props->step     =   BKP_ReadBackupRegister( POS_VALUE_STEP_LIGHT_4 );
   b6:	206c      	movs	r0, #108
   b8:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   bc:	80e0      	strh	r0, [r4, #6]
-C:\cortex\dimmers\src/dimmers_bkp.c:227
+C:\cortex\dimmers\src/dimmers_bkp.c:238
         props->outputpin=   BKP_ReadBackupRegister( POS_VALUE_OUTPUT_PIN_LIGHT_4 );
   be:	2070      	movs	r0, #112
   c0:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   c4:	8120      	strh	r0, [r4, #8]
-C:\cortex\dimmers\src/dimmers_bkp.c:228
+C:\cortex\dimmers\src/dimmers_bkp.c:239
         props->inputpin =   BKP_ReadBackupRegister( POS_VALUE_INPUT_PIN_LIGHT_4 );
   c6:	2074      	movs	r0, #116
   c8:	e030      	b.n	12c <BkpWriteLightPropertiesToMemory+0x12c>
-C:\cortex\dimmers\src/dimmers_bkp.c:231
+C:\cortex\dimmers\src/dimmers_bkp.c:242
         props->type     =   BkpGetSwitcherType(inputpin);
     }
     else if ( inputpin == PIN_BUTTON_5 ){
   ca:	f5b0 6f80 	cmp.w	r0, #1024	; 0x400
   ce:	d115      	bne.n	fc <BkpWriteLightPropertiesToMemory+0xfc>
-C:\cortex\dimmers\src/dimmers_bkp.c:233
+C:\cortex\dimmers\src/dimmers_bkp.c:244
     
         props->value    =   BKP_ReadBackupRegister( POS_VALUE_LIGHT_5 );
   d0:	2078      	movs	r0, #120
   d2:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   d6:	8020      	strh	r0, [r4, #0]
-C:\cortex\dimmers\src/dimmers_bkp.c:234
+C:\cortex\dimmers\src/dimmers_bkp.c:245
         props->min      =   BKP_ReadBackupRegister( POS_VALUE_MIN_LIGHT_5 );
   d8:	207c      	movs	r0, #124
   da:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   de:	8060      	strh	r0, [r4, #2]
-C:\cortex\dimmers\src/dimmers_bkp.c:235
+C:\cortex\dimmers\src/dimmers_bkp.c:246
         props->max      =   BKP_ReadBackupRegister( POS_VALUE_MAX_LIGHT_5 );
   e0:	2080      	movs	r0, #128
   e2:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   e6:	80a0      	strh	r0, [r4, #4]
-C:\cortex\dimmers\src/dimmers_bkp.c:236
+C:\cortex\dimmers\src/dimmers_bkp.c:247
         props->step     =   BKP_ReadBackupRegister( POS_VALUE_STEP_LIGHT_5 );
   e8:	2084      	movs	r0, #132
   ea:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   ee:	80e0      	strh	r0, [r4, #6]
-C:\cortex\dimmers\src/dimmers_bkp.c:237
+C:\cortex\dimmers\src/dimmers_bkp.c:248
         props->outputpin=   BKP_ReadBackupRegister( POS_VALUE_OUTPUT_PIN_LIGHT_5 );
   f0:	2088      	movs	r0, #136
   f2:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
   f6:	8120      	strh	r0, [r4, #8]
-C:\cortex\dimmers\src/dimmers_bkp.c:238
+C:\cortex\dimmers\src/dimmers_bkp.c:249
         props->inputpin =   BKP_ReadBackupRegister( POS_VALUE_INPUT_PIN_LIGHT_5 );
   f8:	208c      	movs	r0, #140
   fa:	e017      	b.n	12c <BkpWriteLightPropertiesToMemory+0x12c>
-C:\cortex\dimmers\src/dimmers_bkp.c:241
+C:\cortex\dimmers\src/dimmers_bkp.c:252
         props->type     =   BkpGetSwitcherType(inputpin);
     }
     else if ( inputpin == PIN_BUTTON_6 ){
   fc:	f5b0 6f00 	cmp.w	r0, #2048	; 0x800
  100:	d11b      	bne.n	13a <BkpWriteLightPropertiesToMemory+0x13a>
-C:\cortex\dimmers\src/dimmers_bkp.c:243
+C:\cortex\dimmers\src/dimmers_bkp.c:254
     
         props->value    =   BKP_ReadBackupRegister( POS_VALUE_LIGHT_6 );
  102:	2090      	movs	r0, #144
  104:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
  108:	8020      	strh	r0, [r4, #0]
-C:\cortex\dimmers\src/dimmers_bkp.c:244
+C:\cortex\dimmers\src/dimmers_bkp.c:255
         props->min      =   BKP_ReadBackupRegister( POS_VALUE_MIN_LIGHT_6 );
  10a:	2094      	movs	r0, #148
  10c:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
  110:	8060      	strh	r0, [r4, #2]
-C:\cortex\dimmers\src/dimmers_bkp.c:245
+C:\cortex\dimmers\src/dimmers_bkp.c:256
         props->max      =   BKP_ReadBackupRegister( POS_VALUE_MAX_LIGHT_6 );
  112:	2098      	movs	r0, #152
  114:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
  118:	80a0      	strh	r0, [r4, #4]
-C:\cortex\dimmers\src/dimmers_bkp.c:246
+C:\cortex\dimmers\src/dimmers_bkp.c:257
         props->step     =   BKP_ReadBackupRegister( POS_VALUE_STEP_LIGHT_6);
  11a:	209c      	movs	r0, #156
  11c:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
  120:	80e0      	strh	r0, [r4, #6]
-C:\cortex\dimmers\src/dimmers_bkp.c:247
+C:\cortex\dimmers\src/dimmers_bkp.c:258
         props->outputpin=   BKP_ReadBackupRegister( POS_VALUE_OUTPUT_PIN_LIGHT_6 );
  122:	20a0      	movs	r0, #160
  124:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
  128:	8120      	strh	r0, [r4, #8]
-C:\cortex\dimmers\src/dimmers_bkp.c:248
+C:\cortex\dimmers\src/dimmers_bkp.c:259
         props->inputpin =   BKP_ReadBackupRegister( POS_VALUE_INPUT_PIN_LIGHT_6 );
  12a:	20a4      	movs	r0, #164
  12c:	f7ff fffe 	bl	0 <BKP_ReadBackupRegister>
  130:	8160      	strh	r0, [r4, #10]
-C:\cortex\dimmers\src/dimmers_bkp.c:249
+C:\cortex\dimmers\src/dimmers_bkp.c:260
         props->type     =   BkpGetSwitcherType(inputpin);
  132:	4628      	mov	r0, r5
  134:	f7ff fffe 	bl	0 <BkpWriteLightPropertiesToMemory>
  138:	7320      	strb	r0, [r4, #12]
-C:\cortex\dimmers\src/dimmers_bkp.c:252
+C:\cortex\dimmers\src/dimmers_bkp.c:263
     }
 
 }
@@ -1288,15 +1322,15 @@ Disassembly of section .text.BkpSetFactoryDefaultsToLights:
 
 00000000 <BkpSetFactoryDefaultsToLights>:
 BkpSetFactoryDefaultsToLights():
-C:\cortex\dimmers\src/dimmers_bkp.c:261
-    //ZeroCrossTreshold   = BKP_ReadBackupRegister( POS_VALUE_TRESHOLD_ZEROCROSS );
-    CountWatchdog       = BKP_ReadBackupRegister( POS_VALUE_COUNT_WATCHDOG );
-    PropertyFlags       = BKP_ReadBackupRegister( POS_VALUE_GENERAL_FLAGS );
+C:\cortex\dimmers\src/dimmers_bkp.c:265
+        props->type     =   BkpGetSwitcherType(inputpin);
+    }
+
 }
 
 void    BkpSetFactoryDefaultsToLights ( void ){
    0:	b510      	push	{r4, lr}
-C:\cortex\dimmers\src/dimmers_bkp.c:263
+C:\cortex\dimmers\src/dimmers_bkp.c:267
 
     if ( (GpioGetDipState(FACTORY_DEFAULT_SWITCH) == ON ) || ( IsWatchdog == TRUE) ) {
    2:	f44f 5080 	mov.w	r0, #4096	; 0x1000
@@ -1306,35 +1340,35 @@ C:\cortex\dimmers\src/dimmers_bkp.c:263
    e:	781b      	ldrb	r3, [r3, #0]
   10:	2b01      	cmp	r3, #1
   12:	d117      	bne.n	44 <BkpSetFactoryDefaultsToLights+0x44>
-C:\cortex\dimmers\src/dimmers_bkp.c:265
+C:\cortex\dimmers\src/dimmers_bkp.c:269
 
         BkpSetFactoryDefaultsForLight ( PIN_BUTTON_1 );
   14:	2040      	movs	r0, #64
   16:	f7ff fffe 	bl	0 <BkpSetFactoryDefaultsToLights>
-C:\cortex\dimmers\src/dimmers_bkp.c:266
+C:\cortex\dimmers\src/dimmers_bkp.c:270
         BkpSetFactoryDefaultsForLight ( PIN_BUTTON_2 );
   1a:	2080      	movs	r0, #128
   1c:	f7ff fffe 	bl	0 <BkpSetFactoryDefaultsToLights>
-C:\cortex\dimmers\src/dimmers_bkp.c:267
+C:\cortex\dimmers\src/dimmers_bkp.c:271
         BkpSetFactoryDefaultsForLight ( PIN_BUTTON_3 );
   20:	f44f 7080 	mov.w	r0, #256	; 0x100
   24:	f7ff fffe 	bl	0 <BkpSetFactoryDefaultsToLights>
-C:\cortex\dimmers\src/dimmers_bkp.c:268
+C:\cortex\dimmers\src/dimmers_bkp.c:272
         BkpSetFactoryDefaultsForLight ( PIN_BUTTON_4 );
   28:	f44f 7000 	mov.w	r0, #512	; 0x200
   2c:	f7ff fffe 	bl	0 <BkpSetFactoryDefaultsToLights>
-C:\cortex\dimmers\src/dimmers_bkp.c:269
+C:\cortex\dimmers\src/dimmers_bkp.c:273
         BkpSetFactoryDefaultsForLight ( PIN_BUTTON_5 );
   30:	f44f 6080 	mov.w	r0, #1024	; 0x400
   34:	f7ff fffe 	bl	0 <BkpSetFactoryDefaultsToLights>
-C:\cortex\dimmers\src/dimmers_bkp.c:270
+C:\cortex\dimmers\src/dimmers_bkp.c:274
         BkpSetFactoryDefaultsForLight ( PIN_BUTTON_6 );
   38:	f44f 6000 	mov.w	r0, #2048	; 0x800
   3c:	f7ff fffe 	bl	0 <BkpSetFactoryDefaultsToLights>
-C:\cortex\dimmers\src/dimmers_bkp.c:271
+C:\cortex\dimmers\src/dimmers_bkp.c:275
         BkpSetFactoryDefaultsGeneral();
   40:	f7ff fffe 	bl	0 <BkpSetFactoryDefaultsToLights>
-C:\cortex\dimmers\src/dimmers_bkp.c:273
+C:\cortex\dimmers\src/dimmers_bkp.c:277
     }
 }
   44:	bd10      	pop	{r4, pc}

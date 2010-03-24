@@ -261,9 +261,7 @@ void PVD_IRQHandler(void)
 {
     if (PWR_GetFlagStatus( PWR_FLAG_PVDO ) != RESET ) {
         PWR_ClearFlag(PWR_FLAG_PVDO);
-        BkpUnlock();
-        BKP_WriteBackupRegister( POS_VALUE_COUNT_PVD , SecTick );
-        BkpLock();
+        // reset
         *((volatile unsigned int*)0xE000ED0C) = 0x05FA0004; 
     }
 }
@@ -466,14 +464,26 @@ void DMA1_Channel7_IRQHandler(void)
 
 /*******************************************************************************
 * Function Name  : ADC1_2_IRQHandler
-* Description    : This function handles ADC1 and ADC2 global interrupts requests.
+* Description    : This function handles the temp sensor
 * Input          : None
 * Output         : None
 * Return         : None
+* worload 50탎 
+*
+*   
 *******************************************************************************/
 void ADC1_2_IRQHandler(void)
 {
-     ADC_ClearITPendingBit(ADC1, ADC_IT_EOC);
+  u16 t;
+  
+  ADC_ClearITPendingBit(ADC1, ADC_IT_EOC);
+
+  t = ((1.43 - ((3.3 / 4096 )* TempSensor))/0.0043) + 25;
+
+  BkpUnlock ();
+  BKP_WriteBackupRegister( POS_VALUE_TEMP_SENSOR, t);
+  BkpLock();
+
 }
 
 /*******************************************************************************
@@ -1112,7 +1122,7 @@ void TIM8_CC_IRQHandler(void)
 *                    1   탎 Ct 
 *                   14.5 탎 total
 *
-*					15.2 탎 all together 
+*					          15.2 탎 all together 
 *                   500  ns overhead on interrupt latency and calls
 *
 *                   Coef from CONST out of flash gives 1.4탎 extra overhead
@@ -1135,7 +1145,7 @@ void ADC3_IRQHandler(void)
 {
 
     static bool tim = FALSE;
-    
+   
     ADC_ClearITPendingBit(ADC3, ADC_IT_EOC);
     Xi[0] = ZeroCross;
     fir_16by16_stm32(Yi , Xi , &co , 4);
@@ -1159,6 +1169,7 @@ void ADC3_IRQHandler(void)
         if (Xi[0] < theMin ) theMin = Xi[0];
         theZero = (theMax - theMin)/2 + theMin;
     }
+
 }
 
 /*******************************************************************************

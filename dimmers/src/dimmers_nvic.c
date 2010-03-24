@@ -25,21 +25,20 @@ typedef struct
 **/
 
 NVIC_InitTypeDef gx_nvics[]={
-{ PVD_IRQChannel    	, 0 , 0 , ENABLE }, /** PVD **/
-{ TIM1_UP_IRQChannel	, 0 , 0 , ENABLE }, /** ADC sample timer **/
-{ TIM2_IRQChannel		, 0 , 0 , ENABLE }, /** triac 1/2 pulse timer **/
-{ TIM3_IRQChannel		, 0 , 0 , ENABLE }, /** triac 3/4 pulse timer **/
-{ TIM4_IRQChannel		, 0 , 0 , ENABLE }, /** triac 5/6 pulse timer **/
-{ ADC3_IRQChannel		, 1 , 0 , ENABLE }, /** ADC3 EOC handler zerocross **/
-{ I2C1_ER_IRQChannel	, 3 , 0 , ENABLE }, /** I2C1 err **/
-{ I2C2_ER_IRQChannel    , 3 , 0 , ENABLE }, /** I2C2 err **/
-{ I2C1_EV_IRQChannel    , 3 , 0 , ENABLE }, /** I2C1  **/
-{ I2C2_EV_IRQChannel    , 3 , 0 , ENABLE }, /** I2C2  **/
-{ ADC1_2_IRQChannel		, 5 , 0 , ENABLE }, /** ADC1 EOC handler temp sensor **/
-{ WWDG_IRQChannel		, 10 , 0 , ENABLE }, /** Watchdog handler **/
-{ EXTI15_10_IRQChannel	, 12 , 0 , ENABLE },/** button handler **/
-{ EXTI9_5_IRQChannel	, 12 , 0 , ENABLE },/** button handler **/
-{ RTC_IRQChannel		, 14 , 0 , ENABLE },/** RTC handler **/
+  { TIM1_UP_IRQChannel	  , 0 , 0 , ENABLE }, /** ADC sample timer **/
+  { TIM2_IRQChannel 		  , 0 , 0 , ENABLE }, /** triac 1/2 pulse timer **/
+  { TIM3_IRQChannel 		  , 0 , 0 , ENABLE }, /** triac 3/4 pulse timer **/
+  { TIM4_IRQChannel 		  , 0 , 0 , ENABLE }, /** triac 5/6 pulse timer **/
+  { ADC3_IRQChannel 		  , 1 , 0 , ENABLE }, /** ADC3 EOC handler zerocross **/
+  { I2C1_ER_IRQChannel	  , 3 , 0 , ENABLE }, /** I2C1 err **/
+  { I2C2_ER_IRQChannel    , 3 , 0 , ENABLE }, /** I2C2 err **/
+  { I2C1_EV_IRQChannel    , 3 , 0 , ENABLE }, /** I2C1  **/
+  { I2C2_EV_IRQChannel    , 3 , 0 , ENABLE }, /** I2C2  **/
+  { ADC1_2_IRQChannel		  , 5 , 0 , ENABLE }, /** ADC1 EOC handler temp sensor **/
+  { WWDG_IRQChannel 		  , 10 , 0 , ENABLE }, /** Watchdog handler **/
+  { EXTI15_10_IRQChannel	, 12 , 0 , ENABLE },/** button handler **/
+  { EXTI9_5_IRQChannel  	, 12 , 0 , ENABLE },/** button handler **/
+  { RTC_IRQChannel		    , 14 , 0 , ENABLE },/** RTC handler **/
 };
 
 /*******************************************************************************

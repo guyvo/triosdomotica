@@ -58,7 +58,7 @@ vu32 count = 0;
 static void UtilCountWatchDogAndReset ( void) {
 
     if ( IsWatchdog == TRUE ){
-        CountWatchdog = BKP_ReadBackupRegister( POS_VALUE_COUNT_WATCHDOG );
+        
         CountWatchdog++;
         BKP_WriteBackupRegister( POS_VALUE_COUNT_WATCHDOG, CountWatchdog );    
         IsWatchdog = FALSE;
@@ -66,34 +66,6 @@ static void UtilCountWatchDogAndReset ( void) {
         
     }
 }
-
-int main(void)
-{
-  
-#ifdef DEBUG
-  debug();
-#endif
-
-    
-    xTaskCreate
-    (
-        vTaskInitSystem,
-        ( signed portCHAR * ) "StartupTask",
-        configMINIMAL_STACK_SIZE,
-        NULL,
-        STARTUP_TASK_PRIORITY,
-        NULL
-    );
-
-#ifdef WATCHDOG_ENABLED
-    WdgSet();
-#endif
-
-    vTaskStartScheduler();
-
-    while (1);
-}
-
 static void UtilUpdateLightFromButton ( pTLightProperties plight, u16 value ) {
 
     plight->compare( value );
@@ -144,6 +116,33 @@ static void UtilWriteBackupDomainToMemory ( void ){
 
 }
 
+int main(void)
+{
+  
+#ifdef DEBUG
+  debug();
+#endif
+
+    
+    xTaskCreate
+    (
+        vTaskInitSystem,
+        ( signed portCHAR * ) "StartupTask",
+        configMINIMAL_STACK_SIZE,
+        NULL,
+        STARTUP_TASK_PRIORITY,
+        NULL
+    );
+
+#ifdef WATCHDOG_ENABLED
+    WdgSet();
+#endif
+
+    vTaskStartScheduler();
+
+    while (1);
+}
+
 void vTaskInitSystem ( void * params ){
 
     u8  idx;
@@ -174,10 +173,8 @@ void vTaskInitSystem ( void * params ){
     AdcCalibration();
     RtcInit ();
 
-    PWR_PVDLevelConfig (PWR_PVDLevel_2V9);
-    PWR_PVDCmd(ENABLE);
-
     BkpSetFactoryDefaultsToLights();
+    
     BkpFullReadToMemory();
     BkpCopyIntExtMemory();
 
@@ -378,6 +375,10 @@ void vButtonDimmerTask ( void * params )
                 /// dim push
                 if ( (GPIO_ReadInputDataBit(GPIOC,pLight->inputpin) == ON) && (cycle == BUTTON_COUNT_DELAY ) ){
                     
+                    BkpUnlock ();
+                    BKP_WriteBackupRegister( POS_VALUE_COUNT_DIMMER, ++DimmerCount);
+                    BkpLock();
+                
                     if ( temp_value == LIGHT_OFF ){
                         pLight->comparestate(ENABLE);
                         GPIO_WriteBit(GPIOC, pLight->outputpin, (BitAction) 0 );
@@ -420,6 +421,11 @@ void vButtonDimmerTask ( void * params )
                 }
                 /// toggle push
                 else{
+                
+                    BkpUnlock ();
+                    BKP_WriteBackupRegister( POS_VALUE_COUNT_TOGGLE, ++ToggleCount);
+                    BkpLock();
+                
                     if ( temp_value == LIGHT_OFF  ){
                         WAIT_ZERO_CROSS;
                         GPIO_WriteBit(GPIOC, pLight->outputpin, (BitAction)(1));
@@ -465,18 +471,37 @@ void vI2C2ReceiveTask ( void * params ){
         vTaskDelay(10);
     }
 }
+/*******************************************************************************
+* Function Name  : ADC1_2_IRQHandler
+* Description    : This function handles the temp sensor
+* Input          : None
+* Output         : None
+* Return         : None
+* worload 150µs
+*
+*   
+*******************************************************************************/
 
 void vRefreshTask ( void * params ){
 
     u8 idx;
-    
-
+    static u16 seconds=0;
+ 
      while (1){
     
         xSemaphoreTake( xRefreshSync , portMAX_DELAY );
-        
-            xSemaphoreTake( xBKPsync , portMAX_DELAY );
+     
+            TOGGLE_RED_LED;
 
+            if ( ++seconds == SECONDS_IN_HOUR ){
+              seconds = 0;
+              BkpUnlock ();
+              BKP_WriteBackupRegister( POS_VALUE_COUNT_HOURS, ++HoursCount);
+              BkpLock();            
+            }
+          
+            xSemaphoreTake( xBKPsync , portMAX_DELAY );
+ 
             /// ensure correct light values for compare match
             for (idx=LIGHT1_INDEX ; idx < LIGHT6_INDEX + 1 ; idx++){
                 if ( ! CHECK_LIGHT_VALUE( Lights[idx].value ) ){
@@ -503,7 +528,7 @@ void vRefreshTask ( void * params ){
         
             xSemaphoreGive ( xBKPsync );
         
-            GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
+            TOGGLE_RED_LED;
      }
      
 }

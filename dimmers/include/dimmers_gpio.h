@@ -62,7 +62,10 @@ typedef enum {
      ( (pin) == PIN_LIGHT_4 ) || \
      ( (pin) == PIN_LIGHT_5 ) || \
      ( (pin) == PIN_LIGHT_6 ) )
-    
+ 
+#define TOGGLE_RED_LED \
+  GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
+
 void GpioInit ( void );
 void GpioClockSet ( void );
 DIP_STATE GpioGetDipState ( u16 dip );
