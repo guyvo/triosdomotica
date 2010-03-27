@@ -537,15 +537,15 @@ void vSendUpdateTask ( void * params ){
 
     while (1){
         vTaskSuspend(NULL);
-
+        
         BkpUnlock ();
             xSemaphoreTake( xBKPsync , portMAX_DELAY );
+                TOGGLE_RED_LED;
                 BkpFullWriteToBkp ();
                 UtilUpdateLightsFromI2C ();
+                TOGGLE_RED_LED;
             xSemaphoreGive ( xBKPsync );
         BkpLock();
-    
-        GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
     }
 }
 
