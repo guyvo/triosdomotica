@@ -2,10 +2,10 @@
 <Debug>
 	<RFlasher7>
 		<CodeView Focus="2634" TopRow="1205754976" NbPerLine="8" />
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										
 	</RFlasher7>
 	<dimmers>
-		<CodeView TopRow="134229626" Focus="4294967295" >
+		<CodeView TopRow="134227034" Focus="4294967295" >
 			<CodeReport>
 				<0>181</0>
 				<1>199</1>
@@ -17,7 +17,7 @@
 			</CodeReport>
 										
 		</CodeView>
-		<MemoryView Focus="536892774" TopRow="536892520" NbPerLine="8" />
+		<MemoryView Focus="134229628" TopRow="0" NbPerLine="8" />
 						
 	</dimmers>
 	<Flags>
@@ -42,15 +42,17 @@
 			
 	</Flags>
 	<Views>
-		<View File="C:\cortex\dimmers\src\stm32f10x_it.c" Line="1170" Index="0" />
-		<View File="C:\cortex\dimmers\src\dimmers_nvic.c" Line="40" Index="1" />
-		<View File="C:\cortex\dimmers\src\dimmers_bkp.c" Line="194" Index="2" />
-		<View File="C:\cortex\dimmers\src\dimmers_storage.c" Line="18" Index="3" />
-		<View File="C:\cortex\dimmers\include\dimmers_storage.h" Line="45" Index="4" />
+		<View File="C:\cortex\dimmers\src\stm32f10x_it.c" Line="77" Index="0" focus="1" />
+		<View File="C:\cortex\dimmers\src\dimmers_nvic.c" Line="31" Index="1" />
+		<View File="C:\cortex\dimmers\src\dimmers_bkp.c" Line="192" Index="2" />
+		<View File="C:\cortex\dimmers\src\dimmers_storage.c" Line="16" Index="3" />
+		<View File="C:\cortex\dimmers\include\dimmers_storage.h" Line="43" Index="4" />
 		<View File="C:\cortex\dimmers\src\main.c" Line="119" Index="5" />
-		<View File="C:\cortex\dimmers\src\stm32f10x_vector.c" Line="137" Index="6" focus="1" />
-		<View File="C:\cortex\dimmers\src\dimmers_adc.c" Line="38" Index="7" />
-		<View File="C:\cortex\dimmers\include\dimmers_gpio.h" Line="65" Index="8" />
+		<View File="C:\cortex\dimmers\src\stm32f10x_vector.c" Line="153" Index="6" />
+		<View File="C:\cortex\dimmers\src\dimmers_adc.c" Line="91" Index="7" />
+		<View File="C:\cortex\dimmers\include\dimmers_gpio.h" Line="63" Index="8" />
+		<View File="C:\cortex\dimmers\include\dimmers_i2c.h" Line="15" Index="9" />
+		<View File="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_adc.h" Line="174" Index="10" />
 	</Views>
 	<FindStrings>
 		<Find>UtilCountWatchDogAndReset</Find>

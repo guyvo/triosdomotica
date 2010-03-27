@@ -72,6 +72,9 @@
         - Adding dim counter to BKP
         - Adding temp sensor value to BKP
         - Adding working hours to BKP and refresh
+        
+2.3.1   - remove led on when send task is done now toggle
+        - ADC sensor time to ADC_SampleTime_28Cycles5
        
 */
 

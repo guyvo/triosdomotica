@@ -663,8 +663,8 @@ Disassembly of section .text.vTestDipTask:
 00000000 <vTestDipTask>:
 vTestDipTask():
 C:\cortex\dimmers\src/main.c:552
-    
-        GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
+            xSemaphoreGive ( xBKPsync );
+        BkpLock();
     }
 }
 
@@ -774,22 +774,32 @@ C:\cortex\dimmers\src/main.c:539
    4:	2000      	movs	r0, #0
    6:	f7ff fffe 	bl	0 <vTaskSuspend>
 C:\cortex\dimmers\src/main.c:541
-
+        
         BkpUnlock ();
    a:	f7ff fffe 	bl	0 <BkpUnlock>
 C:\cortex\dimmers\src/main.c:542
             xSemaphoreTake( xBKPsync , portMAX_DELAY );
-   e:	4b39      	ldr	r3, [pc, #228]	(f4 <vSendUpdateTask+0xf4>)
+   e:	4b40      	ldr	r3, [pc, #256]	(110 <vSendUpdateTask+0x110>)
   10:	2100      	movs	r1, #0
-  12:	6818      	ldr	r0, [r3, #0]
-  14:	f04f 32ff 	mov.w	r2, #4294967295	; 0xffffffff
+  12:	f04f 32ff 	mov.w	r2, #4294967295	; 0xffffffff
+  16:	6818      	ldr	r0, [r3, #0]
   18:	460b      	mov	r3, r1
   1a:	f7ff fffe 	bl	0 <xQueueGenericReceive>
 C:\cortex\dimmers\src/main.c:543
+                TOGGLE_RED_LED;
+  1e:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  22:	483c      	ldr	r0, [pc, #240]	(f4 <GPIO_ReadOutputDataBit+0xf4>)
+  24:	f7ff fffe 	bl	0 <GPIO_ReadOutputDataBit>
+  28:	f1c0 0201 	rsb	r2, r0, #1	; 0x1
+  2c:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  30:	4838      	ldr	r0, [pc, #224]	(114 <vSendUpdateTask+0x114>)
+  32:	b2d2      	uxtb	r2, r2
+  34:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:544
                 BkpFullWriteToBkp ();
-  1e:	f7ff fffe 	bl	0 <BkpFullWriteToBkp>
-  22:	4d35      	ldr	r5, [pc, #212]	(f8 <vSendUpdateTask+0xf8>)
-  24:	462c      	mov	r4, r5
+  38:	f7ff fffe 	bl	0 <BkpFullWriteToBkp>
+  3c:	4d36      	ldr	r5, [pc, #216]	(118 <vSendUpdateTask+0x118>)
+  3e:	462c      	mov	r4, r5
 UtilUpdateLightsFromI2C():
 C:\cortex\dimmers\src/main.c:83
     
@@ -798,80 +808,80 @@ C:\cortex\dimmers\src/main.c:83
 
     for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++){
         BkpWriteLightPropertiesToMemory ( Lights[idx].inputpin , &temp ); 
-  26:	8960      	ldrh	r0, [r4, #10]
-  28:	a901      	add	r1, sp, #4
-  2a:	f7ff fffe 	bl	0 <BkpWriteLightPropertiesToMemory>
+  40:	8960      	ldrh	r0, [r4, #10]
+  42:	a901      	add	r1, sp, #4
+  44:	f7ff fffe 	bl	0 <BkpWriteLightPropertiesToMemory>
 C:\cortex\dimmers\src/main.c:84
         Lights[idx].compare ( temp.value );
-  2e:	f8bd 0004 	ldrh.w	r0, [sp, #4]
-  32:	6963      	ldr	r3, [r4, #20]
-  34:	4798      	blx	r3
+  48:	f8bd 0004 	ldrh.w	r0, [sp, #4]
+  4c:	6963      	ldr	r3, [r4, #20]
+  4e:	4798      	blx	r3
 C:\cortex\dimmers\src/main.c:86
         // adapt states
         if ( temp.value == LIGHT_ON ){
-  36:	f8bd 0004 	ldrh.w	r0, [sp, #4]
-  3a:	b9b0      	cbnz	r0, 6a <vSendUpdateTask+0x6a>
+  50:	f8bd 0004 	ldrh.w	r0, [sp, #4]
+  54:	b9b0      	cbnz	r0, 84 <vSendUpdateTask+0x84>
 C:\cortex\dimmers\src/main.c:87
             Lights[idx].comparestate(DISABLE);
-  3c:	69a3      	ldr	r3, [r4, #24]
-  3e:	4798      	blx	r3
-  40:	e001      	b.n	46 <vSendUpdateTask+0x46>
+  56:	69a3      	ldr	r3, [r4, #24]
+  58:	4798      	blx	r3
+  5a:	e001      	b.n	60 <vSendUpdateTask+0x60>
 C:\cortex\dimmers\src/main.c:88
             WAIT_ZERO_CROSS;
-  42:	f7ff fffe 	bl	0 <vPortYieldFromISR>
-  46:	4b2d      	ldr	r3, [pc, #180]	(fc <vSendUpdateTask+0xfc>)
-  48:	f9b3 1000 	ldrsh.w	r1, [r3]
-  4c:	4b2c      	ldr	r3, [pc, #176]	(100 <vSendUpdateTask+0x100>)
-  4e:	f9b3 2000 	ldrsh.w	r2, [r3]
-  52:	f102 0308 	add.w	r3, r2, #8	; 0x8
-  56:	4299      	cmp	r1, r3
-  58:	dcf3      	bgt.n	42 <vSendUpdateTask+0x42>
-  5a:	f1a2 0308 	sub.w	r3, r2, #8	; 0x8
-  5e:	4299      	cmp	r1, r3
-  60:	dbef      	blt.n	42 <vSendUpdateTask+0x42>
+  5c:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+  60:	4b2e      	ldr	r3, [pc, #184]	(11c <vSendUpdateTask+0x11c>)
+  62:	f9b3 1000 	ldrsh.w	r1, [r3]
+  66:	4b2e      	ldr	r3, [pc, #184]	(120 <vSendUpdateTask+0x120>)
+  68:	f9b3 2000 	ldrsh.w	r2, [r3]
+  6c:	f102 0308 	add.w	r3, r2, #8	; 0x8
+  70:	4299      	cmp	r1, r3
+  72:	dcf3      	bgt.n	5c <vSendUpdateTask+0x5c>
+  74:	f1a2 0308 	sub.w	r3, r2, #8	; 0x8
+  78:	4299      	cmp	r1, r3
+  7a:	dbef      	blt.n	5c <vSendUpdateTask+0x5c>
 C:\cortex\dimmers\src/main.c:89
             GPIO_WriteBit(GPIOC, Lights[idx].outputpin , (BitAction) 1 );
-  62:	4828      	ldr	r0, [pc, #160]	(104 <vSendUpdateTask+0x104>)
-  64:	8921      	ldrh	r1, [r4, #8]
-  66:	2201      	movs	r2, #1
-  68:	e01a      	b.n	a0 <vSendUpdateTask+0xa0>
+  7c:	4825      	ldr	r0, [pc, #148]	(114 <vSendUpdateTask+0x114>)
+  7e:	8921      	ldrh	r1, [r4, #8]
+  80:	2201      	movs	r2, #1
+  82:	e01a      	b.n	ba <vSendUpdateTask+0xba>
 C:\cortex\dimmers\src/main.c:91
         }
         else if ( temp.value == LIGHT_OFF ){
-  6a:	f242 7310 	movw	r3, #10000	; 0x2710
-  6e:	4298      	cmp	r0, r3
-  70:	69a3      	ldr	r3, [r4, #24]
-  72:	d118      	bne.n	a6 <vSendUpdateTask+0xa6>
+  84:	f242 7310 	movw	r3, #10000	; 0x2710
+  88:	4298      	cmp	r0, r3
+  8a:	69a3      	ldr	r3, [r4, #24]
+  8c:	d118      	bne.n	c0 <vSendUpdateTask+0xc0>
 C:\cortex\dimmers\src/main.c:92
             Lights[idx].comparestate(DISABLE);
-  74:	2000      	movs	r0, #0
-  76:	4798      	blx	r3
-  78:	e001      	b.n	7e <vSendUpdateTask+0x7e>
+  8e:	2000      	movs	r0, #0
+  90:	4798      	blx	r3
+  92:	e001      	b.n	98 <vSendUpdateTask+0x98>
 C:\cortex\dimmers\src/main.c:93
             WAIT_ZERO_CROSS;
-  7a:	f7ff fffe 	bl	0 <vPortYieldFromISR>
-  7e:	4b1f      	ldr	r3, [pc, #124]	(fc <vSendUpdateTask+0xfc>)
-  80:	f9b3 1000 	ldrsh.w	r1, [r3]
-  84:	4b1e      	ldr	r3, [pc, #120]	(100 <vSendUpdateTask+0x100>)
-  86:	f9b3 2000 	ldrsh.w	r2, [r3]
-  8a:	f102 0308 	add.w	r3, r2, #8	; 0x8
-  8e:	4299      	cmp	r1, r3
-  90:	dcf3      	bgt.n	7a <vSendUpdateTask+0x7a>
-  92:	f1a2 0308 	sub.w	r3, r2, #8	; 0x8
-  96:	4299      	cmp	r1, r3
-  98:	dbef      	blt.n	7a <vSendUpdateTask+0x7a>
+  94:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+  98:	4b20      	ldr	r3, [pc, #128]	(11c <vSendUpdateTask+0x11c>)
+  9a:	f9b3 1000 	ldrsh.w	r1, [r3]
+  9e:	4b20      	ldr	r3, [pc, #128]	(120 <vSendUpdateTask+0x120>)
+  a0:	f9b3 2000 	ldrsh.w	r2, [r3]
+  a4:	f102 0308 	add.w	r3, r2, #8	; 0x8
+  a8:	4299      	cmp	r1, r3
+  aa:	dcf3      	bgt.n	94 <vSendUpdateTask+0x94>
+  ac:	f1a2 0308 	sub.w	r3, r2, #8	; 0x8
+  b0:	4299      	cmp	r1, r3
+  b2:	dbef      	blt.n	94 <vSendUpdateTask+0x94>
 C:\cortex\dimmers\src/main.c:94
             GPIO_WriteBit(GPIOC, Lights[idx].outputpin , (BitAction) 0 );        }
-  9a:	481a      	ldr	r0, [pc, #104]	(104 <vSendUpdateTask+0x104>)
-  9c:	8921      	ldrh	r1, [r4, #8]
-  9e:	2200      	movs	r2, #0
-  a0:	f7ff fffe 	bl	0 <GPIO_WriteBit>
-  a4:	e001      	b.n	aa <vSendUpdateTask+0xaa>
+  b4:	4817      	ldr	r0, [pc, #92]	(114 <vSendUpdateTask+0x114>)
+  b6:	8921      	ldrh	r1, [r4, #8]
+  b8:	2200      	movs	r2, #0
+  ba:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+  be:	e001      	b.n	c4 <vSendUpdateTask+0xc4>
 C:\cortex\dimmers\src/main.c:96
         else{
             Lights[idx].comparestate(ENABLE); 
-  a6:	2001      	movs	r0, #1
-  a8:	4798      	blx	r3
+  c0:	2001      	movs	r0, #1
+  c2:	4798      	blx	r3
 C:\cortex\dimmers\src/main.c:82
 static void UtilUpdateLightsFromI2C ( void ) {
     
@@ -879,7 +889,7 @@ static void UtilUpdateLightsFromI2C ( void ) {
     TLightProperties temp;
 
     for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++){
-  aa:	4b17      	ldr	r3, [pc, #92]	(108 <vSendUpdateTask+0x108>)
+  c4:	4b17      	ldr	r3, [pc, #92]	(124 <vSendUpdateTask+0x124>)
 C:\cortex\dimmers\src/main.c:96
         else if ( temp.value == LIGHT_OFF ){
             Lights[idx].comparestate(DISABLE);
@@ -887,7 +897,7 @@ C:\cortex\dimmers\src/main.c:96
             GPIO_WriteBit(GPIOC, Lights[idx].outputpin , (BitAction) 0 );        }
         else{
             Lights[idx].comparestate(ENABLE); 
-  ac:	341c      	adds	r4, #28
+  c6:	341c      	adds	r4, #28
 C:\cortex\dimmers\src/main.c:82
 static void UtilUpdateLightsFromI2C ( void ) {
     
@@ -895,8 +905,8 @@ static void UtilUpdateLightsFromI2C ( void ) {
     TLightProperties temp;
 
     for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++){
-  ae:	429c      	cmp	r4, r3
-  b0:	d1b9      	bne.n	26 <vSendUpdateTask+0x26>
+  c8:	429c      	cmp	r4, r3
+  ca:	d1b9      	bne.n	40 <vSendUpdateTask+0x40>
 C:\cortex\dimmers\src/main.c:100
         else{
             Lights[idx].comparestate(ENABLE); 
@@ -904,16 +914,16 @@ C:\cortex\dimmers\src/main.c:100
     }
 
     vTaskDelay(LIGHT_UPDATE_DELAY);
-  b2:	2014      	movs	r0, #20
-  b4:	f7ff fffe 	bl	0 <vTaskDelay>
+  cc:	2014      	movs	r0, #20
+  ce:	f7ff fffe 	bl	0 <vTaskDelay>
 C:\cortex\dimmers\src/main.c:103
 
     for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++)
         BkpWriteLightPropertiesToMemory ( Lights[idx].inputpin , &Lights[idx] );
-  b8:	8968      	ldrh	r0, [r5, #10]
-  ba:	4629      	mov	r1, r5
-  bc:	351c      	adds	r5, #28
-  be:	f7ff fffe 	bl	0 <BkpWriteLightPropertiesToMemory>
+  d2:	8968      	ldrh	r0, [r5, #10]
+  d4:	4629      	mov	r1, r5
+  d6:	351c      	adds	r5, #28
+  d8:	f7ff fffe 	bl	0 <BkpWriteLightPropertiesToMemory>
 C:\cortex\dimmers\src/main.c:102
         }
     }
@@ -921,40 +931,41 @@ C:\cortex\dimmers\src/main.c:102
     vTaskDelay(LIGHT_UPDATE_DELAY);
 
     for ( idx = LIGHT1_INDEX ; idx <= LIGHT6_INDEX ; idx++)
-  c2:	42a5      	cmp	r5, r4
-  c4:	d1f8      	bne.n	b8 <vSendUpdateTask+0xb8>
+  dc:	42a5      	cmp	r5, r4
+  de:	d1f8      	bne.n	d2 <vSendUpdateTask+0xd2>
 vSendUpdateTask():
-C:\cortex\dimmers\src/main.c:545
-
+C:\cortex\dimmers\src/main.c:546
         BkpUnlock ();
             xSemaphoreTake( xBKPsync , portMAX_DELAY );
+                TOGGLE_RED_LED;
                 BkpFullWriteToBkp ();
                 UtilUpdateLightsFromI2C ();
+                TOGGLE_RED_LED;
+  e0:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  e4:	480b      	ldr	r0, [pc, #44]	(30 <GPIO_ReadOutputDataBit+0x30>)
+  e6:	f7ff fffe 	bl	0 <GPIO_ReadOutputDataBit>
+  ea:	f1c0 0201 	rsb	r2, r0, #1	; 0x1
+  ee:	f44f 5180 	mov.w	r1, #4096	; 0x1000
+  f2:	4808      	ldr	r0, [pc, #32]	(114 <vSendUpdateTask+0x114>)
+  f4:	b2d2      	uxtb	r2, r2
+  f6:	f7ff fffe 	bl	0 <GPIO_WriteBit>
+C:\cortex\dimmers\src/main.c:547
             xSemaphoreGive ( xBKPsync );
-  c6:	4b0b      	ldr	r3, [pc, #44]	(f4 <vSendUpdateTask+0xf4>)
-  c8:	2100      	movs	r1, #0
-  ca:	460a      	mov	r2, r1
-  cc:	6818      	ldr	r0, [r3, #0]
-  ce:	460b      	mov	r3, r1
-  d0:	f7ff fffe 	bl	0 <xQueueGenericSend>
-C:\cortex\dimmers\src/main.c:546
-        BkpLock();
-  d4:	f7ff fffe 	bl	0 <BkpLock>
+  fa:	4b05      	ldr	r3, [pc, #20]	(110 <vSendUpdateTask+0x110>)
+  fc:	2100      	movs	r1, #0
+  fe:	460a      	mov	r2, r1
+ 100:	6818      	ldr	r0, [r3, #0]
+ 102:	460b      	mov	r3, r1
+ 104:	f7ff fffe 	bl	0 <xQueueGenericSend>
 C:\cortex\dimmers\src/main.c:548
-    
-        GPIO_WriteBit(GPIOC, GPIO_Pin_12, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_12))));
-  d8:	f44f 5180 	mov.w	r1, #4096	; 0x1000
-  dc:	4809      	ldr	r0, [pc, #36]	(28 <GPIO_ReadOutputDataBit+0x28>)
-  de:	f7ff fffe 	bl	0 <GPIO_ReadOutputDataBit>
-  e2:	f1c0 0201 	rsb	r2, r0, #1	; 0x1
-  e6:	f44f 5180 	mov.w	r1, #4096	; 0x1000
-  ea:	4806      	ldr	r0, [pc, #24]	(104 <vSendUpdateTask+0x104>)
-  ec:	b2d2      	uxtb	r2, r2
-  ee:	f7ff fffe 	bl	0 <GPIO_WriteBit>
-  f2:	e787      	b.n	ffffff12 <xBKPsync+0xffffff12>
+        BkpLock();
+ 108:	f7ff fffe 	bl	0 <BkpLock>
+ 10c:	e77a      	b.n	4 <vSendUpdateTask+0x4>
+ 10e:	46c0      	nop			(mov r8, r8)
+ 110:	00000000 	.word	0x00000000
+ 114:	40011000 	.word	0x40011000
 	...
- 104:	40011000 	.word	0x40011000
- 108:	000000a8 	.word	0x000000a8
+ 124:	000000a8 	.word	0x000000a8
 Disassembly of section .text.vButtonToggleTask:
 
 00000000 <vButtonToggleTask>:

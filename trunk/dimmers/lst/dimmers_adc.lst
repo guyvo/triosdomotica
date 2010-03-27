@@ -240,9 +240,9 @@ C:\cortex\dimmers\src/dimmers_adc.c:87
   3e:	f7ff fffe 	bl	0 <ADC_TempSensorVrefintCmd>
 C:\cortex\dimmers\src/dimmers_adc.c:89
 
-  ADC_RegularChannelConfig( ADC1 , ADC_Channel_16, 1 , ADC_SampleTime_239Cycles5 );
+  ADC_RegularChannelConfig( ADC1 , ADC_Channel_16, 1 , ADC_SampleTime_28Cycles5 );
   42:	462a      	mov	r2, r5
-  44:	2307      	movs	r3, #7
+  44:	2303      	movs	r3, #3
   46:	4620      	mov	r0, r4
   48:	2110      	movs	r1, #16
 C:\cortex\dimmers\src/dimmers_adc.c:98
@@ -259,7 +259,7 @@ C:\cortex\dimmers\src/dimmers_adc.c:89
 
   ADC_TempSensorVrefintCmd(ENABLE);
 
-  ADC_RegularChannelConfig( ADC1 , ADC_Channel_16, 1 , ADC_SampleTime_239Cycles5 );
+  ADC_RegularChannelConfig( ADC1 , ADC_Channel_16, 1 , ADC_SampleTime_28Cycles5 );
   4e:	f7ff fffe 	bl	0 <ADC_RegularChannelConfig>
 C:\cortex\dimmers\src/dimmers_adc.c:98
   x_ADC_InitStructure.ADC_ScanConvMode			= ENABLE;
@@ -273,7 +273,7 @@ C:\cortex\dimmers\src/dimmers_adc.c:98
 C:\cortex\dimmers\src/dimmers_adc.c:92
   ADC_TempSensorVrefintCmd(ENABLE);
 
-  ADC_RegularChannelConfig( ADC1 , ADC_Channel_16, 1 , ADC_SampleTime_239Cycles5 );
+  ADC_RegularChannelConfig( ADC1 , ADC_Channel_16, 1 , ADC_SampleTime_28Cycles5 );
 
   
   x_ADC_InitStructure.ADC_Mode					= ADC_Mode_Independent;

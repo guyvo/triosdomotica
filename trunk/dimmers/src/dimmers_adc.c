@@ -86,7 +86,7 @@ void AdcInit (void){
 
   ADC_TempSensorVrefintCmd(ENABLE);
 
-  ADC_RegularChannelConfig( ADC1 , ADC_Channel_16, 1 , ADC_SampleTime_239Cycles5 );
+  ADC_RegularChannelConfig( ADC1 , ADC_Channel_16, 1 , ADC_SampleTime_28Cycles5 );
 
   
   x_ADC_InitStructure.ADC_Mode					= ADC_Mode_Independent;
