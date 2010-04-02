@@ -1,0 +1,1352 @@
+
+D:\cortex\gateway\stm32f10x_dma.o:     file format elf32-littlearm
+D:\cortex\gateway\stm32f10x_dma.o
+
+Disassembly of section .text.DMA_StructInit:
+
+00000000 <DMA_StructInit>:
+DMA_StructInit():
+   0:	f04f 0300 	mov.w	r3, #0	; 0x0
+   4:	6003      	str	r3, [r0, #0]
+   6:	6043      	str	r3, [r0, #4]
+   8:	6083      	str	r3, [r0, #8]
+   a:	60c3      	str	r3, [r0, #12]
+   c:	6103      	str	r3, [r0, #16]
+   e:	6143      	str	r3, [r0, #20]
+  10:	6183      	str	r3, [r0, #24]
+  12:	61c3      	str	r3, [r0, #28]
+  14:	6203      	str	r3, [r0, #32]
+  16:	6243      	str	r3, [r0, #36]
+  18:	6283      	str	r3, [r0, #40]
+  1a:	4770      	bx	lr
+Disassembly of section .text.DMA_ClearITPendingBit:
+
+00000000 <DMA_ClearITPendingBit>:
+DMA_ClearITPendingBit():
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	f010 4f70 	tst.w	r0, #4026531840	; 0xf0000000
+   8:	d007      	beq.n	1a <DMA_ClearITPendingBit+0x1a>
+   a:	f240 0300 	movw	r3, #0	; 0x0
+   e:	f6ce 73f0 	movt	r3, #61424	; 0xeff0
+  12:	4218      	tst	r0, r3
+  14:	bf18      	it	ne
+  16:	2000      	movne	r0, #0
+  18:	d102      	bne.n	20 <DMA_ClearITPendingBit+0x20>
+  1a:	b194      	cbz	r4, 42 <DMA_ClearITPendingBit+0x42>
+  1c:	f04f 0001 	mov.w	r0, #1	; 0x1
+  20:	f7ff fffe 	bl	0 <assert_param>
+  24:	f014 5f80 	tst.w	r4, #268435456	; 0x10000000
+  28:	bf1e      	ittt	ne
+  2a:	f240 4300 	movwne	r3, #1024	; 0x400
+  2e:	f2c4 0302 	movtne	r3, #16386	; 0x4002
+  32:	605c      	strne	r4, [r3, #4]
+  34:	d10a      	bne.n	4c <DMA_ClearITPendingBit+0x4c>
+  36:	f240 0300 	movw	r3, #0	; 0x0
+  3a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3e:	605c      	str	r4, [r3, #4]
+  40:	e004      	b.n	4c <DMA_ClearITPendingBit+0x4c>
+  42:	f04f 0000 	mov.w	r0, #0	; 0x0
+  46:	f7ff fffe 	bl	0 <assert_param>
+  4a:	e7f4      	b.n	36 <assert_param+0x36>
+  4c:	bd10      	pop	{r4, pc}
+  4e:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA_GetITStatus:
+
+00000000 <DMA_GetITStatus>:
+DMA_GetITStatus():
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	f100 32ff 	add.w	r2, r0, #4294967295	; 0xffffffff
+   8:	2804      	cmp	r0, #4
+   a:	bf14      	ite	ne
+   c:	2300      	movne	r3, #0
+   e:	2301      	moveq	r3, #1
+  10:	2a01      	cmp	r2, #1
+  12:	bf98      	it	ls
+  14:	f043 0301 	orrls.w	r3, r3, #1	; 0x1
+  18:	2b00      	cmp	r3, #0
+  1a:	f040 8151 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+  1e:	2810      	cmp	r0, #16
+  20:	bf14      	ite	ne
+  22:	2300      	movne	r3, #0
+  24:	2301      	moveq	r3, #1
+  26:	2808      	cmp	r0, #8
+  28:	bf08      	it	eq
+  2a:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  2e:	2b00      	cmp	r3, #0
+  30:	f040 8146 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+  34:	2840      	cmp	r0, #64
+  36:	bf14      	ite	ne
+  38:	2300      	movne	r3, #0
+  3a:	2301      	moveq	r3, #1
+  3c:	2820      	cmp	r0, #32
+  3e:	bf08      	it	eq
+  40:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  44:	2b00      	cmp	r3, #0
+  46:	f040 813b 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+  4a:	f5b0 7f80 	cmp.w	r0, #256	; 0x100
+  4e:	bf14      	ite	ne
+  50:	2300      	movne	r3, #0
+  52:	2301      	moveq	r3, #1
+  54:	2880      	cmp	r0, #128
+  56:	bf08      	it	eq
+  58:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  5c:	2b00      	cmp	r3, #0
+  5e:	f040 812f 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+  62:	f5b0 6f80 	cmp.w	r0, #1024	; 0x400
+  66:	bf14      	ite	ne
+  68:	2300      	movne	r3, #0
+  6a:	2301      	moveq	r3, #1
+  6c:	f5b0 7f00 	cmp.w	r0, #512	; 0x200
+  70:	bf08      	it	eq
+  72:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  76:	2b00      	cmp	r3, #0
+  78:	f040 8122 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+  7c:	f5b0 5f80 	cmp.w	r0, #4096	; 0x1000
+  80:	bf14      	ite	ne
+  82:	2300      	movne	r3, #0
+  84:	2301      	moveq	r3, #1
+  86:	f5b0 6f00 	cmp.w	r0, #2048	; 0x800
+  8a:	bf08      	it	eq
+  8c:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  90:	2b00      	cmp	r3, #0
+  92:	f040 8115 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+  96:	f5b0 4f80 	cmp.w	r0, #16384	; 0x4000
+  9a:	bf14      	ite	ne
+  9c:	2300      	movne	r3, #0
+  9e:	2301      	moveq	r3, #1
+  a0:	f5b0 5f00 	cmp.w	r0, #8192	; 0x2000
+  a4:	bf08      	it	eq
+  a6:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  aa:	2b00      	cmp	r3, #0
+  ac:	f040 8108 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+  b0:	f5b0 3f80 	cmp.w	r0, #65536	; 0x10000
+  b4:	bf14      	ite	ne
+  b6:	2300      	movne	r3, #0
+  b8:	2301      	moveq	r3, #1
+  ba:	f5b0 4f00 	cmp.w	r0, #32768	; 0x8000
+  be:	bf08      	it	eq
+  c0:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  c4:	2b00      	cmp	r3, #0
+  c6:	f040 80fb 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+  ca:	f5b0 2f80 	cmp.w	r0, #262144	; 0x40000
+  ce:	bf14      	ite	ne
+  d0:	2300      	movne	r3, #0
+  d2:	2301      	moveq	r3, #1
+  d4:	f5b0 3f00 	cmp.w	r0, #131072	; 0x20000
+  d8:	bf08      	it	eq
+  da:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  de:	2b00      	cmp	r3, #0
+  e0:	f040 80ee 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+  e4:	f5b0 1f80 	cmp.w	r0, #1048576	; 0x100000
+  e8:	bf14      	ite	ne
+  ea:	2300      	movne	r3, #0
+  ec:	2301      	moveq	r3, #1
+  ee:	f5b0 2f00 	cmp.w	r0, #524288	; 0x80000
+  f2:	bf08      	it	eq
+  f4:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  f8:	2b00      	cmp	r3, #0
+  fa:	f040 80e1 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+  fe:	f5b0 0f80 	cmp.w	r0, #4194304	; 0x400000
+ 102:	bf14      	ite	ne
+ 104:	2300      	movne	r3, #0
+ 106:	2301      	moveq	r3, #1
+ 108:	f5b0 1f00 	cmp.w	r0, #2097152	; 0x200000
+ 10c:	bf08      	it	eq
+ 10e:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 112:	2b00      	cmp	r3, #0
+ 114:	f040 80d4 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+ 118:	f1b0 7f80 	cmp.w	r0, #16777216	; 0x1000000
+ 11c:	bf14      	ite	ne
+ 11e:	2300      	movne	r3, #0
+ 120:	2301      	moveq	r3, #1
+ 122:	f5b0 0f00 	cmp.w	r0, #8388608	; 0x800000
+ 126:	bf08      	it	eq
+ 128:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 12c:	2b00      	cmp	r3, #0
+ 12e:	f040 80c7 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+ 132:	f1b0 6f80 	cmp.w	r0, #67108864	; 0x4000000
+ 136:	bf14      	ite	ne
+ 138:	2300      	movne	r3, #0
+ 13a:	2301      	moveq	r3, #1
+ 13c:	f1b0 7f00 	cmp.w	r0, #33554432	; 0x2000000
+ 140:	bf08      	it	eq
+ 142:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 146:	2b00      	cmp	r3, #0
+ 148:	f040 80ba 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+ 14c:	f240 0301 	movw	r3, #1	; 0x1
+ 150:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 154:	4298      	cmp	r0, r3
+ 156:	bf14      	ite	ne
+ 158:	2300      	movne	r3, #0
+ 15a:	2301      	moveq	r3, #1
+ 15c:	f1b0 6f00 	cmp.w	r0, #134217728	; 0x8000000
+ 160:	bf08      	it	eq
+ 162:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 166:	2b00      	cmp	r3, #0
+ 168:	f040 80aa 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+ 16c:	f240 0202 	movw	r2, #2	; 0x2
+ 170:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 174:	f240 0304 	movw	r3, #4	; 0x4
+ 178:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 17c:	4298      	cmp	r0, r3
+ 17e:	bf14      	ite	ne
+ 180:	2300      	movne	r3, #0
+ 182:	2301      	moveq	r3, #1
+ 184:	4290      	cmp	r0, r2
+ 186:	bf08      	it	eq
+ 188:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 18c:	2b00      	cmp	r3, #0
+ 18e:	f040 8097 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+ 192:	f240 0208 	movw	r2, #8	; 0x8
+ 196:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 19a:	f240 0310 	movw	r3, #16	; 0x10
+ 19e:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 1a2:	4298      	cmp	r0, r3
+ 1a4:	bf14      	ite	ne
+ 1a6:	2300      	movne	r3, #0
+ 1a8:	2301      	moveq	r3, #1
+ 1aa:	4290      	cmp	r0, r2
+ 1ac:	bf08      	it	eq
+ 1ae:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 1b2:	2b00      	cmp	r3, #0
+ 1b4:	f040 8084 	bne.w	2c0 <DMA_GetITStatus+0x2c0>
+ 1b8:	f240 0220 	movw	r2, #32	; 0x20
+ 1bc:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 1c0:	f240 0340 	movw	r3, #64	; 0x40
+ 1c4:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 1c8:	4298      	cmp	r0, r3
+ 1ca:	bf14      	ite	ne
+ 1cc:	2300      	movne	r3, #0
+ 1ce:	2301      	moveq	r3, #1
+ 1d0:	4290      	cmp	r0, r2
+ 1d2:	bf08      	it	eq
+ 1d4:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 1d8:	2b00      	cmp	r3, #0
+ 1da:	d171      	bne.n	2c0 <DMA_GetITStatus+0x2c0>
+ 1dc:	f240 0280 	movw	r2, #128	; 0x80
+ 1e0:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 1e4:	f240 1300 	movw	r3, #256	; 0x100
+ 1e8:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 1ec:	4298      	cmp	r0, r3
+ 1ee:	bf14      	ite	ne
+ 1f0:	2300      	movne	r3, #0
+ 1f2:	2301      	moveq	r3, #1
+ 1f4:	4290      	cmp	r0, r2
+ 1f6:	bf08      	it	eq
+ 1f8:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 1fc:	2b00      	cmp	r3, #0
+ 1fe:	d15f      	bne.n	2c0 <DMA_GetITStatus+0x2c0>
+ 200:	f240 2200 	movw	r2, #512	; 0x200
+ 204:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 208:	f240 4300 	movw	r3, #1024	; 0x400
+ 20c:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 210:	4298      	cmp	r0, r3
+ 212:	bf14      	ite	ne
+ 214:	2300      	movne	r3, #0
+ 216:	2301      	moveq	r3, #1
+ 218:	4290      	cmp	r0, r2
+ 21a:	bf08      	it	eq
+ 21c:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 220:	2b00      	cmp	r3, #0
+ 222:	d14d      	bne.n	2c0 <DMA_GetITStatus+0x2c0>
+ 224:	f640 0200 	movw	r2, #2048	; 0x800
+ 228:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 22c:	f241 0300 	movw	r3, #4096	; 0x1000
+ 230:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 234:	4298      	cmp	r0, r3
+ 236:	bf14      	ite	ne
+ 238:	2300      	movne	r3, #0
+ 23a:	2301      	moveq	r3, #1
+ 23c:	4290      	cmp	r0, r2
+ 23e:	bf08      	it	eq
+ 240:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 244:	2b00      	cmp	r3, #0
+ 246:	d13b      	bne.n	2c0 <DMA_GetITStatus+0x2c0>
+ 248:	f242 0200 	movw	r2, #8192	; 0x2000
+ 24c:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 250:	f244 0300 	movw	r3, #16384	; 0x4000
+ 254:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 258:	4298      	cmp	r0, r3
+ 25a:	bf14      	ite	ne
+ 25c:	2300      	movne	r3, #0
+ 25e:	2301      	moveq	r3, #1
+ 260:	4290      	cmp	r0, r2
+ 262:	bf08      	it	eq
+ 264:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 268:	bb53      	cbnz	r3, 2c0 <DMA_GetITStatus+0x2c0>
+ 26a:	f248 0200 	movw	r2, #32768	; 0x8000
+ 26e:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 272:	f240 0300 	movw	r3, #0	; 0x0
+ 276:	f2c1 0301 	movt	r3, #4097	; 0x1001
+ 27a:	4298      	cmp	r0, r3
+ 27c:	bf14      	ite	ne
+ 27e:	2300      	movne	r3, #0
+ 280:	2301      	moveq	r3, #1
+ 282:	4290      	cmp	r0, r2
+ 284:	bf08      	it	eq
+ 286:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 28a:	b9cb      	cbnz	r3, 2c0 <DMA_GetITStatus+0x2c0>
+ 28c:	f240 0200 	movw	r2, #0	; 0x0
+ 290:	f2c1 0202 	movt	r2, #4098	; 0x1002
+ 294:	f240 0300 	movw	r3, #0	; 0x0
+ 298:	f2c1 0304 	movt	r3, #4100	; 0x1004
+ 29c:	4298      	cmp	r0, r3
+ 29e:	bf14      	ite	ne
+ 2a0:	2300      	movne	r3, #0
+ 2a2:	2301      	moveq	r3, #1
+ 2a4:	4290      	cmp	r0, r2
+ 2a6:	bf08      	it	eq
+ 2a8:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 2ac:	b943      	cbnz	r3, 2c0 <DMA_GetITStatus+0x2c0>
+ 2ae:	f240 0300 	movw	r3, #0	; 0x0
+ 2b2:	f2c1 0308 	movt	r3, #4104	; 0x1008
+ 2b6:	4298      	cmp	r0, r3
+ 2b8:	bf18      	it	ne
+ 2ba:	2000      	movne	r0, #0
+ 2bc:	d102      	bne.n	2c4 <DMA_GetITStatus+0x2c4>
+ 2be:	e016      	b.n	2ee <DMA_GetITStatus+0x2ee>
+ 2c0:	f04f 0001 	mov.w	r0, #1	; 0x1
+ 2c4:	f7ff fffe 	bl	0 <assert_param>
+ 2c8:	f014 5f80 	tst.w	r4, #268435456	; 0x10000000
+ 2cc:	bf02      	ittt	eq
+ 2ce:	f240 0300 	movweq	r3, #0	; 0x0
+ 2d2:	f2c4 0302 	movteq	r3, #16386	; 0x4002
+ 2d6:	681b      	ldreq	r3, [r3, #0]
+ 2d8:	d004      	beq.n	2e4 <DMA_GetITStatus+0x2e4>
+ 2da:	f240 4300 	movw	r3, #1024	; 0x400
+ 2de:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 2e2:	681b      	ldr	r3, [r3, #0]
+ 2e4:	4223      	tst	r3, r4
+ 2e6:	bf0c      	ite	eq
+ 2e8:	2000      	moveq	r0, #0
+ 2ea:	2001      	movne	r0, #1
+ 2ec:	bd10      	pop	{r4, pc}
+ 2ee:	f04f 0001 	mov.w	r0, #1	; 0x1
+ 2f2:	f7ff fffe 	bl	0 <assert_param>
+ 2f6:	e7f0      	b.n	2da <assert_param+0x2da>
+Disassembly of section .text.DMA_ClearFlag:
+
+00000000 <DMA_ClearFlag>:
+DMA_ClearFlag():
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	f010 4f70 	tst.w	r0, #4026531840	; 0xf0000000
+   8:	d007      	beq.n	1a <DMA_ClearFlag+0x1a>
+   a:	f240 0300 	movw	r3, #0	; 0x0
+   e:	f6ce 73f0 	movt	r3, #61424	; 0xeff0
+  12:	4218      	tst	r0, r3
+  14:	bf18      	it	ne
+  16:	2000      	movne	r0, #0
+  18:	d102      	bne.n	20 <DMA_ClearFlag+0x20>
+  1a:	b194      	cbz	r4, 42 <DMA_ClearFlag+0x42>
+  1c:	f04f 0001 	mov.w	r0, #1	; 0x1
+  20:	f7ff fffe 	bl	0 <assert_param>
+  24:	f014 5f80 	tst.w	r4, #268435456	; 0x10000000
+  28:	bf1e      	ittt	ne
+  2a:	f240 4300 	movwne	r3, #1024	; 0x400
+  2e:	f2c4 0302 	movtne	r3, #16386	; 0x4002
+  32:	605c      	strne	r4, [r3, #4]
+  34:	d10a      	bne.n	4c <DMA_ClearFlag+0x4c>
+  36:	f240 0300 	movw	r3, #0	; 0x0
+  3a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3e:	605c      	str	r4, [r3, #4]
+  40:	e004      	b.n	4c <DMA_ClearFlag+0x4c>
+  42:	f04f 0000 	mov.w	r0, #0	; 0x0
+  46:	f7ff fffe 	bl	0 <assert_param>
+  4a:	e7f4      	b.n	36 <assert_param+0x36>
+  4c:	bd10      	pop	{r4, pc}
+  4e:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA_GetFlagStatus:
+
+00000000 <DMA_GetFlagStatus>:
+DMA_GetFlagStatus():
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	f100 32ff 	add.w	r2, r0, #4294967295	; 0xffffffff
+   8:	2804      	cmp	r0, #4
+   a:	bf14      	ite	ne
+   c:	2300      	movne	r3, #0
+   e:	2301      	moveq	r3, #1
+  10:	2a01      	cmp	r2, #1
+  12:	bf98      	it	ls
+  14:	f043 0301 	orrls.w	r3, r3, #1	; 0x1
+  18:	2b00      	cmp	r3, #0
+  1a:	f040 8151 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+  1e:	2810      	cmp	r0, #16
+  20:	bf14      	ite	ne
+  22:	2300      	movne	r3, #0
+  24:	2301      	moveq	r3, #1
+  26:	2808      	cmp	r0, #8
+  28:	bf08      	it	eq
+  2a:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  2e:	2b00      	cmp	r3, #0
+  30:	f040 8146 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+  34:	2840      	cmp	r0, #64
+  36:	bf14      	ite	ne
+  38:	2300      	movne	r3, #0
+  3a:	2301      	moveq	r3, #1
+  3c:	2820      	cmp	r0, #32
+  3e:	bf08      	it	eq
+  40:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  44:	2b00      	cmp	r3, #0
+  46:	f040 813b 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+  4a:	f5b0 7f80 	cmp.w	r0, #256	; 0x100
+  4e:	bf14      	ite	ne
+  50:	2300      	movne	r3, #0
+  52:	2301      	moveq	r3, #1
+  54:	2880      	cmp	r0, #128
+  56:	bf08      	it	eq
+  58:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  5c:	2b00      	cmp	r3, #0
+  5e:	f040 812f 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+  62:	f5b0 6f80 	cmp.w	r0, #1024	; 0x400
+  66:	bf14      	ite	ne
+  68:	2300      	movne	r3, #0
+  6a:	2301      	moveq	r3, #1
+  6c:	f5b0 7f00 	cmp.w	r0, #512	; 0x200
+  70:	bf08      	it	eq
+  72:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  76:	2b00      	cmp	r3, #0
+  78:	f040 8122 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+  7c:	f5b0 5f80 	cmp.w	r0, #4096	; 0x1000
+  80:	bf14      	ite	ne
+  82:	2300      	movne	r3, #0
+  84:	2301      	moveq	r3, #1
+  86:	f5b0 6f00 	cmp.w	r0, #2048	; 0x800
+  8a:	bf08      	it	eq
+  8c:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  90:	2b00      	cmp	r3, #0
+  92:	f040 8115 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+  96:	f5b0 4f80 	cmp.w	r0, #16384	; 0x4000
+  9a:	bf14      	ite	ne
+  9c:	2300      	movne	r3, #0
+  9e:	2301      	moveq	r3, #1
+  a0:	f5b0 5f00 	cmp.w	r0, #8192	; 0x2000
+  a4:	bf08      	it	eq
+  a6:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  aa:	2b00      	cmp	r3, #0
+  ac:	f040 8108 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+  b0:	f5b0 3f80 	cmp.w	r0, #65536	; 0x10000
+  b4:	bf14      	ite	ne
+  b6:	2300      	movne	r3, #0
+  b8:	2301      	moveq	r3, #1
+  ba:	f5b0 4f00 	cmp.w	r0, #32768	; 0x8000
+  be:	bf08      	it	eq
+  c0:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  c4:	2b00      	cmp	r3, #0
+  c6:	f040 80fb 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+  ca:	f5b0 2f80 	cmp.w	r0, #262144	; 0x40000
+  ce:	bf14      	ite	ne
+  d0:	2300      	movne	r3, #0
+  d2:	2301      	moveq	r3, #1
+  d4:	f5b0 3f00 	cmp.w	r0, #131072	; 0x20000
+  d8:	bf08      	it	eq
+  da:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  de:	2b00      	cmp	r3, #0
+  e0:	f040 80ee 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+  e4:	f5b0 1f80 	cmp.w	r0, #1048576	; 0x100000
+  e8:	bf14      	ite	ne
+  ea:	2300      	movne	r3, #0
+  ec:	2301      	moveq	r3, #1
+  ee:	f5b0 2f00 	cmp.w	r0, #524288	; 0x80000
+  f2:	bf08      	it	eq
+  f4:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  f8:	2b00      	cmp	r3, #0
+  fa:	f040 80e1 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+  fe:	f5b0 0f80 	cmp.w	r0, #4194304	; 0x400000
+ 102:	bf14      	ite	ne
+ 104:	2300      	movne	r3, #0
+ 106:	2301      	moveq	r3, #1
+ 108:	f5b0 1f00 	cmp.w	r0, #2097152	; 0x200000
+ 10c:	bf08      	it	eq
+ 10e:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 112:	2b00      	cmp	r3, #0
+ 114:	f040 80d4 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+ 118:	f1b0 7f80 	cmp.w	r0, #16777216	; 0x1000000
+ 11c:	bf14      	ite	ne
+ 11e:	2300      	movne	r3, #0
+ 120:	2301      	moveq	r3, #1
+ 122:	f5b0 0f00 	cmp.w	r0, #8388608	; 0x800000
+ 126:	bf08      	it	eq
+ 128:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 12c:	2b00      	cmp	r3, #0
+ 12e:	f040 80c7 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+ 132:	f1b0 6f80 	cmp.w	r0, #67108864	; 0x4000000
+ 136:	bf14      	ite	ne
+ 138:	2300      	movne	r3, #0
+ 13a:	2301      	moveq	r3, #1
+ 13c:	f1b0 7f00 	cmp.w	r0, #33554432	; 0x2000000
+ 140:	bf08      	it	eq
+ 142:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 146:	2b00      	cmp	r3, #0
+ 148:	f040 80ba 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+ 14c:	f240 0301 	movw	r3, #1	; 0x1
+ 150:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 154:	4298      	cmp	r0, r3
+ 156:	bf14      	ite	ne
+ 158:	2300      	movne	r3, #0
+ 15a:	2301      	moveq	r3, #1
+ 15c:	f1b0 6f00 	cmp.w	r0, #134217728	; 0x8000000
+ 160:	bf08      	it	eq
+ 162:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 166:	2b00      	cmp	r3, #0
+ 168:	f040 80aa 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+ 16c:	f240 0202 	movw	r2, #2	; 0x2
+ 170:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 174:	f240 0304 	movw	r3, #4	; 0x4
+ 178:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 17c:	4298      	cmp	r0, r3
+ 17e:	bf14      	ite	ne
+ 180:	2300      	movne	r3, #0
+ 182:	2301      	moveq	r3, #1
+ 184:	4290      	cmp	r0, r2
+ 186:	bf08      	it	eq
+ 188:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 18c:	2b00      	cmp	r3, #0
+ 18e:	f040 8097 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+ 192:	f240 0208 	movw	r2, #8	; 0x8
+ 196:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 19a:	f240 0310 	movw	r3, #16	; 0x10
+ 19e:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 1a2:	4298      	cmp	r0, r3
+ 1a4:	bf14      	ite	ne
+ 1a6:	2300      	movne	r3, #0
+ 1a8:	2301      	moveq	r3, #1
+ 1aa:	4290      	cmp	r0, r2
+ 1ac:	bf08      	it	eq
+ 1ae:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 1b2:	2b00      	cmp	r3, #0
+ 1b4:	f040 8084 	bne.w	2c0 <DMA_GetFlagStatus+0x2c0>
+ 1b8:	f240 0220 	movw	r2, #32	; 0x20
+ 1bc:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 1c0:	f240 0340 	movw	r3, #64	; 0x40
+ 1c4:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 1c8:	4298      	cmp	r0, r3
+ 1ca:	bf14      	ite	ne
+ 1cc:	2300      	movne	r3, #0
+ 1ce:	2301      	moveq	r3, #1
+ 1d0:	4290      	cmp	r0, r2
+ 1d2:	bf08      	it	eq
+ 1d4:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 1d8:	2b00      	cmp	r3, #0
+ 1da:	d171      	bne.n	2c0 <DMA_GetFlagStatus+0x2c0>
+ 1dc:	f240 0280 	movw	r2, #128	; 0x80
+ 1e0:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 1e4:	f240 1300 	movw	r3, #256	; 0x100
+ 1e8:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 1ec:	4298      	cmp	r0, r3
+ 1ee:	bf14      	ite	ne
+ 1f0:	2300      	movne	r3, #0
+ 1f2:	2301      	moveq	r3, #1
+ 1f4:	4290      	cmp	r0, r2
+ 1f6:	bf08      	it	eq
+ 1f8:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 1fc:	2b00      	cmp	r3, #0
+ 1fe:	d15f      	bne.n	2c0 <DMA_GetFlagStatus+0x2c0>
+ 200:	f240 2200 	movw	r2, #512	; 0x200
+ 204:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 208:	f240 4300 	movw	r3, #1024	; 0x400
+ 20c:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 210:	4298      	cmp	r0, r3
+ 212:	bf14      	ite	ne
+ 214:	2300      	movne	r3, #0
+ 216:	2301      	moveq	r3, #1
+ 218:	4290      	cmp	r0, r2
+ 21a:	bf08      	it	eq
+ 21c:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 220:	2b00      	cmp	r3, #0
+ 222:	d14d      	bne.n	2c0 <DMA_GetFlagStatus+0x2c0>
+ 224:	f640 0200 	movw	r2, #2048	; 0x800
+ 228:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 22c:	f241 0300 	movw	r3, #4096	; 0x1000
+ 230:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 234:	4298      	cmp	r0, r3
+ 236:	bf14      	ite	ne
+ 238:	2300      	movne	r3, #0
+ 23a:	2301      	moveq	r3, #1
+ 23c:	4290      	cmp	r0, r2
+ 23e:	bf08      	it	eq
+ 240:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 244:	2b00      	cmp	r3, #0
+ 246:	d13b      	bne.n	2c0 <DMA_GetFlagStatus+0x2c0>
+ 248:	f242 0200 	movw	r2, #8192	; 0x2000
+ 24c:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 250:	f244 0300 	movw	r3, #16384	; 0x4000
+ 254:	f2c1 0300 	movt	r3, #4096	; 0x1000
+ 258:	4298      	cmp	r0, r3
+ 25a:	bf14      	ite	ne
+ 25c:	2300      	movne	r3, #0
+ 25e:	2301      	moveq	r3, #1
+ 260:	4290      	cmp	r0, r2
+ 262:	bf08      	it	eq
+ 264:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 268:	bb53      	cbnz	r3, 2c0 <DMA_GetFlagStatus+0x2c0>
+ 26a:	f248 0200 	movw	r2, #32768	; 0x8000
+ 26e:	f2c1 0200 	movt	r2, #4096	; 0x1000
+ 272:	f240 0300 	movw	r3, #0	; 0x0
+ 276:	f2c1 0301 	movt	r3, #4097	; 0x1001
+ 27a:	4298      	cmp	r0, r3
+ 27c:	bf14      	ite	ne
+ 27e:	2300      	movne	r3, #0
+ 280:	2301      	moveq	r3, #1
+ 282:	4290      	cmp	r0, r2
+ 284:	bf08      	it	eq
+ 286:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 28a:	b9cb      	cbnz	r3, 2c0 <DMA_GetFlagStatus+0x2c0>
+ 28c:	f240 0200 	movw	r2, #0	; 0x0
+ 290:	f2c1 0202 	movt	r2, #4098	; 0x1002
+ 294:	f240 0300 	movw	r3, #0	; 0x0
+ 298:	f2c1 0304 	movt	r3, #4100	; 0x1004
+ 29c:	4298      	cmp	r0, r3
+ 29e:	bf14      	ite	ne
+ 2a0:	2300      	movne	r3, #0
+ 2a2:	2301      	moveq	r3, #1
+ 2a4:	4290      	cmp	r0, r2
+ 2a6:	bf08      	it	eq
+ 2a8:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 2ac:	b943      	cbnz	r3, 2c0 <DMA_GetFlagStatus+0x2c0>
+ 2ae:	f240 0300 	movw	r3, #0	; 0x0
+ 2b2:	f2c1 0308 	movt	r3, #4104	; 0x1008
+ 2b6:	4298      	cmp	r0, r3
+ 2b8:	bf18      	it	ne
+ 2ba:	2000      	movne	r0, #0
+ 2bc:	d102      	bne.n	2c4 <DMA_GetFlagStatus+0x2c4>
+ 2be:	e016      	b.n	2ee <DMA_GetFlagStatus+0x2ee>
+ 2c0:	f04f 0001 	mov.w	r0, #1	; 0x1
+ 2c4:	f7ff fffe 	bl	0 <assert_param>
+ 2c8:	f014 5f80 	tst.w	r4, #268435456	; 0x10000000
+ 2cc:	bf02      	ittt	eq
+ 2ce:	f240 0300 	movweq	r3, #0	; 0x0
+ 2d2:	f2c4 0302 	movteq	r3, #16386	; 0x4002
+ 2d6:	681b      	ldreq	r3, [r3, #0]
+ 2d8:	d004      	beq.n	2e4 <DMA_GetFlagStatus+0x2e4>
+ 2da:	f240 4300 	movw	r3, #1024	; 0x400
+ 2de:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 2e2:	681b      	ldr	r3, [r3, #0]
+ 2e4:	4223      	tst	r3, r4
+ 2e6:	bf0c      	ite	eq
+ 2e8:	2000      	moveq	r0, #0
+ 2ea:	2001      	movne	r0, #1
+ 2ec:	bd10      	pop	{r4, pc}
+ 2ee:	f04f 0001 	mov.w	r0, #1	; 0x1
+ 2f2:	f7ff fffe 	bl	0 <assert_param>
+ 2f6:	e7f0      	b.n	2da <assert_param+0x2da>
+Disassembly of section .text.DMA_GetCurrDataCounter:
+
+00000000 <DMA_GetCurrDataCounter>:
+DMA_GetCurrDataCounter():
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	f240 0208 	movw	r2, #8	; 0x8
+   8:	f2c4 0202 	movt	r2, #16386	; 0x4002
+   c:	f240 031c 	movw	r3, #28	; 0x1c
+  10:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  14:	4298      	cmp	r0, r3
+  16:	bf14      	ite	ne
+  18:	2300      	movne	r3, #0
+  1a:	2301      	moveq	r3, #1
+  1c:	4290      	cmp	r0, r2
+  1e:	bf08      	it	eq
+  20:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  24:	2b00      	cmp	r3, #0
+  26:	d157      	bne.n	d8 <DMA_GetCurrDataCounter+0xd8>
+  28:	f240 0230 	movw	r2, #48	; 0x30
+  2c:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  30:	f240 0344 	movw	r3, #68	; 0x44
+  34:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  38:	4298      	cmp	r0, r3
+  3a:	bf14      	ite	ne
+  3c:	2300      	movne	r3, #0
+  3e:	2301      	moveq	r3, #1
+  40:	4290      	cmp	r0, r2
+  42:	bf08      	it	eq
+  44:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  48:	2b00      	cmp	r3, #0
+  4a:	d145      	bne.n	d8 <DMA_GetCurrDataCounter+0xd8>
+  4c:	f240 0258 	movw	r2, #88	; 0x58
+  50:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  54:	f240 036c 	movw	r3, #108	; 0x6c
+  58:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  5c:	4298      	cmp	r0, r3
+  5e:	bf14      	ite	ne
+  60:	2300      	movne	r3, #0
+  62:	2301      	moveq	r3, #1
+  64:	4290      	cmp	r0, r2
+  66:	bf08      	it	eq
+  68:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  6c:	2b00      	cmp	r3, #0
+  6e:	d133      	bne.n	d8 <DMA_GetCurrDataCounter+0xd8>
+  70:	f240 0280 	movw	r2, #128	; 0x80
+  74:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  78:	f240 4308 	movw	r3, #1032	; 0x408
+  7c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  80:	4298      	cmp	r0, r3
+  82:	bf14      	ite	ne
+  84:	2300      	movne	r3, #0
+  86:	2301      	moveq	r3, #1
+  88:	4290      	cmp	r0, r2
+  8a:	bf08      	it	eq
+  8c:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  90:	bb13      	cbnz	r3, d8 <DMA_GetCurrDataCounter+0xd8>
+  92:	f240 421c 	movw	r2, #1052	; 0x41c
+  96:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  9a:	f240 4330 	movw	r3, #1072	; 0x430
+  9e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  a2:	4298      	cmp	r0, r3
+  a4:	bf14      	ite	ne
+  a6:	2300      	movne	r3, #0
+  a8:	2301      	moveq	r3, #1
+  aa:	4290      	cmp	r0, r2
+  ac:	bf08      	it	eq
+  ae:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  b2:	b98b      	cbnz	r3, d8 <DMA_GetCurrDataCounter+0xd8>
+  b4:	f240 4244 	movw	r2, #1092	; 0x444
+  b8:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  bc:	f240 4358 	movw	r3, #1112	; 0x458
+  c0:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  c4:	4298      	cmp	r0, r3
+  c6:	bf14      	ite	ne
+  c8:	2300      	movne	r3, #0
+  ca:	2301      	moveq	r3, #1
+  cc:	4290      	cmp	r0, r2
+  ce:	bf14      	ite	ne
+  d0:	4618      	movne	r0, r3
+  d2:	f043 0001 	orreq.w	r0, r3, #1	; 0x1
+  d6:	e001      	b.n	dc <DMA_GetCurrDataCounter+0xdc>
+  d8:	f04f 0001 	mov.w	r0, #1	; 0x1
+  dc:	f7ff fffe 	bl	0 <assert_param>
+  e0:	6860      	ldr	r0, [r4, #4]
+  e2:	b280      	uxth	r0, r0
+  e4:	bd10      	pop	{r4, pc}
+  e6:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA_ITConfig:
+
+00000000 <DMA_ITConfig>:
+DMA_ITConfig():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4604      	mov	r4, r0
+   4:	460d      	mov	r5, r1
+   6:	4616      	mov	r6, r2
+   8:	f240 0208 	movw	r2, #8	; 0x8
+   c:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  10:	f240 031c 	movw	r3, #28	; 0x1c
+  14:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  18:	4298      	cmp	r0, r3
+  1a:	bf14      	ite	ne
+  1c:	2300      	movne	r3, #0
+  1e:	2301      	moveq	r3, #1
+  20:	4290      	cmp	r0, r2
+  22:	bf08      	it	eq
+  24:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  28:	2b00      	cmp	r3, #0
+  2a:	d157      	bne.n	dc <DMA_ITConfig+0xdc>
+  2c:	f240 0230 	movw	r2, #48	; 0x30
+  30:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  34:	f240 0344 	movw	r3, #68	; 0x44
+  38:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3c:	4298      	cmp	r0, r3
+  3e:	bf14      	ite	ne
+  40:	2300      	movne	r3, #0
+  42:	2301      	moveq	r3, #1
+  44:	4290      	cmp	r0, r2
+  46:	bf08      	it	eq
+  48:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  4c:	2b00      	cmp	r3, #0
+  4e:	d145      	bne.n	dc <DMA_ITConfig+0xdc>
+  50:	f240 0258 	movw	r2, #88	; 0x58
+  54:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  58:	f240 036c 	movw	r3, #108	; 0x6c
+  5c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  60:	4298      	cmp	r0, r3
+  62:	bf14      	ite	ne
+  64:	2300      	movne	r3, #0
+  66:	2301      	moveq	r3, #1
+  68:	4290      	cmp	r0, r2
+  6a:	bf08      	it	eq
+  6c:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  70:	2b00      	cmp	r3, #0
+  72:	d133      	bne.n	dc <DMA_ITConfig+0xdc>
+  74:	f240 0280 	movw	r2, #128	; 0x80
+  78:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  7c:	f240 4308 	movw	r3, #1032	; 0x408
+  80:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  84:	4298      	cmp	r0, r3
+  86:	bf14      	ite	ne
+  88:	2300      	movne	r3, #0
+  8a:	2301      	moveq	r3, #1
+  8c:	4290      	cmp	r0, r2
+  8e:	bf08      	it	eq
+  90:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  94:	bb13      	cbnz	r3, dc <DMA_ITConfig+0xdc>
+  96:	f240 421c 	movw	r2, #1052	; 0x41c
+  9a:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  9e:	f240 4330 	movw	r3, #1072	; 0x430
+  a2:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  a6:	4298      	cmp	r0, r3
+  a8:	bf14      	ite	ne
+  aa:	2300      	movne	r3, #0
+  ac:	2301      	moveq	r3, #1
+  ae:	4290      	cmp	r0, r2
+  b0:	bf08      	it	eq
+  b2:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  b6:	b98b      	cbnz	r3, dc <DMA_ITConfig+0xdc>
+  b8:	f240 4244 	movw	r2, #1092	; 0x444
+  bc:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  c0:	f240 4358 	movw	r3, #1112	; 0x458
+  c4:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  c8:	4298      	cmp	r0, r3
+  ca:	bf14      	ite	ne
+  cc:	2300      	movne	r3, #0
+  ce:	2301      	moveq	r3, #1
+  d0:	4290      	cmp	r0, r2
+  d2:	bf14      	ite	ne
+  d4:	4618      	movne	r0, r3
+  d6:	f043 0001 	orreq.w	r0, r3, #1	; 0x1
+  da:	e001      	b.n	e0 <DMA_ITConfig+0xe0>
+  dc:	f04f 0001 	mov.w	r0, #1	; 0x1
+  e0:	f7ff fffe 	bl	0 <assert_param>
+  e4:	f035 030e 	bics.w	r3, r5, #14	; 0xe
+  e8:	bf14      	ite	ne
+  ea:	2000      	movne	r0, #0
+  ec:	2001      	moveq	r0, #1
+  ee:	2d00      	cmp	r5, #0
+  f0:	bf0c      	ite	eq
+  f2:	2000      	moveq	r0, #0
+  f4:	f000 0001 	andne.w	r0, r0, #1	; 0x1
+  f8:	f7ff fffe 	bl	0 <assert_param>
+  fc:	2e01      	cmp	r6, #1
+  fe:	bf8c      	ite	hi
+ 100:	2000      	movhi	r0, #0
+ 102:	2001      	movls	r0, #1
+ 104:	f7ff fffe 	bl	0 <assert_param>
+ 108:	b126      	cbz	r6, 114 <assert_param+0x114>
+ 10a:	6823      	ldr	r3, [r4, #0]
+ 10c:	ea45 0303 	orr.w	r3, r5, r3
+ 110:	6023      	str	r3, [r4, #0]
+ 112:	e005      	b.n	120 <assert_param+0x120>
+ 114:	6822      	ldr	r2, [r4, #0]
+ 116:	ea6f 0305 	mvn.w	r3, r5
+ 11a:	ea03 0302 	and.w	r3, r3, r2
+ 11e:	6023      	str	r3, [r4, #0]
+ 120:	bd70      	pop	{r4, r5, r6, pc}
+ 122:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA_Cmd:
+
+00000000 <DMA_Cmd>:
+DMA_Cmd():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4604      	mov	r4, r0
+   4:	460d      	mov	r5, r1
+   6:	f240 0208 	movw	r2, #8	; 0x8
+   a:	f2c4 0202 	movt	r2, #16386	; 0x4002
+   e:	f240 031c 	movw	r3, #28	; 0x1c
+  12:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  16:	4298      	cmp	r0, r3
+  18:	bf14      	ite	ne
+  1a:	2300      	movne	r3, #0
+  1c:	2301      	moveq	r3, #1
+  1e:	4290      	cmp	r0, r2
+  20:	bf08      	it	eq
+  22:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  26:	2b00      	cmp	r3, #0
+  28:	d157      	bne.n	da <DMA_Cmd+0xda>
+  2a:	f240 0230 	movw	r2, #48	; 0x30
+  2e:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  32:	f240 0344 	movw	r3, #68	; 0x44
+  36:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3a:	4298      	cmp	r0, r3
+  3c:	bf14      	ite	ne
+  3e:	2300      	movne	r3, #0
+  40:	2301      	moveq	r3, #1
+  42:	4290      	cmp	r0, r2
+  44:	bf08      	it	eq
+  46:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  4a:	2b00      	cmp	r3, #0
+  4c:	d145      	bne.n	da <DMA_Cmd+0xda>
+  4e:	f240 0258 	movw	r2, #88	; 0x58
+  52:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  56:	f240 036c 	movw	r3, #108	; 0x6c
+  5a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  5e:	4298      	cmp	r0, r3
+  60:	bf14      	ite	ne
+  62:	2300      	movne	r3, #0
+  64:	2301      	moveq	r3, #1
+  66:	4290      	cmp	r0, r2
+  68:	bf08      	it	eq
+  6a:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  6e:	2b00      	cmp	r3, #0
+  70:	d133      	bne.n	da <DMA_Cmd+0xda>
+  72:	f240 0280 	movw	r2, #128	; 0x80
+  76:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  7a:	f240 4308 	movw	r3, #1032	; 0x408
+  7e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  82:	4298      	cmp	r0, r3
+  84:	bf14      	ite	ne
+  86:	2300      	movne	r3, #0
+  88:	2301      	moveq	r3, #1
+  8a:	4290      	cmp	r0, r2
+  8c:	bf08      	it	eq
+  8e:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  92:	bb13      	cbnz	r3, da <DMA_Cmd+0xda>
+  94:	f240 421c 	movw	r2, #1052	; 0x41c
+  98:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  9c:	f240 4330 	movw	r3, #1072	; 0x430
+  a0:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  a4:	4298      	cmp	r0, r3
+  a6:	bf14      	ite	ne
+  a8:	2300      	movne	r3, #0
+  aa:	2301      	moveq	r3, #1
+  ac:	4290      	cmp	r0, r2
+  ae:	bf08      	it	eq
+  b0:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  b4:	b98b      	cbnz	r3, da <DMA_Cmd+0xda>
+  b6:	f240 4244 	movw	r2, #1092	; 0x444
+  ba:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  be:	f240 4358 	movw	r3, #1112	; 0x458
+  c2:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  c6:	4298      	cmp	r0, r3
+  c8:	bf14      	ite	ne
+  ca:	2300      	movne	r3, #0
+  cc:	2301      	moveq	r3, #1
+  ce:	4290      	cmp	r0, r2
+  d0:	bf14      	ite	ne
+  d2:	4618      	movne	r0, r3
+  d4:	f043 0001 	orreq.w	r0, r3, #1	; 0x1
+  d8:	e001      	b.n	de <DMA_Cmd+0xde>
+  da:	f04f 0001 	mov.w	r0, #1	; 0x1
+  de:	f7ff fffe 	bl	0 <assert_param>
+  e2:	2d01      	cmp	r5, #1
+  e4:	bf8c      	ite	hi
+  e6:	2000      	movhi	r0, #0
+  e8:	2001      	movls	r0, #1
+  ea:	f7ff fffe 	bl	0 <assert_param>
+  ee:	b125      	cbz	r5, fa <assert_param+0xfa>
+  f0:	6823      	ldr	r3, [r4, #0]
+  f2:	f043 0301 	orr.w	r3, r3, #1	; 0x1
+  f6:	6023      	str	r3, [r4, #0]
+  f8:	e003      	b.n	102 <assert_param+0x102>
+  fa:	6823      	ldr	r3, [r4, #0]
+  fc:	f023 0301 	bic.w	r3, r3, #1	; 0x1
+ 100:	6023      	str	r3, [r4, #0]
+ 102:	bd70      	pop	{r4, r5, r6, pc}
+Disassembly of section .text.DMA_Init:
+
+00000000 <DMA_Init>:
+DMA_Init():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4605      	mov	r5, r0
+   4:	460c      	mov	r4, r1
+   6:	f240 0208 	movw	r2, #8	; 0x8
+   a:	f2c4 0202 	movt	r2, #16386	; 0x4002
+   e:	f240 031c 	movw	r3, #28	; 0x1c
+  12:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  16:	4298      	cmp	r0, r3
+  18:	bf14      	ite	ne
+  1a:	2300      	movne	r3, #0
+  1c:	2301      	moveq	r3, #1
+  1e:	4290      	cmp	r0, r2
+  20:	bf08      	it	eq
+  22:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  26:	2b00      	cmp	r3, #0
+  28:	d157      	bne.n	da <DMA_Init+0xda>
+  2a:	f240 0230 	movw	r2, #48	; 0x30
+  2e:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  32:	f240 0344 	movw	r3, #68	; 0x44
+  36:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3a:	4298      	cmp	r0, r3
+  3c:	bf14      	ite	ne
+  3e:	2300      	movne	r3, #0
+  40:	2301      	moveq	r3, #1
+  42:	4290      	cmp	r0, r2
+  44:	bf08      	it	eq
+  46:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  4a:	2b00      	cmp	r3, #0
+  4c:	d145      	bne.n	da <DMA_Init+0xda>
+  4e:	f240 0258 	movw	r2, #88	; 0x58
+  52:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  56:	f240 036c 	movw	r3, #108	; 0x6c
+  5a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  5e:	4298      	cmp	r0, r3
+  60:	bf14      	ite	ne
+  62:	2300      	movne	r3, #0
+  64:	2301      	moveq	r3, #1
+  66:	4290      	cmp	r0, r2
+  68:	bf08      	it	eq
+  6a:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  6e:	2b00      	cmp	r3, #0
+  70:	d133      	bne.n	da <DMA_Init+0xda>
+  72:	f240 0280 	movw	r2, #128	; 0x80
+  76:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  7a:	f240 4308 	movw	r3, #1032	; 0x408
+  7e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  82:	4298      	cmp	r0, r3
+  84:	bf14      	ite	ne
+  86:	2300      	movne	r3, #0
+  88:	2301      	moveq	r3, #1
+  8a:	4290      	cmp	r0, r2
+  8c:	bf08      	it	eq
+  8e:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  92:	bb13      	cbnz	r3, da <DMA_Init+0xda>
+  94:	f240 421c 	movw	r2, #1052	; 0x41c
+  98:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  9c:	f240 4330 	movw	r3, #1072	; 0x430
+  a0:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  a4:	4298      	cmp	r0, r3
+  a6:	bf14      	ite	ne
+  a8:	2300      	movne	r3, #0
+  aa:	2301      	moveq	r3, #1
+  ac:	4290      	cmp	r0, r2
+  ae:	bf08      	it	eq
+  b0:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  b4:	b98b      	cbnz	r3, da <DMA_Init+0xda>
+  b6:	f240 4244 	movw	r2, #1092	; 0x444
+  ba:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  be:	f240 4358 	movw	r3, #1112	; 0x458
+  c2:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  c6:	4298      	cmp	r0, r3
+  c8:	bf14      	ite	ne
+  ca:	2300      	movne	r3, #0
+  cc:	2301      	moveq	r3, #1
+  ce:	4290      	cmp	r0, r2
+  d0:	bf14      	ite	ne
+  d2:	4618      	movne	r0, r3
+  d4:	f043 0001 	orreq.w	r0, r3, #1	; 0x1
+  d8:	e001      	b.n	de <DMA_Init+0xde>
+  da:	f04f 0001 	mov.w	r0, #1	; 0x1
+  de:	f7ff fffe 	bl	0 <assert_param>
+  e2:	68a3      	ldr	r3, [r4, #8]
+  e4:	f1d3 0001 	rsbs	r0, r3, #1	; 0x1
+  e8:	bf38      	it	cc
+  ea:	2000      	movcc	r0, #0
+  ec:	2b10      	cmp	r3, #16
+  ee:	bf08      	it	eq
+  f0:	f040 0001 	orreq.w	r0, r0, #1	; 0x1
+  f4:	f7ff fffe 	bl	0 <assert_param>
+  f8:	68e0      	ldr	r0, [r4, #12]
+  fa:	f100 30ff 	add.w	r0, r0, #4294967295	; 0xffffffff
+  fe:	f64f 73fe 	movw	r3, #65534	; 0xfffe
+ 102:	4298      	cmp	r0, r3
+ 104:	bf8c      	ite	hi
+ 106:	2000      	movhi	r0, #0
+ 108:	2001      	movls	r0, #1
+ 10a:	f7ff fffe 	bl	0 <assert_param>
+ 10e:	6923      	ldr	r3, [r4, #16]
+ 110:	f1d3 0001 	rsbs	r0, r3, #1	; 0x1
+ 114:	bf38      	it	cc
+ 116:	2000      	movcc	r0, #0
+ 118:	2b40      	cmp	r3, #64
+ 11a:	bf08      	it	eq
+ 11c:	f040 0001 	orreq.w	r0, r0, #1	; 0x1
+ 120:	f7ff fffe 	bl	0 <assert_param>
+ 124:	6963      	ldr	r3, [r4, #20]
+ 126:	f1d3 0001 	rsbs	r0, r3, #1	; 0x1
+ 12a:	bf38      	it	cc
+ 12c:	2000      	movcc	r0, #0
+ 12e:	2b80      	cmp	r3, #128
+ 130:	bf08      	it	eq
+ 132:	f040 0001 	orreq.w	r0, r0, #1	; 0x1
+ 136:	f7ff fffe 	bl	0 <assert_param>
+ 13a:	69a0      	ldr	r0, [r4, #24]
+ 13c:	f5b0 7f80 	cmp.w	r0, #256	; 0x100
+ 140:	bf14      	ite	ne
+ 142:	2300      	movne	r3, #0
+ 144:	2301      	moveq	r3, #1
+ 146:	2800      	cmp	r0, #0
+ 148:	bf08      	it	eq
+ 14a:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 14e:	b113      	cbz	r3, 156 <DMA_Init+0x156>
+ 150:	f04f 0001 	mov.w	r0, #1	; 0x1
+ 154:	e004      	b.n	160 <DMA_Init+0x160>
+ 156:	f5b0 7f00 	cmp.w	r0, #512	; 0x200
+ 15a:	bf14      	ite	ne
+ 15c:	2000      	movne	r0, #0
+ 15e:	2001      	moveq	r0, #1
+ 160:	f7ff fffe 	bl	0 <assert_param>
+ 164:	69e0      	ldr	r0, [r4, #28]
+ 166:	f5b0 6f80 	cmp.w	r0, #1024	; 0x400
+ 16a:	bf14      	ite	ne
+ 16c:	2300      	movne	r3, #0
+ 16e:	2301      	moveq	r3, #1
+ 170:	2800      	cmp	r0, #0
+ 172:	bf08      	it	eq
+ 174:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 178:	b113      	cbz	r3, 180 <DMA_Init+0x180>
+ 17a:	f04f 0001 	mov.w	r0, #1	; 0x1
+ 17e:	e004      	b.n	18a <DMA_Init+0x18a>
+ 180:	f5b0 6f00 	cmp.w	r0, #2048	; 0x800
+ 184:	bf14      	ite	ne
+ 186:	2000      	movne	r0, #0
+ 188:	2001      	moveq	r0, #1
+ 18a:	f7ff fffe 	bl	0 <assert_param>
+ 18e:	6a23      	ldr	r3, [r4, #32]
+ 190:	f1d3 0001 	rsbs	r0, r3, #1	; 0x1
+ 194:	bf38      	it	cc
+ 196:	2000      	movcc	r0, #0
+ 198:	2b20      	cmp	r3, #32
+ 19a:	bf08      	it	eq
+ 19c:	f040 0001 	orreq.w	r0, r0, #1	; 0x1
+ 1a0:	f7ff fffe 	bl	0 <assert_param>
+ 1a4:	6a60      	ldr	r0, [r4, #36]
+ 1a6:	f5b0 5f00 	cmp.w	r0, #8192	; 0x2000
+ 1aa:	bf14      	ite	ne
+ 1ac:	2300      	movne	r3, #0
+ 1ae:	2301      	moveq	r3, #1
+ 1b0:	f5b0 5f40 	cmp.w	r0, #12288	; 0x3000
+ 1b4:	bf08      	it	eq
+ 1b6:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+ 1ba:	b93b      	cbnz	r3, 1cc <DMA_Init+0x1cc>
+ 1bc:	f5b0 5f80 	cmp.w	r0, #4096	; 0x1000
+ 1c0:	d004      	beq.n	1cc <DMA_Init+0x1cc>
+ 1c2:	f1d0 0001 	rsbs	r0, r0, #1	; 0x1
+ 1c6:	bf38      	it	cc
+ 1c8:	2000      	movcc	r0, #0
+ 1ca:	e001      	b.n	1d0 <DMA_Init+0x1d0>
+ 1cc:	f04f 0001 	mov.w	r0, #1	; 0x1
+ 1d0:	f7ff fffe 	bl	0 <assert_param>
+ 1d4:	6aa3      	ldr	r3, [r4, #40]
+ 1d6:	f1d3 0001 	rsbs	r0, r3, #1	; 0x1
+ 1da:	bf38      	it	cc
+ 1dc:	2000      	movcc	r0, #0
+ 1de:	f5b3 4f80 	cmp.w	r3, #16384	; 0x4000
+ 1e2:	bf08      	it	eq
+ 1e4:	f040 0001 	orreq.w	r0, r0, #1	; 0x1
+ 1e8:	f7ff fffe 	bl	0 <assert_param>
+ 1ec:	6829      	ldr	r1, [r5, #0]
+ 1ee:	f248 030f 	movw	r3, #32783	; 0x800f
+ 1f2:	f6cf 73ff 	movt	r3, #65535	; 0xffff
+ 1f6:	ea01 0103 	and.w	r1, r1, r3
+ 1fa:	6a23      	ldr	r3, [r4, #32]
+ 1fc:	68a2      	ldr	r2, [r4, #8]
+ 1fe:	ea43 0302 	orr.w	r3, r3, r2
+ 202:	6922      	ldr	r2, [r4, #16]
+ 204:	ea43 0302 	orr.w	r3, r3, r2
+ 208:	6962      	ldr	r2, [r4, #20]
+ 20a:	ea43 0302 	orr.w	r3, r3, r2
+ 20e:	69a2      	ldr	r2, [r4, #24]
+ 210:	ea43 0302 	orr.w	r3, r3, r2
+ 214:	69e2      	ldr	r2, [r4, #28]
+ 216:	ea43 0302 	orr.w	r3, r3, r2
+ 21a:	6a62      	ldr	r2, [r4, #36]
+ 21c:	ea43 0302 	orr.w	r3, r3, r2
+ 220:	6aa2      	ldr	r2, [r4, #40]
+ 222:	ea43 0302 	orr.w	r3, r3, r2
+ 226:	ea43 0301 	orr.w	r3, r3, r1
+ 22a:	602b      	str	r3, [r5, #0]
+ 22c:	68e3      	ldr	r3, [r4, #12]
+ 22e:	606b      	str	r3, [r5, #4]
+ 230:	6823      	ldr	r3, [r4, #0]
+ 232:	60ab      	str	r3, [r5, #8]
+ 234:	6863      	ldr	r3, [r4, #4]
+ 236:	60eb      	str	r3, [r5, #12]
+ 238:	bd70      	pop	{r4, r5, r6, pc}
+ 23a:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA_DeInit:
+
+00000000 <DMA_DeInit>:
+DMA_DeInit():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4604      	mov	r4, r0
+   4:	f240 0308 	movw	r3, #8	; 0x8
+   8:	f2c4 0302 	movt	r3, #16386	; 0x4002
+   c:	4298      	cmp	r0, r3
+   e:	bf14      	ite	ne
+  10:	2500      	movne	r5, #0
+  12:	2501      	moveq	r5, #1
+  14:	f240 031c 	movw	r3, #28	; 0x1c
+  18:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  1c:	4298      	cmp	r0, r3
+  1e:	bf14      	ite	ne
+  20:	2600      	movne	r6, #0
+  22:	2601      	moveq	r6, #1
+  24:	ea55 0306 	orrs.w	r3, r5, r6
+  28:	d157      	bne.n	da <DMA_DeInit+0xda>
+  2a:	f240 0230 	movw	r2, #48	; 0x30
+  2e:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  32:	f240 0344 	movw	r3, #68	; 0x44
+  36:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3a:	4298      	cmp	r0, r3
+  3c:	bf14      	ite	ne
+  3e:	2300      	movne	r3, #0
+  40:	2301      	moveq	r3, #1
+  42:	4290      	cmp	r0, r2
+  44:	bf08      	it	eq
+  46:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  4a:	2b00      	cmp	r3, #0
+  4c:	d145      	bne.n	da <DMA_DeInit+0xda>
+  4e:	f240 0258 	movw	r2, #88	; 0x58
+  52:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  56:	f240 036c 	movw	r3, #108	; 0x6c
+  5a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  5e:	4298      	cmp	r0, r3
+  60:	bf14      	ite	ne
+  62:	2300      	movne	r3, #0
+  64:	2301      	moveq	r3, #1
+  66:	4290      	cmp	r0, r2
+  68:	bf08      	it	eq
+  6a:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  6e:	2b00      	cmp	r3, #0
+  70:	d133      	bne.n	da <DMA_DeInit+0xda>
+  72:	f240 0280 	movw	r2, #128	; 0x80
+  76:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  7a:	f240 4308 	movw	r3, #1032	; 0x408
+  7e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  82:	4298      	cmp	r0, r3
+  84:	bf14      	ite	ne
+  86:	2300      	movne	r3, #0
+  88:	2301      	moveq	r3, #1
+  8a:	4290      	cmp	r0, r2
+  8c:	bf08      	it	eq
+  8e:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  92:	bb13      	cbnz	r3, da <DMA_DeInit+0xda>
+  94:	f240 421c 	movw	r2, #1052	; 0x41c
+  98:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  9c:	f240 4330 	movw	r3, #1072	; 0x430
+  a0:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  a4:	4298      	cmp	r0, r3
+  a6:	bf14      	ite	ne
+  a8:	2300      	movne	r3, #0
+  aa:	2301      	moveq	r3, #1
+  ac:	4290      	cmp	r0, r2
+  ae:	bf08      	it	eq
+  b0:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  b4:	b98b      	cbnz	r3, da <DMA_DeInit+0xda>
+  b6:	f240 4244 	movw	r2, #1092	; 0x444
+  ba:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  be:	f240 4358 	movw	r3, #1112	; 0x458
+  c2:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  c6:	4298      	cmp	r0, r3
+  c8:	bf14      	ite	ne
+  ca:	2300      	movne	r3, #0
+  cc:	2301      	moveq	r3, #1
+  ce:	4290      	cmp	r0, r2
+  d0:	bf14      	ite	ne
+  d2:	4618      	movne	r0, r3
+  d4:	f043 0001 	orreq.w	r0, r3, #1	; 0x1
+  d8:	e001      	b.n	de <DMA_DeInit+0xde>
+  da:	f04f 0001 	mov.w	r0, #1	; 0x1
+  de:	f7ff fffe 	bl	0 <assert_param>
+  e2:	6823      	ldr	r3, [r4, #0]
+  e4:	f023 0301 	bic.w	r3, r3, #1	; 0x1
+  e8:	6023      	str	r3, [r4, #0]
+  ea:	f04f 0300 	mov.w	r3, #0	; 0x0
+  ee:	6023      	str	r3, [r4, #0]
+  f0:	6063      	str	r3, [r4, #4]
+  f2:	60a3      	str	r3, [r4, #8]
+  f4:	60e3      	str	r3, [r4, #12]
+  f6:	b145      	cbz	r5, 10a <assert_param+0x10a>
+  f8:	f240 0200 	movw	r2, #0	; 0x0
+  fc:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 100:	6853      	ldr	r3, [r2, #4]
+ 102:	f043 030f 	orr.w	r3, r3, #15	; 0xf
+ 106:	6053      	str	r3, [r2, #4]
+ 108:	e09f      	b.n	24a <assert_param+0x24a>
+ 10a:	b146      	cbz	r6, 11e <assert_param+0x11e>
+ 10c:	f240 0200 	movw	r2, #0	; 0x0
+ 110:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 114:	6853      	ldr	r3, [r2, #4]
+ 116:	f043 03f0 	orr.w	r3, r3, #240	; 0xf0
+ 11a:	6053      	str	r3, [r2, #4]
+ 11c:	e095      	b.n	24a <assert_param+0x24a>
+ 11e:	f240 0330 	movw	r3, #48	; 0x30
+ 122:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 126:	429c      	cmp	r4, r3
+ 128:	d108      	bne.n	13c <assert_param+0x13c>
+ 12a:	f240 0200 	movw	r2, #0	; 0x0
+ 12e:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 132:	6853      	ldr	r3, [r2, #4]
+ 134:	f443 6370 	orr.w	r3, r3, #3840	; 0xf00
+ 138:	6053      	str	r3, [r2, #4]
+ 13a:	e086      	b.n	24a <assert_param+0x24a>
+ 13c:	f240 0344 	movw	r3, #68	; 0x44
+ 140:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 144:	429c      	cmp	r4, r3
+ 146:	d108      	bne.n	15a <assert_param+0x15a>
+ 148:	f240 0200 	movw	r2, #0	; 0x0
+ 14c:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 150:	6853      	ldr	r3, [r2, #4]
+ 152:	f443 4370 	orr.w	r3, r3, #61440	; 0xf000
+ 156:	6053      	str	r3, [r2, #4]
+ 158:	e077      	b.n	24a <assert_param+0x24a>
+ 15a:	f240 0358 	movw	r3, #88	; 0x58
+ 15e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 162:	429c      	cmp	r4, r3
+ 164:	d108      	bne.n	178 <assert_param+0x178>
+ 166:	f240 0200 	movw	r2, #0	; 0x0
+ 16a:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 16e:	6853      	ldr	r3, [r2, #4]
+ 170:	f443 2370 	orr.w	r3, r3, #983040	; 0xf0000
+ 174:	6053      	str	r3, [r2, #4]
+ 176:	e068      	b.n	24a <assert_param+0x24a>
+ 178:	f240 036c 	movw	r3, #108	; 0x6c
+ 17c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 180:	429c      	cmp	r4, r3
+ 182:	d108      	bne.n	196 <assert_param+0x196>
+ 184:	f240 0200 	movw	r2, #0	; 0x0
+ 188:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 18c:	6853      	ldr	r3, [r2, #4]
+ 18e:	f443 0370 	orr.w	r3, r3, #15728640	; 0xf00000
+ 192:	6053      	str	r3, [r2, #4]
+ 194:	e059      	b.n	24a <assert_param+0x24a>
+ 196:	f240 0380 	movw	r3, #128	; 0x80
+ 19a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 19e:	429c      	cmp	r4, r3
+ 1a0:	d108      	bne.n	1b4 <assert_param+0x1b4>
+ 1a2:	f240 0200 	movw	r2, #0	; 0x0
+ 1a6:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 1aa:	6853      	ldr	r3, [r2, #4]
+ 1ac:	f043 6370 	orr.w	r3, r3, #251658240	; 0xf000000
+ 1b0:	6053      	str	r3, [r2, #4]
+ 1b2:	e04a      	b.n	24a <assert_param+0x24a>
+ 1b4:	f240 4308 	movw	r3, #1032	; 0x408
+ 1b8:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 1bc:	429c      	cmp	r4, r3
+ 1be:	d108      	bne.n	1d2 <assert_param+0x1d2>
+ 1c0:	f240 4200 	movw	r2, #1024	; 0x400
+ 1c4:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 1c8:	6853      	ldr	r3, [r2, #4]
+ 1ca:	f043 030f 	orr.w	r3, r3, #15	; 0xf
+ 1ce:	6053      	str	r3, [r2, #4]
+ 1d0:	e03b      	b.n	24a <assert_param+0x24a>
+ 1d2:	f240 431c 	movw	r3, #1052	; 0x41c
+ 1d6:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 1da:	429c      	cmp	r4, r3
+ 1dc:	d108      	bne.n	1f0 <assert_param+0x1f0>
+ 1de:	f240 4200 	movw	r2, #1024	; 0x400
+ 1e2:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 1e6:	6853      	ldr	r3, [r2, #4]
+ 1e8:	f043 03f0 	orr.w	r3, r3, #240	; 0xf0
+ 1ec:	6053      	str	r3, [r2, #4]
+ 1ee:	e02c      	b.n	24a <assert_param+0x24a>
+ 1f0:	f240 4330 	movw	r3, #1072	; 0x430
+ 1f4:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 1f8:	429c      	cmp	r4, r3
+ 1fa:	d108      	bne.n	20e <assert_param+0x20e>
+ 1fc:	f240 4200 	movw	r2, #1024	; 0x400
+ 200:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 204:	6853      	ldr	r3, [r2, #4]
+ 206:	f443 6370 	orr.w	r3, r3, #3840	; 0xf00
+ 20a:	6053      	str	r3, [r2, #4]
+ 20c:	e01d      	b.n	24a <assert_param+0x24a>
+ 20e:	f240 4344 	movw	r3, #1092	; 0x444
+ 212:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 216:	429c      	cmp	r4, r3
+ 218:	d108      	bne.n	22c <assert_param+0x22c>
+ 21a:	f240 4200 	movw	r2, #1024	; 0x400
+ 21e:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 222:	6853      	ldr	r3, [r2, #4]
+ 224:	f443 4370 	orr.w	r3, r3, #61440	; 0xf000
+ 228:	6053      	str	r3, [r2, #4]
+ 22a:	e00e      	b.n	24a <assert_param+0x24a>
+ 22c:	f240 4358 	movw	r3, #1112	; 0x458
+ 230:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 234:	429c      	cmp	r4, r3
+ 236:	bf01      	itttt	eq
+ 238:	f240 4200 	movweq	r2, #1024	; 0x400
+ 23c:	f2c4 0202 	movteq	r2, #16386	; 0x4002
+ 240:	6853      	ldreq	r3, [r2, #4]
+ 242:	f443 2370 	orreq.w	r3, r3, #983040	; 0xf0000
+ 246:	bf08      	it	eq
+ 248:	6053      	streq	r3, [r2, #4]
+ 24a:	bd70      	pop	{r4, r5, r6, pc}
