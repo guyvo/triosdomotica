@@ -1,0 +1,119 @@
+
+D:\cortex\gateway\system_stm32f10x.o:     file format elf32-littlearm
+D:\cortex\gateway\system_stm32f10x.o
+
+Disassembly of section .text.SystemInit:
+
+00000000 <SystemInit>:
+SystemInit():
+   0:	b082      	sub	sp, #8
+   2:	f241 0200 	movw	r2, #4096	; 0x1000
+   6:	f2c4 0202 	movt	r2, #16386	; 0x4002
+   a:	6813      	ldr	r3, [r2, #0]
+   c:	f043 0301 	orr.w	r3, r3, #1	; 0x1
+  10:	6013      	str	r3, [r2, #0]
+  12:	6851      	ldr	r1, [r2, #4]
+  14:	f240 0300 	movw	r3, #0	; 0x0
+  18:	f6cf 03ff 	movt	r3, #63743	; 0xf8ff
+  1c:	ea01 0103 	and.w	r1, r1, r3
+  20:	6051      	str	r1, [r2, #4]
+  22:	6811      	ldr	r1, [r2, #0]
+  24:	f64f 73ff 	movw	r3, #65535	; 0xffff
+  28:	f6cf 63f6 	movt	r3, #65270	; 0xfef6
+  2c:	ea01 0103 	and.w	r1, r1, r3
+  30:	6011      	str	r1, [r2, #0]
+  32:	6813      	ldr	r3, [r2, #0]
+  34:	f423 2380 	bic.w	r3, r3, #262144	; 0x40000
+  38:	6013      	str	r3, [r2, #0]
+  3a:	6853      	ldr	r3, [r2, #4]
+  3c:	f423 03fe 	bic.w	r3, r3, #8323072	; 0x7f0000
+  40:	6053      	str	r3, [r2, #4]
+  42:	f44f 031f 	mov.w	r3, #10420224	; 0x9f0000
+  46:	6093      	str	r3, [r2, #8]
+  48:	f5a3 031f 	sub.w	r3, r3, #10420224	; 0x9f0000
+  4c:	9301      	str	r3, [sp, #4]
+  4e:	9300      	str	r3, [sp, #0]
+  50:	6813      	ldr	r3, [r2, #0]
+  52:	f443 3380 	orr.w	r3, r3, #65536	; 0x10000
+  56:	6013      	str	r3, [r2, #0]
+  58:	f241 0300 	movw	r3, #4096	; 0x1000
+  5c:	461a      	mov	r2, r3
+  5e:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  62:	6813      	ldr	r3, [r2, #0]
+  64:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+  68:	9300      	str	r3, [sp, #0]
+  6a:	9b01      	ldr	r3, [sp, #4]
+  6c:	f103 0301 	add.w	r3, r3, #1	; 0x1
+  70:	9301      	str	r3, [sp, #4]
+  72:	9b00      	ldr	r3, [sp, #0]
+  74:	b91b      	cbnz	r3, 7e <SystemFrequency_APB2Clk+0x6e>
+  76:	9b01      	ldr	r3, [sp, #4]
+  78:	f5b3 6fa0 	cmp.w	r3, #1280	; 0x500
+  7c:	d1f1      	bne.n	62 <SystemFrequency_APB2Clk+0x52>
+  7e:	f241 0300 	movw	r3, #4096	; 0x1000
+  82:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  86:	681b      	ldr	r3, [r3, #0]
+  88:	f413 3f00 	tst.w	r3, #131072	; 0x20000
+  8c:	bf19      	ittee	ne
+  8e:	2301      	movne	r3, #1
+  90:	9300      	strne	r3, [sp, #0]
+  92:	2300      	moveq	r3, #0
+  94:	9300      	streq	r3, [sp, #0]
+  96:	9b00      	ldr	r3, [sp, #0]
+  98:	2b01      	cmp	r3, #1
+  9a:	d147      	bne.n	12c <SystemFrequency_APB2Clk+0x11c>
+  9c:	f242 0200 	movw	r2, #8192	; 0x2000
+  a0:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  a4:	6813      	ldr	r3, [r2, #0]
+  a6:	f043 0310 	orr.w	r3, r3, #16	; 0x10
+  aa:	6013      	str	r3, [r2, #0]
+  ac:	6813      	ldr	r3, [r2, #0]
+  ae:	f023 0303 	bic.w	r3, r3, #3	; 0x3
+  b2:	6013      	str	r3, [r2, #0]
+  b4:	6813      	ldr	r3, [r2, #0]
+  b6:	f043 0302 	orr.w	r3, r3, #2	; 0x2
+  ba:	6013      	str	r3, [r2, #0]
+  bc:	f241 0200 	movw	r2, #4096	; 0x1000
+  c0:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  c4:	6853      	ldr	r3, [r2, #4]
+  c6:	6053      	str	r3, [r2, #4]
+  c8:	6853      	ldr	r3, [r2, #4]
+  ca:	6053      	str	r3, [r2, #4]
+  cc:	6853      	ldr	r3, [r2, #4]
+  ce:	f443 6380 	orr.w	r3, r3, #1024	; 0x400
+  d2:	6053      	str	r3, [r2, #4]
+  d4:	6853      	ldr	r3, [r2, #4]
+  d6:	f423 137c 	bic.w	r3, r3, #4128768	; 0x3f0000
+  da:	6053      	str	r3, [r2, #4]
+  dc:	6853      	ldr	r3, [r2, #4]
+  de:	f443 13e8 	orr.w	r3, r3, #1900544	; 0x1d0000
+  e2:	6053      	str	r3, [r2, #4]
+  e4:	6813      	ldr	r3, [r2, #0]
+  e6:	f043 7380 	orr.w	r3, r3, #16777216	; 0x1000000
+  ea:	6013      	str	r3, [r2, #0]
+  ec:	f241 0300 	movw	r3, #4096	; 0x1000
+  f0:	461a      	mov	r2, r3
+  f2:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  f6:	6813      	ldr	r3, [r2, #0]
+  f8:	f013 7f00 	tst.w	r3, #33554432	; 0x2000000
+  fc:	d0fb      	beq.n	f6 <SystemFrequency_APB2Clk+0xe6>
+  fe:	f241 0200 	movw	r2, #4096	; 0x1000
+ 102:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 106:	6853      	ldr	r3, [r2, #4]
+ 108:	f023 0303 	bic.w	r3, r3, #3	; 0x3
+ 10c:	6053      	str	r3, [r2, #4]
+ 10e:	6853      	ldr	r3, [r2, #4]
+ 110:	f043 0302 	orr.w	r3, r3, #2	; 0x2
+ 114:	6053      	str	r3, [r2, #4]
+ 116:	f241 0300 	movw	r3, #4096	; 0x1000
+ 11a:	461a      	mov	r2, r3
+ 11c:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 120:	6853      	ldr	r3, [r2, #4]
+ 122:	f003 030c 	and.w	r3, r3, #12	; 0xc
+ 126:	2b08      	cmp	r3, #8
+ 128:	d1fa      	bne.n	120 <SystemFrequency_APB2Clk+0x110>
+ 12a:	e000      	b.n	12e <SystemFrequency_APB2Clk+0x11e>
+ 12c:	e7fe      	b.n	12c <SystemFrequency_APB2Clk+0x11c>
+ 12e:	b002      	add	sp, #8
+ 130:	4770      	bx	lr
+ 132:	46c0      	nop			(mov r8, r8)

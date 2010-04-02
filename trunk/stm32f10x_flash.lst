@@ -1,0 +1,810 @@
+
+D:\cortex\gateway\stm32f10x_flash.o:     file format elf32-littlearm
+D:\cortex\gateway\stm32f10x_flash.o
+
+Disassembly of section .text.FLASH_Unlock:
+
+00000000 <FLASH_Unlock>:
+FLASH_Unlock():
+   0:	f242 0300 	movw	r3, #8192	; 0x2000
+   4:	f2c4 0302 	movt	r3, #16386	; 0x4002
+   8:	f240 1223 	movw	r2, #291	; 0x123
+   c:	f2c4 5267 	movt	r2, #17767	; 0x4567
+  10:	605a      	str	r2, [r3, #4]
+  12:	f648 12ab 	movw	r2, #35243	; 0x89ab
+  16:	f6cc 52ef 	movt	r2, #52719	; 0xcdef
+  1a:	605a      	str	r2, [r3, #4]
+  1c:	4770      	bx	lr
+  1e:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.FLASH_Lock:
+
+00000000 <FLASH_Lock>:
+FLASH_Lock():
+   0:	f242 0200 	movw	r2, #8192	; 0x2000
+   4:	f2c4 0202 	movt	r2, #16386	; 0x4002
+   8:	6913      	ldr	r3, [r2, #16]
+   a:	f043 0380 	orr.w	r3, r3, #128	; 0x80
+   e:	6113      	str	r3, [r2, #16]
+  10:	4770      	bx	lr
+  12:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.FLASH_GetUserOptionByte:
+
+00000000 <FLASH_GetUserOptionByte>:
+FLASH_GetUserOptionByte():
+   0:	f242 0300 	movw	r3, #8192	; 0x2000
+   4:	f2c4 0302 	movt	r3, #16386	; 0x4002
+   8:	69d8      	ldr	r0, [r3, #28]
+   a:	ea4f 0090 	mov.w	r0, r0, lsr #2
+   e:	4770      	bx	lr
+Disassembly of section .text.FLASH_GetWriteProtectionOptionByte:
+
+00000000 <FLASH_GetWriteProtectionOptionByte>:
+FLASH_GetWriteProtectionOptionByte():
+   0:	f242 0300 	movw	r3, #8192	; 0x2000
+   4:	f2c4 0302 	movt	r3, #16386	; 0x4002
+   8:	6a18      	ldr	r0, [r3, #32]
+   a:	4770      	bx	lr
+Disassembly of section .text.FLASH_GetReadOutProtectionStatus:
+
+00000000 <FLASH_GetReadOutProtectionStatus>:
+FLASH_GetReadOutProtectionStatus():
+   0:	f242 0300 	movw	r3, #8192	; 0x2000
+   4:	f2c4 0302 	movt	r3, #16386	; 0x4002
+   8:	69d8      	ldr	r0, [r3, #28]
+   a:	ea4f 0050 	mov.w	r0, r0, lsr #1
+   e:	f000 0001 	and.w	r0, r0, #1	; 0x1
+  12:	4770      	bx	lr
+Disassembly of section .text.FLASH_GetPrefetchBufferStatus:
+
+00000000 <FLASH_GetPrefetchBufferStatus>:
+FLASH_GetPrefetchBufferStatus():
+   0:	f242 0300 	movw	r3, #8192	; 0x2000
+   4:	f2c4 0302 	movt	r3, #16386	; 0x4002
+   8:	6818      	ldr	r0, [r3, #0]
+   a:	ea4f 1050 	mov.w	r0, r0, lsr #5
+   e:	f000 0001 	and.w	r0, r0, #1	; 0x1
+  12:	4770      	bx	lr
+Disassembly of section .text.FLASH_GetStatus:
+
+00000000 <FLASH_GetStatus>:
+FLASH_GetStatus():
+   0:	f242 0300 	movw	r3, #8192	; 0x2000
+   4:	f2c4 0302 	movt	r3, #16386	; 0x4002
+   8:	68db      	ldr	r3, [r3, #12]
+   a:	f013 0f01 	tst.w	r3, #1	; 0x1
+   e:	bf18      	it	ne
+  10:	2001      	movne	r0, #1
+  12:	d113      	bne.n	3c <FLASH_GetStatus+0x3c>
+  14:	f242 0300 	movw	r3, #8192	; 0x2000
+  18:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  1c:	68db      	ldr	r3, [r3, #12]
+  1e:	f013 0f04 	tst.w	r3, #4	; 0x4
+  22:	bf18      	it	ne
+  24:	2002      	movne	r0, #2
+  26:	d109      	bne.n	3c <FLASH_GetStatus+0x3c>
+  28:	f242 0300 	movw	r3, #8192	; 0x2000
+  2c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  30:	68db      	ldr	r3, [r3, #12]
+  32:	f013 0f10 	tst.w	r3, #16	; 0x10
+  36:	bf14      	ite	ne
+  38:	2003      	movne	r0, #3
+  3a:	2004      	moveq	r0, #4
+  3c:	4770      	bx	lr
+  3e:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.FLASH_WaitForLastOperation:
+
+00000000 <FLASH_WaitForLastOperation>:
+FLASH_WaitForLastOperation():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	b082      	sub	sp, #8
+   4:	4604      	mov	r4, r0
+   6:	f7ff fffe 	bl	0 <FLASH_WaitForLastOperation>
+   a:	1e23      	subs	r3, r4, #0
+   c:	bf18      	it	ne
+   e:	2301      	movne	r3, #1
+  10:	2801      	cmp	r0, #1
+  12:	bf14      	ite	ne
+  14:	2300      	movne	r3, #0
+  16:	f003 0301 	andeq.w	r3, r3, #1	; 0x1
+  1a:	b1e3      	cbz	r3, 56 <FLASH_WaitForLastOperation+0x56>
+  1c:	f04f 0600 	mov.w	r6, #0	; 0x0
+  20:	f04f 05ff 	mov.w	r5, #255	; 0xff
+  24:	9601      	str	r6, [sp, #4]
+  26:	9501      	str	r5, [sp, #4]
+  28:	9b01      	ldr	r3, [sp, #4]
+  2a:	b133      	cbz	r3, 3a <FLASH_WaitForLastOperation+0x3a>
+  2c:	9b01      	ldr	r3, [sp, #4]
+  2e:	f103 33ff 	add.w	r3, r3, #4294967295	; 0xffffffff
+  32:	9301      	str	r3, [sp, #4]
+  34:	9b01      	ldr	r3, [sp, #4]
+  36:	2b00      	cmp	r3, #0
+  38:	d1f8      	bne.n	2c <FLASH_WaitForLastOperation+0x2c>
+  3a:	f7ff fffe 	bl	0 <FLASH_WaitForLastOperation>
+  3e:	f114 34ff 	adds.w	r4, r4, #4294967295	; 0xffffffff
+  42:	bf0c      	ite	eq
+  44:	2300      	moveq	r3, #0
+  46:	2301      	movne	r3, #1
+  48:	2801      	cmp	r0, #1
+  4a:	bf14      	ite	ne
+  4c:	2300      	movne	r3, #0
+  4e:	f003 0301 	andeq.w	r3, r3, #1	; 0x1
+  52:	2b00      	cmp	r3, #0
+  54:	d1e6      	bne.n	24 <FLASH_WaitForLastOperation+0x24>
+  56:	2c00      	cmp	r4, #0
+  58:	bf08      	it	eq
+  5a:	2005      	moveq	r0, #5
+  5c:	b002      	add	sp, #8
+  5e:	bd70      	pop	{r4, r5, r6, pc}
+Disassembly of section .text.FLASH_EraseOptionBytes:
+
+00000000 <FLASH_EraseOptionBytes>:
+FLASH_EraseOptionBytes():
+   0:	b510      	push	{r4, lr}
+   2:	f640 70ff 	movw	r0, #4095	; 0xfff
+   6:	f7ff fffe 	bl	0 <FLASH_EraseOptionBytes>
+   a:	2804      	cmp	r0, #4
+   c:	d153      	bne.n	b6 <FLASH_EraseOptionBytes+0xb6>
+   e:	f242 0200 	movw	r2, #8192	; 0x2000
+  12:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  16:	f240 1323 	movw	r3, #291	; 0x123
+  1a:	f2c4 5367 	movt	r3, #17767	; 0x4567
+  1e:	6093      	str	r3, [r2, #8]
+  20:	f648 13ab 	movw	r3, #35243	; 0x89ab
+  24:	f6cc 53ef 	movt	r3, #52719	; 0xcdef
+  28:	6093      	str	r3, [r2, #8]
+  2a:	6913      	ldr	r3, [r2, #16]
+  2c:	f043 0320 	orr.w	r3, r3, #32	; 0x20
+  30:	6113      	str	r3, [r2, #16]
+  32:	6913      	ldr	r3, [r2, #16]
+  34:	f043 0340 	orr.w	r3, r3, #64	; 0x40
+  38:	6113      	str	r3, [r2, #16]
+  3a:	f640 70ff 	movw	r0, #4095	; 0xfff
+  3e:	f7ff fffe 	bl	0 <FLASH_EraseOptionBytes>
+  42:	2804      	cmp	r0, #4
+  44:	d129      	bne.n	9a <FLASH_EraseOptionBytes+0x9a>
+  46:	f242 0200 	movw	r2, #8192	; 0x2000
+  4a:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  4e:	6911      	ldr	r1, [r2, #16]
+  50:	f641 73df 	movw	r3, #8159	; 0x1fdf
+  54:	f2c0 0300 	movt	r3, #0	; 0x0
+  58:	ea01 0303 	and.w	r3, r1, r3
+  5c:	6113      	str	r3, [r2, #16]
+  5e:	6913      	ldr	r3, [r2, #16]
+  60:	f043 0310 	orr.w	r3, r3, #16	; 0x10
+  64:	6113      	str	r3, [r2, #16]
+  66:	f64f 0300 	movw	r3, #63488	; 0xf800
+  6a:	f6c1 73ff 	movt	r3, #8191	; 0x1fff
+  6e:	f04f 02a5 	mov.w	r2, #165	; 0xa5
+  72:	801a      	strh	r2, [r3, #0]
+  74:	f100 000b 	add.w	r0, r0, #11	; 0xb
+  78:	f7ff fffe 	bl	0 <FLASH_EraseOptionBytes>
+  7c:	2805      	cmp	r0, #5
+  7e:	d01a      	beq.n	b6 <FLASH_EraseOptionBytes+0xb6>
+  80:	f242 0300 	movw	r3, #8192	; 0x2000
+  84:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  88:	6919      	ldr	r1, [r3, #16]
+  8a:	f641 72ef 	movw	r2, #8175	; 0x1fef
+  8e:	f2c0 0200 	movt	r2, #0	; 0x0
+  92:	ea01 0202 	and.w	r2, r1, r2
+  96:	611a      	str	r2, [r3, #16]
+  98:	e00d      	b.n	b6 <FLASH_EraseOptionBytes+0xb6>
+  9a:	2805      	cmp	r0, #5
+  9c:	d00b      	beq.n	b6 <FLASH_EraseOptionBytes+0xb6>
+  9e:	f242 0300 	movw	r3, #8192	; 0x2000
+  a2:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  a6:	6919      	ldr	r1, [r3, #16]
+  a8:	f641 72ef 	movw	r2, #8175	; 0x1fef
+  ac:	f2c0 0200 	movt	r2, #0	; 0x0
+  b0:	ea01 0202 	and.w	r2, r1, r2
+  b4:	611a      	str	r2, [r3, #16]
+  b6:	bd10      	pop	{r4, pc}
+Disassembly of section .text.FLASH_EraseAllPages:
+
+00000000 <FLASH_EraseAllPages>:
+FLASH_EraseAllPages():
+   0:	b510      	push	{r4, lr}
+   2:	f640 70ff 	movw	r0, #4095	; 0xfff
+   6:	f7ff fffe 	bl	0 <FLASH_EraseAllPages>
+   a:	2804      	cmp	r0, #4
+   c:	d11d      	bne.n	4a <FLASH_EraseAllPages+0x4a>
+   e:	f242 0300 	movw	r3, #8192	; 0x2000
+  12:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  16:	691a      	ldr	r2, [r3, #16]
+  18:	f042 0204 	orr.w	r2, r2, #4	; 0x4
+  1c:	611a      	str	r2, [r3, #16]
+  1e:	691a      	ldr	r2, [r3, #16]
+  20:	f042 0240 	orr.w	r2, r2, #64	; 0x40
+  24:	611a      	str	r2, [r3, #16]
+  26:	f640 70ff 	movw	r0, #4095	; 0xfff
+  2a:	f7ff fffe 	bl	0 <FLASH_EraseAllPages>
+  2e:	2805      	cmp	r0, #5
+  30:	d00b      	beq.n	4a <FLASH_EraseAllPages+0x4a>
+  32:	f242 0300 	movw	r3, #8192	; 0x2000
+  36:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3a:	6919      	ldr	r1, [r3, #16]
+  3c:	f641 72fb 	movw	r2, #8187	; 0x1ffb
+  40:	f2c0 0200 	movt	r2, #0	; 0x0
+  44:	ea01 0202 	and.w	r2, r1, r2
+  48:	611a      	str	r2, [r3, #16]
+  4a:	bd10      	pop	{r4, pc}
+Disassembly of section .text.FLASH_ClearFlag:
+
+00000000 <FLASH_ClearFlag>:
+FLASH_ClearFlag():
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	f030 0335 	bics.w	r3, r0, #53	; 0x35
+   8:	bf14      	ite	ne
+   a:	2000      	movne	r0, #0
+   c:	2001      	moveq	r0, #1
+   e:	2c00      	cmp	r4, #0
+  10:	bf0c      	ite	eq
+  12:	2000      	moveq	r0, #0
+  14:	f000 0001 	andne.w	r0, r0, #1	; 0x1
+  18:	f7ff fffe 	bl	0 <assert_param>
+  1c:	f242 0300 	movw	r3, #8192	; 0x2000
+  20:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  24:	60dc      	str	r4, [r3, #12]
+  26:	bd10      	pop	{r4, pc}
+Disassembly of section .text.FLASH_GetFlagStatus:
+
+00000000 <FLASH_GetFlagStatus>:
+FLASH_GetFlagStatus():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4605      	mov	r5, r0
+   4:	2801      	cmp	r0, #1
+   6:	bf14      	ite	ne
+   8:	2400      	movne	r4, #0
+   a:	2401      	moveq	r4, #1
+   c:	2820      	cmp	r0, #32
+   e:	bf14      	ite	ne
+  10:	4623      	movne	r3, r4
+  12:	f044 0301 	orreq.w	r3, r4, #1	; 0x1
+  16:	b953      	cbnz	r3, 2e <FLASH_GetFlagStatus+0x2e>
+  18:	2810      	cmp	r0, #16
+  1a:	bf14      	ite	ne
+  1c:	2300      	movne	r3, #0
+  1e:	2301      	moveq	r3, #1
+  20:	2804      	cmp	r0, #4
+  22:	bf08      	it	eq
+  24:	f043 0301 	orreq.w	r3, r3, #1	; 0x1
+  28:	b90b      	cbnz	r3, 2e <FLASH_GetFlagStatus+0x2e>
+  2a:	b1e4      	cbz	r4, 66 <FLASH_GetFlagStatus+0x66>
+  2c:	e016      	b.n	5c <FLASH_GetFlagStatus+0x5c>
+  2e:	f04f 0001 	mov.w	r0, #1	; 0x1
+  32:	f7ff fffe 	bl	0 <assert_param>
+  36:	b13c      	cbz	r4, 48 <FLASH_GetFlagStatus+0x48>
+  38:	f242 0300 	movw	r3, #8192	; 0x2000
+  3c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  40:	69db      	ldr	r3, [r3, #28]
+  42:	f003 0001 	and.w	r0, r3, #1	; 0x1
+  46:	e008      	b.n	5a <FLASH_GetFlagStatus+0x5a>
+  48:	f242 0300 	movw	r3, #8192	; 0x2000
+  4c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  50:	68db      	ldr	r3, [r3, #12]
+  52:	421d      	tst	r5, r3
+  54:	bf0c      	ite	eq
+  56:	2000      	moveq	r0, #0
+  58:	2001      	movne	r0, #1
+  5a:	bd70      	pop	{r4, r5, r6, pc}
+  5c:	f04f 0001 	mov.w	r0, #1	; 0x1
+  60:	f7ff fffe 	bl	0 <assert_param>
+  64:	e7e8      	b.n	38 <FLASH_GetFlagStatus+0x38>
+  66:	f04f 0000 	mov.w	r0, #0	; 0x0
+  6a:	f7ff fffe 	bl	0 <assert_param>
+  6e:	e7eb      	b.n	48 <assert_param+0x48>
+Disassembly of section .text.FLASH_ITConfig:
+
+00000000 <FLASH_ITConfig>:
+FLASH_ITConfig():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	460c      	mov	r4, r1
+   4:	4605      	mov	r5, r0
+   6:	f430 53a0 	bics.w	r3, r0, #5120	; 0x1400
+   a:	bf14      	ite	ne
+   c:	2000      	movne	r0, #0
+   e:	2001      	moveq	r0, #1
+  10:	2d00      	cmp	r5, #0
+  12:	bf0c      	ite	eq
+  14:	2000      	moveq	r0, #0
+  16:	f000 0001 	andne.w	r0, r0, #1	; 0x1
+  1a:	f7ff fffe 	bl	0 <assert_param>
+  1e:	2c01      	cmp	r4, #1
+  20:	bf8c      	ite	hi
+  22:	2000      	movhi	r0, #0
+  24:	2001      	movls	r0, #1
+  26:	f7ff fffe 	bl	0 <assert_param>
+  2a:	b144      	cbz	r4, 3e <assert_param+0x3e>
+  2c:	f242 0200 	movw	r2, #8192	; 0x2000
+  30:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  34:	6913      	ldr	r3, [r2, #16]
+  36:	ea45 0303 	orr.w	r3, r5, r3
+  3a:	6113      	str	r3, [r2, #16]
+  3c:	e009      	b.n	52 <assert_param+0x52>
+  3e:	f242 0300 	movw	r3, #8192	; 0x2000
+  42:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  46:	6919      	ldr	r1, [r3, #16]
+  48:	ea6f 0205 	mvn.w	r2, r5
+  4c:	ea02 0201 	and.w	r2, r2, r1
+  50:	611a      	str	r2, [r3, #16]
+  52:	bd70      	pop	{r4, r5, r6, pc}
+Disassembly of section .text.FLASH_UserOptionByteConfig:
+
+00000000 <FLASH_UserOptionByteConfig>:
+FLASH_UserOptionByteConfig():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4606      	mov	r6, r0
+   4:	460c      	mov	r4, r1
+   6:	4615      	mov	r5, r2
+   8:	2801      	cmp	r0, #1
+   a:	bf8c      	ite	hi
+   c:	2000      	movhi	r0, #0
+   e:	2001      	movls	r0, #1
+  10:	f7ff fffe 	bl	0 <assert_param>
+  14:	f1d4 0001 	rsbs	r0, r4, #1	; 0x1
+  18:	bf38      	it	cc
+  1a:	2000      	movcc	r0, #0
+  1c:	2c02      	cmp	r4, #2
+  1e:	bf08      	it	eq
+  20:	f040 0001 	orreq.w	r0, r0, #1	; 0x1
+  24:	f7ff fffe 	bl	0 <assert_param>
+  28:	f1d5 0001 	rsbs	r0, r5, #1	; 0x1
+  2c:	bf38      	it	cc
+  2e:	2000      	movcc	r0, #0
+  30:	2d04      	cmp	r5, #4
+  32:	bf08      	it	eq
+  34:	f040 0001 	orreq.w	r0, r0, #1	; 0x1
+  38:	f7ff fffe 	bl	0 <assert_param>
+  3c:	f242 0200 	movw	r2, #8192	; 0x2000
+  40:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  44:	f240 1323 	movw	r3, #291	; 0x123
+  48:	f2c4 5367 	movt	r3, #17767	; 0x4567
+  4c:	6093      	str	r3, [r2, #8]
+  4e:	f648 13ab 	movw	r3, #35243	; 0x89ab
+  52:	f6cc 53ef 	movt	r3, #52719	; 0xcdef
+  56:	6093      	str	r3, [r2, #8]
+  58:	f04f 000f 	mov.w	r0, #15	; 0xf
+  5c:	f7ff fffe 	bl	0 <FLASH_UserOptionByteConfig>
+  60:	2804      	cmp	r0, #4
+  62:	d125      	bne.n	b0 <FLASH_UserOptionByteConfig+0xb0>
+  64:	f242 0200 	movw	r2, #8192	; 0x2000
+  68:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  6c:	6913      	ldr	r3, [r2, #16]
+  6e:	f043 0310 	orr.w	r3, r3, #16	; 0x10
+  72:	6113      	str	r3, [r2, #16]
+  74:	f046 03f8 	orr.w	r3, r6, #248	; 0xf8
+  78:	ea44 0303 	orr.w	r3, r4, r3
+  7c:	ea45 0303 	orr.w	r3, r5, r3
+  80:	b29b      	uxth	r3, r3
+  82:	f64f 0200 	movw	r2, #63488	; 0xf800
+  86:	f6c1 72ff 	movt	r2, #8191	; 0x1fff
+  8a:	8053      	strh	r3, [r2, #2]
+  8c:	f100 000b 	add.w	r0, r0, #11	; 0xb
+  90:	f7ff fffe 	bl	0 <FLASH_UserOptionByteConfig>
+  94:	2805      	cmp	r0, #5
+  96:	d00b      	beq.n	b0 <FLASH_UserOptionByteConfig+0xb0>
+  98:	f242 0300 	movw	r3, #8192	; 0x2000
+  9c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  a0:	6919      	ldr	r1, [r3, #16]
+  a2:	f641 72ef 	movw	r2, #8175	; 0x1fef
+  a6:	f2c0 0200 	movt	r2, #0	; 0x0
+  aa:	ea01 0202 	and.w	r2, r1, r2
+  ae:	611a      	str	r2, [r3, #16]
+  b0:	bd70      	pop	{r4, r5, r6, pc}
+  b2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.FLASH_ReadOutProtection:
+
+00000000 <FLASH_ReadOutProtection>:
+FLASH_ReadOutProtection():
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	2801      	cmp	r0, #1
+   6:	bf8c      	ite	hi
+   8:	2000      	movhi	r0, #0
+   a:	2001      	movls	r0, #1
+   c:	f7ff fffe 	bl	0 <assert_param>
+  10:	f640 70ff 	movw	r0, #4095	; 0xfff
+  14:	f7ff fffe 	bl	0 <FLASH_ReadOutProtection>
+  18:	2804      	cmp	r0, #4
+  1a:	d15c      	bne.n	d6 <FLASH_ReadOutProtection+0xd6>
+  1c:	f242 0200 	movw	r2, #8192	; 0x2000
+  20:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  24:	f240 1323 	movw	r3, #291	; 0x123
+  28:	f2c4 5367 	movt	r3, #17767	; 0x4567
+  2c:	6093      	str	r3, [r2, #8]
+  2e:	f648 13ab 	movw	r3, #35243	; 0x89ab
+  32:	f6cc 53ef 	movt	r3, #52719	; 0xcdef
+  36:	6093      	str	r3, [r2, #8]
+  38:	6913      	ldr	r3, [r2, #16]
+  3a:	f043 0320 	orr.w	r3, r3, #32	; 0x20
+  3e:	6113      	str	r3, [r2, #16]
+  40:	6913      	ldr	r3, [r2, #16]
+  42:	f043 0340 	orr.w	r3, r3, #64	; 0x40
+  46:	6113      	str	r3, [r2, #16]
+  48:	f640 70ff 	movw	r0, #4095	; 0xfff
+  4c:	f7ff fffe 	bl	0 <FLASH_ReadOutProtection>
+  50:	2804      	cmp	r0, #4
+  52:	d132      	bne.n	ba <FLASH_ReadOutProtection+0xba>
+  54:	f242 0200 	movw	r2, #8192	; 0x2000
+  58:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  5c:	6911      	ldr	r1, [r2, #16]
+  5e:	f641 73df 	movw	r3, #8159	; 0x1fdf
+  62:	f2c0 0300 	movt	r3, #0	; 0x0
+  66:	ea01 0303 	and.w	r3, r1, r3
+  6a:	6113      	str	r3, [r2, #16]
+  6c:	6913      	ldr	r3, [r2, #16]
+  6e:	f043 0310 	orr.w	r3, r3, #16	; 0x10
+  72:	6113      	str	r3, [r2, #16]
+  74:	b13c      	cbz	r4, 86 <FLASH_ReadOutProtection+0x86>
+  76:	f64f 0300 	movw	r3, #63488	; 0xf800
+  7a:	f6c1 73ff 	movt	r3, #8191	; 0x1fff
+  7e:	f04f 0200 	mov.w	r2, #0	; 0x0
+  82:	801a      	strh	r2, [r3, #0]
+  84:	e006      	b.n	94 <FLASH_ReadOutProtection+0x94>
+  86:	f64f 0300 	movw	r3, #63488	; 0xf800
+  8a:	f6c1 73ff 	movt	r3, #8191	; 0x1fff
+  8e:	f04f 02a5 	mov.w	r2, #165	; 0xa5
+  92:	801a      	strh	r2, [r3, #0]
+  94:	f640 70ff 	movw	r0, #4095	; 0xfff
+  98:	f7ff fffe 	bl	0 <FLASH_ReadOutProtection>
+  9c:	2805      	cmp	r0, #5
+  9e:	d01a      	beq.n	d6 <FLASH_ReadOutProtection+0xd6>
+  a0:	f242 0300 	movw	r3, #8192	; 0x2000
+  a4:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  a8:	6919      	ldr	r1, [r3, #16]
+  aa:	f641 72ef 	movw	r2, #8175	; 0x1fef
+  ae:	f2c0 0200 	movt	r2, #0	; 0x0
+  b2:	ea01 0202 	and.w	r2, r1, r2
+  b6:	611a      	str	r2, [r3, #16]
+  b8:	e00d      	b.n	d6 <FLASH_ReadOutProtection+0xd6>
+  ba:	2805      	cmp	r0, #5
+  bc:	d00b      	beq.n	d6 <FLASH_ReadOutProtection+0xd6>
+  be:	f242 0300 	movw	r3, #8192	; 0x2000
+  c2:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  c6:	6919      	ldr	r1, [r3, #16]
+  c8:	f641 72df 	movw	r2, #8159	; 0x1fdf
+  cc:	f2c0 0200 	movt	r2, #0	; 0x0
+  d0:	ea01 0202 	and.w	r2, r1, r2
+  d4:	611a      	str	r2, [r3, #16]
+  d6:	bd10      	pop	{r4, pc}
+Disassembly of section .text.FLASH_EnableWriteProtection:
+
+00000000 <FLASH_EnableWriteProtection>:
+FLASH_EnableWriteProtection():
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	3800      	subs	r0, #0
+   6:	bf18      	it	ne
+   8:	2001      	movne	r0, #1
+   a:	f7ff fffe 	bl	0 <assert_param>
+   e:	f04f 000f 	mov.w	r0, #15	; 0xf
+  12:	f7ff fffe 	bl	0 <FLASH_EnableWriteProtection>
+  16:	2804      	cmp	r0, #4
+  18:	d170      	bne.n	fc <FLASH_EnableWriteProtection+0xfc>
+  1a:	ea6f 0404 	mvn.w	r4, r4
+  1e:	b2e1      	uxtb	r1, r4
+  20:	f242 0200 	movw	r2, #8192	; 0x2000
+  24:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  28:	f240 1323 	movw	r3, #291	; 0x123
+  2c:	f2c4 5367 	movt	r3, #17767	; 0x4567
+  30:	6093      	str	r3, [r2, #8]
+  32:	f648 13ab 	movw	r3, #35243	; 0x89ab
+  36:	f6cc 53ef 	movt	r3, #52719	; 0xcdef
+  3a:	6093      	str	r3, [r2, #8]
+  3c:	6913      	ldr	r3, [r2, #16]
+  3e:	f043 0310 	orr.w	r3, r3, #16	; 0x10
+  42:	6113      	str	r3, [r2, #16]
+  44:	29ff      	cmp	r1, #255
+  46:	d008      	beq.n	5a <FLASH_EnableWriteProtection+0x5a>
+  48:	f64f 0300 	movw	r3, #63488	; 0xf800
+  4c:	f6c1 73ff 	movt	r3, #8191	; 0x1fff
+  50:	8119      	strh	r1, [r3, #8]
+  52:	f100 000b 	add.w	r0, r0, #11	; 0xb
+  56:	f7ff fffe 	bl	0 <FLASH_EnableWriteProtection>
+  5a:	f404 437f 	and.w	r3, r4, #65280	; 0xff00
+  5e:	ea4f 2213 	mov.w	r2, r3, lsr #8
+  62:	f1b2 03ff 	subs.w	r3, r2, #255	; 0xff
+  66:	bf18      	it	ne
+  68:	2301      	movne	r3, #1
+  6a:	2804      	cmp	r0, #4
+  6c:	bf14      	ite	ne
+  6e:	2300      	movne	r3, #0
+  70:	f003 0301 	andeq.w	r3, r3, #1	; 0x1
+  74:	b143      	cbz	r3, 88 <FLASH_EnableWriteProtection+0x88>
+  76:	f64f 0300 	movw	r3, #63488	; 0xf800
+  7a:	f6c1 73ff 	movt	r3, #8191	; 0x1fff
+  7e:	815a      	strh	r2, [r3, #10]
+  80:	f04f 000f 	mov.w	r0, #15	; 0xf
+  84:	f7ff fffe 	bl	0 <FLASH_EnableWriteProtection>
+  88:	f404 037f 	and.w	r3, r4, #16711680	; 0xff0000
+  8c:	ea4f 4213 	mov.w	r2, r3, lsr #16
+  90:	f1b2 03ff 	subs.w	r3, r2, #255	; 0xff
+  94:	bf18      	it	ne
+  96:	2301      	movne	r3, #1
+  98:	2804      	cmp	r0, #4
+  9a:	bf14      	ite	ne
+  9c:	2300      	movne	r3, #0
+  9e:	f003 0301 	andeq.w	r3, r3, #1	; 0x1
+  a2:	b143      	cbz	r3, b6 <FLASH_EnableWriteProtection+0xb6>
+  a4:	f64f 0300 	movw	r3, #63488	; 0xf800
+  a8:	f6c1 73ff 	movt	r3, #8191	; 0x1fff
+  ac:	819a      	strh	r2, [r3, #12]
+  ae:	f04f 000f 	mov.w	r0, #15	; 0xf
+  b2:	f7ff fffe 	bl	0 <FLASH_EnableWriteProtection>
+  b6:	ea4f 6214 	mov.w	r2, r4, lsr #24
+  ba:	f1b2 03ff 	subs.w	r3, r2, #255	; 0xff
+  be:	bf18      	it	ne
+  c0:	2301      	movne	r3, #1
+  c2:	2804      	cmp	r0, #4
+  c4:	bf14      	ite	ne
+  c6:	2300      	movne	r3, #0
+  c8:	f003 0301 	andeq.w	r3, r3, #1	; 0x1
+  cc:	b143      	cbz	r3, e0 <FLASH_EnableWriteProtection+0xe0>
+  ce:	f64f 0300 	movw	r3, #63488	; 0xf800
+  d2:	f6c1 73ff 	movt	r3, #8191	; 0x1fff
+  d6:	81da      	strh	r2, [r3, #14]
+  d8:	f04f 000f 	mov.w	r0, #15	; 0xf
+  dc:	f7ff fffe 	bl	0 <FLASH_EnableWriteProtection>
+  e0:	2805      	cmp	r0, #5
+  e2:	d00b      	beq.n	fc <FLASH_EnableWriteProtection+0xfc>
+  e4:	f242 0300 	movw	r3, #8192	; 0x2000
+  e8:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  ec:	6919      	ldr	r1, [r3, #16]
+  ee:	f641 72ef 	movw	r2, #8175	; 0x1fef
+  f2:	f2c0 0200 	movt	r2, #0	; 0x0
+  f6:	ea01 0202 	and.w	r2, r1, r2
+  fa:	611a      	str	r2, [r3, #16]
+  fc:	bd10      	pop	{r4, pc}
+  fe:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.FLASH_ProgramOptionByteData:
+
+00000000 <FLASH_ProgramOptionByteData>:
+FLASH_ProgramOptionByteData():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4604      	mov	r4, r0
+   4:	460d      	mov	r5, r1
+   6:	f64f 0304 	movw	r3, #63492	; 0xf804
+   a:	f6c1 73ff 	movt	r3, #8191	; 0x1fff
+   e:	f64f 0006 	movw	r0, #63494	; 0xf806
+  12:	f6c1 70ff 	movt	r0, #8191	; 0x1fff
+  16:	4284      	cmp	r4, r0
+  18:	bf14      	ite	ne
+  1a:	2000      	movne	r0, #0
+  1c:	2001      	moveq	r0, #1
+  1e:	429c      	cmp	r4, r3
+  20:	bf08      	it	eq
+  22:	f040 0001 	orreq.w	r0, r0, #1	; 0x1
+  26:	f7ff fffe 	bl	0 <assert_param>
+  2a:	f04f 000f 	mov.w	r0, #15	; 0xf
+  2e:	f7ff fffe 	bl	0 <FLASH_ProgramOptionByteData>
+  32:	2804      	cmp	r0, #4
+  34:	d124      	bne.n	80 <FLASH_ProgramOptionByteData+0x80>
+  36:	f242 0200 	movw	r2, #8192	; 0x2000
+  3a:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  3e:	f240 1323 	movw	r3, #291	; 0x123
+  42:	f2c4 5367 	movt	r3, #17767	; 0x4567
+  46:	6093      	str	r3, [r2, #8]
+  48:	f648 13ab 	movw	r3, #35243	; 0x89ab
+  4c:	f6cc 53ef 	movt	r3, #52719	; 0xcdef
+  50:	6093      	str	r3, [r2, #8]
+  52:	6913      	ldr	r3, [r2, #16]
+  54:	f043 0310 	orr.w	r3, r3, #16	; 0x10
+  58:	6113      	str	r3, [r2, #16]
+  5a:	8025      	strh	r5, [r4, #0]
+  5c:	f100 000b 	add.w	r0, r0, #11	; 0xb
+  60:	f7ff fffe 	bl	0 <FLASH_ProgramOptionByteData>
+  64:	2805      	cmp	r0, #5
+  66:	d00b      	beq.n	80 <FLASH_ProgramOptionByteData+0x80>
+  68:	f242 0300 	movw	r3, #8192	; 0x2000
+  6c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  70:	6919      	ldr	r1, [r3, #16]
+  72:	f641 72ef 	movw	r2, #8175	; 0x1fef
+  76:	f2c0 0200 	movt	r2, #0	; 0x0
+  7a:	ea01 0202 	and.w	r2, r1, r2
+  7e:	611a      	str	r2, [r3, #16]
+  80:	bd70      	pop	{r4, r5, r6, pc}
+  82:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.FLASH_ProgramHalfWord:
+
+00000000 <FLASH_ProgramHalfWord>:
+FLASH_ProgramHalfWord():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4604      	mov	r4, r0
+   4:	460d      	mov	r5, r1
+   6:	f100 4378 	add.w	r3, r0, #4160749568	; 0xf8000000
+   a:	f64f 70fe 	movw	r0, #65534	; 0xfffe
+   e:	f2c0 0007 	movt	r0, #7	; 0x7
+  12:	4283      	cmp	r3, r0
+  14:	bf8c      	ite	hi
+  16:	2000      	movhi	r0, #0
+  18:	2001      	movls	r0, #1
+  1a:	f7ff fffe 	bl	0 <assert_param>
+  1e:	f04f 000f 	mov.w	r0, #15	; 0xf
+  22:	f7ff fffe 	bl	0 <FLASH_ProgramHalfWord>
+  26:	2804      	cmp	r0, #4
+  28:	d11a      	bne.n	60 <FLASH_ProgramHalfWord+0x60>
+  2a:	f242 0200 	movw	r2, #8192	; 0x2000
+  2e:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  32:	6913      	ldr	r3, [r2, #16]
+  34:	f043 0301 	orr.w	r3, r3, #1	; 0x1
+  38:	6113      	str	r3, [r2, #16]
+  3a:	8025      	strh	r5, [r4, #0]
+  3c:	f100 000b 	add.w	r0, r0, #11	; 0xb
+  40:	f7ff fffe 	bl	0 <FLASH_ProgramHalfWord>
+  44:	2805      	cmp	r0, #5
+  46:	d00b      	beq.n	60 <FLASH_ProgramHalfWord+0x60>
+  48:	f242 0300 	movw	r3, #8192	; 0x2000
+  4c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  50:	6919      	ldr	r1, [r3, #16]
+  52:	f641 72fe 	movw	r2, #8190	; 0x1ffe
+  56:	f2c0 0200 	movt	r2, #0	; 0x0
+  5a:	ea01 0202 	and.w	r2, r1, r2
+  5e:	611a      	str	r2, [r3, #16]
+  60:	bd70      	pop	{r4, r5, r6, pc}
+  62:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.FLASH_ProgramWord:
+
+00000000 <FLASH_ProgramWord>:
+FLASH_ProgramWord():
+   0:	b530      	push	{r4, r5, lr}
+   2:	b083      	sub	sp, #12
+   4:	4604      	mov	r4, r0
+   6:	460d      	mov	r5, r1
+   8:	f04f 0300 	mov.w	r3, #0	; 0x0
+   c:	9301      	str	r3, [sp, #4]
+   e:	f100 4378 	add.w	r3, r0, #4160749568	; 0xf8000000
+  12:	f64f 70fe 	movw	r0, #65534	; 0xfffe
+  16:	f2c0 0007 	movt	r0, #7	; 0x7
+  1a:	4283      	cmp	r3, r0
+  1c:	bf8c      	ite	hi
+  1e:	2000      	movhi	r0, #0
+  20:	2001      	movls	r0, #1
+  22:	f7ff fffe 	bl	0 <assert_param>
+  26:	f04f 000f 	mov.w	r0, #15	; 0xf
+  2a:	f7ff fffe 	bl	0 <FLASH_ProgramWord>
+  2e:	2804      	cmp	r0, #4
+  30:	d137      	bne.n	a2 <FLASH_ProgramWord+0xa2>
+  32:	f242 0300 	movw	r3, #8192	; 0x2000
+  36:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3a:	691a      	ldr	r2, [r3, #16]
+  3c:	f042 0201 	orr.w	r2, r2, #1	; 0x1
+  40:	611a      	str	r2, [r3, #16]
+  42:	b2ab      	uxth	r3, r5
+  44:	8023      	strh	r3, [r4, #0]
+  46:	f100 000b 	add.w	r0, r0, #11	; 0xb
+  4a:	f7ff fffe 	bl	0 <FLASH_ProgramWord>
+  4e:	2804      	cmp	r0, #4
+  50:	d119      	bne.n	86 <FLASH_ProgramWord+0x86>
+  52:	f104 0302 	add.w	r3, r4, #2	; 0x2
+  56:	9301      	str	r3, [sp, #4]
+  58:	9a01      	ldr	r2, [sp, #4]
+  5a:	ea4f 4315 	mov.w	r3, r5, lsr #16
+  5e:	8013      	strh	r3, [r2, #0]
+  60:	f100 000b 	add.w	r0, r0, #11	; 0xb
+  64:	f7ff fffe 	bl	0 <FLASH_ProgramWord>
+  68:	2805      	cmp	r0, #5
+  6a:	d01a      	beq.n	a2 <FLASH_ProgramWord+0xa2>
+  6c:	f242 0300 	movw	r3, #8192	; 0x2000
+  70:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  74:	6919      	ldr	r1, [r3, #16]
+  76:	f641 72fe 	movw	r2, #8190	; 0x1ffe
+  7a:	f2c0 0200 	movt	r2, #0	; 0x0
+  7e:	ea01 0202 	and.w	r2, r1, r2
+  82:	611a      	str	r2, [r3, #16]
+  84:	e00d      	b.n	a2 <FLASH_ProgramWord+0xa2>
+  86:	2805      	cmp	r0, #5
+  88:	d00b      	beq.n	a2 <FLASH_ProgramWord+0xa2>
+  8a:	f242 0300 	movw	r3, #8192	; 0x2000
+  8e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  92:	6919      	ldr	r1, [r3, #16]
+  94:	f641 72fe 	movw	r2, #8190	; 0x1ffe
+  98:	f2c0 0200 	movt	r2, #0	; 0x0
+  9c:	ea01 0202 	and.w	r2, r1, r2
+  a0:	611a      	str	r2, [r3, #16]
+  a2:	b003      	add	sp, #12
+  a4:	bd30      	pop	{r4, r5, pc}
+  a6:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.FLASH_ErasePage:
+
+00000000 <FLASH_ErasePage>:
+FLASH_ErasePage():
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	f100 4378 	add.w	r3, r0, #4160749568	; 0xf8000000
+   8:	f64f 70fe 	movw	r0, #65534	; 0xfffe
+   c:	f2c0 0007 	movt	r0, #7	; 0x7
+  10:	4283      	cmp	r3, r0
+  12:	bf8c      	ite	hi
+  14:	2000      	movhi	r0, #0
+  16:	2001      	movls	r0, #1
+  18:	f7ff fffe 	bl	0 <assert_param>
+  1c:	f640 70ff 	movw	r0, #4095	; 0xfff
+  20:	f7ff fffe 	bl	0 <FLASH_ErasePage>
+  24:	2804      	cmp	r0, #4
+  26:	d11e      	bne.n	66 <FLASH_ErasePage+0x66>
+  28:	f242 0300 	movw	r3, #8192	; 0x2000
+  2c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  30:	691a      	ldr	r2, [r3, #16]
+  32:	f042 0202 	orr.w	r2, r2, #2	; 0x2
+  36:	611a      	str	r2, [r3, #16]
+  38:	615c      	str	r4, [r3, #20]
+  3a:	691a      	ldr	r2, [r3, #16]
+  3c:	f042 0240 	orr.w	r2, r2, #64	; 0x40
+  40:	611a      	str	r2, [r3, #16]
+  42:	f640 70ff 	movw	r0, #4095	; 0xfff
+  46:	f7ff fffe 	bl	0 <FLASH_ErasePage>
+  4a:	2805      	cmp	r0, #5
+  4c:	d00b      	beq.n	66 <FLASH_ErasePage+0x66>
+  4e:	f242 0300 	movw	r3, #8192	; 0x2000
+  52:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  56:	6919      	ldr	r1, [r3, #16]
+  58:	f641 72fd 	movw	r2, #8189	; 0x1ffd
+  5c:	f2c0 0200 	movt	r2, #0	; 0x0
+  60:	ea01 0202 	and.w	r2, r1, r2
+  64:	611a      	str	r2, [r3, #16]
+  66:	bd10      	pop	{r4, pc}
+Disassembly of section .text.FLASH_PrefetchBufferCmd:
+
+00000000 <FLASH_PrefetchBufferCmd>:
+FLASH_PrefetchBufferCmd():
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	f1d0 0001 	rsbs	r0, r0, #1	; 0x1
+   8:	bf38      	it	cc
+   a:	2000      	movcc	r0, #0
+   c:	2c10      	cmp	r4, #16
+   e:	bf08      	it	eq
+  10:	f040 0001 	orreq.w	r0, r0, #1	; 0x1
+  14:	f7ff fffe 	bl	0 <assert_param>
+  18:	f242 0200 	movw	r2, #8192	; 0x2000
+  1c:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  20:	6813      	ldr	r3, [r2, #0]
+  22:	f023 0310 	bic.w	r3, r3, #16	; 0x10
+  26:	6013      	str	r3, [r2, #0]
+  28:	6813      	ldr	r3, [r2, #0]
+  2a:	ea44 0403 	orr.w	r4, r4, r3
+  2e:	6014      	str	r4, [r2, #0]
+  30:	bd10      	pop	{r4, pc}
+  32:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.FLASH_HalfCycleAccessCmd:
+
+00000000 <FLASH_HalfCycleAccessCmd>:
+FLASH_HalfCycleAccessCmd():
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	f1d0 0001 	rsbs	r0, r0, #1	; 0x1
+   8:	bf38      	it	cc
+   a:	2000      	movcc	r0, #0
+   c:	2c08      	cmp	r4, #8
+   e:	bf08      	it	eq
+  10:	f040 0001 	orreq.w	r0, r0, #1	; 0x1
+  14:	f7ff fffe 	bl	0 <assert_param>
+  18:	f242 0200 	movw	r2, #8192	; 0x2000
+  1c:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  20:	6813      	ldr	r3, [r2, #0]
+  22:	f023 0308 	bic.w	r3, r3, #8	; 0x8
+  26:	6013      	str	r3, [r2, #0]
+  28:	6813      	ldr	r3, [r2, #0]
+  2a:	ea44 0403 	orr.w	r4, r4, r3
+  2e:	6014      	str	r4, [r2, #0]
+  30:	bd10      	pop	{r4, pc}
+  32:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.FLASH_SetLatency:
+
+00000000 <FLASH_SetLatency>:
+FLASH_SetLatency():
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+   4:	2802      	cmp	r0, #2
+   6:	bf8c      	ite	hi
+   8:	2000      	movhi	r0, #0
+   a:	2001      	movls	r0, #1
+   c:	f7ff fffe 	bl	0 <assert_param>
+  10:	f242 0200 	movw	r2, #8192	; 0x2000
+  14:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  18:	6813      	ldr	r3, [r2, #0]
+  1a:	f003 0338 	and.w	r3, r3, #56	; 0x38
+  1e:	ea44 0403 	orr.w	r4, r4, r3
+  22:	6014      	str	r4, [r2, #0]
+  24:	bd10      	pop	{r4, pc}
+  26:	46c0      	nop			(mov r8, r8)
