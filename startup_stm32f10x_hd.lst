@@ -1,0 +1,53 @@
+
+D:\cortex\gateway\startup_stm32f10x_hd.o:     file format elf32-littlearm
+D:\cortex\gateway\startup_stm32f10x_hd.o
+
+Disassembly of section .text:
+
+00000000 <.text>:
+	...
+Disassembly of section .text.Reset_Handler:
+
+00000000 <Reset_Handler>:
+Reset_Handler():
+   0:	f7ff fffe 	bl	0 <Reset_Handler>
+   4:	480c      	ldr	r0, [pc, #48]	(38 <LoopFillZerobss+0xe>)
+   6:	f380 8808 	msr	MSP, r0
+   a:	2100      	movs	r1, #0
+   c:	e003      	b.n	16 <LoopCopyDataInit>
+
+0000000e <CopyDataInit>:
+CopyDataInit():
+   e:	4b0b      	.short	0x4b0b
+  10:	5043585b 	.word	0x5043585b
+  14:	3104      	.short	0x3104
+
+00000016 <LoopCopyDataInit>:
+LoopCopyDataInit():
+  16:	480a      	.short	0x480a
+  18:	18424b0a 	.word	0x18424b0a
+  1c:	d3f6429a 	.word	0xd3f6429a
+  20:	e0024a09 	.word	0xe0024a09
+
+00000024 <FillZerobss>:
+FillZerobss():
+  24:	f8422300 	.word	0xf8422300
+  28:	3b04      	.short	0x3b04
+
+0000002a <LoopFillZerobss>:
+LoopFillZerobss():
+  2a:	4b08      	.short	0x4b08
+  2c:	d3f9429a 	.word	0xd3f9429a
+  30:	fffef7ff 	.word	0xfffef7ff
+  34:	4770      	.short	0x4770
+	...
+Disassembly of section .text.SystemInit_ExtMemCtl_Dummy:
+
+00000000 <SystemInit_ExtMemCtl>:
+SystemInit_ExtMemCtl():
+   0:	4770      	bx	lr
+Disassembly of section .text.Default_Handler:
+
+00000000 <ADC1_2_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	e7fe      	b.n	0 <ADC1_2_IRQHandler>
