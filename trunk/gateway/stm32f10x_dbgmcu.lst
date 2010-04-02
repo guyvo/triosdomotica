@@ -1,0 +1,61 @@
+
+D:\cortex\gateway\stm32f10x_dbgmcu.o:     file format elf32-littlearm
+D:\cortex\gateway\stm32f10x_dbgmcu.o
+
+Disassembly of section .text.DBGMCU_GetREVID:
+
+00000000 <DBGMCU_GetREVID>:
+DBGMCU_GetREVID():
+   0:	f242 0300 	movw	r3, #8192	; 0x2000
+   4:	f2ce 0304 	movt	r3, #57348	; 0xe004
+   8:	6818      	ldr	r0, [r3, #0]
+   a:	ea4f 4010 	mov.w	r0, r0, lsr #16
+   e:	4770      	bx	lr
+Disassembly of section .text.DBGMCU_GetDEVID:
+
+00000000 <DBGMCU_GetDEVID>:
+DBGMCU_GetDEVID():
+   0:	f242 0300 	movw	r3, #8192	; 0x2000
+   4:	f2ce 0304 	movt	r3, #57348	; 0xe004
+   8:	6818      	ldr	r0, [r3, #0]
+   a:	ea4f 5000 	mov.w	r0, r0, lsl #20
+   e:	ea4f 5010 	mov.w	r0, r0, lsr #20
+  12:	4770      	bx	lr
+Disassembly of section .text.DBGMCU_Config:
+
+00000000 <DBGMCU_Config>:
+DBGMCU_Config():
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4605      	mov	r5, r0
+   4:	460c      	mov	r4, r1
+   6:	f240 03f8 	movw	r3, #248	; 0xf8
+   a:	f6cf 73c0 	movt	r3, #65472	; 0xffc0
+   e:	4218      	tst	r0, r3
+  10:	bf14      	ite	ne
+  12:	2000      	movne	r0, #0
+  14:	2001      	moveq	r0, #1
+  16:	2d00      	cmp	r5, #0
+  18:	bf0c      	ite	eq
+  1a:	2000      	moveq	r0, #0
+  1c:	f000 0001 	andne.w	r0, r0, #1	; 0x1
+  20:	f7ff fffe 	bl	0 <assert_param>
+  24:	2c01      	cmp	r4, #1
+  26:	bf8c      	ite	hi
+  28:	2000      	movhi	r0, #0
+  2a:	2001      	movls	r0, #1
+  2c:	f7ff fffe 	bl	0 <assert_param>
+  30:	b144      	cbz	r4, 44 <assert_param+0x44>
+  32:	f242 0200 	movw	r2, #8192	; 0x2000
+  36:	f2ce 0204 	movt	r2, #57348	; 0xe004
+  3a:	6853      	ldr	r3, [r2, #4]
+  3c:	ea45 0303 	orr.w	r3, r5, r3
+  40:	6053      	str	r3, [r2, #4]
+  42:	e009      	b.n	58 <assert_param+0x58>
+  44:	f242 0300 	movw	r3, #8192	; 0x2000
+  48:	f2ce 0304 	movt	r3, #57348	; 0xe004
+  4c:	6859      	ldr	r1, [r3, #4]
+  4e:	ea6f 0205 	mvn.w	r2, r5
+  52:	ea02 0201 	and.w	r2, r2, r1
+  56:	605a      	str	r2, [r3, #4]
+  58:	bd70      	pop	{r4, r5, r6, pc}
+  5a:	46c0      	nop			(mov r8, r8)
