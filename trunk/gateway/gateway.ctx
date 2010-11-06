@@ -1,9 +1,20 @@
 
 <Debug>
 	<gateway>
-		<CodeView TopRow="134223270" Focus="4294967295" />
-		<MemoryView Focus="536875480" TopRow="536875328" NbPerLine="16" />
-																		
+		<CodeView TopRow="134223266" Focus="4294967295" >
+			<CodeReport>
+				<0>87</0>
+				<1>96</1>
+				<2>52</2>
+				<3>289</3>
+				<4>52</4>
+				<5>111</5>
+														
+			</CodeReport>
+										
+		</CodeView>
+		<MemoryView Focus="536870952" TopRow="536870944" NbPerLine="16" />
+						
 	</gateway>
 	<Flags>
 		<Report>
@@ -27,17 +38,41 @@
 			
 	</Flags>
 	<Views>
-		<View File="C:\cortex\gateway\src\main.c" Line="87" Index="0" focus="1" />
-		<View File="C:\cortex\gateway\src\stm32f10x_it.c" Line="946" Index="1" />
+		<View File="C:\cortex\gateway\src\main.c" Line="115" Index="0" focus="1" />
+		<View File="C:\cortex\gateway\src\stm32f10x_it.c" Line="577" Index="1" />
 		<View File="C:\cortex\gateway\include\stm32f10x_it.h" Line="0" Index="2" />
 		<View File="C:\cortex\gateway\include\stm32f10x_conf.h" Line="0" Index="3" />
 		<View File="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="0" Index="4" />
 		<View File="C:\cortex\gateway\src\stm32f10x_usart.c" Line="0" Index="5" />
-		<View File="C:\cortex\gateway\include\main.h" Line="72" Index="6" />
-		<View File="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_i2c.h" Line="215" Index="7" />
-		<View File="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="1143" Index="8" />
-		<View File="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_usart.h" Line="4" Index="9" />
+		<View File="C:\cortex\gateway\include\main.h" Line="45" Index="6" />
+		<View File="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_i2c.h" Line="211" Index="7" />
+		<View File="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="1139" Index="8" />
+		<View File="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_usart.h" Line="0" Index="9" />
 	</Views>
+	<Grep>
+		<GrepIncludeSub>yes</GrepIncludeSub>
+		<GrepMatchCase>no</GrepMatchCase>
+		<GrepMatchWhole>no</GrepMatchWhole>
+		<GrepRegExp>no</GrepRegExp>
+		<GrepReplaceMode>no</GrepReplaceMode>
+		<GrepFileTypes>
+			<GrepFileTypesValue>*.c;*.h</GrepFileTypesValue>
+			<GrepFileType>*.c;*.h</GrepFileType>
+		</GrepFileTypes>
+		<GrepFindWhat>
+			<GrepFindWhatValue/>
+			<GrepFindStr>BIG_ENDIAN</GrepFindStr>
+		</GrepFindWhat>
+		<GrepFindWhere>
+			<GrepFindWhereValue/>
+			<GrepPathStr>Application Files</GrepPathStr>
+			<GrepPathStr>Application Path</GrepPathStr>
+			<GrepPathStr>E:\dimmers</GrepPathStr>
+		</GrepFindWhere>
+		<GrepReplaceWhat>
+			<GrepReplaceWhatValue/>
+		</GrepReplaceWhat>
+	</Grep>
 	<FindStrings>
 		<Find>GVO</Find>
 		<Find>16</Find>

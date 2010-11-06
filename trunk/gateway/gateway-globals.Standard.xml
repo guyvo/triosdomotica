@@ -98,30 +98,30 @@
  <type Header="TBKPData" Icon="1" Type="type" Desc=": struct TBKPData" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="60" Pointer="No"/>
  <type Header="TMessage" Icon="1" Type="type" Desc=": struct TMESSAGE" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="64" Pointer="No"/>
  <type Header="TI2Ccommand" Icon="1" Type="type" Desc=": struct TI2CCOMMAND" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="73" Pointer="No"/>
- <func Header="__io_putchar" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="450"/>
- <func Header="DMA_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="382"/>
- <func Header="NVIC_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="320"/>
- <func Header="GPIO_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="270"/>
- <func Header="RCC_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="209"/>
- <func Header="USART_Init1" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="183"/>
- <func Header="I2C_Initialize" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="149"/>
- <func Header="main" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="76"/>
- <variable Header="Commands" Icon="2" Type="variable" Desc=":   struct TMESSAGE[16]" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="30" Pointer="No"/>
- <variable Header="Command" Icon="2" Type="variable" Desc=":   struct TI2CCOMMAND" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="32" Pointer="No"/>
- <variable Header="ExternData" Icon="2" Type="variable" Desc=":   struct TBKPData" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="34" Pointer="No"/>
- <variable Header="InternData" Icon="2" Type="variable" Desc=":   struct TBKPData" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="35" Pointer="No"/>
- <variable Header="RxIdx" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="37" Pointer="No"/>
- <variable Header="TxIdx" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="38" Pointer="No"/>
- <variable Header="Transmitter" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="40" Pointer="No"/>
- <variable Header="ReceivedOK" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="41" Pointer="No"/>
- <variable Header="I2CTxDone" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="42" Pointer="No"/>
- <variable Header="I2CRxDone" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="43" Pointer="No"/>
- <variable Header="I2C_InitStructure" Icon="2" Type="variable" Desc=":   struct " DeclFile="C:\cortex\gateway\src\main.c" DeclLine="47" Pointer="No"/>
- <variable Header="NVIC_InitStructure" Icon="2" Type="variable" Desc=":   struct " DeclFile="C:\cortex\gateway\src\main.c" DeclLine="48" Pointer="No"/>
- <variable Header="USART_InitStructure" Icon="2" Type="variable" Desc=":   struct " DeclFile="C:\cortex\gateway\src\main.c" DeclLine="49" Pointer="No"/>
- <variable Header="TransferStatus1" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="51" Pointer="No"/>
- <variable Header="TransferStatus2" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="51" Pointer="No"/>
- <variable Header="HSEStartUpStatus" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="52" Pointer="No"/>
+ <func Header="__io_putchar" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="458"/>
+ <func Header="DMA_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="388"/>
+ <func Header="NVIC_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="326"/>
+ <func Header="GPIO_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="276"/>
+ <func Header="RCC_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="215"/>
+ <func Header="USART_Init1" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="189"/>
+ <func Header="I2C_Initialize" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="155"/>
+ <func Header="main" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="79"/>
+ <variable Header="Commands" Icon="2" Type="variable" Desc=":   struct TMESSAGE[8]" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="33" Pointer="No"/>
+ <variable Header="Command" Icon="2" Type="variable" Desc=":   struct TI2CCOMMAND" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="35" Pointer="No"/>
+ <variable Header="ExternData" Icon="2" Type="variable" Desc=":   struct TBKPData" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="37" Pointer="No"/>
+ <variable Header="InternData" Icon="2" Type="variable" Desc=":   struct TBKPData" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="38" Pointer="No"/>
+ <variable Header="RxIdx" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="40" Pointer="No"/>
+ <variable Header="TxIdx" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="41" Pointer="No"/>
+ <variable Header="Transmitter" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="43" Pointer="No"/>
+ <variable Header="ReceivedOK" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="44" Pointer="No"/>
+ <variable Header="I2CTxDone" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="45" Pointer="No"/>
+ <variable Header="I2CRxDone" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="46" Pointer="No"/>
+ <variable Header="I2C_InitStructure" Icon="2" Type="variable" Desc=":   struct " DeclFile="C:\cortex\gateway\src\main.c" DeclLine="50" Pointer="No"/>
+ <variable Header="NVIC_InitStructure" Icon="2" Type="variable" Desc=":   struct " DeclFile="C:\cortex\gateway\src\main.c" DeclLine="51" Pointer="No"/>
+ <variable Header="USART_InitStructure" Icon="2" Type="variable" Desc=":   struct " DeclFile="C:\cortex\gateway\src\main.c" DeclLine="52" Pointer="No"/>
+ <variable Header="TransferStatus1" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="54" Pointer="No"/>
+ <variable Header="TransferStatus2" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="54" Pointer="No"/>
+ <variable Header="HSEStartUpStatus" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="55" Pointer="No"/>
  <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
  <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
  <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="82" Pointer="No"/>
