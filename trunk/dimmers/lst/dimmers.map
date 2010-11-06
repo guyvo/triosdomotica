@@ -2161,10 +2161,12 @@ END GROUP
                 0x00000000                . = ALIGN (0x4)
  *(.endflash)
                 0x00000000                . = ALIGN (0x4)
+                0x00000000                _e_endflash = .
 
 .data           0x20000000      0x1e8 load address 0x08005588
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
+                0x20000000                _data = .
  *(.data)
  .data          0x20000000       0x90 C:\cortex\dimmers\hex\dimmers_exti.o
                 0x20000048                gx_extis_disable
@@ -2183,10 +2185,14 @@ END GROUP
  *(.RAMtext)
                 0x200001e8                . = ALIGN (0x4)
                 0x200001e8                _edata = .
+                0x08005770                _eidata = ((_sidata + _edata) - _sdata)
+                0x08080000                _lastdataromaddress = 0x8080000
+                0x00000000                toobig = (_eidata > _lastdataromaddress)?!!!!!!!!! FLASH IS FULL !!!!!!!!!:0x0
 
 .bss            0x200001e8     0x53f4 load address 0x08005770
                 0x200001e8                . = ALIGN (0x4)
                 0x200001e8                _sbss = .
+                0x200001e8                _bss = .
  *(.bss)
  .bss           0x200001e8        0x8 C:\cortex\dimmers\hex\main.o
                 0x200001ec                count

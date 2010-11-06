@@ -79,7 +79,9 @@ SECTIONS
 	. = ALIGN(4);
         *(.endflash)            /* endflash code */
 	. = ALIGN(4);
+	_e_endflash = . ;
     } >ENDFLASH
+
 
     /* This is the initialized data section
     The program executes knowing that the data is in the RAM
@@ -90,6 +92,7 @@ SECTIONS
 	    . = ALIGN(4);
         /* This is used by the startup in order to initialize the .data secion */
         _sdata = . ;
+        _data = . ;
         
         *(.data)
         *(.data.*)
@@ -100,6 +103,13 @@ SECTIONS
    	 _edata = . ;
     } >RAM
     
+    /*calculate end address of idata*/
+    _eidata = _sidata + _edata - _sdata ;
+    
+    /*check that idata remains in FLASH region*/
+    _lastdataromaddress = ORIGIN(FLASH) + LENGTH(FLASH);
+    toobig = ( _eidata > _lastdataromaddress) ? "!!!!!!!!! FLASH IS FULL !!!!!!!!!" : 0 ;
+
     
 
     /* This is the uninitialized data section */
@@ -108,6 +118,7 @@ SECTIONS
 	    . = ALIGN(4);
         /* This is used by the startup in order to initialize the .bss secion */
         _sbss = .;
+        _bss = .;
         
         *(.bss)
         *(COMMON)
