@@ -1,4 +1,0 @@
-
-<Project Header="Project 'gateway'" Path=".\gateway.rprj" Project="Yes" OutputFile="" sate="96" ActiveApp="gateway" >
-	<ApplicationBuild Header="gateway" Extern=".\gateway.rapp" Path=".\gateway.rapp" OutputFile=".\gateway.elf" sate="98" />
-</Project>
