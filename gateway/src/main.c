@@ -17,8 +17,8 @@
 
 #include "main.h"
 
-// comment out to include I2C
-#define LOOP_BACK_TEST
+// comment this to include the actual I2C transmissions
+//#define  LOOPBACK
 
 /* Private typedef -----------------------------------------------------------*/
 #ifdef __GNUC__
@@ -89,11 +89,12 @@ int main(void)
 
   while (1)
   {
-    //I2C_PullUp();
+    // wait here til we have a DMA completion    
     __WFI();
-    if ( ReceivedOK  == TRUE ){
-
-#ifndef LOOP_BACK_TEST    
+  
+    if ( ReceivedOK  == TRUE )
+    {
+#ifndef LOOPBACK  
         printf( "Bytes received from USB2I2C\n");
         //I2C_FreeBus();
         for ( command_idx = 0 ; command_idx < mainMAX_AMOUNT_OF_MSG ; command_idx++ )
@@ -142,7 +143,7 @@ int main(void)
                 }        
             }
         }
-        printf("Sending to USB2I2C in progress\n"); 
+        printf("Sending to USB2I2C in progress\n");    
 #endif    
         ReceivedOK = FALSE;
         GPIO_WriteBit(GPIOC, GPIO_Pin_2, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_2))));    
@@ -387,6 +388,7 @@ void DMA_Configuration(void)
 {
   DMA_InitTypeDef DMA_InitStructure;
 
+  // DMA for serial TX  
   DMA_DeInit(DMA1_Channel5);
   DMA_InitStructure.DMA_PeripheralBaseAddr = USART1_DR_Base;
   DMA_InitStructure.DMA_MemoryBaseAddr = (u32)&Commands[0];
@@ -403,6 +405,7 @@ void DMA_Configuration(void)
 
   DMA_ITConfig ( DMA1_Channel5 , DMA_IT_TC | DMA_IT_HT | DMA_IT_TE , ENABLE );
 
+  // DMA for serial RX  
   DMA_DeInit(DMA1_Channel4);
   DMA_InitStructure.DMA_PeripheralBaseAddr = USART1_DR_Base;
   DMA_InitStructure.DMA_MemoryBaseAddr = (u32)&Commands[0];
