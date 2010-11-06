@@ -17,6 +17,9 @@
 
 #include "main.h"
 
+// comment out to include I2C
+#define LOOP_BACK_TEST
+
 /* Private typedef -----------------------------------------------------------*/
 #ifdef __GNUC__
   /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
@@ -88,8 +91,9 @@ int main(void)
   {
     //I2C_PullUp();
     __WFI();
-    if ( ReceivedOK  == TRUE )
-    {
+    if ( ReceivedOK  == TRUE ){
+
+#ifndef LOOP_BACK_TEST    
         printf( "Bytes received from USB2I2C\n");
         //I2C_FreeBus();
         for ( command_idx = 0 ; command_idx < mainMAX_AMOUNT_OF_MSG ; command_idx++ )
@@ -138,7 +142,8 @@ int main(void)
                 }        
             }
         }
-        printf("Sending to USB2I2C in progress\n");    
+        printf("Sending to USB2I2C in progress\n"); 
+#endif    
         ReceivedOK = FALSE;
         GPIO_WriteBit(GPIOC, GPIO_Pin_2, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_2))));    
         DMA_Cmd(DMA1_Channel4, ENABLE);
