@@ -1,4 +1,0 @@
-
-<Project Header="Project 'dimmers'" Path=".\dimmers.rprj" Project="Yes" OutputFile="" sate="96" ActiveApp="dimmers" >
-	<ApplicationBuild Header="dimmers" Extern=".\dimmers.rapp" Path=".\dimmers.rapp" OutputFile=".\hex\dimmers.elf" sate="96" />
-</Project>
