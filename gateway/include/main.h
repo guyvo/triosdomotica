@@ -40,10 +40,10 @@
 #define USART1_DR_Base          0x40013804
 #define USART2_DR_Base          0x40004404
 
-#define mainBAUDRATE1           4500000
-#define mainBAUDRATE2           2250000
-#define mainMAX_MSG_SIZE        256
-#define mainMAX_AMOUNT_OF_MSG   16
+#define mainBAUDRATE1           921600
+#define mainBAUDRATE2           921600
+#define mainMAX_MSG_SIZE        128
+#define mainMAX_AMOUNT_OF_MSG   8
 
 #define mainCMD_NONE                    0x00
 #define mainCMD_CORTEX_MASTER_TX        0x01
