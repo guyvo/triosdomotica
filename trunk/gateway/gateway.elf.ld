@@ -6,14 +6,14 @@ It also includes the secondary/main linker script that is specified in the Ride 
 */
 
 SEARCH_DIR(".")
-SEARCH_DIR("C:\cortex\gateway")
+SEARCH_DIR("E:\gateway")
 SEARCH_DIR("C:\Program Files\Raisonance\Ride\Lib\ARM")
-STARTUP("C:\Program Files\Raisonance\Ride\lib\ARM\crt0_STM32x_HD.o")
-INPUT("C:\cortex\gateway\stm32f10x_it.o")
-INPUT("C:\cortex\gateway\main.o")
-INPUT("C:\cortex\gateway\stm32f10x_rcc.o")
-INPUT("C:\cortex\gateway\stm32f10x_usart.o")
-INPUT("C:\cortex\gateway\stm32f10x_i2c.o")
+STARTUP("C:\Program Files\Raisonance\Ride\Lib\ARM\crt0_STM32x_HD.o")
+INPUT("E:\gateway\stm32f10x_it.o")
+INPUT("E:\gateway\main.o")
+INPUT("E:\gateway\stm32f10x_rcc.o")
+INPUT("E:\gateway\stm32f10x_usart.o")
+INPUT("E:\gateway\stm32f10x_i2c.o")
 GROUP(
 "std_sbrk_thumb.lib"
 "e_stdio_thumb.a"
@@ -22,5 +22,5 @@ GROUP(
 "libm.a"
 
 )
-INCLUDE "C:\cortex\gateway\STM32F103_32K_32K_FLASH.ld"
-OUTPUT("C:\cortex\gateway\gateway.elf")
+INCLUDE "E:\gateway\STM32F103_32K_32K_FLASH.ld"
+OUTPUT("E:\gateway\gateway.elf")
