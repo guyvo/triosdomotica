@@ -1,16 +1,12 @@
 
-E:\gateway\main.o:     file format elf32-littlearm
-E:\gateway\main.o
+C:\cortex\gateway\main.o:     file format elf32-littlearm
+C:\cortex\gateway\main.o
 
 Disassembly of section .text.Buffercmp:
 
 00000000 <Buffercmp>:
 Buffercmp():
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:436
-=======
-E:\gateway\src/main.c:428
->>>>>>> .r16
 * Output         : None
 * Return         : PASSED: pBuffer1 identical to pBuffer2
 *                  FAILED: pBuffer1 differs from pBuffer2
@@ -23,11 +19,7 @@ TestStatus Buffercmp(u8* pBuffer1, u8* pBuffer2, u16 BufferLength)
    6:	f04f 0c00 	mov.w	ip, #0	; 0x0
    a:	4608      	mov	r0, r1
    c:	e00b      	b.n	26 <Buffercmp+0x26>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:439
-=======
-E:\gateway\src/main.c:431
->>>>>>> .r16
   while(BufferLength--)
   {
     if(*pBuffer1 != *pBuffer2)
@@ -40,11 +32,7 @@ E:\gateway\src/main.c:431
   20:	d001      	beq.n	26 <Buffercmp+0x26>
   22:	2000      	movs	r0, #0
   24:	e002      	b.n	2c <Buffercmp+0x2c>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:437
-=======
-E:\gateway\src/main.c:429
->>>>>>> .r16
 * Return         : PASSED: pBuffer1 identical to pBuffer2
 *                  FAILED: pBuffer1 differs from pBuffer2
 *******************************************************************************/
@@ -54,11 +42,7 @@ TestStatus Buffercmp(u8* pBuffer1, u8* pBuffer2, u16 BufferLength)
   26:	2b00      	cmp	r3, #0
   28:	d1f1      	bne.n	e <Buffercmp+0xe>
   2a:	2001      	movs	r0, #1
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:449
-=======
-E:\gateway\src/main.c:441
->>>>>>> .r16
     pBuffer1++;
     pBuffer2++;
   }
@@ -71,11 +55,7 @@ Disassembly of section .text.__io_putchar:
 
 00000000 <__io_putchar>:
 __io_putchar():
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:458
-=======
-E:\gateway\src/main.c:450
->>>>>>> .r16
 * Input          : None
 * Output         : None
 * Return         : None
@@ -84,21 +64,13 @@ PUTCHAR_PROTOTYPE
 {
    0:	b510      	push	{r4, lr}
    2:	4604      	mov	r4, r0
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:460
-=======
-E:\gateway\src/main.c:452
->>>>>>> .r16
   /* Write a character to the USART */
   USART_SendData(USART2, (u8) ch);
    4:	b2e1      	uxtb	r1, r4
    6:	4805      	ldr	r0, [pc, #20]	(1c <__io_putchar+0x1c>)
    8:	f7ff fffe 	bl	0 <USART_SendData>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:463
-=======
-E:\gateway\src/main.c:455
->>>>>>> .r16
 
   /* Loop until the end of transmission */
   while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == RESET)
@@ -107,11 +79,7 @@ E:\gateway\src/main.c:455
   10:	f7ff fffe 	bl	0 <USART_GetFlagStatus>
   14:	2800      	cmp	r0, #0
   16:	d0f9      	beq.n	c <USART_GetFlagStatus+0xc>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:468
-=======
-E:\gateway\src/main.c:460
->>>>>>> .r16
   {
   }
 
@@ -124,11 +92,7 @@ Disassembly of section .text.DMA_Configuration:
 
 00000000 <DMA_Configuration>:
 DMA_Configuration():
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:388
-=======
-E:\gateway\src/main.c:382
->>>>>>> .r16
   /* Enable EW interrupt */
   WWDG_EnableIT();
 }
@@ -136,21 +100,13 @@ E:\gateway\src/main.c:382
 void DMA_Configuration(void)
 {
    0:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:392
-=======
-E:\gateway\src/main.c:385
->>>>>>> .r16
   DMA_InitTypeDef DMA_InitStructure;
 
   // DMA for serial TX  
   DMA_DeInit(DMA1_Channel5);
    4:	4d24      	ldr	r5, [pc, #144]	(98 <DMA_Configuration+0x98>)
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:388
-=======
-E:\gateway\src/main.c:382
->>>>>>> .r16
   /* Enable EW interrupt */
   WWDG_EnableIT();
 }
@@ -158,31 +114,18 @@ E:\gateway\src/main.c:382
 void DMA_Configuration(void)
 {
    6:	b08d      	sub	sp, #52
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:392
-=======
-E:\gateway\src/main.c:385
->>>>>>> .r16
   DMA_InitTypeDef DMA_InitStructure;
 
   // DMA for serial TX  
   DMA_DeInit(DMA1_Channel5);
    8:	4628      	mov	r0, r5
    a:	f7ff fffe 	bl	0 <DMA_DeInit>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:394
-=======
-E:\gateway\src/main.c:387
->>>>>>> .r16
   DMA_InitStructure.DMA_PeripheralBaseAddr = USART1_DR_Base;
   DMA_InitStructure.DMA_MemoryBaseAddr = (u32)&Commands[0];
    e:	4f23      	ldr	r7, [pc, #140]	(9c <DMA_Configuration+0x9c>)
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:393
-=======
-E:\gateway\src/main.c:386
-void DMA_Configuration(void)
->>>>>>> .r16
 {
   DMA_InitTypeDef DMA_InitStructure;
 
@@ -190,11 +133,7 @@ void DMA_Configuration(void)
   DMA_DeInit(DMA1_Channel5);
   DMA_InitStructure.DMA_PeripheralBaseAddr = USART1_DR_Base;
   10:	4b23      	ldr	r3, [pc, #140]	(a0 <DMA_Configuration+0xa0>)
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:404
-=======
-E:\gateway\src/main.c:397
->>>>>>> .r16
   DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
   DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
   DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
@@ -202,12 +141,7 @@ E:\gateway\src/main.c:397
   DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;
   DMA_Init(DMA1_Channel5, &DMA_InitStructure);
   12:	f10d 0804 	add.w	r8, sp, #4	; 0x4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:395
-=======
-E:\gateway\src/main.c:388
-  DMA_InitTypeDef DMA_InitStructure;
->>>>>>> .r16
 
   // DMA for serial TX  
   DMA_DeInit(DMA1_Channel5);
@@ -215,53 +149,27 @@ E:\gateway\src/main.c:388
   DMA_InitStructure.DMA_MemoryBaseAddr = (u32)&Commands[0];
   DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;
   16:	2400      	movs	r4, #0
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:396
-=======
-E:\gateway\src/main.c:389
->>>>>>> .r16
   DMA_InitStructure.DMA_BufferSize = mainMAX_MSG_SIZE * mainMAX_AMOUNT_OF_MSG;
-<<<<<<< .mine
   18:	f44f 6b80 	mov.w	fp, #1024	; 0x400
 C:\cortex\gateway\src/main.c:398
-=======
-  18:	f44f 6b00 	mov.w	fp, #2048	; 0x800
-E:\gateway\src/main.c:391
->>>>>>> .r16
   DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
   DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
   1c:	f04f 0a80 	mov.w	sl, #128	; 0x80
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:401
-=======
-E:\gateway\src/main.c:394
->>>>>>> .r16
   DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
   DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
   DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
   20:	f04f 0920 	mov.w	r9, #32	; 0x20
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:402
-=======
-E:\gateway\src/main.c:395
->>>>>>> .r16
   DMA_InitStructure.DMA_Priority = DMA_Priority_VeryHigh;
   24:	f44f 5640 	mov.w	r6, #12288	; 0x3000
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:404
-=======
-E:\gateway\src/main.c:397
->>>>>>> .r16
   DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;
   DMA_Init(DMA1_Channel5, &DMA_InitStructure);
   28:	4628      	mov	r0, r5
   2a:	4641      	mov	r1, r8
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:393
-=======
-E:\gateway\src/main.c:386
-void DMA_Configuration(void)
->>>>>>> .r16
 {
   DMA_InitTypeDef DMA_InitStructure;
 
@@ -269,107 +177,51 @@ void DMA_Configuration(void)
   DMA_DeInit(DMA1_Channel5);
   DMA_InitStructure.DMA_PeripheralBaseAddr = USART1_DR_Base;
   2c:	9301      	str	r3, [sp, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:394
-=======
-E:\gateway\src/main.c:387
->>>>>>> .r16
   DMA_InitStructure.DMA_MemoryBaseAddr = (u32)&Commands[0];
   2e:	9702      	str	r7, [sp, #8]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:395
-=======
-E:\gateway\src/main.c:388
->>>>>>> .r16
   DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;
   30:	9403      	str	r4, [sp, #12]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:396
-=======
-E:\gateway\src/main.c:389
->>>>>>> .r16
   DMA_InitStructure.DMA_BufferSize = mainMAX_MSG_SIZE * mainMAX_AMOUNT_OF_MSG;
   32:	f8cd b010 	str.w	fp, [sp, #16]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:397
-=======
-E:\gateway\src/main.c:390
->>>>>>> .r16
   DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
   36:	9405      	str	r4, [sp, #20]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:398
-=======
-E:\gateway\src/main.c:391
->>>>>>> .r16
   DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
   38:	f8cd a018 	str.w	sl, [sp, #24]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:399
-=======
-E:\gateway\src/main.c:392
->>>>>>> .r16
   DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
   3c:	9407      	str	r4, [sp, #28]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:400
-=======
-E:\gateway\src/main.c:393
->>>>>>> .r16
   DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
   3e:	9408      	str	r4, [sp, #32]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:401
-=======
-E:\gateway\src/main.c:394
->>>>>>> .r16
   DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
   40:	f8cd 9024 	str.w	r9, [sp, #36]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:402
-=======
-E:\gateway\src/main.c:395
->>>>>>> .r16
   DMA_InitStructure.DMA_Priority = DMA_Priority_VeryHigh;
   44:	960a      	str	r6, [sp, #40]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:403
-=======
-E:\gateway\src/main.c:396
->>>>>>> .r16
   DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;
   46:	940b      	str	r4, [sp, #44]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:404
-=======
-E:\gateway\src/main.c:397
->>>>>>> .r16
   DMA_Init(DMA1_Channel5, &DMA_InitStructure);
   48:	f7ff fffe 	bl	0 <DMA_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:406
-=======
-E:\gateway\src/main.c:399
->>>>>>> .r16
 
   DMA_ITConfig ( DMA1_Channel5 , DMA_IT_TC | DMA_IT_HT | DMA_IT_TE , ENABLE );
   4c:	2201      	movs	r2, #1
   4e:	210e      	movs	r1, #14
   50:	4628      	mov	r0, r5
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:409
-=======
-E:\gateway\src/main.c:401
->>>>>>> .r16
 
   // DMA for serial RX  
   DMA_DeInit(DMA1_Channel4);
   52:	3d14      	subs	r5, #20
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:406
-=======
-E:\gateway\src/main.c:399
->>>>>>> .r16
   DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
   DMA_InitStructure.DMA_Priority = DMA_Priority_VeryHigh;
   DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;
@@ -377,28 +229,16 @@ E:\gateway\src/main.c:399
 
   DMA_ITConfig ( DMA1_Channel5 , DMA_IT_TC | DMA_IT_HT | DMA_IT_TE , ENABLE );
   54:	f7ff fffe 	bl	0 <DMA_ITConfig>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:409
-=======
-E:\gateway\src/main.c:401
->>>>>>> .r16
 
   // DMA for serial RX  
   DMA_DeInit(DMA1_Channel4);
   58:	4628      	mov	r0, r5
   5a:	f7ff fffe 	bl	0 <DMA_DeInit>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:410
-=======
-E:\gateway\src/main.c:402
->>>>>>> .r16
   DMA_InitStructure.DMA_PeripheralBaseAddr = USART1_DR_Base;
   5e:	4b10      	ldr	r3, [pc, #64]	(a0 <DMA_Configuration+0xa0>)
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:421
-=======
-E:\gateway\src/main.c:413
->>>>>>> .r16
   DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
   DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
   DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
@@ -406,12 +246,7 @@ E:\gateway\src/main.c:413
   DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;
   DMA_Init(DMA1_Channel4, &DMA_InitStructure);
   60:	4628      	mov	r0, r5
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:410
-=======
-E:\gateway\src/main.c:402
-  DMA_Init(DMA1_Channel5, &DMA_InitStructure);
->>>>>>> .r16
 
   DMA_ITConfig ( DMA1_Channel5 , DMA_IT_TC | DMA_IT_HT | DMA_IT_TE , ENABLE );
 
@@ -419,11 +254,7 @@ E:\gateway\src/main.c:402
   DMA_DeInit(DMA1_Channel4);
   DMA_InitStructure.DMA_PeripheralBaseAddr = USART1_DR_Base;
   62:	9301      	str	r3, [sp, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:421
-=======
-E:\gateway\src/main.c:413
->>>>>>> .r16
   DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
   DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
   DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
@@ -431,12 +262,7 @@ E:\gateway\src/main.c:413
   DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;
   DMA_Init(DMA1_Channel4, &DMA_InitStructure);
   64:	4641      	mov	r1, r8
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:412
-=======
-E:\gateway\src/main.c:404
-  DMA_ITConfig ( DMA1_Channel5 , DMA_IT_TC | DMA_IT_HT | DMA_IT_TE , ENABLE );
->>>>>>> .r16
 
   // DMA for serial RX  
   DMA_DeInit(DMA1_Channel4);
@@ -444,12 +270,7 @@ E:\gateway\src/main.c:404
   DMA_InitStructure.DMA_MemoryBaseAddr = (u32)&Commands[0];
   DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralDST;
   66:	2310      	movs	r3, #16
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:411
-=======
-E:\gateway\src/main.c:403
-
->>>>>>> .r16
   DMA_ITConfig ( DMA1_Channel5 , DMA_IT_TC | DMA_IT_HT | DMA_IT_TE , ENABLE );
 
   // DMA for serial RX  
@@ -457,92 +278,44 @@ E:\gateway\src/main.c:403
   DMA_InitStructure.DMA_PeripheralBaseAddr = USART1_DR_Base;
   DMA_InitStructure.DMA_MemoryBaseAddr = (u32)&Commands[0];
   68:	9702      	str	r7, [sp, #8]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:412
-=======
-E:\gateway\src/main.c:404
->>>>>>> .r16
   DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralDST;
   6a:	9303      	str	r3, [sp, #12]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:413
-=======
-E:\gateway\src/main.c:405
->>>>>>> .r16
   DMA_InitStructure.DMA_BufferSize = mainMAX_MSG_SIZE * mainMAX_AMOUNT_OF_MSG;
   6c:	f8cd b010 	str.w	fp, [sp, #16]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:414
-=======
-E:\gateway\src/main.c:406
->>>>>>> .r16
   DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
   70:	9405      	str	r4, [sp, #20]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:415
-=======
-E:\gateway\src/main.c:407
->>>>>>> .r16
   DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
   72:	f8cd a018 	str.w	sl, [sp, #24]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:416
-=======
-E:\gateway\src/main.c:408
->>>>>>> .r16
   DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
   76:	9407      	str	r4, [sp, #28]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:417
-=======
-E:\gateway\src/main.c:409
->>>>>>> .r16
   DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
   78:	9408      	str	r4, [sp, #32]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:418
-=======
-E:\gateway\src/main.c:410
->>>>>>> .r16
   DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;
   7a:	f8cd 9024 	str.w	r9, [sp, #36]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:419
-=======
-E:\gateway\src/main.c:411
->>>>>>> .r16
   DMA_InitStructure.DMA_Priority = DMA_Priority_VeryHigh;
   7e:	960a      	str	r6, [sp, #40]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:420
-=======
-E:\gateway\src/main.c:412
->>>>>>> .r16
   DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;
   80:	940b      	str	r4, [sp, #44]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:421
-=======
-E:\gateway\src/main.c:413
->>>>>>> .r16
   DMA_Init(DMA1_Channel4, &DMA_InitStructure);
   82:	f7ff fffe 	bl	0 <DMA_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:423
-=======
-E:\gateway\src/main.c:415
->>>>>>> .r16
 
   DMA_ITConfig ( DMA1_Channel4 , DMA_IT_TC | DMA_IT_HT | DMA_IT_TE , ENABLE );
   86:	4628      	mov	r0, r5
   88:	210e      	movs	r1, #14
   8a:	2201      	movs	r2, #1
   8c:	f7ff fffe 	bl	0 <DMA_ITConfig>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:424
-=======
-E:\gateway\src/main.c:416
->>>>>>> .r16
 }
   90:	b00d      	add	sp, #52
   92:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
@@ -554,11 +327,7 @@ Disassembly of section .text.WdgSet:
 
 00000000 <WdgSet>:
 WdgSet():
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:366
-=======
-E:\gateway\src/main.c:360
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
@@ -566,70 +335,42 @@ E:\gateway\src/main.c:360
 void WdgSet ( void )
 {
    0:	b510      	push	{r4, lr}
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:369
-=======
-E:\gateway\src/main.c:363
->>>>>>> .r16
   /* WWDG configuration */
   /* Enable WWDG clock */
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_WWDG, ENABLE);
    2:	2101      	movs	r1, #1
    4:	f44f 6000 	mov.w	r0, #2048	; 0x800
    8:	f7ff fffe 	bl	0 <RCC_APB1PeriphClockCmd>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:372
-=======
-E:\gateway\src/main.c:366
->>>>>>> .r16
 
   /* WWDG clock counter = (PCLK1/4096)/1 => [0.113 - 7ms] )  */
   WWDG_SetPrescaler(WWDG_Prescaler_8);
    c:	f44f 70c0 	mov.w	r0, #384	; 0x180
   10:	f7ff fffe 	bl	0 <WWDG_SetPrescaler>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:375
-=======
-E:\gateway\src/main.c:369
->>>>>>> .r16
 
   /* Set Window value to 65 */
   WWDG_SetWindowValue(WDG_WINDOW_VALUE);
   14:	2041      	movs	r0, #65
   16:	f7ff fffe 	bl	0 <WWDG_SetWindowValue>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:378
-=======
-E:\gateway\src/main.c:372
->>>>>>> .r16
 
   /* Enable WWDG and set counter value to 127, WWDG timeout = ~7ms */
   WWDG_Enable(WDG_COUNTER_VALUE);
   1a:	207f      	movs	r0, #127
   1c:	f7ff fffe 	bl	0 <WWDG_Enable>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:381
-=======
-E:\gateway\src/main.c:375
->>>>>>> .r16
 
   /* Clear EWI flag */
   WWDG_ClearFlag();
   20:	f7ff fffe 	bl	0 <WWDG_ClearFlag>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:384
-=======
-E:\gateway\src/main.c:378
->>>>>>> .r16
 
   /* Enable EW interrupt */
   WWDG_EnableIT();
   24:	f7ff fffe 	bl	0 <WWDG_EnableIT>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:385
-=======
-E:\gateway\src/main.c:379
->>>>>>> .r16
 }
   28:	bd10      	pop	{r4, pc}
   2a:	46c0      	nop			(mov r8, r8)
@@ -637,11 +378,7 @@ Disassembly of section .text.NVIC_Configuration:
 
 00000000 <NVIC_Configuration>:
 NVIC_Configuration():
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:326
-=======
-E:\gateway\src/main.c:320
->>>>>>> .r16
 * Input          : None
 * Output         : None
 * Return         : None
@@ -649,11 +386,7 @@ E:\gateway\src/main.c:320
 void NVIC_Configuration(void)
 { 
    0:	b570      	push	{r4, r5, r6, lr}
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:332
-=======
-E:\gateway\src/main.c:326
->>>>>>> .r16
 #ifdef  VECT_TAB_RAM  
   /* Set the Vector Table base location at 0x20000000 */ 
   NVIC_SetVectorTable(NVIC_VectTab_RAM, 0x0); 
@@ -661,11 +394,7 @@ E:\gateway\src/main.c:326
   /* Set the Vector Table base location at 0x08000000 */ 
   NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x0);   
    2:	2100      	movs	r1, #0
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:338
-=======
-E:\gateway\src/main.c:332
->>>>>>> .r16
 #endif
 
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
@@ -673,11 +402,7 @@ E:\gateway\src/main.c:332
   /* Configure and enable I2C1 event interrupt -------------------------------*/
   NVIC_InitStructure.NVIC_IRQChannel = I2C2_EV_IRQChannel;
    4:	4c16      	ldr	r4, [pc, #88]	(60 <NVIC_Configuration+0x60>)
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:332
-=======
-E:\gateway\src/main.c:326
->>>>>>> .r16
 #ifdef  VECT_TAB_RAM  
   /* Set the Vector Table base location at 0x20000000 */ 
   NVIC_SetVectorTable(NVIC_VectTab_RAM, 0x0); 
@@ -686,32 +411,20 @@ E:\gateway\src/main.c:326
   NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x0);   
    6:	f04f 6000 	mov.w	r0, #134217728	; 0x8000000
    a:	f7ff fffe 	bl	0 <NVIC_SetVectorTable>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:335
-=======
-E:\gateway\src/main.c:329
->>>>>>> .r16
 #endif
 
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
    e:	f44f 7040 	mov.w	r0, #768	; 0x300
   12:	f7ff fffe 	bl	0 <NVIC_PriorityGroupConfig>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:340
-=======
-E:\gateway\src/main.c:334
->>>>>>> .r16
   
   /* Configure and enable I2C1 event interrupt -------------------------------*/
   NVIC_InitStructure.NVIC_IRQChannel = I2C2_EV_IRQChannel;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   16:	2501      	movs	r5, #1
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:338
-=======
-E:\gateway\src/main.c:332
->>>>>>> .r16
 #endif
 
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
@@ -719,26 +432,14 @@ E:\gateway\src/main.c:332
   /* Configure and enable I2C1 event interrupt -------------------------------*/
   NVIC_InitStructure.NVIC_IRQChannel = I2C2_EV_IRQChannel;
   18:	2321      	movs	r3, #33
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:339
-=======
-E:\gateway\src/main.c:333
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
   1a:	2600      	movs	r6, #0
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:341
-=======
-E:\gateway\src/main.c:335
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
   1c:	4620      	mov	r0, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:338
-=======
-E:\gateway\src/main.c:332
->>>>>>> .r16
 #endif
 
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
@@ -746,48 +447,24 @@ E:\gateway\src/main.c:332
   /* Configure and enable I2C1 event interrupt -------------------------------*/
   NVIC_InitStructure.NVIC_IRQChannel = I2C2_EV_IRQChannel;
   1e:	7023      	strb	r3, [r4, #0]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:339
-=======
-E:\gateway\src/main.c:333
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
   20:	7066      	strb	r6, [r4, #1]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:340
-=======
-E:\gateway\src/main.c:334
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   22:	70e5      	strb	r5, [r4, #3]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:341
-=======
-E:\gateway\src/main.c:335
->>>>>>> .r16
   NVIC_Init(&NVIC_InitStructure);
   24:	f7ff fffe 	bl	0 <NVIC_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:344
-=======
-E:\gateway\src/main.c:338
->>>>>>> .r16
 
   /* Configure and enable I2C2 error interrupt -------------------------------*/  
   NVIC_InitStructure.NVIC_IRQChannel = I2C2_ER_IRQChannel;
   28:	2322      	movs	r3, #34
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:345
-=======
-E:\gateway\src/main.c:339
->>>>>>> .r16
   NVIC_Init(&NVIC_InitStructure);
   2a:	4620      	mov	r0, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:344
-=======
-E:\gateway\src/main.c:338
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
@@ -795,36 +472,20 @@ E:\gateway\src/main.c:338
   /* Configure and enable I2C2 error interrupt -------------------------------*/  
   NVIC_InitStructure.NVIC_IRQChannel = I2C2_ER_IRQChannel;
   2c:	7023      	strb	r3, [r4, #0]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:345
-=======
-E:\gateway\src/main.c:339
->>>>>>> .r16
   NVIC_Init(&NVIC_InitStructure);
   2e:	f7ff fffe 	bl	0 <NVIC_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:348
-=======
-E:\gateway\src/main.c:342
->>>>>>> .r16
 
   /* Enable the USART1 DMA Interrupt Rx */
   NVIC_InitStructure.NVIC_IRQChannel = DMA1_Channel5_IRQChannel;
   32:	230f      	movs	r3, #15
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:351
-=======
-E:\gateway\src/main.c:345
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
   34:	4620      	mov	r0, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:348
-=======
-E:\gateway\src/main.c:342
->>>>>>> .r16
   /* Configure and enable I2C2 error interrupt -------------------------------*/  
   NVIC_InitStructure.NVIC_IRQChannel = I2C2_ER_IRQChannel;
   NVIC_Init(&NVIC_InitStructure);
@@ -832,50 +493,26 @@ E:\gateway\src/main.c:342
   /* Enable the USART1 DMA Interrupt Rx */
   NVIC_InitStructure.NVIC_IRQChannel = DMA1_Channel5_IRQChannel;
   36:	7023      	strb	r3, [r4, #0]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:349
-=======
-E:\gateway\src/main.c:343
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
   38:	7066      	strb	r6, [r4, #1]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:350
-=======
-E:\gateway\src/main.c:344
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   3a:	70e5      	strb	r5, [r4, #3]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:351
-=======
-E:\gateway\src/main.c:345
->>>>>>> .r16
   NVIC_Init(&NVIC_InitStructure);
   3c:	f7ff fffe 	bl	0 <NVIC_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:354
-=======
-E:\gateway\src/main.c:348
->>>>>>> .r16
   
   /* Enable the USART1 DMA Interrupt Tx*/
   NVIC_InitStructure.NVIC_IRQChannel = DMA1_Channel4_IRQChannel;
   40:	230e      	movs	r3, #14
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:357
-=======
-E:\gateway\src/main.c:351
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
   42:	4620      	mov	r0, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:354
-=======
-E:\gateway\src/main.c:348
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
@@ -883,50 +520,26 @@ E:\gateway\src/main.c:348
   /* Enable the USART1 DMA Interrupt Tx*/
   NVIC_InitStructure.NVIC_IRQChannel = DMA1_Channel4_IRQChannel;
   44:	7023      	strb	r3, [r4, #0]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:355
-=======
-E:\gateway\src/main.c:349
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
   46:	7065      	strb	r5, [r4, #1]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:356
-=======
-E:\gateway\src/main.c:350
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   48:	70e5      	strb	r5, [r4, #3]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:357
-=======
-E:\gateway\src/main.c:351
->>>>>>> .r16
   NVIC_Init(&NVIC_InitStructure);
   4a:	f7ff fffe 	bl	0 <NVIC_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:361
-=======
-E:\gateway\src/main.c:355
->>>>>>> .r16
   
   /* Enable watchdog*/
   NVIC_InitStructure.NVIC_IRQChannel = WWDG_IRQChannel;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
   4e:	2302      	movs	r3, #2
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:363
-=======
-E:\gateway\src/main.c:357
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
   50:	4620      	mov	r0, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:360
-=======
-E:\gateway\src/main.c:354
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
@@ -934,32 +547,16 @@ E:\gateway\src/main.c:354
   /* Enable watchdog*/
   NVIC_InitStructure.NVIC_IRQChannel = WWDG_IRQChannel;
   52:	7026      	strb	r6, [r4, #0]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:361
-=======
-E:\gateway\src/main.c:355
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
   54:	7063      	strb	r3, [r4, #1]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:362
-=======
-E:\gateway\src/main.c:356
->>>>>>> .r16
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   56:	70e5      	strb	r5, [r4, #3]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:363
-=======
-E:\gateway\src/main.c:357
->>>>>>> .r16
   NVIC_Init(&NVIC_InitStructure);
   58:	f7ff fffe 	bl	0 <NVIC_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:364
-=======
-E:\gateway\src/main.c:358
->>>>>>> .r16
 }
   5c:	bd70      	pop	{r4, r5, r6, pc}
   5e:	46c0      	nop			(mov r8, r8)
@@ -968,11 +565,7 @@ Disassembly of section .text.GPIO_Configuration:
 
 00000000 <GPIO_Configuration>:
 GPIO_Configuration():
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:276
-=======
-E:\gateway\src/main.c:270
->>>>>>> .r16
 * Input          : None
 * Output         : None
 * Return         : None
@@ -980,11 +573,7 @@ E:\gateway\src/main.c:270
 void GPIO_Configuration(void)
 {
    0:	e92d 4373 	stmdb	sp!, {r0, r1, r4, r5, r6, r8, r9, lr}
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:283
-=======
-E:\gateway\src/main.c:277
->>>>>>> .r16
 
   /* Configure I2C1 pins: SCL and SDA ----------------------------------------*/
   GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_6 | GPIO_Pin_7;
@@ -993,11 +582,7 @@ E:\gateway\src/main.c:277
   GPIO_Init(GPIOB, &GPIO_InitStructure);
    4:	4d2b      	ldr	r5, [pc, #172]	(b4 <GPIO_Configuration+0xb4>)
    6:	ac01      	add	r4, sp, #4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:280
-=======
-E:\gateway\src/main.c:274
->>>>>>> .r16
 void GPIO_Configuration(void)
 {
   GPIO_InitTypeDef GPIO_InitStructure;
@@ -1005,18 +590,10 @@ void GPIO_Configuration(void)
   /* Configure I2C1 pins: SCL and SDA ----------------------------------------*/
   GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_6 | GPIO_Pin_7;
    8:	f04f 03c0 	mov.w	r3, #192	; 0xc0
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:281
-=======
-E:\gateway\src/main.c:275
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
    c:	f04f 0803 	mov.w	r8, #3	; 0x3
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:280
-=======
-E:\gateway\src/main.c:274
->>>>>>> .r16
 void GPIO_Configuration(void)
 {
   GPIO_InitTypeDef GPIO_InitStructure;
@@ -1024,20 +601,12 @@ void GPIO_Configuration(void)
   /* Configure I2C1 pins: SCL and SDA ----------------------------------------*/
   GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_6 | GPIO_Pin_7;
   10:	f8ad 3004 	strh.w	r3, [sp, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:283
-=======
-E:\gateway\src/main.c:277
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;
   GPIO_Init(GPIOB, &GPIO_InitStructure);
   14:	4628      	mov	r0, r5
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:282
-=======
-E:\gateway\src/main.c:276
->>>>>>> .r16
   GPIO_InitTypeDef GPIO_InitStructure;
 
   /* Configure I2C1 pins: SCL and SDA ----------------------------------------*/
@@ -1045,18 +614,10 @@ E:\gateway\src/main.c:276
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;
   16:	231c      	movs	r3, #28
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:283
-=======
-E:\gateway\src/main.c:277
->>>>>>> .r16
   GPIO_Init(GPIOB, &GPIO_InitStructure);
   18:	4621      	mov	r1, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:282
-=======
-E:\gateway\src/main.c:276
->>>>>>> .r16
   GPIO_InitTypeDef GPIO_InitStructure;
 
   /* Configure I2C1 pins: SCL and SDA ----------------------------------------*/
@@ -1064,11 +625,7 @@ E:\gateway\src/main.c:276
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;
   1a:	f88d 3007 	strb.w	r3, [sp, #7]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:281
-=======
-E:\gateway\src/main.c:275
->>>>>>> .r16
 {
   GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -1076,47 +633,27 @@ E:\gateway\src/main.c:275
   GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_6 | GPIO_Pin_7;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   1e:	f88d 8006 	strb.w	r8, [sp, #6]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:283
-=======
-E:\gateway\src/main.c:277
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;
   GPIO_Init(GPIOB, &GPIO_InitStructure);
   22:	f7ff fffe 	bl	0 <GPIO_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:286
-=======
-E:\gateway\src/main.c:280
->>>>>>> .r16
 
   /* Configure I2C2 pins: SCL and SDA ----------------------------------------*/
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10 | GPIO_Pin_11;
   26:	f44f 6340 	mov.w	r3, #3072	; 0xc00
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:287
-=======
-E:\gateway\src/main.c:281
->>>>>>> .r16
   GPIO_Init(GPIOB, &GPIO_InitStructure);
   2a:	4628      	mov	r0, r5
   2c:	4621      	mov	r1, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:292
-=======
-E:\gateway\src/main.c:286
->>>>>>> .r16
 
   /* Configure USART1 Rx (PA.10) as input floating */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
   2e:	f5a5 6580 	sub.w	r5, r5, #1024	; 0x400
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:291
-=======
-E:\gateway\src/main.c:285
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10 | GPIO_Pin_11;
   GPIO_Init(GPIOB, &GPIO_InitStructure);
 
@@ -1124,11 +661,7 @@ E:\gateway\src/main.c:285
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
   32:	2604      	movs	r6, #4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:286
-=======
-E:\gateway\src/main.c:280
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;
   GPIO_Init(GPIOB, &GPIO_InitStructure);
@@ -1136,36 +669,20 @@ E:\gateway\src/main.c:280
   /* Configure I2C2 pins: SCL and SDA ----------------------------------------*/
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10 | GPIO_Pin_11;
   34:	f8ad 3004 	strh.w	r3, [sp, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:287
-=======
-E:\gateway\src/main.c:281
->>>>>>> .r16
   GPIO_Init(GPIOB, &GPIO_InitStructure);
   38:	f7ff fffe 	bl	0 <GPIO_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:290
-=======
-E:\gateway\src/main.c:284
->>>>>>> .r16
 
   /* Configure USART1 Rx (PA.10) as input floating */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
   3c:	f44f 6380 	mov.w	r3, #1024	; 0x400
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:292
-=======
-E:\gateway\src/main.c:286
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
   40:	4628      	mov	r0, r5
   42:	4621      	mov	r1, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:290
-=======
-E:\gateway\src/main.c:284
->>>>>>> .r16
   /* Configure I2C2 pins: SCL and SDA ----------------------------------------*/
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10 | GPIO_Pin_11;
   GPIO_Init(GPIOB, &GPIO_InitStructure);
@@ -1173,11 +690,7 @@ E:\gateway\src/main.c:284
   /* Configure USART1 Rx (PA.10) as input floating */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
   44:	f8ad 3004 	strh.w	r3, [sp, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:297
-=======
-E:\gateway\src/main.c:291
->>>>>>> .r16
   GPIO_Init(GPIOA, &GPIO_InitStructure);
 
   /* Configure USART1 Tx (PA.09) as alternate function push-pull */
@@ -1185,11 +698,7 @@ E:\gateway\src/main.c:291
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
   48:	f04f 0918 	mov.w	r9, #24	; 0x18
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:291
-=======
-E:\gateway\src/main.c:285
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10 | GPIO_Pin_11;
   GPIO_Init(GPIOB, &GPIO_InitStructure);
 
@@ -1197,37 +706,21 @@ E:\gateway\src/main.c:285
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
   4c:	f88d 6007 	strb.w	r6, [sp, #7]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:292
-=======
-E:\gateway\src/main.c:286
->>>>>>> .r16
   GPIO_Init(GPIOA, &GPIO_InitStructure);
   50:	f7ff fffe 	bl	0 <GPIO_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:295
-=======
-E:\gateway\src/main.c:289
->>>>>>> .r16
 
   /* Configure USART1 Tx (PA.09) as alternate function push-pull */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
   54:	f44f 7300 	mov.w	r3, #512	; 0x200
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:298
-=======
-E:\gateway\src/main.c:292
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
   58:	4628      	mov	r0, r5
   5a:	4621      	mov	r1, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:295
-=======
-E:\gateway\src/main.c:289
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
@@ -1235,50 +728,26 @@ E:\gateway\src/main.c:289
   /* Configure USART1 Tx (PA.09) as alternate function push-pull */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
   5c:	f8ad 3004 	strh.w	r3, [sp, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:296
-=======
-E:\gateway\src/main.c:290
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   60:	f88d 8006 	strb.w	r8, [sp, #6]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:297
-=======
-E:\gateway\src/main.c:291
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
   64:	f88d 9007 	strb.w	r9, [sp, #7]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:298
-=======
-E:\gateway\src/main.c:292
->>>>>>> .r16
   GPIO_Init(GPIOA, &GPIO_InitStructure);
   68:	f7ff fffe 	bl	0 <GPIO_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:301
-=======
-E:\gateway\src/main.c:295
->>>>>>> .r16
   
   /* Configure USART2 Rx (PA.03) as input floating */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
   6c:	f04f 0308 	mov.w	r3, #8	; 0x8
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:303
-=======
-E:\gateway\src/main.c:297
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
   70:	4628      	mov	r0, r5
   72:	4621      	mov	r1, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:301
-=======
-E:\gateway\src/main.c:295
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
@@ -1286,25 +755,13 @@ E:\gateway\src/main.c:295
   /* Configure USART2 Rx (PA.03) as input floating */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
   74:	f8ad 3004 	strh.w	r3, [sp, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:302
-=======
-E:\gateway\src/main.c:296
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
   78:	f88d 6007 	strb.w	r6, [sp, #7]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:303
-=======
-E:\gateway\src/main.c:297
->>>>>>> .r16
   GPIO_Init(GPIOA, &GPIO_InitStructure);
   7c:	f7ff fffe 	bl	0 <GPIO_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:309
-=======
-E:\gateway\src/main.c:303
->>>>>>> .r16
 
   /* Configure USART2 Tx (PA.02) as alternate function push-pull */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
@@ -1313,11 +770,7 @@ E:\gateway\src/main.c:303
   GPIO_Init(GPIOA, &GPIO_InitStructure);
   80:	4628      	mov	r0, r5
   82:	4621      	mov	r1, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:306
-=======
-E:\gateway\src/main.c:300
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
@@ -1325,50 +778,26 @@ E:\gateway\src/main.c:300
   /* Configure USART2 Tx (PA.02) as alternate function push-pull */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
   84:	f8ad 6004 	strh.w	r6, [sp, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:307
-=======
-E:\gateway\src/main.c:301
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   88:	f88d 8006 	strb.w	r8, [sp, #6]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:308
-=======
-E:\gateway\src/main.c:302
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
   8c:	f88d 9007 	strb.w	r9, [sp, #7]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:309
-=======
-E:\gateway\src/main.c:303
->>>>>>> .r16
   GPIO_Init(GPIOA, &GPIO_InitStructure);
   90:	f7ff fffe 	bl	0 <GPIO_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:311
-=======
-E:\gateway\src/main.c:305
->>>>>>> .r16
 
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2 | GPIO_Pin_1 | GPIO_Pin_0;
   94:	f04f 0307 	mov.w	r3, #7	; 0x7
   98:	f8ad 3004 	strh.w	r3, [sp, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:314
-=======
-E:\gateway\src/main.c:308
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
   GPIO_Init(GPIOC, &GPIO_InitStructure);
   9c:	4806      	ldr	r0, [pc, #24]	(b8 <GPIO_Configuration+0xb8>)
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:313
-=======
-E:\gateway\src/main.c:307
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
 
@@ -1376,18 +805,10 @@ E:\gateway\src/main.c:307
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
   9e:	2310      	movs	r3, #16
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:314
-=======
-E:\gateway\src/main.c:308
->>>>>>> .r16
   GPIO_Init(GPIOC, &GPIO_InitStructure);
   a0:	4621      	mov	r1, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:312
-=======
-E:\gateway\src/main.c:306
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
@@ -1395,25 +816,13 @@ E:\gateway\src/main.c:306
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2 | GPIO_Pin_1 | GPIO_Pin_0;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   a2:	f88d 8006 	strb.w	r8, [sp, #6]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:313
-=======
-E:\gateway\src/main.c:307
->>>>>>> .r16
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
   a6:	f88d 3007 	strb.w	r3, [sp, #7]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:314
-=======
-E:\gateway\src/main.c:308
->>>>>>> .r16
   GPIO_Init(GPIOC, &GPIO_InitStructure);
   aa:	f7ff fffe 	bl	0 <GPIO_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:316
-=======
-E:\gateway\src/main.c:310
->>>>>>> .r16
 
 }
   ae:	e8bd 837c 	ldmia.w	sp!, {r2, r3, r4, r5, r6, r8, r9, pc}
@@ -1424,11 +833,7 @@ Disassembly of section .text.RCC_Configuration:
 
 00000000 <RCC_Configuration>:
 RCC_Configuration():
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:215
-=======
-E:\gateway\src/main.c:209
->>>>>>> .r16
 * Input          : None
 * Output         : None
 * Return         : None
@@ -1436,39 +841,23 @@ E:\gateway\src/main.c:209
 void RCC_Configuration(void)
 {
    0:	b510      	push	{r4, lr}
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:218
-=======
-E:\gateway\src/main.c:212
->>>>>>> .r16
 
   /* Enable HSE */
   RCC_HSEConfig(RCC_HSE_ON);
    2:	f44f 3080 	mov.w	r0, #65536	; 0x10000
    6:	f7ff fffe 	bl	0 <RCC_HSEConfig>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:221
-=======
-E:\gateway\src/main.c:215
->>>>>>> .r16
 
   /* Wait till HSE is ready */
   HSEStartUpStatus = RCC_WaitForHSEStartUp();
    a:	f7ff fffe 	bl	0 <RCC_WaitForHSEStartUp>
    e:	4b21      	ldr	r3, [pc, #132]	(94 <RCC_Configuration+0x94>)
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:223
-=======
-E:\gateway\src/main.c:217
->>>>>>> .r16
 
   if(HSEStartUpStatus == SUCCESS)
   10:	2801      	cmp	r0, #1
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:221
-=======
-E:\gateway\src/main.c:215
->>>>>>> .r16
 
   /* Enable HSE */
   RCC_HSEConfig(RCC_HSE_ON);
@@ -1477,90 +866,54 @@ E:\gateway\src/main.c:215
   HSEStartUpStatus = RCC_WaitForHSEStartUp();
   12:	4604      	mov	r4, r0
   14:	7018      	strb	r0, [r3, #0]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:223
-=======
-E:\gateway\src/main.c:217
->>>>>>> .r16
 
   if(HSEStartUpStatus == SUCCESS)
   16:	d124      	bne.n	62 <RCC_Configuration+0x62>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:226
-=======
-E:\gateway\src/main.c:220
->>>>>>> .r16
   {
     /* Enable Prefetch Buffer */
     FLASH_PrefetchBufferCmd(FLASH_PrefetchBuffer_Enable);
   18:	2010      	movs	r0, #16
   1a:	f7ff fffe 	bl	0 <FLASH_PrefetchBufferCmd>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:229
-=======
-E:\gateway\src/main.c:223
->>>>>>> .r16
 
     /* Flash 2 wait state */
     FLASH_SetLatency(FLASH_Latency_2);
   1e:	2002      	movs	r0, #2
   20:	f7ff fffe 	bl	0 <FLASH_SetLatency>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:232
-=======
-E:\gateway\src/main.c:226
->>>>>>> .r16
  
     /* HCLK = SYSCLK */
     RCC_HCLKConfig(RCC_SYSCLK_Div1); 
   24:	2000      	movs	r0, #0
   26:	f7ff fffe 	bl	0 <RCC_HCLKConfig>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:235
-=======
-E:\gateway\src/main.c:229
->>>>>>> .r16
   
     /* PCLK2 = HCLK */
     RCC_PCLK2Config(RCC_HCLK_Div1); 
   2a:	2000      	movs	r0, #0
   2c:	f7ff fffe 	bl	0 <RCC_PCLK2Config>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:238
-=======
-E:\gateway\src/main.c:232
->>>>>>> .r16
 
     /* PCLK1 = HCLK/2 */
     RCC_PCLK1Config(RCC_HCLK_Div2);
   30:	f44f 6080 	mov.w	r0, #1024	; 0x400
   34:	f7ff fffe 	bl	0 <RCC_PCLK1Config>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:241
-=======
-E:\gateway\src/main.c:235
->>>>>>> .r16
  
     /* PLLCLK = 12MHz * 6 = 72 MHz */
     RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_6);
   38:	f44f 3080 	mov.w	r0, #65536	; 0x10000
   3c:	f44f 1180 	mov.w	r1, #1048576	; 0x100000
   40:	f7ff fffe 	bl	0 <RCC_PLLConfig>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:244
-=======
-E:\gateway\src/main.c:238
->>>>>>> .r16
 
     /* Enable PLL */ 
     RCC_PLLCmd(ENABLE);
   44:	4620      	mov	r0, r4
   46:	f7ff fffe 	bl	0 <RCC_PLLCmd>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:247
-=======
-E:\gateway\src/main.c:241
->>>>>>> .r16
 
     /* Wait till PLL is ready */
     while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET)
@@ -1568,11 +921,7 @@ E:\gateway\src/main.c:241
   4c:	f7ff fffe 	bl	0 <RCC_GetFlagStatus>
   50:	2800      	cmp	r0, #0
   52:	d0fa      	beq.n	4a <RCC_Configuration+0x4a>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:252
-=======
-E:\gateway\src/main.c:246
->>>>>>> .r16
     {
     }
 
@@ -1580,22 +929,14 @@ E:\gateway\src/main.c:246
     RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);
   54:	2002      	movs	r0, #2
   56:	f7ff fffe 	bl	0 <RCC_SYSCLKConfig>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:255
-=======
-E:\gateway\src/main.c:249
->>>>>>> .r16
 
     /* Wait till PLL is used as system clock source */
     while(RCC_GetSYSCLKSource() != 0x08)
   5a:	f7ff fffe 	bl	0 <RCC_GetSYSCLKSource>
   5e:	2808      	cmp	r0, #8
   60:	d1fb      	bne.n	5a <RCC_Configuration+0x5a>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:261
-=======
-E:\gateway\src/main.c:255
->>>>>>> .r16
     {
     }
   }
@@ -1605,47 +946,27 @@ E:\gateway\src/main.c:255
   62:	2001      	movs	r0, #1
   64:	4601      	mov	r1, r0
   66:	f7ff fffe 	bl	0 <RCC_AHBPeriphClockCmd>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:262
-=======
-E:\gateway\src/main.c:256
->>>>>>> .r16
   RCC_APB2PeriphClockCmd( RCC_APB2Periph_USART1 , ENABLE); 
   6a:	2101      	movs	r1, #1
   6c:	f44f 4080 	mov.w	r0, #16384	; 0x4000
   70:	f7ff fffe 	bl	0 <RCC_APB2PeriphClockCmd>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:263
-=======
-E:\gateway\src/main.c:257
->>>>>>> .r16
   RCC_APB1PeriphClockCmd( RCC_APB1Periph_USART2, ENABLE);
   74:	2101      	movs	r1, #1
   76:	f44f 3000 	mov.w	r0, #131072	; 0x20000
   7a:	f7ff fffe 	bl	0 <RCC_APB1PeriphClockCmd>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:264
-=======
-E:\gateway\src/main.c:258
->>>>>>> .r16
   RCC_APB1PeriphClockCmd( RCC_APB1Periph_I2C1 | RCC_APB1Periph_I2C2, ENABLE);
   7e:	2101      	movs	r1, #1
   80:	f44f 00c0 	mov.w	r0, #6291456	; 0x600000
   84:	f7ff fffe 	bl	0 <RCC_APB1PeriphClockCmd>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:265
-=======
-E:\gateway\src/main.c:259
->>>>>>> .r16
   RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOA | RCC_APB2Periph_GPIOB | RCC_APB2Periph_GPIOC | RCC_APB2Periph_AFIO , ENABLE);
   88:	201d      	movs	r0, #29
   8a:	2101      	movs	r1, #1
   8c:	f7ff fffe 	bl	0 <RCC_APB2PeriphClockCmd>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:266
-=======
-E:\gateway\src/main.c:260
->>>>>>> .r16
 }
   90:	bd10      	pop	{r4, pc}
   92:	46c0      	nop			(mov r8, r8)
@@ -1654,11 +975,7 @@ Disassembly of section .text.USART_Init1:
 
 00000000 <USART_Init1>:
 USART_Init1():
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:189
-=======
-E:\gateway\src/main.c:183
->>>>>>> .r16
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;
     GPIO_Init(GPIOB, &GPIO_InitStructure);
@@ -1666,14 +983,7 @@ E:\gateway\src/main.c:183
 }
 void USART_Init1 (void){
    0:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:190
-=======
-E:\gateway\src/main.c:184
-  USART_InitStructure.USART_BaudRate = mainBAUDRATE1;
-   4:	4c1a      	ldr	r4, [pc, #104]	(70 <USART_Init1+0x70>)
-E:\gateway\src/main.c:190
->>>>>>> .r16
   USART_InitStructure.USART_BaudRate = mainBAUDRATE1;
    4:	4c1a      	ldr	r4, [pc, #104]	(70 <USART_Init1+0x70>)
 C:\cortex\gateway\src/main.c:196
@@ -1683,7 +993,6 @@ C:\cortex\gateway\src/main.c:196
   USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
   USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
   USART_Init(USART1, &USART_InitStructure);
-<<<<<<< .mine
    6:	4e1b      	ldr	r6, [pc, #108]	(74 <USART_Init1+0x74>)
 C:\cortex\gateway\src/main.c:195
   USART_InitStructure.USART_BaudRate = mainBAUDRATE1;
@@ -1694,44 +1003,22 @@ C:\cortex\gateway\src/main.c:195
   USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
    8:	f04f 030c 	mov.w	r3, #12	; 0xc
 C:\cortex\gateway\src/main.c:191
-=======
-   6:	4e1b      	ldr	r6, [pc, #108]	(74 <USART_Init1+0x74>)
-E:\gateway\src/main.c:189
-  USART_InitStructure.USART_BaudRate = mainBAUDRATE1;
-  USART_InitStructure.USART_WordLength = USART_WordLength_8b;
-  USART_InitStructure.USART_StopBits = USART_StopBits_1;
-  USART_InitStructure.USART_Parity = USART_Parity_No ;
-  USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-  USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
-   8:	f04f 030c 	mov.w	r3, #12	; 0xc
-E:\gateway\src/main.c:185
->>>>>>> .r16
     GPIO_Init(GPIOB, &GPIO_InitStructure);
     I2C_Cmd(I2C2, ENABLE);
 }
 void USART_Init1 (void){
   USART_InitStructure.USART_BaudRate = mainBAUDRATE1;
   USART_InitStructure.USART_WordLength = USART_WordLength_8b;
-<<<<<<< .mine
    c:	2500      	movs	r5, #0
 C:\cortex\gateway\src/main.c:190
-=======
-   c:	2500      	movs	r5, #0
-E:\gateway\src/main.c:184
->>>>>>> .r16
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;
     GPIO_Init(GPIOB, &GPIO_InitStructure);
     I2C_Cmd(I2C2, ENABLE);
 }
 void USART_Init1 (void){
   USART_InitStructure.USART_BaudRate = mainBAUDRATE1;
-<<<<<<< .mine
    e:	f44f 2861 	mov.w	r8, #921600	; 0xe1000
 C:\cortex\gateway\src/main.c:196
-=======
-   e:	f44f 2861 	mov.w	r8, #921600	; 0xe1000
-E:\gateway\src/main.c:190
->>>>>>> .r16
   USART_InitStructure.USART_WordLength = USART_WordLength_8b;
   USART_InitStructure.USART_StopBits = USART_StopBits_1;
   USART_InitStructure.USART_Parity = USART_Parity_No ;
@@ -1740,172 +1027,80 @@ E:\gateway\src/main.c:190
   USART_Init(USART1, &USART_InitStructure);
   12:	4630      	mov	r0, r6
   14:	4621      	mov	r1, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:195
-=======
-E:\gateway\src/main.c:189
->>>>>>> .r16
   USART_InitStructure.USART_BaudRate = mainBAUDRATE1;
   USART_InitStructure.USART_WordLength = USART_WordLength_8b;
   USART_InitStructure.USART_StopBits = USART_StopBits_1;
   USART_InitStructure.USART_Parity = USART_Parity_No ;
   USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
   USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
-<<<<<<< .mine
   16:	8163      	strh	r3, [r4, #10]
 C:\cortex\gateway\src/main.c:190
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;
-=======
-  16:	8163      	strh	r3, [r4, #10]
-E:\gateway\src/main.c:184
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;
->>>>>>> .r16
     GPIO_Init(GPIOB, &GPIO_InitStructure);
     I2C_Cmd(I2C2, ENABLE);
 }
 void USART_Init1 (void){
   USART_InitStructure.USART_BaudRate = mainBAUDRATE1;
-<<<<<<< .mine
   18:	f8c4 8000 	str.w	r8, [r4]
 C:\cortex\gateway\src/main.c:191
-=======
-  18:	f8c4 8000 	str.w	r8, [r4]
-E:\gateway\src/main.c:185
->>>>>>> .r16
   USART_InitStructure.USART_WordLength = USART_WordLength_8b;
   1c:	80a5      	strh	r5, [r4, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:192
-=======
-E:\gateway\src/main.c:186
->>>>>>> .r16
   USART_InitStructure.USART_StopBits = USART_StopBits_1;
   1e:	80e5      	strh	r5, [r4, #6]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:193
-=======
-E:\gateway\src/main.c:187
->>>>>>> .r16
   USART_InitStructure.USART_Parity = USART_Parity_No ;
   20:	8125      	strh	r5, [r4, #8]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:194
-=======
-E:\gateway\src/main.c:188
->>>>>>> .r16
   USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
   22:	81a5      	strh	r5, [r4, #12]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:196
-=======
-E:\gateway\src/main.c:190
->>>>>>> .r16
   USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
   USART_Init(USART1, &USART_InitStructure);
   24:	f7ff fffe 	bl	0 <USART_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:197
-=======
-E:\gateway\src/main.c:191
->>>>>>> .r16
   USART_InitStructure.USART_BaudRate = mainBAUDRATE2;
-<<<<<<< .mine
   28:	f8c4 8000 	str.w	r8, [r4]
 C:\cortex\gateway\src/main.c:198
-=======
-  28:	f8c4 8000 	str.w	r8, [r4]
-E:\gateway\src/main.c:192
->>>>>>> .r16
   USART_Init(USART2, &USART_InitStructure);
-<<<<<<< .mine
   2c:	f8df 8050 	ldr.w	r8, [pc, #80]	; 80 <USART_Init1+0x80>
   30:	4621      	mov	r1, r4
   32:	4640      	mov	r0, r8
   34:	f7ff fffe 	bl	0 <USART_Init>
 C:\cortex\gateway\src/main.c:199
-=======
-  2c:	f8df 8050 	ldr.w	r8, [pc, #80]	; 80 <USART_Init1+0x80>
-  30:	4621      	mov	r1, r4
-  32:	4640      	mov	r0, r8
-  34:	f7ff fffe 	bl	0 <USART_Init>
-E:\gateway\src/main.c:193
->>>>>>> .r16
   USART_DMACmd(USART1, USART_DMAReq_Rx, ENABLE);
-<<<<<<< .mine
   38:	2201      	movs	r2, #1
   3a:	4630      	mov	r0, r6
   3c:	2140      	movs	r1, #64
   3e:	f7ff fffe 	bl	0 <USART_DMACmd>
 C:\cortex\gateway\src/main.c:200
-=======
-  38:	2201      	movs	r2, #1
-  3a:	4630      	mov	r0, r6
-  3c:	2140      	movs	r1, #64
-  3e:	f7ff fffe 	bl	0 <USART_DMACmd>
-E:\gateway\src/main.c:194
->>>>>>> .r16
   DMA_Cmd(DMA1_Channel5, ENABLE);
-<<<<<<< .mine
   42:	2101      	movs	r1, #1
   44:	480c      	ldr	r0, [pc, #48]	(78 <USART_Init1+0x78>)
   46:	f7ff fffe 	bl	0 <DMA_Cmd>
 C:\cortex\gateway\src/main.c:201
-=======
-  42:	2101      	movs	r1, #1
-  44:	480c      	ldr	r0, [pc, #48]	(78 <USART_Init1+0x78>)
-  46:	f7ff fffe 	bl	0 <DMA_Cmd>
-E:\gateway\src/main.c:195
->>>>>>> .r16
   USART_DMACmd(USART1, USART_DMAReq_Tx, ENABLE);
-<<<<<<< .mine
   4a:	2201      	movs	r2, #1
   4c:	4630      	mov	r0, r6
   4e:	2180      	movs	r1, #128
   50:	f7ff fffe 	bl	0 <USART_DMACmd>
 C:\cortex\gateway\src/main.c:202
-=======
-  4a:	2201      	movs	r2, #1
-  4c:	4630      	mov	r0, r6
-  4e:	2180      	movs	r1, #128
-  50:	f7ff fffe 	bl	0 <USART_DMACmd>
-E:\gateway\src/main.c:196
->>>>>>> .r16
   DMA_Cmd(DMA1_Channel4, DISABLE);
-<<<<<<< .mine
   54:	4629      	mov	r1, r5
   56:	4809      	ldr	r0, [pc, #36]	(7c <USART_Init1+0x7c>)
   58:	f7ff fffe 	bl	0 <DMA_Cmd>
 C:\cortex\gateway\src/main.c:203
-=======
-  54:	4629      	mov	r1, r5
-  56:	4809      	ldr	r0, [pc, #36]	(7c <USART_Init1+0x7c>)
-  58:	f7ff fffe 	bl	0 <DMA_Cmd>
-E:\gateway\src/main.c:197
->>>>>>> .r16
   USART_Cmd(USART1, ENABLE);
-<<<<<<< .mine
   5c:	4630      	mov	r0, r6
   5e:	2101      	movs	r1, #1
   60:	f7ff fffe 	bl	0 <USART_Cmd>
 C:\cortex\gateway\src/main.c:204
-=======
-  5c:	4630      	mov	r0, r6
-  5e:	2101      	movs	r1, #1
-  60:	f7ff fffe 	bl	0 <USART_Cmd>
-E:\gateway\src/main.c:198
->>>>>>> .r16
   USART_Cmd(USART2, ENABLE);
-<<<<<<< .mine
   64:	4640      	mov	r0, r8
   66:	2101      	movs	r1, #1
   68:	f7ff fffe 	bl	0 <USART_Cmd>
 C:\cortex\gateway\src/main.c:205
-=======
-  64:	4640      	mov	r0, r8
-  66:	2101      	movs	r1, #1
-  68:	f7ff fffe 	bl	0 <USART_Cmd>
-E:\gateway\src/main.c:199
->>>>>>> .r16
 }
   6c:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
   70:	00000000 	.word	0x00000000
@@ -1917,11 +1112,7 @@ Disassembly of section .text.I2C_FreeBus:
 
 00000000 <I2C_FreeBus>:
 I2C_FreeBus():
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:180
-=======
-E:\gateway\src/main.c:174
->>>>>>> .r16
     GPIO_Init(GPIOB, &GPIO_InitStructure);
     GPIO_WriteBit(GPIOB, GPIO_Pin_10, (BitAction) 1 );
     GPIO_WriteBit(GPIOB, GPIO_Pin_11, (BitAction) 1 );
@@ -1929,37 +1120,21 @@ E:\gateway\src/main.c:174
 
 void I2C_FreeBus (void){
    0:	b507      	push	{r0, r1, r2, lr}
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:183
-=======
-E:\gateway\src/main.c:177
->>>>>>> .r16
     GPIO_InitTypeDef GPIO_InitStructure;
 
     GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_10 | GPIO_Pin_11;
    2:	f44f 6340 	mov.w	r3, #3072	; 0xc00
    6:	f8ad 3004 	strh.w	r3, [sp, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:184
-=======
-E:\gateway\src/main.c:178
->>>>>>> .r16
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
    a:	2303      	movs	r3, #3
    c:	f88d 3006 	strb.w	r3, [sp, #6]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:186
-=======
-E:\gateway\src/main.c:180
->>>>>>> .r16
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;
     GPIO_Init(GPIOB, &GPIO_InitStructure);
   10:	a901      	add	r1, sp, #4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:185
-=======
-E:\gateway\src/main.c:179
->>>>>>> .r16
 void I2C_FreeBus (void){
     GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -1967,18 +1142,10 @@ void I2C_FreeBus (void){
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;
   12:	3319      	adds	r3, #25
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:186
-=======
-E:\gateway\src/main.c:180
->>>>>>> .r16
     GPIO_Init(GPIOB, &GPIO_InitStructure);
   14:	4804      	ldr	r0, [pc, #16]	(28 <I2C_FreeBus+0x28>)
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:185
-=======
-E:\gateway\src/main.c:179
->>>>>>> .r16
 void I2C_FreeBus (void){
     GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -1986,27 +1153,15 @@ void I2C_FreeBus (void){
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;
   16:	f88d 3007 	strb.w	r3, [sp, #7]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:186
-=======
-E:\gateway\src/main.c:180
->>>>>>> .r16
     GPIO_Init(GPIOB, &GPIO_InitStructure);
   1a:	f7ff fffe 	bl	0 <GPIO_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:187
-=======
-E:\gateway\src/main.c:181
->>>>>>> .r16
     I2C_Cmd(I2C2, ENABLE);
   1e:	4803      	ldr	r0, [pc, #12]	(2c <I2C_FreeBus+0x2c>)
   20:	2101      	movs	r1, #1
   22:	f7ff fffe 	bl	0 <I2C_Cmd>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:188
-=======
-E:\gateway\src/main.c:182
->>>>>>> .r16
 }
   26:	bd0e      	pop	{r1, r2, r3, pc}
   28:	40010c00 	.word	0x40010c00
@@ -2015,11 +1170,7 @@ Disassembly of section .text.I2C_PullUp:
 
 00000000 <I2C_PullUp>:
 I2C_PullUp():
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:168
-=======
-E:\gateway\src/main.c:162
->>>>>>> .r16
   I2C_ITConfig(I2C2, I2C_IT_EVT | I2C_IT_BUF | I2C_IT_ERR , ENABLE);
   I2C_StretchClockCmd(I2C2,ENABLE);
   I2C_Cmd(I2C2, ENABLE);
@@ -2027,32 +1178,20 @@ E:\gateway\src/main.c:162
 
 void I2C_PullUp (void){
    0:	b513      	push	{r0, r1, r4, lr}
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:171
-=======
-E:\gateway\src/main.c:165
->>>>>>> .r16
     GPIO_InitTypeDef GPIO_InitStructure;
 
     I2C_Cmd(I2C2, DISABLE);
    2:	2100      	movs	r1, #0
    4:	480f      	ldr	r0, [pc, #60]	(44 <I2C_PullUp+0x44>)
    6:	f7ff fffe 	bl	0 <I2C_Cmd>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:175
-=======
-E:\gateway\src/main.c:169
->>>>>>> .r16
     GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_10 | GPIO_Pin_11;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_Init(GPIOB, &GPIO_InitStructure);
    a:	4c0f      	ldr	r4, [pc, #60]	(48 <I2C_PullUp+0x48>)
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:172
-=======
-E:\gateway\src/main.c:166
->>>>>>> .r16
 
 void I2C_PullUp (void){
     GPIO_InitTypeDef GPIO_InitStructure;
@@ -2061,27 +1200,15 @@ void I2C_PullUp (void){
     GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_10 | GPIO_Pin_11;
    c:	f44f 6340 	mov.w	r3, #3072	; 0xc00
   10:	f8ad 3004 	strh.w	r3, [sp, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:173
-=======
-E:\gateway\src/main.c:167
->>>>>>> .r16
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   14:	2303      	movs	r3, #3
   16:	f88d 3006 	strb.w	r3, [sp, #6]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:175
-=======
-E:\gateway\src/main.c:169
->>>>>>> .r16
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_Init(GPIOB, &GPIO_InitStructure);
   1a:	4620      	mov	r0, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:174
-=======
-E:\gateway\src/main.c:168
->>>>>>> .r16
     GPIO_InitTypeDef GPIO_InitStructure;
 
     I2C_Cmd(I2C2, DISABLE);
@@ -2089,18 +1216,10 @@ E:\gateway\src/main.c:168
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
   1c:	330d      	adds	r3, #13
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:175
-=======
-E:\gateway\src/main.c:169
->>>>>>> .r16
     GPIO_Init(GPIOB, &GPIO_InitStructure);
   1e:	a901      	add	r1, sp, #4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:174
-=======
-E:\gateway\src/main.c:168
->>>>>>> .r16
     GPIO_InitTypeDef GPIO_InitStructure;
 
     I2C_Cmd(I2C2, DISABLE);
@@ -2108,38 +1227,22 @@ E:\gateway\src/main.c:168
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
   20:	f88d 3007 	strb.w	r3, [sp, #7]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:175
-=======
-E:\gateway\src/main.c:169
->>>>>>> .r16
     GPIO_Init(GPIOB, &GPIO_InitStructure);
   24:	f7ff fffe 	bl	0 <GPIO_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:176
-=======
-E:\gateway\src/main.c:170
->>>>>>> .r16
     GPIO_WriteBit(GPIOB, GPIO_Pin_10, (BitAction) 1 );
   28:	4620      	mov	r0, r4
   2a:	2201      	movs	r2, #1
   2c:	f44f 6180 	mov.w	r1, #1024	; 0x400
   30:	f7ff fffe 	bl	0 <GPIO_WriteBit>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:177
-=======
-E:\gateway\src/main.c:171
->>>>>>> .r16
     GPIO_WriteBit(GPIOB, GPIO_Pin_11, (BitAction) 1 );
   34:	4620      	mov	r0, r4
   36:	f44f 6100 	mov.w	r1, #2048	; 0x800
   3a:	2201      	movs	r2, #1
   3c:	f7ff fffe 	bl	0 <GPIO_WriteBit>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:178
-=======
-E:\gateway\src/main.c:172
->>>>>>> .r16
 }
   40:	bd1c      	pop	{r2, r3, r4, pc}
   42:	46c0      	nop			(mov r8, r8)
@@ -2149,11 +1252,7 @@ Disassembly of section .text.I2C_Initialize:
 
 00000000 <I2C_Initialize>:
 I2C_Initialize():
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:156
-=======
-E:\gateway\src/main.c:150
->>>>>>> .r16
     }
   }  
 }
@@ -2163,42 +1262,22 @@ void I2C_Initialize ( void ){
    0:	4912      	ldr	r1, [pc, #72]	(4c <I2C_Initialize+0x4c>)
    2:	f04f 0300 	mov.w	r3, #0	; 0x0
    6:	800b      	strh	r3, [r1, #0]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:157
-=======
-E:\gateway\src/main.c:151
->>>>>>> .r16
   I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_2;
    8:	f64b 73ff 	movw	r3, #49151	; 0xbfff
    c:	804b      	strh	r3, [r1, #2]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:158
-=======
-E:\gateway\src/main.c:152
->>>>>>> .r16
   I2C_InitStructure.I2C_OwnAddress1 = I2C2_SLAVE_ADDRESS7;
    e:	f04f 0304 	mov.w	r3, #4	; 0x4
   12:	808b      	strh	r3, [r1, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:159
-=======
-E:\gateway\src/main.c:153
->>>>>>> .r16
   I2C_InitStructure.I2C_Ack = I2C_Ack_Enable;
   14:	f44f 6380 	mov.w	r3, #1024	; 0x400
   18:	80cb      	strh	r3, [r1, #6]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:160
-=======
-E:\gateway\src/main.c:154
->>>>>>> .r16
   I2C_InitStructure.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
   1a:	f44f 4380 	mov.w	r3, #16384	; 0x4000
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:155
-=======
-E:\gateway\src/main.c:149
->>>>>>> .r16
         DMA_Cmd(DMA1_Channel4, ENABLE);
     }
   }  
@@ -2206,30 +1285,18 @@ E:\gateway\src/main.c:149
 
 void I2C_Initialize ( void ){
   1e:	b510      	push	{r4, lr}
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:160
-=======
-E:\gateway\src/main.c:154
->>>>>>> .r16
   I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;
   I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_2;
   I2C_InitStructure.I2C_OwnAddress1 = I2C2_SLAVE_ADDRESS7;
   I2C_InitStructure.I2C_Ack = I2C_Ack_Enable;
   I2C_InitStructure.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
   20:	810b      	strh	r3, [r1, #8]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:162
-=======
-E:\gateway\src/main.c:156
->>>>>>> .r16
   I2C_InitStructure.I2C_ClockSpeed = ClockSpeed100k;
   I2C_Init(I2C2, &I2C_InitStructure);
   22:	4c0b      	ldr	r4, [pc, #44]	(50 <I2C_Initialize+0x50>)
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:161
-=======
-E:\gateway\src/main.c:155
->>>>>>> .r16
   I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;
   I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_2;
   I2C_InitStructure.I2C_OwnAddress1 = I2C2_SLAVE_ADDRESS7;
@@ -2237,18 +1304,10 @@ E:\gateway\src/main.c:155
   I2C_InitStructure.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
   I2C_InitStructure.I2C_ClockSpeed = ClockSpeed100k;
   24:	4b0b      	ldr	r3, [pc, #44]	(54 <I2C_Initialize+0x54>)
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:162
-=======
-E:\gateway\src/main.c:156
->>>>>>> .r16
   I2C_Init(I2C2, &I2C_InitStructure);
   26:	4620      	mov	r0, r4
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:161
-=======
-E:\gateway\src/main.c:155
->>>>>>> .r16
   I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;
   I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_2;
   I2C_InitStructure.I2C_OwnAddress1 = I2C2_SLAVE_ADDRESS7;
@@ -2256,46 +1315,26 @@ E:\gateway\src/main.c:155
   I2C_InitStructure.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
   I2C_InitStructure.I2C_ClockSpeed = ClockSpeed100k;
   28:	60cb      	str	r3, [r1, #12]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:162
-=======
-E:\gateway\src/main.c:156
->>>>>>> .r16
   I2C_Init(I2C2, &I2C_InitStructure);
   2a:	f7ff fffe 	bl	0 <I2C_Init>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:163
-=======
-E:\gateway\src/main.c:157
->>>>>>> .r16
   I2C_ITConfig(I2C2, I2C_IT_EVT | I2C_IT_BUF | I2C_IT_ERR , ENABLE);
   2e:	4620      	mov	r0, r4
   30:	2201      	movs	r2, #1
   32:	f44f 61e0 	mov.w	r1, #1792	; 0x700
   36:	f7ff fffe 	bl	0 <I2C_ITConfig>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:164
-=======
-E:\gateway\src/main.c:158
->>>>>>> .r16
   I2C_StretchClockCmd(I2C2,ENABLE);
   3a:	4620      	mov	r0, r4
   3c:	2101      	movs	r1, #1
   3e:	f7ff fffe 	bl	0 <I2C_StretchClockCmd>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:165
-=======
-E:\gateway\src/main.c:159
->>>>>>> .r16
   I2C_Cmd(I2C2, ENABLE);
   42:	4620      	mov	r0, r4
   44:	2101      	movs	r1, #1
   46:	f7ff fffe 	bl	0 <I2C_Cmd>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:166
-=======
-E:\gateway\src/main.c:160
->>>>>>> .r16
 }
   4a:	bd10      	pop	{r4, pc}
   4c:	00000000 	.word	0x00000000
@@ -2305,11 +1344,7 @@ Disassembly of section .text.main:
 
 00000000 <main>:
 main():
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:79
-=======
-E:\gateway\src/main.c:76
->>>>>>> .r16
 * Input          : None
 * Output         : None
 * Return         : None
@@ -2317,55 +1352,27 @@ E:\gateway\src/main.c:76
 int main(void)
 {
    0:	b570      	push	{r4, r5, r6, lr}
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:82
-=======
-E:\gateway\src/main.c:79
->>>>>>> .r16
   u8 command_idx;
  
   RCC_Configuration();
    2:	f7ff fffe 	bl	0 <main>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:83
-=======
-E:\gateway\src/main.c:80
->>>>>>> .r16
   NVIC_Configuration();
    6:	f7ff fffe 	bl	0 <main>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:84
-=======
-E:\gateway\src/main.c:81
->>>>>>> .r16
   GPIO_Configuration();
    a:	f7ff fffe 	bl	0 <main>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:85
-=======
-E:\gateway\src/main.c:82
->>>>>>> .r16
   DMA_Configuration();
    e:	f7ff fffe 	bl	0 <main>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:86
-=======
-E:\gateway\src/main.c:83
->>>>>>> .r16
   USART_Init1();
   12:	f7ff fffe 	bl	0 <main>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:87
-=======
-E:\gateway\src/main.c:84
->>>>>>> .r16
   I2C_Initialize();
   16:	f7ff fffe 	bl	0 <main>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:93
-=======
-E:\gateway\src/main.c:90
->>>>>>> .r16
   //WdgSet();
 
   while (1)
@@ -2373,33 +1380,21 @@ E:\gateway\src/main.c:90
     // wait here til we have a DMA completion    
     __WFI();
   1a:	f7ff fffe 	bl	0 <__WFI>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:95
   
-=======
-E:\gateway\src/main.c:91
->>>>>>> .r16
     if ( ReceivedOK  == TRUE )
   1e:	4b3e      	ldr	r3, [pc, #248]	(118 <main+0x118>)
   20:	781b      	ldrb	r3, [r3, #0]
   22:	2b01      	cmp	r3, #1
   24:	d1f9      	bne.n	1a <main+0x1a>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:98
-=======
-E:\gateway\src/main.c:93
->>>>>>> .r16
     {
 #ifndef LOOPBACK  
         printf( "Bytes received from USB2I2C\n");
   26:	483d      	ldr	r0, [pc, #244]	(11c <main+0x11c>)
   28:	f7ff fffe 	bl	0 <puts>
   2c:	2500      	movs	r5, #0
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:102
-=======
-E:\gateway\src/main.c:97
->>>>>>> .r16
         //I2C_FreeBus();
         for ( command_idx = 0 ; command_idx < mainMAX_AMOUNT_OF_MSG ; command_idx++ )
         {
@@ -2410,68 +1405,40 @@ E:\gateway\src/main.c:97
   34:	1862      	adds	r2, r4, r1
   36:	2b00      	cmp	r3, #0
   38:	d054      	beq.n	e4 <main+0xe4>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:104
-=======
-E:\gateway\src/main.c:99
->>>>>>> .r16
             {
                 Command.command = Commands[command_idx].msg[0];
   3a:	5c63      	ldrb	r3, [r4, r1]
   3c:	4839      	ldr	r0, [pc, #228]	(124 <main+0x124>)
   3e:	7003      	strb	r3, [r0, #0]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:105
-=======
-E:\gateway\src/main.c:100
->>>>>>> .r16
                 Command.address = Commands[command_idx].msg[1];
   40:	7853      	ldrb	r3, [r2, #1]
   42:	7043      	strb	r3, [r0, #1]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:106
-=======
-E:\gateway\src/main.c:101
->>>>>>> .r16
                 Command.len_control = Commands[command_idx].msg[2];
   44:	01ab      	lsls	r3, r5, #6
   46:	3301      	adds	r3, #1
   48:	f814 3013 	ldrb.w	r3, [r4, r3, lsl #1]
   4c:	7083      	strb	r3, [r0, #2]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:107
-=======
-E:\gateway\src/main.c:102
->>>>>>> .r16
                 if ( Command.len_control != 0 )
   4e:	7883      	ldrb	r3, [r0, #2]
   50:	b11b      	cbz	r3, 5a <main+0x5a>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:109
-=======
-E:\gateway\src/main.c:104
->>>>>>> .r16
                 {
                     Command.control = (u8 *) &Commands[command_idx].msg[3];
   52:	1ccb      	adds	r3, r1, #3
   54:	18e3      	adds	r3, r4, r3
   56:	6043      	str	r3, [r0, #4]
   58:	e000      	b.n	5c <main+0x5c>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:113
-=======
-E:\gateway\src/main.c:108
->>>>>>> .r16
                 }
                 else
                 {
                     Command.control = NULL;
   5a:	6043      	str	r3, [r0, #4]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:115
-=======
-E:\gateway\src/main.c:110
->>>>>>> .r16
                 }
                 Command.len_data = Commands[command_idx].msg[3 + Command.len_control];
   5c:	4931      	ldr	r1, [pc, #196]	(124 <main+0x124>)
@@ -2482,19 +1449,11 @@ E:\gateway\src/main.c:110
   66:	18c3      	adds	r3, r0, r3
   68:	5ce3      	ldrb	r3, [r4, r3]
   6a:	720b      	strb	r3, [r1, #8]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:116
-=======
-E:\gateway\src/main.c:111
->>>>>>> .r16
                 if ( Command.len_data != 0 )
   6c:	7a0b      	ldrb	r3, [r1, #8]
   6e:	b12b      	cbz	r3, 7c <main+0x7c>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:118
-=======
-E:\gateway\src/main.c:113
->>>>>>> .r16
                 {
                     Command.data = (u8 *) &Commands[command_idx].msg[4 + Command.len_control];
   70:	788b      	ldrb	r3, [r1, #2]
@@ -2503,21 +1462,13 @@ E:\gateway\src/main.c:113
   76:	18e3      	adds	r3, r4, r3
   78:	60cb      	str	r3, [r1, #12]
   7a:	e000      	b.n	7e <main+0x7e>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:122
-=======
-E:\gateway\src/main.c:117
->>>>>>> .r16
                 }
                 else
                 {
                     Command.data = NULL;
   7c:	60cb      	str	r3, [r1, #12]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:125
-=======
-E:\gateway\src/main.c:120
->>>>>>> .r16
                 }
             
                 switch (Command.command)
@@ -2529,27 +1480,15 @@ E:\gateway\src/main.c:120
   88:	2b02      	cmp	r3, #2
   8a:	d12b      	bne.n	e4 <main+0xe4>
   8c:	e014      	b.n	b8 <main+0xb8>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:128
-=======
-E:\gateway\src/main.c:123
->>>>>>> .r16
                 {
                     case mainCMD_CORTEX_MASTER_TX:
                         Transmitter = TRUE;
   8e:	4b22      	ldr	r3, [pc, #136]	(118 <main+0x118>)
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:129
-=======
-E:\gateway\src/main.c:124
->>>>>>> .r16
                         I2C_GenerateSTART(I2C2, ENABLE);
   90:	4825      	ldr	r0, [pc, #148]	(128 <main+0x128>)
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:128
-=======
-E:\gateway\src/main.c:123
->>>>>>> .r16
                 }
             
                 switch (Command.command)
@@ -2557,103 +1496,62 @@ E:\gateway\src/main.c:123
                     case mainCMD_CORTEX_MASTER_TX:
                         Transmitter = TRUE;
   92:	7059      	strb	r1, [r3, #1]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:129
-=======
-E:\gateway\src/main.c:124
->>>>>>> .r16
                         I2C_GenerateSTART(I2C2, ENABLE);
   94:	f7ff fffe 	bl	0 <I2C_GenerateSTART>
   98:	e001      	b.n	6 <__WFI+0x6>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:130
-=======
-E:\gateway\src/main.c:125
->>>>>>> .r16
                         while ( ! I2CTxDone ) __WFI();
   9a:	f7ff fffe 	bl	0 <__WFI>
   9e:	4c1e      	ldr	r4, [pc, #120]	(118 <main+0x118>)
   a0:	78a3      	ldrb	r3, [r4, #2]
   a2:	2b00      	cmp	r3, #0
   a4:	d0f9      	beq.n	9a <main+0x9a>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:131
-=======
-E:\gateway\src/main.c:126
->>>>>>> .r16
                         printf( "%d bytes transmitted in command mode : %d\n",TxIdx,Command.command);
   a6:	4b1f      	ldr	r3, [pc, #124]	(124 <main+0x124>)
   a8:	4820      	ldr	r0, [pc, #128]	(12c <main+0x12c>)
   aa:	781a      	ldrb	r2, [r3, #0]
   ac:	88a1      	ldrh	r1, [r4, #4]
   ae:	f7ff fffe 	bl	0 <printf>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:132
-=======
-E:\gateway\src/main.c:127
->>>>>>> .r16
                         I2CTxDone = FALSE;    
   b2:	2300      	movs	r3, #0
   b4:	70a3      	strb	r3, [r4, #2]
   b6:	e015      	b.n	e4 <main+0xe4>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:135
-=======
-E:\gateway\src/main.c:130
->>>>>>> .r16
                         break;
                      case mainCMD_CORTEX_MASTER_RX:
                         Transmitter = FALSE;
   b8:	4b17      	ldr	r3, [pc, #92]	(118 <main+0x118>)
   ba:	2200      	movs	r2, #0
   bc:	705a      	strb	r2, [r3, #1]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:136
-=======
-E:\gateway\src/main.c:131
->>>>>>> .r16
                         I2C_GenerateSTART(I2C2, ENABLE);
   be:	481a      	ldr	r0, [pc, #104]	(128 <main+0x128>)
   c0:	2101      	movs	r1, #1
   c2:	f7ff fffe 	bl	0 <I2C_GenerateSTART>
   c6:	e001      	b.n	6 <__WFI+0x6>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:137
-=======
-E:\gateway\src/main.c:132
->>>>>>> .r16
                         while ( ! I2CRxDone )  __WFI(); 
   c8:	f7ff fffe 	bl	0 <__WFI>
   cc:	4c12      	ldr	r4, [pc, #72]	(118 <main+0x118>)
   ce:	79a3      	ldrb	r3, [r4, #6]
   d0:	2b00      	cmp	r3, #0
   d2:	d0f9      	beq.n	c8 <main+0xc8>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:138
-=======
-E:\gateway\src/main.c:133
->>>>>>> .r16
                         printf( "%d bytes received in command mode : %d\n",TxIdx,Command.command);    
   d4:	4b13      	ldr	r3, [pc, #76]	(124 <main+0x124>)
   d6:	4816      	ldr	r0, [pc, #88]	(130 <main+0x130>)
   d8:	781a      	ldrb	r2, [r3, #0]
   da:	88a1      	ldrh	r1, [r4, #4]
   dc:	f7ff fffe 	bl	0 <printf>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:139
-=======
-E:\gateway\src/main.c:134
->>>>>>> .r16
                         I2CRxDone = FALSE;
   e0:	2300      	movs	r3, #0
   e2:	71a3      	strb	r3, [r4, #6]
   e4:	3501      	adds	r5, #1
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:100
-=======
-E:\gateway\src/main.c:95
-    __WFI();
->>>>>>> .r16
     if ( ReceivedOK  == TRUE )
     {
 #ifndef LOOPBACK  
@@ -2662,11 +1560,7 @@ E:\gateway\src/main.c:95
         for ( command_idx = 0 ; command_idx < mainMAX_AMOUNT_OF_MSG ; command_idx++ )
   e6:	2d08      	cmp	r5, #8
   e8:	d1a1      	bne.n	2e <main+0x2e>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:146
-=======
-E:\gateway\src/main.c:141
->>>>>>> .r16
                      default:
                         break;
                 }        
@@ -2675,21 +1569,13 @@ E:\gateway\src/main.c:141
         printf("Sending to USB2I2C in progress\n");    
   ea:	4812      	ldr	r0, [pc, #72]	(134 <main+0x134>)
   ec:	f7ff fffe 	bl	0 <puts>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:148
 #endif    
-=======
-E:\gateway\src/main.c:142
->>>>>>> .r16
         ReceivedOK = FALSE;
   f0:	4a09      	ldr	r2, [pc, #36]	(118 <main+0x118>)
   f2:	2300      	movs	r3, #0
   f4:	7013      	strb	r3, [r2, #0]
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:149
-=======
-E:\gateway\src/main.c:143
->>>>>>> .r16
         GPIO_WriteBit(GPIOC, GPIO_Pin_2, (BitAction)((1-GPIO_ReadOutputDataBit(GPIOC, GPIO_Pin_2))));    
   f6:	2104      	movs	r1, #4
   f8:	480f      	ldr	r0, [pc, #60]	(138 <main+0x138>)
@@ -2699,11 +1585,7 @@ E:\gateway\src/main.c:143
  104:	480c      	ldr	r0, [pc, #48]	(138 <main+0x138>)
  106:	b2d2      	uxtb	r2, r2
  108:	f7ff fffe 	bl	0 <GPIO_WriteBit>
-<<<<<<< .mine
 C:\cortex\gateway\src/main.c:150
-=======
-E:\gateway\src/main.c:144
->>>>>>> .r16
         DMA_Cmd(DMA1_Channel4, ENABLE);
  10c:	480b      	ldr	r0, [pc, #44]	(13c <main+0x13c>)
  10e:	2101      	movs	r1, #1
