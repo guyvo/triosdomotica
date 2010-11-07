@@ -634,8 +634,8 @@ void I2C2_EV_IRQHandler(void)
             I2C_ClearFlag(I2C2, I2C_IT_AF);
         break;
         default:
-            if (evt !=0)
-                *((volatile unsigned int*)0xE000ED0C) = 0x05FA0004;
+           // if (evt !=0)
+             //   *((volatile unsigned int*)0xE000ED0C) = 0x05FA0004;
         break;
     }
 }

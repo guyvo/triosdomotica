@@ -466,9 +466,9 @@
     <variable Name="StartUpCounter" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="200" Addr="0x34000014" TI="5081"/>
    </function >
    <type Family="array" ID="7010" toTI="5074"/>
-   <variable Name="APBAHBPrescTable" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="111" Addr="0x80045DC" TI="7043"/>
+   <variable Name="APBAHBPrescTable" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="111" Addr="0x80045CC" TI="7043"/>
    <type Family="array" ID="7048" toTI="5074"/>
-   <variable Name="ADCPrescTable" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="112" Addr="0x80045EC" TI="7081"/>
+   <variable Name="ADCPrescTable" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="112" Addr="0x80045DC" TI="7081"/>
   </module>
   <module Name="C:\cortex\gateway\src\stm32f10x_usart.c" >
    <type Family="Base" Name="long int" ID="7124"/>

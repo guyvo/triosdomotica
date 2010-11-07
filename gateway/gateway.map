@@ -1,4 +1,3 @@
-<<<<<<< .mine
 Archive member included because of file (symbol)
 
 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
@@ -683,7 +682,7 @@ END GROUP
  *(.flashtext)
                 0x080001e4                . = ALIGN (0x4)
 
-.text           0x080001e8     0x47cc
+.text           0x080001e8     0x47bc
                 0x080001e8                . = ALIGN (0x4)
  *(.text)
  .text          0x080001e8       0x7a C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
@@ -971,331 +970,331 @@ END GROUP
                 0x08000fac       0x60 C:\cortex\gateway\stm32f10x_it.o
                 0x08000fac                I2C2_ER_IRQHandler
  .text.I2C2_EV_IRQHandler
-                0x0800100c      0x1a4 C:\cortex\gateway\stm32f10x_it.o
+                0x0800100c      0x194 C:\cortex\gateway\stm32f10x_it.o
                 0x0800100c                I2C2_EV_IRQHandler
  .text.DMA1_Channel5_IRQHandler
-                0x080011b0       0x44 C:\cortex\gateway\stm32f10x_it.o
-                0x080011b0                DMA1_Channel5_IRQHandler
+                0x080011a0       0x44 C:\cortex\gateway\stm32f10x_it.o
+                0x080011a0                DMA1_Channel5_IRQHandler
  .text.DMA1_Channel4_IRQHandler
-                0x080011f4       0x48 C:\cortex\gateway\stm32f10x_it.o
-                0x080011f4                DMA1_Channel4_IRQHandler
+                0x080011e4       0x48 C:\cortex\gateway\stm32f10x_it.o
+                0x080011e4                DMA1_Channel4_IRQHandler
  .text.WWDG_IRQHandler
-                0x0800123c       0x10 C:\cortex\gateway\stm32f10x_it.o
-                0x0800123c                WWDG_IRQHandler
+                0x0800122c       0x10 C:\cortex\gateway\stm32f10x_it.o
+                0x0800122c                WWDG_IRQHandler
  .text.__io_putchar
-                0x0800124c       0x20 C:\cortex\gateway\main.o
-                0x0800124c                __io_putchar
+                0x0800123c       0x20 C:\cortex\gateway\main.o
+                0x0800123c                __io_putchar
  .text.DMA_Configuration
-                0x0800126c       0xa4 C:\cortex\gateway\main.o
-                0x0800126c                DMA_Configuration
+                0x0800125c       0xa4 C:\cortex\gateway\main.o
+                0x0800125c                DMA_Configuration
  .text.NVIC_Configuration
-                0x08001310       0x64 C:\cortex\gateway\main.o
-                0x08001310                NVIC_Configuration
+                0x08001300       0x64 C:\cortex\gateway\main.o
+                0x08001300                NVIC_Configuration
  .text.GPIO_Configuration
-                0x08001374       0xbc C:\cortex\gateway\main.o
-                0x08001374                GPIO_Configuration
+                0x08001364       0xbc C:\cortex\gateway\main.o
+                0x08001364                GPIO_Configuration
  .text.RCC_Configuration
-                0x08001430       0x98 C:\cortex\gateway\main.o
-                0x08001430                RCC_Configuration
+                0x08001420       0x98 C:\cortex\gateway\main.o
+                0x08001420                RCC_Configuration
  .text.USART_Init1
-                0x080014c8       0x84 C:\cortex\gateway\main.o
-                0x080014c8                USART_Init1
+                0x080014b8       0x84 C:\cortex\gateway\main.o
+                0x080014b8                USART_Init1
  .text.I2C_Initialize
-                0x0800154c       0x58 C:\cortex\gateway\main.o
-                0x0800154c                I2C_Initialize
- .text.main     0x080015a4      0x140 C:\cortex\gateway\main.o
-                0x080015a4                main
+                0x0800153c       0x58 C:\cortex\gateway\main.o
+                0x0800153c                I2C_Initialize
+ .text.main     0x08001594      0x140 C:\cortex\gateway\main.o
+                0x08001594                main
  .text.RCC_HSEConfig
-                0x080016e4       0x38 C:\cortex\gateway\stm32f10x_rcc.o
-                0x080016e4                RCC_HSEConfig
+                0x080016d4       0x38 C:\cortex\gateway\stm32f10x_rcc.o
+                0x080016d4                RCC_HSEConfig
  .text.RCC_PLLConfig
-                0x0800171c       0x14 C:\cortex\gateway\stm32f10x_rcc.o
-                0x0800171c                RCC_PLLConfig
+                0x0800170c       0x14 C:\cortex\gateway\stm32f10x_rcc.o
+                0x0800170c                RCC_PLLConfig
  .text.RCC_PLLCmd
-                0x08001730        0xc C:\cortex\gateway\stm32f10x_rcc.o
-                0x08001730                RCC_PLLCmd
+                0x08001720        0xc C:\cortex\gateway\stm32f10x_rcc.o
+                0x08001720                RCC_PLLCmd
  .text.RCC_SYSCLKConfig
-                0x0800173c       0x14 C:\cortex\gateway\stm32f10x_rcc.o
-                0x0800173c                RCC_SYSCLKConfig
+                0x0800172c       0x14 C:\cortex\gateway\stm32f10x_rcc.o
+                0x0800172c                RCC_SYSCLKConfig
  .text.RCC_GetSYSCLKSource
-                0x08001750       0x10 C:\cortex\gateway\stm32f10x_rcc.o
-                0x08001750                RCC_GetSYSCLKSource
+                0x08001740       0x10 C:\cortex\gateway\stm32f10x_rcc.o
+                0x08001740                RCC_GetSYSCLKSource
  .text.RCC_HCLKConfig
-                0x08001760       0x14 C:\cortex\gateway\stm32f10x_rcc.o
-                0x08001760                RCC_HCLKConfig
+                0x08001750       0x14 C:\cortex\gateway\stm32f10x_rcc.o
+                0x08001750                RCC_HCLKConfig
  .text.RCC_PCLK1Config
-                0x08001774       0x14 C:\cortex\gateway\stm32f10x_rcc.o
-                0x08001774                RCC_PCLK1Config
+                0x08001764       0x14 C:\cortex\gateway\stm32f10x_rcc.o
+                0x08001764                RCC_PCLK1Config
  .text.RCC_PCLK2Config
-                0x08001788       0x14 C:\cortex\gateway\stm32f10x_rcc.o
-                0x08001788                RCC_PCLK2Config
+                0x08001778       0x14 C:\cortex\gateway\stm32f10x_rcc.o
+                0x08001778                RCC_PCLK2Config
  .text.RCC_GetClocksFreq
-                0x0800179c       0x98 C:\cortex\gateway\stm32f10x_rcc.o
-                0x0800179c                RCC_GetClocksFreq
+                0x0800178c       0x98 C:\cortex\gateway\stm32f10x_rcc.o
+                0x0800178c                RCC_GetClocksFreq
  .text.RCC_AHBPeriphClockCmd
-                0x08001834       0x1c C:\cortex\gateway\stm32f10x_rcc.o
-                0x08001834                RCC_AHBPeriphClockCmd
+                0x08001824       0x1c C:\cortex\gateway\stm32f10x_rcc.o
+                0x08001824                RCC_AHBPeriphClockCmd
  .text.RCC_APB2PeriphClockCmd
-                0x08001850       0x1c C:\cortex\gateway\stm32f10x_rcc.o
-                0x08001850                RCC_APB2PeriphClockCmd
+                0x08001840       0x1c C:\cortex\gateway\stm32f10x_rcc.o
+                0x08001840                RCC_APB2PeriphClockCmd
  .text.RCC_APB1PeriphClockCmd
-                0x0800186c       0x1c C:\cortex\gateway\stm32f10x_rcc.o
-                0x0800186c                RCC_APB1PeriphClockCmd
+                0x0800185c       0x1c C:\cortex\gateway\stm32f10x_rcc.o
+                0x0800185c                RCC_APB1PeriphClockCmd
  .text.RCC_GetFlagStatus
-                0x08001888       0x2c C:\cortex\gateway\stm32f10x_rcc.o
-                0x08001888                RCC_GetFlagStatus
+                0x08001878       0x2c C:\cortex\gateway\stm32f10x_rcc.o
+                0x08001878                RCC_GetFlagStatus
  .text.RCC_WaitForHSEStartUp
-                0x080018b4       0x2c C:\cortex\gateway\stm32f10x_rcc.o
-                0x080018b4                RCC_WaitForHSEStartUp
+                0x080018a4       0x2c C:\cortex\gateway\stm32f10x_rcc.o
+                0x080018a4                RCC_WaitForHSEStartUp
  .text.USART_Cmd
-                0x080018e0       0x1c C:\cortex\gateway\stm32f10x_usart.o
-                0x080018e0                USART_Cmd
+                0x080018d0       0x1c C:\cortex\gateway\stm32f10x_usart.o
+                0x080018d0                USART_Cmd
  .text.USART_DMACmd
-                0x080018fc       0x18 C:\cortex\gateway\stm32f10x_usart.o
-                0x080018fc                USART_DMACmd
+                0x080018ec       0x18 C:\cortex\gateway\stm32f10x_usart.o
+                0x080018ec                USART_DMACmd
  .text.USART_SendData
-                0x08001914        0x8 C:\cortex\gateway\stm32f10x_usart.o
-                0x08001914                USART_SendData
+                0x08001904        0x8 C:\cortex\gateway\stm32f10x_usart.o
+                0x08001904                USART_SendData
  .text.USART_GetFlagStatus
-                0x0800191c        0xc C:\cortex\gateway\stm32f10x_usart.o
-                0x0800191c                USART_GetFlagStatus
+                0x0800190c        0xc C:\cortex\gateway\stm32f10x_usart.o
+                0x0800190c                USART_GetFlagStatus
  .text.USART_Init
-                0x08001928       0x8c C:\cortex\gateway\stm32f10x_usart.o
-                0x08001928                USART_Init
- .text.I2C_Cmd  0x080019b4       0x1c C:\cortex\gateway\stm32f10x_i2c.o
-                0x080019b4                I2C_Cmd
+                0x08001918       0x8c C:\cortex\gateway\stm32f10x_usart.o
+                0x08001918                USART_Init
+ .text.I2C_Cmd  0x080019a4       0x1c C:\cortex\gateway\stm32f10x_i2c.o
+                0x080019a4                I2C_Cmd
  .text.I2C_GenerateSTART
-                0x080019d0       0x1c C:\cortex\gateway\stm32f10x_i2c.o
-                0x080019d0                I2C_GenerateSTART
+                0x080019c0       0x1c C:\cortex\gateway\stm32f10x_i2c.o
+                0x080019c0                I2C_GenerateSTART
  .text.I2C_GenerateSTOP
-                0x080019ec       0x1c C:\cortex\gateway\stm32f10x_i2c.o
-                0x080019ec                I2C_GenerateSTOP
+                0x080019dc       0x1c C:\cortex\gateway\stm32f10x_i2c.o
+                0x080019dc                I2C_GenerateSTOP
  .text.I2C_AcknowledgeConfig
-                0x08001a08       0x1c C:\cortex\gateway\stm32f10x_i2c.o
-                0x08001a08                I2C_AcknowledgeConfig
+                0x080019f8       0x1c C:\cortex\gateway\stm32f10x_i2c.o
+                0x080019f8                I2C_AcknowledgeConfig
  .text.I2C_ITConfig
-                0x08001a24       0x18 C:\cortex\gateway\stm32f10x_i2c.o
-                0x08001a24                I2C_ITConfig
+                0x08001a14       0x18 C:\cortex\gateway\stm32f10x_i2c.o
+                0x08001a14                I2C_ITConfig
  .text.I2C_SendData
-                0x08001a3c        0x4 C:\cortex\gateway\stm32f10x_i2c.o
-                0x08001a3c                I2C_SendData
+                0x08001a2c        0x4 C:\cortex\gateway\stm32f10x_i2c.o
+                0x08001a2c                I2C_SendData
  .text.I2C_ReceiveData
-                0x08001a40        0x8 C:\cortex\gateway\stm32f10x_i2c.o
-                0x08001a40                I2C_ReceiveData
+                0x08001a30        0x8 C:\cortex\gateway\stm32f10x_i2c.o
+                0x08001a30                I2C_ReceiveData
  .text.I2C_Send7bitAddress
-                0x08001a48       0x10 C:\cortex\gateway\stm32f10x_i2c.o
-                0x08001a48                I2C_Send7bitAddress
+                0x08001a38       0x10 C:\cortex\gateway\stm32f10x_i2c.o
+                0x08001a38                I2C_Send7bitAddress
  .text.I2C_StretchClockCmd
-                0x08001a58       0x1c C:\cortex\gateway\stm32f10x_i2c.o
-                0x08001a58                I2C_StretchClockCmd
+                0x08001a48       0x1c C:\cortex\gateway\stm32f10x_i2c.o
+                0x08001a48                I2C_StretchClockCmd
  .text.I2C_GetLastEvent
-                0x08001a74       0x14 C:\cortex\gateway\stm32f10x_i2c.o
-                0x08001a74                I2C_GetLastEvent
+                0x08001a64       0x14 C:\cortex\gateway\stm32f10x_i2c.o
+                0x08001a64                I2C_GetLastEvent
  .text.I2C_ClearFlag
-                0x08001a88        0x8 C:\cortex\gateway\stm32f10x_i2c.o
-                0x08001a88                I2C_ClearFlag
+                0x08001a78        0x8 C:\cortex\gateway\stm32f10x_i2c.o
+                0x08001a78                I2C_ClearFlag
  .text.I2C_GetITStatus
-                0x08001a90       0x20 C:\cortex\gateway\stm32f10x_i2c.o
-                0x08001a90                I2C_GetITStatus
+                0x08001a80       0x20 C:\cortex\gateway\stm32f10x_i2c.o
+                0x08001a80                I2C_GetITStatus
  .text.I2C_ClearITPendingBit
-                0x08001ab0        0x8 C:\cortex\gateway\stm32f10x_i2c.o
-                0x08001ab0                I2C_ClearITPendingBit
+                0x08001aa0        0x8 C:\cortex\gateway\stm32f10x_i2c.o
+                0x08001aa0                I2C_ClearITPendingBit
  .text.I2C_Init
-                0x08001ab8       0xdc C:\cortex\gateway\stm32f10x_i2c.o
-                0x08001ab8                I2C_Init
- .text.printf   0x08001b94       0x20 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
-                0x08001b94                printf
- *fill*         0x08001bb4        0x4 00
+                0x08001aa8       0xdc C:\cortex\gateway\stm32f10x_i2c.o
+                0x08001aa8                I2C_Init
+ .text.printf   0x08001b84       0x20 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
+                0x08001b84                printf
+ *fill*         0x08001ba4        0x4 00
  .text._vfprintf_r
-                0x08001bb8      0xcf8 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
-                0x08001bb8                _vfprintf_r
+                0x08001ba8      0xcf8 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+                0x08001ba8                _vfprintf_r
  .text.vfprintf
-                0x080028b0       0x20 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
-                0x080028b0                vfprintf
- .text.puts     0x080028d0       0x38 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
-                0x080028d0                puts
+                0x080028a0       0x20 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+                0x080028a0                vfprintf
+ .text.puts     0x080028c0       0x38 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
+                0x080028c0                puts
  .text._SMALL_PRINTF_puts
-                0x08002908       0x58 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
-                0x08002908                _SMALL_PRINTF_puts
- .text.quorem   0x08002960      0x17c C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
- *fill*         0x08002adc        0x4 00
- .text._dtoa_r  0x08002ae0      0xf60 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
-                0x08002ae0                _dtoa_r
+                0x080028f8       0x58 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
+                0x080028f8                _SMALL_PRINTF_puts
+ .text.quorem   0x08002950      0x17c C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+ *fill*         0x08002acc        0x4 00
+ .text._dtoa_r  0x08002ad0      0xf60 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+                0x08002ad0                _dtoa_r
  .text._wcsrtombs_r
-                0x08003a40       0x90 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
-                0x08003a40                _wcsrtombs_r
+                0x08003a30       0x90 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
+                0x08003a30                _wcsrtombs_r
  .text._wcrtomb_r
-                0x08003ad0        0x4 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
-                0x08003ad0                _wcrtomb_r
+                0x08003ac0        0x4 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
+                0x08003ac0                _wcrtomb_r
  .text._small_hi0bits
-                0x08003ad4       0x54 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
-                0x08003ad4                _small_hi0bits
+                0x08003ac4       0x54 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08003ac4                _small_hi0bits
  .text._small_lo0bits
-                0x08003b28       0x68 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
-                0x08003b28                _small_lo0bits
+                0x08003b18       0x68 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08003b18                _small_lo0bits
  .text._small_i2b
-                0x08003b90       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
-                0x08003b90                _small_i2b
+                0x08003b80       0x14 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08003b80                _small_i2b
  .text._small_multiply
-                0x08003ba4      0x160 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
-                0x08003ba4                _small_multiply
+                0x08003b94      0x160 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08003b94                _small_multiply
  .text._small_lshift
-                0x08003d04       0xa4 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
-                0x08003d04                _small_lshift
+                0x08003cf4       0xa4 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08003cf4                _small_lshift
  .text.__small_mcmp
-                0x08003da8       0x44 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
-                0x08003da8                __small_mcmp
+                0x08003d98       0x44 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08003d98                __small_mcmp
  .text.__small_mdiff
-                0x08003dec       0xfc C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
-                0x08003dec                __small_mdiff
+                0x08003ddc       0xfc C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08003ddc                __small_mdiff
  .text._small_d2b
-                0x08003ee8       0xd4 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
-                0x08003ee8                _small_d2b
+                0x08003ed8       0xd4 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08003ed8                _small_d2b
  .text._small_multadd
-                0x08003fbc       0xa8 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
-                0x08003fbc                _small_multadd
+                0x08003fac       0xa8 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08003fac                _small_multadd
  .text._small_pow5mult
-                0x08004064      0x138 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
-                0x08004064                _small_pow5mult
+                0x08004054      0x138 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08004054                _small_pow5mult
  .text.DMA_DeInit
-                0x0800419c      0x18c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
-                0x0800419c                DMA_DeInit
+                0x0800418c      0x18c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+                0x0800418c                DMA_DeInit
  .text.DMA_Init
-                0x08004328       0x40 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
-                0x08004328                DMA_Init
- .text.DMA_Cmd  0x08004368       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
-                0x08004368                DMA_Cmd
+                0x08004318       0x40 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+                0x08004318                DMA_Init
+ .text.DMA_Cmd  0x08004358       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+                0x08004358                DMA_Cmd
  .text.DMA_ITConfig
-                0x08004380       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
-                0x08004380                DMA_ITConfig
+                0x08004370       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+                0x08004370                DMA_ITConfig
  .text.DMA_GetITStatus
-                0x08004398       0x28 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
-                0x08004398                DMA_GetITStatus
+                0x08004388       0x28 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+                0x08004388                DMA_GetITStatus
  .text.DMA_ClearITPendingBit
-                0x080043c0       0x20 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
-                0x080043c0                DMA_ClearITPendingBit
+                0x080043b0       0x20 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+                0x080043b0                DMA_ClearITPendingBit
  .text.FLASH_SetLatency
-                0x080043e0       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
-                0x080043e0                FLASH_SetLatency
+                0x080043d0       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+                0x080043d0                FLASH_SetLatency
  .text.FLASH_PrefetchBufferCmd
-                0x080043f8       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
-                0x080043f8                FLASH_PrefetchBufferCmd
+                0x080043e8       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+                0x080043e8                FLASH_PrefetchBufferCmd
  .text.GPIO_Init
-                0x08004410       0xd8 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
-                0x08004410                GPIO_Init
+                0x08004400       0xd8 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x08004400                GPIO_Init
  .text.GPIO_ReadOutputDataBit
-                0x080044e8        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
-                0x080044e8                GPIO_ReadOutputDataBit
+                0x080044d8        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x080044d8                GPIO_ReadOutputDataBit
  .text.GPIO_WriteBit
-                0x080044f4        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
-                0x080044f4                GPIO_WriteBit
+                0x080044e4        0xc C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+                0x080044e4                GPIO_WriteBit
  .text.NVIC_PriorityGroupConfig
-                0x08004500       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_nvic.o)
-                0x08004500                NVIC_PriorityGroupConfig
+                0x080044f0       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_nvic.o)
+                0x080044f0                NVIC_PriorityGroupConfig
  .text.NVIC_Init
-                0x08004518       0x8c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_nvic.o)
-                0x08004518                NVIC_Init
+                0x08004508       0x8c C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_nvic.o)
+                0x08004508                NVIC_Init
  .text.NVIC_SetVectorTable
-                0x080045a4       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_nvic.o)
-                0x080045a4                NVIC_SetVectorTable
+                0x08004594       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_nvic.o)
+                0x08004594                NVIC_SetVectorTable
  .text.WWDG_SetCounter
-                0x080045bc       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
-                0x080045bc                WWDG_SetCounter
+                0x080045ac       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+                0x080045ac                WWDG_SetCounter
  .text.WWDG_ClearFlag
-                0x080045cc       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
-                0x080045cc                WWDG_ClearFlag
+                0x080045bc       0x10 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+                0x080045bc                WWDG_ClearFlag
  *(.rodata)
- .rodata        0x080045dc       0x14 C:\cortex\gateway\stm32f10x_rcc.o
- .rodata        0x080045f0      0x184 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
- .rodata        0x08004774       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
- *fill*         0x0800478c        0x4 00
- .rodata        0x08004790      0x128 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
-                0x08004790                __small_mprec_tens
-                0x08004890                __small_mprec_tinytens
-                0x08004868                __small_mprec_bigtens
+ .rodata        0x080045cc       0x14 C:\cortex\gateway\stm32f10x_rcc.o
+ .rodata        0x080045e0      0x184 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+ .rodata        0x08004764       0x18 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+ *fill*         0x0800477c        0x4 00
+ .rodata        0x08004780      0x128 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08004780                __small_mprec_tens
+                0x08004880                __small_mprec_tinytens
+                0x08004858                __small_mprec_bigtens
  *(.rodata*)
  .rodata.str1.1
-                0x080048b8       0x8e C:\cortex\gateway\main.o
- *fill*         0x08004946        0x2 00
+                0x080048a8       0x8e C:\cortex\gateway\main.o
+ *fill*         0x08004936        0x2 00
  .rodata.str1.4
-                0x08004948       0x5a C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+                0x08004938       0x5a C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
                                  0x5c (size before relaxing)
- *fill*         0x080049a2        0x2 00
+ *fill*         0x08004992        0x2 00
  .rodata.str1.4
-                0x080049a4        0x9 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+                0x08004994        0x9 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
                                  0x14 (size before relaxing)
- *fill*         0x080049ad        0x3 00
+ *fill*         0x0800499d        0x3 00
  .rodata.str1.4
-                0x080049b0        0x4 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+                0x080049a0        0x4 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
  *(.glue_7)
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\crt0_STM32x_HD.o
- .glue_7        0x080049b4        0x0 C:\cortex\gateway\stm32f10x_it.o
- .glue_7        0x080049b4        0x0 C:\cortex\gateway\main.o
- .glue_7        0x080049b4        0x0 C:\cortex\gateway\stm32f10x_rcc.o
- .glue_7        0x080049b4        0x0 C:\cortex\gateway\stm32f10x_usart.o
- .glue_7        0x080049b4        0x0 C:\cortex\gateway\stm32f10x_i2c.o
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_nvic.o)
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
- .glue_7        0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
- .glue_7        0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
- .glue_7        0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
- .glue_7        0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
- .glue_7        0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
- .glue_7        0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
- .glue_7        0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
- .glue_7        0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_udivsi3.o)
- .glue_7        0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_divsi3.o)
- .glue_7        0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_dvmd_tls.o)
- .glue_7        0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
- .glue_7        0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
- .glue_7        0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
- .glue_7        0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\crt0_STM32x_HD.o
+ .glue_7        0x080049a4        0x0 C:\cortex\gateway\stm32f10x_it.o
+ .glue_7        0x080049a4        0x0 C:\cortex\gateway\main.o
+ .glue_7        0x080049a4        0x0 C:\cortex\gateway\stm32f10x_rcc.o
+ .glue_7        0x080049a4        0x0 C:\cortex\gateway\stm32f10x_usart.o
+ .glue_7        0x080049a4        0x0 C:\cortex\gateway\stm32f10x_i2c.o
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_nvic.o)
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .glue_7        0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
+ .glue_7        0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .glue_7        0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
+ .glue_7        0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .glue_7        0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
+ .glue_7        0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
+ .glue_7        0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+ .glue_7        0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_udivsi3.o)
+ .glue_7        0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_divsi3.o)
+ .glue_7        0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_dvmd_tls.o)
+ .glue_7        0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .glue_7        0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .glue_7        0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .glue_7        0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
  *(.glue_7t)
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\crt0_STM32x_HD.o
- .glue_7t       0x080049b4        0x0 C:\cortex\gateway\stm32f10x_it.o
- .glue_7t       0x080049b4        0x0 C:\cortex\gateway\main.o
- .glue_7t       0x080049b4        0x0 C:\cortex\gateway\stm32f10x_rcc.o
- .glue_7t       0x080049b4        0x0 C:\cortex\gateway\stm32f10x_usart.o
- .glue_7t       0x080049b4        0x0 C:\cortex\gateway\stm32f10x_i2c.o
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_nvic.o)
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
- .glue_7t       0x080049b4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
- .glue_7t       0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
- .glue_7t       0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
- .glue_7t       0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
- .glue_7t       0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
- .glue_7t       0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
- .glue_7t       0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
- .glue_7t       0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_udivsi3.o)
- .glue_7t       0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_divsi3.o)
- .glue_7t       0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_dvmd_tls.o)
- .glue_7t       0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
- .glue_7t       0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
- .glue_7t       0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
- .glue_7t       0x080049b4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
-                0x080049b4                . = ALIGN (0x4)
-                0x080049b4                _etext = .
-                0x080049b4                _sidata = _etext
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\crt0_STM32x_HD.o
+ .glue_7t       0x080049a4        0x0 C:\cortex\gateway\stm32f10x_it.o
+ .glue_7t       0x080049a4        0x0 C:\cortex\gateway\main.o
+ .glue_7t       0x080049a4        0x0 C:\cortex\gateway\stm32f10x_rcc.o
+ .glue_7t       0x080049a4        0x0 C:\cortex\gateway\stm32f10x_usart.o
+ .glue_7t       0x080049a4        0x0 C:\cortex\gateway\stm32f10x_i2c.o
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_dma.o)
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_flash.o)
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_gpio.o)
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_nvic.o)
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(stm32f10x_wwdg.o)
+ .glue_7t       0x080049a4        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib(cortexm3_macro.o)
+ .glue_7t       0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .glue_7t       0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
+ .glue_7t       0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .glue_7t       0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
+ .glue_7t       0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
+ .glue_7t       0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+ .glue_7t       0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_udivsi3.o)
+ .glue_7t       0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_divsi3.o)
+ .glue_7t       0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_dvmd_tls.o)
+ .glue_7t       0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .glue_7t       0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .glue_7t       0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .glue_7t       0x080049a4        0x0 c:/program files/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a(_arm_fixdfsi.o)
+                0x080049a4                . = ALIGN (0x4)
+                0x080049a4                _etext = .
+                0x080049a4                _sidata = _etext
 
 .vfp11_veneer   0x20000000        0x0
  .vfp11_veneer  0x20000000        0x0 C:\Program Files\Raisonance\Ride\Lib\ARM\crt0_STM32x_HD.o
@@ -1391,7 +1390,7 @@ END GROUP
                 0x00000000                . = ALIGN (0x4)
                 0x00000000                _e_endflash = .
 
-.data           0x20000000       0xf4 load address 0x080049b4
+.data           0x20000000       0xf4 load address 0x080049a4
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
                 0x20000000                _data = .
@@ -1402,11 +1401,11 @@ END GROUP
  *(.RAMtext)
                 0x200000f4                . = ALIGN (0x4)
                 0x200000f4                _edata = .
-                0x08004aa8                _eidata = ((_sidata + _edata) - _sdata)
+                0x08004a98                _eidata = ((_sidata + _edata) - _sdata)
                 0x08008000                _lastdataromaddress = 0x8008000
                 0x00000000                toobig = (_eidata > _lastdataromaddress)?!!!!!!!!! FLASH IS FULL !!!!!!!!!:0x0
 
-.bss            0x200000f4      0x4f4 load address 0x08004aa8
+.bss            0x200000f4      0x4f4 load address 0x08004a98
                 0x200000f4                . = ALIGN (0x4)
                 0x200000f4                _sbss = .
                 0x200000f4                _bss = .
@@ -1437,7 +1436,7 @@ END GROUP
                 0x200005e8                PROVIDE (end, _ebss)
                 0x200005e8                PROVIDE (_end, _ebss)
 
-._usrstack      0x200005e8      0x100 load address 0x08004f9c
+._usrstack      0x200005e8      0x100 load address 0x08004f8c
                 0x200005e8                . = ALIGN (0x4)
                 0x200005e8                _susrstack = .
                 0x200006e8                . = (. + _Minimum_Stack_Size)
@@ -1571,13 +1570,13 @@ END GROUP
  .debug_abbrev  0x00000560      0x1fa C:\cortex\gateway\stm32f10x_usart.o
  .debug_abbrev  0x0000075a      0x1a1 C:\cortex\gateway\stm32f10x_i2c.o
 
-.debug_line     0x00000000     0x1300
+.debug_line     0x00000000     0x12fe
  *(.debug_line)
- .debug_line    0x00000000      0x59e C:\cortex\gateway\stm32f10x_it.o
- .debug_line    0x0000059e      0x2f8 C:\cortex\gateway\main.o
- .debug_line    0x00000896      0x353 C:\cortex\gateway\stm32f10x_rcc.o
- .debug_line    0x00000be9      0x375 C:\cortex\gateway\stm32f10x_usart.o
- .debug_line    0x00000f5e      0x3a2 C:\cortex\gateway\stm32f10x_i2c.o
+ .debug_line    0x00000000      0x59c C:\cortex\gateway\stm32f10x_it.o
+ .debug_line    0x0000059c      0x2f8 C:\cortex\gateway\main.o
+ .debug_line    0x00000894      0x353 C:\cortex\gateway\stm32f10x_rcc.o
+ .debug_line    0x00000be7      0x375 C:\cortex\gateway\stm32f10x_usart.o
+ .debug_line    0x00000f5c      0x3a2 C:\cortex\gateway\stm32f10x_i2c.o
 
 .debug_frame    0x00000000      0xc34
  *(.debug_frame)
@@ -1675,5 +1674,3 @@ OUTPUT(C:\cortex\gateway\gateway.elf elf32-littlearm)
  .debug_ranges  0x000002a8      0x110 C:\cortex\gateway\stm32f10x_rcc.o
  .debug_ranges  0x000003b8       0xe8 C:\cortex\gateway\stm32f10x_usart.o
  .debug_ranges  0x000004a0      0x110 C:\cortex\gateway\stm32f10x_i2c.o
-=======
->>>>>>> .r16
