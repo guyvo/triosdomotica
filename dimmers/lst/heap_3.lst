@@ -1,0 +1,83 @@
+
+D:\cortex\dimmers\hex\heap_3.o:     file format elf32-littlearm
+D:\cortex\dimmers\hex\heap_3.o
+
+Disassembly of section .text.pvPortMalloc:
+
+00000000 <pvPortMalloc>:
+pvPortMalloc():
+D:\cortex\dimmers\rtos\src/heap_3.c:72
+#include "task.h"
+
+/*-----------------------------------------------------------*/
+
+void *pvPortMalloc( size_t xWantedSize )
+{
+   0:	b580      	push	{r7, lr}
+   2:	b084      	sub	sp, #16
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\cortex\dimmers\rtos\src/heap_3.c:75
+void *pvReturn;
+
+	vTaskSuspendAll();
+   8:	f7ff fffe 	bl	0 <vTaskSuspendAll>
+D:\cortex\dimmers\rtos\src/heap_3.c:77
+	{
+		pvReturn = malloc( xWantedSize );
+   c:	6878      	ldr	r0, [r7, #4]
+   e:	f7ff fffe 	bl	0 <malloc>
+  12:	4603      	mov	r3, r0
+  14:	60fb      	str	r3, [r7, #12]
+D:\cortex\dimmers\rtos\src/heap_3.c:79
+	}
+	xTaskResumeAll();
+  16:	f7ff fffe 	bl	0 <xTaskResumeAll>
+D:\cortex\dimmers\rtos\src/heap_3.c:81
+
+	return pvReturn;
+  1a:	68fb      	ldr	r3, [r7, #12]
+D:\cortex\dimmers\rtos\src/heap_3.c:82
+}
+  1c:	4618      	mov	r0, r3
+  1e:	f107 0710 	add.w	r7, r7, #16	; 0x10
+  22:	46bd      	mov	sp, r7
+  24:	bd80      	pop	{r7, pc}
+  26:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.vPortFree:
+
+00000000 <vPortFree>:
+vPortFree():
+D:\cortex\dimmers\rtos\src/heap_3.c:86
+/*-----------------------------------------------------------*/
+
+void vPortFree( void *pv )
+{
+   0:	b580      	push	{r7, lr}
+   2:	b082      	sub	sp, #8
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\cortex\dimmers\rtos\src/heap_3.c:87
+	if( pv )
+   8:	687b      	ldr	r3, [r7, #4]
+   a:	2b00      	cmp	r3, #0
+   c:	d006      	beq.n	1c <vPortFree+0x1c>
+D:\cortex\dimmers\rtos\src/heap_3.c:89
+	{
+		vTaskSuspendAll();
+   e:	f7ff fffe 	bl	0 <vTaskSuspendAll>
+D:\cortex\dimmers\rtos\src/heap_3.c:91
+		{
+			free( pv );
+  12:	6878      	ldr	r0, [r7, #4]
+  14:	f7ff fffe 	bl	0 <free>
+D:\cortex\dimmers\rtos\src/heap_3.c:93
+		}
+		xTaskResumeAll();
+  18:	f7ff fffe 	bl	0 <xTaskResumeAll>
+D:\cortex\dimmers\rtos\src/heap_3.c:95
+	}
+}
+  1c:	f107 0708 	add.w	r7, r7, #8	; 0x8
+  20:	46bd      	mov	sp, r7
+  22:	bd80      	pop	{r7, pc}

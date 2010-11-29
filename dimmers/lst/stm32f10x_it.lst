@@ -1,0 +1,2412 @@
+
+C:\cortex\dimmers\hex\stm32f10x_it.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\stm32f10x_it.o
+
+Disassembly of section .text.NMIException:
+
+00000000 <NMIException>:
+NMIException():
+C:\cortex\dimmers\src/stm32f10x_it.c:131
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void NMIException(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.HardFaultException:
+
+00000000 <HardFaultException>:
+HardFaultException():
+C:\cortex\dimmers\src/stm32f10x_it.c:147
+    static vu32 fault;
+
+  /* Go to infinite loop when Hard Fault exception occurs */
+  while (1)
+  {
+    fault = REG_HARD_FAULT & 0b11000000000000000000000000000010;
+   0:	4b03      	ldr	r3, [pc, #12]	(10 <HardFaultException+0x10>)
+   2:	681a      	ldr	r2, [r3, #0]
+C:\cortex\dimmers\src/stm32f10x_it.c:1153
+{
+
+    static bool tim = FALSE;
+   
+    ADC_ClearITPendingBit(ADC3, ADC_IT_EOC);
+    Xi[0] = ZeroCross;
+   4:	4b03      	ldr	r3, [pc, #12]	(14 <HardFaultException+0x14>)
+   6:	ea02 0303 	and.w	r3, r2, r3
+C:\cortex\dimmers\src/stm32f10x_it.c:1154
+    fir_16by16_stm32(Yi , Xi , &co , 4);
+   a:	4a03      	ldr	r2, [pc, #12]	(18 <HardFaultException+0x18>)
+C:\cortex\dimmers\src/stm32f10x_it.c:1153
+{
+
+    static bool tim = FALSE;
+   
+    ADC_ClearITPendingBit(ADC3, ADC_IT_EOC);
+    Xi[0] = ZeroCross;
+   c:	6013      	str	r3, [r2, #0]
+C:\cortex\dimmers\src/stm32f10x_it.c:1154
+    fir_16by16_stm32(Yi , Xi , &co , 4);
+   e:	e7f7      	b.n	0 <HardFaultException>
+  10:	e000ed2c 	.word	0xe000ed2c
+  14:	c0000002 	.word	0xc0000002
+C:\cortex\dimmers\src/stm32f10x_it.c:1155
+    Yi[0] >>= 15;
+  18:	00          	.byte	0x00
+  19:	00          	.byte	0x00
+	...
+Disassembly of section .text.MemManageException:
+
+00000000 <MemManageException>:
+MemManageException():
+C:\cortex\dimmers\src/stm32f10x_it.c:160
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void MemManageException(void)
+{
+   0:	e7fe      	b.n	0 <MemManageException>
+C:\cortex\dimmers\src/stm32f10x_it.c:1157
+    ADC_ClearITPendingBit(ADC3, ADC_IT_EOC);
+    Xi[0] = ZeroCross;
+    fir_16by16_stm32(Yi , Xi , &co , 4);
+    Yi[0] >>= 15;
+    
+    if ( TIM_GetCounter(TIM2) > TIM_CHECK_ON_HALF )
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.BusFaultException:
+
+00000000 <BusFaultException>:
+BusFaultException():
+C:\cortex\dimmers\src/stm32f10x_it.c:175
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void BusFaultException(void)
+{
+   0:	e7fe      	b.n	0 <BusFaultException>
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.UsageFaultException:
+
+00000000 <UsageFaultException>:
+UsageFaultException():
+C:\cortex\dimmers\src/stm32f10x_it.c:190
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void UsageFaultException(void)
+{
+   0:	e7fe      	b.n	0 <UsageFaultException>
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DebugMonitor:
+
+00000000 <DebugMonitor>:
+DebugMonitor():
+C:\cortex\dimmers\src/stm32f10x_it.c:206
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DebugMonitor(void)
+{
+}
+   0:	4770      	bx	lr
+EXTI15_10_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:1039
+    if(EXTI_GetITStatus(EXTI_BUTTON_6) != RESET)
+    {
+        if ( xTaskGetSchedulerState() == taskSCHEDULER_RUNNING )
+            xSemaphoreGiveFromISR ( xSemaphoreButtonArrayHandle[5] , &xFromHigher );
+
+        if ( xFromHigher == pdTRUE ){
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.SVCHandler:
+
+00000000 <SVCHandler>:
+SVCHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:217
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void SVCHandler(void)
+{
+}
+   0:	4770      	bx	lr
+EXTI9_5_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:562
+            xFromHigher = pdFALSE;
+        }
+
+        EXTI_ClearITPendingBit(EXTI_Line6);
+    }
+    if(EXTI_GetITStatus(EXTI_BUTTON_2) != RESET)
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.PendSVC:
+
+00000000 <PendSVC>:
+PendSVC():
+C:\cortex\dimmers\src/stm32f10x_it.c:228
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void PendSVC(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.SysTickHandler:
+
+00000000 <SysTickHandler>:
+SysTickHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:239
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void SysTickHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TAMPER_IRQHandler:
+
+00000000 <TAMPER_IRQHandler>:
+TAMPER_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:281
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void TAMPER_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.FLASH_IRQHandler:
+
+00000000 <FLASH_IRQHandler>:
+FLASH_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:323
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void FLASH_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_IRQHandler:
+
+00000000 <RCC_IRQHandler>:
+RCC_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:334
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void RCC_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.EXTI0_IRQHandler:
+
+00000000 <EXTI0_IRQHandler>:
+EXTI0_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:345
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void EXTI0_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.EXTI1_IRQHandler:
+
+00000000 <EXTI1_IRQHandler>:
+EXTI1_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:356
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void EXTI1_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.EXTI2_IRQHandler:
+
+00000000 <EXTI2_IRQHandler>:
+EXTI2_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:367
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void EXTI2_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.EXTI3_IRQHandler:
+
+00000000 <EXTI3_IRQHandler>:
+EXTI3_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:378
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void EXTI3_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.EXTI4_IRQHandler:
+
+00000000 <EXTI4_IRQHandler>:
+EXTI4_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:389
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void EXTI4_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA1_Channel1_IRQHandler:
+
+00000000 <DMA1_Channel1_IRQHandler>:
+DMA1_Channel1_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:400
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DMA1_Channel1_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA1_Channel2_IRQHandler:
+
+00000000 <DMA1_Channel2_IRQHandler>:
+DMA1_Channel2_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:411
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DMA1_Channel2_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA1_Channel3_IRQHandler:
+
+00000000 <DMA1_Channel3_IRQHandler>:
+DMA1_Channel3_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:422
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DMA1_Channel3_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA1_Channel4_IRQHandler:
+
+00000000 <DMA1_Channel4_IRQHandler>:
+DMA1_Channel4_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:433
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DMA1_Channel4_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA1_Channel5_IRQHandler:
+
+00000000 <DMA1_Channel5_IRQHandler>:
+DMA1_Channel5_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:444
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DMA1_Channel5_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA1_Channel6_IRQHandler:
+
+00000000 <DMA1_Channel6_IRQHandler>:
+DMA1_Channel6_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:455
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DMA1_Channel6_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA1_Channel7_IRQHandler:
+
+00000000 <DMA1_Channel7_IRQHandler>:
+DMA1_Channel7_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:466
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DMA1_Channel7_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.USB_HP_CAN_TX_IRQHandler:
+
+00000000 <USB_HP_CAN_TX_IRQHandler>:
+USB_HP_CAN_TX_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:502
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void USB_HP_CAN_TX_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.USB_LP_CAN_RX0_IRQHandler:
+
+00000000 <USB_LP_CAN_RX0_IRQHandler>:
+USB_LP_CAN_RX0_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:514
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void USB_LP_CAN_RX0_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.CAN_RX1_IRQHandler:
+
+00000000 <CAN_RX1_IRQHandler>:
+CAN_RX1_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:525
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void CAN_RX1_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.CAN_SCE_IRQHandler:
+
+00000000 <CAN_SCE_IRQHandler>:
+CAN_SCE_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:536
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void CAN_SCE_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TIM1_BRK_IRQHandler:
+
+00000000 <TIM1_BRK_IRQHandler>:
+TIM1_BRK_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:611
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void TIM1_BRK_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TIM1_TRG_COM_IRQHandler:
+
+00000000 <TIM1_TRG_COM_IRQHandler>:
+TIM1_TRG_COM_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:636
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void TIM1_TRG_COM_IRQHandler(void)
+{
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TIM1_CC_IRQHandler:
+
+00000000 <TIM1_CC_IRQHandler>:
+TIM1_CC_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:647
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void TIM1_CC_IRQHandler(void)
+{
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.SPI1_IRQHandler:
+
+00000000 <SPI1_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:963
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void SPI1_IRQHandler(void)
+{
+}
+   0:	4770      	bx	lr
+SPI1_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.SPI2_IRQHandler:
+
+00000000 <SPI2_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+SPI2_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.USART1_IRQHandler:
+
+00000000 <USART1_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+USART1_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.USART2_IRQHandler:
+
+00000000 <USART2_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+USART2_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.USART3_IRQHandler:
+
+00000000 <USART3_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+USART3_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RTCAlarm_IRQHandler:
+
+00000000 <RTCAlarm_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+RTCAlarm_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.USBWakeUp_IRQHandler:
+
+00000000 <USBWakeUp_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+USBWakeUp_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TIM8_BRK_IRQHandler:
+
+00000000 <TIM8_BRK_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+TIM8_BRK_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TIM8_UP_IRQHandler:
+
+00000000 <TIM8_UP_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+TIM8_UP_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TIM8_TRG_COM_IRQHandler:
+
+00000000 <TIM8_TRG_COM_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+TIM8_TRG_COM_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TIM8_CC_IRQHandler:
+
+00000000 <TIM8_CC_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+TIM8_CC_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.FSMC_IRQHandler:
+
+00000000 <FSMC_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+FSMC_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.SDIO_IRQHandler:
+
+00000000 <SDIO_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+SDIO_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TIM5_IRQHandler:
+
+00000000 <TIM5_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+TIM5_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.SPI3_IRQHandler:
+
+00000000 <SPI3_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+SPI3_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.UART4_IRQHandler:
+
+00000000 <UART4_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+UART4_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.UART5_IRQHandler:
+
+00000000 <UART5_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+UART5_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TIM6_IRQHandler:
+
+00000000 <TIM6_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+TIM6_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TIM7_IRQHandler:
+
+00000000 <TIM7_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+TIM7_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA2_Channel1_IRQHandler:
+
+00000000 <DMA2_Channel1_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+DMA2_Channel1_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA2_Channel2_IRQHandler:
+
+00000000 <DMA2_Channel2_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+DMA2_Channel2_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA2_Channel3_IRQHandler:
+
+00000000 <DMA2_Channel3_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+DMA2_Channel3_IRQHandler():
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.DMA2_Channel4_5_IRQHandler:
+
+00000000 <DMA2_Channel4_5_IRQHandler>:
+DMA2_Channel4_5_IRQHandler():
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.ADC3_IRQHandler:
+
+00000000 <ADC3_IRQHandler>:
+   0:	b510      	push	{r4, lr}
+ADC3_IRQHandler():
+   2:	482e      	ldr	r0, [pc, #184]	(bc <ADC3_IRQHandler+0xbc>)
+NMIException():
+C:\cortex\dimmers\src/stm32f10x_it.c:131
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void NMIException(void)
+{
+}
+   4:	f44f 7108 	mov.w	r1, #544	; 0x220
+HardFaultException():
+C:\cortex\dimmers\src/stm32f10x_it.c:147
+    static vu32 fault;
+
+  /* Go to infinite loop when Hard Fault exception occurs */
+  while (1)
+  {
+    fault = REG_HARD_FAULT & 0b11000000000000000000000000000010;
+   8:	f7ff fffe 	bl	0 <ADC_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:1153
+{
+
+    static bool tim = FALSE;
+   
+    ADC_ClearITPendingBit(ADC3, ADC_IT_EOC);
+    Xi[0] = ZeroCross;
+   c:	4b2c      	ldr	r3, [pc, #176]	(c0 <ADC3_IRQHandler+0xc0>)
+   e:	492d      	ldr	r1, [pc, #180]	(c4 <ADC3_IRQHandler+0xc4>)
+  10:	881b      	ldrh	r3, [r3, #0]
+C:\cortex\dimmers\src/stm32f10x_it.c:1154
+    fir_16by16_stm32(Yi , Xi , &co , 4);
+  12:	4c2d      	ldr	r4, [pc, #180]	(c8 <ADC3_IRQHandler+0xc8>)
+C:\cortex\dimmers\src/stm32f10x_it.c:1153
+{
+
+    static bool tim = FALSE;
+   
+    ADC_ClearITPendingBit(ADC3, ADC_IT_EOC);
+    Xi[0] = ZeroCross;
+  14:	800b      	strh	r3, [r1, #0]
+C:\cortex\dimmers\src/stm32f10x_it.c:1154
+    fir_16by16_stm32(Yi , Xi , &co , 4);
+  16:	4620      	mov	r0, r4
+  18:	2304      	movs	r3, #4
+  1a:	4a2c      	ldr	r2, [pc, #176]	(cc <ADC3_IRQHandler+0xcc>)
+  1c:	f7ff fffe 	bl	0 <fir_16by16_stm32>
+C:\cortex\dimmers\src/stm32f10x_it.c:1155
+    Yi[0] >>= 15;
+  20:	6823      	ldr	r3, [r4, #0]
+C:\cortex\dimmers\src/stm32f10x_it.c:1157
+    
+    if ( TIM_GetCounter(TIM2) > TIM_CHECK_ON_HALF )
+  22:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+ADC3_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:1155
+    static bool tim = FALSE;
+   
+    ADC_ClearITPendingBit(ADC3, ADC_IT_EOC);
+    Xi[0] = ZeroCross;
+    fir_16by16_stm32(Yi , Xi , &co , 4);
+    Yi[0] >>= 15;
+  26:	13db      	asrs	r3, r3, #15
+MemManageException():
+C:\cortex\dimmers\src/stm32f10x_it.c:160
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void MemManageException(void)
+{
+  28:	6023      	str	r3, [r4, #0]
+ADC3_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:1157
+    ADC_ClearITPendingBit(ADC3, ADC_IT_EOC);
+    Xi[0] = ZeroCross;
+    fir_16by16_stm32(Yi , Xi , &co , 4);
+    Yi[0] >>= 15;
+    
+    if ( TIM_GetCounter(TIM2) > TIM_CHECK_ON_HALF )
+  2a:	f7ff fffe 	bl	0 <TIM_GetCounter>
+  2e:	f241 3388 	movw	r3, #5000	; 0x1388
+  32:	4298      	cmp	r0, r3
+  34:	d902      	bls.n	3c <ADC3_IRQHandler+0x3c>
+C:\cortex\dimmers\src/stm32f10x_it.c:1158
+        tim = TRUE;
+  36:	4b26      	ldr	r3, [pc, #152]	(d0 <ADC3_IRQHandler+0xd0>)
+  38:	2201      	movs	r2, #1
+  3a:	711a      	strb	r2, [r3, #4]
+C:\cortex\dimmers\src/stm32f10x_it.c:1160
+
+    if (    (Yi[0] < ( theZero + ADC_LEVEL_DIF )) 
+  3c:	4b22      	ldr	r3, [pc, #136]	(c8 <ADC3_IRQHandler+0xc8>)
+  3e:	6819      	ldr	r1, [r3, #0]
+  40:	4b24      	ldr	r3, [pc, #144]	(d4 <ADC3_IRQHandler+0xd4>)
+  42:	f9b3 2000 	ldrsh.w	r2, [r3]
+  46:	f102 0308 	add.w	r3, r2, #8	; 0x8
+  4a:	4299      	cmp	r1, r3
+  4c:	da0b      	bge.n	66 <ADC3_IRQHandler+0x66>
+  4e:	f1a2 0308 	sub.w	r3, r2, #8	; 0x8
+  52:	4299      	cmp	r1, r3
+  54:	dd07      	ble.n	66 <ADC3_IRQHandler+0x66>
+C:\cortex\dimmers\src/stm32f10x_it.c:1163
+        &&  (Yi[0] > ( theZero - ADC_LEVEL_DIF )) ) 
+    {
+        if ( tim ) TimResetAll();
+  56:	4b1e      	ldr	r3, [pc, #120]	(d0 <ADC3_IRQHandler+0xd0>)
+  58:	791b      	ldrb	r3, [r3, #4]
+  5a:	b10b      	cbz	r3, 60 <ADC3_IRQHandler+0x60>
+  5c:	f7ff fffe 	bl	0 <TimResetAll>
+C:\cortex\dimmers\src/stm32f10x_it.c:1164
+        tim = FALSE;
+  60:	4b1b      	ldr	r3, [pc, #108]	(d0 <ADC3_IRQHandler+0xd0>)
+  62:	2200      	movs	r2, #0
+  64:	711a      	strb	r2, [r3, #4]
+C:\cortex\dimmers\src/stm32f10x_it.c:1167
+    }
+
+    mem_shift(Xi,68);
+  66:	4c17      	ldr	r4, [pc, #92]	(c4 <ADC3_IRQHandler+0xc4>)
+  68:	2144      	movs	r1, #68
+  6a:	4620      	mov	r0, r4
+  6c:	f7ff fffe 	bl	0 <mem_shift>
+C:\cortex\dimmers\src/stm32f10x_it.c:1169
+
+    if (counterMinMax++ <= SAMPLES_MIN_MAX )
+  70:	4a19      	ldr	r2, [pc, #100]	(d8 <ADC3_IRQHandler+0xd8>)
+  72:	8811      	ldrh	r1, [r2, #0]
+  74:	1c4b      	adds	r3, r1, #1
+  76:	8013      	strh	r3, [r2, #0]
+  78:	f649 4340 	movw	r3, #40000	; 0x9c40
+  7c:	4299      	cmp	r1, r3
+  7e:	d81b      	bhi.n	b8 <ADC3_IRQHandler+0xb8>
+C:\cortex\dimmers\src/stm32f10x_it.c:1171
+    {
+        if (Xi[0] > theMax ) theMax = Xi[0];
+  80:	4916      	ldr	r1, [pc, #88]	(dc <ADC3_IRQHandler+0xdc>)
+  82:	8820      	ldrh	r0, [r4, #0]
+  84:	f9b1 2000 	ldrsh.w	r2, [r1]
+  88:	b203      	sxth	r3, r0
+  8a:	429a      	cmp	r2, r3
+  8c:	bfb8      	it	lt
+  8e:	8008      	strhlt	r0, [r1, #0]
+C:\cortex\dimmers\src/stm32f10x_it.c:1172
+        if (Xi[0] < theMin ) theMin = Xi[0];
+  90:	4913      	ldr	r1, [pc, #76]	(e0 <ADC3_IRQHandler+0xe0>)
+  92:	b203      	sxth	r3, r0
+  94:	f9b1 2000 	ldrsh.w	r2, [r1]
+  98:	429a      	cmp	r2, r3
+C:\cortex\dimmers\src/stm32f10x_it.c:1173
+        theZero = (theMax - theMin)/2 + theMin;
+  9a:	4b11      	ldr	r3, [pc, #68]	(e0 <ADC3_IRQHandler+0xe0>)
+C:\cortex\dimmers\src/stm32f10x_it.c:1172
+    mem_shift(Xi,68);
+
+    if (counterMinMax++ <= SAMPLES_MIN_MAX )
+    {
+        if (Xi[0] > theMax ) theMax = Xi[0];
+        if (Xi[0] < theMin ) theMin = Xi[0];
+  9c:	bfc8      	it	gt
+  9e:	8008      	strhgt	r0, [r1, #0]
+UsageFaultException():
+C:\cortex\dimmers\src/stm32f10x_it.c:190
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void UsageFaultException(void)
+{
+  a0:	8819      	ldrh	r1, [r3, #0]
+ADC3_IRQHandler():
+  a2:	4b0e      	ldr	r3, [pc, #56]	(dc <ADC3_IRQHandler+0xdc>)
+  a4:	b20a      	sxth	r2, r1
+  a6:	f9b3 3000 	ldrsh.w	r3, [r3]
+  aa:	1a9b      	subs	r3, r3, r2
+  ac:	2202      	movs	r2, #2
+  ae:	fb93 f3f2 	sdiv	r3, r3, r2
+  b2:	4a08      	ldr	r2, [pc, #32]	(d4 <ADC3_IRQHandler+0xd4>)
+  b4:	185b      	adds	r3, r3, r1
+  b6:	8013      	strh	r3, [r2, #0]
+C:\cortex\dimmers\src/stm32f10x_it.c:1176
+        if (Xi[0] > theMax ) theMax = Xi[0];
+        if (Xi[0] < theMin ) theMin = Xi[0];
+        theZero = (theMax - theMin)/2 + theMin;
+    }
+
+}
+  b8:	bd10      	pop	{r4, pc}
+  ba:	46c0      	nop			(mov r8, r8)
+  bc:	40013c00 	.word	0x40013c00
+	...
+Disassembly of section .text.EXTI15_10_IRQHandler:
+
+00000000 <EXTI15_10_IRQHandler>:
+EXTI15_10_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:1017
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void EXTI15_10_IRQHandler(void)
+{
+   0:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:1019
+    static portBASE_TYPE xFromHigher;
+    xFromHigher = pdFALSE;
+   2:	4d1e      	ldr	r5, [pc, #120]	(7c <EXTI15_10_IRQHandler+0x7c>)
+C:\cortex\dimmers\src/stm32f10x_it.c:1176
+        if (Xi[0] > theMax ) theMax = Xi[0];
+        if (Xi[0] < theMin ) theMin = Xi[0];
+        theZero = (theMax - theMin)/2 + theMin;
+    }
+
+}
+   4:	2400      	movs	r4, #0
+C:\cortex\dimmers\src/stm32f10x_it.c:1021
+void EXTI15_10_IRQHandler(void)
+{
+    static portBASE_TYPE xFromHigher;
+    xFromHigher = pdFALSE;
+
+    if(EXTI_GetITStatus(EXTI_BUTTON_5) != RESET)
+   6:	f44f 6080 	mov.w	r0, #1024	; 0x400
+C:\cortex\dimmers\src/stm32f10x_it.c:1019
+* Return         : None
+*******************************************************************************/
+void EXTI15_10_IRQHandler(void)
+{
+    static portBASE_TYPE xFromHigher;
+    xFromHigher = pdFALSE;
+   a:	60ac      	str	r4, [r5, #8]
+C:\cortex\dimmers\src/stm32f10x_it.c:1021
+
+    if(EXTI_GetITStatus(EXTI_BUTTON_5) != RESET)
+   c:	f7ff fffe 	bl	0 <EXTI_GetITStatus>
+  10:	b1b8      	cbz	r0, 32 <xTaskGetSchedulerState+0x32>
+C:\cortex\dimmers\src/stm32f10x_it.c:1023
+    {
+        if ( xTaskGetSchedulerState() == taskSCHEDULER_RUNNING )
+  12:	f7ff fffe 	bl	0 <xTaskGetSchedulerState>
+  16:	2801      	cmp	r0, #1
+  18:	d107      	bne.n	2a <EXTI15_10_IRQHandler+0x2a>
+C:\cortex\dimmers\src/stm32f10x_it.c:1024
+            xSemaphoreGiveFromISR ( xSemaphoreButtonArrayHandle[4] , &xFromHigher );
+  1a:	4b19      	ldr	r3, [pc, #100]	(80 <EXTI15_10_IRQHandler+0x80>)
+  1c:	4621      	mov	r1, r4
+  1e:	6918      	ldr	r0, [r3, #16]
+  20:	f105 0208 	add.w	r2, r5, #8	; 0x8
+  24:	4623      	mov	r3, r4
+  26:	f7ff fffe 	bl	0 <xQueueGenericSendFromISR>
+C:\cortex\dimmers\src/stm32f10x_it.c:1026
+    
+        if ( xFromHigher == pdTRUE ){
+  2a:	4c14      	ldr	r4, [pc, #80]	(7c <EXTI15_10_IRQHandler+0x7c>)
+  2c:	68a3      	ldr	r3, [r4, #8]
+  2e:	2b01      	cmp	r3, #1
+  30:	d103      	bne.n	3a <EXTI15_10_IRQHandler+0x3a>
+C:\cortex\dimmers\src/stm32f10x_it.c:1027
+            vPortYieldFromISR();
+  32:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+C:\cortex\dimmers\src/stm32f10x_it.c:1028
+            xFromHigher = pdFALSE;
+  36:	2300      	movs	r3, #0
+  38:	60a3      	str	r3, [r4, #8]
+C:\cortex\dimmers\src/stm32f10x_it.c:1031
+        }
+
+        EXTI_ClearITPendingBit(EXTI_Line10);
+  3a:	f44f 6080 	mov.w	r0, #1024	; 0x400
+  3e:	f7ff fffe 	bl	0 <EXTI_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:1034
+    }
+
+    if(EXTI_GetITStatus(EXTI_BUTTON_6) != RESET)
+  42:	f44f 6000 	mov.w	r0, #2048	; 0x800
+  46:	f7ff fffe 	bl	0 <EXTI_GetITStatus>
+  4a:	b1b0      	cbz	r0, 30 <xTaskGetSchedulerState+0x30>
+C:\cortex\dimmers\src/stm32f10x_it.c:1036
+    {
+        if ( xTaskGetSchedulerState() == taskSCHEDULER_RUNNING )
+  4c:	f7ff fffe 	bl	0 <xTaskGetSchedulerState>
+  50:	2801      	cmp	r0, #1
+  52:	d106      	bne.n	62 <EXTI15_10_IRQHandler+0x62>
+C:\cortex\dimmers\src/stm32f10x_it.c:1037
+            xSemaphoreGiveFromISR ( xSemaphoreButtonArrayHandle[5] , &xFromHigher );
+  54:	4b0a      	ldr	r3, [pc, #40]	(80 <EXTI15_10_IRQHandler+0x80>)
+  56:	2100      	movs	r1, #0
+  58:	6958      	ldr	r0, [r3, #20]
+  5a:	4a0a      	ldr	r2, [pc, #40]	(84 <EXTI15_10_IRQHandler+0x84>)
+  5c:	460b      	mov	r3, r1
+  5e:	f7ff fffe 	bl	0 <xQueueGenericSendFromISR>
+C:\cortex\dimmers\src/stm32f10x_it.c:1039
+
+        if ( xFromHigher == pdTRUE ){
+  62:	4c06      	ldr	r4, [pc, #24]	(7c <EXTI15_10_IRQHandler+0x7c>)
+  64:	68a3      	ldr	r3, [r4, #8]
+  66:	2b01      	cmp	r3, #1
+  68:	d103      	bne.n	72 <EXTI15_10_IRQHandler+0x72>
+C:\cortex\dimmers\src/stm32f10x_it.c:1040
+            vPortYieldFromISR();
+  6a:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+C:\cortex\dimmers\src/stm32f10x_it.c:1041
+            xFromHigher = pdFALSE;
+  6e:	2300      	movs	r3, #0
+  70:	60a3      	str	r3, [r4, #8]
+C:\cortex\dimmers\src/stm32f10x_it.c:1044
+        }
+
+        EXTI_ClearITPendingBit(EXTI_Line11);
+  72:	f44f 6000 	mov.w	r0, #2048	; 0x800
+  76:	f7ff fffe 	bl	0 <EXTI_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:1046
+    }
+}
+  7a:	bd70      	pop	{r4, r5, r6, pc}
+	...
+  84:	00000008 	.word	0x00000008
+Disassembly of section .text.EXTI9_5_IRQHandler:
+
+00000000 <EXTI9_5_IRQHandler>:
+EXTI9_5_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:546
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void EXTI9_5_IRQHandler(void)
+{
+   0:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:548
+    static portBASE_TYPE xFromHigher;
+    xFromHigher = pdFALSE;
+   2:	4d38      	ldr	r5, [pc, #224]	(e4 <EXTI9_5_IRQHandler+0xe4>)
+   4:	2400      	movs	r4, #0
+C:\cortex\dimmers\src/stm32f10x_it.c:550
+    
+    if(EXTI_GetITStatus(EXTI_BUTTON_1) != RESET)
+   6:	2040      	movs	r0, #64
+C:\cortex\dimmers\src/stm32f10x_it.c:548
+* Return         : None
+*******************************************************************************/
+void EXTI9_5_IRQHandler(void)
+{
+    static portBASE_TYPE xFromHigher;
+    xFromHigher = pdFALSE;
+   8:	60ec      	str	r4, [r5, #12]
+C:\cortex\dimmers\src/stm32f10x_it.c:550
+    
+    if(EXTI_GetITStatus(EXTI_BUTTON_1) != RESET)
+   a:	f7ff fffe 	bl	0 <EXTI_GetITStatus>
+   e:	b1b0      	cbz	r0, 30 <xTaskGetSchedulerState+0x30>
+C:\cortex\dimmers\src/stm32f10x_it.c:552
+    {
+        if ( xTaskGetSchedulerState() == taskSCHEDULER_RUNNING )
+  10:	f7ff fffe 	bl	0 <xTaskGetSchedulerState>
+  14:	2801      	cmp	r0, #1
+  16:	d107      	bne.n	28 <EXTI9_5_IRQHandler+0x28>
+C:\cortex\dimmers\src/stm32f10x_it.c:553
+            xSemaphoreGiveFromISR ( xSemaphoreButtonArrayHandle[0] , &xFromHigher );
+  18:	4b33      	ldr	r3, [pc, #204]	(e8 <EXTI9_5_IRQHandler+0xe8>)
+  1a:	4621      	mov	r1, r4
+  1c:	6818      	ldr	r0, [r3, #0]
+  1e:	f105 020c 	add.w	r2, r5, #12	; 0xc
+  22:	4623      	mov	r3, r4
+  24:	f7ff fffe 	bl	0 <xQueueGenericSendFromISR>
+C:\cortex\dimmers\src/stm32f10x_it.c:555
+
+        if ( xFromHigher == pdTRUE ){
+  28:	4c2e      	ldr	r4, [pc, #184]	(e4 <EXTI9_5_IRQHandler+0xe4>)
+  2a:	68e3      	ldr	r3, [r4, #12]
+  2c:	2b01      	cmp	r3, #1
+  2e:	d103      	bne.n	38 <EXTI9_5_IRQHandler+0x38>
+C:\cortex\dimmers\src/stm32f10x_it.c:556
+            vPortYieldFromISR();
+  30:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+C:\cortex\dimmers\src/stm32f10x_it.c:557
+            xFromHigher = pdFALSE;
+  34:	2300      	movs	r3, #0
+  36:	60e3      	str	r3, [r4, #12]
+C:\cortex\dimmers\src/stm32f10x_it.c:560
+        }
+
+        EXTI_ClearITPendingBit(EXTI_Line6);
+  38:	2040      	movs	r0, #64
+  3a:	f7ff fffe 	bl	0 <EXTI_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:562
+    }
+    if(EXTI_GetITStatus(EXTI_BUTTON_2) != RESET)
+  3e:	2080      	movs	r0, #128
+  40:	f7ff fffe 	bl	0 <EXTI_GetITStatus>
+  44:	b1a8      	cbz	r0, 2e <xTaskGetSchedulerState+0x2e>
+C:\cortex\dimmers\src/stm32f10x_it.c:564
+    {
+        if ( xTaskGetSchedulerState() == taskSCHEDULER_RUNNING )
+  46:	f7ff fffe 	bl	0 <xTaskGetSchedulerState>
+  4a:	2801      	cmp	r0, #1
+  4c:	d106      	bne.n	5c <EXTI9_5_IRQHandler+0x5c>
+C:\cortex\dimmers\src/stm32f10x_it.c:565
+            xSemaphoreGiveFromISR ( xSemaphoreButtonArrayHandle[1] , &xFromHigher );
+  4e:	4b26      	ldr	r3, [pc, #152]	(e8 <EXTI9_5_IRQHandler+0xe8>)
+  50:	2100      	movs	r1, #0
+  52:	6858      	ldr	r0, [r3, #4]
+  54:	4a25      	ldr	r2, [pc, #148]	(ec <EXTI9_5_IRQHandler+0xec>)
+  56:	460b      	mov	r3, r1
+  58:	f7ff fffe 	bl	0 <xQueueGenericSendFromISR>
+C:\cortex\dimmers\src/stm32f10x_it.c:567
+    
+        if ( xFromHigher == pdTRUE ){
+  5c:	4c21      	ldr	r4, [pc, #132]	(e4 <EXTI9_5_IRQHandler+0xe4>)
+  5e:	68e3      	ldr	r3, [r4, #12]
+  60:	2b01      	cmp	r3, #1
+  62:	d103      	bne.n	6c <EXTI9_5_IRQHandler+0x6c>
+C:\cortex\dimmers\src/stm32f10x_it.c:568
+            vPortYieldFromISR();
+  64:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+C:\cortex\dimmers\src/stm32f10x_it.c:569
+            xFromHigher = pdFALSE;
+  68:	2300      	movs	r3, #0
+  6a:	60e3      	str	r3, [r4, #12]
+C:\cortex\dimmers\src/stm32f10x_it.c:572
+        }
+
+        EXTI_ClearITPendingBit(EXTI_Line7);
+  6c:	2080      	movs	r0, #128
+  6e:	f7ff fffe 	bl	0 <EXTI_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:574
+    }
+    if(EXTI_GetITStatus(EXTI_BUTTON_3) != RESET)
+  72:	f44f 7080 	mov.w	r0, #256	; 0x100
+  76:	f7ff fffe 	bl	0 <EXTI_GetITStatus>
+  7a:	b1b0      	cbz	r0, 30 <xTaskGetSchedulerState+0x30>
+C:\cortex\dimmers\src/stm32f10x_it.c:577
+    {
+    
+        if ( xTaskGetSchedulerState() == taskSCHEDULER_RUNNING )
+  7c:	f7ff fffe 	bl	0 <xTaskGetSchedulerState>
+  80:	2801      	cmp	r0, #1
+  82:	d106      	bne.n	92 <EXTI9_5_IRQHandler+0x92>
+C:\cortex\dimmers\src/stm32f10x_it.c:578
+           xSemaphoreGiveFromISR ( xSemaphoreButtonArrayHandle[2] , &xFromHigher );
+  84:	4b18      	ldr	r3, [pc, #96]	(e8 <EXTI9_5_IRQHandler+0xe8>)
+  86:	2100      	movs	r1, #0
+  88:	6898      	ldr	r0, [r3, #8]
+  8a:	4a18      	ldr	r2, [pc, #96]	(ec <EXTI9_5_IRQHandler+0xec>)
+  8c:	460b      	mov	r3, r1
+  8e:	f7ff fffe 	bl	0 <xQueueGenericSendFromISR>
+C:\cortex\dimmers\src/stm32f10x_it.c:580
+
+        if ( xFromHigher == pdTRUE ){
+  92:	4c14      	ldr	r4, [pc, #80]	(e4 <EXTI9_5_IRQHandler+0xe4>)
+  94:	68e3      	ldr	r3, [r4, #12]
+  96:	2b01      	cmp	r3, #1
+  98:	d103      	bne.n	a2 <EXTI9_5_IRQHandler+0xa2>
+C:\cortex\dimmers\src/stm32f10x_it.c:581
+            vPortYieldFromISR();
+  9a:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+C:\cortex\dimmers\src/stm32f10x_it.c:582
+            xFromHigher = pdFALSE;
+  9e:	2300      	movs	r3, #0
+  a0:	60e3      	str	r3, [r4, #12]
+C:\cortex\dimmers\src/stm32f10x_it.c:585
+        }
+    
+        EXTI_ClearITPendingBit(EXTI_Line8);
+  a2:	f44f 7080 	mov.w	r0, #256	; 0x100
+  a6:	f7ff fffe 	bl	0 <EXTI_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:587
+    }
+    if(EXTI_GetITStatus(EXTI_BUTTON_4) != RESET)
+  aa:	f44f 7000 	mov.w	r0, #512	; 0x200
+  ae:	f7ff fffe 	bl	0 <EXTI_GetITStatus>
+  b2:	b1b0      	cbz	r0, 30 <xTaskGetSchedulerState+0x30>
+C:\cortex\dimmers\src/stm32f10x_it.c:589
+    {
+        if ( xTaskGetSchedulerState() == taskSCHEDULER_RUNNING )
+  b4:	f7ff fffe 	bl	0 <xTaskGetSchedulerState>
+  b8:	2801      	cmp	r0, #1
+  ba:	d106      	bne.n	ca <EXTI9_5_IRQHandler+0xca>
+C:\cortex\dimmers\src/stm32f10x_it.c:590
+            xSemaphoreGiveFromISR ( xSemaphoreButtonArrayHandle[3] , &xFromHigher );
+  bc:	4b0a      	ldr	r3, [pc, #40]	(e8 <EXTI9_5_IRQHandler+0xe8>)
+  be:	2100      	movs	r1, #0
+  c0:	68d8      	ldr	r0, [r3, #12]
+  c2:	4a0a      	ldr	r2, [pc, #40]	(ec <EXTI9_5_IRQHandler+0xec>)
+  c4:	460b      	mov	r3, r1
+  c6:	f7ff fffe 	bl	0 <xQueueGenericSendFromISR>
+C:\cortex\dimmers\src/stm32f10x_it.c:592
+    
+        if ( xFromHigher == pdTRUE ){
+  ca:	4c06      	ldr	r4, [pc, #24]	(e4 <EXTI9_5_IRQHandler+0xe4>)
+  cc:	68e3      	ldr	r3, [r4, #12]
+  ce:	2b01      	cmp	r3, #1
+  d0:	d103      	bne.n	da <EXTI9_5_IRQHandler+0xda>
+C:\cortex\dimmers\src/stm32f10x_it.c:593
+            vPortYieldFromISR();
+  d2:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+C:\cortex\dimmers\src/stm32f10x_it.c:594
+            xFromHigher = pdFALSE;
+  d6:	2300      	movs	r3, #0
+  d8:	60e3      	str	r3, [r4, #12]
+C:\cortex\dimmers\src/stm32f10x_it.c:597
+        }
+
+        EXTI_ClearITPendingBit(EXTI_Line9);
+  da:	f44f 7000 	mov.w	r0, #512	; 0x200
+  de:	f7ff fffe 	bl	0 <EXTI_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:600
+    }
+  
+}
+  e2:	bd70      	pop	{r4, r5, r6, pc}
+	...
+  ec:	0000000c 	.word	0x0000000c
+Disassembly of section .text.I2C2_ER_IRQHandler:
+
+00000000 <I2C2_ER_IRQHandler>:
+I2C2_ER_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:934
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void I2C2_ER_IRQHandler(void)
+{
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:936
+
+  if (I2C_GetITStatus(I2C2, I2C_IT_AF)) 
+   2:	4812      	ldr	r0, [pc, #72]	(4c <I2C2_ER_IRQHandler+0x4c>)
+   4:	4912      	ldr	r1, [pc, #72]	(50 <I2C2_ER_IRQHandler+0x50>)
+   6:	f7ff fffe 	bl	0 <I2C_GetITStatus>
+   a:	b118      	cbz	r0, 14 <I2C2_ER_IRQHandler+0x14>
+C:\cortex\dimmers\src/stm32f10x_it.c:938
+  {
+    I2C_ClearITPendingBit(I2C2, I2C_IT_AF);
+   c:	480f      	ldr	r0, [pc, #60]	(4c <I2C2_ER_IRQHandler+0x4c>)
+   e:	4910      	ldr	r1, [pc, #64]	(50 <I2C2_ER_IRQHandler+0x50>)
+  10:	f7ff fffe 	bl	0 <I2C_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:940
+  }
+  if (I2C_GetITStatus(I2C2, I2C_IT_BERR)) 
+  14:	480d      	ldr	r0, [pc, #52]	(4c <I2C2_ER_IRQHandler+0x4c>)
+  16:	490f      	ldr	r1, [pc, #60]	(54 <I2C2_ER_IRQHandler+0x54>)
+  18:	f7ff fffe 	bl	0 <I2C_GetITStatus>
+  1c:	b118      	cbz	r0, 26 <I2C2_ER_IRQHandler+0x26>
+C:\cortex\dimmers\src/stm32f10x_it.c:942
+  {
+    I2C_ClearITPendingBit(I2C2, I2C_IT_BERR);
+  1e:	480b      	ldr	r0, [pc, #44]	(4c <I2C2_ER_IRQHandler+0x4c>)
+  20:	490c      	ldr	r1, [pc, #48]	(54 <I2C2_ER_IRQHandler+0x54>)
+  22:	f7ff fffe 	bl	0 <I2C_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:944
+  }
+  if (I2C_GetITStatus(I2C2, I2C_IT_ARLO)) 
+  26:	4809      	ldr	r0, [pc, #36]	(4c <I2C2_ER_IRQHandler+0x4c>)
+  28:	490b      	ldr	r1, [pc, #44]	(58 <I2C2_ER_IRQHandler+0x58>)
+  2a:	f7ff fffe 	bl	0 <I2C_GetITStatus>
+  2e:	b118      	cbz	r0, 38 <I2C2_ER_IRQHandler+0x38>
+C:\cortex\dimmers\src/stm32f10x_it.c:946
+  {
+    I2C_ClearITPendingBit(I2C2, I2C_IT_ARLO);
+  30:	4806      	ldr	r0, [pc, #24]	(4c <I2C2_ER_IRQHandler+0x4c>)
+  32:	4909      	ldr	r1, [pc, #36]	(58 <I2C2_ER_IRQHandler+0x58>)
+  34:	f7ff fffe 	bl	0 <I2C_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:948
+  }
+  if (I2C_GetITStatus(I2C2, I2C_IT_OVR)) 
+  38:	4804      	ldr	r0, [pc, #16]	(4c <I2C2_ER_IRQHandler+0x4c>)
+  3a:	4908      	ldr	r1, [pc, #32]	(5c <I2C2_ER_IRQHandler+0x5c>)
+  3c:	f7ff fffe 	bl	0 <I2C_GetITStatus>
+  40:	b118      	cbz	r0, 4a <I2C2_ER_IRQHandler+0x4a>
+C:\cortex\dimmers\src/stm32f10x_it.c:950
+  {
+    I2C_ClearITPendingBit(I2C2, I2C_IT_OVR);
+  42:	4802      	ldr	r0, [pc, #8]	(4c <I2C2_ER_IRQHandler+0x4c>)
+  44:	4905      	ldr	r1, [pc, #20]	(5c <I2C2_ER_IRQHandler+0x5c>)
+  46:	f7ff fffe 	bl	0 <I2C_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:952
+  }
+}
+  4a:	bd10      	pop	{r4, pc}
+  4c:	40005800 	.word	0x40005800
+  50:	01000400 	.word	0x01000400
+  54:	01000100 	.word	0x01000100
+  58:	01000200 	.word	0x01000200
+  5c:	01000800 	.word	0x01000800
+Disassembly of section .text.I2C1_ER_IRQHandler:
+
+00000000 <I2C1_ER_IRQHandler>:
+I2C1_ER_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:835
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void I2C1_ER_IRQHandler(void)
+{
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:836
+  if (I2C_GetITStatus(I2C1, I2C_IT_AF)) 
+   2:	4812      	ldr	r0, [pc, #72]	(4c <I2C1_ER_IRQHandler+0x4c>)
+   4:	4912      	ldr	r1, [pc, #72]	(50 <I2C1_ER_IRQHandler+0x50>)
+   6:	f7ff fffe 	bl	0 <I2C_GetITStatus>
+   a:	b118      	cbz	r0, 14 <I2C1_ER_IRQHandler+0x14>
+C:\cortex\dimmers\src/stm32f10x_it.c:838
+  {
+    I2C_ClearITPendingBit(I2C1, I2C_IT_AF);
+   c:	480f      	ldr	r0, [pc, #60]	(4c <I2C1_ER_IRQHandler+0x4c>)
+   e:	4910      	ldr	r1, [pc, #64]	(50 <I2C1_ER_IRQHandler+0x50>)
+  10:	f7ff fffe 	bl	0 <I2C_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:841
+  
+  }  
+  if (I2C_GetITStatus(I2C1, I2C_IT_BERR)) 
+  14:	480d      	ldr	r0, [pc, #52]	(4c <I2C1_ER_IRQHandler+0x4c>)
+  16:	490f      	ldr	r1, [pc, #60]	(54 <I2C1_ER_IRQHandler+0x54>)
+  18:	f7ff fffe 	bl	0 <I2C_GetITStatus>
+  1c:	b118      	cbz	r0, 26 <I2C1_ER_IRQHandler+0x26>
+C:\cortex\dimmers\src/stm32f10x_it.c:843
+  {
+    I2C_ClearITPendingBit(I2C1, I2C_IT_BERR);
+  1e:	480b      	ldr	r0, [pc, #44]	(4c <I2C1_ER_IRQHandler+0x4c>)
+  20:	490c      	ldr	r1, [pc, #48]	(54 <I2C1_ER_IRQHandler+0x54>)
+  22:	f7ff fffe 	bl	0 <I2C_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:845
+  }
+  if (I2C_GetITStatus(I2C1, I2C_IT_ARLO)) 
+  26:	4809      	ldr	r0, [pc, #36]	(4c <I2C1_ER_IRQHandler+0x4c>)
+  28:	490b      	ldr	r1, [pc, #44]	(58 <I2C1_ER_IRQHandler+0x58>)
+  2a:	f7ff fffe 	bl	0 <I2C_GetITStatus>
+  2e:	b118      	cbz	r0, 38 <I2C1_ER_IRQHandler+0x38>
+C:\cortex\dimmers\src/stm32f10x_it.c:847
+  {
+    I2C_ClearITPendingBit(I2C1, I2C_IT_ARLO);
+  30:	4806      	ldr	r0, [pc, #24]	(4c <I2C1_ER_IRQHandler+0x4c>)
+  32:	4909      	ldr	r1, [pc, #36]	(58 <I2C1_ER_IRQHandler+0x58>)
+  34:	f7ff fffe 	bl	0 <I2C_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:849
+  }
+  if (I2C_GetITStatus(I2C1, I2C_IT_OVR)) 
+  38:	4804      	ldr	r0, [pc, #16]	(4c <I2C1_ER_IRQHandler+0x4c>)
+  3a:	4908      	ldr	r1, [pc, #32]	(5c <I2C1_ER_IRQHandler+0x5c>)
+  3c:	f7ff fffe 	bl	0 <I2C_GetITStatus>
+  40:	b118      	cbz	r0, 4a <I2C1_ER_IRQHandler+0x4a>
+C:\cortex\dimmers\src/stm32f10x_it.c:851
+  {
+    I2C_ClearITPendingBit(I2C1, I2C_IT_OVR);
+  42:	4802      	ldr	r0, [pc, #8]	(4c <I2C1_ER_IRQHandler+0x4c>)
+  44:	4905      	ldr	r1, [pc, #20]	(5c <I2C1_ER_IRQHandler+0x5c>)
+  46:	f7ff fffe 	bl	0 <I2C_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:853
+  }
+}
+  4a:	bd10      	pop	{r4, pc}
+  4c:	40005400 	.word	0x40005400
+  50:	01000400 	.word	0x01000400
+  54:	01000100 	.word	0x01000100
+  58:	01000200 	.word	0x01000200
+  5c:	01000800 	.word	0x01000800
+Disassembly of section .text.I2C2_EV_IRQHandler:
+
+00000000 <I2C2_EV_IRQHandler>:
+I2C2_EV_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:863
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void I2C2_EV_IRQHandler(void)
+{
+   0:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:867
+    static u32 evt;
+    static u32 count;
+
+    evt =  I2C_GetLastEvent(I2C2);
+   2:	4856      	ldr	r0, [pc, #344]	(15c <I2C2_EV_IRQHandler+0x15c>)
+   4:	f7ff fffe 	bl	0 <I2C_GetLastEvent>
+   8:	4b55      	ldr	r3, [pc, #340]	(160 <I2C2_EV_IRQHandler+0x160>)
+   a:	6118      	str	r0, [r3, #16]
+C:\cortex\dimmers\src/stm32f10x_it.c:869
+
+    switch (evt){
+   c:	4b55      	ldr	r3, [pc, #340]	(164 <I2C2_EV_IRQHandler+0x164>)
+   e:	4298      	cmp	r0, r3
+  10:	d02c      	beq.n	6c <I2C2_EV_IRQHandler+0x6c>
+  12:	d815      	bhi.n	40 <I2C2_EV_IRQHandler+0x40>
+  14:	f5b0 6f80 	cmp.w	r0, #1024	; 0x400
+  18:	f000 809b 	beq.w	152 <I2C2_EV_IRQHandler+0x152>
+  1c:	d805      	bhi.n	2a <I2C2_EV_IRQHandler+0x2a>
+  1e:	2810      	cmp	r0, #16
+  20:	d076      	beq.n	110 <I2C2_EV_IRQHandler+0x110>
+  22:	2850      	cmp	r0, #80
+  24:	f040 8099 	bne.w	15a <I2C2_EV_IRQHandler+0x15a>
+  28:	e072      	b.n	110 <I2C2_EV_IRQHandler+0x110>
+  2a:	4b4f      	ldr	r3, [pc, #316]	(168 <I2C2_EV_IRQHandler+0x168>)
+  2c:	4298      	cmp	r0, r3
+  2e:	d063      	beq.n	f8 <I2C2_EV_IRQHandler+0xf8>
+  30:	3304      	adds	r3, #4
+  32:	4298      	cmp	r0, r3
+  34:	d060      	beq.n	f8 <I2C2_EV_IRQHandler+0xf8>
+  36:	f1b0 1f02 	cmp.w	r0, #131074	; 0x20002
+  3a:	f040 808e 	bne.w	15a <I2C2_EV_IRQHandler+0x15a>
+  3e:	e050      	b.n	e2 <I2C2_EV_IRQHandler+0xe2>
+  40:	4b4a      	ldr	r3, [pc, #296]	(16c <I2C2_EV_IRQHandler+0x16c>)
+  42:	4298      	cmp	r0, r3
+  44:	d021      	beq.n	8a <I2C2_EV_IRQHandler+0x8a>
+  46:	d807      	bhi.n	58 <I2C2_EV_IRQHandler+0x58>
+  48:	3b42      	subs	r3, #66
+  4a:	4298      	cmp	r0, r3
+  4c:	d018      	beq.n	80 <I2C2_EV_IRQHandler+0x80>
+  4e:	333e      	adds	r3, #62
+  50:	4298      	cmp	r0, r3
+  52:	f040 8082 	bne.w	15a <I2C2_EV_IRQHandler+0x15a>
+  56:	e018      	b.n	8a <I2C2_EV_IRQHandler+0x8a>
+  58:	4b45      	ldr	r3, [pc, #276]	(170 <I2C2_EV_IRQHandler+0x170>)
+  5a:	4298      	cmp	r0, r3
+  5c:	d029      	beq.n	b2 <I2C2_EV_IRQHandler+0xb2>
+  5e:	3302      	adds	r3, #2
+  60:	4298      	cmp	r0, r3
+  62:	d02d      	beq.n	c0 <I2C2_EV_IRQHandler+0xc0>
+  64:	3b04      	subs	r3, #4
+  66:	4298      	cmp	r0, r3
+  68:	d177      	bne.n	15a <I2C2_EV_IRQHandler+0x15a>
+  6a:	e029      	b.n	c0 <I2C2_EV_IRQHandler+0xc0>
+C:\cortex\dimmers\src/stm32f10x_it.c:871
+        case I2C_EVENT_MASTER_MODE_SELECT:
+             I2C_AcknowledgeConfig(I2C2, ENABLE);
+  6c:	2101      	movs	r1, #1
+  6e:	483b      	ldr	r0, [pc, #236]	(15c <I2C2_EV_IRQHandler+0x15c>)
+  70:	f7ff fffe 	bl	0 <I2C_AcknowledgeConfig>
+C:\cortex\dimmers\src/stm32f10x_it.c:872
+             I2C_Send7bitAddress(I2C2 , I2C1_SLAVE_ADDRESS7_CORTEX2 , I2C_Direction_Receiver);
+  74:	4839      	ldr	r0, [pc, #228]	(15c <I2C2_EV_IRQHandler+0x15c>)
+  76:	2130      	movs	r1, #48
+  78:	2201      	movs	r2, #1
+  7a:	f7ff fffe 	bl	0 <I2C_Send7bitAddress>
+  7e:	e06c      	b.n	15a <I2C2_EV_IRQHandler+0x15a>
+C:\cortex\dimmers\src/stm32f10x_it.c:875
+        break;
+        case I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED:
+             RxIdx = 0;
+  80:	4b3c      	ldr	r3, [pc, #240]	(174 <I2C2_EV_IRQHandler+0x174>)
+  82:	f04f 0200 	mov.w	r2, #0	; 0x0
+  86:	801a      	strh	r2, [r3, #0]
+  88:	e067      	b.n	15a <I2C2_EV_IRQHandler+0x15a>
+C:\cortex\dimmers\src/stm32f10x_it.c:879
+        break;
+        case I2C_EVENT_MASTER_BYTE_RECEIVED:
+        case I2C_EVENT_MASTER_BYTE_RECEIVED_WITH_BTF:    
+            if (RxIdx < sizeof (TBKPData)) 
+  8a:	4d3a      	ldr	r5, [pc, #232]	(174 <I2C2_EV_IRQHandler+0x174>)
+  8c:	882c      	ldrh	r4, [r5, #0]
+  8e:	2c53      	cmp	r4, #83
+  90:	d806      	bhi.n	a0 <I2C2_EV_IRQHandler+0xa0>
+C:\cortex\dimmers\src/stm32f10x_it.c:880
+               ExternData.values[RxIdx++] = I2C_ReceiveData(I2C2);
+  92:	4832      	ldr	r0, [pc, #200]	(15c <I2C2_EV_IRQHandler+0x15c>)
+  94:	f7ff fffe 	bl	0 <I2C_ReceiveData>
+  98:	4b37      	ldr	r3, [pc, #220]	(178 <I2C2_EV_IRQHandler+0x178>)
+  9a:	5518      	strb	r0, [r3, r4]
+  9c:	1c63      	adds	r3, r4, #1
+  9e:	802b      	strh	r3, [r5, #0]
+C:\cortex\dimmers\src/stm32f10x_it.c:881
+            if( RxIdx == (sizeof (TBKPData) - 1) )
+  a0:	4b34      	ldr	r3, [pc, #208]	(174 <I2C2_EV_IRQHandler+0x174>)
+  a2:	881b      	ldrh	r3, [r3, #0]
+  a4:	2b53      	cmp	r3, #83
+  a6:	d158      	bne.n	15a <I2C2_EV_IRQHandler+0x15a>
+C:\cortex\dimmers\src/stm32f10x_it.c:883
+            {
+                I2C_AcknowledgeConfig(I2C2, DISABLE);
+  a8:	482c      	ldr	r0, [pc, #176]	(15c <I2C2_EV_IRQHandler+0x15c>)
+  aa:	2100      	movs	r1, #0
+  ac:	f7ff fffe 	bl	0 <I2C_AcknowledgeConfig>
+  b0:	e012      	b.n	d8 <I2C2_EV_IRQHandler+0xd8>
+C:\cortex\dimmers\src/stm32f10x_it.c:889
+                I2C_GenerateSTOP(I2C2, ENABLE);
+            }
+        break;        
+        case I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED:
+             TxIdx = 0;
+             I2C_SendData(I2C2, InternData.values[TxIdx++]);
+  b2:	4b32      	ldr	r3, [pc, #200]	(17c <I2C2_EV_IRQHandler+0x17c>)
+  b4:	f04f 0201 	mov.w	r2, #1	; 0x1
+  b8:	7819      	ldrb	r1, [r3, #0]
+  ba:	4b31      	ldr	r3, [pc, #196]	(180 <I2C2_EV_IRQHandler+0x180>)
+  bc:	801a      	strh	r2, [r3, #0]
+  be:	e007      	b.n	d0 <I2C2_EV_IRQHandler+0xd0>
+C:\cortex\dimmers\src/stm32f10x_it.c:893
+        break;
+        case I2C_EVENT_MASTER_BYTE_TRANSMITTING:
+        case I2C_EVENT_MASTER_BYTE_TRANSMITTED:            
+            if ( TxIdx <  sizeof (TBKPData) )
+  c0:	482f      	ldr	r0, [pc, #188]	(180 <I2C2_EV_IRQHandler+0x180>)
+  c2:	8802      	ldrh	r2, [r0, #0]
+  c4:	2a53      	cmp	r2, #83
+  c6:	d807      	bhi.n	d8 <I2C2_EV_IRQHandler+0xd8>
+C:\cortex\dimmers\src/stm32f10x_it.c:894
+                I2C_SendData(I2C2, InternData.values[TxIdx++]);
+  c8:	4b2c      	ldr	r3, [pc, #176]	(17c <I2C2_EV_IRQHandler+0x17c>)
+  ca:	5c99      	ldrb	r1, [r3, r2]
+  cc:	1c53      	adds	r3, r2, #1
+  ce:	8003      	strh	r3, [r0, #0]
+  d0:	4822      	ldr	r0, [pc, #136]	(15c <I2C2_EV_IRQHandler+0x15c>)
+  d2:	f7ff fffe 	bl	0 <I2C_SendData>
+  d6:	e040      	b.n	15a <I2C2_EV_IRQHandler+0x15a>
+C:\cortex\dimmers\src/stm32f10x_it.c:896
+            else
+                I2C_GenerateSTOP(I2C2, ENABLE);                
+  d8:	4820      	ldr	r0, [pc, #128]	(15c <I2C2_EV_IRQHandler+0x15c>)
+  da:	2101      	movs	r1, #1
+  dc:	f7ff fffe 	bl	0 <I2C_GenerateSTOP>
+  e0:	e03b      	b.n	15a <I2C2_EV_IRQHandler+0x15a>
+C:\cortex\dimmers\src/stm32f10x_it.c:899
+        break;
+        case I2C_EVENT_SLAVE_RECEIVER_ADDRESS_MATCHED:
+            RxIdx = 0;
+  e2:	4b24      	ldr	r3, [pc, #144]	(174 <I2C2_EV_IRQHandler+0x174>)
+  e4:	f04f 0200 	mov.w	r2, #0	; 0x0
+  e8:	801a      	strh	r2, [r3, #0]
+C:\cortex\dimmers\src/stm32f10x_it.c:900
+            I2C_ITConfig(I2C2, I2C_IT_BUF , ENABLE);
+  ea:	481c      	ldr	r0, [pc, #112]	(15c <I2C2_EV_IRQHandler+0x15c>)
+  ec:	f44f 6180 	mov.w	r1, #1024	; 0x400
+  f0:	2201      	movs	r2, #1
+  f2:	f7ff fffe 	bl	0 <I2C_ITConfig>
+  f6:	e030      	b.n	15a <I2C2_EV_IRQHandler+0x15a>
+C:\cortex\dimmers\src/stm32f10x_it.c:904
+        break;
+        case I2C_EVENT_SLAVE_BYTE_RECEIVED:
+        case I2C_EVENT_SLAVE_BYTE_RECEIVED_WITH_BTF:
+           if (RxIdx < sizeof (TBKPData)) 
+  f8:	4d1e      	ldr	r5, [pc, #120]	(174 <I2C2_EV_IRQHandler+0x174>)
+  fa:	882c      	ldrh	r4, [r5, #0]
+  fc:	2c53      	cmp	r4, #83
+  fe:	d82c      	bhi.n	15a <I2C2_EV_IRQHandler+0x15a>
+C:\cortex\dimmers\src/stm32f10x_it.c:905
+               ExternData.values[RxIdx++] = I2C_ReceiveData(I2C2);
+ 100:	4816      	ldr	r0, [pc, #88]	(15c <I2C2_EV_IRQHandler+0x15c>)
+ 102:	f7ff fffe 	bl	0 <I2C_ReceiveData>
+ 106:	4b1c      	ldr	r3, [pc, #112]	(178 <I2C2_EV_IRQHandler+0x178>)
+ 108:	5518      	strb	r0, [r3, r4]
+ 10a:	1c63      	adds	r3, r4, #1
+ 10c:	802b      	strh	r3, [r5, #0]
+ 10e:	e024      	b.n	15a <I2C2_EV_IRQHandler+0x15a>
+C:\cortex\dimmers\src/stm32f10x_it.c:910
+        break; 
+        case I2C_EVENT_SLAVE_STOP_DETECTED:
+        case I2C_EVENT_SLAVE_BYTE_RECEIVED_AND_STOP:
+            I2C_ITConfig( I2C2, I2C_IT_BUF , DISABLE );
+            if (RxIdx < sizeof (TBKPData)) 
+ 110:	4d18      	ldr	r5, [pc, #96]	(174 <I2C2_EV_IRQHandler+0x174>)
+C:\cortex\dimmers\src/stm32f10x_it.c:909
+           if (RxIdx < sizeof (TBKPData)) 
+               ExternData.values[RxIdx++] = I2C_ReceiveData(I2C2);
+        break; 
+        case I2C_EVENT_SLAVE_STOP_DETECTED:
+        case I2C_EVENT_SLAVE_BYTE_RECEIVED_AND_STOP:
+            I2C_ITConfig( I2C2, I2C_IT_BUF , DISABLE );
+ 112:	2200      	movs	r2, #0
+ 114:	4811      	ldr	r0, [pc, #68]	(15c <I2C2_EV_IRQHandler+0x15c>)
+ 116:	f44f 6180 	mov.w	r1, #1024	; 0x400
+ 11a:	f7ff fffe 	bl	0 <I2C_ITConfig>
+C:\cortex\dimmers\src/stm32f10x_it.c:910
+            if (RxIdx < sizeof (TBKPData)) 
+ 11e:	882c      	ldrh	r4, [r5, #0]
+ 120:	2c53      	cmp	r4, #83
+ 122:	d806      	bhi.n	132 <I2C2_EV_IRQHandler+0x132>
+C:\cortex\dimmers\src/stm32f10x_it.c:911
+                ExternData.values[RxIdx++] = I2C_ReceiveData(I2C2);
+ 124:	480d      	ldr	r0, [pc, #52]	(15c <I2C2_EV_IRQHandler+0x15c>)
+ 126:	f7ff fffe 	bl	0 <I2C_ReceiveData>
+ 12a:	4b13      	ldr	r3, [pc, #76]	(178 <I2C2_EV_IRQHandler+0x178>)
+ 12c:	5518      	strb	r0, [r3, r4]
+ 12e:	1c63      	adds	r3, r4, #1
+ 130:	802b      	strh	r3, [r5, #0]
+C:\cortex\dimmers\src/stm32f10x_it.c:912
+            (void)(I2C_GetITStatus(I2C2, I2C_IT_STOPF));
+ 132:	4914      	ldr	r1, [pc, #80]	(184 <I2C2_EV_IRQHandler+0x184>)
+ 134:	4809      	ldr	r0, [pc, #36]	(15c <I2C2_EV_IRQHandler+0x15c>)
+ 136:	f7ff fffe 	bl	0 <I2C_GetITStatus>
+C:\cortex\dimmers\src/stm32f10x_it.c:913
+            I2C_Cmd(I2C2, ENABLE);
+ 13a:	2101      	movs	r1, #1
+ 13c:	4807      	ldr	r0, [pc, #28]	(15c <I2C2_EV_IRQHandler+0x15c>)
+ 13e:	f7ff fffe 	bl	0 <I2C_Cmd>
+C:\cortex\dimmers\src/stm32f10x_it.c:914
+            if (RxIdx == sizeof (TBKPData) )
+ 142:	4b0c      	ldr	r3, [pc, #48]	(174 <I2C2_EV_IRQHandler+0x174>)
+ 144:	881b      	ldrh	r3, [r3, #0]
+ 146:	2b54      	cmp	r3, #84
+ 148:	d107      	bne.n	15a <I2C2_EV_IRQHandler+0x15a>
+C:\cortex\dimmers\src/stm32f10x_it.c:915
+                I2CRecReady = TRUE;
+ 14a:	4b0f      	ldr	r3, [pc, #60]	(188 <I2C2_EV_IRQHandler+0x188>)
+ 14c:	2201      	movs	r2, #1
+ 14e:	701a      	strb	r2, [r3, #0]
+ 150:	e003      	b.n	15a <I2C2_EV_IRQHandler+0x15a>
+C:\cortex\dimmers\src/stm32f10x_it.c:918
+        break;
+        case I2C_EVENT_SLAVE_ACK_FAILURE:
+            I2C_ClearFlag(I2C2, I2C_IT_AF);
+ 152:	4802      	ldr	r0, [pc, #8]	(15c <I2C2_EV_IRQHandler+0x15c>)
+ 154:	490d      	ldr	r1, [pc, #52]	(18c <I2C2_EV_IRQHandler+0x18c>)
+ 156:	f7ff fffe 	bl	0 <I2C_ClearFlag>
+C:\cortex\dimmers\src/stm32f10x_it.c:924
+        break;
+        default:
+ 
+        break;
+    }
+}
+ 15a:	bd70      	pop	{r4, r5, r6, pc}
+ 15c:	40005800 	.word	0x40005800
+ 160:	00000000 	.word	0x00000000
+ 164:	00030001 	.word	0x00030001
+ 168:	00020040 	.word	0x00020040
+ 16c:	00030044 	.word	0x00030044
+ 170:	00070082 	.word	0x00070082
+	...
+ 184:	02000010 	.word	0x02000010
+ 188:	00000000 	.word	0x00000000
+ 18c:	01000400 	.word	0x01000400
+Disassembly of section .text.I2C1_EV_IRQHandler:
+
+00000000 <I2C1_EV_IRQHandler>:
+I2C1_EV_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:795
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void I2C1_EV_IRQHandler(void)
+{
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:799
+    static u32 evt;
+    static u32 count;
+
+    evt =  I2C_GetLastEvent(I2C1);
+   2:	4823      	ldr	r0, [pc, #140]	(90 <I2C1_EV_IRQHandler+0x90>)
+   4:	f7ff fffe 	bl	0 <I2C_GetLastEvent>
+   8:	4b22      	ldr	r3, [pc, #136]	(94 <I2C1_EV_IRQHandler+0x94>)
+   a:	6158      	str	r0, [r3, #20]
+C:\cortex\dimmers\src/stm32f10x_it.c:801
+
+    switch (evt)
+   c:	4b22      	ldr	r3, [pc, #136]	(98 <I2C1_EV_IRQHandler+0x98>)
+   e:	4298      	cmp	r0, r3
+  10:	d01d      	beq.n	4e <I2C1_EV_IRQHandler+0x4e>
+  12:	d805      	bhi.n	20 <I2C1_EV_IRQHandler+0x20>
+  14:	2810      	cmp	r0, #16
+  16:	d02b      	beq.n	70 <I2C1_EV_IRQHandler+0x70>
+  18:	f5b0 6f80 	cmp.w	r0, #1024	; 0x400
+  1c:	d136      	bne.n	8c <I2C1_EV_IRQHandler+0x8c>
+  1e:	e022      	b.n	66 <I2C1_EV_IRQHandler+0x66>
+  20:	4b1e      	ldr	r3, [pc, #120]	(9c <I2C1_EV_IRQHandler+0x9c>)
+  22:	4298      	cmp	r0, r3
+  24:	d003      	beq.n	2e <I2C1_EV_IRQHandler+0x2e>
+  26:	3302      	adds	r3, #2
+  28:	4298      	cmp	r0, r3
+  2a:	d12f      	bne.n	8c <I2C1_EV_IRQHandler+0x8c>
+  2c:	e00f      	b.n	4e <I2C1_EV_IRQHandler+0x4e>
+C:\cortex\dimmers\src/stm32f10x_it.c:804
+    {
+        case I2C_EVENT_SLAVE_TRANSMITTER_ADDRESS_MATCHED:
+             TxIdx = 0;       
+  2e:	4c1c      	ldr	r4, [pc, #112]	(a0 <I2C1_EV_IRQHandler+0xa0>)
+  30:	f04f 0300 	mov.w	r3, #0	; 0x0
+C:\cortex\dimmers\src/stm32f10x_it.c:805
+             I2C_ITConfig(I2C1, I2C_IT_BUF , ENABLE);
+  34:	f44f 6180 	mov.w	r1, #1024	; 0x400
+  38:	2201      	movs	r2, #1
+  3a:	4815      	ldr	r0, [pc, #84]	(90 <I2C1_EV_IRQHandler+0x90>)
+C:\cortex\dimmers\src/stm32f10x_it.c:804
+    evt =  I2C_GetLastEvent(I2C1);
+
+    switch (evt)
+    {
+        case I2C_EVENT_SLAVE_TRANSMITTER_ADDRESS_MATCHED:
+             TxIdx = 0;       
+  3c:	8023      	strh	r3, [r4, #0]
+C:\cortex\dimmers\src/stm32f10x_it.c:805
+             I2C_ITConfig(I2C1, I2C_IT_BUF , ENABLE);
+  3e:	f7ff fffe 	bl	0 <I2C_ITConfig>
+C:\cortex\dimmers\src/stm32f10x_it.c:806
+             I2C_SendData(I2C1, InternData.values[TxIdx++]);
+  42:	8823      	ldrh	r3, [r4, #0]
+  44:	4a17      	ldr	r2, [pc, #92]	(a4 <I2C1_EV_IRQHandler+0xa4>)
+  46:	5cd1      	ldrb	r1, [r2, r3]
+  48:	3301      	adds	r3, #1
+  4a:	8023      	strh	r3, [r4, #0]
+  4c:	e007      	b.n	5e <I2C1_EV_IRQHandler+0x5e>
+C:\cortex\dimmers\src/stm32f10x_it.c:810
+        break;
+        case I2C_EVENT_SLAVE_BYTE_TRANSMITTED:
+        case I2C_EVENT_SLAVE_BYTE_TRANSMITTED_NO_BTF:
+            if ( TxIdx <  sizeof (TBKPData) )
+  4e:	4814      	ldr	r0, [pc, #80]	(a0 <I2C1_EV_IRQHandler+0xa0>)
+  50:	8802      	ldrh	r2, [r0, #0]
+  52:	2a53      	cmp	r2, #83
+  54:	d81a      	bhi.n	8c <I2C1_EV_IRQHandler+0x8c>
+C:\cortex\dimmers\src/stm32f10x_it.c:811
+                I2C_SendData(I2C1, InternData.values[TxIdx++]);
+  56:	4b13      	ldr	r3, [pc, #76]	(a4 <I2C1_EV_IRQHandler+0xa4>)
+  58:	5c99      	ldrb	r1, [r3, r2]
+  5a:	1c53      	adds	r3, r2, #1
+  5c:	8003      	strh	r3, [r0, #0]
+  5e:	480c      	ldr	r0, [pc, #48]	(90 <I2C1_EV_IRQHandler+0x90>)
+  60:	f7ff fffe 	bl	0 <I2C_SendData>
+  64:	e012      	b.n	8c <I2C1_EV_IRQHandler+0x8c>
+C:\cortex\dimmers\src/stm32f10x_it.c:814
+        break;
+        case I2C_EVENT_SLAVE_ACK_FAILURE:
+            I2C_ClearFlag(I2C1, I2C_IT_AF);
+  66:	480a      	ldr	r0, [pc, #40]	(90 <I2C1_EV_IRQHandler+0x90>)
+  68:	490f      	ldr	r1, [pc, #60]	(a8 <I2C1_EV_IRQHandler+0xa8>)
+  6a:	f7ff fffe 	bl	0 <I2C_ClearFlag>
+  6e:	e00d      	b.n	8c <I2C1_EV_IRQHandler+0x8c>
+C:\cortex\dimmers\src/stm32f10x_it.c:817
+        break;
+        case I2C_EVENT_SLAVE_STOP_DETECTED:
+           I2C_ITConfig(I2C1, I2C_IT_BUF , DISABLE);
+  70:	4807      	ldr	r0, [pc, #28]	(90 <I2C1_EV_IRQHandler+0x90>)
+  72:	f44f 6180 	mov.w	r1, #1024	; 0x400
+  76:	2200      	movs	r2, #0
+  78:	f7ff fffe 	bl	0 <I2C_ITConfig>
+C:\cortex\dimmers\src/stm32f10x_it.c:818
+           (void)(I2C_GetITStatus(I2C1, I2C_IT_STOPF));
+  7c:	490b      	ldr	r1, [pc, #44]	(ac <I2C1_EV_IRQHandler+0xac>)
+  7e:	4804      	ldr	r0, [pc, #16]	(90 <I2C1_EV_IRQHandler+0x90>)
+  80:	f7ff fffe 	bl	0 <I2C_GetITStatus>
+C:\cortex\dimmers\src/stm32f10x_it.c:819
+           I2C_Cmd(I2C1, ENABLE);
+  84:	4802      	ldr	r0, [pc, #8]	(90 <I2C1_EV_IRQHandler+0x90>)
+  86:	2101      	movs	r1, #1
+  88:	f7ff fffe 	bl	0 <I2C_Cmd>
+C:\cortex\dimmers\src/stm32f10x_it.c:825
+        break;        
+        default:
+
+        break;
+  }
+}
+  8c:	bd10      	pop	{r4, pc}
+  8e:	46c0      	nop			(mov r8, r8)
+  90:	40005400 	.word	0x40005400
+  94:	00000000 	.word	0x00000000
+  98:	00060080 	.word	0x00060080
+  9c:	00060082 	.word	0x00060082
+	...
+  a8:	01000400 	.word	0x01000400
+  ac:	02000010 	.word	0x02000010
+Disassembly of section .text.TIM4_IRQHandler:
+
+00000000 <TIM4_IRQHandler>:
+TIM4_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:750
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void TIM4_IRQHandler(void)
+{
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:753
+    static bool forceHold5, forceHold6 = FALSE;
+
+    if (TIM_GetITStatus(TIM4, TIM_IT_CC1) != RESET)
+   2:	4834      	ldr	r0, [pc, #208]	(d4 <TIM4_IRQHandler+0xd4>)
+   4:	2102      	movs	r1, #2
+   6:	f7ff fffe 	bl	0 <TIM_GetITStatus>
+   a:	b190      	cbz	r0, 32 <TIM4_IRQHandler+0x32>
+C:\cortex\dimmers\src/stm32f10x_it.c:755
+    {
+        TIM_ClearITPendingBit(TIM4, TIM_IT_CC1);
+   c:	2102      	movs	r1, #2
+   e:	4831      	ldr	r0, [pc, #196]	(d4 <TIM4_IRQHandler+0xd4>)
+  10:	f7ff fffe 	bl	0 <TIM_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:756
+        if ( CHECK_NOT_IN_ONOFF_MODE(LIGHT5_INDEX) ){
+  14:	4b30      	ldr	r3, [pc, #192]	(d8 <TIM4_IRQHandler+0xd8>)
+  16:	f8b3 2070 	ldrh.w	r2, [r3, #112]
+  1a:	f242 7310 	movw	r3, #10000	; 0x2710
+  1e:	429a      	cmp	r2, r3
+  20:	d056      	beq.n	d0 <TIM4_IRQHandler+0xd0>
+  22:	2a00      	cmp	r2, #0
+  24:	d054      	beq.n	d0 <TIM4_IRQHandler+0xd0>
+C:\cortex\dimmers\src/stm32f10x_it.c:757
+            GPIO_SetBits(GPIOC, PIN_LIGHT_5);
+  26:	482d      	ldr	r0, [pc, #180]	(dc <TIM4_IRQHandler+0xdc>)
+  28:	2110      	movs	r1, #16
+  2a:	f7ff fffe 	bl	0 <GPIO_SetBits>
+C:\cortex\dimmers\src/stm32f10x_it.c:758
+            forceHold5 = TRUE;
+  2e:	2201      	movs	r2, #1
+  30:	e019      	b.n	66 <TIM4_IRQHandler+0x66>
+C:\cortex\dimmers\src/stm32f10x_it.c:761
+        }
+    }
+    else if (TIM_GetITStatus(TIM4, TIM_IT_CC2) != RESET)
+  32:	4828      	ldr	r0, [pc, #160]	(d4 <TIM4_IRQHandler+0xd4>)
+  34:	2104      	movs	r1, #4
+  36:	f7ff fffe 	bl	0 <TIM_GetITStatus>
+  3a:	b1b8      	cbz	r0, 6c <TIM4_IRQHandler+0x6c>
+C:\cortex\dimmers\src/stm32f10x_it.c:763
+    {
+        TIM_ClearITPendingBit(TIM4, TIM_IT_CC2);
+  3c:	2104      	movs	r1, #4
+  3e:	4825      	ldr	r0, [pc, #148]	(d4 <TIM4_IRQHandler+0xd4>)
+  40:	f7ff fffe 	bl	0 <TIM_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:764
+        if ( CHECK_NOT_IN_ONOFF_MODE(LIGHT5_INDEX) || forceHold5 ){
+  44:	4b24      	ldr	r3, [pc, #144]	(d8 <TIM4_IRQHandler+0xd8>)
+  46:	f8b3 2070 	ldrh.w	r2, [r3, #112]
+  4a:	f242 7310 	movw	r3, #10000	; 0x2710
+  4e:	429a      	cmp	r2, r3
+  50:	d000      	beq.n	54 <TIM4_IRQHandler+0x54>
+  52:	b91a      	cbnz	r2, 5c <TIM4_IRQHandler+0x5c>
+  54:	4b22      	ldr	r3, [pc, #136]	(e0 <TIM4_IRQHandler+0xe0>)
+  56:	7e1b      	ldrb	r3, [r3, #24]
+  58:	2b00      	cmp	r3, #0
+  5a:	d039      	beq.n	d0 <TIM4_IRQHandler+0xd0>
+C:\cortex\dimmers\src/stm32f10x_it.c:765
+            GPIO_ResetBits(GPIOC, PIN_LIGHT_5);
+  5c:	481f      	ldr	r0, [pc, #124]	(dc <TIM4_IRQHandler+0xdc>)
+  5e:	2110      	movs	r1, #16
+  60:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+C:\cortex\dimmers\src/stm32f10x_it.c:766
+            forceHold5 = FALSE;
+  64:	2200      	movs	r2, #0
+  66:	4b1e      	ldr	r3, [pc, #120]	(e0 <TIM4_IRQHandler+0xe0>)
+  68:	761a      	strb	r2, [r3, #24]
+  6a:	e031      	b.n	d0 <TIM4_IRQHandler+0xd0>
+C:\cortex\dimmers\src/stm32f10x_it.c:769
+        }
+    }
+    else if (TIM_GetITStatus(TIM4, TIM_IT_CC3) != RESET)
+  6c:	4819      	ldr	r0, [pc, #100]	(d4 <TIM4_IRQHandler+0xd4>)
+  6e:	2108      	movs	r1, #8
+  70:	f7ff fffe 	bl	0 <TIM_GetITStatus>
+  74:	b188      	cbz	r0, 9a <TIM4_IRQHandler+0x9a>
+C:\cortex\dimmers\src/stm32f10x_it.c:771
+    {
+        TIM_ClearITPendingBit(TIM4, TIM_IT_CC3);
+  76:	2108      	movs	r1, #8
+  78:	4816      	ldr	r0, [pc, #88]	(d4 <TIM4_IRQHandler+0xd4>)
+  7a:	f7ff fffe 	bl	0 <TIM_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:772
+        if ( CHECK_NOT_IN_ONOFF_MODE(LIGHT6_INDEX)){
+  7e:	4b16      	ldr	r3, [pc, #88]	(d8 <TIM4_IRQHandler+0xd8>)
+  80:	f8b3 208c 	ldrh.w	r2, [r3, #140]
+  84:	f242 7310 	movw	r3, #10000	; 0x2710
+  88:	429a      	cmp	r2, r3
+  8a:	d021      	beq.n	d0 <TIM4_IRQHandler+0xd0>
+  8c:	b302      	cbz	r2, d0 <TIM4_IRQHandler+0xd0>
+C:\cortex\dimmers\src/stm32f10x_it.c:773
+            GPIO_SetBits(GPIOC, PIN_LIGHT_6);
+  8e:	4813      	ldr	r0, [pc, #76]	(dc <TIM4_IRQHandler+0xdc>)
+  90:	2120      	movs	r1, #32
+  92:	f7ff fffe 	bl	0 <GPIO_SetBits>
+C:\cortex\dimmers\src/stm32f10x_it.c:774
+            forceHold6 = TRUE;
+  96:	2201      	movs	r2, #1
+  98:	e018      	b.n	cc <TIM4_IRQHandler+0xcc>
+C:\cortex\dimmers\src/stm32f10x_it.c:777
+        }
+    }
+    else if (TIM_GetITStatus(TIM4, TIM_IT_CC4) != RESET)
+  9a:	480e      	ldr	r0, [pc, #56]	(d4 <TIM4_IRQHandler+0xd4>)
+  9c:	2110      	movs	r1, #16
+  9e:	f7ff fffe 	bl	0 <TIM_GetITStatus>
+  a2:	b1a8      	cbz	r0, d0 <TIM4_IRQHandler+0xd0>
+C:\cortex\dimmers\src/stm32f10x_it.c:779
+    {
+        TIM_ClearITPendingBit(TIM4, TIM_IT_CC4);
+  a4:	2110      	movs	r1, #16
+  a6:	480b      	ldr	r0, [pc, #44]	(d4 <TIM4_IRQHandler+0xd4>)
+  a8:	f7ff fffe 	bl	0 <TIM_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:780
+        if ( CHECK_NOT_IN_ONOFF_MODE(LIGHT6_INDEX) || forceHold6 ){
+  ac:	4b0a      	ldr	r3, [pc, #40]	(d8 <TIM4_IRQHandler+0xd8>)
+  ae:	f8b3 208c 	ldrh.w	r2, [r3, #140]
+  b2:	f242 7310 	movw	r3, #10000	; 0x2710
+  b6:	429a      	cmp	r2, r3
+  b8:	d000      	beq.n	bc <TIM4_IRQHandler+0xbc>
+  ba:	b912      	cbnz	r2, c2 <TIM4_IRQHandler+0xc2>
+  bc:	4b08      	ldr	r3, [pc, #32]	(e0 <TIM4_IRQHandler+0xe0>)
+  be:	7e5b      	ldrb	r3, [r3, #25]
+  c0:	b133      	cbz	r3, d0 <TIM4_IRQHandler+0xd0>
+C:\cortex\dimmers\src/stm32f10x_it.c:781
+            GPIO_ResetBits(GPIOC, PIN_LIGHT_6);
+  c2:	4806      	ldr	r0, [pc, #24]	(dc <TIM4_IRQHandler+0xdc>)
+  c4:	2120      	movs	r1, #32
+  c6:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+C:\cortex\dimmers\src/stm32f10x_it.c:782
+            forceHold6 = FALSE;
+  ca:	2200      	movs	r2, #0
+  cc:	4b04      	ldr	r3, [pc, #16]	(e0 <TIM4_IRQHandler+0xe0>)
+  ce:	765a      	strb	r2, [r3, #25]
+C:\cortex\dimmers\src/stm32f10x_it.c:785
+        }
+    }
+}
+  d0:	bd10      	pop	{r4, pc}
+  d2:	46c0      	nop			(mov r8, r8)
+  d4:	40000800 	.word	0x40000800
+  d8:	00000000 	.word	0x00000000
+  dc:	40011000 	.word	0x40011000
+  e0:	00000000 	.word	0x00000000
+Disassembly of section .text.TIM3_IRQHandler:
+
+00000000 <TIM3_IRQHandler>:
+TIM3_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:705
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void TIM3_IRQHandler(void)
+{
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:708
+    static bool forceHold3, forceHold4 = FALSE;
+
+    if (TIM_GetITStatus(TIM3, TIM_IT_CC1) != RESET)
+   2:	4833      	ldr	r0, [pc, #204]	(d0 <TIM3_IRQHandler+0xd0>)
+   4:	2102      	movs	r1, #2
+   6:	f7ff fffe 	bl	0 <TIM_GetITStatus>
+   a:	b188      	cbz	r0, 30 <TIM3_IRQHandler+0x30>
+C:\cortex\dimmers\src/stm32f10x_it.c:710
+    {
+        TIM_ClearITPendingBit(TIM3, TIM_IT_CC1);
+   c:	2102      	movs	r1, #2
+   e:	4830      	ldr	r0, [pc, #192]	(d0 <TIM3_IRQHandler+0xd0>)
+  10:	f7ff fffe 	bl	0 <TIM_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:711
+        if ( CHECK_NOT_IN_ONOFF_MODE(LIGHT3_INDEX)){
+  14:	4b2f      	ldr	r3, [pc, #188]	(d4 <TIM3_IRQHandler+0xd4>)
+  16:	8f1a      	ldrh	r2, [r3, #56]
+  18:	f242 7310 	movw	r3, #10000	; 0x2710
+  1c:	429a      	cmp	r2, r3
+  1e:	d055      	beq.n	cc <TIM3_IRQHandler+0xcc>
+  20:	2a00      	cmp	r2, #0
+  22:	d053      	beq.n	cc <TIM3_IRQHandler+0xcc>
+C:\cortex\dimmers\src/stm32f10x_it.c:712
+            GPIO_SetBits(GPIOC, PIN_LIGHT_3);
+  24:	482c      	ldr	r0, [pc, #176]	(d8 <TIM3_IRQHandler+0xd8>)
+  26:	2104      	movs	r1, #4
+  28:	f7ff fffe 	bl	0 <GPIO_SetBits>
+C:\cortex\dimmers\src/stm32f10x_it.c:713
+            forceHold3 = TRUE;
+  2c:	2201      	movs	r2, #1
+  2e:	e018      	b.n	62 <TIM3_IRQHandler+0x62>
+C:\cortex\dimmers\src/stm32f10x_it.c:716
+        }
+    }
+    else if (TIM_GetITStatus(TIM3, TIM_IT_CC2) != RESET)
+  30:	4827      	ldr	r0, [pc, #156]	(d0 <TIM3_IRQHandler+0xd0>)
+  32:	2104      	movs	r1, #4
+  34:	f7ff fffe 	bl	0 <TIM_GetITStatus>
+  38:	b1b0      	cbz	r0, 68 <TIM3_IRQHandler+0x68>
+C:\cortex\dimmers\src/stm32f10x_it.c:718
+    {
+        TIM_ClearITPendingBit(TIM3, TIM_IT_CC2);
+  3a:	2104      	movs	r1, #4
+  3c:	4824      	ldr	r0, [pc, #144]	(d0 <TIM3_IRQHandler+0xd0>)
+  3e:	f7ff fffe 	bl	0 <TIM_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:719
+        if ( CHECK_NOT_IN_ONOFF_MODE(LIGHT3_INDEX) || forceHold3 ){
+  42:	4b24      	ldr	r3, [pc, #144]	(d4 <TIM3_IRQHandler+0xd4>)
+  44:	8f1a      	ldrh	r2, [r3, #56]
+  46:	f242 7310 	movw	r3, #10000	; 0x2710
+  4a:	429a      	cmp	r2, r3
+  4c:	d000      	beq.n	50 <TIM3_IRQHandler+0x50>
+  4e:	b91a      	cbnz	r2, 58 <TIM3_IRQHandler+0x58>
+  50:	4b22      	ldr	r3, [pc, #136]	(dc <TIM3_IRQHandler+0xdc>)
+  52:	7e9b      	ldrb	r3, [r3, #26]
+  54:	2b00      	cmp	r3, #0
+  56:	d039      	beq.n	cc <TIM3_IRQHandler+0xcc>
+C:\cortex\dimmers\src/stm32f10x_it.c:720
+            GPIO_ResetBits(GPIOC, PIN_LIGHT_3);
+  58:	481f      	ldr	r0, [pc, #124]	(d8 <TIM3_IRQHandler+0xd8>)
+  5a:	2104      	movs	r1, #4
+  5c:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+C:\cortex\dimmers\src/stm32f10x_it.c:721
+            forceHold3 = FALSE;
+  60:	2200      	movs	r2, #0
+  62:	4b1e      	ldr	r3, [pc, #120]	(dc <TIM3_IRQHandler+0xdc>)
+  64:	769a      	strb	r2, [r3, #26]
+  66:	e031      	b.n	cc <TIM3_IRQHandler+0xcc>
+C:\cortex\dimmers\src/stm32f10x_it.c:724
+        }
+    }
+    else if (TIM_GetITStatus(TIM3, TIM_IT_CC3) != RESET)
+  68:	4819      	ldr	r0, [pc, #100]	(d0 <TIM3_IRQHandler+0xd0>)
+  6a:	2108      	movs	r1, #8
+  6c:	f7ff fffe 	bl	0 <TIM_GetITStatus>
+  70:	b188      	cbz	r0, 96 <TIM3_IRQHandler+0x96>
+C:\cortex\dimmers\src/stm32f10x_it.c:726
+    {
+        TIM_ClearITPendingBit(TIM3, TIM_IT_CC3);
+  72:	2108      	movs	r1, #8
+  74:	4816      	ldr	r0, [pc, #88]	(d0 <TIM3_IRQHandler+0xd0>)
+  76:	f7ff fffe 	bl	0 <TIM_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:727
+        if ( CHECK_NOT_IN_ONOFF_MODE(LIGHT4_INDEX) ){
+  7a:	4b16      	ldr	r3, [pc, #88]	(d4 <TIM3_IRQHandler+0xd4>)
+  7c:	f8b3 2054 	ldrh.w	r2, [r3, #84]
+  80:	f242 7310 	movw	r3, #10000	; 0x2710
+  84:	429a      	cmp	r2, r3
+  86:	d021      	beq.n	cc <TIM3_IRQHandler+0xcc>
+  88:	b302      	cbz	r2, cc <TIM3_IRQHandler+0xcc>
+C:\cortex\dimmers\src/stm32f10x_it.c:728
+            GPIO_SetBits(GPIOC, PIN_LIGHT_4);
+  8a:	4813      	ldr	r0, [pc, #76]	(d8 <TIM3_IRQHandler+0xd8>)
+  8c:	2108      	movs	r1, #8
+  8e:	f7ff fffe 	bl	0 <GPIO_SetBits>
+C:\cortex\dimmers\src/stm32f10x_it.c:729
+            forceHold4 = TRUE;
+  92:	2201      	movs	r2, #1
+  94:	e018      	b.n	c8 <TIM3_IRQHandler+0xc8>
+C:\cortex\dimmers\src/stm32f10x_it.c:732
+        }
+    }
+    else if (TIM_GetITStatus(TIM3, TIM_IT_CC4) != RESET)
+  96:	480e      	ldr	r0, [pc, #56]	(d0 <TIM3_IRQHandler+0xd0>)
+  98:	2110      	movs	r1, #16
+  9a:	f7ff fffe 	bl	0 <TIM_GetITStatus>
+  9e:	b1a8      	cbz	r0, cc <TIM3_IRQHandler+0xcc>
+C:\cortex\dimmers\src/stm32f10x_it.c:734
+    {
+        TIM_ClearITPendingBit(TIM3, TIM_IT_CC4);
+  a0:	2110      	movs	r1, #16
+  a2:	480b      	ldr	r0, [pc, #44]	(d0 <TIM3_IRQHandler+0xd0>)
+  a4:	f7ff fffe 	bl	0 <TIM_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:735
+        if ( CHECK_NOT_IN_ONOFF_MODE(LIGHT4_INDEX) || forceHold4 ){
+  a8:	4b0a      	ldr	r3, [pc, #40]	(d4 <TIM3_IRQHandler+0xd4>)
+  aa:	f8b3 2054 	ldrh.w	r2, [r3, #84]
+  ae:	f242 7310 	movw	r3, #10000	; 0x2710
+  b2:	429a      	cmp	r2, r3
+  b4:	d000      	beq.n	b8 <TIM3_IRQHandler+0xb8>
+  b6:	b912      	cbnz	r2, be <TIM3_IRQHandler+0xbe>
+  b8:	4b08      	ldr	r3, [pc, #32]	(dc <TIM3_IRQHandler+0xdc>)
+  ba:	7edb      	ldrb	r3, [r3, #27]
+  bc:	b133      	cbz	r3, cc <TIM3_IRQHandler+0xcc>
+C:\cortex\dimmers\src/stm32f10x_it.c:736
+            GPIO_ResetBits(GPIOC, PIN_LIGHT_4);
+  be:	4806      	ldr	r0, [pc, #24]	(d8 <TIM3_IRQHandler+0xd8>)
+  c0:	2108      	movs	r1, #8
+  c2:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+C:\cortex\dimmers\src/stm32f10x_it.c:737
+            forceHold4 = FALSE;
+  c6:	2200      	movs	r2, #0
+  c8:	4b04      	ldr	r3, [pc, #16]	(dc <TIM3_IRQHandler+0xdc>)
+  ca:	76da      	strb	r2, [r3, #27]
+C:\cortex\dimmers\src/stm32f10x_it.c:740
+        }
+    }
+}
+  cc:	bd10      	pop	{r4, pc}
+  ce:	46c0      	nop			(mov r8, r8)
+  d0:	40000400 	.word	0x40000400
+  d4:	00000000 	.word	0x00000000
+  d8:	40011000 	.word	0x40011000
+  dc:	00000000 	.word	0x00000000
+Disassembly of section .text.TIM2_IRQHandler:
+
+00000000 <TIM2_IRQHandler>:
+TIM2_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:660
+* Return         : None
+*
+*                   1-2µs handle time / compare
+*******************************************************************************/
+void TIM2_IRQHandler(void)
+{
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:663
+    static bool forceHold1, forceHold2 = FALSE;
+
+    if (TIM_GetITStatus(TIM2, TIM_IT_CC1) != RESET)
+   2:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+   6:	2102      	movs	r1, #2
+   8:	f7ff fffe 	bl	0 <TIM_GetITStatus>
+   c:	b190      	cbz	r0, 34 <TIM2_IRQHandler+0x34>
+C:\cortex\dimmers\src/stm32f10x_it.c:665
+    {
+        TIM_ClearITPendingBit(TIM2, TIM_IT_CC1);
+   e:	2102      	movs	r1, #2
+  10:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  14:	f7ff fffe 	bl	0 <TIM_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:666
+        if ( CHECK_NOT_IN_ONOFF_MODE(LIGHT1_INDEX) ){
+  18:	4b30      	ldr	r3, [pc, #192]	(dc <TIM2_IRQHandler+0xdc>)
+  1a:	881a      	ldrh	r2, [r3, #0]
+  1c:	f242 7310 	movw	r3, #10000	; 0x2710
+  20:	429a      	cmp	r2, r3
+  22:	d059      	beq.n	d8 <TIM2_IRQHandler+0xd8>
+  24:	2a00      	cmp	r2, #0
+  26:	d057      	beq.n	d8 <TIM2_IRQHandler+0xd8>
+C:\cortex\dimmers\src/stm32f10x_it.c:667
+            GPIO_SetBits(GPIOC, PIN_LIGHT_1);
+  28:	482d      	ldr	r0, [pc, #180]	(e0 <TIM2_IRQHandler+0xe0>)
+  2a:	2101      	movs	r1, #1
+  2c:	f7ff fffe 	bl	0 <GPIO_SetBits>
+C:\cortex\dimmers\src/stm32f10x_it.c:668
+            forceHold1 = TRUE;
+  30:	2201      	movs	r2, #1
+  32:	e01a      	b.n	6a <TIM2_IRQHandler+0x6a>
+C:\cortex\dimmers\src/stm32f10x_it.c:671
+        }
+    }
+    else if (TIM_GetITStatus(TIM2, TIM_IT_CC2) != RESET)
+  34:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  38:	2104      	movs	r1, #4
+  3a:	f7ff fffe 	bl	0 <TIM_GetITStatus>
+  3e:	b1b8      	cbz	r0, 70 <TIM2_IRQHandler+0x70>
+C:\cortex\dimmers\src/stm32f10x_it.c:673
+    {
+        TIM_ClearITPendingBit(TIM2, TIM_IT_CC2);
+  40:	2104      	movs	r1, #4
+  42:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  46:	f7ff fffe 	bl	0 <TIM_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:674
+        if ( CHECK_NOT_IN_ONOFF_MODE(LIGHT1_INDEX) || forceHold1 ){
+  4a:	4b24      	ldr	r3, [pc, #144]	(dc <TIM2_IRQHandler+0xdc>)
+  4c:	881a      	ldrh	r2, [r3, #0]
+  4e:	f242 7310 	movw	r3, #10000	; 0x2710
+  52:	429a      	cmp	r2, r3
+  54:	d000      	beq.n	58 <TIM2_IRQHandler+0x58>
+  56:	b91a      	cbnz	r2, 60 <TIM2_IRQHandler+0x60>
+  58:	4b22      	ldr	r3, [pc, #136]	(e4 <TIM2_IRQHandler+0xe4>)
+  5a:	7f1b      	ldrb	r3, [r3, #28]
+  5c:	2b00      	cmp	r3, #0
+  5e:	d03b      	beq.n	d8 <TIM2_IRQHandler+0xd8>
+C:\cortex\dimmers\src/stm32f10x_it.c:675
+            GPIO_ResetBits(GPIOC, PIN_LIGHT_1);
+  60:	481f      	ldr	r0, [pc, #124]	(e0 <TIM2_IRQHandler+0xe0>)
+  62:	2101      	movs	r1, #1
+  64:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+C:\cortex\dimmers\src/stm32f10x_it.c:676
+            forceHold1 = FALSE;
+  68:	2200      	movs	r2, #0
+  6a:	4b1e      	ldr	r3, [pc, #120]	(e4 <TIM2_IRQHandler+0xe4>)
+  6c:	771a      	strb	r2, [r3, #28]
+  6e:	e033      	b.n	d8 <TIM2_IRQHandler+0xd8>
+C:\cortex\dimmers\src/stm32f10x_it.c:679
+        }
+    }
+    else if (TIM_GetITStatus(TIM2, TIM_IT_CC3) != RESET)
+  70:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  74:	2108      	movs	r1, #8
+  76:	f7ff fffe 	bl	0 <TIM_GetITStatus>
+  7a:	b188      	cbz	r0, a0 <TIM2_IRQHandler+0xa0>
+C:\cortex\dimmers\src/stm32f10x_it.c:681
+    {
+        TIM_ClearITPendingBit(TIM2, TIM_IT_CC3);
+  7c:	2108      	movs	r1, #8
+  7e:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  82:	f7ff fffe 	bl	0 <TIM_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:682
+        if ( CHECK_NOT_IN_ONOFF_MODE(LIGHT2_INDEX) ){
+  86:	4b15      	ldr	r3, [pc, #84]	(dc <TIM2_IRQHandler+0xdc>)
+  88:	8b9a      	ldrh	r2, [r3, #28]
+  8a:	f242 7310 	movw	r3, #10000	; 0x2710
+  8e:	429a      	cmp	r2, r3
+  90:	d022      	beq.n	d8 <TIM2_IRQHandler+0xd8>
+  92:	b30a      	cbz	r2, d8 <TIM2_IRQHandler+0xd8>
+C:\cortex\dimmers\src/stm32f10x_it.c:683
+            GPIO_SetBits(GPIOC, PIN_LIGHT_2);
+  94:	4812      	ldr	r0, [pc, #72]	(e0 <TIM2_IRQHandler+0xe0>)
+  96:	2102      	movs	r1, #2
+  98:	f7ff fffe 	bl	0 <GPIO_SetBits>
+C:\cortex\dimmers\src/stm32f10x_it.c:684
+            forceHold2 = TRUE;
+  9c:	2201      	movs	r2, #1
+  9e:	e019      	b.n	d4 <TIM2_IRQHandler+0xd4>
+C:\cortex\dimmers\src/stm32f10x_it.c:687
+        }
+    }
+    else if (TIM_GetITStatus(TIM2, TIM_IT_CC4) != RESET)
+  a0:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  a4:	2110      	movs	r1, #16
+  a6:	f7ff fffe 	bl	0 <TIM_GetITStatus>
+  aa:	b1a8      	cbz	r0, d8 <TIM2_IRQHandler+0xd8>
+C:\cortex\dimmers\src/stm32f10x_it.c:689
+    {
+        TIM_ClearITPendingBit(TIM2, TIM_IT_CC4);
+  ac:	2110      	movs	r1, #16
+  ae:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  b2:	f7ff fffe 	bl	0 <TIM_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:690
+        if ( CHECK_NOT_IN_ONOFF_MODE(LIGHT2_INDEX) || forceHold2 ){
+  b6:	4b09      	ldr	r3, [pc, #36]	(dc <TIM2_IRQHandler+0xdc>)
+  b8:	8b9a      	ldrh	r2, [r3, #28]
+  ba:	f242 7310 	movw	r3, #10000	; 0x2710
+  be:	429a      	cmp	r2, r3
+  c0:	d000      	beq.n	c4 <TIM2_IRQHandler+0xc4>
+  c2:	b912      	cbnz	r2, ca <TIM2_IRQHandler+0xca>
+  c4:	4b07      	ldr	r3, [pc, #28]	(e4 <TIM2_IRQHandler+0xe4>)
+  c6:	7f5b      	ldrb	r3, [r3, #29]
+  c8:	b133      	cbz	r3, d8 <TIM2_IRQHandler+0xd8>
+C:\cortex\dimmers\src/stm32f10x_it.c:691
+            GPIO_ResetBits(GPIOC, PIN_LIGHT_2);
+  ca:	4805      	ldr	r0, [pc, #20]	(e0 <TIM2_IRQHandler+0xe0>)
+  cc:	2102      	movs	r1, #2
+  ce:	f7ff fffe 	bl	0 <GPIO_ResetBits>
+C:\cortex\dimmers\src/stm32f10x_it.c:692
+            forceHold2 = FALSE;
+  d2:	2200      	movs	r2, #0
+  d4:	4b03      	ldr	r3, [pc, #12]	(e4 <TIM2_IRQHandler+0xe4>)
+  d6:	775a      	strb	r2, [r3, #29]
+C:\cortex\dimmers\src/stm32f10x_it.c:695
+        }
+    }
+}
+  d8:	bd10      	pop	{r4, pc}
+  da:	46c0      	nop			(mov r8, r8)
+  dc:	00000000 	.word	0x00000000
+  e0:	40011000 	.word	0x40011000
+  e4:	00000000 	.word	0x00000000
+Disassembly of section .text.TIM1_UP_IRQHandler:
+
+00000000 <TIM1_UP_IRQHandler>:
+TIM1_UP_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:622
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void TIM1_UP_IRQHandler(void)
+{
+   0:	2101      	movs	r1, #1
+   2:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:623
+    TIM_ClearITPendingBit(TIM1, TIM_IT_Update );
+   4:	4803      	ldr	r0, [pc, #12]	(14 <TIM1_UP_IRQHandler+0x14>)
+   6:	f7ff fffe 	bl	0 <TIM_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:624
+    ADC_SoftwareStartConvCmd(ADC3, ENABLE);
+   a:	4803      	ldr	r0, [pc, #12]	(18 <TIM1_UP_IRQHandler+0x18>)
+   c:	2101      	movs	r1, #1
+   e:	f7ff fffe 	bl	0 <ADC_SoftwareStartConvCmd>
+C:\cortex\dimmers\src/stm32f10x_it.c:625
+}
+  12:	bd10      	pop	{r4, pc}
+  14:	40012c00 	.word	0x40012c00
+  18:	00          	.byte	0x00
+  19:	3c          	.byte	0x3c
+  1a:	01          	.byte	0x01
+  1b:	40          	.byte	0x40
+Disassembly of section .text.ADC1_2_IRQHandler:
+
+00000000 <ADC1_2_IRQHandler>:
+ADC1_2_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:479
+* worload 50µs 
+*
+*   
+*******************************************************************************/
+void ADC1_2_IRQHandler(void)
+{
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:482
+  u16 t;
+  
+  ADC_ClearITPendingBit(ADC1, ADC_IT_EOC);
+   2:	481b      	ldr	r0, [pc, #108]	(70 <ADC1_2_IRQHandler+0x70>)
+   4:	f44f 7108 	mov.w	r1, #544	; 0x220
+   8:	f7ff fffe 	bl	0 <ADC_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:484
+
+  t = ((1.43 - ((3.3 / 4096 )* TempSensor))/0.0043) + 25;
+   c:	4b19      	ldr	r3, [pc, #100]	(74 <ADC1_2_IRQHandler+0x74>)
+   e:	8818      	ldrh	r0, [r3, #0]
+  10:	f7ff fffe 	bl	0 <__aeabi_i2d>
+  14:	a310      	add	r3, pc, #64	(adr r3, 58 <ADC1_2_IRQHandler+0x58>)
+  16:	e9d3 2300 	ldrd	r2, r3, [r3]
+  1a:	f7ff fffe 	bl	0 <__aeabi_dmul>
+  1e:	a310      	add	r3, pc, #64	(adr r3, 60 <ADC1_2_IRQHandler+0x60>)
+  20:	e9d3 2300 	ldrd	r2, r3, [r3]
+  24:	f7ff fffe 	bl	0 <__aeabi_dadd>
+  28:	a30f      	add	r3, pc, #60	(adr r3, 68 <ADC1_2_IRQHandler+0x68>)
+  2a:	e9d3 2300 	ldrd	r2, r3, [r3]
+  2e:	f7ff fffe 	bl	0 <__aeabi_ddiv>
+  32:	2200      	movs	r2, #0
+  34:	4b10      	ldr	r3, [pc, #64]	(78 <ADC1_2_IRQHandler+0x78>)
+  36:	f7ff fffe 	bl	0 <__aeabi_dadd>
+  3a:	f7ff fffe 	bl	0 <__aeabi_d2uiz>
+  3e:	b284      	uxth	r4, r0
+C:\cortex\dimmers\src/stm32f10x_it.c:486
+
+  BkpUnlock ();
+  40:	f7ff fffe 	bl	0 <BkpUnlock>
+C:\cortex\dimmers\src/stm32f10x_it.c:487
+  BKP_WriteBackupRegister( POS_VALUE_TEMP_SENSOR, t);
+  44:	20a8      	movs	r0, #168
+  46:	4621      	mov	r1, r4
+  48:	f7ff fffe 	bl	0 <BKP_WriteBackupRegister>
+C:\cortex\dimmers\src/stm32f10x_it.c:488
+  BkpLock();
+  4c:	f7ff fffe 	bl	0 <BkpLock>
+C:\cortex\dimmers\src/stm32f10x_it.c:490
+
+}
+  50:	bd10      	pop	{r4, pc}
+  52:	46c0      	nop			(mov r8, r8)
+  54:	46c0      	nop			(mov r8, r8)
+  56:	46c0      	nop			(mov r8, r8)
+  58:	66666666 	.word	0x66666666
+  5c:	bf4a6666 	.word	0xbf4a6666
+  60:	ae147ae1 	.word	0xae147ae1
+  64:	3ff6e147 	.word	0x3ff6e147
+  68:	75f6fd22 	.word	0x75f6fd22
+  6c:	3f719ce0 	.word	0x3f719ce0
+  70:	40012400 	.word	0x40012400
+  74:	00000000 	.word	0x00000000
+  78:	40390000 	.word	0x40390000
+  7c:	46c046c0 	.word	0x46c046c0
+Disassembly of section .text.RTC_IRQHandler:
+
+00000000 <RTC_IRQHandler>:
+RTC_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:291
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void RTC_IRQHandler(void)
+{
+   0:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:293
+    static portBASE_TYPE xFromHigher;
+    xFromHigher = pdFALSE;
+   2:	4c14      	ldr	r4, [pc, #80]	(54 <RTC_IRQHandler+0x54>)
+   4:	2500      	movs	r5, #0
+C:\cortex\dimmers\src/stm32f10x_it.c:295
+      
+    if (RTC_GetITStatus(RTC_IT_SEC) != RESET)
+   6:	2001      	movs	r0, #1
+C:\cortex\dimmers\src/stm32f10x_it.c:293
+* Return         : None
+*******************************************************************************/
+void RTC_IRQHandler(void)
+{
+    static portBASE_TYPE xFromHigher;
+    xFromHigher = pdFALSE;
+   8:	6225      	str	r5, [r4, #32]
+C:\cortex\dimmers\src/stm32f10x_it.c:295
+      
+    if (RTC_GetITStatus(RTC_IT_SEC) != RESET)
+   a:	f7ff fffe 	bl	0 <RTC_GetITStatus>
+   e:	b300      	cbz	r0, 52 <RTC_IRQHandler+0x52>
+C:\cortex\dimmers\src/stm32f10x_it.c:297
+    {
+        SecTick++;
+  10:	6a63      	ldr	r3, [r4, #36]
+C:\cortex\dimmers\src/stm32f10x_it.c:298
+        if ( (GpioGetDipState(FACTORY_DEFAULT_SWITCH) != ON ) ){
+  12:	f44f 5080 	mov.w	r0, #4096	; 0x1000
+C:\cortex\dimmers\src/stm32f10x_it.c:297
+    static portBASE_TYPE xFromHigher;
+    xFromHigher = pdFALSE;
+      
+    if (RTC_GetITStatus(RTC_IT_SEC) != RESET)
+    {
+        SecTick++;
+  16:	3301      	adds	r3, #1
+  18:	6263      	str	r3, [r4, #36]
+C:\cortex\dimmers\src/stm32f10x_it.c:298
+        if ( (GpioGetDipState(FACTORY_DEFAULT_SWITCH) != ON ) ){
+  1a:	f7ff fffe 	bl	0 <GpioGetDipState>
+  1e:	b1a8      	cbz	r0, 2e <xTaskGetSchedulerState+0x2e>
+C:\cortex\dimmers\src/stm32f10x_it.c:299
+            if ( xTaskGetSchedulerState() == taskSCHEDULER_RUNNING )
+  20:	f7ff fffe 	bl	0 <xTaskGetSchedulerState>
+  24:	2801      	cmp	r0, #1
+  26:	d107      	bne.n	38 <RTC_IRQHandler+0x38>
+C:\cortex\dimmers\src/stm32f10x_it.c:300
+                xSemaphoreGiveFromISR ( xRefreshSync , &xFromHigher );
+  28:	4b0b      	ldr	r3, [pc, #44]	(58 <RTC_IRQHandler+0x58>)
+  2a:	4629      	mov	r1, r5
+  2c:	6818      	ldr	r0, [r3, #0]
+  2e:	f104 0220 	add.w	r2, r4, #32	; 0x20
+  32:	462b      	mov	r3, r5
+  34:	f7ff fffe 	bl	0 <xQueueGenericSendFromISR>
+C:\cortex\dimmers\src/stm32f10x_it.c:302
+        
+            RTC_ClearITPendingBit(RTC_IT_SEC);
+  38:	2001      	movs	r0, #1
+  3a:	f7ff fffe 	bl	0 <RTC_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:304
+        
+            if ( xFromHigher == pdTRUE ){
+  3e:	4b05      	ldr	r3, [pc, #20]	(54 <RTC_IRQHandler+0x54>)
+  40:	6a1b      	ldr	r3, [r3, #32]
+  42:	2b01      	cmp	r3, #1
+  44:	d105      	bne.n	52 <RTC_IRQHandler+0x52>
+C:\cortex\dimmers\src/stm32f10x_it.c:305
+                vPortYieldFromISR();
+  46:	f7ff fffe 	bl	0 <vPortYieldFromISR>
+  4a:	e002      	b.n	52 <RTC_IRQHandler+0x52>
+C:\cortex\dimmers\src/stm32f10x_it.c:309
+            }
+        }
+        else{
+            RTC_ClearITPendingBit(RTC_IT_SEC);
+  4c:	2001      	movs	r0, #1
+  4e:	f7ff fffe 	bl	0 <RTC_ClearITPendingBit>
+C:\cortex\dimmers\src/stm32f10x_it.c:312
+        }
+    }
+}
+  52:	bd70      	pop	{r4, r5, r6, pc}
+	...
+Disassembly of section .text.PVD_IRQHandler:
+
+00000000 <PVD_IRQHandler>:
+PVD_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:264
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void PVD_IRQHandler(void)
+{
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:265
+    if (PWR_GetFlagStatus( PWR_FLAG_PVDO ) != RESET ) {
+   2:	2004      	movs	r0, #4
+   4:	f7ff fffe 	bl	0 <PWR_GetFlagStatus>
+   8:	b128      	cbz	r0, 16 <PVD_IRQHandler+0x16>
+C:\cortex\dimmers\src/stm32f10x_it.c:266
+        PWR_ClearFlag(PWR_FLAG_PVDO);
+   a:	2004      	movs	r0, #4
+   c:	f7ff fffe 	bl	0 <PWR_ClearFlag>
+C:\cortex\dimmers\src/stm32f10x_it.c:268
+        // reset
+        *((volatile unsigned int*)0xE000ED0C) = 0x05FA0004; 
+  10:	4a01      	ldr	r2, [pc, #4]	(18 <PWR_ClearFlag+0x18>)
+  12:	4b02      	ldr	r3, [pc, #8]	(1c <PWR_ClearFlag+0x1c>)
+  14:	601a      	str	r2, [r3, #0]
+C:\cortex\dimmers\src/stm32f10x_it.c:270
+    }
+}
+  16:	bd10      	pop	{r4, pc}
+  18:	04          	.byte	0x04
+  19:	00          	.byte	0x00
+  1a:	fa          	.byte	0xfa
+  1b:	05          	.byte	0x05
+  1c:	0c          	.byte	0x0c
+  1d:	ed          	.byte	0xed
+  1e:	e000      	.short	0xe000
+Disassembly of section .text.WWDG_IRQHandler:
+
+00000000 <WWDG_IRQHandler>:
+WWDG_IRQHandler():
+C:\cortex\dimmers\src/stm32f10x_it.c:249
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void WWDG_IRQHandler(void)
+{
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/stm32f10x_it.c:251
+    /* Update WWDG counter */
+    WWDG_SetCounter(WDG_COUNTER_VALUE);
+   2:	207f      	movs	r0, #127
+   4:	f7ff fffe 	bl	0 <WWDG_SetCounter>
+C:\cortex\dimmers\src/stm32f10x_it.c:253
+    /* Clear EWI flag */
+    WWDG_ClearFlag();
+   8:	f7ff fffe 	bl	0 <WWDG_ClearFlag>
+C:\cortex\dimmers\src/stm32f10x_it.c:254
+}
+   c:	bd10      	pop	{r4, pc}
+   e:	46c0      	nop			(mov r8, r8)

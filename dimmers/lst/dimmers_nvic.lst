@@ -1,0 +1,116 @@
+
+C:\cortex\dimmers\hex\dimmers_nvic.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\dimmers_nvic.o
+
+Disassembly of section .text.NvicInit:
+
+00000000 <NvicInit>:
+NvicInit():
+C:\cortex\dimmers\src/dimmers_nvic.c:51
+* Description    : Enable & install all used interrupt handlers
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void NvicInit (void){
+   0:	b513      	push	{r0, r1, r4, lr}
+C:\cortex\dimmers\src/dimmers_nvic.c:61
+  #ifdef  VECT_TAB_RAM  
+	/* Set the Vector Table base location at 0x20000000 */ 
+	NVIC_SetVectorTable(NVIC_VectTab_RAM, 0x0); 
+  #else  /* VECT_TAB_FLASH  */
+	/* Set the Vector Table base location at 0x08000000 */ 
+	NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x0);   
+   2:	f04f 6000 	mov.w	r0, #134217728	; 0x8000000
+   6:	2100      	movs	r1, #0
+   8:	f7ff fffe 	bl	0 <NVIC_SetVectorTable>
+C:\cortex\dimmers\src/dimmers_nvic.c:67
+  #endif
+  
+  // 1 pre 8 sub
+  //NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
+  // 4 pre 0 sub
+  NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
+   c:	f44f 7040 	mov.w	r0, #768	; 0x300
+  10:	f7ff fffe 	bl	0 <NVIC_PriorityGroupConfig>
+  14:	2400      	movs	r4, #0
+C:\cortex\dimmers\src/dimmers_nvic.c:71
+
+  // init them all
+  for ( u8_nvic = 0 ; u8_nvic < (sizeof (gx_nvics)/sizeof(NVIC_InitTypeDef)) ; u8_nvic++ ){
+	x_NVIC_InitStructure.NVIC_IRQChannel = gx_nvics[u8_nvic].NVIC_IRQChannel;
+  16:	4a0a      	ldr	r2, [pc, #40]	(40 <NvicInit+0x40>)
+C:\cortex\dimmers\src/dimmers_nvic.c:75
+	x_NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = gx_nvics[u8_nvic].NVIC_IRQChannelPreemptionPriority;
+	x_NVIC_InitStructure.NVIC_IRQChannelSubPriority = gx_nvics[u8_nvic].NVIC_IRQChannelSubPriority;  
+	x_NVIC_InitStructure.NVIC_IRQChannelCmd = gx_nvics[u8_nvic].NVIC_IRQChannelCmd;
+	NVIC_Init(&x_NVIC_InitStructure);
+  18:	a801      	add	r0, sp, #4
+C:\cortex\dimmers\src/dimmers_nvic.c:71
+  // 4 pre 0 sub
+  NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
+
+  // init them all
+  for ( u8_nvic = 0 ; u8_nvic < (sizeof (gx_nvics)/sizeof(NVIC_InitTypeDef)) ; u8_nvic++ ){
+	x_NVIC_InitStructure.NVIC_IRQChannel = gx_nvics[u8_nvic].NVIC_IRQChannel;
+  1a:	5d13      	ldrb	r3, [r2, r4]
+C:\cortex\dimmers\src/dimmers_nvic.c:51
+* Description    : Enable & install all used interrupt handlers
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void NvicInit (void){
+  1c:	1912      	adds	r2, r2, r4
+C:\cortex\dimmers\src/dimmers_nvic.c:71
+  // 4 pre 0 sub
+  NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
+
+  // init them all
+  for ( u8_nvic = 0 ; u8_nvic < (sizeof (gx_nvics)/sizeof(NVIC_InitTypeDef)) ; u8_nvic++ ){
+	x_NVIC_InitStructure.NVIC_IRQChannel = gx_nvics[u8_nvic].NVIC_IRQChannel;
+  1e:	f88d 3004 	strb.w	r3, [sp, #4]
+C:\cortex\dimmers\src/dimmers_nvic.c:72
+	x_NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = gx_nvics[u8_nvic].NVIC_IRQChannelPreemptionPriority;
+  22:	7853      	ldrb	r3, [r2, #1]
+C:\cortex\dimmers\src/dimmers_nvic.c:75
+	x_NVIC_InitStructure.NVIC_IRQChannelSubPriority = gx_nvics[u8_nvic].NVIC_IRQChannelSubPriority;  
+	x_NVIC_InitStructure.NVIC_IRQChannelCmd = gx_nvics[u8_nvic].NVIC_IRQChannelCmd;
+	NVIC_Init(&x_NVIC_InitStructure);
+  24:	3404      	adds	r4, #4
+C:\cortex\dimmers\src/dimmers_nvic.c:72
+  NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
+
+  // init them all
+  for ( u8_nvic = 0 ; u8_nvic < (sizeof (gx_nvics)/sizeof(NVIC_InitTypeDef)) ; u8_nvic++ ){
+	x_NVIC_InitStructure.NVIC_IRQChannel = gx_nvics[u8_nvic].NVIC_IRQChannel;
+	x_NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = gx_nvics[u8_nvic].NVIC_IRQChannelPreemptionPriority;
+  26:	f88d 3005 	strb.w	r3, [sp, #5]
+C:\cortex\dimmers\src/dimmers_nvic.c:73
+	x_NVIC_InitStructure.NVIC_IRQChannelSubPriority = gx_nvics[u8_nvic].NVIC_IRQChannelSubPriority;  
+  2a:	7893      	ldrb	r3, [r2, #2]
+  2c:	f88d 3006 	strb.w	r3, [sp, #6]
+C:\cortex\dimmers\src/dimmers_nvic.c:74
+	x_NVIC_InitStructure.NVIC_IRQChannelCmd = gx_nvics[u8_nvic].NVIC_IRQChannelCmd;
+  30:	78d3      	ldrb	r3, [r2, #3]
+  32:	f88d 3007 	strb.w	r3, [sp, #7]
+C:\cortex\dimmers\src/dimmers_nvic.c:75
+	NVIC_Init(&x_NVIC_InitStructure);
+  36:	f7ff fffe 	bl	0 <NVIC_Init>
+C:\cortex\dimmers\src/dimmers_nvic.c:70
+  //NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
+  // 4 pre 0 sub
+  NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
+
+  // init them all
+  for ( u8_nvic = 0 ; u8_nvic < (sizeof (gx_nvics)/sizeof(NVIC_InitTypeDef)) ; u8_nvic++ ){
+  3a:	2c38      	cmp	r4, #56
+  3c:	d1eb      	bne.n	16 <NvicInit+0x16>
+C:\cortex\dimmers\src/dimmers_nvic.c:77
+	x_NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = gx_nvics[u8_nvic].NVIC_IRQChannelPreemptionPriority;
+	x_NVIC_InitStructure.NVIC_IRQChannelSubPriority = gx_nvics[u8_nvic].NVIC_IRQChannelSubPriority;  
+	x_NVIC_InitStructure.NVIC_IRQChannelCmd = gx_nvics[u8_nvic].NVIC_IRQChannelCmd;
+	NVIC_Init(&x_NVIC_InitStructure);
+  }
+  3e:	bd1c      	pop	{r2, r3, r4, pc}
+  40:	00000000 	.word	0x00000000
