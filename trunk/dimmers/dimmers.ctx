@@ -1,0 +1,151 @@
+
+<Debug>
+	<RFlasher7>
+		<CodeView Focus="2634" TopRow="1205754976" NbPerLine="8" />
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+	</RFlasher7>
+	<dimmers>
+		<MemoryView Focus="134229628" TopRow="0" NbPerLine="8" />
+		<CodeView TopRow="134227034" Focus="4294967295" >
+			<CodeReport>
+				<0>87</0>
+				<1>96</1>
+				<2>52</2>
+				<3>289</3>
+				<4>52</4>
+				<5>111</5>
+																												
+			</CodeReport>
+																				
+		</CodeView>
+												
+	</dimmers>
+	<Flags>
+		<Report>
+			<Def Header="FlagReport" NbCol="9" >
+				<Col Type="PT_BOOL" Header="Check" sizeCache="18" AutoSize="0" Edit="1" Sortable="1" Icon="C:\Program Files\Raisonance\Ride\Config\Resources\check.bmp" />
+				<Col Type="PT_STRING" Header="Kind" sizeCache="DDDDDDDDDDD" AutoSize="1" Edit="0" Sortable="1" />
+				<Col Type="PT_STRING" Header="KindID" sizeCache="DD" AutoSize="1" Edit="0" Sortable="1" Visible="0" />
+				<Col Type="PT_STRING" Header="Space" sizeCache="DDDDDD" AutoSize="1" Edit="0" Sortable="1" />
+				<Col Type="PT_STRING" Header="SpaceID" sizeCache="DD" AutoSize="0" Edit="0" Sortable="0" Visible="0" />
+				<Col Type="PT_STRING" Header="Line" sizeCache="DDDDDDDDD" AutoSize="1" Edit="0" Sortable="1" Visible="1" />
+				<Col Type="PT_STRING" Header="File" sizeCache="DDDDDDDDDDDDDDDDDDDD" AutoSize="1" Edit="0" Sortable="1" Visible="1" />
+				<Col Type="PT_STRING" Header="Path" sizeCache="DDDDDDDDDDDDDDDDDDDD" AutoSize="1" Edit="0" Sortable="0" Visible="0" />
+				<Col Type="PT_STRING" Header="Condition" sizeCache="DDDDDDDDDDDDDDDDDDDDDDDD" AutoSize="1" Edit="0" Sortable="0" />
+				<Col Type="PT_STRING" Header="Condexpr" sizeCache="DD" AutoSize="1" Edit="0" Sortable="0" Visible="0" />
+				<Col Type="PT_STRING" Header="Condcount" sizeCache="DD" AutoSize="1" Edit="0" Sortable="0" Visible="0" />
+							
+			</Def>
+			<Rows/>
+					
+		</Report>
+			
+	</Flags>
+	<Views>
+		<View File="C:\cortex\dimmers\src\stm32f10x_it.c" Line="33" Index="0" />
+		<View File="C:\cortex\dimmers\src\dimmers_nvic.c" Line="28" Index="1" />
+		<View File="C:\cortex\dimmers\src\dimmers_bkp.c" Line="333" Index="2" />
+		<View File="C:\cortex\dimmers\src\dimmers_storage.c" Line="13" Index="3" />
+		<View File="C:\cortex\dimmers\include\dimmers_storage.h" Line="40" Index="4" />
+		<View File="C:\cortex\dimmers\src\main.c" Line="118" Index="5" />
+		<View File="C:\cortex\dimmers\src\stm32f10x_vector.c" Line="152" Index="6" />
+		<View File="C:\cortex\dimmers\src\dimmers_adc.c" Line="88" Index="7" />
+		<View File="C:\cortex\dimmers\include\dimmers_gpio.h" Line="60" Index="8" />
+		<View File="C:\cortex\dimmers\include\dimmers_i2c.h" Line="12" Index="9" />
+		<View File="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_adc.h" Line="171" Index="10" />
+		<View File="C:\cortex\dimmers\include\stm32f10x_it.h" Line="0" Index="11" />
+		<View File="C:\cortex\dimmers\include\dimmers_bkp.h" Line="0" Index="12" />
+		<View File="C:\cortex\dimmers\include\dimmers_tim.h" Line="35" Index="13" focus="1" />
+	</Views>
+	<Grep>
+		<GrepIncludeSub>yes</GrepIncludeSub>
+		<GrepMatchCase>no</GrepMatchCase>
+		<GrepMatchWhole>no</GrepMatchWhole>
+		<GrepRegExp>no</GrepRegExp>
+		<GrepReplaceMode>no</GrepReplaceMode>
+		<GrepFileTypes>
+			<GrepFileTypesValue>*.c;*.h</GrepFileTypesValue>
+			<GrepFileType>*.c;*.h</GrepFileType>
+		</GrepFileTypes>
+		<GrepFindWhat>
+			<GrepFindWhatValue>CHECK_STEP_VALUE</GrepFindWhatValue>
+			<GrepFindStr>CHECK_STEP_VALUE</GrepFindStr>
+			<GrepFindStr>BIG_ENDIAN</GrepFindStr>
+		</GrepFindWhat>
+		<GrepFindWhere>
+			<GrepFindWhereValue>C:\cortex\dimmers</GrepFindWhereValue>
+			<GrepPathStr>C:\cortex\dimmers</GrepPathStr>
+			<GrepPathStr>Application Files</GrepPathStr>
+			<GrepPathStr>Application Path</GrepPathStr>
+		</GrepFindWhere>
+		<GrepReplaceWhat>
+			<GrepReplaceWhatValue/>
+		</GrepReplaceWhat>
+	</Grep>
+	<FindStrings>
+		<Find>UtilCountWatchDogAndReset</Find>
+		<Find>ADC3</Find>
+		<Find>UtilButtonWriteAndUpdateLight</Find>
+		<Find>UtilUpdateLights</Find>
+		<Find>swab</Find>
+		<Find>SetTimDisableIntCompare</Find>
+		<Find>UtilWriteAndUpdateLight</Find>
+		<Find>BARACUDA</Find>
+		<Find>UtilWriteBackupDomainToMemory</Find>
+		<Find>vOneSecondTask</Find>
+		<Find>xFromHigher</Find>
+		<Find>xI2CRecvSync</Find>
+		<Find>xI2CSendSync</Find>
+		<Find>ucHeap</Find>
+		<Find>xHeap</Find>
+		<Find>configTOTAL_HEAP_SIZE</Find>
+		<Find>I2C_EVENT_SLAVE_BYTE_RECEIVED_WITH_BTF</Find>
+		<Find>PUSHED</Find>
+		<Find>I2C</Find>
+		<Find>I2C_EVENT_SLAVE_ACK_FAILURE</Find>
+		<Find>200054</Find>
+		<Find>200052</Find>
+		<Find>200050</Find>
+		<Find>50</Find>
+		<Find>vButtonTask</Find>
+		<Find>yield</Find>
+		<Find>resume</Find>
+		<Find>suspend</Find>
+		<Find>vTaskDelay</Find>
+		<Find>Water</Find>
+		<Find>pvButtonSync1</Find>
+		<Find>TickHook</Find>
+		<Find>TIM1</Find>
+		<Find>RTC</Find>
+		<Find>WDG</Find>
+		<Find>UPPERTRESHOLD</Find>
+		<Find>TIM2</Find>
+		<Find>TIM_CKD_DIV1</Find>
+		<Find>GPIOA_BASE</Find>
+		<Find>remap</Find>
+		<Find>12</Find>
+		<Find>ADC_SampleTime_55Cycles5</Find>
+		<Find>TIM_TimeBaseInit</Find>
+		<Find>TIM_ClearITPendingBit</Find>
+		<Find>TIM1_TimeBaseInitTypeDef</Find>
+		<Find>CR_PLLON_BB</Find>
+		<Find>swa</Find>
+		<Find>swap</Find>
+		<Find>SMPR1</Find>
+		<Find>ADC1</Find>
+		<Find>ADC</Find>
+		<Find>PLL</Find>
+		<Find>fir_16by16_stm32</Find>
+		<Find>DSPDemoInit</Find>
+	</FindStrings>
+	<ReplaceStrings>
+		<Find>UtilUpdateLightFromButton</Find>
+		<Find>UtilUpdateLightsFromI2C</Find>
+		<Find>UtilButtonWriteAndUpdateLight</Find>
+		<Find>SetTimIntCompare</Find>
+		<Find>vRefreshTask</Find>
+		<Find>ON</Find>
+		<Find>vButtonDimmerTask</Find>
+		<Find>xButtonSync1</Find>
+	</ReplaceStrings>
+</Debug>

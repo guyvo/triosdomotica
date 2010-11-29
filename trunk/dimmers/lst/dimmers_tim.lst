@@ -1,0 +1,2101 @@
+
+C:\cortex\dimmers\hex\dimmers_tim.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\dimmers_tim.o
+
+Disassembly of section .text.TimSetClockTimer5:
+
+00000000 <TimSetClockTimer5>:
+TimSetClockTimer5():
+C:\cortex\dimmers\src/dimmers_tim.c:32
+void TimSetClockTimer4 (void){
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);
+}
+void TimSetClockTimer5 (void){
+    //not used
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TimSetClockTimer6:
+
+00000000 <TimSetClockTimer6>:
+TimSetClockTimer6():
+C:\cortex\dimmers\src/dimmers_tim.c:35
+void TimSetClockTimer6 (void){
+    //not used
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TimSetClockTimer7:
+
+00000000 <TimSetClockTimer7>:
+TimSetClockTimer7():
+C:\cortex\dimmers\src/dimmers_tim.c:38
+void TimSetClockTimer7 (void){
+    //not used
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TimSetClockTimer8:
+
+00000000 <TimSetClockTimer8>:
+TimSetClockTimer8():
+C:\cortex\dimmers\src/dimmers_tim.c:41
+void TimSetClockTimer8 (void){
+    //not used
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TimSetConfigTimer5:
+
+00000000 <TimSetConfigTimer5>:
+TimSetConfigTimer5():
+C:\cortex\dimmers\src/dimmers_tim.c:93
+    TIM_TimeBaseInit(TIM4, &TIM_TimeBaseStructure);
+}
+
+void TimSetConfigTimer5 ( u32 period ){
+    //not used
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TimSetConfigTimer6:
+
+00000000 <TimSetConfigTimer6>:
+TimSetConfigTimer6():
+C:\cortex\dimmers\src/dimmers_tim.c:97
+
+void TimSetConfigTimer6 ( u32 period ){
+    //not used
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TimSetConfigTimer7:
+
+00000000 <TimSetConfigTimer7>:
+TimSetConfigTimer7():
+C:\cortex\dimmers\src/dimmers_tim.c:101
+
+void TimSetConfigTimer7 ( u32 period ){
+    //not used
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TimSetConfigTimer8:
+
+00000000 <TimSetConfigTimer8>:
+TimSetConfigTimer8():
+C:\cortex\dimmers\src/dimmers_tim.c:105
+
+void TimSetConfigTimer8 ( u32 period ){
+    //not used
+}
+   0:	4770      	bx	lr
+   2:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.ComparesToArrayOfFunctions:
+
+00000000 <ComparesToArrayOfFunctions>:
+ComparesToArrayOfFunctions():
+C:\cortex\dimmers\src/dimmers_tim.c:374
+
+}
+
+void ComparesToArrayOfFunctions ( void ){
+
+    Compares[LIGHT1_INDEX] = &TimSetCompareSetHold1;
+   0:	4a06      	ldr	r2, [pc, #24]	(1c <ComparesToArrayOfFunctions+0x1c>)
+   2:	4b07      	ldr	r3, [pc, #28]	(20 <ComparesToArrayOfFunctions+0x20>)
+   4:	6013      	str	r3, [r2, #0]
+C:\cortex\dimmers\src/dimmers_tim.c:375
+    Compares[LIGHT2_INDEX] = &TimSetCompareSetHold2;
+   6:	4b07      	ldr	r3, [pc, #28]	(24 <ComparesToArrayOfFunctions+0x24>)
+   8:	6053      	str	r3, [r2, #4]
+C:\cortex\dimmers\src/dimmers_tim.c:376
+    Compares[LIGHT3_INDEX] = &TimSetCompareSetHold3;
+   a:	4b07      	ldr	r3, [pc, #28]	(28 <ComparesToArrayOfFunctions+0x28>)
+   c:	6093      	str	r3, [r2, #8]
+C:\cortex\dimmers\src/dimmers_tim.c:377
+    Compares[LIGHT4_INDEX] = &TimSetCompareSetHold4;
+   e:	4b07      	ldr	r3, [pc, #28]	(2c <ComparesToArrayOfFunctions+0x2c>)
+  10:	60d3      	str	r3, [r2, #12]
+C:\cortex\dimmers\src/dimmers_tim.c:378
+    Compares[LIGHT5_INDEX] = &TimSetCompareSetHold5;
+  12:	4b07      	ldr	r3, [pc, #28]	(30 <ComparesToArrayOfFunctions+0x30>)
+  14:	6113      	str	r3, [r2, #16]
+C:\cortex\dimmers\src/dimmers_tim.c:379
+    Compares[LIGHT6_INDEX] = &TimSetCompareSetHold6;
+  16:	4b07      	ldr	r3, [pc, #28]	(34 <ComparesToArrayOfFunctions+0x34>)
+  18:	6153      	str	r3, [r2, #20]
+C:\cortex\dimmers\src/dimmers_tim.c:380
+}
+  1a:	4770      	bx	lr
+	...
+Disassembly of section .text.CompareStatesToArrayOfFunctions:
+
+00000000 <CompareStatesToArrayOfFunctions>:
+CompareStatesToArrayOfFunctions():
+C:\cortex\dimmers\src/dimmers_tim.c:384
+
+void CompareStatesToArrayOfFunctions ( void ){
+
+    CompareStates[LIGHT1_INDEX] = &SetTimIntCompare1;
+   0:	4a06      	ldr	r2, [pc, #24]	(1c <CompareStatesToArrayOfFunctions+0x1c>)
+   2:	4b07      	ldr	r3, [pc, #28]	(20 <CompareStatesToArrayOfFunctions+0x20>)
+   4:	6013      	str	r3, [r2, #0]
+C:\cortex\dimmers\src/dimmers_tim.c:385
+    CompareStates[LIGHT2_INDEX] = &SetTimIntCompare2;
+   6:	4b07      	ldr	r3, [pc, #28]	(24 <CompareStatesToArrayOfFunctions+0x24>)
+   8:	6053      	str	r3, [r2, #4]
+C:\cortex\dimmers\src/dimmers_tim.c:386
+    CompareStates[LIGHT3_INDEX] = &SetTimIntCompare3;
+   a:	4b07      	ldr	r3, [pc, #28]	(28 <CompareStatesToArrayOfFunctions+0x28>)
+   c:	6093      	str	r3, [r2, #8]
+C:\cortex\dimmers\src/dimmers_tim.c:387
+    CompareStates[LIGHT4_INDEX] = &SetTimIntCompare4;
+   e:	4b07      	ldr	r3, [pc, #28]	(2c <CompareStatesToArrayOfFunctions+0x2c>)
+  10:	60d3      	str	r3, [r2, #12]
+C:\cortex\dimmers\src/dimmers_tim.c:388
+    CompareStates[LIGHT5_INDEX] = &SetTimIntCompare5;
+  12:	4b07      	ldr	r3, [pc, #28]	(30 <CompareStatesToArrayOfFunctions+0x30>)
+  14:	6113      	str	r3, [r2, #16]
+C:\cortex\dimmers\src/dimmers_tim.c:389
+    CompareStates[LIGHT6_INDEX] = &SetTimIntCompare6;
+  16:	4b07      	ldr	r3, [pc, #28]	(34 <CompareStatesToArrayOfFunctions+0x34>)
+  18:	6153      	str	r3, [r2, #20]
+C:\cortex\dimmers\src/dimmers_tim.c:390
+}
+  1a:	4770      	bx	lr
+	...
+Disassembly of section .text.TimResetAll:
+
+00000000 <TimResetAll>:
+TimResetAll():
+C:\cortex\dimmers\src/dimmers_tim.c:392
+
+void TimResetAll (void){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:394
+
+    TIM_SetCounter(TIM2, 0);
+   2:	2100      	movs	r1, #0
+   4:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+   8:	f7ff fffe 	bl	0 <TIM_SetCounter>
+C:\cortex\dimmers\src/dimmers_tim.c:395
+    TIM_SetCounter(TIM3, 0);
+   c:	2100      	movs	r1, #0
+   e:	4804      	ldr	r0, [pc, #16]	(20 <TimResetAll+0x20>)
+  10:	f7ff fffe 	bl	0 <TIM_SetCounter>
+C:\cortex\dimmers\src/dimmers_tim.c:396
+    TIM_SetCounter(TIM4, 0);
+  14:	4803      	ldr	r0, [pc, #12]	(24 <TimResetAll+0x24>)
+  16:	2100      	movs	r1, #0
+  18:	f7ff fffe 	bl	0 <TIM_SetCounter>
+C:\cortex\dimmers\src/dimmers_tim.c:397
+}
+  1c:	bd10      	pop	{r4, pc}
+  1e:	46c0      	nop			(mov r8, r8)
+  20:	40000400 	.word	0x40000400
+  24:	40000800 	.word	0x40000800
+Disassembly of section .text.TimGetHoldValue:
+
+00000000 <TimGetHoldValue>:
+TimGetHoldValue():
+C:\cortex\dimmers\src/dimmers_tim.c:295
+// ATTENTION operation takes 250µs !!!
+u16 TimGetHoldValue ( u16 set ){
+
+    double hold;
+
+    hold = ((tanh ( ((( 10000 - set )/1000 )-3.0 ) /2.0 ) * 0.5) + 0.5) * 100;
+   0:	f5c0 501c 	rsb	r0, r0, #9984	; 0x2700
+   4:	f44f 737a 	mov.w	r3, #1000	; 0x3e8
+   8:	3010      	adds	r0, #16
+C:\cortex\dimmers\src/dimmers_tim.c:291
+    TIM_Cmd(TIM3, ENABLE);
+    TIM_Cmd(TIM4, ENABLE);
+}
+
+// ATTENTION operation takes 250µs !!!
+u16 TimGetHoldValue ( u16 set ){
+   a:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:295
+
+    double hold;
+
+    hold = ((tanh ( ((( 10000 - set )/1000 )-3.0 ) /2.0 ) * 0.5) + 0.5) * 100;
+   c:	fb90 f0f3 	sdiv	r0, r0, r3
+  10:	4d0e      	ldr	r5, [pc, #56]	(3c <__aeabi_i2d+0x3c>)
+  12:	f7ff fffe 	bl	0 <__aeabi_i2d>
+  16:	2400      	movs	r4, #0
+  18:	2200      	movs	r2, #0
+  1a:	4b0d      	ldr	r3, [pc, #52]	(50 <TimGetHoldValue+0x50>)
+  1c:	f7ff fffe 	bl	0 <__aeabi_dsub>
+  20:	4622      	mov	r2, r4
+  22:	462b      	mov	r3, r5
+  24:	f7ff fffe 	bl	0 <__aeabi_dmul>
+  28:	f7ff fffe 	bl	0 <tanh>
+  2c:	4622      	mov	r2, r4
+  2e:	462b      	mov	r3, r5
+  30:	f7ff fffe 	bl	0 <__aeabi_dmul>
+  34:	4622      	mov	r2, r4
+  36:	462b      	mov	r3, r5
+  38:	f7ff fffe 	bl	0 <__aeabi_dadd>
+  3c:	2200      	movs	r2, #0
+  3e:	4b05      	ldr	r3, [pc, #20]	(54 <TimGetHoldValue+0x54>)
+  40:	f7ff fffe 	bl	0 <__aeabi_dmul>
+  44:	f7ff fffe 	bl	0 <__aeabi_d2uiz>
+C:\cortex\dimmers\src/dimmers_tim.c:298
+
+    return (u16) hold;
+}
+  48:	b280      	uxth	r0, r0
+  4a:	bd70      	pop	{r4, r5, r6, pc}
+  4c:	3fe00000 	.word	0x3fe00000
+  50:	40080000 	.word	0x40080000
+  54:	40590000 	.word	0x40590000
+Disassembly of section .text.TimSetCompareSetHold6:
+
+00000000 <TimSetCompareSetHold6>:
+TimSetCompareSetHold6():
+C:\cortex\dimmers\src/dimmers_tim.c:361
+    TIM_SetCompare2(TIM4 , set + hold );
+    
+}
+
+// TIM4 OC3/4
+void TimSetCompareSetHold6 ( u16 set ){
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/dimmers_tim.c:365
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+   4:	f7ff fffe 	bl	0 <TimSetCompareSetHold6>
+C:\cortex\dimmers\src/dimmers_tim.c:367
+
+    TIM_SetCompare3(TIM4 , set);
+   8:	4d05      	ldr	r5, [pc, #20]	(20 <TimSetCompareSetHold6+0x20>)
+C:\cortex\dimmers\src/dimmers_tim.c:365
+// TIM4 OC3/4
+void TimSetCompareSetHold6 ( u16 set ){
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+   a:	4606      	mov	r6, r0
+C:\cortex\dimmers\src/dimmers_tim.c:367
+
+    TIM_SetCompare3(TIM4 , set);
+   c:	4621      	mov	r1, r4
+   e:	4628      	mov	r0, r5
+C:\cortex\dimmers\src/dimmers_tim.c:368
+    TIM_SetCompare4(TIM4 , set + hold );
+  10:	19a4      	adds	r4, r4, r6
+C:\cortex\dimmers\src/dimmers_tim.c:367
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+
+    TIM_SetCompare3(TIM4 , set);
+  12:	f7ff fffe 	bl	0 <TIM_SetCompare3>
+C:\cortex\dimmers\src/dimmers_tim.c:368
+    TIM_SetCompare4(TIM4 , set + hold );
+  16:	4628      	mov	r0, r5
+  18:	b2a1      	uxth	r1, r4
+  1a:	f7ff fffe 	bl	0 <TIM_SetCompare4>
+C:\cortex\dimmers\src/dimmers_tim.c:370
+
+}
+  1e:	bd70      	pop	{r4, r5, r6, pc}
+  20:	40000800 	.word	0x40000800
+Disassembly of section .text.TimSetCompareSetHold5:
+
+00000000 <TimSetCompareSetHold5>:
+TimSetCompareSetHold5():
+C:\cortex\dimmers\src/dimmers_tim.c:349
+    TIM_SetCompare4(TIM3 , set + hold);
+
+}
+
+// TIM4 OC1/2
+void TimSetCompareSetHold5 ( u16 set ){
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/dimmers_tim.c:353
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+   4:	f7ff fffe 	bl	0 <TimSetCompareSetHold5>
+C:\cortex\dimmers\src/dimmers_tim.c:355
+
+    TIM_SetCompare1(TIM4 , set);
+   8:	4d05      	ldr	r5, [pc, #20]	(20 <TimSetCompareSetHold5+0x20>)
+C:\cortex\dimmers\src/dimmers_tim.c:353
+// TIM4 OC1/2
+void TimSetCompareSetHold5 ( u16 set ){
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+   a:	4606      	mov	r6, r0
+C:\cortex\dimmers\src/dimmers_tim.c:355
+
+    TIM_SetCompare1(TIM4 , set);
+   c:	4621      	mov	r1, r4
+   e:	4628      	mov	r0, r5
+C:\cortex\dimmers\src/dimmers_tim.c:356
+    TIM_SetCompare2(TIM4 , set + hold );
+  10:	19a4      	adds	r4, r4, r6
+C:\cortex\dimmers\src/dimmers_tim.c:355
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+
+    TIM_SetCompare1(TIM4 , set);
+  12:	f7ff fffe 	bl	0 <TIM_SetCompare1>
+C:\cortex\dimmers\src/dimmers_tim.c:356
+    TIM_SetCompare2(TIM4 , set + hold );
+  16:	4628      	mov	r0, r5
+  18:	b2a1      	uxth	r1, r4
+  1a:	f7ff fffe 	bl	0 <TIM_SetCompare2>
+C:\cortex\dimmers\src/dimmers_tim.c:358
+    
+}
+  1e:	bd70      	pop	{r4, r5, r6, pc}
+  20:	40000800 	.word	0x40000800
+Disassembly of section .text.TimSetCompareSetHold4:
+
+00000000 <TimSetCompareSetHold4>:
+TimSetCompareSetHold4():
+C:\cortex\dimmers\src/dimmers_tim.c:337
+    TIM_SetCompare2(TIM3 , set + hold );
+    
+}
+
+// TIM3 OC3/4
+void TimSetCompareSetHold4 ( u16 set ){
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/dimmers_tim.c:341
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+   4:	f7ff fffe 	bl	0 <TimSetCompareSetHold4>
+C:\cortex\dimmers\src/dimmers_tim.c:343
+
+    TIM_SetCompare3(TIM3 , set);
+   8:	4d05      	ldr	r5, [pc, #20]	(20 <TimSetCompareSetHold4+0x20>)
+C:\cortex\dimmers\src/dimmers_tim.c:341
+// TIM3 OC3/4
+void TimSetCompareSetHold4 ( u16 set ){
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+   a:	4606      	mov	r6, r0
+C:\cortex\dimmers\src/dimmers_tim.c:343
+
+    TIM_SetCompare3(TIM3 , set);
+   c:	4621      	mov	r1, r4
+   e:	4628      	mov	r0, r5
+C:\cortex\dimmers\src/dimmers_tim.c:344
+    TIM_SetCompare4(TIM3 , set + hold);
+  10:	19a4      	adds	r4, r4, r6
+C:\cortex\dimmers\src/dimmers_tim.c:343
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+
+    TIM_SetCompare3(TIM3 , set);
+  12:	f7ff fffe 	bl	0 <TIM_SetCompare3>
+C:\cortex\dimmers\src/dimmers_tim.c:344
+    TIM_SetCompare4(TIM3 , set + hold);
+  16:	4628      	mov	r0, r5
+  18:	b2a1      	uxth	r1, r4
+  1a:	f7ff fffe 	bl	0 <TIM_SetCompare4>
+C:\cortex\dimmers\src/dimmers_tim.c:346
+
+}
+  1e:	bd70      	pop	{r4, r5, r6, pc}
+  20:	40000400 	.word	0x40000400
+Disassembly of section .text.TimSetCompareSetHold3:
+
+00000000 <TimSetCompareSetHold3>:
+TimSetCompareSetHold3():
+C:\cortex\dimmers\src/dimmers_tim.c:325
+    TIM_SetCompare4(TIM2 , set + hold );
+
+ }
+
+// TIM3 OC1/2
+void TimSetCompareSetHold3 ( u16 set ){
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/dimmers_tim.c:329
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+   4:	f7ff fffe 	bl	0 <TimSetCompareSetHold3>
+C:\cortex\dimmers\src/dimmers_tim.c:331
+
+    TIM_SetCompare1(TIM3 , set);
+   8:	4d05      	ldr	r5, [pc, #20]	(20 <TimSetCompareSetHold3+0x20>)
+C:\cortex\dimmers\src/dimmers_tim.c:329
+// TIM3 OC1/2
+void TimSetCompareSetHold3 ( u16 set ){
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+   a:	4606      	mov	r6, r0
+C:\cortex\dimmers\src/dimmers_tim.c:331
+
+    TIM_SetCompare1(TIM3 , set);
+   c:	4621      	mov	r1, r4
+   e:	4628      	mov	r0, r5
+C:\cortex\dimmers\src/dimmers_tim.c:332
+    TIM_SetCompare2(TIM3 , set + hold );
+  10:	19a4      	adds	r4, r4, r6
+C:\cortex\dimmers\src/dimmers_tim.c:331
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+
+    TIM_SetCompare1(TIM3 , set);
+  12:	f7ff fffe 	bl	0 <TIM_SetCompare1>
+C:\cortex\dimmers\src/dimmers_tim.c:332
+    TIM_SetCompare2(TIM3 , set + hold );
+  16:	4628      	mov	r0, r5
+  18:	b2a1      	uxth	r1, r4
+  1a:	f7ff fffe 	bl	0 <TIM_SetCompare2>
+C:\cortex\dimmers\src/dimmers_tim.c:334
+    
+}
+  1e:	bd70      	pop	{r4, r5, r6, pc}
+  20:	40000400 	.word	0x40000400
+Disassembly of section .text.TimSetCompareSetHold2:
+
+00000000 <TimSetCompareSetHold2>:
+TimSetCompareSetHold2():
+C:\cortex\dimmers\src/dimmers_tim.c:313
+    TIM_SetCompare2(TIM2 , set + hold );
+    
+}
+
+// TIM2 OC3/4
+void TimSetCompareSetHold2 ( u16 set ){
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/dimmers_tim.c:317
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+   4:	f7ff fffe 	bl	0 <TimSetCompareSetHold2>
+   8:	4605      	mov	r5, r0
+C:\cortex\dimmers\src/dimmers_tim.c:319
+
+    TIM_SetCompare3(TIM2 , set);
+   a:	4621      	mov	r1, r4
+   c:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+C:\cortex\dimmers\src/dimmers_tim.c:320
+    TIM_SetCompare4(TIM2 , set + hold );
+  10:	1964      	adds	r4, r4, r5
+C:\cortex\dimmers\src/dimmers_tim.c:319
+
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+
+    TIM_SetCompare3(TIM2 , set);
+  12:	f7ff fffe 	bl	0 <TIM_SetCompare3>
+C:\cortex\dimmers\src/dimmers_tim.c:320
+    TIM_SetCompare4(TIM2 , set + hold );
+  16:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  1a:	b2a1      	uxth	r1, r4
+  1c:	f7ff fffe 	bl	0 <TIM_SetCompare4>
+C:\cortex\dimmers\src/dimmers_tim.c:322
+
+ }
+  20:	bd70      	pop	{r4, r5, r6, pc}
+  22:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TimSetCompareSetHold1:
+
+00000000 <TimSetCompareSetHold1>:
+TimSetCompareSetHold1():
+C:\cortex\dimmers\src/dimmers_tim.c:301
+
+    return (u16) hold;
+}
+
+// TIM2 OC1/2
+void TimSetCompareSetHold1 ( u16 set ){
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/dimmers_tim.c:305
+    
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+   4:	f7ff fffe 	bl	0 <TimSetCompareSetHold1>
+   8:	4605      	mov	r5, r0
+C:\cortex\dimmers\src/dimmers_tim.c:307
+
+    TIM_SetCompare1(TIM2 , set);
+   a:	4621      	mov	r1, r4
+   c:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+C:\cortex\dimmers\src/dimmers_tim.c:308
+    TIM_SetCompare2(TIM2 , set + hold );
+  10:	1964      	adds	r4, r4, r5
+C:\cortex\dimmers\src/dimmers_tim.c:307
+    
+    u16 hold;
+
+    hold = TimGetHoldValue(set);
+
+    TIM_SetCompare1(TIM2 , set);
+  12:	f7ff fffe 	bl	0 <TIM_SetCompare1>
+C:\cortex\dimmers\src/dimmers_tim.c:308
+    TIM_SetCompare2(TIM2 , set + hold );
+  16:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  1a:	b2a1      	uxth	r1, r4
+  1c:	f7ff fffe 	bl	0 <TIM_SetCompare2>
+C:\cortex\dimmers\src/dimmers_tim.c:310
+    
+}
+  20:	bd70      	pop	{r4, r5, r6, pc}
+  22:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TimStartAll:
+
+00000000 <TimStartAll>:
+TimStartAll():
+C:\cortex\dimmers\src/dimmers_tim.c:282
+
+void SetTimIntCompare6 ( FunctionalState NewState ){
+    TIM_ITConfig( TIM4 , TIM_IT_CC3 | TIM_IT_CC4 , NewState );
+}
+
+void TimStartAll (void){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:284
+
+    TIM_Cmd(TIM1, ENABLE);
+   2:	2101      	movs	r1, #1
+   4:	4808      	ldr	r0, [pc, #32]	(28 <TimStartAll+0x28>)
+   6:	f7ff fffe 	bl	0 <TIM_Cmd>
+C:\cortex\dimmers\src/dimmers_tim.c:285
+    TIM_Cmd(TIM2, ENABLE);
+   a:	2101      	movs	r1, #1
+   c:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  10:	f7ff fffe 	bl	0 <TIM_Cmd>
+C:\cortex\dimmers\src/dimmers_tim.c:286
+    TIM_Cmd(TIM3, ENABLE);
+  14:	2101      	movs	r1, #1
+  16:	4805      	ldr	r0, [pc, #20]	(2c <TimStartAll+0x2c>)
+  18:	f7ff fffe 	bl	0 <TIM_Cmd>
+C:\cortex\dimmers\src/dimmers_tim.c:287
+    TIM_Cmd(TIM4, ENABLE);
+  1c:	4804      	ldr	r0, [pc, #16]	(30 <TimStartAll+0x30>)
+  1e:	2101      	movs	r1, #1
+  20:	f7ff fffe 	bl	0 <TIM_Cmd>
+C:\cortex\dimmers\src/dimmers_tim.c:288
+}
+  24:	bd10      	pop	{r4, pc}
+  26:	46c0      	nop			(mov r8, r8)
+  28:	40012c00 	.word	0x40012c00
+  2c:	40000400 	.word	0x40000400
+  30:	40000800 	.word	0x40000800
+Disassembly of section .text.SetTimIntCompare6:
+
+00000000 <SetTimIntCompare6>:
+SetTimIntCompare6():
+C:\cortex\dimmers\src/dimmers_tim.c:278
+
+void SetTimIntCompare5 ( FunctionalState NewState ){
+    TIM_ITConfig( TIM4 , TIM_IT_CC1 | TIM_IT_CC2 , NewState );
+}
+
+void SetTimIntCompare6 ( FunctionalState NewState ){
+   0:	4602      	mov	r2, r0
+   2:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:279
+    TIM_ITConfig( TIM4 , TIM_IT_CC3 | TIM_IT_CC4 , NewState );
+   4:	4802      	ldr	r0, [pc, #8]	(10 <SetTimIntCompare6+0x10>)
+   6:	2118      	movs	r1, #24
+   8:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:280
+}
+   c:	bd10      	pop	{r4, pc}
+   e:	46c0      	nop			(mov r8, r8)
+  10:	40000800 	.word	0x40000800
+Disassembly of section .text.SetTimIntCompare5:
+
+00000000 <SetTimIntCompare5>:
+SetTimIntCompare5():
+C:\cortex\dimmers\src/dimmers_tim.c:274
+
+void SetTimIntCompare4 ( FunctionalState NewState ){
+    TIM_ITConfig( TIM3 , TIM_IT_CC3 | TIM_IT_CC4 , NewState );
+}
+
+void SetTimIntCompare5 ( FunctionalState NewState ){
+   0:	4602      	mov	r2, r0
+   2:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:275
+    TIM_ITConfig( TIM4 , TIM_IT_CC1 | TIM_IT_CC2 , NewState );
+   4:	4802      	ldr	r0, [pc, #8]	(10 <SetTimIntCompare5+0x10>)
+   6:	2106      	movs	r1, #6
+   8:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:276
+}
+   c:	bd10      	pop	{r4, pc}
+   e:	46c0      	nop			(mov r8, r8)
+  10:	40000800 	.word	0x40000800
+Disassembly of section .text.SetTimIntCompare4:
+
+00000000 <SetTimIntCompare4>:
+SetTimIntCompare4():
+C:\cortex\dimmers\src/dimmers_tim.c:270
+
+void SetTimIntCompare3 ( FunctionalState NewState ){
+    TIM_ITConfig( TIM3 , TIM_IT_CC1 | TIM_IT_CC2 , NewState );
+}
+
+void SetTimIntCompare4 ( FunctionalState NewState ){
+   0:	4602      	mov	r2, r0
+   2:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:271
+    TIM_ITConfig( TIM3 , TIM_IT_CC3 | TIM_IT_CC4 , NewState );
+   4:	4802      	ldr	r0, [pc, #8]	(10 <SetTimIntCompare4+0x10>)
+   6:	2118      	movs	r1, #24
+   8:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:272
+}
+   c:	bd10      	pop	{r4, pc}
+   e:	46c0      	nop			(mov r8, r8)
+  10:	40000400 	.word	0x40000400
+Disassembly of section .text.SetTimIntCompare3:
+
+00000000 <SetTimIntCompare3>:
+SetTimIntCompare3():
+C:\cortex\dimmers\src/dimmers_tim.c:266
+
+void SetTimIntCompare2 ( FunctionalState NewState ){
+    TIM_ITConfig( TIM2 , TIM_IT_CC3 | TIM_IT_CC4 , NewState );
+}
+
+void SetTimIntCompare3 ( FunctionalState NewState ){
+   0:	4602      	mov	r2, r0
+   2:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:267
+    TIM_ITConfig( TIM3 , TIM_IT_CC1 | TIM_IT_CC2 , NewState );
+   4:	4802      	ldr	r0, [pc, #8]	(10 <SetTimIntCompare3+0x10>)
+   6:	2106      	movs	r1, #6
+   8:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:268
+}
+   c:	bd10      	pop	{r4, pc}
+   e:	46c0      	nop			(mov r8, r8)
+  10:	40000400 	.word	0x40000400
+Disassembly of section .text.SetTimIntCompare2:
+
+00000000 <SetTimIntCompare2>:
+SetTimIntCompare2():
+C:\cortex\dimmers\src/dimmers_tim.c:262
+
+void SetTimIntCompare1 ( FunctionalState NewState ){
+    TIM_ITConfig( TIM2 , TIM_IT_CC1 | TIM_IT_CC2 , NewState );
+}
+
+void SetTimIntCompare2 ( FunctionalState NewState ){
+   0:	4602      	mov	r2, r0
+   2:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:263
+    TIM_ITConfig( TIM2 , TIM_IT_CC3 | TIM_IT_CC4 , NewState );
+   4:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+   8:	2118      	movs	r1, #24
+   a:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:264
+}
+   e:	bd10      	pop	{r4, pc}
+Disassembly of section .text.SetTimIntCompare1:
+
+00000000 <SetTimIntCompare1>:
+SetTimIntCompare1():
+C:\cortex\dimmers\src/dimmers_tim.c:258
+    TIM_ITConfig(TIM2, TIM_IT_CC1 | TIM_IT_CC2 | TIM_IT_CC3 | TIM_IT_CC4, DISABLE);
+    TIM_ITConfig(TIM3, TIM_IT_CC1 | TIM_IT_CC2 | TIM_IT_CC3 | TIM_IT_CC4, DISABLE);
+    TIM_ITConfig(TIM4, TIM_IT_CC1 | TIM_IT_CC2 | TIM_IT_CC3 | TIM_IT_CC4, DISABLE);
+}
+
+void SetTimIntCompare1 ( FunctionalState NewState ){
+   0:	4602      	mov	r2, r0
+   2:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:259
+    TIM_ITConfig( TIM2 , TIM_IT_CC1 | TIM_IT_CC2 , NewState );
+   4:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+   8:	2106      	movs	r1, #6
+   a:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:260
+}
+   e:	bd10      	pop	{r4, pc}
+Disassembly of section .text.TimDisableInterruptsCompare:
+
+00000000 <TimDisableInterruptsCompare>:
+TimDisableInterruptsCompare():
+C:\cortex\dimmers\src/dimmers_tim.c:251
+    TIM_ITConfig(TIM2, TIM_IT_CC1 | TIM_IT_CC2 | TIM_IT_CC3 | TIM_IT_CC4, ENABLE);
+    TIM_ITConfig(TIM3, TIM_IT_CC1 | TIM_IT_CC2 | TIM_IT_CC3 | TIM_IT_CC4, ENABLE);
+    TIM_ITConfig(TIM4, TIM_IT_CC1 | TIM_IT_CC2 | TIM_IT_CC3 | TIM_IT_CC4, ENABLE);
+}
+
+void TimDisableInterruptsCompare (void){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:253
+
+    TIM_ITConfig(TIM2, TIM_IT_CC1 | TIM_IT_CC2 | TIM_IT_CC3 | TIM_IT_CC4, DISABLE);
+   2:	211e      	movs	r1, #30
+   4:	2200      	movs	r2, #0
+   6:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+   a:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:254
+    TIM_ITConfig(TIM3, TIM_IT_CC1 | TIM_IT_CC2 | TIM_IT_CC3 | TIM_IT_CC4, DISABLE);
+   e:	211e      	movs	r1, #30
+  10:	2200      	movs	r2, #0
+  12:	4804      	ldr	r0, [pc, #16]	(24 <TimDisableInterruptsCompare+0x24>)
+  14:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:255
+    TIM_ITConfig(TIM4, TIM_IT_CC1 | TIM_IT_CC2 | TIM_IT_CC3 | TIM_IT_CC4, DISABLE);
+  18:	4803      	ldr	r0, [pc, #12]	(28 <TimDisableInterruptsCompare+0x28>)
+  1a:	211e      	movs	r1, #30
+  1c:	2200      	movs	r2, #0
+  1e:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:256
+}
+  22:	bd10      	pop	{r4, pc}
+  24:	40000400 	.word	0x40000400
+  28:	40000800 	.word	0x40000800
+Disassembly of section .text.TimSetInterruptAllEnabled:
+
+00000000 <TimSetInterruptAllEnabled>:
+TimSetInterruptAllEnabled():
+C:\cortex\dimmers\src/dimmers_tim.c:245
+    TIM_ARRPreloadConfig(TIM4, ENABLE);
+}
+
+void TimSetInterruptAllEnabled (void){
+
+    TIM_ITConfig(TIM1, TIM_IT_Update , ENABLE);
+   0:	2101      	movs	r1, #1
+C:\cortex\dimmers\src/dimmers_tim.c:243
+    TIM_ARRPreloadConfig(TIM2, ENABLE);
+    TIM_ARRPreloadConfig(TIM3, ENABLE);
+    TIM_ARRPreloadConfig(TIM4, ENABLE);
+}
+
+void TimSetInterruptAllEnabled (void){
+   2:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:245
+
+    TIM_ITConfig(TIM1, TIM_IT_Update , ENABLE);
+   4:	460a      	mov	r2, r1
+   6:	480a      	ldr	r0, [pc, #40]	(30 <TimSetInterruptAllEnabled+0x30>)
+   8:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:246
+    TIM_ITConfig(TIM2, TIM_IT_CC1 | TIM_IT_CC2 | TIM_IT_CC3 | TIM_IT_CC4, ENABLE);
+   c:	211e      	movs	r1, #30
+   e:	2201      	movs	r2, #1
+  10:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  14:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:247
+    TIM_ITConfig(TIM3, TIM_IT_CC1 | TIM_IT_CC2 | TIM_IT_CC3 | TIM_IT_CC4, ENABLE);
+  18:	211e      	movs	r1, #30
+  1a:	2201      	movs	r2, #1
+  1c:	4805      	ldr	r0, [pc, #20]	(34 <TimSetInterruptAllEnabled+0x34>)
+  1e:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:248
+    TIM_ITConfig(TIM4, TIM_IT_CC1 | TIM_IT_CC2 | TIM_IT_CC3 | TIM_IT_CC4, ENABLE);
+  22:	4805      	ldr	r0, [pc, #20]	(38 <TimSetInterruptAllEnabled+0x38>)
+  24:	211e      	movs	r1, #30
+  26:	2201      	movs	r2, #1
+  28:	f7ff fffe 	bl	0 <TIM_ITConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:249
+}
+  2c:	bd10      	pop	{r4, pc}
+  2e:	46c0      	nop			(mov r8, r8)
+  30:	40012c00 	.word	0x40012c00
+  34:	40000400 	.word	0x40000400
+  38:	40000800 	.word	0x40000800
+Disassembly of section .text.TimSetPreloadAllOn:
+
+00000000 <TimSetPreloadAllOn>:
+TimSetPreloadAllOn():
+C:\cortex\dimmers\src/dimmers_tim.c:236
+    TIM_OC4Init(TIM4, &TIM_OCInitStructure);
+    TIM_OC4PreloadConfig(TIM4, TIM_OCPreload_Enable);
+
+}
+
+void TimSetPreloadAllOn (void){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:238
+
+    TIM_ARRPreloadConfig(TIM2, ENABLE);
+   2:	2101      	movs	r1, #1
+   4:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+   8:	f7ff fffe 	bl	0 <TIM_ARRPreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:239
+    TIM_ARRPreloadConfig(TIM3, ENABLE);
+   c:	2101      	movs	r1, #1
+   e:	4804      	ldr	r0, [pc, #16]	(20 <TimSetPreloadAllOn+0x20>)
+  10:	f7ff fffe 	bl	0 <TIM_ARRPreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:240
+    TIM_ARRPreloadConfig(TIM4, ENABLE);
+  14:	4803      	ldr	r0, [pc, #12]	(24 <TimSetPreloadAllOn+0x24>)
+  16:	2101      	movs	r1, #1
+  18:	f7ff fffe 	bl	0 <TIM_ARRPreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:241
+}
+  1c:	bd10      	pop	{r4, pc}
+  1e:	46c0      	nop			(mov r8, r8)
+  20:	40000400 	.word	0x40000400
+  24:	40000800 	.word	0x40000800
+Disassembly of section .text.TimSetInitCompareSetHold6:
+
+00000000 <TimSetInitCompareSetHold6>:
+TimSetInitCompareSetHold6():
+C:\cortex\dimmers\src/dimmers_tim.c:217
+    TIM_OC2Init(TIM4, &TIM_OCInitStructure);
+    TIM_OC2PreloadConfig(TIM4, TIM_OCPreload_Enable);
+
+}
+
+void TimSetInitCompareSetHold6 ( u16 set ){
+   0:	e92d 4170 	stmdb	sp!, {r4, r5, r6, r8, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:225
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC3Init(TIM4, &TIM_OCInitStructure);
+   4:	4c13      	ldr	r4, [pc, #76]	(54 <TimSetInitCompareSetHold6+0x54>)
+C:\cortex\dimmers\src/dimmers_tim.c:217
+    TIM_OC2Init(TIM4, &TIM_OCInitStructure);
+    TIM_OC2PreloadConfig(TIM4, TIM_OCPreload_Enable);
+
+}
+
+void TimSetInitCompareSetHold6 ( u16 set ){
+   6:	b085      	sub	sp, #20
+C:\cortex\dimmers\src/dimmers_tim.c:222
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+   8:	f04f 0320 	mov.w	r3, #32	; 0x20
+C:\cortex\dimmers\src/dimmers_tim.c:217
+    TIM_OC2Init(TIM4, &TIM_OCInitStructure);
+    TIM_OC2PreloadConfig(TIM4, TIM_OCPreload_Enable);
+
+}
+
+void TimSetInitCompareSetHold6 ( u16 set ){
+   c:	4605      	mov	r5, r0
+C:\cortex\dimmers\src/dimmers_tim.c:223
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+   e:	2601      	movs	r6, #1
+C:\cortex\dimmers\src/dimmers_tim.c:224
+    TIM_OCInitStructure.TIM_Pulse       = set;
+  10:	f8ad 0006 	strh.w	r0, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:225
+    TIM_OC3Init(TIM4, &TIM_OCInitStructure);
+  14:	4669      	mov	r1, sp
+  16:	4620      	mov	r0, r4
+C:\cortex\dimmers\src/dimmers_tim.c:222
+void TimSetInitCompareSetHold6 ( u16 set ){
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+  18:	f8ad 3000 	strh.w	r3, [sp]
+C:\cortex\dimmers\src/dimmers_tim.c:223
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+  1c:	f8ad 6002 	strh.w	r6, [sp, #2]
+C:\cortex\dimmers\src/dimmers_tim.c:225
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC3Init(TIM4, &TIM_OCInitStructure);
+  20:	f7ff fffe 	bl	0 <TIM_OC3Init>
+C:\cortex\dimmers\src/dimmers_tim.c:226
+    TIM_OC3PreloadConfig(TIM4, TIM_OCPreload_Enable);
+  24:	2108      	movs	r1, #8
+  26:	4620      	mov	r0, r4
+  28:	f7ff fffe 	bl	0 <TIM_OC3PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:230
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+  2c:	4628      	mov	r0, r5
+C:\cortex\dimmers\src/dimmers_tim.c:229
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC3Init(TIM4, &TIM_OCInitStructure);
+    TIM_OC3PreloadConfig(TIM4, TIM_OCPreload_Enable);
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+  2e:	f8ad 6002 	strh.w	r6, [sp, #2]
+C:\cortex\dimmers\src/dimmers_tim.c:230
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+  32:	f7ff fffe 	bl	0 <TimSetInitCompareSetHold6>
+  36:	1940      	adds	r0, r0, r5
+  38:	f8ad 0006 	strh.w	r0, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:231
+    TIM_OC4Init(TIM4, &TIM_OCInitStructure);
+  3c:	4669      	mov	r1, sp
+  3e:	4620      	mov	r0, r4
+  40:	f7ff fffe 	bl	0 <TIM_OC4Init>
+C:\cortex\dimmers\src/dimmers_tim.c:232
+    TIM_OC4PreloadConfig(TIM4, TIM_OCPreload_Enable);
+  44:	4620      	mov	r0, r4
+  46:	2108      	movs	r1, #8
+C:\cortex\dimmers\src/dimmers_tim.c:225
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC3Init(TIM4, &TIM_OCInitStructure);
+  48:	46e8      	mov	r8, sp
+C:\cortex\dimmers\src/dimmers_tim.c:232
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+    TIM_OC4Init(TIM4, &TIM_OCInitStructure);
+    TIM_OC4PreloadConfig(TIM4, TIM_OCPreload_Enable);
+  4a:	f7ff fffe 	bl	0 <TIM_OC4PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:234
+
+}
+  4e:	b005      	add	sp, #20
+  50:	e8bd 8170 	ldmia.w	sp!, {r4, r5, r6, r8, pc}
+  54:	40000800 	.word	0x40000800
+Disassembly of section .text.TimSetInitCompareSetHold4:
+
+00000000 <TimSetInitCompareSetHold4>:
+TimSetInitCompareSetHold4():
+C:\cortex\dimmers\src/dimmers_tim.c:179
+    TIM_OC2Init(TIM3, &TIM_OCInitStructure);
+    TIM_OC2PreloadConfig(TIM3, TIM_OCPreload_Enable);
+
+}
+
+void TimSetInitCompareSetHold4 ( u16 set ){
+   0:	e92d 4170 	stmdb	sp!, {r4, r5, r6, r8, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:187
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC3Init(TIM3, &TIM_OCInitStructure);
+   4:	4c13      	ldr	r4, [pc, #76]	(54 <TimSetInitCompareSetHold4+0x54>)
+C:\cortex\dimmers\src/dimmers_tim.c:179
+    TIM_OC2Init(TIM3, &TIM_OCInitStructure);
+    TIM_OC2PreloadConfig(TIM3, TIM_OCPreload_Enable);
+
+}
+
+void TimSetInitCompareSetHold4 ( u16 set ){
+   6:	b085      	sub	sp, #20
+C:\cortex\dimmers\src/dimmers_tim.c:184
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+   8:	f04f 0320 	mov.w	r3, #32	; 0x20
+C:\cortex\dimmers\src/dimmers_tim.c:179
+    TIM_OC2Init(TIM3, &TIM_OCInitStructure);
+    TIM_OC2PreloadConfig(TIM3, TIM_OCPreload_Enable);
+
+}
+
+void TimSetInitCompareSetHold4 ( u16 set ){
+   c:	4605      	mov	r5, r0
+C:\cortex\dimmers\src/dimmers_tim.c:185
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+   e:	2601      	movs	r6, #1
+C:\cortex\dimmers\src/dimmers_tim.c:186
+    TIM_OCInitStructure.TIM_Pulse       = set;
+  10:	f8ad 0006 	strh.w	r0, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:187
+    TIM_OC3Init(TIM3, &TIM_OCInitStructure);
+  14:	4669      	mov	r1, sp
+  16:	4620      	mov	r0, r4
+C:\cortex\dimmers\src/dimmers_tim.c:184
+void TimSetInitCompareSetHold4 ( u16 set ){
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+  18:	f8ad 3000 	strh.w	r3, [sp]
+C:\cortex\dimmers\src/dimmers_tim.c:185
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+  1c:	f8ad 6002 	strh.w	r6, [sp, #2]
+C:\cortex\dimmers\src/dimmers_tim.c:187
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC3Init(TIM3, &TIM_OCInitStructure);
+  20:	f7ff fffe 	bl	0 <TIM_OC3Init>
+C:\cortex\dimmers\src/dimmers_tim.c:188
+    TIM_OC3PreloadConfig(TIM3, TIM_OCPreload_Enable);
+  24:	2108      	movs	r1, #8
+  26:	4620      	mov	r0, r4
+  28:	f7ff fffe 	bl	0 <TIM_OC3PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:192
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+  2c:	4628      	mov	r0, r5
+C:\cortex\dimmers\src/dimmers_tim.c:191
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC3Init(TIM3, &TIM_OCInitStructure);
+    TIM_OC3PreloadConfig(TIM3, TIM_OCPreload_Enable);
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+  2e:	f8ad 6002 	strh.w	r6, [sp, #2]
+C:\cortex\dimmers\src/dimmers_tim.c:192
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+  32:	f7ff fffe 	bl	0 <TimSetInitCompareSetHold4>
+  36:	1940      	adds	r0, r0, r5
+  38:	f8ad 0006 	strh.w	r0, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:193
+    TIM_OC4Init(TIM3, &TIM_OCInitStructure);
+  3c:	4669      	mov	r1, sp
+  3e:	4620      	mov	r0, r4
+  40:	f7ff fffe 	bl	0 <TIM_OC4Init>
+C:\cortex\dimmers\src/dimmers_tim.c:194
+    TIM_OC4PreloadConfig(TIM3, TIM_OCPreload_Enable);
+  44:	4620      	mov	r0, r4
+  46:	2108      	movs	r1, #8
+C:\cortex\dimmers\src/dimmers_tim.c:187
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC3Init(TIM3, &TIM_OCInitStructure);
+  48:	46e8      	mov	r8, sp
+C:\cortex\dimmers\src/dimmers_tim.c:194
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+    TIM_OC4Init(TIM3, &TIM_OCInitStructure);
+    TIM_OC4PreloadConfig(TIM3, TIM_OCPreload_Enable);
+  4a:	f7ff fffe 	bl	0 <TIM_OC4PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:196
+
+}
+  4e:	b005      	add	sp, #20
+  50:	e8bd 8170 	ldmia.w	sp!, {r4, r5, r6, r8, pc}
+  54:	40000400 	.word	0x40000400
+Disassembly of section .text.TimSetInitCompareSetHold2:
+
+00000000 <TimSetInitCompareSetHold2>:
+TimSetInitCompareSetHold2():
+C:\cortex\dimmers\src/dimmers_tim.c:142
+    TIM_OC2Init(TIM2, &TIM_OCInitStructure);
+    TIM_OC2PreloadConfig(TIM2, TIM_OCPreload_Enable);
+
+}
+
+void TimSetInitCompareSetHold2 ( u16 set ){
+   0:	b57f      	push	{r0, r1, r2, r3, r4, r5, r6, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:147
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+   2:	f04f 0320 	mov.w	r3, #32	; 0x20
+C:\cortex\dimmers\src/dimmers_tim.c:142
+    TIM_OC2Init(TIM2, &TIM_OCInitStructure);
+    TIM_OC2PreloadConfig(TIM2, TIM_OCPreload_Enable);
+
+}
+
+void TimSetInitCompareSetHold2 ( u16 set ){
+   6:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/dimmers_tim.c:148
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+   8:	2501      	movs	r5, #1
+C:\cortex\dimmers\src/dimmers_tim.c:149
+    TIM_OCInitStructure.TIM_Pulse       = set;
+   a:	f8ad 0006 	strh.w	r0, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:150
+    TIM_OC3Init(TIM2, &TIM_OCInitStructure);
+   e:	4669      	mov	r1, sp
+  10:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+C:\cortex\dimmers\src/dimmers_tim.c:147
+void TimSetInitCompareSetHold2 ( u16 set ){
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+  14:	f8ad 3000 	strh.w	r3, [sp]
+C:\cortex\dimmers\src/dimmers_tim.c:148
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+  18:	f8ad 5002 	strh.w	r5, [sp, #2]
+C:\cortex\dimmers\src/dimmers_tim.c:150
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC3Init(TIM2, &TIM_OCInitStructure);
+  1c:	f7ff fffe 	bl	0 <TIM_OC3Init>
+C:\cortex\dimmers\src/dimmers_tim.c:151
+    TIM_OC3PreloadConfig(TIM2, TIM_OCPreload_Enable);
+  20:	2108      	movs	r1, #8
+  22:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  26:	f7ff fffe 	bl	0 <TIM_OC3PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:155
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+  2a:	4620      	mov	r0, r4
+C:\cortex\dimmers\src/dimmers_tim.c:154
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC3Init(TIM2, &TIM_OCInitStructure);
+    TIM_OC3PreloadConfig(TIM2, TIM_OCPreload_Enable);
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+  2c:	f8ad 5002 	strh.w	r5, [sp, #2]
+C:\cortex\dimmers\src/dimmers_tim.c:155
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+  30:	f7ff fffe 	bl	0 <TimSetInitCompareSetHold2>
+  34:	1900      	adds	r0, r0, r4
+  36:	f8ad 0006 	strh.w	r0, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:156
+    TIM_OC4Init(TIM2, &TIM_OCInitStructure);
+  3a:	4669      	mov	r1, sp
+  3c:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  40:	f7ff fffe 	bl	0 <TIM_OC4Init>
+C:\cortex\dimmers\src/dimmers_tim.c:157
+    TIM_OC4PreloadConfig(TIM2, TIM_OCPreload_Enable);
+  44:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  48:	2108      	movs	r1, #8
+C:\cortex\dimmers\src/dimmers_tim.c:150
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC3Init(TIM2, &TIM_OCInitStructure);
+  4a:	466e      	mov	r6, sp
+C:\cortex\dimmers\src/dimmers_tim.c:157
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+    TIM_OC4Init(TIM2, &TIM_OCInitStructure);
+    TIM_OC4PreloadConfig(TIM2, TIM_OCPreload_Enable);
+  4c:	f7ff fffe 	bl	0 <TIM_OC4PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:158
+}
+  50:	bd7f      	pop	{r0, r1, r2, r3, r4, r5, r6, pc}
+  52:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TimSetInitCompareSetHold5:
+
+00000000 <TimSetInitCompareSetHold5>:
+TimSetInitCompareSetHold5():
+C:\cortex\dimmers\src/dimmers_tim.c:198
+    TIM_OC4Init(TIM3, &TIM_OCInitStructure);
+    TIM_OC4PreloadConfig(TIM3, TIM_OCPreload_Enable);
+
+}
+
+void TimSetInitCompareSetHold5 ( u16 set ){
+   0:	e92d 4170 	stmdb	sp!, {r4, r5, r6, r8, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:206
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC1Init(TIM4, &TIM_OCInitStructure);
+   4:	4c13      	ldr	r4, [pc, #76]	(54 <TimSetInitCompareSetHold5+0x54>)
+C:\cortex\dimmers\src/dimmers_tim.c:198
+    TIM_OC4Init(TIM3, &TIM_OCInitStructure);
+    TIM_OC4PreloadConfig(TIM3, TIM_OCPreload_Enable);
+
+}
+
+void TimSetInitCompareSetHold5 ( u16 set ){
+   6:	b085      	sub	sp, #20
+C:\cortex\dimmers\src/dimmers_tim.c:203
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+   8:	f04f 0320 	mov.w	r3, #32	; 0x20
+C:\cortex\dimmers\src/dimmers_tim.c:198
+    TIM_OC4Init(TIM3, &TIM_OCInitStructure);
+    TIM_OC4PreloadConfig(TIM3, TIM_OCPreload_Enable);
+
+}
+
+void TimSetInitCompareSetHold5 ( u16 set ){
+   c:	4605      	mov	r5, r0
+C:\cortex\dimmers\src/dimmers_tim.c:204
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+   e:	2601      	movs	r6, #1
+C:\cortex\dimmers\src/dimmers_tim.c:205
+    TIM_OCInitStructure.TIM_Pulse       = set;
+  10:	f8ad 0006 	strh.w	r0, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:206
+    TIM_OC1Init(TIM4, &TIM_OCInitStructure);
+  14:	4669      	mov	r1, sp
+  16:	4620      	mov	r0, r4
+C:\cortex\dimmers\src/dimmers_tim.c:203
+void TimSetInitCompareSetHold5 ( u16 set ){
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+  18:	f8ad 3000 	strh.w	r3, [sp]
+C:\cortex\dimmers\src/dimmers_tim.c:204
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+  1c:	f8ad 6002 	strh.w	r6, [sp, #2]
+C:\cortex\dimmers\src/dimmers_tim.c:206
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC1Init(TIM4, &TIM_OCInitStructure);
+  20:	f7ff fffe 	bl	0 <TIM_OC1Init>
+C:\cortex\dimmers\src/dimmers_tim.c:207
+    TIM_OC1PreloadConfig(TIM4, TIM_OCPreload_Enable);
+  24:	2108      	movs	r1, #8
+  26:	4620      	mov	r0, r4
+  28:	f7ff fffe 	bl	0 <TIM_OC1PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:211
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+  2c:	4628      	mov	r0, r5
+C:\cortex\dimmers\src/dimmers_tim.c:210
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC1Init(TIM4, &TIM_OCInitStructure);
+    TIM_OC1PreloadConfig(TIM4, TIM_OCPreload_Enable);
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+  2e:	f8ad 6002 	strh.w	r6, [sp, #2]
+C:\cortex\dimmers\src/dimmers_tim.c:211
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+  32:	f7ff fffe 	bl	0 <TimSetInitCompareSetHold5>
+  36:	1940      	adds	r0, r0, r5
+  38:	f8ad 0006 	strh.w	r0, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:212
+    TIM_OC2Init(TIM4, &TIM_OCInitStructure);
+  3c:	4669      	mov	r1, sp
+  3e:	4620      	mov	r0, r4
+  40:	f7ff fffe 	bl	0 <TIM_OC2Init>
+C:\cortex\dimmers\src/dimmers_tim.c:213
+    TIM_OC2PreloadConfig(TIM4, TIM_OCPreload_Enable);
+  44:	4620      	mov	r0, r4
+  46:	2108      	movs	r1, #8
+C:\cortex\dimmers\src/dimmers_tim.c:206
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC1Init(TIM4, &TIM_OCInitStructure);
+  48:	46e8      	mov	r8, sp
+C:\cortex\dimmers\src/dimmers_tim.c:213
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+    TIM_OC2Init(TIM4, &TIM_OCInitStructure);
+    TIM_OC2PreloadConfig(TIM4, TIM_OCPreload_Enable);
+  4a:	f7ff fffe 	bl	0 <TIM_OC2PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:215
+
+}
+  4e:	b005      	add	sp, #20
+  50:	e8bd 8170 	ldmia.w	sp!, {r4, r5, r6, r8, pc}
+  54:	40000800 	.word	0x40000800
+Disassembly of section .text.TimSetInitCompareSetHold3:
+
+00000000 <TimSetInitCompareSetHold3>:
+TimSetInitCompareSetHold3():
+C:\cortex\dimmers\src/dimmers_tim.c:160
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+    TIM_OC4Init(TIM2, &TIM_OCInitStructure);
+    TIM_OC4PreloadConfig(TIM2, TIM_OCPreload_Enable);
+}
+
+void TimSetInitCompareSetHold3 ( u16 set ){
+   0:	e92d 4170 	stmdb	sp!, {r4, r5, r6, r8, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:168
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC1Init(TIM3, &TIM_OCInitStructure);
+   4:	4c13      	ldr	r4, [pc, #76]	(54 <TimSetInitCompareSetHold3+0x54>)
+C:\cortex\dimmers\src/dimmers_tim.c:160
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+    TIM_OC4Init(TIM2, &TIM_OCInitStructure);
+    TIM_OC4PreloadConfig(TIM2, TIM_OCPreload_Enable);
+}
+
+void TimSetInitCompareSetHold3 ( u16 set ){
+   6:	b085      	sub	sp, #20
+C:\cortex\dimmers\src/dimmers_tim.c:165
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+   8:	f04f 0320 	mov.w	r3, #32	; 0x20
+C:\cortex\dimmers\src/dimmers_tim.c:160
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+    TIM_OC4Init(TIM2, &TIM_OCInitStructure);
+    TIM_OC4PreloadConfig(TIM2, TIM_OCPreload_Enable);
+}
+
+void TimSetInitCompareSetHold3 ( u16 set ){
+   c:	4605      	mov	r5, r0
+C:\cortex\dimmers\src/dimmers_tim.c:166
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+   e:	2601      	movs	r6, #1
+C:\cortex\dimmers\src/dimmers_tim.c:167
+    TIM_OCInitStructure.TIM_Pulse       = set;
+  10:	f8ad 0006 	strh.w	r0, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:168
+    TIM_OC1Init(TIM3, &TIM_OCInitStructure);
+  14:	4669      	mov	r1, sp
+  16:	4620      	mov	r0, r4
+C:\cortex\dimmers\src/dimmers_tim.c:165
+void TimSetInitCompareSetHold3 ( u16 set ){
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+  18:	f8ad 3000 	strh.w	r3, [sp]
+C:\cortex\dimmers\src/dimmers_tim.c:166
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+  1c:	f8ad 6002 	strh.w	r6, [sp, #2]
+C:\cortex\dimmers\src/dimmers_tim.c:168
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC1Init(TIM3, &TIM_OCInitStructure);
+  20:	f7ff fffe 	bl	0 <TIM_OC1Init>
+C:\cortex\dimmers\src/dimmers_tim.c:169
+    TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Enable);
+  24:	2108      	movs	r1, #8
+  26:	4620      	mov	r0, r4
+  28:	f7ff fffe 	bl	0 <TIM_OC1PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:173
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+  2c:	4628      	mov	r0, r5
+C:\cortex\dimmers\src/dimmers_tim.c:172
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC1Init(TIM3, &TIM_OCInitStructure);
+    TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Enable);
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+  2e:	f8ad 6002 	strh.w	r6, [sp, #2]
+C:\cortex\dimmers\src/dimmers_tim.c:173
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+  32:	f7ff fffe 	bl	0 <TimSetInitCompareSetHold3>
+  36:	1940      	adds	r0, r0, r5
+  38:	f8ad 0006 	strh.w	r0, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:174
+    TIM_OC2Init(TIM3, &TIM_OCInitStructure);
+  3c:	4669      	mov	r1, sp
+  3e:	4620      	mov	r0, r4
+  40:	f7ff fffe 	bl	0 <TIM_OC2Init>
+C:\cortex\dimmers\src/dimmers_tim.c:175
+    TIM_OC2PreloadConfig(TIM3, TIM_OCPreload_Enable);
+  44:	4620      	mov	r0, r4
+  46:	2108      	movs	r1, #8
+C:\cortex\dimmers\src/dimmers_tim.c:168
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC1Init(TIM3, &TIM_OCInitStructure);
+  48:	46e8      	mov	r8, sp
+C:\cortex\dimmers\src/dimmers_tim.c:175
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       =  set + TimGetHoldValue(set);
+    TIM_OC2Init(TIM3, &TIM_OCInitStructure);
+    TIM_OC2PreloadConfig(TIM3, TIM_OCPreload_Enable);
+  4a:	f7ff fffe 	bl	0 <TIM_OC2PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:177
+
+}
+  4e:	b005      	add	sp, #20
+  50:	e8bd 8170 	ldmia.w	sp!, {r4, r5, r6, r8, pc}
+  54:	40000400 	.word	0x40000400
+Disassembly of section .text.TimSetInitCompareSetHold1:
+
+00000000 <TimSetInitCompareSetHold1>:
+TimSetInitCompareSetHold1():
+C:\cortex\dimmers\src/dimmers_tim.c:123
+    TIM_OC2PreloadConfig(TIM4, TIM_OCPreload_Disable);
+    TIM_OC3PreloadConfig(TIM4, TIM_OCPreload_Disable);
+    TIM_OC4PreloadConfig(TIM4, TIM_OCPreload_Disable);
+}
+
+void TimSetInitCompareSetHold1 ( u16 set ){
+   0:	b57f      	push	{r0, r1, r2, r3, r4, r5, r6, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:128
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+   2:	f04f 0320 	mov.w	r3, #32	; 0x20
+C:\cortex\dimmers\src/dimmers_tim.c:123
+    TIM_OC2PreloadConfig(TIM4, TIM_OCPreload_Disable);
+    TIM_OC3PreloadConfig(TIM4, TIM_OCPreload_Disable);
+    TIM_OC4PreloadConfig(TIM4, TIM_OCPreload_Disable);
+}
+
+void TimSetInitCompareSetHold1 ( u16 set ){
+   6:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/dimmers_tim.c:129
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+   8:	2501      	movs	r5, #1
+C:\cortex\dimmers\src/dimmers_tim.c:130
+    TIM_OCInitStructure.TIM_Pulse       = set;
+   a:	f8ad 0006 	strh.w	r0, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:131
+    TIM_OC1Init(TIM2, &TIM_OCInitStructure);
+   e:	4669      	mov	r1, sp
+  10:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+C:\cortex\dimmers\src/dimmers_tim.c:128
+void TimSetInitCompareSetHold1 ( u16 set ){
+
+    TIM_OCInitTypeDef			TIM_OCInitStructure;
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+  14:	f8ad 3000 	strh.w	r3, [sp]
+C:\cortex\dimmers\src/dimmers_tim.c:129
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+  18:	f8ad 5002 	strh.w	r5, [sp, #2]
+C:\cortex\dimmers\src/dimmers_tim.c:131
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC1Init(TIM2, &TIM_OCInitStructure);
+  1c:	f7ff fffe 	bl	0 <TIM_OC1Init>
+C:\cortex\dimmers\src/dimmers_tim.c:132
+    TIM_OC1PreloadConfig(TIM2, TIM_OCPreload_Enable);
+  20:	2108      	movs	r1, #8
+  22:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  26:	f7ff fffe 	bl	0 <TIM_OC1PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:136
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       = set + TimGetHoldValue(set);
+  2a:	4620      	mov	r0, r4
+C:\cortex\dimmers\src/dimmers_tim.c:135
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC1Init(TIM2, &TIM_OCInitStructure);
+    TIM_OC1PreloadConfig(TIM2, TIM_OCPreload_Enable);
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+  2c:	f8ad 5002 	strh.w	r5, [sp, #2]
+C:\cortex\dimmers\src/dimmers_tim.c:136
+    TIM_OCInitStructure.TIM_Pulse       = set + TimGetHoldValue(set);
+  30:	f7ff fffe 	bl	0 <TimSetInitCompareSetHold1>
+  34:	1900      	adds	r0, r0, r4
+  36:	f8ad 0006 	strh.w	r0, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:137
+    TIM_OC2Init(TIM2, &TIM_OCInitStructure);
+  3a:	4669      	mov	r1, sp
+  3c:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  40:	f7ff fffe 	bl	0 <TIM_OC2Init>
+C:\cortex\dimmers\src/dimmers_tim.c:138
+    TIM_OC2PreloadConfig(TIM2, TIM_OCPreload_Enable);
+  44:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  48:	2108      	movs	r1, #8
+C:\cortex\dimmers\src/dimmers_tim.c:131
+
+    // set
+    TIM_OCInitStructure.TIM_OCMode      = TIM_OCMode_Inactive;
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       = set;
+    TIM_OC1Init(TIM2, &TIM_OCInitStructure);
+  4a:	466e      	mov	r6, sp
+C:\cortex\dimmers\src/dimmers_tim.c:138
+
+    // hold
+    TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    TIM_OCInitStructure.TIM_Pulse       = set + TimGetHoldValue(set);
+    TIM_OC2Init(TIM2, &TIM_OCInitStructure);
+    TIM_OC2PreloadConfig(TIM2, TIM_OCPreload_Enable);
+  4c:	f7ff fffe 	bl	0 <TIM_OC2PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:140
+
+}
+  50:	bd7f      	pop	{r0, r1, r2, r3, r4, r5, r6, pc}
+  52:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.TimDisablePreload:
+
+00000000 <TimDisablePreload>:
+TimDisablePreload():
+C:\cortex\dimmers\src/dimmers_tim.c:107
+
+void TimSetConfigTimer8 ( u32 period ){
+    //not used
+}
+
+void TimDisablePreload (void){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:109
+
+    TIM_OC1PreloadConfig(TIM2, TIM_OCPreload_Disable);
+   2:	2100      	movs	r1, #0
+   4:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+   8:	f7ff fffe 	bl	0 <TIM_OC1PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:110
+    TIM_OC2PreloadConfig(TIM2, TIM_OCPreload_Disable);
+   c:	2100      	movs	r1, #0
+   e:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+C:\cortex\dimmers\src/dimmers_tim.c:113
+    TIM_OC3PreloadConfig(TIM2, TIM_OCPreload_Disable);
+    TIM_OC4PreloadConfig(TIM2, TIM_OCPreload_Disable);
+    TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Disable);
+  12:	4c18      	ldr	r4, [pc, #96]	(64 <TIM_OC2PreloadConfig+0x64>)
+C:\cortex\dimmers\src/dimmers_tim.c:110
+}
+
+void TimDisablePreload (void){
+
+    TIM_OC1PreloadConfig(TIM2, TIM_OCPreload_Disable);
+    TIM_OC2PreloadConfig(TIM2, TIM_OCPreload_Disable);
+  14:	f7ff fffe 	bl	0 <TIM_OC2PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:111
+    TIM_OC3PreloadConfig(TIM2, TIM_OCPreload_Disable);
+  18:	2100      	movs	r1, #0
+  1a:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  1e:	f7ff fffe 	bl	0 <TIM_OC3PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:112
+    TIM_OC4PreloadConfig(TIM2, TIM_OCPreload_Disable);
+  22:	2100      	movs	r1, #0
+  24:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+  28:	f7ff fffe 	bl	0 <TIM_OC4PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:113
+    TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Disable);
+  2c:	4620      	mov	r0, r4
+  2e:	2100      	movs	r1, #0
+  30:	f7ff fffe 	bl	0 <TIM_OC1PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:114
+    TIM_OC2PreloadConfig(TIM3, TIM_OCPreload_Disable);
+  34:	4620      	mov	r0, r4
+  36:	2100      	movs	r1, #0
+  38:	f7ff fffe 	bl	0 <TIM_OC2PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:115
+    TIM_OC3PreloadConfig(TIM3, TIM_OCPreload_Disable);
+  3c:	4620      	mov	r0, r4
+  3e:	2100      	movs	r1, #0
+  40:	f7ff fffe 	bl	0 <TIM_OC3PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:116
+    TIM_OC4PreloadConfig(TIM3, TIM_OCPreload_Disable);
+  44:	4620      	mov	r0, r4
+  46:	2100      	movs	r1, #0
+C:\cortex\dimmers\src/dimmers_tim.c:117
+    TIM_OC1PreloadConfig(TIM4, TIM_OCPreload_Disable);
+  48:	f504 6480 	add.w	r4, r4, #1024	; 0x400
+C:\cortex\dimmers\src/dimmers_tim.c:116
+    TIM_OC3PreloadConfig(TIM2, TIM_OCPreload_Disable);
+    TIM_OC4PreloadConfig(TIM2, TIM_OCPreload_Disable);
+    TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Disable);
+    TIM_OC2PreloadConfig(TIM3, TIM_OCPreload_Disable);
+    TIM_OC3PreloadConfig(TIM3, TIM_OCPreload_Disable);
+    TIM_OC4PreloadConfig(TIM3, TIM_OCPreload_Disable);
+  4c:	f7ff fffe 	bl	0 <TIM_OC4PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:117
+    TIM_OC1PreloadConfig(TIM4, TIM_OCPreload_Disable);
+  50:	4620      	mov	r0, r4
+  52:	2100      	movs	r1, #0
+  54:	f7ff fffe 	bl	0 <TIM_OC1PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:118
+    TIM_OC2PreloadConfig(TIM4, TIM_OCPreload_Disable);
+  58:	4620      	mov	r0, r4
+  5a:	2100      	movs	r1, #0
+  5c:	f7ff fffe 	bl	0 <TIM_OC2PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:119
+    TIM_OC3PreloadConfig(TIM4, TIM_OCPreload_Disable);
+  60:	4620      	mov	r0, r4
+  62:	2100      	movs	r1, #0
+  64:	f7ff fffe 	bl	0 <TIM_OC3PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:120
+    TIM_OC4PreloadConfig(TIM4, TIM_OCPreload_Disable);
+  68:	4620      	mov	r0, r4
+  6a:	2100      	movs	r1, #0
+  6c:	f7ff fffe 	bl	0 <TIM_OC4PreloadConfig>
+C:\cortex\dimmers\src/dimmers_tim.c:121
+}
+  70:	bd10      	pop	{r4, pc}
+  72:	46c0      	nop			(mov r8, r8)
+  74:	40000400 	.word	0x40000400
+Disassembly of section .text.TimSetConfigTimer4:
+
+00000000 <TimSetConfigTimer4>:
+TimSetConfigTimer4():
+C:\cortex\dimmers\src/dimmers_tim.c:79
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+}
+
+void TimSetConfigTimer4 ( u32 period ){
+   0:	b530      	push	{r4, r5, lr}
+   2:	b085      	sub	sp, #20
+C:\cortex\dimmers\src/dimmers_tim.c:83
+
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+   4:	f10d 0506 	add.w	r5, sp, #6	; 0x6
+C:\cortex\dimmers\src/dimmers_tim.c:79
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+}
+
+void TimSetConfigTimer4 ( u32 period ){
+   8:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/dimmers_tim.c:83
+
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+   a:	4628      	mov	r0, r5
+   c:	f7ff fffe 	bl	0 <TIM_TimeBaseStructInit>
+C:\cortex\dimmers\src/dimmers_tim.c:85
+    TIM_TimeBaseStructure.TIM_Period		= period;
+    TIM_TimeBaseStructure.TIM_Prescaler		= TIM_PRESCALE_1_MICRO;
+  10:	f04f 0348 	mov.w	r3, #72	; 0x48
+  14:	f8ad 3006 	strh.w	r3, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:88
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM4, &TIM_TimeBaseStructure);
+  18:	4806      	ldr	r0, [pc, #24]	(34 <TimSetConfigTimer4+0x34>)
+C:\cortex\dimmers\src/dimmers_tim.c:86
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+    TIM_TimeBaseStructure.TIM_Period		= period;
+    TIM_TimeBaseStructure.TIM_Prescaler		= TIM_PRESCALE_1_MICRO;
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+  1a:	2300      	movs	r3, #0
+C:\cortex\dimmers\src/dimmers_tim.c:88
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM4, &TIM_TimeBaseStructure);
+  1c:	4629      	mov	r1, r5
+C:\cortex\dimmers\src/dimmers_tim.c:84
+void TimSetConfigTimer4 ( u32 period ){
+
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+    TIM_TimeBaseStructure.TIM_Period		= period;
+  1e:	f8ad 400a 	strh.w	r4, [sp, #10]
+C:\cortex\dimmers\src/dimmers_tim.c:86
+    TIM_TimeBaseStructure.TIM_Prescaler		= TIM_PRESCALE_1_MICRO;
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+  22:	f8ad 300c 	strh.w	r3, [sp, #12]
+C:\cortex\dimmers\src/dimmers_tim.c:87
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+  26:	f8ad 3008 	strh.w	r3, [sp, #8]
+C:\cortex\dimmers\src/dimmers_tim.c:88
+    TIM_TimeBaseInit(TIM4, &TIM_TimeBaseStructure);
+  2a:	f7ff fffe 	bl	0 <TIM_TimeBaseInit>
+C:\cortex\dimmers\src/dimmers_tim.c:89
+}
+  2e:	b005      	add	sp, #20
+  30:	bd30      	pop	{r4, r5, pc}
+  32:	46c0      	nop			(mov r8, r8)
+  34:	40000800 	.word	0x40000800
+Disassembly of section .text.TimSetConfigTimer3:
+
+00000000 <TimSetConfigTimer3>:
+TimSetConfigTimer3():
+C:\cortex\dimmers\src/dimmers_tim.c:67
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
+}
+
+void TimSetConfigTimer3 ( u32 period ){
+   0:	b530      	push	{r4, r5, lr}
+   2:	b085      	sub	sp, #20
+C:\cortex\dimmers\src/dimmers_tim.c:71
+
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+   4:	f10d 0506 	add.w	r5, sp, #6	; 0x6
+C:\cortex\dimmers\src/dimmers_tim.c:67
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
+}
+
+void TimSetConfigTimer3 ( u32 period ){
+   8:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/dimmers_tim.c:71
+
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+   a:	4628      	mov	r0, r5
+   c:	f7ff fffe 	bl	0 <TIM_TimeBaseStructInit>
+C:\cortex\dimmers\src/dimmers_tim.c:73
+    TIM_TimeBaseStructure.TIM_Period		= period;
+    TIM_TimeBaseStructure.TIM_Prescaler		= TIM_PRESCALE_1_MICRO;
+  10:	f04f 0348 	mov.w	r3, #72	; 0x48
+  14:	f8ad 3006 	strh.w	r3, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:76
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+  18:	4806      	ldr	r0, [pc, #24]	(34 <TimSetConfigTimer3+0x34>)
+C:\cortex\dimmers\src/dimmers_tim.c:74
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+    TIM_TimeBaseStructure.TIM_Period		= period;
+    TIM_TimeBaseStructure.TIM_Prescaler		= TIM_PRESCALE_1_MICRO;
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+  1a:	2300      	movs	r3, #0
+C:\cortex\dimmers\src/dimmers_tim.c:76
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+  1c:	4629      	mov	r1, r5
+C:\cortex\dimmers\src/dimmers_tim.c:72
+void TimSetConfigTimer3 ( u32 period ){
+
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+    TIM_TimeBaseStructure.TIM_Period		= period;
+  1e:	f8ad 400a 	strh.w	r4, [sp, #10]
+C:\cortex\dimmers\src/dimmers_tim.c:74
+    TIM_TimeBaseStructure.TIM_Prescaler		= TIM_PRESCALE_1_MICRO;
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+  22:	f8ad 300c 	strh.w	r3, [sp, #12]
+C:\cortex\dimmers\src/dimmers_tim.c:75
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+  26:	f8ad 3008 	strh.w	r3, [sp, #8]
+C:\cortex\dimmers\src/dimmers_tim.c:76
+    TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+  2a:	f7ff fffe 	bl	0 <TIM_TimeBaseInit>
+C:\cortex\dimmers\src/dimmers_tim.c:77
+}
+  2e:	b005      	add	sp, #20
+  30:	bd30      	pop	{r4, r5, pc}
+  32:	46c0      	nop			(mov r8, r8)
+  34:	40000400 	.word	0x40000400
+Disassembly of section .text.TimSetConfigTimer2:
+
+00000000 <TimSetConfigTimer2>:
+TimSetConfigTimer2():
+C:\cortex\dimmers\src/dimmers_tim.c:55
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
+}
+
+void TimSetConfigTimer2 ( u32 period ){
+   0:	b530      	push	{r4, r5, lr}
+   2:	b085      	sub	sp, #20
+C:\cortex\dimmers\src/dimmers_tim.c:59
+
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+   4:	f10d 0506 	add.w	r5, sp, #6	; 0x6
+C:\cortex\dimmers\src/dimmers_tim.c:55
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
+}
+
+void TimSetConfigTimer2 ( u32 period ){
+   8:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/dimmers_tim.c:59
+
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+   a:	4628      	mov	r0, r5
+   c:	f7ff fffe 	bl	0 <TIM_TimeBaseStructInit>
+C:\cortex\dimmers\src/dimmers_tim.c:61
+    TIM_TimeBaseStructure.TIM_Period		= period;
+    TIM_TimeBaseStructure.TIM_Prescaler		= TIM_PRESCALE_1_MICRO;
+  10:	f04f 0348 	mov.w	r3, #72	; 0x48
+  14:	f8ad 3006 	strh.w	r3, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:64
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
+  18:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+C:\cortex\dimmers\src/dimmers_tim.c:62
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+    TIM_TimeBaseStructure.TIM_Period		= period;
+    TIM_TimeBaseStructure.TIM_Prescaler		= TIM_PRESCALE_1_MICRO;
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+  1c:	2300      	movs	r3, #0
+C:\cortex\dimmers\src/dimmers_tim.c:64
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
+  1e:	4629      	mov	r1, r5
+C:\cortex\dimmers\src/dimmers_tim.c:60
+void TimSetConfigTimer2 ( u32 period ){
+
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+    TIM_TimeBaseStructure.TIM_Period		= period;
+  20:	f8ad 400a 	strh.w	r4, [sp, #10]
+C:\cortex\dimmers\src/dimmers_tim.c:62
+    TIM_TimeBaseStructure.TIM_Prescaler		= TIM_PRESCALE_1_MICRO;
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+  24:	f8ad 300c 	strh.w	r3, [sp, #12]
+C:\cortex\dimmers\src/dimmers_tim.c:63
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+  28:	f8ad 3008 	strh.w	r3, [sp, #8]
+C:\cortex\dimmers\src/dimmers_tim.c:64
+    TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
+  2c:	f7ff fffe 	bl	0 <TIM_TimeBaseInit>
+C:\cortex\dimmers\src/dimmers_tim.c:65
+}
+  30:	b005      	add	sp, #20
+  32:	bd30      	pop	{r4, r5, pc}
+Disassembly of section .text.TimSetConfigTimer1:
+
+00000000 <TimSetConfigTimer1>:
+TimSetConfigTimer1():
+C:\cortex\dimmers\src/dimmers_tim.c:43
+}
+void TimSetClockTimer8 (void){
+    //not used
+}
+
+void TimSetConfigTimer1 ( u32 period ){
+   0:	b530      	push	{r4, r5, lr}
+   2:	b085      	sub	sp, #20
+C:\cortex\dimmers\src/dimmers_tim.c:47
+
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+   4:	f10d 0506 	add.w	r5, sp, #6	; 0x6
+C:\cortex\dimmers\src/dimmers_tim.c:43
+}
+void TimSetClockTimer8 (void){
+    //not used
+}
+
+void TimSetConfigTimer1 ( u32 period ){
+   8:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/dimmers_tim.c:47
+
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+   a:	4628      	mov	r0, r5
+   c:	f7ff fffe 	bl	0 <TIM_TimeBaseStructInit>
+C:\cortex\dimmers\src/dimmers_tim.c:49
+    TIM_TimeBaseStructure.TIM_Period		= period;
+    TIM_TimeBaseStructure.TIM_Prescaler		= TIM_PRESCALE_1_MICRO;
+  10:	f04f 0348 	mov.w	r3, #72	; 0x48
+  14:	f8ad 3006 	strh.w	r3, [sp, #6]
+C:\cortex\dimmers\src/dimmers_tim.c:52
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
+  18:	4806      	ldr	r0, [pc, #24]	(34 <TimSetConfigTimer1+0x34>)
+C:\cortex\dimmers\src/dimmers_tim.c:50
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+    TIM_TimeBaseStructure.TIM_Period		= period;
+    TIM_TimeBaseStructure.TIM_Prescaler		= TIM_PRESCALE_1_MICRO;
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+  1a:	2300      	movs	r3, #0
+C:\cortex\dimmers\src/dimmers_tim.c:52
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+    TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
+  1c:	4629      	mov	r1, r5
+C:\cortex\dimmers\src/dimmers_tim.c:48
+void TimSetConfigTimer1 ( u32 period ){
+
+    TIM_TimeBaseInitTypeDef   	TIM_TimeBaseStructure;    
+
+    TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
+    TIM_TimeBaseStructure.TIM_Period		= period;
+  1e:	f8ad 400a 	strh.w	r4, [sp, #10]
+C:\cortex\dimmers\src/dimmers_tim.c:50
+    TIM_TimeBaseStructure.TIM_Prescaler		= TIM_PRESCALE_1_MICRO;
+    TIM_TimeBaseStructure.TIM_ClockDivision	= 0;
+  22:	f8ad 300c 	strh.w	r3, [sp, #12]
+C:\cortex\dimmers\src/dimmers_tim.c:51
+    TIM_TimeBaseStructure.TIM_CounterMode	= TIM_CounterMode_Up;
+  26:	f8ad 3008 	strh.w	r3, [sp, #8]
+C:\cortex\dimmers\src/dimmers_tim.c:52
+    TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
+  2a:	f7ff fffe 	bl	0 <TIM_TimeBaseInit>
+C:\cortex\dimmers\src/dimmers_tim.c:53
+}
+  2e:	b005      	add	sp, #20
+  30:	bd30      	pop	{r4, r5, pc}
+  32:	46c0      	nop			(mov r8, r8)
+  34:	40012c00 	.word	0x40012c00
+Disassembly of section .text.TimSetClockTimer4:
+
+00000000 <TimSetClockTimer4>:
+TimSetClockTimer4():
+C:\cortex\dimmers\src/dimmers_tim.c:27
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+}
+void TimSetClockTimer3 (void){
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
+}
+void TimSetClockTimer4 (void){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:28
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);
+   2:	2004      	movs	r0, #4
+   4:	2101      	movs	r1, #1
+   6:	f7ff fffe 	bl	0 <RCC_APB1PeriphClockCmd>
+C:\cortex\dimmers\src/dimmers_tim.c:29
+}
+   a:	bd10      	pop	{r4, pc}
+Disassembly of section .text.TimSetClockTimer3:
+
+00000000 <TimSetClockTimer3>:
+TimSetClockTimer3():
+C:\cortex\dimmers\src/dimmers_tim.c:24
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1,ENABLE);
+}
+void TimSetClockTimer2 (void){
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+}
+void TimSetClockTimer3 (void){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:25
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
+   2:	2002      	movs	r0, #2
+   4:	2101      	movs	r1, #1
+   6:	f7ff fffe 	bl	0 <RCC_APB1PeriphClockCmd>
+C:\cortex\dimmers\src/dimmers_tim.c:26
+}
+   a:	bd10      	pop	{r4, pc}
+Disassembly of section .text.TimSetClockTimer2:
+
+00000000 <TimSetClockTimer2>:
+TimSetClockTimer2():
+C:\cortex\dimmers\src/dimmers_tim.c:21
+#include "math.h"
+
+void TimSetClockTimer1 (void){
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1,ENABLE);
+}
+void TimSetClockTimer2 (void){
+   0:	2001      	movs	r0, #1
+   2:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:22
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+   4:	4601      	mov	r1, r0
+   6:	f7ff fffe 	bl	0 <RCC_APB1PeriphClockCmd>
+C:\cortex\dimmers\src/dimmers_tim.c:23
+}
+   a:	bd10      	pop	{r4, pc}
+Disassembly of section .text.TimSetClockTimer1:
+
+00000000 <TimSetClockTimer1>:
+TimSetClockTimer1():
+C:\cortex\dimmers\src/dimmers_tim.c:18
+#include "stm32f10x_tim.h"
+#include "dimmers_tim.h"
+#include "dimmers_bkp.h"
+#include "math.h"
+
+void TimSetClockTimer1 (void){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_tim.c:19
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1,ENABLE);
+   2:	f44f 6000 	mov.w	r0, #2048	; 0x800
+   6:	2101      	movs	r1, #1
+   8:	f7ff fffe 	bl	0 <RCC_APB2PeriphClockCmd>
+C:\cortex\dimmers\src/dimmers_tim.c:20
+}
+   c:	bd10      	pop	{r4, pc}
+   e:	46c0      	nop			(mov r8, r8)

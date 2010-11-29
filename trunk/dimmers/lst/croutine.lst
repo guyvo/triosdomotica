@@ -1,0 +1,715 @@
+
+C:\cortex\dimmers\hex\croutine.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\croutine.o
+
+Disassembly of section .text.xCoRoutineRemoveFromEventList:
+
+00000000 <xCoRoutineRemoveFromEventList>:
+xCoRoutineRemoveFromEventList():
+C:\cortex\dimmers\rtos\src/croutine.c:348
+	pxOverflowDelayedCoRoutineList = &xDelayedCoRoutineList2;
+}
+/*-----------------------------------------------------------*/
+
+signed portBASE_TYPE xCoRoutineRemoveFromEventList( const xList *pxEventList )
+{
+   0:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\rtos\src/croutine.c:354
+corCRCB *pxUnblockedCRCB;
+signed portBASE_TYPE xReturn;
+
+	/* This function is called from within an interrupt.  It can only access
+	event lists and the pending ready list. */
+	pxUnblockedCRCB = ( corCRCB * ) listGET_OWNER_OF_HEAD_ENTRY( pxEventList );
+   2:	6805      	ldr	r5, [r0, #0]
+   4:	b90d      	cbnz	r5, a <xCoRoutineRemoveFromEventList+0xa>
+   6:	462e      	mov	r6, r5
+   8:	e001      	b.n	e <xCoRoutineRemoveFromEventList+0xe>
+   a:	68c3      	ldr	r3, [r0, #12]
+   c:	68de      	ldr	r6, [r3, #12]
+C:\cortex\dimmers\rtos\src/croutine.c:355
+	vListRemove( &( pxUnblockedCRCB->xEventListItem ) );
+   e:	f106 0518 	add.w	r5, r6, #24	; 0x18
+C:\cortex\dimmers\rtos\src/croutine.c:356
+	vListInsertEnd( ( xList * ) &( xPendingReadyCoRoutineList ), &( pxUnblockedCRCB->xEventListItem ) );
+  12:	4c08      	ldr	r4, [pc, #32]	(34 <xCoRoutineRemoveFromEventList+0x34>)
+C:\cortex\dimmers\rtos\src/croutine.c:355
+signed portBASE_TYPE xReturn;
+
+	/* This function is called from within an interrupt.  It can only access
+	event lists and the pending ready list. */
+	pxUnblockedCRCB = ( corCRCB * ) listGET_OWNER_OF_HEAD_ENTRY( pxEventList );
+	vListRemove( &( pxUnblockedCRCB->xEventListItem ) );
+  14:	4628      	mov	r0, r5
+  16:	f7ff fffe 	bl	0 <vListRemove>
+C:\cortex\dimmers\rtos\src/croutine.c:356
+	vListInsertEnd( ( xList * ) &( xPendingReadyCoRoutineList ), &( pxUnblockedCRCB->xEventListItem ) );
+  1a:	4620      	mov	r0, r4
+  1c:	4629      	mov	r1, r5
+  1e:	f7ff fffe 	bl	0 <vListInsertEnd>
+  22:	6963      	ldr	r3, [r4, #20]
+  24:	6af2      	ldr	r2, [r6, #44]
+  26:	6ad8      	ldr	r0, [r3, #44]
+C:\cortex\dimmers\rtos\src/croutine.c:368
+	{
+		xReturn = pdFALSE;
+	}
+
+	return xReturn;
+}
+  28:	4282      	cmp	r2, r0
+  2a:	bf34      	ite	cc
+  2c:	2000      	movcc	r0, #0
+  2e:	2001      	movcs	r0, #1
+  30:	bd70      	pop	{r4, r5, r6, pc}
+  32:	46c0      	nop			(mov r8, r8)
+  34:	00000000 	.word	0x00000000
+Disassembly of section .text.vCoRoutineSchedule:
+
+00000000 <vCoRoutineSchedule>:
+vCoRoutineSchedule():
+C:\cortex\dimmers\rtos\src/croutine.c:298
+	xLastTickCount = xCoRoutineTickCount;
+}
+/*-----------------------------------------------------------*/
+
+void vCoRoutineSchedule( void )
+{
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	e022      	b.n	4a <vCoRoutineSchedule+0x4a>
+prvCheckPendingReadyList():
+C:\cortex\dimmers\rtos\src/croutine.c:228
+	while( !listLIST_IS_EMPTY( &xPendingReadyCoRoutineList ) )
+	{
+		corCRCB *pxUnblockedCRCB;
+
+		/* The pending ready list can be accessed by an ISR. */
+		portDISABLE_INTERRUPTS();
+   4:	f04f 00bf 	mov.w	r0, #191	; 0xbf
+   8:	f380 8811 	msr	BASEPRI, r0
+C:\cortex\dimmers\rtos\src/croutine.c:230
+		{	
+			pxUnblockedCRCB = ( corCRCB * ) listGET_OWNER_OF_HEAD_ENTRY( (&xPendingReadyCoRoutineList) );			
+   c:	6820      	ldr	r0, [r4, #0]
+   e:	b908      	cbnz	r0, 14 <vCoRoutineSchedule+0x14>
+  10:	4604      	mov	r4, r0
+  12:	e001      	b.n	18 <vCoRoutineSchedule+0x18>
+  14:	68e3      	ldr	r3, [r4, #12]
+  16:	68dc      	ldr	r4, [r3, #12]
+C:\cortex\dimmers\rtos\src/croutine.c:231
+			vListRemove( &( pxUnblockedCRCB->xEventListItem ) );
+  18:	f104 0018 	add.w	r0, r4, #24	; 0x18
+  1c:	f7ff fffe 	bl	0 <vListRemove>
+C:\cortex\dimmers\rtos\src/croutine.c:233
+		}
+		portENABLE_INTERRUPTS();
+  20:	f04f 0000 	mov.w	r0, #0	; 0x0
+  24:	f380 8811 	msr	BASEPRI, r0
+C:\cortex\dimmers\rtos\src/croutine.c:235
+
+		vListRemove( &( pxUnblockedCRCB->xGenericListItem ) );
+  28:	1d25      	adds	r5, r4, #4
+  2a:	4628      	mov	r0, r5
+  2c:	f7ff fffe 	bl	0 <vListRemove>
+C:\cortex\dimmers\rtos\src/croutine.c:236
+		prvAddCoRoutineToReadyQueue( pxUnblockedCRCB );	
+  30:	493a      	ldr	r1, [pc, #232]	(11c <vCoRoutineSchedule+0x11c>)
+  32:	6ae2      	ldr	r2, [r4, #44]
+  34:	698b      	ldr	r3, [r1, #24]
+  36:	483a      	ldr	r0, [pc, #232]	(120 <vCoRoutineSchedule+0x120>)
+  38:	429a      	cmp	r2, r3
+  3a:	bf88      	it	hi
+  3c:	618a      	strhi	r2, [r1, #24]
+  3e:	2314      	movs	r3, #20
+  40:	fb03 0002 	mla	r0, r3, r2, r0
+  44:	4629      	mov	r1, r5
+  46:	f7ff fffe 	bl	0 <vListInsertEnd>
+C:\cortex\dimmers\rtos\src/croutine.c:223
+static void prvCheckPendingReadyList( void )
+{
+	/* Are there any co-routines waiting to get moved to the ready list?  These
+	are co-routines that have been readied by an ISR.  The ISR cannot access
+	the	ready lists itself. */
+	while( !listLIST_IS_EMPTY( &xPendingReadyCoRoutineList ) )
+  4a:	4c34      	ldr	r4, [pc, #208]	(11c <vCoRoutineSchedule+0x11c>)
+  4c:	6823      	ldr	r3, [r4, #0]
+  4e:	2b00      	cmp	r3, #0
+  50:	d1d8      	bne.n	4 <vCoRoutineSchedule+0x4>
+prvCheckDelayedList():
+C:\cortex\dimmers\rtos\src/croutine.c:245
+
+static void prvCheckDelayedList( void )
+{
+corCRCB *pxCRCB;
+
+	xPassedTicks = xTaskGetTickCount() - xLastTickCount;
+  52:	f7ff fffe 	bl	0 <xTaskGetTickCount>
+  56:	6ca3      	ldr	r3, [r4, #72]
+  58:	1ac0      	subs	r0, r0, r3
+  5a:	6460      	str	r0, [r4, #68]
+  5c:	e035      	b.n	ca <vCoRoutineSchedule+0xca>
+C:\cortex\dimmers\rtos\src/croutine.c:248
+	while( xPassedTicks )
+	{
+		xCoRoutineTickCount++;
+  5e:	6ccb      	ldr	r3, [r1, #76]
+C:\cortex\dimmers\rtos\src/croutine.c:249
+		xPassedTicks--;
+  60:	3a01      	subs	r2, #1
+C:\cortex\dimmers\rtos\src/croutine.c:248
+corCRCB *pxCRCB;
+
+	xPassedTicks = xTaskGetTickCount() - xLastTickCount;
+	while( xPassedTicks )
+	{
+		xCoRoutineTickCount++;
+  62:	3301      	adds	r3, #1
+  64:	64cb      	str	r3, [r1, #76]
+C:\cortex\dimmers\rtos\src/croutine.c:249
+		xPassedTicks--;
+  66:	644a      	str	r2, [r1, #68]
+C:\cortex\dimmers\rtos\src/croutine.c:252
+
+		/* If the tick count has overflowed we need to swap the ready lists. */
+		if( xCoRoutineTickCount == 0 )
+  68:	bb3b      	cbnz	r3, ba <vCoRoutineSchedule+0xba>
+C:\cortex\dimmers\rtos\src/croutine.c:258
+		{
+			xList * pxTemp;
+
+			/* Tick count has overflowed so we need to swap the delay lists.  If there are
+			any items in pxDelayedCoRoutineList here then there is an error! */
+			pxTemp = pxDelayedCoRoutineList;
+  6a:	6d0a      	ldr	r2, [r1, #80]
+C:\cortex\dimmers\rtos\src/croutine.c:259
+			pxDelayedCoRoutineList = pxOverflowDelayedCoRoutineList;
+  6c:	6d4b      	ldr	r3, [r1, #84]
+C:\cortex\dimmers\rtos\src/croutine.c:260
+			pxOverflowDelayedCoRoutineList = pxTemp;
+  6e:	654a      	str	r2, [r1, #84]
+C:\cortex\dimmers\rtos\src/croutine.c:259
+			xList * pxTemp;
+
+			/* Tick count has overflowed so we need to swap the delay lists.  If there are
+			any items in pxDelayedCoRoutineList here then there is an error! */
+			pxTemp = pxDelayedCoRoutineList;
+			pxDelayedCoRoutineList = pxOverflowDelayedCoRoutineList;
+  70:	650b      	str	r3, [r1, #80]
+  72:	e022      	b.n	ba <vCoRoutineSchedule+0xba>
+C:\cortex\dimmers\rtos\src/croutine.c:266
+		}
+
+		/* See if this tick has made a timeout expire. */
+		while( ( pxCRCB = ( corCRCB * ) listGET_OWNER_OF_HEAD_ENTRY( pxDelayedCoRoutineList ) ) != NULL )
+		{	
+			if( xCoRoutineTickCount < listGET_LIST_ITEM_VALUE( &( pxCRCB->xGenericListItem ) ) )				
+  74:	6cca      	ldr	r2, [r1, #76]
+  76:	6863      	ldr	r3, [r4, #4]
+  78:	429a      	cmp	r2, r3
+  7a:	d326      	bcc.n	ca <vCoRoutineSchedule+0xca>
+C:\cortex\dimmers\rtos\src/croutine.c:272
+			{			
+				/* Timeout not yet expired. */																			
+				break;																				
+			}																						
+
+			portDISABLE_INTERRUPTS();
+  7c:	f04f 00bf 	mov.w	r0, #191	; 0xbf
+  80:	f380 8811 	msr	BASEPRI, r0
+C:\cortex\dimmers\rtos\src/croutine.c:279
+				/* The event could have occurred just before this critical
+				section.  If this is the case then the generic list item will
+				have been moved to the pending ready list and the following
+				line is still valid.  Also the pvContainer parameter will have
+				been set to NULL so the following lines are also valid. */
+				vListRemove( &( pxCRCB->xGenericListItem ) );											
+  84:	1d25      	adds	r5, r4, #4
+  86:	4628      	mov	r0, r5
+  88:	f7ff fffe 	bl	0 <vListRemove>
+C:\cortex\dimmers\rtos\src/croutine.c:282
+
+				/* Is the co-routine waiting on an event also? */												
+				if( pxCRCB->xEventListItem.pvContainer )													
+  8c:	6aa3      	ldr	r3, [r4, #40]
+  8e:	b11b      	cbz	r3, 98 <vCoRoutineSchedule+0x98>
+C:\cortex\dimmers\rtos\src/croutine.c:284
+				{															
+					vListRemove( &( pxCRCB->xEventListItem ) );											
+  90:	f104 0018 	add.w	r0, r4, #24	; 0x18
+  94:	f7ff fffe 	bl	0 <vListRemove>
+C:\cortex\dimmers\rtos\src/croutine.c:287
+				}
+			}
+			portENABLE_INTERRUPTS();
+  98:	f04f 0000 	mov.w	r0, #0	; 0x0
+  9c:	f380 8811 	msr	BASEPRI, r0
+C:\cortex\dimmers\rtos\src/croutine.c:289
+
+			prvAddCoRoutineToReadyQueue( pxCRCB );													
+  a0:	491e      	ldr	r1, [pc, #120]	(11c <vCoRoutineSchedule+0x11c>)
+  a2:	6ae2      	ldr	r2, [r4, #44]
+  a4:	698b      	ldr	r3, [r1, #24]
+  a6:	481e      	ldr	r0, [pc, #120]	(120 <vCoRoutineSchedule+0x120>)
+  a8:	429a      	cmp	r2, r3
+  aa:	bf88      	it	hi
+  ac:	618a      	strhi	r2, [r1, #24]
+  ae:	2314      	movs	r3, #20
+  b0:	fb03 0002 	mla	r0, r3, r2, r0
+  b4:	4629      	mov	r1, r5
+  b6:	f7ff fffe 	bl	0 <vListInsertEnd>
+C:\cortex\dimmers\rtos\src/croutine.c:264
+			pxDelayedCoRoutineList = pxOverflowDelayedCoRoutineList;
+			pxOverflowDelayedCoRoutineList = pxTemp;
+		}
+
+		/* See if this tick has made a timeout expire. */
+		while( ( pxCRCB = ( corCRCB * ) listGET_OWNER_OF_HEAD_ENTRY( pxDelayedCoRoutineList ) ) != NULL )
+  ba:	4918      	ldr	r1, [pc, #96]	(11c <vCoRoutineSchedule+0x11c>)
+  bc:	6d0a      	ldr	r2, [r1, #80]
+  be:	6813      	ldr	r3, [r2, #0]
+  c0:	b11b      	cbz	r3, ca <vCoRoutineSchedule+0xca>
+  c2:	68d3      	ldr	r3, [r2, #12]
+  c4:	68dc      	ldr	r4, [r3, #12]
+  c6:	2c00      	cmp	r4, #0
+  c8:	d1d4      	bne.n	74 <vCoRoutineSchedule+0x74>
+C:\cortex\dimmers\rtos\src/croutine.c:246
+static void prvCheckDelayedList( void )
+{
+corCRCB *pxCRCB;
+
+	xPassedTicks = xTaskGetTickCount() - xLastTickCount;
+	while( xPassedTicks )
+  ca:	4914      	ldr	r1, [pc, #80]	(11c <vCoRoutineSchedule+0x11c>)
+  cc:	6c4a      	ldr	r2, [r1, #68]
+  ce:	2a00      	cmp	r2, #0
+  d0:	d1c5      	bne.n	5e <vCoRoutineSchedule+0x5e>
+C:\cortex\dimmers\rtos\src/croutine.c:293
+
+			prvAddCoRoutineToReadyQueue( pxCRCB );													
+		}																									
+	}
+
+	xLastTickCount = xCoRoutineTickCount;
+  d2:	6ccb      	ldr	r3, [r1, #76]
+  d4:	6988      	ldr	r0, [r1, #24]
+  d6:	648b      	str	r3, [r1, #72]
+  d8:	f101 021c 	add.w	r2, r1, #28	; 0x1c
+  dc:	2314      	movs	r3, #20
+  de:	fb03 2200 	mla	r2, r3, r0, r2
+  e2:	e005      	b.n	f0 <vCoRoutineSchedule+0xf0>
+C:\cortex\dimmers\rtos\src/croutine.c:306
+
+	/* See if any delayed co-routines have timed out. */
+	prvCheckDelayedList();
+
+	/* Find the highest priority queue that contains ready co-routines. */
+	while( listLIST_IS_EMPTY( &( pxReadyCoRoutineLists[ uxTopCoRoutineReadyPriority ] ) ) )
+  e4:	3a14      	subs	r2, #20
+vCoRoutineSchedule():
+C:\cortex\dimmers\rtos\src/croutine.c:308
+	{
+		if( uxTopCoRoutineReadyPriority == 0 )
+  e6:	b910      	cbnz	r0, ee <vCoRoutineSchedule+0xee>
+  e8:	4b0c      	ldr	r3, [pc, #48]	(11c <vCoRoutineSchedule+0x11c>)
+  ea:	6198      	str	r0, [r3, #24]
+  ec:	e015      	b.n	11a <vCoRoutineSchedule+0x11a>
+  ee:	3801      	subs	r0, #1
+C:\cortex\dimmers\rtos\src/croutine.c:306
+
+	/* See if any delayed co-routines have timed out. */
+	prvCheckDelayedList();
+
+	/* Find the highest priority queue that contains ready co-routines. */
+	while( listLIST_IS_EMPTY( &( pxReadyCoRoutineLists[ uxTopCoRoutineReadyPriority ] ) ) )
+  f0:	6813      	ldr	r3, [r2, #0]
+  f2:	2b00      	cmp	r3, #0
+  f4:	d0f6      	beq.n	e4 <vCoRoutineSchedule+0xe4>
+  f6:	4b09      	ldr	r3, [pc, #36]	(11c <vCoRoutineSchedule+0x11c>)
+  f8:	6198      	str	r0, [r3, #24]
+C:\cortex\dimmers\rtos\src/croutine.c:318
+		--uxTopCoRoutineReadyPriority;
+	}
+
+	/* listGET_OWNER_OF_NEXT_ENTRY walks through the list, so the co-routines
+	 of the	same priority get an equal share of the processor time. */
+	listGET_OWNER_OF_NEXT_ENTRY( pxCurrentCoRoutine, &( pxReadyCoRoutineLists[ uxTopCoRoutineReadyPriority ] ) );
+  fa:	6853      	ldr	r3, [r2, #4]
+  fc:	6859      	ldr	r1, [r3, #4]
+  fe:	f102 0308 	add.w	r3, r2, #8	; 0x8
+ 102:	6051      	str	r1, [r2, #4]
+ 104:	4299      	cmp	r1, r3
+ 106:	bf04      	itt	eq
+ 108:	684b      	ldreq	r3, [r1, #4]
+ 10a:	6053      	streq	r3, [r2, #4]
+ 10c:	6853      	ldr	r3, [r2, #4]
+ 10e:	68d8      	ldr	r0, [r3, #12]
+ 110:	4b02      	ldr	r3, [pc, #8]	(11c <vCoRoutineSchedule+0x11c>)
+C:\cortex\dimmers\rtos\src/croutine.c:321
+
+	/* Call the co-routine. */
+	( pxCurrentCoRoutine->pxCoRoutineFunction )( pxCurrentCoRoutine, pxCurrentCoRoutine->uxIndex );
+ 112:	6b01      	ldr	r1, [r0, #48]
+C:\cortex\dimmers\rtos\src/croutine.c:318
+		--uxTopCoRoutineReadyPriority;
+	}
+
+	/* listGET_OWNER_OF_NEXT_ENTRY walks through the list, so the co-routines
+	 of the	same priority get an equal share of the processor time. */
+	listGET_OWNER_OF_NEXT_ENTRY( pxCurrentCoRoutine, &( pxReadyCoRoutineLists[ uxTopCoRoutineReadyPriority ] ) );
+ 114:	6158      	str	r0, [r3, #20]
+C:\cortex\dimmers\rtos\src/croutine.c:321
+
+	/* Call the co-routine. */
+	( pxCurrentCoRoutine->pxCoRoutineFunction )( pxCurrentCoRoutine, pxCurrentCoRoutine->uxIndex );
+ 116:	6803      	ldr	r3, [r0, #0]
+ 118:	4798      	blx	r3
+C:\cortex\dimmers\rtos\src/croutine.c:324
+
+	return;
+}
+ 11a:	bd70      	pop	{r4, r5, r6, pc}
+ 11c:	00000000 	.word	0x00000000
+ 120:	0000001c 	.word	0x0000001c
+Disassembly of section .text.vCoRoutineAddToDelayedList:
+
+00000000 <vCoRoutineAddToDelayedList>:
+vCoRoutineAddToDelayedList():
+C:\cortex\dimmers\rtos\src/croutine.c:181
+	return xReturn;	
+}
+/*-----------------------------------------------------------*/
+
+void vCoRoutineAddToDelayedList( portTickType xTicksToDelay, xList *pxEventList )
+{
+   0:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\rtos\src/croutine.c:186
+portTickType xTimeToWake;
+
+	/* Calculate the time to wake - this may overflow but this is
+	not a problem. */
+	xTimeToWake = xCoRoutineTickCount + xTicksToDelay;
+   2:	4d0d      	ldr	r5, [pc, #52]	(38 <vCoRoutineAddToDelayedList+0x38>)
+C:\cortex\dimmers\rtos\src/croutine.c:181
+	return xReturn;	
+}
+/*-----------------------------------------------------------*/
+
+void vCoRoutineAddToDelayedList( portTickType xTicksToDelay, xList *pxEventList )
+{
+   4:	460e      	mov	r6, r1
+C:\cortex\dimmers\rtos\src/croutine.c:186
+portTickType xTimeToWake;
+
+	/* Calculate the time to wake - this may overflow but this is
+	not a problem. */
+	xTimeToWake = xCoRoutineTickCount + xTicksToDelay;
+   6:	6ceb      	ldr	r3, [r5, #76]
+   8:	18c4      	adds	r4, r0, r3
+C:\cortex\dimmers\rtos\src/croutine.c:191
+
+	/* We must remove ourselves from the ready list before adding
+	ourselves to the blocked list as the same list item is used for
+	both lists. */
+	vListRemove( ( xListItem * ) &( pxCurrentCoRoutine->xGenericListItem ) );
+   a:	6968      	ldr	r0, [r5, #20]
+   c:	3004      	adds	r0, #4
+   e:	f7ff fffe 	bl	0 <vListRemove>
+C:\cortex\dimmers\rtos\src/croutine.c:194
+
+	/* The list item will be inserted in wake time order. */
+	listSET_LIST_ITEM_VALUE( &( pxCurrentCoRoutine->xGenericListItem ), xTimeToWake );
+  12:	6969      	ldr	r1, [r5, #20]
+  14:	f841 4f04 	str.w	r4, [r1, #4]!
+C:\cortex\dimmers\rtos\src/croutine.c:196
+
+	if( xTimeToWake < xCoRoutineTickCount )
+  18:	6ceb      	ldr	r3, [r5, #76]
+  1a:	429c      	cmp	r4, r3
+C:\cortex\dimmers\rtos\src/croutine.c:200
+	{
+		/* Wake time has overflowed.  Place this item in the
+		overflow list. */
+		vListInsert( ( xList * ) pxOverflowDelayedCoRoutineList, ( xListItem * ) &( pxCurrentCoRoutine->xGenericListItem ) );
+  1c:	bf34      	ite	cc
+  1e:	6d68      	ldrcc	r0, [r5, #84]
+C:\cortex\dimmers\rtos\src/croutine.c:206
+	}
+	else
+	{
+		/* The wake time has not overflowed, so we can use the
+		current block list. */
+		vListInsert( ( xList * ) pxDelayedCoRoutineList, ( xListItem * ) &( pxCurrentCoRoutine->xGenericListItem ) );
+  20:	6d28      	ldrcs	r0, [r5, #80]
+  22:	f7ff fffe 	bl	0 <vListInsert>
+C:\cortex\dimmers\rtos\src/croutine.c:209
+	}
+
+	if( pxEventList )
+  26:	b12e      	cbz	r6, 34 <vCoRoutineAddToDelayedList+0x34>
+C:\cortex\dimmers\rtos\src/croutine.c:213
+	{
+		/* Also add the co-routine to an event list.  If this is done then the
+		function must be called with interrupts disabled. */
+		vListInsert( pxEventList, &( pxCurrentCoRoutine->xEventListItem ) );
+  28:	4b03      	ldr	r3, [pc, #12]	(38 <vCoRoutineAddToDelayedList+0x38>)
+  2a:	4630      	mov	r0, r6
+  2c:	6959      	ldr	r1, [r3, #20]
+  2e:	3118      	adds	r1, #24
+  30:	f7ff fffe 	bl	0 <vListInsert>
+C:\cortex\dimmers\rtos\src/croutine.c:215
+	}
+}
+  34:	bd70      	pop	{r4, r5, r6, pc}
+  36:	46c0      	nop			(mov r8, r8)
+  38:	00000000 	.word	0x00000000
+Disassembly of section .text.xCoRoutineCreate:
+
+00000000 <xCoRoutineCreate>:
+xCoRoutineCreate():
+C:\cortex\dimmers\rtos\src/croutine.c:124
+static void prvCheckDelayedList( void );
+
+/*-----------------------------------------------------------*/
+
+signed portBASE_TYPE xCoRoutineCreate( crCOROUTINE_CODE pxCoRoutineCode, unsigned portBASE_TYPE uxPriority, unsigned portBASE_TYPE uxIndex )
+{
+   0:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+   4:	4682      	mov	sl, r0
+C:\cortex\dimmers\rtos\src/croutine.c:129
+signed portBASE_TYPE xReturn;
+corCRCB *pxCoRoutine;
+
+	/* Allocate the memory that will store the co-routine control block. */
+	pxCoRoutine = ( corCRCB * ) pvPortMalloc( sizeof( corCRCB ) );
+   6:	2038      	movs	r0, #56
+C:\cortex\dimmers\rtos\src/croutine.c:124
+static void prvCheckDelayedList( void );
+
+/*-----------------------------------------------------------*/
+
+signed portBASE_TYPE xCoRoutineCreate( crCOROUTINE_CODE pxCoRoutineCode, unsigned portBASE_TYPE uxPriority, unsigned portBASE_TYPE uxIndex )
+{
+   8:	4688      	mov	r8, r1
+   a:	4691      	mov	r9, r2
+C:\cortex\dimmers\rtos\src/croutine.c:129
+signed portBASE_TYPE xReturn;
+corCRCB *pxCoRoutine;
+
+	/* Allocate the memory that will store the co-routine control block. */
+	pxCoRoutine = ( corCRCB * ) pvPortMalloc( sizeof( corCRCB ) );
+   c:	f7ff fffe 	bl	0 <pvPortMalloc>
+C:\cortex\dimmers\rtos\src/croutine.c:130
+	if( pxCoRoutine )
+  10:	4606      	mov	r6, r0
+  12:	b908      	cbnz	r0, 18 <xCoRoutineCreate+0x18>
+  14:	3801      	subs	r0, #1
+  16:	e042      	b.n	9e <xCoRoutineCreate+0x9e>
+C:\cortex\dimmers\rtos\src/croutine.c:134
+	{
+		/* If pxCurrentCoRoutine is NULL then this is the first co-routine to
+		be created and the co-routine data structures need initialising. */
+		if( pxCurrentCoRoutine == NULL )
+  18:	4f22      	ldr	r7, [pc, #136]	(a4 <xCoRoutineCreate+0xa4>)
+  1a:	697b      	ldr	r3, [r7, #20]
+  1c:	b9bb      	cbnz	r3, 4e <xCoRoutineCreate+0x4e>
+C:\cortex\dimmers\rtos\src/croutine.c:136
+		{
+			pxCurrentCoRoutine = pxCoRoutine;
+  1e:	6178      	str	r0, [r7, #20]
+prvInitialiseCoRoutineLists():
+C:\cortex\dimmers\rtos\src/croutine.c:333
+{
+unsigned portBASE_TYPE uxPriority;
+
+	for( uxPriority = 0; uxPriority < configMAX_CO_ROUTINE_PRIORITIES; uxPriority++ )
+	{
+		vListInitialise( ( xList * ) &( pxReadyCoRoutineLists[ uxPriority ] ) );
+  20:	f107 001c 	add.w	r0, r7, #28	; 0x1c
+  24:	f7ff fffe 	bl	0 <vListInitialise>
+C:\cortex\dimmers\rtos\src/croutine.c:336
+	}
+
+	vListInitialise( ( xList * ) &xDelayedCoRoutineList1 );
+  28:	f107 0558 	add.w	r5, r7, #88	; 0x58
+C:\cortex\dimmers\rtos\src/croutine.c:333
+{
+unsigned portBASE_TYPE uxPriority;
+
+	for( uxPriority = 0; uxPriority < configMAX_CO_ROUTINE_PRIORITIES; uxPriority++ )
+	{
+		vListInitialise( ( xList * ) &( pxReadyCoRoutineLists[ uxPriority ] ) );
+  2c:	f107 0030 	add.w	r0, r7, #48	; 0x30
+  30:	f7ff fffe 	bl	0 <vListInitialise>
+C:\cortex\dimmers\rtos\src/croutine.c:337
+	}
+
+	vListInitialise( ( xList * ) &xDelayedCoRoutineList1 );
+	vListInitialise( ( xList * ) &xDelayedCoRoutineList2 );
+  34:	f107 046c 	add.w	r4, r7, #108	; 0x6c
+C:\cortex\dimmers\rtos\src/croutine.c:336
+	for( uxPriority = 0; uxPriority < configMAX_CO_ROUTINE_PRIORITIES; uxPriority++ )
+	{
+		vListInitialise( ( xList * ) &( pxReadyCoRoutineLists[ uxPriority ] ) );
+	}
+
+	vListInitialise( ( xList * ) &xDelayedCoRoutineList1 );
+  38:	4628      	mov	r0, r5
+  3a:	f7ff fffe 	bl	0 <vListInitialise>
+C:\cortex\dimmers\rtos\src/croutine.c:337
+	vListInitialise( ( xList * ) &xDelayedCoRoutineList2 );
+  3e:	4620      	mov	r0, r4
+  40:	f7ff fffe 	bl	0 <vListInitialise>
+C:\cortex\dimmers\rtos\src/croutine.c:338
+	vListInitialise( ( xList * ) &xPendingReadyCoRoutineList );
+  44:	4638      	mov	r0, r7
+  46:	f7ff fffe 	bl	0 <vListInitialise>
+C:\cortex\dimmers\rtos\src/croutine.c:342
+
+	/* Start with pxDelayedCoRoutineList using list1 and the
+	pxOverflowDelayedCoRoutineList using list2. */
+	pxDelayedCoRoutineList = &xDelayedCoRoutineList1;
+  4a:	653d      	str	r5, [r7, #80]
+C:\cortex\dimmers\rtos\src/croutine.c:343
+	pxOverflowDelayedCoRoutineList = &xDelayedCoRoutineList2;
+  4c:	657c      	str	r4, [r7, #84]
+xCoRoutineCreate():
+C:\cortex\dimmers\rtos\src/croutine.c:150
+
+		/* Fill out the co-routine control block from the function parameters. */
+		pxCoRoutine->uxState = corINITIAL_STATE;
+		pxCoRoutine->uxPriority = uxPriority;
+		pxCoRoutine->uxIndex = uxIndex;
+		pxCoRoutine->pxCoRoutineFunction = pxCoRoutineCode;
+  4e:	4635      	mov	r5, r6
+C:\cortex\dimmers\rtos\src/croutine.c:147
+		{
+			uxPriority = configMAX_CO_ROUTINE_PRIORITIES - 1;
+		}
+
+		/* Fill out the co-routine control block from the function parameters. */
+		pxCoRoutine->uxState = corINITIAL_STATE;
+  50:	f04f 0300 	mov.w	r3, #0	; 0x0
+prvInitialiseCoRoutineLists():
+C:\cortex\dimmers\rtos\src/croutine.c:343
+	vListInitialise( ( xList * ) &xPendingReadyCoRoutineList );
+
+	/* Start with pxDelayedCoRoutineList using list1 and the
+	pxOverflowDelayedCoRoutineList using list2. */
+	pxDelayedCoRoutineList = &xDelayedCoRoutineList1;
+	pxOverflowDelayedCoRoutineList = &xDelayedCoRoutineList2;
+  54:	f1b8 0f01 	cmp.w	r8, #1	; 0x1
+  58:	bf34      	ite	cc
+  5a:	4644      	movcc	r4, r8
+  5c:	2401      	movcs	r4, #1
+xCoRoutineCreate():
+C:\cortex\dimmers\rtos\src/croutine.c:150
+
+		/* Fill out the co-routine control block from the function parameters. */
+		pxCoRoutine->uxState = corINITIAL_STATE;
+		pxCoRoutine->uxPriority = uxPriority;
+		pxCoRoutine->uxIndex = uxIndex;
+		pxCoRoutine->pxCoRoutineFunction = pxCoRoutineCode;
+  5e:	f845 ab04 	str.w	sl, [r5], #4
+C:\cortex\dimmers\rtos\src/croutine.c:147
+		{
+			uxPriority = configMAX_CO_ROUTINE_PRIORITIES - 1;
+		}
+
+		/* Fill out the co-routine control block from the function parameters. */
+		pxCoRoutine->uxState = corINITIAL_STATE;
+  62:	86b3      	strh	r3, [r6, #52]
+C:\cortex\dimmers\rtos\src/croutine.c:148
+		pxCoRoutine->uxPriority = uxPriority;
+  64:	62f4      	str	r4, [r6, #44]
+C:\cortex\dimmers\rtos\src/croutine.c:153
+		pxCoRoutine->uxIndex = uxIndex;
+		pxCoRoutine->pxCoRoutineFunction = pxCoRoutineCode;
+
+		/* Initialise all the other co-routine control block parameters. */
+		vListInitialiseItem( &( pxCoRoutine->xGenericListItem ) );
+  66:	4628      	mov	r0, r5
+C:\cortex\dimmers\rtos\src/croutine.c:149
+		}
+
+		/* Fill out the co-routine control block from the function parameters. */
+		pxCoRoutine->uxState = corINITIAL_STATE;
+		pxCoRoutine->uxPriority = uxPriority;
+		pxCoRoutine->uxIndex = uxIndex;
+  68:	f8c6 9030 	str.w	r9, [r6, #48]
+C:\cortex\dimmers\rtos\src/croutine.c:153
+		pxCoRoutine->pxCoRoutineFunction = pxCoRoutineCode;
+
+		/* Initialise all the other co-routine control block parameters. */
+		vListInitialiseItem( &( pxCoRoutine->xGenericListItem ) );
+  6c:	f7ff fffe 	bl	0 <vListInitialiseItem>
+C:\cortex\dimmers\rtos\src/croutine.c:154
+		vListInitialiseItem( &( pxCoRoutine->xEventListItem ) );
+  70:	f106 0018 	add.w	r0, r6, #24	; 0x18
+  74:	f7ff fffe 	bl	0 <vListInitialiseItem>
+C:\cortex\dimmers\rtos\src/croutine.c:163
+		in a list. */
+		listSET_LIST_ITEM_OWNER( &( pxCoRoutine->xGenericListItem ), pxCoRoutine );
+		listSET_LIST_ITEM_OWNER( &( pxCoRoutine->xEventListItem ), pxCoRoutine );
+	
+		/* Event lists are always in priority order. */
+		listSET_LIST_ITEM_VALUE( &( pxCoRoutine->xEventListItem ), configMAX_PRIORITIES - ( portTickType ) uxPriority );
+  78:	f1c4 0405 	rsb	r4, r4, #5	; 0x5
+C:\cortex\dimmers\rtos\src/croutine.c:167
+		
+		/* Now the co-routine has been initialised it can be added to the ready
+		list at the correct priority. */
+		prvAddCoRoutineToReadyQueue( pxCoRoutine );
+  7c:	4909      	ldr	r1, [pc, #36]	(a4 <xCoRoutineCreate+0xa4>)
+C:\cortex\dimmers\rtos\src/croutine.c:163
+		in a list. */
+		listSET_LIST_ITEM_OWNER( &( pxCoRoutine->xGenericListItem ), pxCoRoutine );
+		listSET_LIST_ITEM_OWNER( &( pxCoRoutine->xEventListItem ), pxCoRoutine );
+	
+		/* Event lists are always in priority order. */
+		listSET_LIST_ITEM_VALUE( &( pxCoRoutine->xEventListItem ), configMAX_PRIORITIES - ( portTickType ) uxPriority );
+  7e:	61b4      	str	r4, [r6, #24]
+C:\cortex\dimmers\rtos\src/croutine.c:167
+		
+		/* Now the co-routine has been initialised it can be added to the ready
+		list at the correct priority. */
+		prvAddCoRoutineToReadyQueue( pxCoRoutine );
+  80:	698b      	ldr	r3, [r1, #24]
+  82:	6af2      	ldr	r2, [r6, #44]
+  84:	4808      	ldr	r0, [pc, #32]	(a8 <xCoRoutineCreate+0xa8>)
+  86:	429a      	cmp	r2, r3
+  88:	bf88      	it	hi
+  8a:	618a      	strhi	r2, [r1, #24]
+  8c:	2314      	movs	r3, #20
+  8e:	fb03 0002 	mla	r0, r3, r2, r0
+C:\cortex\dimmers\rtos\src/croutine.c:159
+		vListInitialiseItem( &( pxCoRoutine->xEventListItem ) );
+
+		/* Set the co-routine control block as a link back from the xListItem.
+		This is so we can get back to the containing CRCB from a generic item
+		in a list. */
+		listSET_LIST_ITEM_OWNER( &( pxCoRoutine->xGenericListItem ), pxCoRoutine );
+  92:	6136      	str	r6, [r6, #16]
+C:\cortex\dimmers\rtos\src/croutine.c:160
+		listSET_LIST_ITEM_OWNER( &( pxCoRoutine->xEventListItem ), pxCoRoutine );
+  94:	6276      	str	r6, [r6, #36]
+C:\cortex\dimmers\rtos\src/croutine.c:167
+		/* Event lists are always in priority order. */
+		listSET_LIST_ITEM_VALUE( &( pxCoRoutine->xEventListItem ), configMAX_PRIORITIES - ( portTickType ) uxPriority );
+		
+		/* Now the co-routine has been initialised it can be added to the ready
+		list at the correct priority. */
+		prvAddCoRoutineToReadyQueue( pxCoRoutine );
+  96:	4629      	mov	r1, r5
+  98:	f7ff fffe 	bl	0 <vListInsertEnd>
+  9c:	2001      	movs	r0, #1
+C:\cortex\dimmers\rtos\src/croutine.c:177
+	{		
+		xReturn = errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY;
+	}
+	
+	return xReturn;	
+}
+  9e:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
+  a2:	46c0      	nop			(mov r8, r8)
+  a4:	00000000 	.word	0x00000000
+  a8:	0000001c 	.word	0x0000001c

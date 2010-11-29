@@ -1,0 +1,95 @@
+
+C:\cortex\dimmers\hex\dimmers_rtc.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\dimmers_rtc.o
+
+Disassembly of section .text.RtcInit:
+
+00000000 <RtcInit>:
+RtcInit():
+C:\cortex\dimmers\src/dimmers_rtc.c:15
+*******************************************************************************/
+/* Includes ------------------------------------------------------------------*/
+#include "stm32f10x_lib.h"
+#include "dimmers_rtc.h"
+
+void RtcInit (void){
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_rtc.c:18
+
+  /* Enable PWR and BKP clocks */
+  RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR | RCC_APB1Periph_BKP, ENABLE);
+   2:	f04f 50c0 	mov.w	r0, #402653184	; 0x18000000
+   6:	2101      	movs	r1, #1
+   8:	f7ff fffe 	bl	0 <RCC_APB1PeriphClockCmd>
+C:\cortex\dimmers\src/dimmers_rtc.c:21
+
+  /* Allow access to BKP Domain */
+  PWR_BackupAccessCmd(ENABLE);
+   c:	2001      	movs	r0, #1
+   e:	f7ff fffe 	bl	0 <PWR_BackupAccessCmd>
+C:\cortex\dimmers\src/dimmers_rtc.c:27
+
+  /* Reset Backup Domain */
+  //BKP_DeInit();
+
+  /* Enable LSE */
+  RCC_LSEConfig(RCC_LSE_ON);
+  12:	2001      	movs	r0, #1
+  14:	f7ff fffe 	bl	0 <RCC_LSEConfig>
+C:\cortex\dimmers\src/dimmers_rtc.c:29
+  /* Wait till LSE is ready */
+  while (RCC_GetFlagStatus(RCC_FLAG_LSERDY) == RESET)
+  18:	2041      	movs	r0, #65
+  1a:	f7ff fffe 	bl	0 <RCC_GetFlagStatus>
+  1e:	2800      	cmp	r0, #0
+  20:	d0fa      	beq.n	18 <RtcInit+0x18>
+C:\cortex\dimmers\src/dimmers_rtc.c:33
+  {}
+
+  /* Select LSE as RTC Clock Source */
+  RCC_RTCCLKConfig(RCC_RTCCLKSource_LSE);
+  22:	f44f 7080 	mov.w	r0, #256	; 0x100
+  26:	f7ff fffe 	bl	0 <RCC_RTCCLKConfig>
+C:\cortex\dimmers\src/dimmers_rtc.c:36
+
+  /* Enable RTC Clock */
+  RCC_RTCCLKCmd(ENABLE);
+  2a:	2001      	movs	r0, #1
+  2c:	f7ff fffe 	bl	0 <RCC_RTCCLKCmd>
+C:\cortex\dimmers\src/dimmers_rtc.c:39
+
+  /* Wait for RTC registers synchronization */
+  RTC_WaitForSynchro();
+  30:	f7ff fffe 	bl	0 <RTC_WaitForSynchro>
+C:\cortex\dimmers\src/dimmers_rtc.c:42
+
+  /* Wait until last write operation on RTC registers has finished */
+  RTC_WaitForLastTask();
+  34:	f7ff fffe 	bl	0 <RTC_WaitForLastTask>
+C:\cortex\dimmers\src/dimmers_rtc.c:45
+
+  /* Enable the RTC Second */
+  RTC_ITConfig(RTC_IT_SEC, ENABLE);
+  38:	2001      	movs	r0, #1
+  3a:	4601      	mov	r1, r0
+  3c:	f7ff fffe 	bl	0 <RTC_ITConfig>
+C:\cortex\dimmers\src/dimmers_rtc.c:48
+
+  /* Wait until last write operation on RTC registers has finished */
+  RTC_WaitForLastTask();
+  40:	f7ff fffe 	bl	0 <RTC_WaitForLastTask>
+C:\cortex\dimmers\src/dimmers_rtc.c:51
+
+  /* Set RTC prescaler: set RTC period to 1sec */
+  RTC_SetPrescaler(32767); /* RTC period = RTCCLK/RTC_PR = (32.768 KHz)/(32767+1) */
+  44:	f647 70ff 	movw	r0, #32767	; 0x7fff
+  48:	f7ff fffe 	bl	0 <RTC_SetPrescaler>
+C:\cortex\dimmers\src/dimmers_rtc.c:54
+
+  /* Wait until last write operation on RTC registers has finished */
+  RTC_WaitForLastTask();
+  4c:	f7ff fffe 	bl	0 <RTC_WaitForLastTask>
+C:\cortex\dimmers\src/dimmers_rtc.c:56
+
+  50:	bd10      	pop	{r4, pc}
+  52:	46c0      	nop			(mov r8, r8)

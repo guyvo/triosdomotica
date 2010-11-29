@@ -1,0 +1,247 @@
+
+D:\cortex\dimmers\hex\adc.o:     file format elf32-littlearm
+D:\cortex\dimmers\hex\adc.o
+
+Disassembly of section .text.AdcDmaInit:
+
+00000000 <AdcDmaInit>:
+AdcDmaInit():
+D:\cortex\dimmers\src/adc.c:25
+* Description    : Bind DMA channel 1 on ADC1
+* Input          : the buffer to link with DMA / buffersize
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void AdcDmaInit (u32 * buffer , u16 size ){
+   0:	b580      	push	{r7, lr}
+   2:	b08e      	sub	sp, #56
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+   8:	460b      	mov	r3, r1
+   a:	807b      	strh	r3, [r7, #2]
+D:\cortex\dimmers\src/adc.c:29
+
+  DMA_InitTypeDef x_DMA_InitStructure;
+
+  RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
+   c:	f04f 0001 	mov.w	r0, #1	; 0x1
+  10:	f04f 0101 	mov.w	r1, #1	; 0x1
+  14:	f7ff fffe 	bl	0 <RCC_AHBPeriphClockCmd>
+D:\cortex\dimmers\src/adc.c:31
+
+  DMA_DeInit(DMA1_Channel1);
+  18:	f240 0008 	movw	r0, #8	; 0x8
+  1c:	f2c4 0002 	movt	r0, #16386	; 0x4002
+  20:	f7ff fffe 	bl	0 <DMA_DeInit>
+D:\cortex\dimmers\src/adc.c:32
+  x_DMA_InitStructure.DMA_PeripheralBaseAddr	= ADC1_DR_Address;
+  24:	f242 434c 	movw	r3, #9292	; 0x244c
+  28:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  2c:	60fb      	str	r3, [r7, #12]
+D:\cortex\dimmers\src/adc.c:33
+  x_DMA_InitStructure.DMA_MemoryBaseAddr 		= (u32)buffer;
+  2e:	687b      	ldr	r3, [r7, #4]
+  30:	613b      	str	r3, [r7, #16]
+D:\cortex\dimmers\src/adc.c:34
+  x_DMA_InitStructure.DMA_DIR					= DMA_DIR_PeripheralSRC;
+  32:	f04f 0300 	mov.w	r3, #0	; 0x0
+  36:	617b      	str	r3, [r7, #20]
+D:\cortex\dimmers\src/adc.c:35
+  x_DMA_InitStructure.DMA_BufferSize			= size;
+  38:	887b      	ldrh	r3, [r7, #2]
+  3a:	61bb      	str	r3, [r7, #24]
+D:\cortex\dimmers\src/adc.c:36
+  x_DMA_InitStructure.DMA_PeripheralInc			= DMA_PeripheralInc_Disable;
+  3c:	f04f 0300 	mov.w	r3, #0	; 0x0
+  40:	61fb      	str	r3, [r7, #28]
+D:\cortex\dimmers\src/adc.c:37
+  x_DMA_InitStructure.DMA_MemoryInc				= DMA_MemoryInc_Disable;
+  42:	f04f 0300 	mov.w	r3, #0	; 0x0
+  46:	623b      	str	r3, [r7, #32]
+D:\cortex\dimmers\src/adc.c:38
+  x_DMA_InitStructure.DMA_PeripheralDataSize	= DMA_PeripheralDataSize_HalfWord;
+  48:	f44f 7380 	mov.w	r3, #256	; 0x100
+  4c:	627b      	str	r3, [r7, #36]
+D:\cortex\dimmers\src/adc.c:39
+  x_DMA_InitStructure.DMA_MemoryDataSize		= DMA_MemoryDataSize_HalfWord;
+  4e:	f44f 6380 	mov.w	r3, #1024	; 0x400
+  52:	62bb      	str	r3, [r7, #40]
+D:\cortex\dimmers\src/adc.c:40
+  x_DMA_InitStructure.DMA_Mode					= DMA_Mode_Circular;
+  54:	f04f 0320 	mov.w	r3, #32	; 0x20
+  58:	62fb      	str	r3, [r7, #44]
+D:\cortex\dimmers\src/adc.c:41
+  x_DMA_InitStructure.DMA_Priority				= DMA_Priority_High;
+  5a:	f44f 5300 	mov.w	r3, #8192	; 0x2000
+  5e:	633b      	str	r3, [r7, #48]
+D:\cortex\dimmers\src/adc.c:42
+  x_DMA_InitStructure.DMA_M2M					= DMA_M2M_Disable;
+  60:	f04f 0300 	mov.w	r3, #0	; 0x0
+  64:	637b      	str	r3, [r7, #52]
+D:\cortex\dimmers\src/adc.c:44
+
+  DMA_Init	(DMA1_Channel1, &x_DMA_InitStructure);
+  66:	f107 030c 	add.w	r3, r7, #12	; 0xc
+  6a:	f240 0008 	movw	r0, #8	; 0x8
+  6e:	f2c4 0002 	movt	r0, #16386	; 0x4002
+  72:	4619      	mov	r1, r3
+  74:	f7ff fffe 	bl	0 <DMA_Init>
+D:\cortex\dimmers\src/adc.c:45
+  DMA_Cmd	(DMA1_Channel1, ENABLE);
+  78:	f240 0008 	movw	r0, #8	; 0x8
+  7c:	f2c4 0002 	movt	r0, #16386	; 0x4002
+  80:	f04f 0101 	mov.w	r1, #1	; 0x1
+  84:	f7ff fffe 	bl	0 <DMA_Cmd>
+D:\cortex\dimmers\src/adc.c:47
+  
+  ADC_DMACmd(ADC1, ENABLE);
+  88:	f242 4000 	movw	r0, #9216	; 0x2400
+  8c:	f2c4 0001 	movt	r0, #16385	; 0x4001
+  90:	f04f 0101 	mov.w	r1, #1	; 0x1
+  94:	f7ff fffe 	bl	0 <ADC_DMACmd>
+D:\cortex\dimmers\src/adc.c:48
+}
+  98:	f107 0738 	add.w	r7, r7, #56	; 0x38
+  9c:	46bd      	mov	sp, r7
+  9e:	bd80      	pop	{r7, pc}
+Disassembly of section .text.AdcInit:
+
+00000000 <AdcInit>:
+AdcInit():
+D:\cortex\dimmers\src/adc.c:56
+* Description    : Initialize ADC1
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void AdcInit (void){
+   0:	b580      	push	{r7, lr}
+   2:	b086      	sub	sp, #24
+   4:	af00      	add	r7, sp, #0
+D:\cortex\dimmers\src/adc.c:59
+  ADC_InitTypeDef	x_ADC_InitStructure;
+
+  x_ADC_InitStructure.ADC_Mode					= ADC_Mode_Independent;
+   6:	f04f 0300 	mov.w	r3, #0	; 0x0
+   a:	607b      	str	r3, [r7, #4]
+D:\cortex\dimmers\src/adc.c:60
+  x_ADC_InitStructure.ADC_ScanConvMode			= ENABLE;
+   c:	f04f 0301 	mov.w	r3, #1	; 0x1
+  10:	723b      	strb	r3, [r7, #8]
+D:\cortex\dimmers\src/adc.c:61
+  x_ADC_InitStructure.ADC_ContinuousConvMode	= DISABLE;
+  12:	f04f 0300 	mov.w	r3, #0	; 0x0
+  16:	727b      	strb	r3, [r7, #9]
+D:\cortex\dimmers\src/adc.c:62
+  x_ADC_InitStructure.ADC_ExternalTrigConv		= ADC_ExternalTrigConv_None;
+  18:	f44f 2360 	mov.w	r3, #917504	; 0xe0000
+  1c:	60fb      	str	r3, [r7, #12]
+D:\cortex\dimmers\src/adc.c:63
+  x_ADC_InitStructure.ADC_DataAlign				= ADC_DataAlign_Right;
+  1e:	f04f 0300 	mov.w	r3, #0	; 0x0
+  22:	613b      	str	r3, [r7, #16]
+D:\cortex\dimmers\src/adc.c:64
+  x_ADC_InitStructure.ADC_NbrOfChannel			= 1;
+  24:	f04f 0301 	mov.w	r3, #1	; 0x1
+  28:	753b      	strb	r3, [r7, #20]
+D:\cortex\dimmers\src/adc.c:65
+  ADC_Init(ADC1, &x_ADC_InitStructure);
+  2a:	f107 0304 	add.w	r3, r7, #4	; 0x4
+  2e:	f242 4000 	movw	r0, #9216	; 0x2400
+  32:	f2c4 0001 	movt	r0, #16385	; 0x4001
+  36:	4619      	mov	r1, r3
+  38:	f7ff fffe 	bl	0 <ADC_Init>
+D:\cortex\dimmers\src/adc.c:67
+
+  ADC_RegularChannelConfig( ADC1 , ADC_Channel_1, 1 , ADC_SampleTime_1Cycles5 );
+  3c:	f242 4000 	movw	r0, #9216	; 0x2400
+  40:	f2c4 0001 	movt	r0, #16385	; 0x4001
+  44:	f04f 0101 	mov.w	r1, #1	; 0x1
+  48:	f04f 0201 	mov.w	r2, #1	; 0x1
+  4c:	f04f 0300 	mov.w	r3, #0	; 0x0
+  50:	f7ff fffe 	bl	0 <ADC_RegularChannelConfig>
+D:\cortex\dimmers\src/adc.c:68
+  ADC_ITConfig(ADC1, ADC_IT_EOC , ENABLE);
+  54:	f242 4000 	movw	r0, #9216	; 0x2400
+  58:	f2c4 0001 	movt	r0, #16385	; 0x4001
+  5c:	f44f 7108 	mov.w	r1, #544	; 0x220
+  60:	f04f 0201 	mov.w	r2, #1	; 0x1
+  64:	f7ff fffe 	bl	0 <ADC_ITConfig>
+D:\cortex\dimmers\src/adc.c:69
+}
+  68:	f107 0718 	add.w	r7, r7, #24	; 0x18
+  6c:	46bd      	mov	sp, r7
+  6e:	bd80      	pop	{r7, pc}
+Disassembly of section .text.AdcCalibration:
+
+00000000 <AdcCalibration>:
+AdcCalibration():
+D:\cortex\dimmers\src/adc.c:77
+* Description    : Calibrate ADC1
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void AdcCalibration (void){
+   0:	b580      	push	{r7, lr}
+   2:	af00      	add	r7, sp, #0
+D:\cortex\dimmers\src/adc.c:79
+  // first reset
+  ADC_ResetCalibration(ADC1);
+   4:	f242 4000 	movw	r0, #9216	; 0x2400
+   8:	f2c4 0001 	movt	r0, #16385	; 0x4001
+   c:	f7ff fffe 	bl	0 <ADC_ResetCalibration>
+D:\cortex\dimmers\src/adc.c:80
+  while(ADC_GetResetCalibrationStatus(ADC1));
+  10:	f242 4000 	movw	r0, #9216	; 0x2400
+  14:	f2c4 0001 	movt	r0, #16385	; 0x4001
+  18:	f7ff fffe 	bl	0 <ADC_GetResetCalibrationStatus>
+  1c:	4603      	mov	r3, r0
+  1e:	2b00      	cmp	r3, #0
+  20:	d1f6      	bne.n	10 <AdcCalibration+0x10>
+D:\cortex\dimmers\src/adc.c:82
+  // than do the cal
+  ADC_StartCalibration(ADC1);
+  22:	f242 4000 	movw	r0, #9216	; 0x2400
+  26:	f2c4 0001 	movt	r0, #16385	; 0x4001
+  2a:	f7ff fffe 	bl	0 <ADC_StartCalibration>
+D:\cortex\dimmers\src/adc.c:83
+  while(ADC_GetCalibrationStatus(ADC1));
+  2e:	f242 4000 	movw	r0, #9216	; 0x2400
+  32:	f2c4 0001 	movt	r0, #16385	; 0x4001
+  36:	f7ff fffe 	bl	0 <ADC_GetCalibrationStatus>
+  3a:	4603      	mov	r3, r0
+  3c:	2b00      	cmp	r3, #0
+  3e:	d1f6      	bne.n	2e <ADC_GetCalibrationStatus+0x2e>
+D:\cortex\dimmers\src/adc.c:84
+}
+  40:	46bd      	mov	sp, r7
+  42:	bd80      	pop	{r7, pc}
+Disassembly of section .text.AdcEnable:
+
+00000000 <AdcEnable>:
+AdcEnable():
+D:\cortex\dimmers\src/adc.c:92
+* Description    : Enable/disable ADC1
+* Input          : boolean ENABLE or DISABLE
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void AdcEnable (bool enable){
+   0:	b580      	push	{r7, lr}
+   2:	b082      	sub	sp, #8
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	71fb      	strb	r3, [r7, #7]
+D:\cortex\dimmers\src/adc.c:93
+  ADC_Cmd(ADC1, enable);
+   a:	79fb      	ldrb	r3, [r7, #7]
+   c:	f242 4000 	movw	r0, #9216	; 0x2400
+  10:	f2c4 0001 	movt	r0, #16385	; 0x4001
+  14:	4619      	mov	r1, r3
+  16:	f7ff fffe 	bl	0 <ADC_Cmd>
+D:\cortex\dimmers\src/adc.c:94
+  1a:	f107 0708 	add.w	r7, r7, #8	; 0x8
+  1e:	46bd      	mov	sp, r7
+  20:	bd80      	pop	{r7, pc}
+  22:	46c0      	nop			(mov r8, r8)
