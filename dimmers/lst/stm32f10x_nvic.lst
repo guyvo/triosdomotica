@@ -2,81 +2,74 @@
 C:\cortex\dimmers\hex\stm32f10x_nvic.o:     file format elf32-littlearm
 C:\cortex\dimmers\hex\stm32f10x_nvic.o
 
+
 Disassembly of section .text.NVIC_DeInit:
 
 00000000 <NVIC_DeInit>:
 NVIC_DeInit():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:40
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:40
 *******************************************************************************/
 void NVIC_DeInit(void)
 {
   u32 index = 0;
   
   NVIC->ICER[0] = 0xFFFFFFFF;
-   0:	4b0b      	ldr	r3, [pc, #44]	(30 <NVIC_DeInit+0x30>)
-   2:	f04f 31ff 	mov.w	r1, #4294967295	; 0xffffffff
-C:\cortex\dimmers\src/stm32f10x_nvic.c:41
+   0:	4b0b      	ldr	r3, [pc, #44]	; (30 <NVIC_DeInit+0x30>)
+   2:	f04f 31ff 	mov.w	r1, #4294967295
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:41
   NVIC->ICER[1] = 0x0FFFFFFF;
    6:	f06f 4270 	mvn.w	r2, #4026531840	; 0xf0000000
-C:\cortex\dimmers\src/stm32f10x_nvic.c:40
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:40
 *******************************************************************************/
 void NVIC_DeInit(void)
 {
   u32 index = 0;
   
   NVIC->ICER[0] = 0xFFFFFFFF;
-   a:	f8c3 1080 	str.w	r1, [r3, #128]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:43
+   a:	f8c3 1080 	str.w	r1, [r3, #128]	; 0x80
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:41
   NVIC->ICER[1] = 0x0FFFFFFF;
+   e:	f8c3 2084 	str.w	r2, [r3, #132]	; 0x84
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:42
   NVIC->ICPR[0] = 0xFFFFFFFF;
+  12:	f8c3 1180 	str.w	r1, [r3, #384]	; 0x180
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:43
   NVIC->ICPR[1] = 0x0FFFFFFF;
-   e:	2000      	movs	r0, #0
-C:\cortex\dimmers\src/stm32f10x_nvic.c:41
-void NVIC_DeInit(void)
-{
-  u32 index = 0;
-  
-  NVIC->ICER[0] = 0xFFFFFFFF;
-  NVIC->ICER[1] = 0x0FFFFFFF;
-  10:	f8c3 2084 	str.w	r2, [r3, #132]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:42
-  NVIC->ICPR[0] = 0xFFFFFFFF;
-  14:	f8c3 1180 	str.w	r1, [r3, #384]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:43
-  NVIC->ICPR[1] = 0x0FFFFFFF;
-  18:	f8c3 2184 	str.w	r2, [r3, #388]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:47
+  16:	f8c3 2184 	str.w	r2, [r3, #388]	; 0x184
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:45
   
   for(index = 0; index < 0x0F; index++)
+  1a:	2300      	movs	r3, #0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:47
   {
      NVIC->IPR[index] = 0x00000000;
-  1c:	f100 01c0 	add.w	r1, r0, #192	; 0xc0
-  20:	4b03      	ldr	r3, [pc, #12]	(30 <NVIC_DeInit+0x30>)
-C:\cortex\dimmers\src/stm32f10x_nvic.c:45
+  1c:	f103 01c0 	add.w	r1, r3, #192	; 0xc0
+  20:	4a03      	ldr	r2, [pc, #12]	; (30 <NVIC_DeInit+0x30>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:45
   NVIC->ICER[0] = 0xFFFFFFFF;
   NVIC->ICER[1] = 0x0FFFFFFF;
   NVIC->ICPR[0] = 0xFFFFFFFF;
   NVIC->ICPR[1] = 0x0FFFFFFF;
   
   for(index = 0; index < 0x0F; index++)
-  22:	3001      	adds	r0, #1
-C:\cortex\dimmers\src/stm32f10x_nvic.c:47
+  22:	3301      	adds	r3, #1
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:47
   {
      NVIC->IPR[index] = 0x00000000;
-  24:	2200      	movs	r2, #0
-C:\cortex\dimmers\src/stm32f10x_nvic.c:45
+  24:	2000      	movs	r0, #0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:45
   NVIC->ICER[0] = 0xFFFFFFFF;
   NVIC->ICER[1] = 0x0FFFFFFF;
   NVIC->ICPR[0] = 0xFFFFFFFF;
   NVIC->ICPR[1] = 0x0FFFFFFF;
   
   for(index = 0; index < 0x0F; index++)
-  26:	280f      	cmp	r0, #15
-C:\cortex\dimmers\src/stm32f10x_nvic.c:47
+  26:	2b0f      	cmp	r3, #15
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:47
   {
      NVIC->IPR[index] = 0x00000000;
-  28:	f843 2021 	str.w	r2, [r3, r1, lsl #2]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:45
+  28:	f842 0021 	str.w	r0, [r2, r1, lsl #2]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:45
   NVIC->ICER[0] = 0xFFFFFFFF;
   NVIC->ICER[1] = 0x0FFFFFFF;
   NVIC->ICPR[0] = 0xFFFFFFFF;
@@ -84,273 +77,320 @@ C:\cortex\dimmers\src/stm32f10x_nvic.c:45
   
   for(index = 0; index < 0x0F; index++)
   2c:	d1f6      	bne.n	1c <NVIC_DeInit+0x1c>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:49
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:49
   {
      NVIC->IPR[index] = 0x00000000;
   } 
 }
   2e:	4770      	bx	lr
   30:	e000e100 	.word	0xe000e100
+
 Disassembly of section .text.NVIC_SCBDeInit:
 
 00000000 <NVIC_SCBDeInit>:
 NVIC_SCBDeInit():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:63
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:63
 *******************************************************************************/
 void NVIC_SCBDeInit(void)
 {
   u32 index = 0x00;
   
   SCB->ICSR = 0x0A000000;
-   0:	4a09      	ldr	r2, [pc, #36]	(28 <NVIC_SCBDeInit+0x28>)
-   2:	f04f 6320 	mov.w	r3, #167772160	; 0xa000000
-C:\cortex\dimmers\src/stm32f10x_nvic.c:65
+   0:	f04f4b09 	.word	0xf04f4b09
+   4:	6220      	str	r0, [r4, #32]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:65
   SCB->VTOR = 0x00000000;
   SCB->AIRCR = AIRCR_VECTKEY_MASK;
-   6:	4909      	ldr	r1, [pc, #36]	(2c <NVIC_SCBDeInit+0x2c>)
-C:\cortex\dimmers\src/stm32f10x_nvic.c:63
+   6:	4909      	ldr	r1, [pc, #36]	; (2c <NVIC_SCBDeInit+0x2c>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:63
 *******************************************************************************/
 void NVIC_SCBDeInit(void)
 {
   u32 index = 0x00;
   
   SCB->ICSR = 0x0A000000;
-   8:	6053      	str	r3, [r2, #4]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:64
+   8:	605a      	str	r2, [r3, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:64
   SCB->VTOR = 0x00000000;
-   a:	f103 4376 	add.w	r3, r3, #4127195136	; 0xf6000000
-   e:	6093      	str	r3, [r2, #8]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:65
+   a:	2200      	movs	r2, #0
+   c:	609a      	str	r2, [r3, #8]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:65
   SCB->AIRCR = AIRCR_VECTKEY_MASK;
-  10:	60d1      	str	r1, [r2, #12]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:66
+   e:	60d9      	str	r1, [r3, #12]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:66
   SCB->SCR = 0x00000000;
-  12:	6113      	str	r3, [r2, #16]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:67
+  10:	611a      	str	r2, [r3, #16]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:67
   SCB->CCR = 0x00000000;
-  14:	6153      	str	r3, [r2, #20]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:70
+  12:	615a      	str	r2, [r3, #20]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:70
   for(index = 0; index < 0x03; index++)
   {
      SCB->SHPR[index] = 0;
-  16:	6193      	str	r3, [r2, #24]
-  18:	61d3      	str	r3, [r2, #28]
-  1a:	6213      	str	r3, [r2, #32]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:72
+  14:	619a      	str	r2, [r3, #24]
+  16:	61da      	str	r2, [r3, #28]
+  18:	621a      	str	r2, [r3, #32]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:72
   }
   SCB->SHCSR = 0x00000000;
-  1c:	6253      	str	r3, [r2, #36]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:73
+  1a:	625a      	str	r2, [r3, #36]	; 0x24
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:73
   SCB->CFSR = 0xFFFFFFFF;
-  1e:	3b01      	subs	r3, #1
-  20:	6293      	str	r3, [r2, #40]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:74
+  1c:	3a01      	subs	r2, #1
+  1e:	629a      	str	r2, [r3, #40]	; 0x28
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:74
   SCB->HFSR = 0xFFFFFFFF;
-  22:	62d3      	str	r3, [r2, #44]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:75
+  20:	62da      	str	r2, [r3, #44]	; 0x2c
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:75
   SCB->DFSR = 0xFFFFFFFF;
-  24:	6313      	str	r3, [r2, #48]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:76
+  22:	631a      	str	r2, [r3, #48]	; 0x30
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:76
 }
-  26:	4770      	bx	lr
+  24:	4770      	bx	lr
+  26:	bf00      	nop
   28:	e000ed00 	.word	0xe000ed00
   2c:	05fa0000 	.word	0x05fa0000
+
 Disassembly of section .text.NVIC_PriorityGroupConfig:
 
 00000000 <NVIC_PriorityGroupConfig>:
 NVIC_PriorityGroupConfig():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:103
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:103
 {
   /* Check the parameters */
   assert_param(IS_NVIC_PRIORITY_GROUP(NVIC_PriorityGroup));
   
   /* Set the PRIGROUP[10:8] bits according to NVIC_PriorityGroup value */
   SCB->AIRCR = AIRCR_VECTKEY_MASK | NVIC_PriorityGroup;
-   0:	f040 60be 	orr.w	r0, r0, #99614720	; 0x5f00000
-   4:	4b02      	ldr	r3, [pc, #8]	(10 <NVIC_PriorityGroupConfig+0x10>)
+   0:	60bef040 	.word	0x60bef040
+   4:	4b02      	ldr	r3, [pc, #8]	; (10 <NVIC_PriorityGroupConfig+0x10>)
    6:	f440 2020 	orr.w	r0, r0, #655360	; 0xa0000
    a:	60d8      	str	r0, [r3, #12]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:104
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:104
 }
    c:	4770      	bx	lr
-   e:	46c0      	nop			(mov r8, r8)
+   e:	bf00      	nop
   10:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_Init:
 
 00000000 <NVIC_Init>:
 NVIC_Init():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:117
-*                    specified NVIC peripheral.
-* Output         : None
-* Return         : None
-*******************************************************************************/
-void NVIC_Init(NVIC_InitTypeDef* NVIC_InitStruct)
-{
-   0:	b530      	push	{r4, r5, lr}
-C:\cortex\dimmers\src/stm32f10x_nvic.c:127
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:127
   assert_param(IS_FUNCTIONAL_STATE(NVIC_InitStruct->NVIC_IRQChannelCmd));
   assert_param(IS_NVIC_IRQ_CHANNEL(NVIC_InitStruct->NVIC_IRQChannel));
   assert_param(IS_NVIC_PREEMPTION_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority));  
   assert_param(IS_NVIC_SUB_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelSubPriority));
     
   if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
-   2:	78c3      	ldrb	r3, [r0, #3]
-   4:	f890 c000 	ldrb.w	ip, [r0]
-   8:	b34b      	cbz	r3, 5e <NVIC_Init+0x5e>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:130
+   0:	78c3      	ldrb	r3, [r0, #3]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:117
+*                    specified NVIC peripheral.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void NVIC_Init(NVIC_InitTypeDef* NVIC_InitStruct)
+{
+   2:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:127
+  assert_param(IS_FUNCTIONAL_STATE(NVIC_InitStruct->NVIC_IRQChannelCmd));
+  assert_param(IS_NVIC_IRQ_CHANNEL(NVIC_InitStruct->NVIC_IRQChannel));
+  assert_param(IS_NVIC_PREEMPTION_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority));  
+  assert_param(IS_NVIC_SUB_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelSubPriority));
+    
+  if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
+   4:	b36b      	cbz	r3, 62 <NVIC_Init+0x62>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:130
   {
     /* Compute the Corresponding IRQ Priority --------------------------------*/    
     tmppriority = (0x700 - (SCB->AIRCR & (u32)0x700))>> 0x08;
-   a:	4b1a      	ldr	r3, [pc, #104]	(74 <NVIC_Init+0x74>)
-C:\cortex\dimmers\src/stm32f10x_nvic.c:134
+   6:	4b1d      	ldr	r3, [pc, #116]	; (7c <NVIC_Init+0x7c>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:134
     tmppre = (0x4 - tmppriority);
     tmpsub = tmpsub >> tmppriority;
     
     tmppriority = (u32)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
-   c:	7841      	ldrb	r1, [r0, #1]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:130
+   8:	7845      	ldrb	r5, [r0, #1]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:130
   assert_param(IS_NVIC_SUB_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelSubPriority));
     
   if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
   {
     /* Compute the Corresponding IRQ Priority --------------------------------*/    
     tmppriority = (0x700 - (SCB->AIRCR & (u32)0x700))>> 0x08;
-   e:	68da      	ldr	r2, [r3, #12]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:140
-    tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
-
-    tmppriority = tmppriority << 0x04;
-    tmppriority = ((u32)tmppriority) << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
+   a:	68db      	ldr	r3, [r3, #12]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:135
+    tmppre = (0x4 - tmppriority);
+    tmpsub = tmpsub >> tmppriority;
     
-    tmpreg = NVIC->IPR[(NVIC_InitStruct->NVIC_IRQChannel >> 0x02)];
-  10:	4d19      	ldr	r5, [pc, #100]	(78 <NVIC_Init+0x78>)
-C:\cortex\dimmers\src/stm32f10x_nvic.c:130
+    tmppriority = (u32)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
+    tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+   c:	7881      	ldrb	r1, [r0, #2]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:130
   assert_param(IS_NVIC_SUB_PRIORITY(NVIC_InitStruct->NVIC_IRQChannelSubPriority));
     
   if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
   {
     /* Compute the Corresponding IRQ Priority --------------------------------*/    
     tmppriority = (0x700 - (SCB->AIRCR & (u32)0x700))>> 0x08;
-  12:	43d2      	mvns	r2, r2
-  14:	f3c2 2202 	ubfx	r2, r2, #8, #3
-C:\cortex\dimmers\src/stm32f10x_nvic.c:134
+   e:	43db      	mvns	r3, r3
+  10:	f403 63e0 	and.w	r3, r3, #1792	; 0x700
+  14:	0a1b      	lsrs	r3, r3, #8
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:131
     tmppre = (0x4 - tmppriority);
+  16:	f1c3 0204 	rsb	r2, r3, #4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:134
     tmpsub = tmpsub >> tmppriority;
     
     tmppriority = (u32)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
-  18:	f1c2 0304 	rsb	r3, r2, #4	; 0x4
-  1c:	4099      	lsls	r1, r3
-C:\cortex\dimmers\src/stm32f10x_nvic.c:135
-    tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
-  1e:	230f      	movs	r3, #15
-  20:	40d3      	lsrs	r3, r2
-  22:	7882      	ldrb	r2, [r0, #2]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:138
-
-    tmppriority = tmppriority << 0x04;
-    tmppriority = ((u32)tmppriority) << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
-  24:	f00c 0003 	and.w	r0, ip, #3	; 0x3
-C:\cortex\dimmers\src/stm32f10x_nvic.c:135
+  1a:	fa15 f202 	lsls.w	r2, r5, r2
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:132
+  if (NVIC_InitStruct->NVIC_IRQChannelCmd != DISABLE)
+  {
+    /* Compute the Corresponding IRQ Priority --------------------------------*/    
     tmppriority = (0x700 - (SCB->AIRCR & (u32)0x700))>> 0x08;
     tmppre = (0x4 - tmppriority);
     tmpsub = tmpsub >> tmppriority;
+  1e:	250f      	movs	r5, #15
+  20:	40dd      	lsrs	r5, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:135
     
     tmppriority = (u32)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
-  28:	4013      	ands	r3, r2
-  2a:	430b      	orrs	r3, r1
-C:\cortex\dimmers\src/stm32f10x_nvic.c:138
+  22:	400d      	ands	r5, r1
+  24:	4315      	orrs	r5, r2
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:138
 
     tmppriority = tmppriority << 0x04;
     tmppriority = ((u32)tmppriority) << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
-  2c:	00c0      	lsls	r0, r0, #3
-C:\cortex\dimmers\src/stm32f10x_nvic.c:137
+  26:	7802      	ldrb	r2, [r0, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:137
     tmpsub = tmpsub >> tmppriority;
     
     tmppriority = (u32)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
 
     tmppriority = tmppriority << 0x04;
-  2e:	011b      	lsls	r3, r3, #4
-C:\cortex\dimmers\src/stm32f10x_nvic.c:141
+  28:	012d      	lsls	r5, r5, #4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:138
     tmppriority = ((u32)tmppriority) << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
+  2a:	f002 0403 	and.w	r4, r2, #3
+  2e:	00e4      	lsls	r4, r4, #3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:141
     
     tmpreg = NVIC->IPR[(NVIC_InitStruct->NVIC_IRQChannel >> 0x02)];
     tmpmask = (u32)0xFF << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
-  30:	22ff      	movs	r2, #255
-  32:	4082      	lsls	r2, r0
-C:\cortex\dimmers\src/stm32f10x_nvic.c:138
+  30:	21ff      	movs	r1, #255	; 0xff
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:138
     
     tmppriority = (u32)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
 
     tmppriority = tmppriority << 0x04;
     tmppriority = ((u32)tmppriority) << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
-  34:	4083      	lsls	r3, r0
-C:\cortex\dimmers\src/stm32f10x_nvic.c:140
+  32:	40a5      	lsls	r5, r4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:141
     
     tmpreg = NVIC->IPR[(NVIC_InitStruct->NVIC_IRQChannel >> 0x02)];
-  36:	ea4f 049c 	mov.w	r4, ip, lsr #2
-  3a:	34c0      	adds	r4, #192
-  3c:	f855 1024 	ldr.w	r1, [r5, r4, lsl #2]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:144
     tmpmask = (u32)0xFF << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
-    tmpreg &= ~tmpmask;
-    tmppriority &= tmpmask;  
-    tmpreg |= tmppriority;
-  40:	4013      	ands	r3, r2
-C:\cortex\dimmers\src/stm32f10x_nvic.c:142
+  34:	40a1      	lsls	r1, r4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:140
+    tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+
     tmppriority = tmppriority << 0x04;
     tmppriority = ((u32)tmppriority) << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
     
     tmpreg = NVIC->IPR[(NVIC_InitStruct->NVIC_IRQChannel >> 0x02)];
+  36:	4b12      	ldr	r3, [pc, #72]	; (80 <NVIC_Init+0x80>)
+  38:	0892      	lsrs	r2, r2, #2
+  3a:	32c0      	adds	r2, #192	; 0xc0
+  3c:	f853 6022 	ldr.w	r6, [r3, r2, lsl #2]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:142
     tmpmask = (u32)0xFF << ((NVIC_InitStruct->NVIC_IRQChannel & (u8)0x03) * 0x08);
     tmpreg &= ~tmpmask;
-  42:	ea21 0102 	bic.w	r1, r1, r2
-C:\cortex\dimmers\src/stm32f10x_nvic.c:144
+  40:	ea26 0401 	bic.w	r4, r6, r1
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:143
     tmppriority &= tmpmask;  
+  44:	ea05 0101 	and.w	r1, r5, r1
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:144
     tmpreg |= tmppriority;
-  46:	430b      	orrs	r3, r1
-C:\cortex\dimmers\src/stm32f10x_nvic.c:146
+  48:	4321      	orrs	r1, r4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:146
 
     NVIC->IPR[(NVIC_InitStruct->NVIC_IRQChannel >> 0x02)] = tmpreg;
-  48:	f845 3024 	str.w	r3, [r5, r4, lsl #2]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:149
+  4a:	f843 1022 	str.w	r1, [r3, r2, lsl #2]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:149
     
     /* Enable the Selected IRQ Channels --------------------------------------*/
     NVIC->ISER[(NVIC_InitStruct->NVIC_IRQChannel >> 0x05)] =
-  4c:	f00c 021f 	and.w	r2, ip, #31	; 0x1f
-  50:	2301      	movs	r3, #1
-  52:	4093      	lsls	r3, r2
-  54:	ea4f 115c 	mov.w	r1, ip, lsr #5
-  58:	f845 3021 	str.w	r3, [r5, r1, lsl #2]
-  5c:	e009      	b.n	72 <NVIC_Init+0x72>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:155
+  4e:	7802      	ldrb	r2, [r0, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:150
+      (u32)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (u8)0x1F);
+  50:	2001      	movs	r0, #1
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:149
+    tmpreg |= tmppriority;
+
+    NVIC->IPR[(NVIC_InitStruct->NVIC_IRQChannel >> 0x02)] = tmpreg;
+    
+    /* Enable the Selected IRQ Channels --------------------------------------*/
+    NVIC->ISER[(NVIC_InitStruct->NVIC_IRQChannel >> 0x05)] =
+  52:	0951      	lsrs	r1, r2, #5
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:150
+      (u32)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (u8)0x1F);
+  54:	f002 021f 	and.w	r2, r2, #31
+  58:	fa10 f202 	lsls.w	r2, r0, r2
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:149
+    tmpreg |= tmppriority;
+
+    NVIC->IPR[(NVIC_InitStruct->NVIC_IRQChannel >> 0x02)] = tmpreg;
+    
+    /* Enable the Selected IRQ Channels --------------------------------------*/
+    NVIC->ISER[(NVIC_InitStruct->NVIC_IRQChannel >> 0x05)] =
+  5c:	f843 2021 	str.w	r2, [r3, r1, lsl #2]
+  60:	bd70      	pop	{r4, r5, r6, pc}
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:155
       (u32)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (u8)0x1F);
   }
   else
   {
     /* Disable the Selected IRQ Channels -------------------------------------*/
     NVIC->ICER[(NVIC_InitStruct->NVIC_IRQChannel >> 0x05)] =
-  5e:	f00c 021f 	and.w	r2, ip, #31	; 0x1f
-  62:	2301      	movs	r3, #1
-  64:	4093      	lsls	r3, r2
-  66:	ea4f 115c 	mov.w	r1, ip, lsr #5
-  6a:	4a03      	ldr	r2, [pc, #12]	(78 <NVIC_Init+0x78>)
-  6c:	3120      	adds	r1, #32
-  6e:	f842 3021 	str.w	r3, [r2, r1, lsl #2]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:158
+  62:	7803      	ldrb	r3, [r0, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:156
+      (u32)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (u8)0x1F);
+  64:	2201      	movs	r2, #1
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:155
       (u32)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (u8)0x1F);
   }
-}
-  72:	bd30      	pop	{r4, r5, pc}
-  74:	e000ed00 	.word	0xe000ed00
-  78:	e000e100 	.word	0xe000e100
+  else
+  {
+    /* Disable the Selected IRQ Channels -------------------------------------*/
+    NVIC->ICER[(NVIC_InitStruct->NVIC_IRQChannel >> 0x05)] =
+  66:	0959      	lsrs	r1, r3, #5
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:156
+      (u32)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (u8)0x1F);
+  68:	f003 031f 	and.w	r3, r3, #31
+  6c:	fa12 f303 	lsls.w	r3, r2, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:155
+      (u32)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (u8)0x1F);
+  }
+  else
+  {
+    /* Disable the Selected IRQ Channels -------------------------------------*/
+    NVIC->ICER[(NVIC_InitStruct->NVIC_IRQChannel >> 0x05)] =
+  70:	4a03      	ldr	r2, [pc, #12]	; (80 <NVIC_Init+0x80>)
+  72:	3120      	adds	r1, #32
+  74:	f842 3021 	str.w	r3, [r2, r1, lsl #2]
+  78:	bd70      	pop	{r4, r5, r6, pc}
+  7a:	bf00      	nop
+  7c:	e000ed00 	.word	0xe000ed00
+  80:	e000e100 	.word	0xe000e100
+
 Disassembly of section .text.NVIC_StructInit:
 
 00000000 <NVIC_StructInit>:
 NVIC_StructInit():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:171
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:171
 * Return         : None
 *******************************************************************************/
 void NVIC_StructInit(NVIC_InitTypeDef* NVIC_InitStruct)
@@ -359,192 +399,276 @@ void NVIC_StructInit(NVIC_InitTypeDef* NVIC_InitStruct)
   NVIC_InitStruct->NVIC_IRQChannel = 0x00;
    0:	2300      	movs	r3, #0
    2:	7003      	strb	r3, [r0, #0]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:172
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:172
   NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority = 0x00;
    4:	7043      	strb	r3, [r0, #1]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:173
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:173
   NVIC_InitStruct->NVIC_IRQChannelSubPriority = 0x00;
    6:	7083      	strb	r3, [r0, #2]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:174
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:174
   NVIC_InitStruct->NVIC_IRQChannelCmd = DISABLE;
    8:	70c3      	strb	r3, [r0, #3]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:175
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:175
 }
    a:	4770      	bx	lr
+
+Disassembly of section .text.NVIC_SETPRIMASK:
+
+00000000 <NVIC_SETPRIMASK>:
+NVIC_SETPRIMASK():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:186
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void NVIC_SETPRIMASK(void)
+{
+  __SETPRIMASK();
+   0:	f7ff bffe 	b.w	0 <__SETPRIMASK>
+
+Disassembly of section .text.NVIC_RESETPRIMASK:
+
+00000000 <NVIC_RESETPRIMASK>:
+NVIC_RESETPRIMASK():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:198
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void NVIC_RESETPRIMASK(void)
+{
+  __RESETPRIMASK();
+   0:	f7ff bffe 	b.w	0 <__RESETPRIMASK>
+
+Disassembly of section .text.NVIC_SETFAULTMASK:
+
+00000000 <NVIC_SETFAULTMASK>:
+NVIC_SETFAULTMASK():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:210
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void NVIC_SETFAULTMASK(void)
+{
+  __SETFAULTMASK();
+   0:	f7ff bffe 	b.w	0 <__SETFAULTMASK>
+
+Disassembly of section .text.NVIC_RESETFAULTMASK:
+
+00000000 <NVIC_RESETFAULTMASK>:
+NVIC_RESETFAULTMASK():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:222
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void NVIC_RESETFAULTMASK(void)
+{
+  __RESETFAULTMASK();
+   0:	f7ff bffe 	b.w	0 <__RESETFAULTMASK>
+
+Disassembly of section .text.NVIC_BASEPRICONFIG:
+
+00000000 <NVIC_BASEPRICONFIG>:
+NVIC_BASEPRICONFIG():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:239
+void NVIC_BASEPRICONFIG(u32 NewPriority)
+{
+  /* Check the parameters */
+  assert_param(IS_NVIC_BASE_PRI(NewPriority));
+  
+  __BASEPRICONFIG(NewPriority << 0x04);
+   0:	0100      	lsls	r0, r0, #4
+   2:	f7ff bffe 	b.w	0 <__BASEPRICONFIG>
+
+Disassembly of section .text.NVIC_GetBASEPRI:
+
+00000000 <NVIC_GetBASEPRI>:
+NVIC_GetBASEPRI():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:251
+* Output         : None
+* Return         : BASEPRI register value
+*******************************************************************************/
+u32 NVIC_GetBASEPRI(void)
+{
+  return (__GetBASEPRI());
+   0:	f7ff bffe 	b.w	0 <__GetBASEPRI>
+
 Disassembly of section .text.NVIC_GetCurrentPendingIRQChannel:
 
 00000000 <NVIC_GetCurrentPendingIRQChannel>:
 NVIC_GetCurrentPendingIRQChannel():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:263
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:263
 * Output         : None
 * Return         : Pending IRQ Channel Identifier.
 *******************************************************************************/
 u16 NVIC_GetCurrentPendingIRQChannel(void)
 {
   return ((u16)((SCB->ICSR & (u32)0x003FF000) >> 0x0C));
-   0:	4b02      	ldr	r3, [pc, #8]	(c <NVIC_GetCurrentPendingIRQChannel+0xc>)
-   2:	6858      	ldr	r0, [r3, #4]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:264
+   0:	4b03      	ldr	r3, [pc, #12]	; (10 <NVIC_GetCurrentPendingIRQChannel+0x10>)
+   2:	4804      	ldr	r0, [pc, #16]	; (14 <NVIC_GetCurrentPendingIRQChannel+0x14>)
+   4:	685b      	ldr	r3, [r3, #4]
+   6:	ea03 0000 	and.w	r0, r3, r0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:264
 }
-   4:	f3c0 3009 	ubfx	r0, r0, #12, #10
-   8:	4770      	bx	lr
-   a:	46c0      	nop			(mov r8, r8)
-   c:	e000ed00 	.word	0xe000ed00
+   a:	0b00      	lsrs	r0, r0, #12
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	e000ed00 	.word	0xe000ed00
+  14:	003ff000 	.word	0x003ff000
+
 Disassembly of section .text.NVIC_GetIRQChannelPendingBitStatus:
 
 00000000 <NVIC_GetIRQChannelPendingBitStatus>:
 NVIC_GetIRQChannelPendingBitStatus():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:282
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:282
   u32 tmp = 0x00;
   
   /* Check the parameters */
   assert_param(IS_NVIC_IRQ_CHANNEL(NVIC_IRQChannel));
   
   tmp = ((u32)0x01 << (NVIC_IRQChannel & (u32)0x1F));
-   0:	f000 031f 	and.w	r3, r0, #31	; 0x1f
-   4:	2201      	movs	r2, #1
-   6:	409a      	lsls	r2, r3
-C:\cortex\dimmers\src/stm32f10x_nvic.c:284
+   0:	2201      	movs	r2, #1
+   2:	f000 031f 	and.w	r3, r0, #31
+   6:	fa12 f303 	lsls.w	r3, r2, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:284
 
   if (((NVIC->ISPR[(NVIC_IRQChannel >> 0x05)]) & tmp) == tmp)
-   8:	0940      	lsrs	r0, r0, #5
-   a:	4b05      	ldr	r3, [pc, #20]	(20 <NVIC_GetIRQChannelPendingBitStatus+0x20>)
-   c:	3040      	adds	r0, #64
-   e:	f853 0020 	ldr.w	r0, [r3, r0, lsl #2]
-  12:	4010      	ands	r0, r2
-C:\cortex\dimmers\src/stm32f10x_nvic.c:293
+   a:	0940      	lsrs	r0, r0, #5
+   c:	4a04      	ldr	r2, [pc, #16]	; (20 <NVIC_GetIRQChannelPendingBitStatus+0x20>)
+   e:	3040      	adds	r0, #64	; 0x40
+  10:	f852 0020 	ldr.w	r0, [r2, r0, lsl #2]
+  14:	4018      	ands	r0, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:293
   else
   {
     pendingirqstatus = RESET;
   }
   return pendingirqstatus;
 }
-  14:	4290      	cmp	r0, r2
-  16:	bf14      	ite	ne
-  18:	2000      	movne	r0, #0
-  1a:	2001      	moveq	r0, #1
-  1c:	4770      	bx	lr
-  1e:	46c0      	nop			(mov r8, r8)
+  16:	1ac3      	subs	r3, r0, r3
+  18:	4258      	negs	r0, r3
+  1a:	eb40 0003 	adc.w	r0, r0, r3
+  1e:	4770      	bx	lr
   20:	e000e100 	.word	0xe000e100
+
 Disassembly of section .text.NVIC_SetIRQChannelPendingBit:
 
 00000000 <NVIC_SetIRQChannelPendingBit>:
 NVIC_SetIRQChannelPendingBit():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:307
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:307
 void NVIC_SetIRQChannelPendingBit(u8 NVIC_IRQChannel)
 {
   /* Check the parameters */
   assert_param(IS_NVIC_IRQ_CHANNEL(NVIC_IRQChannel));
   
   *(vu32*) 0xE000EF00 = (u32)NVIC_IRQChannel;
-   0:	4b01      	ldr	r3, [pc, #4]	(8 <NVIC_SetIRQChannelPendingBit+0x8>)
-   2:	6018      	str	r0, [r3, #0]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:308
+   0:	60184b01 	.word	0x60184b01
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:308
 }
    4:	4770      	bx	lr
-   6:	46c0      	nop			(mov r8, r8)
+   6:	bf00      	nop
    8:	e000ef00 	.word	0xe000ef00
+
 Disassembly of section .text.NVIC_ClearIRQChannelPendingBit:
 
 00000000 <NVIC_ClearIRQChannelPendingBit>:
 NVIC_ClearIRQChannelPendingBit():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:322
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:322
 void NVIC_ClearIRQChannelPendingBit(u8 NVIC_IRQChannel)
 {
   /* Check the parameters */
   assert_param(IS_NVIC_IRQ_CHANNEL(NVIC_IRQChannel));
   
   NVIC->ICPR[(NVIC_IRQChannel >> 0x05)] = (u32)0x01 << (NVIC_IRQChannel & (u32)0x1F);
-   0:	0941      	lsrs	r1, r0, #5
+   0:	0942      	lsrs	r2, r0, #5
    2:	2301      	movs	r3, #1
-   4:	f000 001f 	and.w	r0, r0, #31	; 0x1f
-   8:	4083      	lsls	r3, r0
-   a:	4a02      	ldr	r2, [pc, #8]	(14 <NVIC_ClearIRQChannelPendingBit+0x14>)
-   c:	3160      	adds	r1, #96
-   e:	f842 3021 	str.w	r3, [r2, r1, lsl #2]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:323
+   4:	f000 001f 	and.w	r0, r0, #31
+   8:	fa13 f000 	lsls.w	r0, r3, r0
+   c:	4b02      	ldr	r3, [pc, #8]	; (18 <NVIC_ClearIRQChannelPendingBit+0x18>)
+   e:	3260      	adds	r2, #96	; 0x60
+  10:	f843 0022 	str.w	r0, [r3, r2, lsl #2]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:323
 }
-  12:	4770      	bx	lr
-  14:	e000e100 	.word	0xe000e100
+  14:	4770      	bx	lr
+  16:	bf00      	nop
+  18:	e000e100 	.word	0xe000e100
+
 Disassembly of section .text.NVIC_GetCurrentActiveHandler:
 
 00000000 <NVIC_GetCurrentActiveHandler>:
 NVIC_GetCurrentActiveHandler():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:335
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:335
 * Output         : None
 * Return         : Active Handler Identifier.
 *******************************************************************************/
 u16 NVIC_GetCurrentActiveHandler(void)
 {
   return ((u16)(SCB->ICSR & (u32)0x3FF));
-   0:	4b02      	ldr	r3, [pc, #8]	(c <NVIC_GetCurrentActiveHandler+0xc>)
-   2:	6858      	ldr	r0, [r3, #4]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:336
+   0:	68584b02 	.word	0x68584b02
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:336
 }
    4:	0580      	lsls	r0, r0, #22
    6:	0d80      	lsrs	r0, r0, #22
    8:	4770      	bx	lr
-   a:	46c0      	nop			(mov r8, r8)
+   a:	bf00      	nop
    c:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_GetIRQChannelActiveBitStatus:
 
 00000000 <NVIC_GetIRQChannelActiveBitStatus>:
 NVIC_GetIRQChannelActiveBitStatus():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:354
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:354
   u32 tmp = 0x00;
 
   /* Check the parameters */
   assert_param(IS_NVIC_IRQ_CHANNEL(NVIC_IRQChannel));
   
   tmp = ((u32)0x01 << (NVIC_IRQChannel & (u32)0x1F));
-   0:	f000 031f 	and.w	r3, r0, #31	; 0x1f
-   4:	2201      	movs	r2, #1
-   6:	409a      	lsls	r2, r3
-C:\cortex\dimmers\src/stm32f10x_nvic.c:356
+   0:	2201      	movs	r2, #1
+   2:	f000 031f 	and.w	r3, r0, #31
+   6:	fa12 f303 	lsls.w	r3, r2, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:356
 
   if (((NVIC->IABR[(NVIC_IRQChannel >> 0x05)]) & tmp) == tmp )
-   8:	0940      	lsrs	r0, r0, #5
-   a:	4b05      	ldr	r3, [pc, #20]	(20 <NVIC_GetIRQChannelActiveBitStatus+0x20>)
-   c:	3080      	adds	r0, #128
-   e:	f853 0020 	ldr.w	r0, [r3, r0, lsl #2]
-  12:	4010      	ands	r0, r2
-C:\cortex\dimmers\src/stm32f10x_nvic.c:365
+   a:	0940      	lsrs	r0, r0, #5
+   c:	4a04      	ldr	r2, [pc, #16]	; (20 <NVIC_GetIRQChannelActiveBitStatus+0x20>)
+   e:	3080      	adds	r0, #128	; 0x80
+  10:	f852 0020 	ldr.w	r0, [r2, r0, lsl #2]
+  14:	4018      	ands	r0, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:365
   else
   {
     activeirqstatus = RESET;
   }
   return activeirqstatus;
 }
-  14:	4290      	cmp	r0, r2
-  16:	bf14      	ite	ne
-  18:	2000      	movne	r0, #0
-  1a:	2001      	moveq	r0, #1
-  1c:	4770      	bx	lr
-  1e:	46c0      	nop			(mov r8, r8)
+  16:	1ac2      	subs	r2, r0, r3
+  18:	4250      	negs	r0, r2
+  1a:	eb40 0002 	adc.w	r0, r0, r2
+  1e:	4770      	bx	lr
   20:	e000e100 	.word	0xe000e100
+
 Disassembly of section .text.NVIC_GetCPUID:
 
 00000000 <NVIC_GetCPUID>:
 NVIC_GetCPUID():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:377
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:377
 * Output         : None
 * Return         : CPU ID.
 *******************************************************************************/
 u32 NVIC_GetCPUID(void)
 {
   return (SCB->CPUID);
-   0:	4b01      	ldr	r3, [pc, #4]	(8 <NVIC_GetCPUID+0x8>)
-   2:	6818      	ldr	r0, [r3, #0]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:378
+   0:	68184b01 	.word	0x68184b01
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:378
 }
    4:	4770      	bx	lr
-   6:	46c0      	nop			(mov r8, r8)
+   6:	bf00      	nop
    8:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_SetVectorTable:
 
 00000000 <NVIC_SetVectorTable>:
 NVIC_SetVectorTable():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:399
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:399
 { 
   /* Check the parameters */
   assert_param(IS_NVIC_VECTTAB(NVIC_VectTab));
@@ -553,560 +677,488 @@ C:\cortex\dimmers\src/stm32f10x_nvic.c:399
   SCB->VTOR = NVIC_VectTab | (Offset & (u32)0x1FFFFF80);
    0:	f021 4160 	bic.w	r1, r1, #3758096384	; 0xe0000000
    4:	f021 017f 	bic.w	r1, r1, #127	; 0x7f
-   8:	4b01      	ldr	r3, [pc, #4]	(10 <NVIC_SetVectorTable+0x10>)
+   8:	4b01      	ldr	r3, [pc, #4]	; (10 <NVIC_SetVectorTable+0x10>)
    a:	4301      	orrs	r1, r0
    c:	6099      	str	r1, [r3, #8]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:400
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:400
 }
    e:	4770      	bx	lr
   10:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_GenerateSystemReset:
 
 00000000 <NVIC_GenerateSystemReset>:
 NVIC_GenerateSystemReset():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:411
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:411
 * Output         : None
 * Return         : None
 *******************************************************************************/
 void NVIC_GenerateSystemReset(void)
 {
   SCB->AIRCR = AIRCR_VECTKEY_MASK | (u32)0x04;
-   0:	4a01      	ldr	r2, [pc, #4]	(8 <NVIC_GenerateSystemReset+0x8>)
-   2:	4b02      	ldr	r3, [pc, #8]	(c <NVIC_GenerateSystemReset+0xc>)
+   0:	4b024a01 	.word	0x4b024a01
    4:	60da      	str	r2, [r3, #12]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:412
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:412
 }
    6:	4770      	bx	lr
    8:	05fa0004 	.word	0x05fa0004
    c:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_GenerateCoreReset:
 
 00000000 <NVIC_GenerateCoreReset>:
 NVIC_GenerateCoreReset():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:423
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:423
 * Output         : None
 * Return         : None
 *******************************************************************************/
 void NVIC_GenerateCoreReset(void)
 {
   SCB->AIRCR = AIRCR_VECTKEY_MASK | (u32)0x01;
-   0:	4a01      	ldr	r2, [pc, #4]	(8 <NVIC_GenerateCoreReset+0x8>)
-   2:	4b02      	ldr	r3, [pc, #8]	(c <NVIC_GenerateCoreReset+0xc>)
+   0:	4a01      	ldr	r2, [pc, #4]	; (8 <NVIC_GenerateCoreReset+0x8>)
+   2:	4b02      	ldr	r3, [pc, #8]	; (c <NVIC_GenerateCoreReset+0xc>)
    4:	60da      	str	r2, [r3, #12]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:424
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:424
 }
    6:	4770      	bx	lr
    8:	05fa0001 	.word	0x05fa0001
    c:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_SystemLPConfig:
 
 00000000 <NVIC_SystemLPConfig>:
 NVIC_SystemLPConfig():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:446
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:441
+*                    This parameter can be: ENABLE or DISABLE.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void NVIC_SystemLPConfig(u8 LowPowerMode, FunctionalState NewState)
 {
+   0:	4b04      	ldr	r3, [pc, #16]	; (14 <NVIC_SystemLPConfig+0x14>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:446
   /* Check the parameters */
   assert_param(IS_NVIC_LP(LowPowerMode));
   assert_param(IS_FUNCTIONAL_STATE(NewState));  
   
   if (NewState != DISABLE)
-   0:	b121      	cbz	r1, c <NVIC_SystemLPConfig+0xc>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:448
+   2:	b111      	cbz	r1, a <NVIC_SystemLPConfig+0xa>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:448
   {
     SCB->SCR |= LowPowerMode;
-   2:	4a05      	ldr	r2, [pc, #20]	(18 <NVIC_SystemLPConfig+0x18>)
-   4:	6913      	ldr	r3, [r2, #16]
-   6:	ea40 0303 	orr.w	r3, r0, r3
-   a:	e003      	b.n	14 <NVIC_SystemLPConfig+0x14>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:452
+   4:	691a      	ldr	r2, [r3, #16]
+   6:	4310      	orrs	r0, r2
+   8:	e002      	b.n	10 <NVIC_SystemLPConfig+0x10>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:452
   }
   else
   {
     SCB->SCR &= (u32)(~(u32)LowPowerMode);
-   c:	4a02      	ldr	r2, [pc, #8]	(18 <NVIC_SystemLPConfig+0x18>)
-   e:	6913      	ldr	r3, [r2, #16]
-  10:	ea23 0300 	bic.w	r3, r3, r0
-  14:	6113      	str	r3, [r2, #16]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:454
-  }
-}
-  16:	4770      	bx	lr
-  18:	e000ed00 	.word	0xe000ed00
+   a:	691a      	ldr	r2, [r3, #16]
+   c:	ea22 0000 	bic.w	r0, r2, r0
+  10:	6118      	str	r0, [r3, #16]
+  12:	4770      	bx	lr
+  14:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_SystemHandlerConfig:
 
 00000000 <NVIC_SystemHandlerConfig>:
 NVIC_SystemHandlerConfig():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:478
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:478
 
   /* Check the parameters */
   assert_param(IS_CONFIG_SYSTEM_HANDLER(SystemHandler));
   assert_param(IS_FUNCTIONAL_STATE(NewState)); 
   
   tmpreg =  (u32)0x01 << (SystemHandler & (u32)0x1F);
-   0:	f000 001f 	and.w	r0, r0, #31	; 0x1f
-   4:	2301      	movs	r3, #1
+   0:	2301      	movs	r3, #1
+   2:	f000 001f 	and.w	r0, r0, #31
    6:	fa13 f000 	lsls.w	r0, r3, r0
-C:\cortex\dimmers\src/stm32f10x_nvic.c:480
+   a:	4b05      	ldr	r3, [pc, #20]	; (20 <NVIC_SystemHandlerConfig+0x20>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:480
 
   if (NewState != DISABLE)
-   a:	b121      	cbz	r1, 16 <NVIC_SystemHandlerConfig+0x16>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:482
+   c:	b111      	cbz	r1, 14 <NVIC_SystemHandlerConfig+0x14>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:482
   {
     SCB->SHCSR |= tmpreg;
-   c:	4a05      	ldr	r2, [pc, #20]	(24 <NVIC_SystemHandlerConfig+0x24>)
-   e:	6a53      	ldr	r3, [r2, #36]
-  10:	ea40 0303 	orr.w	r3, r0, r3
-  14:	e003      	b.n	1e <NVIC_SystemHandlerConfig+0x1e>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:486
+   e:	6a5a      	ldr	r2, [r3, #36]	; 0x24
+  10:	4310      	orrs	r0, r2
+  12:	e002      	b.n	1a <NVIC_SystemHandlerConfig+0x1a>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:486
   }
   else
   {
     SCB->SHCSR &= ~tmpreg;
-  16:	4a03      	ldr	r2, [pc, #12]	(24 <NVIC_SystemHandlerConfig+0x24>)
-  18:	6a53      	ldr	r3, [r2, #36]
-  1a:	ea23 0300 	bic.w	r3, r3, r0
-  1e:	6253      	str	r3, [r2, #36]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:488
-  }
-}
-  20:	4770      	bx	lr
-  22:	46c0      	nop			(mov r8, r8)
-  24:	e000ed00 	.word	0xe000ed00
+  14:	6a5a      	ldr	r2, [r3, #36]	; 0x24
+  16:	ea22 0000 	bic.w	r0, r2, r0
+  1a:	6258      	str	r0, [r3, #36]	; 0x24
+  1c:	4770      	bx	lr
+  1e:	bf00      	nop
+  20:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_SystemHandlerPriorityConfig:
 
 00000000 <NVIC_SystemHandlerPriorityConfig>:
 NVIC_SystemHandlerPriorityConfig():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:512
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:512
 * Output         : None
 * Return         : None
 *******************************************************************************/
 void NVIC_SystemHandlerPriorityConfig(u32 SystemHandler, u8 SystemHandlerPreemptionPriority,
                                       u8 SystemHandlerSubPriority)
 {
-   0:	b530      	push	{r4, r5, lr}
-C:\cortex\dimmers\src/stm32f10x_nvic.c:521
+   0:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:521
   /* Check the parameters */
   assert_param(IS_PRIORITY_SYSTEM_HANDLER(SystemHandler));
   assert_param(IS_NVIC_PREEMPTION_PRIORITY(SystemHandlerPreemptionPriority));  
   assert_param(IS_NVIC_SUB_PRIORITY(SystemHandlerSubPriority));
     
   tmppriority = (0x700 - (SCB->AIRCR & (u32)0x700))>> 0x08;
-   2:	4d11      	ldr	r5, [pc, #68]	(48 <NVIC_SystemHandlerPriorityConfig+0x48>)
-   4:	68eb      	ldr	r3, [r5, #12]
-   6:	43db      	mvns	r3, r3
-   8:	f3c3 2302 	ubfx	r3, r3, #8, #3
-C:\cortex\dimmers\src/stm32f10x_nvic.c:525
+   2:	4b13      	ldr	r3, [pc, #76]	; (50 <NVIC_SystemHandlerPriorityConfig+0x50>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:523
+  tmp1 = (0x4 - tmppriority);
+  tmp2 = tmp2 >> tmppriority;
+   4:	26ff      	movs	r6, #255	; 0xff
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:521
+  /* Check the parameters */
+  assert_param(IS_PRIORITY_SYSTEM_HANDLER(SystemHandler));
+  assert_param(IS_NVIC_PREEMPTION_PRIORITY(SystemHandlerPreemptionPriority));  
+  assert_param(IS_NVIC_SUB_PRIORITY(SystemHandlerSubPriority));
+    
+  tmppriority = (0x700 - (SCB->AIRCR & (u32)0x700))>> 0x08;
+   6:	68dc      	ldr	r4, [r3, #12]
+   8:	43e4      	mvns	r4, r4
+   a:	f404 64e0 	and.w	r4, r4, #1792	; 0x700
+   e:	0a24      	lsrs	r4, r4, #8
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:522
+  tmp1 = (0x4 - tmppriority);
+  10:	f1c4 0504 	rsb	r5, r4, #4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:523
+  tmp2 = tmp2 >> tmppriority;
+  14:	fa36 f404 	lsrs.w	r4, r6, r4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:525
+    
+  tmppriority = (u32)SystemHandlerPreemptionPriority << tmp1;
+  18:	40a9      	lsls	r1, r5
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:526
+  tmppriority |=  SystemHandlerSubPriority & tmp2;
+  1a:	ea02 0404 	and.w	r4, r2, r4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:529
+
+  tmppriority = tmppriority << 0x04;
+  tmp1 = SystemHandler & (u32)0xC0;
+  1e:	f000 02c0 	and.w	r2, r0, #192	; 0xc0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:531
+  tmp1 = tmp1 >> 0x06; 
+  tmp2 = (SystemHandler >> 0x08) & (u32)0x03;
+  22:	0940      	lsrs	r0, r0, #5
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:532
+  tmppriority = tmppriority << (tmp2 * 0x08);
+  24:	f000 0018 	and.w	r0, r0, #24
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:533
+  handlermask = (u32)0xFF << (tmp2 * 0x08);
+  28:	4086      	lsls	r6, r0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:526
+  tmppriority = (0x700 - (SCB->AIRCR & (u32)0x700))>> 0x08;
   tmp1 = (0x4 - tmppriority);
   tmp2 = tmp2 >> tmppriority;
     
   tmppriority = (u32)SystemHandlerPreemptionPriority << tmp1;
-   c:	f1c3 0404 	rsb	r4, r3, #4	; 0x4
-  10:	40a1      	lsls	r1, r4
-C:\cortex\dimmers\src/stm32f10x_nvic.c:526
   tmppriority |=  SystemHandlerSubPriority & tmp2;
-  12:	24ff      	movs	r4, #255
-  14:	fa34 f303 	lsrs.w	r3, r4, r3
-  18:	401a      	ands	r2, r3
-  1a:	430a      	orrs	r2, r1
-C:\cortex\dimmers\src/stm32f10x_nvic.c:530
+  2a:	ea44 0101 	orr.w	r1, r4, r1
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:528
 
   tmppriority = tmppriority << 0x04;
+  2e:	0109      	lsls	r1, r1, #4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:532
   tmp1 = SystemHandler & (u32)0xC0;
   tmp1 = tmp1 >> 0x06; 
-  1c:	f3c0 1181 	ubfx	r1, r0, #6, #2
-C:\cortex\dimmers\src/stm32f10x_nvic.c:532
   tmp2 = (SystemHandler >> 0x08) & (u32)0x03;
   tmppriority = tmppriority << (tmp2 * 0x08);
-  20:	f3c0 2001 	ubfx	r0, r0, #8, #2
-  24:	00c0      	lsls	r0, r0, #3
-C:\cortex\dimmers\src/stm32f10x_nvic.c:535
-  handlermask = (u32)0xFF << (tmp2 * 0x08);
-  
-  SCB->SHPR[tmp1] &= ~handlermask;
-  26:	4084      	lsls	r4, r0
-C:\cortex\dimmers\src/stm32f10x_nvic.c:528
-  tmp2 = tmp2 >> tmppriority;
-    
+  30:	fa11 f000 	lsls.w	r0, r1, r0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:530
   tmppriority = (u32)SystemHandlerPreemptionPriority << tmp1;
   tmppriority |=  SystemHandlerSubPriority & tmp2;
 
   tmppriority = tmppriority << 0x04;
-  28:	0112      	lsls	r2, r2, #4
-C:\cortex\dimmers\src/stm32f10x_nvic.c:536
-  tmp2 = (SystemHandler >> 0x08) & (u32)0x03;
-  tmppriority = tmppriority << (tmp2 * 0x08);
-  handlermask = (u32)0xFF << (tmp2 * 0x08);
-  
-  SCB->SHPR[tmp1] &= ~handlermask;
-  SCB->SHPR[tmp1] |= tmppriority;
-  2a:	4082      	lsls	r2, r0
-C:\cortex\dimmers\src/stm32f10x_nvic.c:535
+  tmp1 = SystemHandler & (u32)0xC0;
   tmp1 = tmp1 >> 0x06; 
+  34:	0992      	lsrs	r2, r2, #6
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:535
   tmp2 = (SystemHandler >> 0x08) & (u32)0x03;
   tmppriority = tmppriority << (tmp2 * 0x08);
   handlermask = (u32)0xFF << (tmp2 * 0x08);
   
   SCB->SHPR[tmp1] &= ~handlermask;
-  2c:	3106      	adds	r1, #6
-  2e:	f855 3021 	ldr.w	r3, [r5, r1, lsl #2]
-  32:	ea23 0304 	bic.w	r3, r3, r4
-  36:	f845 3021 	str.w	r3, [r5, r1, lsl #2]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:536
+  36:	3206      	adds	r2, #6
+  38:	f853 4022 	ldr.w	r4, [r3, r2, lsl #2]
+  3c:	ea24 0606 	bic.w	r6, r4, r6
+  40:	f843 6022 	str.w	r6, [r3, r2, lsl #2]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:536
   SCB->SHPR[tmp1] |= tmppriority;
-  3a:	f855 3021 	ldr.w	r3, [r5, r1, lsl #2]
-  3e:	431a      	orrs	r2, r3
-  40:	f845 2021 	str.w	r2, [r5, r1, lsl #2]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:537
+  44:	f853 6022 	ldr.w	r6, [r3, r2, lsl #2]
+  48:	4330      	orrs	r0, r6
+  4a:	f843 0022 	str.w	r0, [r3, r2, lsl #2]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:537
 }
-  44:	bd30      	pop	{r4, r5, pc}
-  46:	46c0      	nop			(mov r8, r8)
-  48:	e000ed00 	.word	0xe000ed00
+  4e:	bd70      	pop	{r4, r5, r6, pc}
+  50:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_GetSystemHandlerPendingBitStatus:
 
 00000000 <NVIC_GetSystemHandlerPendingBitStatus>:
 NVIC_GetSystemHandlerPendingBitStatus():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:563
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:560
+  u32 tmp = 0x00, tmppos = 0x00;
+
+  /* Check the parameters */
   assert_param(IS_GET_PENDING_SYSTEM_HANDLER(SystemHandler));
   
   tmppos = (SystemHandler >> 0x0A);
+   0:	22010a83 	.word	0x22010a83
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:561
   tmppos &= (u32)0x0F;
+   4:	f003 030f 	and.w	r3, r3, #15
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:563
 
   tmppos = (u32)0x01 << tmppos;
-   0:	f3c0 2083 	ubfx	r0, r0, #10, #4
-   4:	2301      	movs	r3, #1
-   6:	4083      	lsls	r3, r0
-C:\cortex\dimmers\src/stm32f10x_nvic.c:565
+   8:	fa12 f303 	lsls.w	r3, r2, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:565
 
   tmp = SCB->SHCSR & tmppos;
-   8:	4a04      	ldr	r2, [pc, #16]	(1c <NVIC_GetSystemHandlerPendingBitStatus+0x1c>)
-   a:	6a50      	ldr	r0, [r2, #36]
-   c:	ea03 0000 	and.w	r0, r3, r0
-C:\cortex\dimmers\src/stm32f10x_nvic.c:576
+   c:	4a04      	ldr	r2, [pc, #16]	; (20 <NVIC_GetSystemHandlerPendingBitStatus+0x20>)
+   e:	6a50      	ldr	r0, [r2, #36]	; 0x24
+  10:	ea03 0000 	and.w	r0, r3, r0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:576
   else
   {
     bitstatus = RESET;
   }
   return bitstatus;
 }
-  10:	4298      	cmp	r0, r3
-  12:	bf14      	ite	ne
-  14:	2000      	movne	r0, #0
-  16:	2001      	moveq	r0, #1
-  18:	4770      	bx	lr
-  1a:	46c0      	nop			(mov r8, r8)
-  1c:	e000ed00 	.word	0xe000ed00
+  14:	1ac1      	subs	r1, r0, r3
+  16:	4248      	negs	r0, r1
+  18:	eb40 0001 	adc.w	r0, r0, r1
+  1c:	4770      	bx	lr
+  1e:	bf00      	nop
+  20:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_SetSystemHandlerPendingBit:
 
 00000000 <NVIC_SetSystemHandlerPendingBit>:
 NVIC_SetSystemHandlerPendingBit():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:600
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:598
+
+  /* Check the parameters */
   assert_param(IS_SET_PENDING_SYSTEM_HANDLER(SystemHandler));
   
   /* Get the System Handler pending bit position */
   tmp = SystemHandler & (u32)0x1F;
+   0:	001ff000 	.word	0x001ff000
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:600
   /* Set the corresponding System Handler pending bit */
   SCB->ICSR |= ((u32)0x01 << tmp);
-   0:	f000 001f 	and.w	r0, r0, #31	; 0x1f
-   4:	2301      	movs	r3, #1
-   6:	4083      	lsls	r3, r0
-   8:	4a02      	ldr	r2, [pc, #8]	(14 <NVIC_SetSystemHandlerPendingBit+0x14>)
-   a:	6851      	ldr	r1, [r2, #4]
-   c:	430b      	orrs	r3, r1
-   e:	6053      	str	r3, [r2, #4]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:601
+   4:	2101      	movs	r1, #1
+   6:	fa11 f000 	lsls.w	r0, r1, r0
+   a:	4b03      	ldr	r3, [pc, #12]	; (18 <NVIC_SetSystemHandlerPendingBit+0x18>)
+   c:	685a      	ldr	r2, [r3, #4]
+   e:	ea40 0202 	orr.w	r2, r0, r2
+  12:	605a      	str	r2, [r3, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:601
 }
-  10:	4770      	bx	lr
-  12:	46c0      	nop			(mov r8, r8)
-  14:	e000ed00 	.word	0xe000ed00
+  14:	4770      	bx	lr
+  16:	bf00      	nop
+  18:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_ClearSystemHandlerPendingBit:
 
 00000000 <NVIC_ClearSystemHandlerPendingBit>:
 NVIC_ClearSystemHandlerPendingBit():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:624
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:622
+
+  /* Check the parameters */
   assert_param(IS_CLEAR_SYSTEM_HANDLER(SystemHandler));
   
   /* Get the System Handler pending bit position */
   tmp = SystemHandler & (u32)0x1F;
+   0:	f000 011f 	and.w	r1, r0, #31
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:624
   /* Clear the corresponding System Handler pending bit */
   SCB->ICSR |= ((u32)0x01 << (tmp - 0x01));
-   0:	f000 001f 	and.w	r0, r0, #31	; 0x1f
-   4:	3801      	subs	r0, #1
-   6:	2301      	movs	r3, #1
-   8:	4083      	lsls	r3, r0
-   a:	4a02      	ldr	r2, [pc, #8]	(14 <NVIC_ClearSystemHandlerPendingBit+0x14>)
-   c:	6851      	ldr	r1, [r2, #4]
-   e:	430b      	orrs	r3, r1
-  10:	6053      	str	r3, [r2, #4]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:625
+   4:	3901      	subs	r1, #1
+   6:	2001      	movs	r0, #1
+   8:	fa10 f101 	lsls.w	r1, r0, r1
+   c:	4b02      	ldr	r3, [pc, #8]	; (18 <NVIC_ClearSystemHandlerPendingBit+0x18>)
+   e:	685a      	ldr	r2, [r3, #4]
+  10:	ea41 0202 	orr.w	r2, r1, r2
+  14:	605a      	str	r2, [r3, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:625
 }
-  12:	4770      	bx	lr
-  14:	e000ed00 	.word	0xe000ed00
+  16:	4770      	bx	lr
+  18:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_GetSystemHandlerActiveBitStatus:
 
 00000000 <NVIC_GetSystemHandlerActiveBitStatus>:
 NVIC_GetSystemHandlerActiveBitStatus():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:655
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:653
+  u32 tmp = 0x00, tmppos = 0x00;
+
   /* Check the parameters */
   assert_param(IS_GET_ACTIVE_SYSTEM_HANDLER(SystemHandler));
   
   tmppos = (SystemHandler >> 0x0E) & (u32)0x0F;
+   0:	0b83      	lsrs	r3, r0, #14
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:655
 
   tmppos = (u32)0x01 << tmppos;
-   0:	f3c0 3083 	ubfx	r0, r0, #14, #4
-   4:	2301      	movs	r3, #1
-   6:	4083      	lsls	r3, r0
-C:\cortex\dimmers\src/stm32f10x_nvic.c:657
+   2:	2201      	movs	r2, #1
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:653
+  u32 tmp = 0x00, tmppos = 0x00;
+
+  /* Check the parameters */
+  assert_param(IS_GET_ACTIVE_SYSTEM_HANDLER(SystemHandler));
+  
+  tmppos = (SystemHandler >> 0x0E) & (u32)0x0F;
+   4:	f003 030f 	and.w	r3, r3, #15
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:655
+
+  tmppos = (u32)0x01 << tmppos;
+   8:	fa12 f303 	lsls.w	r3, r2, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:657
 
   tmp = SCB->SHCSR & tmppos;
-   8:	4a04      	ldr	r2, [pc, #16]	(1c <NVIC_GetSystemHandlerActiveBitStatus+0x1c>)
-   a:	6a50      	ldr	r0, [r2, #36]
-   c:	ea03 0000 	and.w	r0, r3, r0
-C:\cortex\dimmers\src/stm32f10x_nvic.c:668
+   c:	4a05      	ldr	r2, [pc, #20]	; (24 <NVIC_GetSystemHandlerActiveBitStatus+0x24>)
+   e:	6a50      	ldr	r0, [r2, #36]	; 0x24
+  10:	ea03 0000 	and.w	r0, r3, r0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:668
   else
   {
     bitstatus = RESET;
   }
   return bitstatus;
 }
-  10:	4298      	cmp	r0, r3
-  12:	bf14      	ite	ne
-  14:	2000      	movne	r0, #0
-  16:	2001      	moveq	r0, #1
-  18:	4770      	bx	lr
-  1a:	46c0      	nop			(mov r8, r8)
-  1c:	e000ed00 	.word	0xe000ed00
+  14:	ebc3 0c00 	rsb	ip, r3, r0
+  18:	f1dc 0000 	rsbs	r0, ip, #0
+  1c:	eb40 000c 	adc.w	r0, r0, ip
+  20:	4770      	bx	lr
+  22:	bf00      	nop
+  24:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_GetFaultHandlerSources:
 
 00000000 <NVIC_GetFaultHandlerSources>:
 NVIC_GetFaultHandlerSources():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:692
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:692
   u32 tmpreg = 0x00, tmppos = 0x00;
 
   /* Check the parameters */
   assert_param(IS_FAULT_SOURCE_SYSTEM_HANDLER(SystemHandler));
   
   tmpreg = (SystemHandler >> 0x12) & (u32)0x03;
-   0:	f3c0 4381 	ubfx	r3, r0, #18, #2
-C:\cortex\dimmers\src/stm32f10x_nvic.c:695
+   0:	0c83      	lsrs	r3, r0, #18
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:695
   tmppos = (SystemHandler >> 0x14) & (u32)0x03;
 
   if (tmpreg == 0x00)
-   4:	b913      	cbnz	r3, c <NVIC_GetFaultHandlerSources+0xc>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:697
+   2:	f013 0203 	ands.w	r2, r3, #3
+   6:	4b0a      	ldr	r3, [pc, #40]	; (30 <NVIC_GetFaultHandlerSources+0x30>)
+   8:	d101      	bne.n	e <NVIC_GetFaultHandlerSources+0xe>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:697
   {
     faultsources = SCB->HFSR;
-   6:	4b0b      	ldr	r3, [pc, #44]	(34 <NVIC_GetFaultHandlerSources+0x34>)
-   8:	6ad8      	ldr	r0, [r3, #44]
-   a:	e011      	b.n	30 <NVIC_GetFaultHandlerSources+0x30>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:699
+   a:	6ad8      	ldr	r0, [r3, #44]	; 0x2c
+   c:	4770      	bx	lr
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:699
   }
   else if (tmpreg == 0x01)
-   c:	2b01      	cmp	r3, #1
-   e:	d10d      	bne.n	2c <NVIC_GetFaultHandlerSources+0x2c>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:701
-  {
-    faultsources = SCB->CFSR >> (tmppos * 0x08);
-  10:	4b08      	ldr	r3, [pc, #32]	(34 <NVIC_GetFaultHandlerSources+0x34>)
-C:\cortex\dimmers\src/stm32f10x_nvic.c:693
+   e:	2a01      	cmp	r2, #1
+  10:	d10c      	bne.n	2c <NVIC_GetFaultHandlerSources+0x2c>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:693
 
   /* Check the parameters */
   assert_param(IS_FAULT_SOURCE_SYSTEM_HANDLER(SystemHandler));
   
   tmpreg = (SystemHandler >> 0x12) & (u32)0x03;
   tmppos = (SystemHandler >> 0x14) & (u32)0x03;
-  12:	f3c0 5101 	ubfx	r1, r0, #20, #2
-C:\cortex\dimmers\src/stm32f10x_nvic.c:701
+  12:	0d02      	lsrs	r2, r0, #20
+  14:	f002 0203 	and.w	r2, r2, #3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:701
   {
     faultsources = SCB->HFSR;
   }
   else if (tmpreg == 0x01)
   {
     faultsources = SCB->CFSR >> (tmppos * 0x08);
-  16:	6a9a      	ldr	r2, [r3, #40]
-  18:	00cb      	lsls	r3, r1, #3
-  1a:	fa32 f003 	lsrs.w	r0, r2, r3
-C:\cortex\dimmers\src/stm32f10x_nvic.c:702
+  18:	6a98      	ldr	r0, [r3, #40]	; 0x28
+  1a:	00d3      	lsls	r3, r2, #3
+  1c:	40d8      	lsrs	r0, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:702
     if (tmppos != 0x02)
-  1e:	2902      	cmp	r1, #2
-C:\cortex\dimmers\src/stm32f10x_nvic.c:704
+  1e:	2a02      	cmp	r2, #2
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:704
     {
       faultsources &= (u32)0x0F;
   20:	bf14      	ite	ne
-  22:	f000 000f 	andne.w	r0, r0, #15	; 0xf
-C:\cortex\dimmers\src/stm32f10x_nvic.c:708
+  22:	f000 000f 	andne.w	r0, r0, #15
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:708
     }
     else
     {
       faultsources &= (u32)0xFF;
   26:	f000 00ff 	andeq.w	r0, r0, #255	; 0xff
-  2a:	e001      	b.n	30 <NVIC_GetFaultHandlerSources+0x30>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:713
+  2a:	4770      	bx	lr
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:713
     }
   }
   else
   {
     faultsources = SCB->DFSR;
-  2c:	4b01      	ldr	r3, [pc, #4]	(34 <NVIC_GetFaultHandlerSources+0x34>)
-  2e:	6b18      	ldr	r0, [r3, #48]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:716
+  2c:	6b18      	ldr	r0, [r3, #48]	; 0x30
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:716
   }
   return faultsources;
 }
-  30:	4770      	bx	lr
-  32:	46c0      	nop			(mov r8, r8)
-  34:	e000ed00 	.word	0xe000ed00
+  2e:	4770      	bx	lr
+  30:	e000ed00 	.word	0xe000ed00
+
 Disassembly of section .text.NVIC_GetFaultAddress:
 
 00000000 <NVIC_GetFaultAddress>:
 NVIC_GetFaultAddress():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:740
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:731
+*                       - SystemHandler_BusFault
+* Output         : None
+* Return         : Fault address.
+*******************************************************************************/
+u32 NVIC_GetFaultAddress(u32 SystemHandler)
+{
+   0:	f4104b03 	.word	0xf4104b03
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:740
   /* Check the parameters */
   assert_param(IS_FAULT_ADDRESS_SYSTEM_HANDLER(SystemHandler));
   
   tmp = (SystemHandler >> 0x16) & (u32)0x01;
 
   if (tmp == 0x00)
-   0:	f410 0f80 	tst.w	r0, #4194304	; 0x400000
-C:\cortex\dimmers\src/stm32f10x_nvic.c:742
+   4:	0f80      	lsrs	r0, r0, #30
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:742
   {
     faultaddress = SCB->MMFAR;
-   4:	bf0b      	itete	eq
-   6:	4b02      	ldreq	r3, [pc, #8]	(10 <NVIC_GetFaultAddress+0x10>)
-C:\cortex\dimmers\src/stm32f10x_nvic.c:746
+   6:	bf0c      	ite	eq
+   8:	6b58      	ldreq	r0, [r3, #52]	; 0x34
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:746
   }
   else
   {
     faultaddress = SCB->BFAR;
-   8:	4b01      	ldrne	r3, [pc, #4]	(10 <NVIC_GetFaultAddress+0x10>)
-C:\cortex\dimmers\src/stm32f10x_nvic.c:742
-  
-  tmp = (SystemHandler >> 0x16) & (u32)0x01;
-
-  if (tmp == 0x00)
-  {
-    faultaddress = SCB->MMFAR;
-   a:	6b58      	ldreq	r0, [r3, #52]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:746
-  }
-  else
-  {
-    faultaddress = SCB->BFAR;
-   c:	6b98      	ldrne	r0, [r3, #56]
-C:\cortex\dimmers\src/stm32f10x_nvic.c:749
+   a:	6b98      	ldrne	r0, [r3, #56]	; 0x38
+C:\cortex\dimmers\stlibrary\src/stm32f10x_nvic.c:749
   }
   return faultaddress;
 }
-   e:	4770      	bx	lr
+   c:	4770      	bx	lr
+   e:	bf00      	nop
   10:	e000ed00 	.word	0xe000ed00
-Disassembly of section .text.NVIC_GetBASEPRI:
-
-00000000 <NVIC_GetBASEPRI>:
-NVIC_GetBASEPRI():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:250
-* Input          : None
-* Output         : None
-* Return         : BASEPRI register value
-*******************************************************************************/
-u32 NVIC_GetBASEPRI(void)
-{
-   0:	b510      	push	{r4, lr}
-C:\cortex\dimmers\src/stm32f10x_nvic.c:251
-  return (__GetBASEPRI());
-   2:	f7ff fffe 	bl	0 <__GetBASEPRI>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:252
-}
-   6:	bd10      	pop	{r4, pc}
-Disassembly of section .text.NVIC_BASEPRICONFIG:
-
-00000000 <NVIC_BASEPRICONFIG>:
-NVIC_BASEPRICONFIG():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:235
-* Input          : None
-* Output         : None
-* Return         : None
-*******************************************************************************/
-void NVIC_BASEPRICONFIG(u32 NewPriority)
-{
-   0:	b510      	push	{r4, lr}
-C:\cortex\dimmers\src/stm32f10x_nvic.c:239
-  /* Check the parameters */
-  assert_param(IS_NVIC_BASE_PRI(NewPriority));
-  
-  __BASEPRICONFIG(NewPriority << 0x04);
-   2:	0100      	lsls	r0, r0, #4
-   4:	f7ff fffe 	bl	0 <__BASEPRICONFIG>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:240
-}
-   8:	bd10      	pop	{r4, pc}
-   a:	46c0      	nop			(mov r8, r8)
-Disassembly of section .text.NVIC_RESETFAULTMASK:
-
-00000000 <NVIC_RESETFAULTMASK>:
-NVIC_RESETFAULTMASK():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:221
-* Input          : None
-* Output         : None
-* Return         : None
-*******************************************************************************/
-void NVIC_RESETFAULTMASK(void)
-{
-   0:	b510      	push	{r4, lr}
-C:\cortex\dimmers\src/stm32f10x_nvic.c:222
-  __RESETFAULTMASK();
-   2:	f7ff fffe 	bl	0 <__RESETFAULTMASK>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:223
-}
-   6:	bd10      	pop	{r4, pc}
-Disassembly of section .text.NVIC_SETFAULTMASK:
-
-00000000 <NVIC_SETFAULTMASK>:
-NVIC_SETFAULTMASK():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:209
-* Input          : None
-* Output         : None
-* Return         : None
-*******************************************************************************/
-void NVIC_SETFAULTMASK(void)
-{
-   0:	b510      	push	{r4, lr}
-C:\cortex\dimmers\src/stm32f10x_nvic.c:210
-  __SETFAULTMASK();
-   2:	f7ff fffe 	bl	0 <__SETFAULTMASK>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:211
-}
-   6:	bd10      	pop	{r4, pc}
-Disassembly of section .text.NVIC_RESETPRIMASK:
-
-00000000 <NVIC_RESETPRIMASK>:
-NVIC_RESETPRIMASK():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:197
-* Input          : None
-* Output         : None
-* Return         : None
-*******************************************************************************/
-void NVIC_RESETPRIMASK(void)
-{
-   0:	b510      	push	{r4, lr}
-C:\cortex\dimmers\src/stm32f10x_nvic.c:198
-  __RESETPRIMASK();
-   2:	f7ff fffe 	bl	0 <__RESETPRIMASK>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:199
-}
-   6:	bd10      	pop	{r4, pc}
-Disassembly of section .text.NVIC_SETPRIMASK:
-
-00000000 <NVIC_SETPRIMASK>:
-NVIC_SETPRIMASK():
-C:\cortex\dimmers\src/stm32f10x_nvic.c:185
-* Input          : None
-* Output         : None
-* Return         : None
-*******************************************************************************/
-void NVIC_SETPRIMASK(void)
-{
-   0:	b510      	push	{r4, lr}
-C:\cortex\dimmers\src/stm32f10x_nvic.c:186
-  __SETPRIMASK();
-   2:	f7ff fffe 	bl	0 <__SETPRIMASK>
-C:\cortex\dimmers\src/stm32f10x_nvic.c:187
-}
-   6:	bd10      	pop	{r4, pc}

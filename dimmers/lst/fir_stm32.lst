@@ -2,6 +2,7 @@
 C:\cortex\dimmers\hex\fir_stm32.o:     file format elf32-littlearm
 C:\cortex\dimmers\hex\fir_stm32.o
 
+
 Disassembly of section .text:
 
 00000000 <fir_16by16_stm32>:
@@ -45,16 +46,16 @@ C:\cortex\dimmers\src/fir_stm32.s:58
   18:	f931 eb02 	ldrsh.w	lr, [r1], #2
 C:\cortex\dimmers\src/fir_stm32.s:59
         MOV     r8 , #0
-  1c:	f04f 0800 	mov.w	r8, #0	; 0x0
+  1c:	f04f 0800 	mov.w	r8, #0
 C:\cortex\dimmers\src/fir_stm32.s:60
         MOV     r9, #0
-  20:	f04f 0900 	mov.w	r9, #0	; 0x0
+  20:	f04f 0900 	mov.w	r9, #0
 C:\cortex\dimmers\src/fir_stm32.s:61
         MOV     r10, #0
-  24:	f04f 0a00 	mov.w	sl, #0	; 0x0
+  24:	f04f 0a00 	mov.w	sl, #0
 C:\cortex\dimmers\src/fir_stm32.s:62
         MOV     r11, #0
-  28:	f04f 0b00 	mov.w	fp, #0	; 0x0
+  28:	f04f 0b00 	mov.w	fp, #0
 
 0000002c <next_tap>:
 next_tap():

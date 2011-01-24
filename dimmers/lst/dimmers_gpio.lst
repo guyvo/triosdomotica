@@ -2,64 +2,7 @@
 C:\cortex\dimmers\hex\dimmers_gpio.o:     file format elf32-littlearm
 C:\cortex\dimmers\hex\dimmers_gpio.o
 
-Disassembly of section .text.GpioGetDipState:
 
-00000000 <GpioGetDipState>:
-GpioGetDipState():
-C:\cortex\dimmers\src/dimmers_gpio.c:110
-  );
-
-  RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1 | RCC_APB1Periph_I2C2, ENABLE);
-}
-
-DIP_STATE GpioGetDipState ( u16 dip ){
-   0:	4601      	mov	r1, r0
-   2:	b510      	push	{r4, lr}
-C:\cortex\dimmers\src/dimmers_gpio.c:111
-   return (DIP_STATE) GPIO_ReadInputDataBit( GPIOB , dip );
-   4:	4801      	ldr	r0, [pc, #4]	(c <GpioGetDipState+0xc>)
-   6:	f7ff fffe 	bl	0 <GPIO_ReadInputDataBit>
-C:\cortex\dimmers\src/dimmers_gpio.c:112
-   a:	bd10      	pop	{r4, pc}
-   c:	40010c00 	.word	0x40010c00
-Disassembly of section .text.GpioClockSet:
-
-00000000 <GpioClockSet>:
-GpioClockSet():
-C:\cortex\dimmers\src/dimmers_gpio.c:96
-* Output         : None
-* Return         : None
-*******************************************************************************/
-void GpioClockSet (void){
-
-  RCC_APB2PeriphClockCmd
-   0:	2101      	movs	r1, #1
-C:\cortex\dimmers\src/dimmers_gpio.c:94
-* Description    : Set gpio clocks including AFIO for EXTI binding
-* Input          : None
-* Output         : None
-* Return         : None
-*******************************************************************************/
-void GpioClockSet (void){
-   2:	b510      	push	{r4, lr}
-C:\cortex\dimmers\src/dimmers_gpio.c:96
-
-  RCC_APB2PeriphClockCmd
-   4:	f248 201d 	movw	r0, #33309	; 0x821d
-   8:	f7ff fffe 	bl	0 <RCC_APB2PeriphClockCmd>
-C:\cortex\dimmers\src/dimmers_gpio.c:107
-	RCC_APB2Periph_ADC1     |
-    RCC_APB2Periph_ADC3,
-    ENABLE
-  );
-
-  RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1 | RCC_APB1Periph_I2C2, ENABLE);
-   c:	f44f 00c0 	mov.w	r0, #6291456	; 0x600000
-  10:	2101      	movs	r1, #1
-  12:	f7ff fffe 	bl	0 <RCC_APB1PeriphClockCmd>
-C:\cortex\dimmers\src/dimmers_gpio.c:108
-}
-  16:	bd10      	pop	{r4, pc}
 Disassembly of section .text.GpioInit:
 
 00000000 <GpioInit>:
@@ -79,17 +22,20 @@ C:\cortex\dimmers\src/dimmers_gpio.c:78
   s = sizeof (gx_gpios)/sizeof(GpioDef);
    2:	231a      	movs	r3, #26
    4:	9300      	str	r3, [sp, #0]
+C:\cortex\dimmers\src/dimmers_gpio.c:80
+
+  for (u8_gp = 0 ; u8_gp < s ; u8_gp++ ){
    6:	2400      	movs	r4, #0
    8:	e012      	b.n	30 <GpioInit+0x30>
 C:\cortex\dimmers\src/dimmers_gpio.c:81
-
-  for (u8_gp = 0 ; u8_gp < s ; u8_gp++ ){
 	x_init.GPIO_Speed	=	gx_gpios[u8_gp].pindef.GPIO_Speed;
-   a:	480b      	ldr	r0, [pc, #44]	(38 <GpioInit+0x38>)
+   a:	4a0b      	ldr	r2, [pc, #44]	; (38 <GpioInit+0x38>)
+   c:	eb02 03c4 	add.w	r3, r2, r4, lsl #3
+  10:	7899      	ldrb	r1, [r3, #2]
 C:\cortex\dimmers\src/dimmers_gpio.c:83
 	x_init.GPIO_Mode	=	gx_gpios[u8_gp].pindef.GPIO_Mode;
 	x_init.GPIO_Pin		= 	gx_gpios[u8_gp].pindef.GPIO_Pin;  
-   c:	a902      	add	r1, sp, #8
+  12:	f832 2034 	ldrh.w	r2, [r2, r4, lsl #3]
 C:\cortex\dimmers\src/dimmers_gpio.c:81
   GPIO_InitTypeDef	x_init;
   vu32 s ;
@@ -97,29 +43,14 @@ C:\cortex\dimmers\src/dimmers_gpio.c:81
 
   for (u8_gp = 0 ; u8_gp < s ; u8_gp++ ){
 	x_init.GPIO_Speed	=	gx_gpios[u8_gp].pindef.GPIO_Speed;
-   e:	eb00 02c4 	add.w	r2, r0, r4, lsl #3
-  12:	7893      	ldrb	r3, [r2, #2]
-C:\cortex\dimmers\src/dimmers_gpio.c:83
-	x_init.GPIO_Mode	=	gx_gpios[u8_gp].pindef.GPIO_Mode;
-	x_init.GPIO_Pin		= 	gx_gpios[u8_gp].pindef.GPIO_Pin;  
-  14:	f830 0034 	ldrh.w	r0, [r0, r4, lsl #3]
-C:\cortex\dimmers\src/dimmers_gpio.c:81
-  GPIO_InitTypeDef	x_init;
-  vu32 s ;
-  s = sizeof (gx_gpios)/sizeof(GpioDef);
-
-  for (u8_gp = 0 ; u8_gp < s ; u8_gp++ ){
-	x_init.GPIO_Speed	=	gx_gpios[u8_gp].pindef.GPIO_Speed;
-  18:	f88d 3006 	strb.w	r3, [sp, #6]
+  16:	f88d 1006 	strb.w	r1, [sp, #6]
 C:\cortex\dimmers\src/dimmers_gpio.c:82
 	x_init.GPIO_Mode	=	gx_gpios[u8_gp].pindef.GPIO_Mode;
-  1c:	78d3      	ldrb	r3, [r2, #3]
-C:\cortex\dimmers\src/dimmers_gpio.c:83
-	x_init.GPIO_Pin		= 	gx_gpios[u8_gp].pindef.GPIO_Pin;  
-  1e:	f821 0d04 	strh.w	r0, [r1, #-4]!
+  1a:	78d9      	ldrb	r1, [r3, #3]
 C:\cortex\dimmers\src/dimmers_gpio.c:84
+	x_init.GPIO_Pin		= 	gx_gpios[u8_gp].pindef.GPIO_Pin;  
 	GPIO_Init(gx_gpios[u8_gp].portdef, &x_init);
-  22:	6850      	ldr	r0, [r2, #4]
+  1c:	6858      	ldr	r0, [r3, #4]
 C:\cortex\dimmers\src/dimmers_gpio.c:82
   vu32 s ;
   s = sizeof (gx_gpios)/sizeof(GpioDef);
@@ -127,9 +58,12 @@ C:\cortex\dimmers\src/dimmers_gpio.c:82
   for (u8_gp = 0 ; u8_gp < s ; u8_gp++ ){
 	x_init.GPIO_Speed	=	gx_gpios[u8_gp].pindef.GPIO_Speed;
 	x_init.GPIO_Mode	=	gx_gpios[u8_gp].pindef.GPIO_Mode;
-  24:	f88d 3007 	strb.w	r3, [sp, #7]
-C:\cortex\dimmers\src/dimmers_gpio.c:84
+  1e:	f88d 1007 	strb.w	r1, [sp, #7]
+C:\cortex\dimmers\src/dimmers_gpio.c:83
 	x_init.GPIO_Pin		= 	gx_gpios[u8_gp].pindef.GPIO_Pin;  
+  22:	a902      	add	r1, sp, #8
+  24:	f821 2d04 	strh.w	r2, [r1, #-4]!
+C:\cortex\dimmers\src/dimmers_gpio.c:84
 	GPIO_Init(gx_gpios[u8_gp].portdef, &x_init);
   28:	f7ff fffe 	bl	0 <GPIO_Init>
 C:\cortex\dimmers\src/dimmers_gpio.c:80
@@ -139,8 +73,8 @@ C:\cortex\dimmers\src/dimmers_gpio.c:80
   s = sizeof (gx_gpios)/sizeof(GpioDef);
 
   for (u8_gp = 0 ; u8_gp < s ; u8_gp++ ){
-  2c:	1c63      	adds	r3, r4, #1
-  2e:	b2dc      	uxtb	r4, r3
+  2c:	3401      	adds	r4, #1
+  2e:	b2e4      	uxtb	r4, r4
   30:	9b00      	ldr	r3, [sp, #0]
   32:	429c      	cmp	r4, r3
   34:	d3e9      	bcc.n	a <GpioInit+0xa>
@@ -153,3 +87,65 @@ C:\cortex\dimmers\src/dimmers_gpio.c:86
 }
   36:	bd1c      	pop	{r2, r3, r4, pc}
   38:	00000000 	.word	0x00000000
+
+Disassembly of section .text.GpioClockSet:
+
+00000000 <GpioClockSet>:
+GpioClockSet():
+C:\cortex\dimmers\src/dimmers_gpio.c:97
+* Return         : None
+*******************************************************************************/
+void GpioClockSet (void){
+
+  RCC_APB2PeriphClockCmd
+  (
+   0:	2101      	movs	r1, #1
+C:\cortex\dimmers\src/dimmers_gpio.c:94
+* Description    : Set gpio clocks including AFIO for EXTI binding
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void GpioClockSet (void){
+   2:	b510      	push	{r4, lr}
+C:\cortex\dimmers\src/dimmers_gpio.c:97
+
+  RCC_APB2PeriphClockCmd
+  (
+   4:	f248 201d 	movw	r0, #33309	; 0x821d
+   8:	f7ff fffe 	bl	0 <RCC_APB2PeriphClockCmd>
+C:\cortex\dimmers\src/dimmers_gpio.c:107
+	RCC_APB2Periph_ADC1     |
+    RCC_APB2Periph_ADC3,
+    ENABLE
+  );
+
+  RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1 | RCC_APB1Periph_I2C2, ENABLE);
+   c:	f44f 00c0 	mov.w	r0, #6291456	; 0x600000
+  10:	2101      	movs	r1, #1
+C:\cortex\dimmers\src/dimmers_gpio.c:108
+}
+  12:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+C:\cortex\dimmers\src/dimmers_gpio.c:107
+	RCC_APB2Periph_ADC1     |
+    RCC_APB2Periph_ADC3,
+    ENABLE
+  );
+
+  RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1 | RCC_APB1Periph_I2C2, ENABLE);
+  16:	f7ff bffe 	b.w	0 <RCC_APB1PeriphClockCmd>
+
+Disassembly of section .text.GpioGetDipState:
+
+00000000 <GpioGetDipState>:
+GpioGetDipState():
+C:\cortex\dimmers\src/dimmers_gpio.c:110
+}
+
+DIP_STATE GpioGetDipState ( u16 dip ){
+   0:	4601      	mov	r1, r0
+C:\cortex\dimmers\src/dimmers_gpio.c:111
+   return (DIP_STATE) GPIO_ReadInputDataBit( GPIOB , dip );
+   2:	4801      	ldr	r0, [pc, #4]	; (8 <GpioGetDipState+0x8>)
+   4:	f7ff bffe 	b.w	0 <GPIO_ReadInputDataBit>
+   8:	40010c00 	.word	0x40010c00

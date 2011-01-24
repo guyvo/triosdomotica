@@ -2,76 +2,7 @@
 C:\cortex\dimmers\hex\dimmers_rcc.o:     file format elf32-littlearm
 C:\cortex\dimmers\hex\dimmers_rcc.o
 
-Disassembly of section .text.RccSetUnsetCSS:
 
-00000000 <RccSetUnsetCSS>:
-RccSetUnsetCSS():
-C:\cortex\dimmers\src/dimmers_rcc.c:120
-*					 this will generate an NMI exception when HSE clock fails 
-* Input          : flag ENABLE/DISABLE
-* Output         : None
-* Return         : None
-*******************************************************************************/
-void RccSetUnsetCSS ( bool CSS ){
-   0:	b510      	push	{r4, lr}
-C:\cortex\dimmers\src/dimmers_rcc.c:121
-	RCC_ClockSecuritySystemCmd(CSS);
-   2:	f7ff fffe 	bl	0 <RCC_ClockSecuritySystemCmd>
-C:\cortex\dimmers\src/dimmers_rcc.c:122
-}
-   6:	bd10      	pop	{r4, pc}
-Disassembly of section .text.RccGetClockSpeeds:
-
-00000000 <RccGetClockSpeeds>:
-RccGetClockSpeeds():
-C:\cortex\dimmers\src/dimmers_rcc.c:106
-* Description    : Get the clock speeds for debug purposes
-* Input          : None
-* Output         : None
-* Return         : RCC_ClocksTypeDef containing the speeds
-*******************************************************************************/
-RCC_ClocksTypeDef RccGetClockSpeeds( void ){
-   0:	b570      	push	{r4, r5, r6, lr}
-   2:	b086      	sub	sp, #24
-   4:	4605      	mov	r5, r0
-C:\cortex\dimmers\src/dimmers_rcc.c:109
-
-    RCC_ClocksTypeDef x_RCC_ClockFreq;
-    RCC_GetClocksFreq(&x_RCC_ClockFreq);
-   6:	ac01      	add	r4, sp, #4
-   8:	4620      	mov	r0, r4
-C:\cortex\dimmers\src/dimmers_rcc.c:110
-    return x_RCC_ClockFreq;
-   a:	462e      	mov	r6, r5
-C:\cortex\dimmers\src/dimmers_rcc.c:109
-* Return         : RCC_ClocksTypeDef containing the speeds
-*******************************************************************************/
-RCC_ClocksTypeDef RccGetClockSpeeds( void ){
-
-    RCC_ClocksTypeDef x_RCC_ClockFreq;
-    RCC_GetClocksFreq(&x_RCC_ClockFreq);
-   c:	f7ff fffe 	bl	0 <RCC_GetClocksFreq>
-C:\cortex\dimmers\src/dimmers_rcc.c:110
-    return x_RCC_ClockFreq;
-  10:	cc0f      	ldmia	r4!, {r0, r1, r2, r3}
-  12:	c60f      	stmia	r6!, {r0, r1, r2, r3}
-  14:	6823      	ldr	r3, [r4, #0]
-C:\cortex\dimmers\src/dimmers_rcc.c:111
-}
-  16:	4628      	mov	r0, r5
-C:\cortex\dimmers\src/dimmers_rcc.c:110
-*******************************************************************************/
-RCC_ClocksTypeDef RccGetClockSpeeds( void ){
-
-    RCC_ClocksTypeDef x_RCC_ClockFreq;
-    RCC_GetClocksFreq(&x_RCC_ClockFreq);
-    return x_RCC_ClockFreq;
-  18:	6033      	str	r3, [r6, #0]
-C:\cortex\dimmers\src/dimmers_rcc.c:111
-}
-  1a:	b006      	add	sp, #24
-  1c:	bd70      	pop	{r4, r5, r6, pc}
-  1e:	46c0      	nop			(mov r8, r8)
 Disassembly of section .text.RccInit:
 
 00000000 <RccInit>:
@@ -170,7 +101,7 @@ C:\cortex\dimmers\src/dimmers_rcc.c:76
 
     /* Wait till PLL is ready */
     while (RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET)
-  52:	2039      	movs	r0, #57
+  52:	2039      	movs	r0, #57	; 0x39
   54:	f7ff fffe 	bl	0 <RCC_GetFlagStatus>
   58:	2800      	cmp	r0, #0
   5a:	d0fa      	beq.n	52 <RccInit+0x52>
@@ -188,14 +119,71 @@ C:\cortex\dimmers\src/dimmers_rcc.c:84
     while(RCC_GetSYSCLKSource() != 0x08)
   62:	f7ff fffe 	bl	0 <RCC_GetSYSCLKSource>
   66:	2808      	cmp	r0, #8
-  68:	d1fb      	bne.n	62 <RCC_GetSYSCLKSource+0x62>
-  6a:	e000      	b.n	6e <RCC_GetSYSCLKSource+0x6e>
-  6c:	e7fe      	b.n	6c <RCC_GetSYSCLKSource+0x6c>
-C:\cortex\dimmers\src/dimmers_rcc.c:98
-    while (1)
-    {
-	  // TODO error handling here
-    }
-  }
+  68:	d1fb      	bne.n	62 <RccInit+0x62>
+  6a:	bd10      	pop	{r4, pc}
+  6c:	e7fe      	b.n	6c <RccInit+0x6c>
+
+Disassembly of section .text.RccGetClockSpeeds:
+
+00000000 <RccGetClockSpeeds>:
+RccGetClockSpeeds():
+C:\cortex\dimmers\src/dimmers_rcc.c:106
+* Description    : Get the clock speeds for debug purposes
+* Input          : None
+* Output         : None
+* Return         : RCC_ClocksTypeDef containing the speeds
+*******************************************************************************/
+RCC_ClocksTypeDef RccGetClockSpeeds( void ){
+   0:	b570      	push	{r4, r5, r6, lr}
+   2:	b086      	sub	sp, #24
+   4:	4604      	mov	r4, r0
+C:\cortex\dimmers\src/dimmers_rcc.c:109
+
+    RCC_ClocksTypeDef x_RCC_ClockFreq;
+    RCC_GetClocksFreq(&x_RCC_ClockFreq);
+   6:	ad01      	add	r5, sp, #4
+   8:	4628      	mov	r0, r5
+C:\cortex\dimmers\src/dimmers_rcc.c:110
+    return x_RCC_ClockFreq;
+   a:	4626      	mov	r6, r4
+C:\cortex\dimmers\src/dimmers_rcc.c:109
+* Return         : RCC_ClocksTypeDef containing the speeds
+*******************************************************************************/
+RCC_ClocksTypeDef RccGetClockSpeeds( void ){
+
+    RCC_ClocksTypeDef x_RCC_ClockFreq;
+    RCC_GetClocksFreq(&x_RCC_ClockFreq);
+   c:	f7ff fffe 	bl	0 <RCC_GetClocksFreq>
+C:\cortex\dimmers\src/dimmers_rcc.c:110
+    return x_RCC_ClockFreq;
+  10:	cd0f      	ldmia	r5!, {r0, r1, r2, r3}
+  12:	c60f      	stmia	r6!, {r0, r1, r2, r3}
+  14:	682a      	ldr	r2, [r5, #0]
+C:\cortex\dimmers\src/dimmers_rcc.c:111
 }
-  6e:	bd10      	pop	{r4, pc}
+  16:	4620      	mov	r0, r4
+C:\cortex\dimmers\src/dimmers_rcc.c:110
+*******************************************************************************/
+RCC_ClocksTypeDef RccGetClockSpeeds( void ){
+
+    RCC_ClocksTypeDef x_RCC_ClockFreq;
+    RCC_GetClocksFreq(&x_RCC_ClockFreq);
+    return x_RCC_ClockFreq;
+  18:	6032      	str	r2, [r6, #0]
+C:\cortex\dimmers\src/dimmers_rcc.c:111
+}
+  1a:	b006      	add	sp, #24
+  1c:	bd70      	pop	{r4, r5, r6, pc}
+
+Disassembly of section .text.RccSetUnsetCSS:
+
+00000000 <RccSetUnsetCSS>:
+RccSetUnsetCSS():
+C:\cortex\dimmers\src/dimmers_rcc.c:121
+* Input          : flag ENABLE/DISABLE
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void RccSetUnsetCSS ( bool CSS ){
+	RCC_ClockSecuritySystemCmd(CSS);
+   0:	f7ff bffe 	b.w	0 <RCC_ClockSecuritySystemCmd>

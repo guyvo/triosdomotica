@@ -1,0 +1,959 @@
+
+C:\cortex\dimmers\hex\stm32f10x_sdio.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\stm32f10x_sdio.o
+
+
+Disassembly of section .text.SDIO_DeInit:
+
+00000000 <SDIO_DeInit>:
+SDIO_DeInit():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:107
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void SDIO_DeInit(void)
+{
+  SDIO->POWER = 0x00000000;
+   0:	4b06      	ldr	r3, [pc, #24]	; (1c <SDIO_DeInit+0x1c>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:114
+  SDIO->ARG = 0x00000000;
+  SDIO->CMD = 0x00000000;
+  SDIO->DTIMER = 0x00000000;
+  SDIO->DLEN = 0x00000000;
+  SDIO->DCTRL = 0x00000000;
+  SDIO->ICR = 0x00C007FF;
+   2:	4907      	ldr	r1, [pc, #28]	; (20 <SDIO_DeInit+0x20>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:107
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void SDIO_DeInit(void)
+{
+  SDIO->POWER = 0x00000000;
+   4:	2200      	movs	r2, #0
+   6:	601a      	str	r2, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:108
+  SDIO->CLKCR = 0x00000000;
+   8:	605a      	str	r2, [r3, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:109
+  SDIO->ARG = 0x00000000;
+   a:	609a      	str	r2, [r3, #8]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:110
+  SDIO->CMD = 0x00000000;
+   c:	60da      	str	r2, [r3, #12]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:111
+  SDIO->DTIMER = 0x00000000;
+   e:	625a      	str	r2, [r3, #36]	; 0x24
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:112
+  SDIO->DLEN = 0x00000000;
+  10:	629a      	str	r2, [r3, #40]	; 0x28
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:113
+  SDIO->DCTRL = 0x00000000;
+  12:	62da      	str	r2, [r3, #44]	; 0x2c
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:114
+  SDIO->ICR = 0x00C007FF;
+  14:	6399      	str	r1, [r3, #56]	; 0x38
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:115
+  SDIO->MASK = 0x00000000;
+  16:	63da      	str	r2, [r3, #60]	; 0x3c
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:116
+}
+  18:	4770      	bx	lr
+  1a:	bf00      	nop
+  1c:	40018000 	.word	0x40018000
+  20:	00c007ff 	.word	0x00c007ff
+
+Disassembly of section .text.SDIO_Init:
+
+00000000 <SDIO_Init>:
+SDIO_Init():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:129
+*                  peripheral.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void SDIO_Init(SDIO_InitTypeDef* SDIO_InitStruct)
+{
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:152
+  /* Set PWRSAV bit according to SDIO_ClockPowerSave value */
+  /* Set BYPASS bit according to SDIO_ClockBypass value */
+  /* Set WIDBUS bits according to SDIO_BusWide value */
+  /* Set NEGEDGE bits according to SDIO_ClockEdge value */
+  /* Set HWFC_EN bits according to SDIO_HardwareFlowControl value */
+  tmpreg |= (SDIO_InitStruct->SDIO_ClockDiv  | SDIO_InitStruct->SDIO_ClockPowerSave |
+   2:	68c1      	ldr	r1, [r0, #12]
+   4:	6884      	ldr	r4, [r0, #8]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:141
+  assert_param(IS_SDIO_BUS_WIDE(SDIO_InitStruct->SDIO_BusWide));
+  assert_param(IS_SDIO_HARDWARE_FLOW_CONTROL(SDIO_InitStruct->SDIO_HardwareFlowControl)); 
+   
+/*---------------------------- SDIO CLKCR Configuration ------------------------*/  
+  /* Get the SDIO CLKCR value */
+  tmpreg = SDIO->CLKCR;
+   6:	4a0a      	ldr	r2, [pc, #40]	; (30 <SDIO_Init+0x30>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:152
+  /* Set PWRSAV bit according to SDIO_ClockPowerSave value */
+  /* Set BYPASS bit according to SDIO_ClockBypass value */
+  /* Set WIDBUS bits according to SDIO_BusWide value */
+  /* Set NEGEDGE bits according to SDIO_ClockEdge value */
+  /* Set HWFC_EN bits according to SDIO_HardwareFlowControl value */
+  tmpreg |= (SDIO_InitStruct->SDIO_ClockDiv  | SDIO_InitStruct->SDIO_ClockPowerSave |
+   8:	ea44 0101 	orr.w	r1, r4, r1
+   c:	6904      	ldr	r4, [r0, #16]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:141
+  assert_param(IS_SDIO_BUS_WIDE(SDIO_InitStruct->SDIO_BusWide));
+  assert_param(IS_SDIO_HARDWARE_FLOW_CONTROL(SDIO_InitStruct->SDIO_HardwareFlowControl)); 
+   
+/*---------------------------- SDIO CLKCR Configuration ------------------------*/  
+  /* Get the SDIO CLKCR value */
+  tmpreg = SDIO->CLKCR;
+   e:	6853      	ldr	r3, [r2, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:152
+  /* Set PWRSAV bit according to SDIO_ClockPowerSave value */
+  /* Set BYPASS bit according to SDIO_ClockBypass value */
+  /* Set WIDBUS bits according to SDIO_BusWide value */
+  /* Set NEGEDGE bits according to SDIO_ClockEdge value */
+  /* Set HWFC_EN bits according to SDIO_HardwareFlowControl value */
+  tmpreg |= (SDIO_InitStruct->SDIO_ClockDiv  | SDIO_InitStruct->SDIO_ClockPowerSave |
+  10:	4321      	orrs	r1, r4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:153
+             SDIO_InitStruct->SDIO_ClockBypass | SDIO_InitStruct->SDIO_BusWide |
+  12:	6844      	ldr	r4, [r0, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:144
+/*---------------------------- SDIO CLKCR Configuration ------------------------*/  
+  /* Get the SDIO CLKCR value */
+  tmpreg = SDIO->CLKCR;
+  
+  /* Clear CLKDIV, PWRSAV, BYPASS, WIDBUS, NEGEDGE, HWFC_EN bits */
+  tmpreg &= CLKCR_CLEAR_MASK;
+  14:	f423 43fc 	bic.w	r3, r3, #32256	; 0x7e00
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:153
+  /* Set BYPASS bit according to SDIO_ClockBypass value */
+  /* Set WIDBUS bits according to SDIO_BusWide value */
+  /* Set NEGEDGE bits according to SDIO_ClockEdge value */
+  /* Set HWFC_EN bits according to SDIO_HardwareFlowControl value */
+  tmpreg |= (SDIO_InitStruct->SDIO_ClockDiv  | SDIO_InitStruct->SDIO_ClockPowerSave |
+             SDIO_InitStruct->SDIO_ClockBypass | SDIO_InitStruct->SDIO_BusWide |
+  18:	4321      	orrs	r1, r4
+  1a:	6944      	ldr	r4, [r0, #20]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:144
+/*---------------------------- SDIO CLKCR Configuration ------------------------*/  
+  /* Get the SDIO CLKCR value */
+  tmpreg = SDIO->CLKCR;
+  
+  /* Clear CLKDIV, PWRSAV, BYPASS, WIDBUS, NEGEDGE, HWFC_EN bits */
+  tmpreg &= CLKCR_CLEAR_MASK;
+  1c:	f023 03ff 	bic.w	r3, r3, #255	; 0xff
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:153
+  /* Set BYPASS bit according to SDIO_ClockBypass value */
+  /* Set WIDBUS bits according to SDIO_BusWide value */
+  /* Set NEGEDGE bits according to SDIO_ClockEdge value */
+  /* Set HWFC_EN bits according to SDIO_HardwareFlowControl value */
+  tmpreg |= (SDIO_InitStruct->SDIO_ClockDiv  | SDIO_InitStruct->SDIO_ClockPowerSave |
+             SDIO_InitStruct->SDIO_ClockBypass | SDIO_InitStruct->SDIO_BusWide |
+  20:	4321      	orrs	r1, r4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:154
+             SDIO_InitStruct->SDIO_ClockEdge | SDIO_InitStruct->SDIO_HardwareFlowControl); 
+  22:	ea41 0303 	orr.w	r3, r1, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:152
+  /* Set PWRSAV bit according to SDIO_ClockPowerSave value */
+  /* Set BYPASS bit according to SDIO_ClockBypass value */
+  /* Set WIDBUS bits according to SDIO_BusWide value */
+  /* Set NEGEDGE bits according to SDIO_ClockEdge value */
+  /* Set HWFC_EN bits according to SDIO_HardwareFlowControl value */
+  tmpreg |= (SDIO_InitStruct->SDIO_ClockDiv  | SDIO_InitStruct->SDIO_ClockPowerSave |
+  26:	7801      	ldrb	r1, [r0, #0]
+  28:	430b      	orrs	r3, r1
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:157
+             SDIO_InitStruct->SDIO_ClockBypass | SDIO_InitStruct->SDIO_BusWide |
+             SDIO_InitStruct->SDIO_ClockEdge | SDIO_InitStruct->SDIO_HardwareFlowControl); 
+  
+  /* Write to SDIO CLKCR */
+  SDIO->CLKCR = tmpreg;             
+  2a:	6053      	str	r3, [r2, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:158
+}
+  2c:	bd10      	pop	{r4, pc}
+  2e:	bf00      	nop
+  30:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_StructInit:
+
+00000000 <SDIO_StructInit>:
+SDIO_StructInit():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:171
+* Return         : None
+*******************************************************************************/
+void SDIO_StructInit(SDIO_InitTypeDef* SDIO_InitStruct)
+{
+  /* SDIO_InitStruct members default value */
+  SDIO_InitStruct->SDIO_ClockDiv = 0x00;
+   0:	2300      	movs	r3, #0
+   2:	7003      	strb	r3, [r0, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:172
+  SDIO_InitStruct->SDIO_ClockEdge = SDIO_ClockEdge_Rising;
+   4:	6043      	str	r3, [r0, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:173
+  SDIO_InitStruct->SDIO_ClockBypass = SDIO_ClockBypass_Disable;
+   6:	6083      	str	r3, [r0, #8]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:174
+  SDIO_InitStruct->SDIO_ClockPowerSave = SDIO_ClockPowerSave_Disable;
+   8:	60c3      	str	r3, [r0, #12]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:175
+  SDIO_InitStruct->SDIO_BusWide = SDIO_BusWide_1b;
+   a:	6103      	str	r3, [r0, #16]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:176
+  SDIO_InitStruct->SDIO_HardwareFlowControl = SDIO_HardwareFlowControl_Disable;
+   c:	6143      	str	r3, [r0, #20]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:177
+}
+   e:	4770      	bx	lr
+
+Disassembly of section .text.SDIO_ClockCmd:
+
+00000000 <SDIO_ClockCmd>:
+SDIO_ClockCmd():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:192
+void SDIO_ClockCmd(FunctionalState NewState)
+{
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  *(vu32 *) CLKCR_CLKEN_BB = (u32)NewState;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <SDIO_ClockCmd+0x8>)
+   2:	6018      	str	r0, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:193
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	423000a0 	.word	0x423000a0
+
+Disassembly of section .text.SDIO_SetPowerState:
+
+00000000 <SDIO_SetPowerState>:
+SDIO_SetPowerState():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:210
+void SDIO_SetPowerState(u32 SDIO_PowerState)
+{
+  /* Check the parameters */
+  assert_param(IS_SDIO_POWER_STATE(SDIO_PowerState));
+  
+  SDIO->POWER &= PWR_PWRCTRL_MASK;
+   0:	4b04      	ldr	r3, [pc, #16]	; (14 <SDIO_SetPowerState+0x14>)
+   2:	681a      	ldr	r2, [r3, #0]
+   4:	f022 0203 	bic.w	r2, r2, #3
+   8:	601a      	str	r2, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:211
+  SDIO->POWER |= SDIO_PowerState;
+   a:	681a      	ldr	r2, [r3, #0]
+   c:	ea40 0202 	orr.w	r2, r0, r2
+  10:	601a      	str	r2, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:212
+}
+  12:	4770      	bx	lr
+  14:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_GetPowerState:
+
+00000000 <SDIO_GetPowerState>:
+SDIO_GetPowerState():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:227
+*                       - 0x02: Power UP
+*                       - 0x03: Power ON 
+*******************************************************************************/
+u32 SDIO_GetPowerState(void)
+{
+  return (SDIO->POWER & (~PWR_PWRCTRL_MASK));
+   0:	68184b02 	.word	0x68184b02
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:228
+}
+   4:	f000 0003 	and.w	r0, r0, #3
+   8:	4770      	bx	lr
+   a:	bf00      	nop
+   c:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_ITConfig:
+
+00000000 <SDIO_ITConfig>:
+SDIO_ITConfig():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:275
+*                  This parameter can be: ENABLE or DISABLE.  
+* Output         : None
+* Return         : None 
+*******************************************************************************/
+void SDIO_ITConfig(u32 SDIO_IT, FunctionalState NewState)
+{
+   0:	4b04      	ldr	r3, [pc, #16]	; (14 <SDIO_ITConfig+0x14>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:280
+  /* Check the parameters */
+  assert_param(IS_SDIO_IT(SDIO_IT));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  if (NewState != DISABLE)
+   2:	b111      	cbz	r1, a <SDIO_ITConfig+0xa>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:283
+  {
+    /* Enable the SDIO interrupts */
+    SDIO->MASK |= SDIO_IT;
+   4:	6bda      	ldr	r2, [r3, #60]	; 0x3c
+   6:	4310      	orrs	r0, r2
+   8:	e002      	b.n	10 <SDIO_ITConfig+0x10>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:288
+  }
+  else
+  {
+    /* Disable the SDIO interrupts */
+    SDIO->MASK &= ~SDIO_IT;
+   a:	6bda      	ldr	r2, [r3, #60]	; 0x3c
+   c:	ea22 0000 	bic.w	r0, r2, r0
+  10:	63d8      	str	r0, [r3, #60]	; 0x3c
+  12:	4770      	bx	lr
+  14:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_DMACmd:
+
+00000000 <SDIO_DMACmd>:
+SDIO_DMACmd():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:305
+void SDIO_DMACmd(FunctionalState NewState)
+{
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  *(vu32 *) DCTRL_DMAEN_BB = (u32)NewState;
+   0:	60184b01 	.word	0x60184b01
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:306
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	4230058c 	.word	0x4230058c
+
+Disassembly of section .text.SDIO_SendCommand:
+
+00000000 <SDIO_SendCommand>:
+SDIO_SendCommand():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:319
+*                  for the SDIO command.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void SDIO_SendCommand(SDIO_CmdInitTypeDef *SDIO_CmdInitStruct)
+{
+   0:	b510      	push	{r4, lr}
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:330
+  assert_param(IS_SDIO_WAIT(SDIO_CmdInitStruct->SDIO_Wait));
+  assert_param(IS_SDIO_CPSM(SDIO_CmdInitStruct->SDIO_CPSM));
+  
+/*---------------------------- SDIO ARG Configuration ------------------------*/
+  /* Set the SDIO Argument value */
+  SDIO->ARG = SDIO_CmdInitStruct->SDIO_Argument;
+   2:	6802      	ldr	r2, [r0, #0]
+   4:	4b09      	ldr	r3, [pc, #36]	; (2c <SDIO_SendCommand+0x2c>)
+   6:	609a      	str	r2, [r3, #8]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:342
+  tmpreg &= CMD_CLEAR_MASK;
+  /* Set CMDINDEX bits according to SDIO_CmdIndex value */
+  /* Set WAITRESP bits according to SDIO_Response value */
+  /* Set WAITINT and WAITPEND bits according to SDIO_Wait value */
+  /* Set CPSMEN bits according to SDIO_CPSM value */
+  tmpreg |= (u32)SDIO_CmdInitStruct->SDIO_CmdIndex | SDIO_CmdInitStruct->SDIO_Response
+   8:	6884      	ldr	r4, [r0, #8]
+   a:	6841      	ldr	r1, [r0, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:334
+  /* Set the SDIO Argument value */
+  SDIO->ARG = SDIO_CmdInitStruct->SDIO_Argument;
+  
+/*---------------------------- SDIO CMD Configuration ------------------------*/  
+  /* Get the SDIO CMD value */
+  tmpreg = SDIO->CMD;
+   c:	68da      	ldr	r2, [r3, #12]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:342
+  tmpreg &= CMD_CLEAR_MASK;
+  /* Set CMDINDEX bits according to SDIO_CmdIndex value */
+  /* Set WAITRESP bits according to SDIO_Response value */
+  /* Set WAITINT and WAITPEND bits according to SDIO_Wait value */
+  /* Set CPSMEN bits according to SDIO_CPSM value */
+  tmpreg |= (u32)SDIO_CmdInitStruct->SDIO_CmdIndex | SDIO_CmdInitStruct->SDIO_Response
+   e:	ea44 0101 	orr.w	r1, r4, r1
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:343
+           | SDIO_CmdInitStruct->SDIO_Wait | SDIO_CmdInitStruct->SDIO_CPSM;
+  12:	68c4      	ldr	r4, [r0, #12]
+  14:	6900      	ldr	r0, [r0, #16]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:337
+/*---------------------------- SDIO CMD Configuration ------------------------*/  
+  /* Get the SDIO CMD value */
+  tmpreg = SDIO->CMD;
+
+  /* Clear CMDINDEX, WAITRESP, WAITINT, WAITPEND, CPSMEN bits */
+  tmpreg &= CMD_CLEAR_MASK;
+  16:	f422 62fe 	bic.w	r2, r2, #2032	; 0x7f0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:343
+  /* Set CMDINDEX bits according to SDIO_CmdIndex value */
+  /* Set WAITRESP bits according to SDIO_Response value */
+  /* Set WAITINT and WAITPEND bits according to SDIO_Wait value */
+  /* Set CPSMEN bits according to SDIO_CPSM value */
+  tmpreg |= (u32)SDIO_CmdInitStruct->SDIO_CmdIndex | SDIO_CmdInitStruct->SDIO_Response
+           | SDIO_CmdInitStruct->SDIO_Wait | SDIO_CmdInitStruct->SDIO_CPSM;
+  1a:	4321      	orrs	r1, r4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:337
+/*---------------------------- SDIO CMD Configuration ------------------------*/  
+  /* Get the SDIO CMD value */
+  tmpreg = SDIO->CMD;
+
+  /* Clear CMDINDEX, WAITRESP, WAITINT, WAITPEND, CPSMEN bits */
+  tmpreg &= CMD_CLEAR_MASK;
+  1c:	f022 020f 	bic.w	r2, r2, #15
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:343
+  /* Set CMDINDEX bits according to SDIO_CmdIndex value */
+  /* Set WAITRESP bits according to SDIO_Response value */
+  /* Set WAITINT and WAITPEND bits according to SDIO_Wait value */
+  /* Set CPSMEN bits according to SDIO_CPSM value */
+  tmpreg |= (u32)SDIO_CmdInitStruct->SDIO_CmdIndex | SDIO_CmdInitStruct->SDIO_Response
+           | SDIO_CmdInitStruct->SDIO_Wait | SDIO_CmdInitStruct->SDIO_CPSM;
+  20:	4301      	orrs	r1, r0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:342
+  tmpreg &= CMD_CLEAR_MASK;
+  /* Set CMDINDEX bits according to SDIO_CmdIndex value */
+  /* Set WAITRESP bits according to SDIO_Response value */
+  /* Set WAITINT and WAITPEND bits according to SDIO_Wait value */
+  /* Set CPSMEN bits according to SDIO_CPSM value */
+  tmpreg |= (u32)SDIO_CmdInitStruct->SDIO_CmdIndex | SDIO_CmdInitStruct->SDIO_Response
+  22:	ea41 0202 	orr.w	r2, r1, r2
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:346
+           | SDIO_CmdInitStruct->SDIO_Wait | SDIO_CmdInitStruct->SDIO_CPSM;
+  
+  /* Write to SDIO CMD */
+  SDIO->CMD = tmpreg;
+  26:	60da      	str	r2, [r3, #12]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:347
+}
+  28:	bd10      	pop	{r4, pc}
+  2a:	bf00      	nop
+  2c:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_CmdStructInit:
+
+00000000 <SDIO_CmdStructInit>:
+SDIO_CmdStructInit():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:360
+* Return         : None
+*******************************************************************************/
+void SDIO_CmdStructInit(SDIO_CmdInitTypeDef* SDIO_CmdInitStruct)
+{
+  /* SDIO_CmdInitStruct members default value */
+  SDIO_CmdInitStruct->SDIO_Argument = 0x00;
+   0:	2300      	movs	r3, #0
+   2:	6003      	str	r3, [r0, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:361
+  SDIO_CmdInitStruct->SDIO_CmdIndex = 0x00;
+   4:	6043      	str	r3, [r0, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:362
+  SDIO_CmdInitStruct->SDIO_Response = SDIO_Response_No;
+   6:	6083      	str	r3, [r0, #8]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:363
+  SDIO_CmdInitStruct->SDIO_Wait = SDIO_Wait_No;
+   8:	60c3      	str	r3, [r0, #12]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:364
+  SDIO_CmdInitStruct->SDIO_CPSM = SDIO_CPSM_Disable;
+   a:	6103      	str	r3, [r0, #16]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:365
+}
+   c:	4770      	bx	lr
+
+Disassembly of section .text.SDIO_GetCommandResponse:
+
+00000000 <SDIO_GetCommandResponse>:
+SDIO_GetCommandResponse():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:377
+* Output         : None
+* Return         : Returns the command index of the last command response received.
+*******************************************************************************/
+u8 SDIO_GetCommandResponse(void)
+{
+  return (u8)(SDIO->RESPCMD);
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <SDIO_GetCommandResponse+0x8>)
+   2:	6918      	ldr	r0, [r3, #16]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:378
+}
+   4:	b2c0      	uxtb	r0, r0
+   6:	4770      	bx	lr
+   8:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_GetResponse:
+
+00000000 <SDIO_GetResponse>:
+SDIO_GetResponse():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:397
+u32 SDIO_GetResponse(u32 SDIO_RESP)
+{
+  /* Check the parameters */
+  assert_param(IS_SDIO_RESP(SDIO_RESP));
+  
+  return (*(vu32 *)(SDIO_RESP_ADDR + SDIO_RESP)); 
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <SDIO_GetResponse+0x8>)
+   2:	58c0      	ldr	r0, [r0, r3]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:398
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	40018014 	.word	0x40018014
+
+Disassembly of section .text.SDIO_DataConfig:
+
+00000000 <SDIO_DataConfig>:
+SDIO_DataConfig():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:423
+  assert_param(IS_SDIO_TRANSFER_MODE(SDIO_DataInitStruct->SDIO_TransferMode));
+  assert_param(IS_SDIO_DPSM(SDIO_DataInitStruct->SDIO_DPSM));
+
+/*---------------------------- SDIO DTIMER Configuration ---------------------*/
+  /* Set the SDIO Data TimeOut value */
+  SDIO->DTIMER = SDIO_DataInitStruct->SDIO_DataTimeOut;
+   0:	6802      	ldr	r2, [r0, #0]
+   2:	4b09      	ldr	r3, [pc, #36]	; (28 <SDIO_DataConfig+0x28>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:411
+*                  for the SDIO command.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void SDIO_DataConfig(SDIO_DataInitTypeDef* SDIO_DataInitStruct)
+{
+   4:	b510      	push	{r4, lr}
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:423
+  assert_param(IS_SDIO_TRANSFER_MODE(SDIO_DataInitStruct->SDIO_TransferMode));
+  assert_param(IS_SDIO_DPSM(SDIO_DataInitStruct->SDIO_DPSM));
+
+/*---------------------------- SDIO DTIMER Configuration ---------------------*/
+  /* Set the SDIO Data TimeOut value */
+  SDIO->DTIMER = SDIO_DataInitStruct->SDIO_DataTimeOut;
+   6:	625a      	str	r2, [r3, #36]	; 0x24
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:427
+    
+/*---------------------------- SDIO DLEN Configuration -----------------------*/
+  /* Set the SDIO DataLength value */
+  SDIO->DLEN = SDIO_DataInitStruct->SDIO_DataLength;
+   8:	6842      	ldr	r2, [r0, #4]
+   a:	629a      	str	r2, [r3, #40]	; 0x28
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:439
+  tmpreg &= DCTRL_CLEAR_MASK;
+  /* Set DEN bit according to SDIO_DPSM value */
+  /* Set DTMODE bit according to SDIO_TransferMode value */
+  /* Set DTDIR bit according to SDIO_TransferDir value */
+  /* Set DBCKSIZE bits according to SDIO_DataBlockSize value */
+  tmpreg |= (u32)SDIO_DataInitStruct->SDIO_DataBlockSize | SDIO_DataInitStruct->SDIO_TransferDir
+   c:	68c4      	ldr	r4, [r0, #12]
+   e:	6882      	ldr	r2, [r0, #8]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:431
+  /* Set the SDIO DataLength value */
+  SDIO->DLEN = SDIO_DataInitStruct->SDIO_DataLength;
+  
+/*---------------------------- SDIO DCTRL Configuration ----------------------*/  
+  /* Get the SDIO DCTRL value */
+  tmpreg = SDIO->DCTRL;
+  10:	6ad9      	ldr	r1, [r3, #44]	; 0x2c
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:439
+  tmpreg &= DCTRL_CLEAR_MASK;
+  /* Set DEN bit according to SDIO_DPSM value */
+  /* Set DTMODE bit according to SDIO_TransferMode value */
+  /* Set DTDIR bit according to SDIO_TransferDir value */
+  /* Set DBCKSIZE bits according to SDIO_DataBlockSize value */
+  tmpreg |= (u32)SDIO_DataInitStruct->SDIO_DataBlockSize | SDIO_DataInitStruct->SDIO_TransferDir
+  12:	ea44 0202 	orr.w	r2, r4, r2
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:440
+           | SDIO_DataInitStruct->SDIO_TransferMode | SDIO_DataInitStruct->SDIO_DPSM;
+  16:	6904      	ldr	r4, [r0, #16]
+  18:	6940      	ldr	r0, [r0, #20]
+  1a:	4322      	orrs	r2, r4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:434
+/*---------------------------- SDIO DCTRL Configuration ----------------------*/  
+  /* Get the SDIO DCTRL value */
+  tmpreg = SDIO->DCTRL;
+
+  /* Clear DEN, DTMODE, DTDIR and DBCKSIZE bits */
+  tmpreg &= DCTRL_CLEAR_MASK;
+  1c:	f021 01f7 	bic.w	r1, r1, #247	; 0xf7
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:440
+  /* Set DEN bit according to SDIO_DPSM value */
+  /* Set DTMODE bit according to SDIO_TransferMode value */
+  /* Set DTDIR bit according to SDIO_TransferDir value */
+  /* Set DBCKSIZE bits according to SDIO_DataBlockSize value */
+  tmpreg |= (u32)SDIO_DataInitStruct->SDIO_DataBlockSize | SDIO_DataInitStruct->SDIO_TransferDir
+           | SDIO_DataInitStruct->SDIO_TransferMode | SDIO_DataInitStruct->SDIO_DPSM;
+  20:	4302      	orrs	r2, r0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:439
+  tmpreg &= DCTRL_CLEAR_MASK;
+  /* Set DEN bit according to SDIO_DPSM value */
+  /* Set DTMODE bit according to SDIO_TransferMode value */
+  /* Set DTDIR bit according to SDIO_TransferDir value */
+  /* Set DBCKSIZE bits according to SDIO_DataBlockSize value */
+  tmpreg |= (u32)SDIO_DataInitStruct->SDIO_DataBlockSize | SDIO_DataInitStruct->SDIO_TransferDir
+  22:	430a      	orrs	r2, r1
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:443
+           | SDIO_DataInitStruct->SDIO_TransferMode | SDIO_DataInitStruct->SDIO_DPSM;
+  
+  /* Write to SDIO DCTRL */
+  SDIO->DCTRL = tmpreg;
+  24:	62da      	str	r2, [r3, #44]	; 0x2c
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:444
+}
+  26:	bd10      	pop	{r4, pc}
+  28:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_DataStructInit:
+
+00000000 <SDIO_DataStructInit>:
+SDIO_DataStructInit():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:457
+* Return         : None
+*******************************************************************************/
+void SDIO_DataStructInit(SDIO_DataInitTypeDef* SDIO_DataInitStruct)
+{
+  /* SDIO_DataInitStruct members default value */
+  SDIO_DataInitStruct->SDIO_DataTimeOut = 0xFFFFFFFF;
+   0:	f04f 33ff 	mov.w	r3, #4294967295
+   4:	6003      	str	r3, [r0, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:458
+  SDIO_DataInitStruct->SDIO_DataLength = 0x00;
+   6:	3301      	adds	r3, #1
+   8:	6043      	str	r3, [r0, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:459
+  SDIO_DataInitStruct->SDIO_DataBlockSize = SDIO_DataBlockSize_1b;
+   a:	6083      	str	r3, [r0, #8]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:460
+  SDIO_DataInitStruct->SDIO_TransferDir = SDIO_TransferDir_ToCard;
+   c:	60c3      	str	r3, [r0, #12]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:461
+  SDIO_DataInitStruct->SDIO_TransferMode = SDIO_TransferMode_Block;  
+   e:	6103      	str	r3, [r0, #16]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:462
+  SDIO_DataInitStruct->SDIO_DPSM = SDIO_DPSM_Disable;
+  10:	6143      	str	r3, [r0, #20]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:463
+}
+  12:	4770      	bx	lr
+
+Disassembly of section .text.SDIO_GetDataCounter:
+
+00000000 <SDIO_GetDataCounter>:
+SDIO_GetDataCounter():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:474
+* Output         : None
+* Return         : Number of remaining data bytes to be transferred
+*******************************************************************************/
+u32 SDIO_GetDataCounter(void)
+{ 
+  return SDIO->DCOUNT;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <SDIO_GetDataCounter+0x8>)
+   2:	6b18      	ldr	r0, [r3, #48]	; 0x30
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:475
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_ReadData:
+
+00000000 <SDIO_ReadData>:
+SDIO_ReadData():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:486
+* Output         : None
+* Return         : Data received
+*******************************************************************************/
+u32 SDIO_ReadData(void)
+{ 
+  return SDIO->FIFO;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <SDIO_ReadData+0x8>)
+   2:	f8d3 0080 	ldr.w	r0, [r3, #128]	; 0x80
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:487
+}
+   6:	4770      	bx	lr
+   8:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_WriteData:
+
+00000000 <SDIO_WriteData>:
+SDIO_WriteData():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:498
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void SDIO_WriteData(u32 Data)
+{ 
+  SDIO->FIFO = Data;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <SDIO_WriteData+0x8>)
+   2:	f8c3 0080 	str.w	r0, [r3, #128]	; 0x80
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:499
+}
+   6:	4770      	bx	lr
+   8:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_GetFIFOCount:
+
+00000000 <SDIO_GetFIFOCount>:
+SDIO_GetFIFOCount():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:511
+* Output         : None
+* Return         : Remaining number of words.
+*******************************************************************************/
+u32 SDIO_GetFIFOCount(void)
+{ 
+  return SDIO->FIFOCNT;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <SDIO_GetFIFOCount+0x8>)
+   2:	6c98      	ldr	r0, [r3, #72]	; 0x48
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:512
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_StartSDIOReadWait:
+
+00000000 <SDIO_StartSDIOReadWait>:
+SDIO_StartSDIOReadWait():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:527
+void SDIO_StartSDIOReadWait(FunctionalState NewState)
+{ 
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  *(vu32 *) DCTRL_RWSTART_BB = (u32) NewState;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <SDIO_StartSDIOReadWait+0x8>)
+   2:	6018      	str	r0, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:528
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	423005a0 	.word	0x423005a0
+
+Disassembly of section .text.SDIO_StopSDIOReadWait:
+
+00000000 <SDIO_StopSDIOReadWait>:
+SDIO_StopSDIOReadWait():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:543
+void SDIO_StopSDIOReadWait(FunctionalState NewState)
+{ 
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  *(vu32 *) DCTRL_RWSTOP_BB = (u32) NewState;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <SDIO_StopSDIOReadWait+0x8>)
+   2:	6018      	str	r0, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:544
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	423005a4 	.word	0x423005a4
+
+Disassembly of section .text.SDIO_SetSDIOReadWaitMode:
+
+00000000 <SDIO_SetSDIOReadWaitMode>:
+SDIO_SetSDIOReadWaitMode():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:561
+void SDIO_SetSDIOReadWaitMode(u32 SDIO_ReadWaitMode)
+{
+  /* Check the parameters */
+  assert_param(IS_SDIO_READWAIT_MODE(SDIO_ReadWaitMode));
+  
+  *(vu32 *) DCTRL_RWMOD_BB = SDIO_ReadWaitMode;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <SDIO_SetSDIOReadWaitMode+0x8>)
+   2:	6018      	str	r0, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:562
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	423005a8 	.word	0x423005a8
+
+Disassembly of section .text.SDIO_SetSDIOOperation:
+
+00000000 <SDIO_SetSDIOOperation>:
+SDIO_SetSDIOOperation():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:577
+void SDIO_SetSDIOOperation(FunctionalState NewState)
+{ 
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  *(vu32 *) DCTRL_SDIOEN_BB = (u32)NewState;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <SDIO_SetSDIOOperation+0x8>)
+   2:	6018      	str	r0, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:578
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	423005ac 	.word	0x423005ac
+
+Disassembly of section .text.SDIO_SendSDIOSuspendCmd:
+
+00000000 <SDIO_SendSDIOSuspendCmd>:
+SDIO_SendSDIOSuspendCmd():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:593
+void SDIO_SendSDIOSuspendCmd(FunctionalState NewState)
+{ 
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  *(vu32 *) CMD_SDIOSUSPEND_BB = (u32)NewState;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <SDIO_SendSDIOSuspendCmd+0x8>)
+   2:	6018      	str	r0, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:594
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	423001ac 	.word	0x423001ac
+
+Disassembly of section .text.SDIO_CommandCompletionCmd:
+
+00000000 <SDIO_CommandCompletionCmd>:
+SDIO_CommandCompletionCmd():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:609
+void SDIO_CommandCompletionCmd(FunctionalState NewState)
+{ 
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  *(vu32 *) CMD_ENCMDCOMPL_BB = (u32)NewState;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <SDIO_CommandCompletionCmd+0x8>)
+   2:	6018      	str	r0, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:610
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	423001b0 	.word	0x423001b0
+
+Disassembly of section .text.SDIO_CEATAITCmd:
+
+00000000 <SDIO_CEATAITCmd>:
+SDIO_CEATAITCmd():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:625
+void SDIO_CEATAITCmd(FunctionalState NewState)
+{ 
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  *(vu32 *) CMD_NIEN_BB = (u32)((~((u32)NewState)) & ((u32)0x1));
+   0:	f000 0001 	and.w	r0, r0, #1
+   4:	4b02      	ldr	r3, [pc, #8]	; (10 <SDIO_CEATAITCmd+0x10>)
+   6:	f080 0001 	eor.w	r0, r0, #1
+   a:	6018      	str	r0, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:626
+}
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	423001b4 	.word	0x423001b4
+
+Disassembly of section .text.SDIO_SendCEATACmd:
+
+00000000 <SDIO_SendCEATACmd>:
+SDIO_SendCEATACmd():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:641
+void SDIO_SendCEATACmd(FunctionalState NewState)
+{ 
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  *(vu32 *) CMD_ATACMD_BB = (u32)NewState;
+   0:	60184b01 	.word	0x60184b01
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:642
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	423001b8 	.word	0x423001b8
+
+Disassembly of section .text.SDIO_GetFlagStatus:
+
+00000000 <SDIO_GetFlagStatus>:
+SDIO_GetFlagStatus():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:690
+  FlagStatus bitstatus = RESET;
+  
+  /* Check the parameters */
+  assert_param(IS_SDIO_FLAG(SDIO_FLAG));
+  
+  if ((SDIO->STA & SDIO_FLAG) != (u32)RESET)
+   0:	4b03      	ldr	r3, [pc, #12]	; (10 <SDIO_GetFlagStatus+0x10>)
+   2:	6b5b      	ldr	r3, [r3, #52]	; 0x34
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:692
+  {
+    bitstatus = SET;
+   4:	4218      	tst	r0, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:699
+  else
+  {
+    bitstatus = RESET;
+  }
+  return bitstatus;
+}
+   6:	bf0c      	ite	eq
+   8:	2000      	moveq	r0, #0
+   a:	2001      	movne	r0, #1
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_ClearFlag:
+
+00000000 <SDIO_ClearFlag>:
+SDIO_ClearFlag():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:735
+void SDIO_ClearFlag(u32 SDIO_FLAG)
+{ 
+  /* Check the parameters */
+  assert_param(IS_SDIO_CLEAR_FLAG(SDIO_FLAG));
+   
+  SDIO->ICR = SDIO_FLAG;
+   0:	63984b01 	.word	0x63984b01
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:736
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_GetITStatus:
+
+00000000 <SDIO_GetITStatus>:
+SDIO_GetITStatus():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:785
+  ITStatus bitstatus = RESET;
+  
+  /* Check the parameters */
+  assert_param(IS_SDIO_GET_IT(SDIO_IT));
+
+  if ((SDIO->STA & SDIO_IT) != (u32)RESET)  
+   0:	4b03      	ldr	r3, [pc, #12]	; (10 <SDIO_GetITStatus+0x10>)
+   2:	6b5b      	ldr	r3, [r3, #52]	; 0x34
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:787
+  {
+    bitstatus = SET;
+   4:	4218      	tst	r0, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:794
+  else
+  {
+    bitstatus = RESET;
+  }
+  return bitstatus;
+}
+   6:	bf0c      	ite	eq
+   8:	2000      	moveq	r0, #0
+   a:	2001      	movne	r0, #1
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	40018000 	.word	0x40018000
+
+Disassembly of section .text.SDIO_ClearITPendingBit:
+
+00000000 <SDIO_ClearITPendingBit>:
+SDIO_ClearITPendingBit():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:829
+void SDIO_ClearITPendingBit(u32 SDIO_IT)
+{ 
+  /* Check the parameters */
+  assert_param(IS_SDIO_CLEAR_IT(SDIO_IT));
+   
+  SDIO->ICR = SDIO_IT;
+   0:	63984b01 	.word	0x63984b01
+C:\cortex\dimmers\stlibrary\src/stm32f10x_sdio.c:830
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	40018000 	.word	0x40018000

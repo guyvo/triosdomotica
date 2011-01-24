@@ -22,7 +22,7 @@ ToolName=RLINK_CORTEX
 Information=0
 InfoExpr=
 [SimFile]
-path=C:\Program Files\Raisonance\Ride\sim\ARM\STM32F103RET6.sim
+path=C:\Program Files (x86)\Raisonance\Ride\sim\ARM\STM32F103RET6.sim
 [SIM-ARM]
 Crystal=8.000
 [General]

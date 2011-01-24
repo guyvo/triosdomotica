@@ -2,7 +2,7 @@
 <Debug>
 	<RFlasher7>
 		<CodeView Focus="2634" TopRow="1205754976" NbPerLine="8" />
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																
 	</RFlasher7>
 	<dimmers>
 		<MemoryView Focus="134229628" TopRow="0" NbPerLine="8" />
@@ -14,16 +14,16 @@
 				<3>289</3>
 				<4>52</4>
 				<5>111</5>
-																												
+																																																																																																		
 			</CodeReport>
-																				
+																																																																						
 		</CodeView>
-												
+																																										
 	</dimmers>
 	<Flags>
 		<Report>
 			<Def Header="FlagReport" NbCol="9" >
-				<Col Type="PT_BOOL" Header="Check" sizeCache="18" AutoSize="0" Edit="1" Sortable="1" Icon="C:\Program Files\Raisonance\Ride\Config\Resources\check.bmp" />
+				<Col Type="PT_BOOL" Header="Check" sizeCache="18" AutoSize="0" Edit="1" Sortable="1" Icon="C:\Program Files (x86)\Raisonance\Ride\Config\Resources\check.bmp" />
 				<Col Type="PT_STRING" Header="Kind" sizeCache="DDDDDDDDDDD" AutoSize="1" Edit="0" Sortable="1" />
 				<Col Type="PT_STRING" Header="KindID" sizeCache="DD" AutoSize="1" Edit="0" Sortable="1" Visible="0" />
 				<Col Type="PT_STRING" Header="Space" sizeCache="DDDDDD" AutoSize="1" Edit="0" Sortable="1" />
@@ -42,20 +42,24 @@
 			
 	</Flags>
 	<Views>
-		<View File="C:\cortex\dimmers\src\stm32f10x_it.c" Line="33" Index="0" />
-		<View File="C:\cortex\dimmers\src\dimmers_nvic.c" Line="28" Index="1" />
-		<View File="C:\cortex\dimmers\src\dimmers_bkp.c" Line="333" Index="2" />
-		<View File="C:\cortex\dimmers\src\dimmers_storage.c" Line="13" Index="3" />
-		<View File="C:\cortex\dimmers\include\dimmers_storage.h" Line="40" Index="4" />
-		<View File="C:\cortex\dimmers\src\main.c" Line="118" Index="5" />
-		<View File="C:\cortex\dimmers\src\stm32f10x_vector.c" Line="152" Index="6" />
-		<View File="C:\cortex\dimmers\src\dimmers_adc.c" Line="88" Index="7" />
-		<View File="C:\cortex\dimmers\include\dimmers_gpio.h" Line="60" Index="8" />
-		<View File="C:\cortex\dimmers\include\dimmers_i2c.h" Line="12" Index="9" />
-		<View File="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_adc.h" Line="171" Index="10" />
-		<View File="C:\cortex\dimmers\include\stm32f10x_it.h" Line="0" Index="11" />
-		<View File="C:\cortex\dimmers\include\dimmers_bkp.h" Line="0" Index="12" />
-		<View File="C:\cortex\dimmers\include\dimmers_tim.h" Line="35" Index="13" focus="1" />
+		<View File="C:\cortex\dimmers\src\stm32f10x_it.c" Line="77" Index="0" />
+		<View File="C:\cortex\dimmers\src\dimmers_nvic.c" Line="23" Index="1" />
+		<View File="C:\cortex\dimmers\src\dimmers_bkp.c" Line="328" Index="2" />
+		<View File="C:\cortex\dimmers\src\dimmers_storage.c" Line="8" Index="3" />
+		<View File="C:\cortex\dimmers\include\dimmers_storage.h" Line="35" Index="4" />
+		<View File="C:\cortex\dimmers\src\main.c" Line="113" Index="5" />
+		<View File="C:\cortex\dimmers\src\stm32f10x_vector.c" Line="147" Index="6" />
+		<View File="C:\cortex\dimmers\src\dimmers_adc.c" Line="83" Index="7" />
+		<View File="C:\cortex\dimmers\include\dimmers_gpio.h" Line="55" Index="8" />
+		<View File="C:\cortex\dimmers\include\dimmers_i2c.h" Line="7" Index="9" />
+		<View File="C:\cortex\dimmers\include\stm32f10x_it.h" Line="0" Index="10" />
+		<View File="C:\cortex\dimmers\include\dimmers_bkp.h" Line="0" Index="11" />
+		<View File="C:\cortex\dimmers\include\dimmers_tim.h" Line="30" Index="12" />
+		<View File="C:\cortex\dimmers\include\stm32f10x_conf.h" Line="147" Index="13" />
+		<View File="C:\cortex\dimmers\include\dimmers_nvic.h" Line="0" Index="14" />
+		<View File="C:\cortex\dimmers\stlibrary\inc\stm32f10x_nvic.h" Line="0" Index="15" />
+		<View File="C:\cortex\dimmers\rtos\include\FreeRTOS.h" Line="0" Index="16" />
+		<View File="C:\cortex\dimmers\rtos\include\FreeRTOSConfig.h" Line="0" Index="17" focus="1" />
 	</Views>
 	<Grep>
 		<GrepIncludeSub>yes</GrepIncludeSub>
@@ -68,15 +72,16 @@
 			<GrepFileType>*.c;*.h</GrepFileType>
 		</GrepFileTypes>
 		<GrepFindWhat>
-			<GrepFindWhatValue>CHECK_STEP_VALUE</GrepFindWhatValue>
-			<GrepFindStr>CHECK_STEP_VALUE</GrepFindStr>
+			<GrepFindWhatValue>__WFI</GrepFindWhatValue>
+			<GrepFindStr>__WFI</GrepFindStr>
 			<GrepFindStr>BIG_ENDIAN</GrepFindStr>
+			<GrepFindStr>CHECK_STEP_VALUE</GrepFindStr>
 		</GrepFindWhat>
 		<GrepFindWhere>
 			<GrepFindWhereValue>C:\cortex\dimmers</GrepFindWhereValue>
-			<GrepPathStr>C:\cortex\dimmers</GrepPathStr>
 			<GrepPathStr>Application Files</GrepPathStr>
 			<GrepPathStr>Application Path</GrepPathStr>
+			<GrepPathStr>C:\cortex\dimmers</GrepPathStr>
 		</GrepFindWhere>
 		<GrepReplaceWhat>
 			<GrepReplaceWhatValue/>

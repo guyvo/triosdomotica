@@ -1,0 +1,290 @@
+
+C:\cortex\dimmers\hex\stm32f10x_pwr.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\stm32f10x_pwr.o
+
+
+Disassembly of section .text.PWR_DeInit:
+
+00000000 <PWR_DeInit>:
+PWR_DeInit():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:69
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void PWR_DeInit(void)
+{
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_PWR, ENABLE);
+   0:	2101      	movs	r1, #1
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:68
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void PWR_DeInit(void)
+{
+   2:	b510      	push	{r4, lr}
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:69
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_PWR, ENABLE);
+   4:	f04f 5080 	mov.w	r0, #268435456	; 0x10000000
+   8:	f7ff fffe 	bl	0 <RCC_APB1PeriphResetCmd>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:70
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_PWR, DISABLE);
+   c:	f04f 5080 	mov.w	r0, #268435456	; 0x10000000
+  10:	2100      	movs	r1, #0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:71
+}
+  12:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:70
+* Return         : None
+*******************************************************************************/
+void PWR_DeInit(void)
+{
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_PWR, ENABLE);
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_PWR, DISABLE);
+  16:	f7ff bffe 	b.w	0 <RCC_APB1PeriphResetCmd>
+
+Disassembly of section .text.PWR_BackupAccessCmd:
+
+00000000 <PWR_BackupAccessCmd>:
+PWR_BackupAccessCmd():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:86
+void PWR_BackupAccessCmd(FunctionalState NewState)
+{
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  *(vu32 *) CR_DBP_BB = (u32)NewState;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <PWR_BackupAccessCmd+0x8>)
+   2:	6018      	str	r0, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:87
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	420e0020 	.word	0x420e0020
+
+Disassembly of section .text.PWR_PVDCmd:
+
+00000000 <PWR_PVDCmd>:
+PWR_PVDCmd():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:102
+void PWR_PVDCmd(FunctionalState NewState)
+{
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  *(vu32 *) CR_PVDE_BB = (u32)NewState;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <PWR_PVDCmd+0x8>)
+   2:	6018      	str	r0, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:103
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	420e0010 	.word	0x420e0010
+
+Disassembly of section .text.PWR_PVDLevelConfig:
+
+00000000 <PWR_PVDLevelConfig>:
+PWR_PVDLevelConfig():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:129
+  u32 tmpreg = 0;
+
+  /* Check the parameters */
+  assert_param(IS_PWR_PVD_LEVEL(PWR_PVDLevel));
+
+  tmpreg = PWR->CR;
+   0:	4b03      	ldr	r3, [pc, #12]	; (10 <PWR_PVDLevelConfig+0x10>)
+   2:	681a      	ldr	r2, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:132
+
+  /* Clear PLS[7:5] bits */
+  tmpreg &= CR_PLS_Mask;
+   4:	f022 02e0 	bic.w	r2, r2, #224	; 0xe0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:135
+
+  /* Set PLS[7:5] bits according to PWR_PVDLevel value */
+  tmpreg |= PWR_PVDLevel;
+   8:	ea40 0202 	orr.w	r2, r0, r2
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:138
+
+  /* Store the new value */
+  PWR->CR = tmpreg;
+   c:	601a      	str	r2, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:139
+}
+   e:	4770      	bx	lr
+  10:	40007000 	.word	0x40007000
+
+Disassembly of section .text.PWR_WakeUpPinCmd:
+
+00000000 <PWR_WakeUpPinCmd>:
+PWR_WakeUpPinCmd():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:154
+void PWR_WakeUpPinCmd(FunctionalState NewState)
+{
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  *(vu32 *) CSR_EWUP_BB = (u32)NewState;
+   0:	60184b01 	.word	0x60184b01
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:155
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	420e00a0 	.word	0x420e00a0
+
+Disassembly of section .text.PWR_EnterSTOPMode:
+
+00000000 <PWR_EnterSTOPMode>:
+PWR_EnterSTOPMode():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:182
+  /* Check the parameters */
+  assert_param(IS_PWR_REGULATOR(PWR_Regulator));
+  assert_param(IS_PWR_STOP_ENTRY(PWR_STOPEntry));
+  
+  /* Select the regulator state in STOP mode ---------------------------------*/
+  tmpreg = PWR->CR;
+   0:	4b08      	ldr	r3, [pc, #32]	; (24 <PWR_EnterSTOPMode+0x24>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:197
+
+  /* Set SLEEPDEEP bit of Cortex System Control Register */
+  *(vu32 *) SCB_SysCtrl |= SysCtrl_SLEEPDEEP_Set;
+  
+  /* Select STOP mode entry --------------------------------------------------*/
+  if(PWR_STOPEntry == PWR_STOPEntry_WFI)
+   2:	2901      	cmp	r1, #1
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:182
+  /* Check the parameters */
+  assert_param(IS_PWR_REGULATOR(PWR_Regulator));
+  assert_param(IS_PWR_STOP_ENTRY(PWR_STOPEntry));
+  
+  /* Select the regulator state in STOP mode ---------------------------------*/
+  tmpreg = PWR->CR;
+   4:	681a      	ldr	r2, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:185
+
+  /* Clear PDDS and LPDS bits */
+  tmpreg &= CR_DS_Mask;
+   6:	f022 0203 	bic.w	r2, r2, #3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:188
+
+  /* Set LPDS bit according to PWR_Regulator value */
+  tmpreg |= PWR_Regulator;
+   a:	ea40 0202 	orr.w	r2, r0, r2
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:191
+
+  /* Store the new value */
+  PWR->CR = tmpreg;
+   e:	601a      	str	r2, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:194
+
+  /* Set SLEEPDEEP bit of Cortex System Control Register */
+  *(vu32 *) SCB_SysCtrl |= SysCtrl_SLEEPDEEP_Set;
+  10:	4b05      	ldr	r3, [pc, #20]	; (28 <PWR_EnterSTOPMode+0x28>)
+  12:	681a      	ldr	r2, [r3, #0]
+  14:	f042 0204 	orr.w	r2, r2, #4
+  18:	601a      	str	r2, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:197
+  
+  /* Select STOP mode entry --------------------------------------------------*/
+  if(PWR_STOPEntry == PWR_STOPEntry_WFI)
+  1a:	d101      	bne.n	20 <PWR_EnterSTOPMode+0x20>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:200
+  {   
+    /* Request Wait For Interrupt */
+    __WFI();
+  1c:	f7ff bffe 	b.w	0 <__WFI>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:205
+  }
+  else
+  {
+    /* Request Wait For Event */
+    __WFE();
+  20:	f7ff bffe 	b.w	0 <__WFE>
+  24:	40007000 	.word	0x40007000
+  28:	e000ed10 	.word	0xe000ed10
+
+Disassembly of section .text.PWR_EnterSTANDBYMode:
+
+00000000 <PWR_EnterSTANDBYMode>:
+PWR_EnterSTANDBYMode():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:219
+* Return         : None
+*******************************************************************************/
+void PWR_EnterSTANDBYMode(void)
+{
+  /* Clear Wake-up flag */
+  PWR->CR |= CR_CWUF_Set;
+   0:	681a4b07 	.word	0x681a4b07
+   4:	f042 0204 	orr.w	r2, r2, #4
+   8:	601a      	str	r2, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:222
+
+  /* Select STANDBY mode */
+  PWR->CR |= CR_PDDS_Set;
+   a:	681a      	ldr	r2, [r3, #0]
+   c:	f042 0202 	orr.w	r2, r2, #2
+  10:	601a      	str	r2, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:225
+
+  /* Set SLEEPDEEP bit of Cortex System Control Register */
+  *(vu32 *) SCB_SysCtrl |= SysCtrl_SLEEPDEEP_Set;
+  12:	4b04      	ldr	r3, [pc, #16]	; (24 <PWR_EnterSTANDBYMode+0x24>)
+  14:	681a      	ldr	r2, [r3, #0]
+  16:	f042 0204 	orr.w	r2, r2, #4
+  1a:	601a      	str	r2, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:228
+
+  /* Request Wait For Interrupt */
+  __WFI();
+  1c:	f7ff bffe 	b.w	0 <__WFI>
+  20:	40007000 	.word	0x40007000
+  24:	e000ed10 	.word	0xe000ed10
+
+Disassembly of section .text.PWR_GetFlagStatus:
+
+00000000 <PWR_GetFlagStatus>:
+PWR_GetFlagStatus():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:249
+  FlagStatus bitstatus = RESET;
+
+  /* Check the parameters */
+  assert_param(IS_PWR_GET_FLAG(PWR_FLAG));
+  
+  if ((PWR->CSR & PWR_FLAG) != (u32)RESET)
+   0:	685b4b03 	.word	0x685b4b03
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:251
+  {
+    bitstatus = SET;
+   4:	4218      	tst	r0, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:260
+    bitstatus = RESET;
+  }
+
+  /* Return the flag status */
+  return bitstatus;
+}
+   6:	bf0c      	ite	eq
+   8:	2000      	moveq	r0, #0
+   a:	2001      	movne	r0, #1
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	40007000 	.word	0x40007000
+
+Disassembly of section .text.PWR_ClearFlag:
+
+00000000 <PWR_ClearFlag>:
+PWR_ClearFlag():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:277
+void PWR_ClearFlag(u32 PWR_FLAG)
+{
+  /* Check the parameters */
+  assert_param(IS_PWR_CLEAR_FLAG(PWR_FLAG));
+         
+  PWR->CR |=  PWR_FLAG << 2;
+   0:	681a4b02 	.word	0x681a4b02
+   4:	ea42 0280 	orr.w	r2, r2, r0, lsl #2
+   8:	601a      	str	r2, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_pwr.c:278
+}
+   a:	4770      	bx	lr
+   c:	40007000 	.word	0x40007000
