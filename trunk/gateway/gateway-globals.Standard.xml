@@ -13,7 +13,7 @@
  <type Header="GPIO_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="343" Pointer="No"/>
  <type Header="I2C_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="373" Pointer="No"/>
  <type Header="BitAction" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_gpio.h" DeclLine="73" Pointer="No"/>
- <type Header="TI2Ccommand" Icon="1" Type="type" Desc=": struct TI2CCOMMAND" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="75" Pointer="No"/>
+ <type Header="TI2Ccommand" Icon="1" Type="type" Desc=": struct TI2CCOMMAND" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="68" Pointer="No"/>
  <func Header="WWDG_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="189"/>
  <func Header="PVD_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="204"/>
  <func Header="TAMPER_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="215"/>
@@ -90,10 +90,10 @@
  <type Header="I2C_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_i2c.h" DeclLine="34" Pointer="No"/>
  <type Header="NVIC_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_nvic.h" DeclLine="32" Pointer="No"/>
  <type Header="USART_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_usart.h" DeclLine="34" Pointer="No"/>
- <type Header="TestStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="58" Pointer="No"/>
- <type Header="TBKPData" Icon="1" Type="type" Desc=": struct TBKPData" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="62" Pointer="No"/>
- <type Header="TMessage" Icon="1" Type="type" Desc=": struct TMESSAGE" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="66" Pointer="No"/>
- <type Header="TI2Ccommand" Icon="1" Type="type" Desc=": struct TI2CCOMMAND" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="75" Pointer="No"/>
+ <type Header="TestStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="51" Pointer="No"/>
+ <type Header="TBKPData" Icon="1" Type="type" Desc=": struct TBKPData" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="55" Pointer="No"/>
+ <type Header="TMessage" Icon="1" Type="type" Desc=": struct TMESSAGE" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="59" Pointer="No"/>
+ <type Header="TI2Ccommand" Icon="1" Type="type" Desc=": struct TI2CCOMMAND" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="68" Pointer="No"/>
  <func Header="I2C_Initialize" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="155"/>
  <func Header="USART_Init1" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="189"/>
  <func Header="RCC_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="214"/>

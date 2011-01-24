@@ -20,14 +20,7 @@
 
 #include "stm32f10x_lib.h"
 #include "stm32f10x_conf.h"
-#include "stm32f10x_i2c.h"
-#include "stm32f10x_rcc.h"
-#include "stm32f10x_flash.h"
-#include "stm32f10x_gpio.h"
-#include "stm32f10x_nvic.h"
-#include "stm32f10x_usart.h"
-#include "stm32f10x_dma.h"
-#include "stm32f10x_wwdg.h"
+
 #include <stdio.h>
 #include <string.h>
 
