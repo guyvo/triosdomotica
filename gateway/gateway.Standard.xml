@@ -56,16 +56,16 @@
    <type Family="Base" Name="long long int" ID="739"/>
    <type Family="Base" Name="long long unsigned int" ID="746"/>
    <type Family="Base" Name="char" ID="753"/>
-   <type Family="ComponentList" Name="TI2CCOMMAND" Line="68" ID="760">
-    <Component Name="command" TI="772" Line="69" Offs="0"/>
-    <Component Name="address" TI="786" Line="70" Offs="1"/>
-    <Component Name="len_control" TI="800" Line="71" Offs="2"/>
+   <type Family="ComponentList" Name="TI2CCOMMAND" Line="61" ID="760">
+    <Component Name="command" TI="772" Line="62" Offs="0"/>
+    <Component Name="address" TI="786" Line="63" Offs="1"/>
+    <Component Name="len_control" TI="800" Line="64" Offs="2"/>
    <type Family="Pointer" TI="857" toTI="98"/>
-    <Component Name="control" TI="814" Line="72" Offs="4"/>
-    <Component Name="len_data" TI="828" Line="73" Offs="8"/>
-    <Component Name="data" TI="842" Line="74" Offs="12"/>
+    <Component Name="control" TI="814" Line="65" Offs="4"/>
+    <Component Name="len_data" TI="828" Line="66" Offs="8"/>
+    <Component Name="data" TI="842" Line="67" Offs="12"/>
    </type>
-   <type Family="typedef" Name="TI2Ccommand" Line="75" ID="863" toTI="760"/>
+   <type Family="typedef" Name="TI2Ccommand" Line="68" ID="863" toTI="760"/>
    <function Name="WWDG_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="189">
    </function >
    <function Name="PVD_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="204">
@@ -303,27 +303,27 @@
    <type Family="Base" Name="long long int" ID="4199"/>
    <type Family="Base" Name="long long unsigned int" ID="4206"/>
    <type Family="Base" Name="char" ID="4213"/>
-   <type Family="typedef" Name="TestStatus" Line="58" ID="4241" toTI="4220"/>
-   <type Family="ComponentList" Name="TBKPData" Line="60" ID="4252">
+   <type Family="typedef" Name="TestStatus" Line="51" ID="4241" toTI="4220"/>
+   <type Family="ComponentList" Name="TBKPData" Line="53" ID="4252">
    <type Family="array" ID="4279" toTI="2658"/>
-    <Component Name="values" TI="4264" Line="61" Offs="0"/>
+    <Component Name="values" TI="4264" Line="54" Offs="0"/>
    </type>
-   <type Family="typedef" Name="TBKPData" Line="62" ID="4295" toTI="4252"/>
-   <type Family="ComponentList" Name="TMESSAGE" Line="64" ID="4306">
+   <type Family="typedef" Name="TBKPData" Line="55" ID="4295" toTI="4252"/>
+   <type Family="ComponentList" Name="TMESSAGE" Line="57" ID="4306">
    <type Family="array" ID="4333" toTI="2658"/>
-    <Component Name="msg" TI="4318" Line="65" Offs="0"/>
+    <Component Name="msg" TI="4318" Line="58" Offs="0"/>
    </type>
-   <type Family="typedef" Name="TMessage" Line="66" ID="4349" toTI="4306"/>
-   <type Family="ComponentList" Name="TI2CCOMMAND" Line="68" ID="4360">
-    <Component Name="command" TI="4372" Line="69" Offs="0"/>
-    <Component Name="address" TI="4386" Line="70" Offs="1"/>
-    <Component Name="len_control" TI="4400" Line="71" Offs="2"/>
+   <type Family="typedef" Name="TMessage" Line="59" ID="4349" toTI="4306"/>
+   <type Family="ComponentList" Name="TI2CCOMMAND" Line="61" ID="4360">
+    <Component Name="command" TI="4372" Line="62" Offs="0"/>
+    <Component Name="address" TI="4386" Line="63" Offs="1"/>
+    <Component Name="len_control" TI="4400" Line="64" Offs="2"/>
    <type Family="Pointer" TI="4457" toTI="2658"/>
-    <Component Name="control" TI="4414" Line="72" Offs="4"/>
-    <Component Name="len_data" TI="4428" Line="73" Offs="8"/>
-    <Component Name="data" TI="4442" Line="74" Offs="12"/>
+    <Component Name="control" TI="4414" Line="65" Offs="4"/>
+    <Component Name="len_data" TI="4428" Line="66" Offs="8"/>
+    <Component Name="data" TI="4442" Line="67" Offs="12"/>
    </type>
-   <type Family="typedef" Name="TI2Ccommand" Line="75" ID="4463" toTI="4360"/>
+   <type Family="typedef" Name="TI2Ccommand" Line="68" ID="4463" toTI="4360"/>
    <function Name="I2C_Initialize" TI="0" FileName="C:\cortex\gateway\src\main.c" Line="155">
    </function >
    <function Name="USART_Init1" TI="0" FileName="C:\cortex\gateway\src\main.c" Line="189">
