@@ -1,0 +1,2481 @@
+Archive member included because of file (symbol)
+
+C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
+                              C:\cortex\gateway\out\main.o (printf)
+C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o) (vfprintf)
+C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
+                              C:\cortex\gateway\out\main.o (puts)
+C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o) (_dtoa_r)
+C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o) (_wcsrtombs_r)
+C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o) (_wcrtomb_r)
+C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o) (_small_hi0bits)
+c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o) (_impure_ptr)
+c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o) (memchr)
+c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o) (memcpy)
+c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o) (__isinfd)
+c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o) (__isnand)
+c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o) (strlen)
+c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_udivsi3.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o) (__aeabi_uidiv)
+c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_divsi3.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o) (__aeabi_idiv)
+c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_dvmd_tls.o)
+                              c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_addsubdf3.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o) (__aeabi_dsub)
+c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_muldivdf3.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o) (__aeabi_dmul)
+c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_cmpdf2.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o) (__aeabi_dcmpeq)
+c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_fixdfsi.o)
+                              C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o) (__aeabi_d2iz)
+
+Allocating common symbols
+Common symbol       size              file
+
+HSEStartUpStatus    0x1               C:\cortex\gateway\out\main.o
+I2C_InitStructure   0x10              C:\cortex\gateway\out\main.o
+CurrDataCounterEnd  0x2               C:\cortex\gateway\out\stm32f10x_it.o
+Commands            0x400             C:\cortex\gateway\out\main.o
+ExternData          0x54              C:\cortex\gateway\out\main.o
+InternData          0x54              C:\cortex\gateway\out\main.o
+USART_InitStructure
+                    0x10              C:\cortex\gateway\out\main.o
+NVIC_InitStructure  0x4               C:\cortex\gateway\out\main.o
+Command             0x10              C:\cortex\gateway\out\main.o
+
+Discarded input sections
+
+ .text          0x00000000       0x14 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\startup_stm32f10x_hd.o
+ .data          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\startup_stm32f10x_hd.o
+ .bss           0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\startup_stm32f10x_hd.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_it.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_it.o
+ .text.NMIException
+                0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ .text.HardFaultException
+                0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ .text.MemManageException
+                0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ .text.BusFaultException
+                0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ .text.UsageFaultException
+                0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ .text.DebugMonitor
+                0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ .text.SVCHandler
+                0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ .text.PendSVC  0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ .text.SysTickHandler
+                0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ .text.USB_HP_CAN_TX_IRQHandler
+                0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ .text.USB_LP_CAN_RX0_IRQHandler
+                0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ .text.CAN_RX1_IRQHandler
+                0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ .text.CAN_SCE_IRQHandler
+                0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ COMMON         0x00000000        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\main.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\main.o
+ .text.I2C_PullUp
+                0x00000000       0x48 C:\cortex\gateway\out\main.o
+ .text.I2C_FreeBus
+                0x00000000       0x30 C:\cortex\gateway\out\main.o
+ .text.WdgSet   0x00000000       0x2c C:\cortex\gateway\out\main.o
+ .text.Buffercmp
+                0x00000000       0x20 C:\cortex\gateway\out\main.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\cortexm3_macro.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\cortexm3_macro.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_adc.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_adc.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_DeInit
+                0x00000000       0x58 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_Init
+                0x00000000       0x4c C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_StructInit
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_Cmd  0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_DMACmd
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_ITConfig
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_ResetCalibration
+                0x00000000        0xa C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_GetResetCalibrationStatus
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_StartCalibration
+                0x00000000        0xa C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_GetCalibrationStatus
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_SoftwareStartConvCmd
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_GetSoftwareStartConvStatus
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_DiscModeChannelCountConfig
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_DiscModeCmd
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_RegularChannelConfig
+                0x00000000       0x8e C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_ExternalTrigConvCmd
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_GetConversionValue
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_GetDualModeConversionValue
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_AutoInjectedConvCmd
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_InjectedDiscModeCmd
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_ExternalTrigInjectedConvConfig
+                0x00000000        0xe C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_ExternalTrigInjectedConvCmd
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_SoftwareStartInjectedConvCmd
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_GetSoftwareStartInjectedConvCmdStatus
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_InjectedChannelConfig
+                0x00000000       0x5c C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_InjectedSequencerLengthConfig
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_SetInjectedOffset
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_GetInjectedConversionValue
+                0x00000000        0xe C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_AnalogWatchdogCmd
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_AnalogWatchdogThresholdsConfig
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_AnalogWatchdogSingleChannelConfig
+                0x00000000        0xe C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_TempSensorVrefintCmd
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_GetFlagStatus
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_ClearFlag
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_GetITStatus
+                0x00000000       0x16 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text.ADC_ClearITPendingBit
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_adc.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .text.BKP_DeInit
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .text.BKP_TamperPinLevelConfig
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_bkp.o
+ .text.BKP_TamperPinCmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_bkp.o
+ .text.BKP_ITConfig
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_bkp.o
+ .text.BKP_RTCOutputConfig
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .text.BKP_SetRTCCalibrationValue
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .text.BKP_WriteBackupRegister
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_bkp.o
+ .text.BKP_ReadBackupRegister
+                0x00000000        0xe C:\cortex\gateway\out\stm32f10x_bkp.o
+ .text.BKP_GetFlagStatus
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_bkp.o
+ .text.BKP_ClearFlag
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .text.BKP_GetITStatus
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_bkp.o
+ .text.BKP_ClearITPendingBit
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_can.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_can.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CheckITStatus
+                0x00000000        0xa C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_DeInit
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_Init
+                0x00000000       0xc0 C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_FilterInit
+                0x00000000       0xf4 C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_StructInit
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_ITConfig
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_Transmit
+                0x00000000       0xc8 C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_TransmitStatus
+                0x00000000       0x7c C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_CancelTransmit
+                0x00000000       0x34 C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_FIFORelease
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_MessagePending
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_Receive
+                0x00000000       0x9c C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_Sleep
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_WakeUp
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_GetFlagStatus
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_ClearFlag
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_GetITStatus
+                0x00000000       0xac C:\cortex\gateway\out\stm32f10x_can.o
+ .text.CAN_ClearITPendingBit
+                0x00000000       0xa8 C:\cortex\gateway\out\stm32f10x_can.o
+ .rodata        0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_can.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_crc.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_crc.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_crc.o
+ .text.CRC_ResetDR
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_crc.o
+ .text.CRC_CalcCRC
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_crc.o
+ .text.CRC_CalcBlockCRC
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_crc.o
+ .text.CRC_GetCRC
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_crc.o
+ .text.CRC_SetIDRegister
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_crc.o
+ .text.CRC_GetIDRegister
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_crc.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_dac.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_dac.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_dac.o
+ .text.DAC_DeInit
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_dac.o
+ .text.DAC_Init
+                0x00000000       0x30 C:\cortex\gateway\out\stm32f10x_dac.o
+ .text.DAC_StructInit
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_dac.o
+ .text.DAC_Cmd  0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_dac.o
+ .text.DAC_DMACmd
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_dac.o
+ .text.DAC_SoftwareTriggerCmd
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_dac.o
+ .text.DAC_DualSoftwareTriggerCmd
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_dac.o
+ .text.DAC_WaveGenerationCmd
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_dac.o
+ .text.DAC_SetChannel1Data
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_dac.o
+ .text.DAC_SetChannel2Data
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_dac.o
+ .text.DAC_SetDualChannelData
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_dac.o
+ .text.DAC_GetDataOutputValue
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_dac.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .text.DBGMCU_GetREVID
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .text.DBGMCU_GetDEVID
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .text.DBGMCU_Config
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_dma.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_dma.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_dma.o
+ .text.DMA_StructInit
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_dma.o
+ .text.DMA_GetCurrDataCounter
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_dma.o
+ .text.DMA_GetFlagStatus
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_dma.o
+ .text.DMA_ClearFlag
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_dma.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_exti.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_exti.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_exti.o
+ .text.EXTI_DeInit
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_exti.o
+ .text.EXTI_Init
+                0x00000000       0x7c C:\cortex\gateway\out\stm32f10x_exti.o
+ .text.EXTI_StructInit
+                0x00000000        0xe C:\cortex\gateway\out\stm32f10x_exti.o
+ .text.EXTI_GenerateSWInterrupt
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_exti.o
+ .text.EXTI_GetFlagStatus
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_exti.o
+ .text.EXTI_ClearFlag
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_exti.o
+ .text.EXTI_GetITStatus
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_exti.o
+ .text.EXTI_ClearITPendingBit
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_exti.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_flash.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_flash.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_flash.o
+ .text.FLASH_HalfCycleAccessCmd
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_flash.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_NORSRAMDeInit
+                0x00000000       0x30 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_NANDDeInit
+                0x00000000       0x24 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_PCCARDDeInit
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_NORSRAMInit
+                0x00000000       0xc0 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_NANDInit
+                0x00000000       0x6c C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_PCCARDInit
+                0x00000000       0x6c C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_NORSRAMStructInit
+                0x00000000       0x4c C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_NANDStructInit
+                0x00000000       0x2c C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_PCCARDStructInit
+                0x00000000       0x2c C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_NORSRAMCmd
+                0x00000000       0x24 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_NANDCmd
+                0x00000000       0x34 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_PCCARDCmd
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_NANDECCCmd
+                0x00000000       0x34 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_GetECC
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_ITConfig
+                0x00000000       0x4c C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_GetFlagStatus
+                0x00000000       0x2c C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_ClearFlag
+                0x00000000       0x30 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_GetITStatus
+                0x00000000       0x34 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text.FSMC_ClearITPendingBit
+                0x00000000       0x30 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_DeInit
+                0x00000000       0xb0 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_AFIODeInit
+                0x00000000       0x16 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_StructInit
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_ReadInputDataBit
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_ReadInputData
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_ReadOutputData
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_SetBits
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_ResetBits
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_Write
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_PinLockConfig
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_EventOutputConfig
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_EventOutputCmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_PinRemapConfig
+                0x00000000       0x58 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text.GPIO_EXTILineConfig
+                0x00000000       0x34 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_DeInit
+                0x00000000       0x40 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_StructInit
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_DMACmd
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_DMALastTransferCmd
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_OwnAddress2Config
+                0x00000000       0x16 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_DualAddressCmd
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_GeneralCallCmd
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_ReadRegister
+                0x00000000        0xe C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_SoftwareResetCmd
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_SMBusAlertConfig
+                0x00000000       0x1e C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_TransmitPEC
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_PECPositionConfig
+                0x00000000       0x1e C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_CalculatePEC
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_GetPEC
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_ARPCmd
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_FastModeDutyCycleConfig
+                0x00000000       0x1e C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_CheckEvent
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text.I2C_GetFlagStatus
+                0x00000000       0x22 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .text.IWDG_WriteAccessCmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .text.IWDG_SetPrescaler
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .text.IWDG_SetReload
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .text.IWDG_ReloadCounter
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .text.IWDG_Enable
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .text.IWDG_GetFlagStatus
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_lib.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_lib.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_lib.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_DeInit
+                0x00000000       0x34 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_SCBDeInit
+                0x00000000       0x30 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_StructInit
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_SETPRIMASK
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_RESETPRIMASK
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_SETFAULTMASK
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_RESETFAULTMASK
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_BASEPRICONFIG
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_GetBASEPRI
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_GetCurrentPendingIRQChannel
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_GetIRQChannelPendingBitStatus
+                0x00000000       0x24 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_SetIRQChannelPendingBit
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_ClearIRQChannelPendingBit
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_GetCurrentActiveHandler
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_GetIRQChannelActiveBitStatus
+                0x00000000       0x24 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_GetCPUID
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_GenerateSystemReset
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_GenerateCoreReset
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_SystemLPConfig
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_SystemHandlerConfig
+                0x00000000       0x24 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_SystemHandlerPriorityConfig
+                0x00000000       0x54 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_GetSystemHandlerPendingBitStatus
+                0x00000000       0x24 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_SetSystemHandlerPendingBit
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_ClearSystemHandlerPendingBit
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_GetSystemHandlerActiveBitStatus
+                0x00000000       0x28 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_GetFaultHandlerSources
+                0x00000000       0x34 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text.NVIC_GetFaultAddress
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .text.PWR_DeInit
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_pwr.o
+ .text.PWR_BackupAccessCmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_pwr.o
+ .text.PWR_PVDCmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_pwr.o
+ .text.PWR_PVDLevelConfig
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .text.PWR_WakeUpPinCmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_pwr.o
+ .text.PWR_EnterSTOPMode
+                0x00000000       0x2c C:\cortex\gateway\out\stm32f10x_pwr.o
+ .text.PWR_EnterSTANDBYMode
+                0x00000000       0x28 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .text.PWR_GetFlagStatus
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .text.PWR_ClearFlag
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_DeInit
+                0x00000000       0x40 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_AdjustHSICalibrationValue
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_HSICmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_ITConfig
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_USBCLKConfig
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_ADCCLKConfig
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_LSEConfig
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_LSICmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_RTCCLKConfig
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_RTCCLKCmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_APB2PeriphResetCmd
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_APB1PeriphResetCmd
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_BackupResetCmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_ClockSecuritySystemCmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_MCOConfig
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_ClearFlag
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_GetITStatus
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text.RCC_ClearITPendingBit
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_rcc.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_ITConfig
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_EnterConfigMode
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_ExitConfigMode
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_GetCounter
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_SetCounter
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_SetPrescaler
+                0x00000000       0x24 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_SetAlarm
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_GetDivider
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_WaitForLastTask
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_WaitForSynchro
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_GetFlagStatus
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_ClearFlag
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_GetITStatus
+                0x00000000       0x24 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text.RTC_ClearITPendingBit
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_DeInit
+                0x00000000       0x24 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_Init
+                0x00000000       0x34 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_StructInit
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_ClockCmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_SetPowerState
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_GetPowerState
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_ITConfig
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_DMACmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_SendCommand
+                0x00000000       0x30 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_CmdStructInit
+                0x00000000        0xe C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_GetCommandResponse
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_GetResponse
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_DataConfig
+                0x00000000       0x2c C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_DataStructInit
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_GetDataCounter
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_ReadData
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_WriteData
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_GetFIFOCount
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_StartSDIOReadWait
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_StopSDIOReadWait
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_SetSDIOReadWaitMode
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_SetSDIOOperation
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_SendSDIOSuspendCmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_CommandCompletionCmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_CEATAITCmd
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_SendCEATACmd
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_GetFlagStatus
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_ClearFlag
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_GetITStatus
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text.SDIO_ClearITPendingBit
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_sdio.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_spi.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_spi.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_I2S_DeInit
+                0x00000000       0x60 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_Init
+                0x00000000       0x42 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.I2S_Init
+                0x00000000       0xaa C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_StructInit
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.I2S_StructInit
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_Cmd  0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.I2S_Cmd  0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_I2S_ITConfig
+                0x00000000       0x1e C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_I2S_DMACmd
+                0x00000000       0x16 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_I2S_SendData
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_I2S_ReceiveData
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_NSSInternalSoftwareConfig
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_SSOutputCmd
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_DataSizeConfig
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_TransmitCRC
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_CalculateCRC
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_GetCRC
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_GetCRCPolynomial
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_BiDirectionalLineConfig
+                0x00000000       0x1e C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_I2S_GetFlagStatus
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_I2S_ClearFlag
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_I2S_GetITStatus
+                0x00000000       0x26 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text.SPI_I2S_ClearITPendingBit
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_spi.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_systick.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_systick.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_systick.o
+ .text.SysTick_CLKSourceConfig
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_systick.o
+ .text.SysTick_SetReload
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_systick.o
+ .text.SysTick_CounterCmd
+                0x00000000       0x28 C:\cortex\gateway\out\stm32f10x_systick.o
+ .text.SysTick_ITConfig
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_systick.o
+ .text.SysTick_GetCounter
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_systick.o
+ .text.SysTick_GetFlagStatus
+                0x00000000       0x1c C:\cortex\gateway\out\stm32f10x_systick.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_tim.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_tim.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TI1_Config
+                0x00000000       0x38 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TI2_Config
+                0x00000000       0x3c C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_DeInit
+                0x00000000       0xd0 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_TimeBaseInit
+                0x00000000       0x44 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC1Init
+                0x00000000       0x84 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC2Init
+                0x00000000       0x94 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC3Init
+                0x00000000       0x90 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC4Init
+                0x00000000       0x6c C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_BDTRConfig
+                0x00000000       0x24 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_TimeBaseStructInit
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OCStructInit
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ICStructInit
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_BDTRStructInit
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_Cmd  0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_CtrlPWMOutputs
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ITConfig
+                0x00000000       0x16 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_GenerateEvent
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_DMAConfig
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_DMACmd
+                0x00000000       0x16 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_InternalClockConfig
+                0x00000000        0xe C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ETRConfig
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ETRClockMode2Config
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ETRClockMode1Config
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_PrescalerConfig
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_CounterModeConfig
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SelectInputTrigger
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_TIxExternalClockConfig
+                0x00000000       0x2e C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ITRxExternalClockConfig
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_EncoderInterfaceConfig
+                0x00000000       0x40 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ForcedOC1Config
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ForcedOC2Config
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ForcedOC3Config
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ForcedOC4Config
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ARRPreloadConfig
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SelectCOM
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SelectCCDMA
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_CCPreloadControl
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC1PreloadConfig
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC2PreloadConfig
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC3PreloadConfig
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC4PreloadConfig
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC1FastConfig
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC2FastConfig
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC3FastConfig
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC4FastConfig
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ClearOC1Ref
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ClearOC2Ref
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ClearOC3Ref
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ClearOC4Ref
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC1PolarityConfig
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC1NPolarityConfig
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC2PolarityConfig
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC2NPolarityConfig
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC3PolarityConfig
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC3NPolarityConfig
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_OC4PolarityConfig
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_CCxCmd
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_CCxNCmd
+                0x00000000       0x20 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SelectOCxM
+                0x00000000       0x5a C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_UpdateDisableConfig
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_UpdateRequestConfig
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SelectHallSensor
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SelectOnePulseMode
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SelectOutputTrigger
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SelectSlaveMode
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SelectMasterSlaveMode
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SetCounter
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SetAutoreload
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SetCompare1
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SetCompare2
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SetCompare3
+                0x00000000        0x4 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SetCompare4
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SetIC1Prescaler
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SetIC2Prescaler
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_PWMIConfig
+                0x00000000       0x70 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SetIC3Prescaler
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SetIC4Prescaler
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ICInit
+                0x00000000       0xcc C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_SetClockDivision
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_GetCapture1
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_GetCapture2
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_GetCapture3
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_GetCapture4
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_GetCounter
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_GetPrescaler
+                0x00000000        0x6 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_GetFlagStatus
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ClearFlag
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_GetITStatus
+                0x00000000       0x16 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text.TIM_ClearITPendingBit
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_tim.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_usart.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_usart.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_DeInit
+                0x00000000       0x98 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_StructInit
+                0x00000000       0x16 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_ClockInit
+                0x00000000       0x26 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_ClockStructInit
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_ITConfig
+                0x00000000       0x38 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_SetAddress
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_WakeUpConfig
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_ReceiverWakeUpCmd
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_LINBreakDetectLengthConfig
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_LINCmd
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_ReceiveData
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_SendBreak
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_SetGuardTime
+                0x00000000       0x12 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_SetPrescaler
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_SmartCardCmd
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_SmartCardNACKCmd
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_HalfDuplexCmd
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_IrDAConfig
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_IrDACmd
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_ClearFlag
+                0x00000000        0x8 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_GetITStatus
+                0x00000000       0x40 C:\cortex\gateway\out\stm32f10x_usart.o
+ .text.USART_ClearITPendingBit
+                0x00000000        0xe C:\cortex\gateway\out\stm32f10x_usart.o
+ .text          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_wwdg.o
+ .data          0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_wwdg.o
+ .bss           0x00000000        0x0 C:\cortex\gateway\out\stm32f10x_wwdg.o
+ .text.WWDG_DeInit
+                0x00000000       0x1a C:\cortex\gateway\out\stm32f10x_wwdg.o
+ .text.WWDG_SetPrescaler
+                0x00000000       0x14 C:\cortex\gateway\out\stm32f10x_wwdg.o
+ .text.WWDG_SetWindowValue
+                0x00000000       0x18 C:\cortex\gateway\out\stm32f10x_wwdg.o
+ .text.WWDG_EnableIT
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_wwdg.o
+ .text.WWDG_Enable
+                0x00000000       0x10 C:\cortex\gateway\out\stm32f10x_wwdg.o
+ .text.WWDG_GetFlagStatus
+                0x00000000        0xc C:\cortex\gateway\out\stm32f10x_wwdg.o
+ .text          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
+ .data          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
+ .bss           0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
+ .text          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+ .data          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+ .bss           0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+ .text          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
+ .data          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
+ .bss           0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
+ .text          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+ .data          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+ .bss           0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+ .text          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
+ .data          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
+ .bss           0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
+ .text.wcsrtombs
+                0x00000000       0x28 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
+ .text          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
+ .data          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
+ .bss           0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
+ .text.wcrtomb  0x00000000       0x20 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
+ .text          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+ .data          0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+ .bss           0x00000000        0x0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+ .text._small_ulp
+                0x00000000       0x4c C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+ .text._small_b2d
+                0x00000000       0xb0 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+ .text._small_ratio
+                0x00000000       0x54 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+ .text.small__mprec_log10
+                0x00000000       0x58 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+ .text._small_s2b
+                0x00000000       0x90 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+ .text          0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .rodata        0x00000000        0x4 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000000       0x29 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
+ .ARM.attributes
+                0x00000000       0x29 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
+ .debug_frame   0x00000000       0x2c c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
+ .data          0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000000       0x29 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x00000000       0x30 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
+ .ARM.attributes
+                0x00000000       0x29 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
+ .debug_frame   0x00000000       0x20 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
+ .data          0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
+ .ARM.attributes
+                0x00000000       0x29 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
+ .debug_frame   0x00000000       0x20 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
+ .data          0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x00000000       0x29 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+ .debug_frame   0x00000000       0x20 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+ .data          0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00000000       0x20 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x00000000       0x1b c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_divsi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_divsi3.o)
+ .debug_frame   0x00000000       0x20 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x00000000       0x1b c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_divsi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000000       0x1b c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x00000000       0x1b c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_addsubdf3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x00000000       0x1b c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_muldivdf3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x00000000       0x1b c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_cmpdf2.o)
+ .data          0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_fixdfsi.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x00000000       0x1b c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_fixdfsi.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x20000000         0x00010000         xrw
+FLASH            0x08000000         0x00010000         xr
+STARTFLASH       0x00000000         0x00000000         xr
+CRPPATCH         0x00000000         0x00000000         r
+FLASHPATCH       0x00000000         0x00000000         r
+ENDFLASH         0x00000000         0x00000000         xr
+FLASHB1          0x00000000         0x00000000         xr
+EXTMEMB0         0x00000000         0x00000000         xr
+EXTMEMB1         0x00000000         0x00000000         xr
+EXTMEMB2         0x00000000         0x00000000         xr
+EXTMEMB3         0x00000000         0x00000000         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\startup_stm32f10x_hd.o
+LOAD C:\cortex\gateway\out\stm32f10x_it.o
+LOAD C:\cortex\gateway\out\main.o
+LOAD C:\cortex\gateway\out\cortexm3_macro.o
+LOAD C:\cortex\gateway\out\stm32f10x_adc.o
+LOAD C:\cortex\gateway\out\stm32f10x_bkp.o
+LOAD C:\cortex\gateway\out\stm32f10x_can.o
+LOAD C:\cortex\gateway\out\stm32f10x_crc.o
+LOAD C:\cortex\gateway\out\stm32f10x_dac.o
+LOAD C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+LOAD C:\cortex\gateway\out\stm32f10x_dma.o
+LOAD C:\cortex\gateway\out\stm32f10x_exti.o
+LOAD C:\cortex\gateway\out\stm32f10x_flash.o
+LOAD C:\cortex\gateway\out\stm32f10x_fsmc.o
+LOAD C:\cortex\gateway\out\stm32f10x_gpio.o
+LOAD C:\cortex\gateway\out\stm32f10x_i2c.o
+LOAD C:\cortex\gateway\out\stm32f10x_iwdg.o
+LOAD C:\cortex\gateway\out\stm32f10x_lib.o
+LOAD C:\cortex\gateway\out\stm32f10x_nvic.o
+LOAD C:\cortex\gateway\out\stm32f10x_pwr.o
+LOAD C:\cortex\gateway\out\stm32f10x_rcc.o
+LOAD C:\cortex\gateway\out\stm32f10x_rtc.o
+LOAD C:\cortex\gateway\out\stm32f10x_sdio.o
+LOAD C:\cortex\gateway\out\stm32f10x_spi.o
+LOAD C:\cortex\gateway\out\stm32f10x_systick.o
+LOAD C:\cortex\gateway\out\stm32f10x_tim.o
+LOAD C:\cortex\gateway\out\stm32f10x_usart.o
+LOAD C:\cortex\gateway\out\stm32f10x_wwdg.o
+START GROUP
+LOAD C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib
+LOAD C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a
+LOAD c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+LOAD c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libm.a
+END GROUP
+                0x00000400                __Stack_Size = 0x400
+                0x00000400                PROVIDE (_Stack_Size, __Stack_Size)
+                0x2000fc00                __Stack_Init = (_estack - __Stack_Size)
+                0x2000fc00                PROVIDE (_Stack_Init, __Stack_Init)
+                0x00000100                _Minimum_Stack_Size = 0x100
+                0x00000000                PROVIDE (Undefined_Handler, 0x0)
+                0x00000000                PROVIDE (SWI_Handler, 0x0)
+                0x00000000                PROVIDE (IRQ_Handler, 0x0)
+                0x00000000                PROVIDE (Prefetch_Handler, 0x0)
+                0x00000000                PROVIDE (Abort_Handler, 0x0)
+                0x00000000                PROVIDE (FIQ_Handler, 0x0)
+                0x00000000                PROVIDE (NMIException, 0x0)
+                0x00000000                PROVIDE (NMI_Handler, 0x0)
+                0x00000000                PROVIDE (HardFaultException, 0x0)
+                0x00000000                PROVIDE (HardFault_Handler, 0x0)
+                0x00000000                PROVIDE (MemManageException, 0x0)
+                0x00000000                PROVIDE (MemManage_Handler, 0x0)
+                0x00000000                PROVIDE (BusFaultException, 0x0)
+                0x00000000                PROVIDE (BusFault_Handler, 0x0)
+                0x00000000                PROVIDE (UsageFaultException, 0x0)
+                0x00000000                PROVIDE (UsageFault_Handler, 0x0)
+                0x00000000                PROVIDE (SVCHandler, 0x0)
+                0x00000000                PROVIDE (SVC_Handler, 0x0)
+                0x00000000                PROVIDE (DebugMonitor, 0x0)
+                0x00000000                PROVIDE (DebugMon_Handler, 0x0)
+                0x00000000                PROVIDE (PendSVC, 0x0)
+                0x00000000                PROVIDE (PendSV_Handler, 0x0)
+                0x00000000                PROVIDE (SysTickHandler, 0x0)
+                0x00000000                PROVIDE (SysTick_Handler, 0x0)
+                0x00000000                PROVIDE (WWDG_IRQHandler, 0x0)
+                0x00000000                PROVIDE (PVD_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TAMPER_IRQHandler, 0x0)
+                0x00000000                PROVIDE (RTC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (FLASH_IRQHandler, 0x0)
+                0x00000000                PROVIDE (RCC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI0_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel6_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel7_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel6_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel7_IRQHandler, 0x0)
+                0x00000000                PROVIDE (ADC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (ADC1_2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_HP_CAN_TX_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_HP_CAN1_TX_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_LP_CAN_RX0_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_LP_CAN1_RX0_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN_RX1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN1_RX1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN_SCE_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN1_SCE_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI9_5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_BRK_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_UP_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_TRG_COM_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_CC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C1_EV_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C1_ER_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C2_EV_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C2_ER_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SPI1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SPI2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USART1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USART2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USART3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI15_10_IRQHandler, 0x0)
+                0x00000000                PROVIDE (RTCAlarm_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USBWakeUp_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM8_BRK_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM8_UP_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM8_TRG_COM_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM8_CC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (ADC3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (FSMC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SDIO_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SPI3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (UART4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (UART5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM6_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM7_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA2_Channel1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA2_Channel2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA2_Channel3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA2_Channel4_5_IRQHandler, 0x0)
+                0x42000000                PERIPH_BB_BASE = 0x42000000
+                0x22000000                SRAM_BB_BASE = 0x22000000
+                0x20000000                SRAM_BASE = 0x20000000
+                0x40000000                PERIPH_BASE = 0x40000000
+                0x40022000                PROVIDE (FLASH_BASE, 0x40022000)
+                0x1ffff800                PROVIDE (OB_BASE, 0x1ffff800)
+                0x40000000                APB1PERIPH_BASE = PERIPH_BASE
+                0x40010000                APB2PERIPH_BASE = (PERIPH_BASE + 0x10000)
+                0x40020000                AHBPERIPH_BASE = (PERIPH_BASE + 0x20000)
+                0x40000000                PROVIDE (TIM2, (APB1PERIPH_BASE + 0x0))
+                0x40000400                PROVIDE (TIM3, (APB1PERIPH_BASE + 0x400))
+                0x40000800                PROVIDE (TIM4, (APB1PERIPH_BASE + 0x800))
+                0x40002800                PROVIDE (RTC, (APB1PERIPH_BASE + 0x2800))
+                0x40002c00                PROVIDE (WWDG, (APB1PERIPH_BASE + 0x2c00))
+                0x40003000                PROVIDE (IWDG, (APB1PERIPH_BASE + 0x3000))
+                0x40003800                PROVIDE (SPI2, (APB1PERIPH_BASE + 0x3800))
+                0x40004400                PROVIDE (USART2, (APB1PERIPH_BASE + 0x4400))
+                0x40004800                PROVIDE (USART3, (APB1PERIPH_BASE + 0x4800))
+                0x40005400                PROVIDE (I2C1, (APB1PERIPH_BASE + 0x5400))
+                0x40005800                PROVIDE (I2C2, (APB1PERIPH_BASE + 0x5800))
+                0x40006400                PROVIDE (CAN, (APB1PERIPH_BASE + 0x6400))
+                0x40006c00                PROVIDE (BKP, (APB1PERIPH_BASE + 0x6c00))
+                0x40007000                PROVIDE (PWR, (APB1PERIPH_BASE + 0x7000))
+                0x40010000                PROVIDE (AFIO, (APB2PERIPH_BASE + 0x0))
+                0x40010400                PROVIDE (EXTI, (APB2PERIPH_BASE + 0x400))
+                0x40010800                PROVIDE (GPIOA, (APB2PERIPH_BASE + 0x800))
+                0x40010c00                PROVIDE (GPIOB, (APB2PERIPH_BASE + 0xc00))
+                0x40011000                PROVIDE (GPIOC, (APB2PERIPH_BASE + 0x1000))
+                0x40011400                PROVIDE (GPIOD, (APB2PERIPH_BASE + 0x1400))
+                0x40011800                PROVIDE (GPIOE, (APB2PERIPH_BASE + 0x1800))
+                0x40012400                PROVIDE (ADC1, (APB2PERIPH_BASE + 0x2400))
+                0x40012800                PROVIDE (ADC2, (APB2PERIPH_BASE + 0x2800))
+                0x40012c00                PROVIDE (TIM1, (APB2PERIPH_BASE + 0x2c00))
+                0x40013000                PROVIDE (SPI1, (APB2PERIPH_BASE + 0x3000))
+                0x40013800                PROVIDE (USART1, (APB2PERIPH_BASE + 0x3800))
+                0x40020000                PROVIDE (DMA, (AHBPERIPH_BASE + 0x0))
+                0x40020008                PROVIDE (DMA_Channel1, (AHBPERIPH_BASE + 0x8))
+                0x4002001c                PROVIDE (DMA_Channel2, (AHBPERIPH_BASE + 0x1c))
+                0x40020030                PROVIDE (DMA_Channel3, (AHBPERIPH_BASE + 0x30))
+                0x40020044                PROVIDE (DMA_Channel4, (AHBPERIPH_BASE + 0x44))
+                0x40020058                PROVIDE (DMA_Channel5, (AHBPERIPH_BASE + 0x58))
+                0x4002006c                PROVIDE (DMA_Channel6, (AHBPERIPH_BASE + 0x6c))
+                0x40020080                PROVIDE (DMA_Channel7, (AHBPERIPH_BASE + 0x80))
+                0x40021000                PROVIDE (RCC, (AHBPERIPH_BASE + 0x1000))
+                0xe000e000                SCS_BASE = 0xe000e000
+                0xe000e010                PROVIDE (SysTick, (SCS_BASE + 0x10))
+                0xe000e100                PROVIDE (NVIC, (SCS_BASE + 0x100))
+                0xe000ed00                PROVIDE (SCB, (SCS_BASE + 0xd00))
+                0x20010000                _estack = 0x20010000
+
+.isr_vector     0x08000000      0x1e4
+                0x08000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000      0x1e4 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\startup_stm32f10x_hd.o
+                0x08000000                g_pfnVectors
+                0x080001e4                . = ALIGN (0x4)
+
+.flash_start    0x00000000        0x0
+                0x00000000                . = ALIGN (0x4)
+ *(.flash_start)
+ *(.flash_start.*)
+                0x00000000                . = ALIGN (0x4)
+
+.crp_patch      0x00000000        0x0
+                0x00000000                . = ALIGN (0x4)
+ *(.crp_patch)
+                0x00000000                . = ALIGN (0x4)
+
+.flashtext      0x080001e4        0x0
+                0x080001e4                . = ALIGN (0x4)
+ *(.flashtext)
+                0x080001e4                . = ALIGN (0x4)
+
+.text           0x080001e8     0x4ab4
+                0x080001e8                . = ALIGN (0x4)
+ *(.text)
+ .text          0x080001e8       0x7a C:\cortex\gateway\out\cortexm3_macro.o
+                0x080001e8                __WFI
+                0x080001ec                __WFE
+                0x080001f0                __SEV
+                0x080001f4                __ISB
+                0x080001fa                __DSB
+                0x08000200                __DMB
+                0x08000206                __SVC
+                0x0800020a                __MRS_CONTROL
+                0x08000210                __MSR_CONTROL
+                0x0800021a                __MRS_PSP
+                0x08000220                __MSR_PSP
+                0x08000226                __MRS_MSP
+                0x0800022c                __MSR_MSP
+                0x08000232                __RESETPRIMASK
+                0x08000236                __SETPRIMASK
+                0x0800023a                __READ_PRIMASK
+                0x08000240                __RESETFAULTMASK
+                0x08000244                __SETFAULTMASK
+                0x08000248                __READ_FAULTMASK
+                0x0800024e                __BASEPRICONFIG
+                0x08000254                __GetBASEPRI
+                0x0800025a                __REV_HalfWord
+                0x0800025e                __REV_Word
+ *fill*         0x08000262        0x2 00
+ .text          0x08000264       0x88 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
+                0x08000264                memchr
+ .text          0x080002ec      0x150 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                0x080002ec                memcpy
+ .text          0x0800043c       0x24 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
+                0x0800043c                __isinfd
+ .text          0x08000460       0x1c c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
+                0x08000460                __isnand
+ .text          0x0800047c       0x60 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+                0x0800047c                strlen
+ *fill*         0x080004dc        0x4 00
+ .text          0x080004e0      0x278 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_udivsi3.o)
+                0x080004e0                __aeabi_uidiv
+                0x080004e0                __udivsi3
+                0x0800073c                __aeabi_uidivmod
+ .text          0x08000758      0x2b0 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_divsi3.o)
+                0x08000758                __divsi3
+                0x08000758                __aeabi_idiv
+                0x080009ec                __aeabi_idivmod
+ .text          0x08000a08        0x4 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_dvmd_tls.o)
+                0x08000a08                __aeabi_idiv0
+                0x08000a08                __aeabi_ldiv0
+ .text          0x08000a0c      0x370 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_addsubdf3.o)
+                0x08000a0c                __aeabi_drsub
+                0x08000a14                __aeabi_dsub
+                0x08000a14                __subdf3
+                0x08000a18                __aeabi_dadd
+                0x08000a18                __adddf3
+                0x08000c90                __floatunsidf
+                0x08000c90                __aeabi_ui2d
+                0x08000cb0                __floatsidf
+                0x08000cb0                __aeabi_i2d
+                0x08000cd4                __aeabi_f2d
+                0x08000cd4                __extendsfdf2
+                0x08000d10                __floatundidf
+                0x08000d10                __aeabi_ul2d
+                0x08000d20                __floatdidf
+                0x08000d20                __aeabi_l2d
+ .text          0x08000d7c      0x424 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_muldivdf3.o)
+                0x08000d7c                __aeabi_dmul
+                0x08000d7c                __muldf3
+                0x08000fd0                __divdf3
+                0x08000fd0                __aeabi_ddiv
+ .text          0x080011a0      0x110 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_cmpdf2.o)
+                0x080011a0                __gtdf2
+                0x080011a0                __gedf2
+                0x080011a8                __ltdf2
+                0x080011a8                __ledf2
+                0x080011b0                __nedf2
+                0x080011b0                __eqdf2
+                0x080011b0                __cmpdf2
+                0x0800122c                __aeabi_cdrcmple
+                0x0800123c                __aeabi_cdcmpeq
+                0x0800123c                __aeabi_cdcmple
+                0x0800124c                __aeabi_dcmpeq
+                0x08001260                __aeabi_dcmplt
+                0x08001274                __aeabi_dcmple
+                0x08001288                __aeabi_dcmpge
+                0x0800129c                __aeabi_dcmpgt
+ .text          0x080012b0       0x50 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a(_arm_fixdfsi.o)
+                0x080012b0                __aeabi_d2iz
+                0x080012b0                __fixdfsi
+ *(.text.*)
+ .text.Reset_Handler
+                0x08001300       0x50 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\startup_stm32f10x_hd.o
+                0x08001300                Reset_Handler
+ .text.SystemInit_ExtMemCtl_Dummy
+                0x08001350        0x2 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\startup_stm32f10x_hd.o
+                0x08001350                SystemInit_ExtMemCtl
+                0x08001350                SystemInit_ExtMemCtl_Dummy
+ .text.Default_Handler
+                0x08001352        0x2 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\startup_stm32f10x_hd.o
+                0x08001352                DebugMon_Handler
+                0x08001352                HardFault_Handler
+                0x08001352                SysTick_Handler
+                0x08001352                PendSV_Handler
+                0x08001352                NMI_Handler
+                0x08001352                UsageFault_Handler
+                0x08001352                CAN1_RX1_IRQHandler
+                0x08001352                Default_Handler
+                0x08001352                MemManage_Handler
+                0x08001352                SVC_Handler
+                0x08001352                USB_LP_CAN1_RX0_IRQHandler
+                0x08001352                USB_HP_CAN1_TX_IRQHandler
+                0x08001352                CAN1_SCE_IRQHandler
+                0x08001352                BusFault_Handler
+ .text.WWDG_IRQHandler
+                0x08001354       0x10 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001354                WWDG_IRQHandler
+ .text.PVD_IRQHandler
+                0x08001364        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001364                PVD_IRQHandler
+ .text.TAMPER_IRQHandler
+                0x08001366        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001366                TAMPER_IRQHandler
+ .text.RTC_IRQHandler
+                0x08001368        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001368                RTC_IRQHandler
+ .text.FLASH_IRQHandler
+                0x0800136a        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800136a                FLASH_IRQHandler
+ .text.RCC_IRQHandler
+                0x0800136c        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800136c                RCC_IRQHandler
+ .text.EXTI0_IRQHandler
+                0x0800136e        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800136e                EXTI0_IRQHandler
+ .text.EXTI1_IRQHandler
+                0x08001370        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001370                EXTI1_IRQHandler
+ .text.EXTI2_IRQHandler
+                0x08001372        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001372                EXTI2_IRQHandler
+ .text.EXTI3_IRQHandler
+                0x08001374        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001374                EXTI3_IRQHandler
+ .text.EXTI4_IRQHandler
+                0x08001376        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001376                EXTI4_IRQHandler
+ .text.DMA1_Channel1_IRQHandler
+                0x08001378        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001378                DMA1_Channel1_IRQHandler
+ .text.DMA1_Channel2_IRQHandler
+                0x0800137a        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800137a                DMA1_Channel2_IRQHandler
+ .text.DMA1_Channel3_IRQHandler
+                0x0800137c        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800137c                DMA1_Channel3_IRQHandler
+ *fill*         0x0800137e        0x2 00
+ .text.DMA1_Channel4_IRQHandler
+                0x08001380       0x4c C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001380                DMA1_Channel4_IRQHandler
+ .text.DMA1_Channel5_IRQHandler
+                0x080013cc       0x48 C:\cortex\gateway\out\stm32f10x_it.o
+                0x080013cc                DMA1_Channel5_IRQHandler
+ .text.DMA1_Channel6_IRQHandler
+                0x08001414        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001414                DMA1_Channel6_IRQHandler
+ .text.DMA1_Channel7_IRQHandler
+                0x08001416        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001416                DMA1_Channel7_IRQHandler
+ .text.ADC1_2_IRQHandler
+                0x08001418        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001418                ADC1_2_IRQHandler
+ .text.EXTI9_5_IRQHandler
+                0x0800141a        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800141a                EXTI9_5_IRQHandler
+ .text.TIM1_BRK_IRQHandler
+                0x0800141c        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800141c                TIM1_BRK_IRQHandler
+ .text.TIM1_UP_IRQHandler
+                0x0800141e        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800141e                TIM1_UP_IRQHandler
+ .text.TIM1_TRG_COM_IRQHandler
+                0x08001420        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001420                TIM1_TRG_COM_IRQHandler
+ .text.TIM1_CC_IRQHandler
+                0x08001422        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001422                TIM1_CC_IRQHandler
+ .text.TIM2_IRQHandler
+                0x08001424        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001424                TIM2_IRQHandler
+ .text.TIM3_IRQHandler
+                0x08001426        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001426                TIM3_IRQHandler
+ .text.TIM4_IRQHandler
+                0x08001428        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001428                TIM4_IRQHandler
+ .text.I2C1_EV_IRQHandler
+                0x0800142a        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800142a                I2C1_EV_IRQHandler
+ .text.I2C1_ER_IRQHandler
+                0x0800142c        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800142c                I2C1_ER_IRQHandler
+ *fill*         0x0800142e        0x2 00
+ .text.I2C2_EV_IRQHandler
+                0x08001430      0x19c C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001430                I2C2_EV_IRQHandler
+ .text.I2C2_ER_IRQHandler
+                0x080015cc       0x64 C:\cortex\gateway\out\stm32f10x_it.o
+                0x080015cc                I2C2_ER_IRQHandler
+ .text.SPI1_IRQHandler
+                0x08001630        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001630                SPI1_IRQHandler
+ .text.SPI2_IRQHandler
+                0x08001632        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001632                SPI2_IRQHandler
+ .text.USART1_IRQHandler
+                0x08001634        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001634                USART1_IRQHandler
+ .text.USART2_IRQHandler
+                0x08001636        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001636                USART2_IRQHandler
+ .text.USART3_IRQHandler
+                0x08001638        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001638                USART3_IRQHandler
+ .text.EXTI15_10_IRQHandler
+                0x0800163a        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800163a                EXTI15_10_IRQHandler
+ .text.RTCAlarm_IRQHandler
+                0x0800163c        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800163c                RTCAlarm_IRQHandler
+ .text.USBWakeUp_IRQHandler
+                0x0800163e        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800163e                USBWakeUp_IRQHandler
+ .text.TIM8_BRK_IRQHandler
+                0x08001640        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001640                TIM8_BRK_IRQHandler
+ .text.TIM8_UP_IRQHandler
+                0x08001642        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001642                TIM8_UP_IRQHandler
+ .text.TIM8_TRG_COM_IRQHandler
+                0x08001644        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001644                TIM8_TRG_COM_IRQHandler
+ .text.TIM8_CC_IRQHandler
+                0x08001646        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001646                TIM8_CC_IRQHandler
+ .text.ADC3_IRQHandler
+                0x08001648        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001648                ADC3_IRQHandler
+ .text.FSMC_IRQHandler
+                0x0800164a        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800164a                FSMC_IRQHandler
+ .text.SDIO_IRQHandler
+                0x0800164c        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800164c                SDIO_IRQHandler
+ .text.TIM5_IRQHandler
+                0x0800164e        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800164e                TIM5_IRQHandler
+ .text.SPI3_IRQHandler
+                0x08001650        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001650                SPI3_IRQHandler
+ .text.UART4_IRQHandler
+                0x08001652        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001652                UART4_IRQHandler
+ .text.UART5_IRQHandler
+                0x08001654        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001654                UART5_IRQHandler
+ .text.TIM6_IRQHandler
+                0x08001656        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001656                TIM6_IRQHandler
+ .text.TIM7_IRQHandler
+                0x08001658        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001658                TIM7_IRQHandler
+ .text.DMA2_Channel1_IRQHandler
+                0x0800165a        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800165a                DMA2_Channel1_IRQHandler
+ .text.DMA2_Channel2_IRQHandler
+                0x0800165c        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800165c                DMA2_Channel2_IRQHandler
+ .text.DMA2_Channel3_IRQHandler
+                0x0800165e        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x0800165e                DMA2_Channel3_IRQHandler
+ .text.DMA2_Channel4_5_IRQHandler
+                0x08001660        0x2 C:\cortex\gateway\out\stm32f10x_it.o
+                0x08001660                DMA2_Channel4_5_IRQHandler
+ *fill*         0x08001662        0x2 00
+ .text.I2C_Initialize
+                0x08001664       0x54 C:\cortex\gateway\out\main.o
+                0x08001664                I2C_Initialize
+ .text.USART_Init1
+                0x080016b8       0x78 C:\cortex\gateway\out\main.o
+                0x080016b8                USART_Init1
+ .text.RCC_Configuration
+                0x08001730       0x98 C:\cortex\gateway\out\main.o
+                0x08001730                RCC_Configuration
+ .text.GPIO_Configuration
+                0x080017c8       0xb4 C:\cortex\gateway\out\main.o
+                0x080017c8                GPIO_Configuration
+ .text.NVIC_Configuration
+                0x0800187c       0x64 C:\cortex\gateway\out\main.o
+                0x0800187c                NVIC_Configuration
+ .text.DMA_Configuration
+                0x080018e0       0x9c C:\cortex\gateway\out\main.o
+                0x080018e0                DMA_Configuration
+ .text.main     0x0800197c      0x14c C:\cortex\gateway\out\main.o
+                0x0800197c                main
+ .text.__io_putchar
+                0x08001ac8       0x20 C:\cortex\gateway\out\main.o
+                0x08001ac8                __io_putchar
+ .text.DMA_DeInit
+                0x08001ae8       0xec C:\cortex\gateway\out\stm32f10x_dma.o
+                0x08001ae8                DMA_DeInit
+ .text.DMA_Init
+                0x08001bd4       0x40 C:\cortex\gateway\out\stm32f10x_dma.o
+                0x08001bd4                DMA_Init
+ .text.DMA_Cmd  0x08001c14       0x14 C:\cortex\gateway\out\stm32f10x_dma.o
+                0x08001c14                DMA_Cmd
+ .text.DMA_ITConfig
+                0x08001c28       0x12 C:\cortex\gateway\out\stm32f10x_dma.o
+                0x08001c28                DMA_ITConfig
+ *fill*         0x08001c3a        0x2 00
+ .text.DMA_GetITStatus
+                0x08001c3c       0x20 C:\cortex\gateway\out\stm32f10x_dma.o
+                0x08001c3c                DMA_GetITStatus
+ .text.DMA_ClearITPendingBit
+                0x08001c5c       0x18 C:\cortex\gateway\out\stm32f10x_dma.o
+                0x08001c5c                DMA_ClearITPendingBit
+ .text.FLASH_SetLatency
+                0x08001c74       0x18 C:\cortex\gateway\out\stm32f10x_flash.o
+                0x08001c74                FLASH_SetLatency
+ .text.FLASH_PrefetchBufferCmd
+                0x08001c8c       0x18 C:\cortex\gateway\out\stm32f10x_flash.o
+                0x08001c8c                FLASH_PrefetchBufferCmd
+ .text.GPIO_Init
+                0x08001ca4       0x9e C:\cortex\gateway\out\stm32f10x_gpio.o
+                0x08001ca4                GPIO_Init
+ .text.GPIO_ReadOutputDataBit
+                0x08001d42        0xc C:\cortex\gateway\out\stm32f10x_gpio.o
+                0x08001d42                GPIO_ReadOutputDataBit
+ .text.GPIO_WriteBit
+                0x08001d4e        0xa C:\cortex\gateway\out\stm32f10x_gpio.o
+                0x08001d4e                GPIO_WriteBit
+ .text.I2C_Init
+                0x08001d58       0xd8 C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001d58                I2C_Init
+ .text.I2C_Cmd  0x08001e30       0x1a C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001e30                I2C_Cmd
+ .text.I2C_GenerateSTART
+                0x08001e4a       0x1a C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001e4a                I2C_GenerateSTART
+ .text.I2C_GenerateSTOP
+                0x08001e64       0x1a C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001e64                I2C_GenerateSTOP
+ .text.I2C_AcknowledgeConfig
+                0x08001e7e       0x1a C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001e7e                I2C_AcknowledgeConfig
+ .text.I2C_ITConfig
+                0x08001e98       0x16 C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001e98                I2C_ITConfig
+ .text.I2C_SendData
+                0x08001eae        0x4 C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001eae                I2C_SendData
+ .text.I2C_ReceiveData
+                0x08001eb2        0x6 C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001eb2                I2C_ReceiveData
+ .text.I2C_Send7bitAddress
+                0x08001eb8       0x10 C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001eb8                I2C_Send7bitAddress
+ .text.I2C_StretchClockCmd
+                0x08001ec8       0x1a C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001ec8                I2C_StretchClockCmd
+ .text.I2C_GetLastEvent
+                0x08001ee2       0x10 C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001ee2                I2C_GetLastEvent
+ .text.I2C_ClearFlag
+                0x08001ef2        0x8 C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001ef2                I2C_ClearFlag
+ .text.I2C_GetITStatus
+                0x08001efa       0x1c C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001efa                I2C_GetITStatus
+ .text.I2C_ClearITPendingBit
+                0x08001f16        0x8 C:\cortex\gateway\out\stm32f10x_i2c.o
+                0x08001f16                I2C_ClearITPendingBit
+ *fill*         0x08001f1e        0x2 00
+ .text.NVIC_PriorityGroupConfig
+                0x08001f20       0x14 C:\cortex\gateway\out\stm32f10x_nvic.o
+                0x08001f20                NVIC_PriorityGroupConfig
+ .text.NVIC_Init
+                0x08001f34       0x84 C:\cortex\gateway\out\stm32f10x_nvic.o
+                0x08001f34                NVIC_Init
+ .text.NVIC_SetVectorTable
+                0x08001fb8       0x14 C:\cortex\gateway\out\stm32f10x_nvic.o
+                0x08001fb8                NVIC_SetVectorTable
+ .text.RCC_HSEConfig
+                0x08001fcc       0x38 C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x08001fcc                RCC_HSEConfig
+ .text.RCC_PLLConfig
+                0x08002004       0x18 C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x08002004                RCC_PLLConfig
+ .text.RCC_PLLCmd
+                0x0800201c        0xc C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x0800201c                RCC_PLLCmd
+ .text.RCC_SYSCLKConfig
+                0x08002028       0x14 C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x08002028                RCC_SYSCLKConfig
+ .text.RCC_GetSYSCLKSource
+                0x0800203c       0x10 C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x0800203c                RCC_GetSYSCLKSource
+ .text.RCC_HCLKConfig
+                0x0800204c       0x14 C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x0800204c                RCC_HCLKConfig
+ .text.RCC_PCLK1Config
+                0x08002060       0x14 C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x08002060                RCC_PCLK1Config
+ .text.RCC_PCLK2Config
+                0x08002074       0x14 C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x08002074                RCC_PCLK2Config
+ .text.RCC_GetClocksFreq
+                0x08002088       0xa4 C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x08002088                RCC_GetClocksFreq
+ .text.RCC_AHBPeriphClockCmd
+                0x0800212c       0x18 C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x0800212c                RCC_AHBPeriphClockCmd
+ .text.RCC_APB2PeriphClockCmd
+                0x08002144       0x18 C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x08002144                RCC_APB2PeriphClockCmd
+ .text.RCC_APB1PeriphClockCmd
+                0x0800215c       0x18 C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x0800215c                RCC_APB1PeriphClockCmd
+ .text.RCC_GetFlagStatus
+                0x08002174       0x28 C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x08002174                RCC_GetFlagStatus
+ .text.RCC_WaitForHSEStartUp
+                0x0800219c       0x2a C:\cortex\gateway\out\stm32f10x_rcc.o
+                0x0800219c                RCC_WaitForHSEStartUp
+ *fill*         0x080021c6        0x2 00
+ .text.USART_Init
+                0x080021c8       0x94 C:\cortex\gateway\out\stm32f10x_usart.o
+                0x080021c8                USART_Init
+ .text.USART_Cmd
+                0x0800225c       0x1a C:\cortex\gateway\out\stm32f10x_usart.o
+                0x0800225c                USART_Cmd
+ .text.USART_DMACmd
+                0x08002276       0x16 C:\cortex\gateway\out\stm32f10x_usart.o
+                0x08002276                USART_DMACmd
+ .text.USART_SendData
+                0x0800228c        0x8 C:\cortex\gateway\out\stm32f10x_usart.o
+                0x0800228c                USART_SendData
+ .text.USART_GetFlagStatus
+                0x08002294        0xc C:\cortex\gateway\out\stm32f10x_usart.o
+                0x08002294                USART_GetFlagStatus
+ .text.WWDG_SetCounter
+                0x080022a0       0x10 C:\cortex\gateway\out\stm32f10x_wwdg.o
+                0x080022a0                WWDG_SetCounter
+ .text.WWDG_ClearFlag
+                0x080022b0        0xc C:\cortex\gateway\out\stm32f10x_wwdg.o
+                0x080022b0                WWDG_ClearFlag
+ .text.printf   0x080022bc       0x20 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
+                0x080022bc                printf
+ *fill*         0x080022dc        0x4 00
+ .text._vfprintf_r
+                0x080022e0      0xcf8 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+                0x080022e0                _vfprintf_r
+ .text.vfprintf
+                0x08002fd8       0x20 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+                0x08002fd8                vfprintf
+ .text.puts     0x08002ff8       0x38 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
+                0x08002ff8                puts
+ .text._SMALL_PRINTF_puts
+                0x08003030       0x58 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
+                0x08003030                _SMALL_PRINTF_puts
+ .text.quorem   0x08003088      0x17c C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+ *fill*         0x08003204        0x4 00
+ .text._dtoa_r  0x08003208      0xf60 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+                0x08003208                _dtoa_r
+ .text._wcsrtombs_r
+                0x08004168       0x90 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
+                0x08004168                _wcsrtombs_r
+ .text._wcrtomb_r
+                0x080041f8        0x4 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
+                0x080041f8                _wcrtomb_r
+ .text._small_hi0bits
+                0x080041fc       0x54 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x080041fc                _small_hi0bits
+ .text._small_lo0bits
+                0x08004250       0x68 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08004250                _small_lo0bits
+ .text._small_i2b
+                0x080042b8       0x14 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x080042b8                _small_i2b
+ .text._small_multiply
+                0x080042cc      0x160 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x080042cc                _small_multiply
+ .text._small_lshift
+                0x0800442c       0xa4 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x0800442c                _small_lshift
+ .text.__small_mcmp
+                0x080044d0       0x44 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x080044d0                __small_mcmp
+ .text.__small_mdiff
+                0x08004514       0xfc C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08004514                __small_mdiff
+ .text._small_d2b
+                0x08004610       0xd4 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08004610                _small_d2b
+ .text._small_multadd
+                0x080046e4       0xa8 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x080046e4                _small_multadd
+ .text._small_pow5mult
+                0x0800478c      0x138 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x0800478c                _small_pow5mult
+ *(.rodata)
+ .rodata        0x080048c4       0x14 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .rodata        0x080048d8      0x184 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+ .rodata        0x08004a5c       0x18 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+ *fill*         0x08004a74        0x4 00
+ .rodata        0x08004a78      0x128 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+                0x08004a78                __small_mprec_tens
+                0x08004b50                __small_mprec_bigtens
+                0x08004b78                __small_mprec_tinytens
+ *(.rodata*)
+ .rodata.str1.1
+                0x08004ba0       0x8e C:\cortex\gateway\out\main.o
+ *fill*         0x08004c2e        0x2 00
+ .rodata.str1.4
+                0x08004c30       0x5a C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+                                 0x5c (size before relaxing)
+ *fill*         0x08004c8a        0x2 00
+ .rodata.str1.4
+                0x08004c8c        0x9 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+                                 0x14 (size before relaxing)
+ *fill*         0x08004c95        0x3 00
+ .rodata.str1.4
+                0x08004c98        0x4 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+                0x08004c9c                . = ALIGN (0x4)
+                0x08004c9c                _etext = .
+                0x08004c9c                _sidata = _etext
+
+.vfp11_veneer   0x08004c9c        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x08004c9c        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.flashpatch     0x00000000        0x0
+                0x00000000                . = ALIGN (0x4)
+ *(.flashpatch)
+                0x00000000                . = ALIGN (0x4)
+
+.endflash       0x00000000        0x0
+                0x00000000                . = ALIGN (0x4)
+ *(.endflash)
+                0x00000000                . = ALIGN (0x4)
+                0x00000000                _e_endflash = .
+
+.data           0x20000000       0xf4 load address 0x08004c9c
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _sdata = .
+                0x20000000                _data = .
+ *(.data)
+ .data          0x20000000       0xf4 c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+                0x20000000                _impure_ptr
+ *(.data.*)
+ *(.RAMtext)
+                0x200000f4                . = ALIGN (0x4)
+                0x200000f4                _edata = .
+                0x08004d90                _eidata = ((_sidata + _edata) - _sdata)
+                0x08010000                _lastdataromaddress = 0x8010000
+                0x00000000                toobig = (_eidata > _lastdataromaddress)?!!!!!!!!! FLASH IS FULL !!!!!!!!!:0x0
+
+.bss            0x200000f4      0x4f4 load address 0x08004d90
+                0x200000f4                . = ALIGN (0x4)
+                0x200000f4                _sbss = .
+                0x200000f4                _bss = .
+ *(.bss)
+ .bss           0x200000f4        0x8 C:\cortex\gateway\out\stm32f10x_it.o
+                0x200000f8                RxCounter
+ .bss           0x200000fc        0xc C:\cortex\gateway\out\main.o
+                0x200000fc                ReceivedOK
+                0x200000fd                Transmitter
+                0x200000fe                I2CTxDone
+                0x20000100                TxIdx
+                0x20000102                I2CRxDone
+                0x20000104                RxIdx
+                0x20000106                TransferStatus1
+                0x20000107                TransferStatus2
+ *(COMMON)
+ COMMON         0x20000108      0x4e0 C:\cortex\gateway\out\main.o
+                0x20000108                HSEStartUpStatus
+                0x2000010c                I2C_InitStructure
+                0x2000011c                Commands
+                0x2000051c                ExternData
+                0x20000570                InternData
+                0x200005c4                USART_InitStructure
+                0x200005d4                NVIC_InitStructure
+                0x200005d8                Command
+                0x200005e8                . = ALIGN (0x4)
+                0x200005e8                _ebss = .
+                0x200005e8                PROVIDE (end, _ebss)
+                0x200005e8                PROVIDE (_end, _ebss)
+
+._usrstack      0x200005e8      0x100 load address 0x08005284
+                0x200005e8                . = ALIGN (0x4)
+                0x200005e8                _susrstack = .
+                0x200006e8                . = (. + _Minimum_Stack_Size)
+ *fill*         0x200005e8      0x100 00
+                0x200006e8                . = ALIGN (0x4)
+                0x200006e8                _eusrstack = .
+
+.b1text
+ *(.b1text)
+ *(.b1rodata)
+ *(.b1rodata*)
+
+.eb0text
+ *(.eb0text)
+ *(.eb0rodata)
+ *(.eb0rodata*)
+
+.eb1text
+ *(.eb1text)
+ *(.eb1rodata)
+ *(.eb1rodata*)
+
+.eb2text
+ *(.eb2text)
+ *(.eb2rodata)
+ *(.eb2rodata*)
+
+.eb3text
+ *(.eb3text)
+ *(.eb3rodata)
+ *(.eb3rodata*)
+                0x200006e8                __exidx_start = .
+                0x200006e8                __exidx_end = .
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.ARM.attributes
+                0x00000000       0x2d
+ .ARM.attributes
+                0x00000000       0x21 C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\startup_stm32f10x_hd.o
+ .ARM.attributes
+                0x00000021       0x31 C:\cortex\gateway\out\stm32f10x_it.o
+ .ARM.attributes
+                0x00000052       0x31 C:\cortex\gateway\out\main.o
+ .ARM.attributes
+                0x00000083       0x21 C:\cortex\gateway\out\cortexm3_macro.o
+ .ARM.attributes
+                0x000000a4       0x31 C:\cortex\gateway\out\stm32f10x_adc.o
+ .ARM.attributes
+                0x000000d5       0x31 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .ARM.attributes
+                0x00000106       0x31 C:\cortex\gateway\out\stm32f10x_can.o
+ .ARM.attributes
+                0x00000137       0x31 C:\cortex\gateway\out\stm32f10x_crc.o
+ .ARM.attributes
+                0x00000168       0x31 C:\cortex\gateway\out\stm32f10x_dac.o
+ .ARM.attributes
+                0x00000199       0x31 C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .ARM.attributes
+                0x000001ca       0x31 C:\cortex\gateway\out\stm32f10x_dma.o
+ .ARM.attributes
+                0x000001fb       0x31 C:\cortex\gateway\out\stm32f10x_exti.o
+ .ARM.attributes
+                0x0000022c       0x31 C:\cortex\gateway\out\stm32f10x_flash.o
+ .ARM.attributes
+                0x0000025d       0x31 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .ARM.attributes
+                0x0000028e       0x31 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .ARM.attributes
+                0x000002bf       0x31 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .ARM.attributes
+                0x000002f0       0x31 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .ARM.attributes
+                0x00000321       0x31 C:\cortex\gateway\out\stm32f10x_lib.o
+ .ARM.attributes
+                0x00000352       0x31 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .ARM.attributes
+                0x00000383       0x31 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .ARM.attributes
+                0x000003b4       0x31 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .ARM.attributes
+                0x000003e5       0x31 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .ARM.attributes
+                0x00000416       0x31 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .ARM.attributes
+                0x00000447       0x31 C:\cortex\gateway\out\stm32f10x_spi.o
+ .ARM.attributes
+                0x00000478       0x31 C:\cortex\gateway\out\stm32f10x_systick.o
+ .ARM.attributes
+                0x000004a9       0x31 C:\cortex\gateway\out\stm32f10x_tim.o
+ .ARM.attributes
+                0x000004da       0x31 C:\cortex\gateway\out\stm32f10x_usart.o
+ .ARM.attributes
+                0x0000050b       0x31 C:\cortex\gateway\out\stm32f10x_wwdg.o
+ .ARM.attributes
+                0x0000053c       0x2e C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
+ .ARM.attributes
+                0x0000056a       0x2e C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+ .ARM.attributes
+                0x00000598       0x2e C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
+ .ARM.attributes
+                0x000005c6       0x2e C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+ .ARM.attributes
+                0x000005f4       0x2e C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
+ .ARM.attributes
+                0x00000622       0x2e C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
+ .ARM.attributes
+                0x00000650       0x2e C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+
+.comment        0x00000000      0x150
+ *(.comment)
+ .comment       0x00000000       0x2a C:\cortex\gateway\out\stm32f10x_it.o
+                                 0x2b (size before relaxing)
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\main.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_adc.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_bkp.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_can.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_crc.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_dac.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_dma.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_exti.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_flash.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_gpio.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_i2c.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_lib.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_nvic.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_pwr.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_rcc.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_rtc.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_sdio.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_spi.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_systick.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_tim.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_usart.o
+ .comment       0x00000000       0x2b C:\cortex\gateway\out\stm32f10x_wwdg.o
+ .comment       0x0000002a       0x2a C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_printf.o)
+ .comment       0x00000054       0x2a C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_vfprintf.o)
+ .comment       0x0000007e       0x2a C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(_sp_puts.o)
+ .comment       0x000000a8       0x2a C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_dtoa.o)
+ .comment       0x000000d2       0x2a C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcsrtombs.o)
+ .comment       0x000000fc       0x2a C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_wcrtomb.o)
+ .comment       0x00000126       0x2a C:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a(small_mprec.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000     0x12f0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000      0x240 C:\cortex\gateway\out\stm32f10x_it.o
+ .debug_aranges
+                0x00000240       0x78 C:\cortex\gateway\out\main.o
+ .debug_aranges
+                0x000002b8      0x138 C:\cortex\gateway\out\stm32f10x_adc.o
+ .debug_aranges
+                0x000003f0       0x78 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .debug_aranges
+                0x00000468       0xa8 C:\cortex\gateway\out\stm32f10x_can.o
+ .debug_aranges
+                0x00000510       0x48 C:\cortex\gateway\out\stm32f10x_crc.o
+ .debug_aranges
+                0x00000558       0x78 C:\cortex\gateway\out\stm32f10x_dac.o
+ .debug_aranges
+                0x000005d0       0x30 C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .debug_aranges
+                0x00000600       0x68 C:\cortex\gateway\out\stm32f10x_dma.o
+ .debug_aranges
+                0x00000668       0x58 C:\cortex\gateway\out\stm32f10x_exti.o
+ .debug_aranges
+                0x000006c0       0x30 C:\cortex\gateway\out\stm32f10x_flash.o
+ .debug_aranges
+                0x000006f0       0xb0 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .debug_aranges
+                0x000007a0       0xa0 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .debug_aranges
+                0x00000840      0x118 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .debug_aranges
+                0x00000958       0x48 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .debug_aranges
+                0x000009a0      0x108 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .debug_aranges
+                0x00000aa8       0x60 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .debug_aranges
+                0x00000b08      0x118 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .debug_aranges
+                0x00000c20       0x88 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .debug_aranges
+                0x00000ca8      0x108 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .debug_aranges
+                0x00000db0       0xd0 C:\cortex\gateway\out\stm32f10x_spi.o
+ .debug_aranges
+                0x00000e80       0x48 C:\cortex\gateway\out\stm32f10x_systick.o
+ .debug_aranges
+                0x00000ec8      0x2e0 C:\cortex\gateway\out\stm32f10x_tim.o
+ .debug_aranges
+                0x000011a8       0xf0 C:\cortex\gateway\out\stm32f10x_usart.o
+ .debug_aranges
+                0x00001298       0x58 C:\cortex\gateway\out\stm32f10x_wwdg.o
+
+.debug_pubnames
+                0x00000000     0x3119
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x661 C:\cortex\gateway\out\stm32f10x_it.o
+ .debug_pubnames
+                0x00000661      0x1e9 C:\cortex\gateway\out\main.o
+ .debug_pubnames
+                0x0000084a      0x401 C:\cortex\gateway\out\stm32f10x_adc.o
+ .debug_pubnames
+                0x00000c4b      0x128 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .debug_pubnames
+                0x00000d73      0x152 C:\cortex\gateway\out\stm32f10x_can.o
+ .debug_pubnames
+                0x00000ec5       0x82 C:\cortex\gateway\out\stm32f10x_crc.o
+ .debug_pubnames
+                0x00000f47      0x116 C:\cortex\gateway\out\stm32f10x_dac.o
+ .debug_pubnames
+                0x0000105d       0x4c C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .debug_pubnames
+                0x000010a9       0xcf C:\cortex\gateway\out\stm32f10x_dma.o
+ .debug_pubnames
+                0x00001178       0xbb C:\cortex\gateway\out\stm32f10x_exti.o
+ .debug_pubnames
+                0x00001233       0x60 C:\cortex\gateway\out\stm32f10x_flash.o
+ .debug_pubnames
+                0x00001293      0x1a3 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .debug_pubnames
+                0x00001436      0x17b C:\cortex\gateway\out\stm32f10x_gpio.o
+ .debug_pubnames
+                0x000015b1      0x2b0 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .debug_pubnames
+                0x00001861       0x91 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .debug_pubnames
+                0x000018f2      0x360 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .debug_pubnames
+                0x00001c52       0xcb C:\cortex\gateway\out\stm32f10x_pwr.o
+ .debug_pubnames
+                0x00001d1d      0x2c4 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .debug_pubnames
+                0x00001fe1      0x136 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .debug_pubnames
+                0x00002117      0x2ac C:\cortex\gateway\out\stm32f10x_sdio.o
+ .debug_pubnames
+                0x000023c3      0x1f6 C:\cortex\gateway\out\stm32f10x_spi.o
+ .debug_pubnames
+                0x000025b9       0xa1 C:\cortex\gateway\out\stm32f10x_systick.o
+ .debug_pubnames
+                0x0000265a      0x7b0 C:\cortex\gateway\out\stm32f10x_tim.o
+ .debug_pubnames
+                0x00002e0a      0x25f C:\cortex\gateway\out\stm32f10x_usart.o
+ .debug_pubnames
+                0x00003069       0xb0 C:\cortex\gateway\out\stm32f10x_wwdg.o
+
+.debug_info     0x00000000     0xb32a
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0xa00 C:\cortex\gateway\out\stm32f10x_it.o
+ .debug_info    0x00000a00      0xb08 C:\cortex\gateway\out\main.o
+ .debug_info    0x00001508      0xb7c C:\cortex\gateway\out\stm32f10x_adc.o
+ .debug_info    0x00002084      0x7ca C:\cortex\gateway\out\stm32f10x_bkp.o
+ .debug_info    0x0000284e      0x932 C:\cortex\gateway\out\stm32f10x_can.o
+ .debug_info    0x00003180      0x1be C:\cortex\gateway\out\stm32f10x_crc.o
+ .debug_info    0x0000333e      0x444 C:\cortex\gateway\out\stm32f10x_dac.o
+ .debug_info    0x00003782      0x117 C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .debug_info    0x00003899      0x417 C:\cortex\gateway\out\stm32f10x_dma.o
+ .debug_info    0x00003cb0      0x318 C:\cortex\gateway\out\stm32f10x_exti.o
+ .debug_info    0x00003fc8      0x16f C:\cortex\gateway\out\stm32f10x_flash.o
+ .debug_info    0x00004137      0x95d C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .debug_info    0x00004a94      0x690 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .debug_info    0x00005124      0xafc C:\cortex\gateway\out\stm32f10x_i2c.o
+ .debug_info    0x00005c20      0x1bc C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .debug_info    0x00005ddc       0x53 C:\cortex\gateway\out\stm32f10x_lib.o
+ .debug_info    0x00005e2f      0x95e C:\cortex\gateway\out\stm32f10x_nvic.o
+ .debug_info    0x0000678d      0x264 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .debug_info    0x000069f1      0x8ac C:\cortex\gateway\out\stm32f10x_rcc.o
+ .debug_info    0x0000729d      0x41c C:\cortex\gateway\out\stm32f10x_rtc.o
+ .debug_info    0x000076b9      0x829 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .debug_info    0x00007ee2      0x909 C:\cortex\gateway\out\stm32f10x_spi.o
+ .debug_info    0x000087eb      0x209 C:\cortex\gateway\out\stm32f10x_systick.o
+ .debug_info    0x000089f4     0x1d96 C:\cortex\gateway\out\stm32f10x_tim.o
+ .debug_info    0x0000a78a      0x99d C:\cortex\gateway\out\stm32f10x_usart.o
+ .debug_info    0x0000b127      0x203 C:\cortex\gateway\out\stm32f10x_wwdg.o
+
+.debug_abbrev   0x00000000     0x2612
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x183 C:\cortex\gateway\out\stm32f10x_it.o
+ .debug_abbrev  0x00000183      0x1f0 C:\cortex\gateway\out\main.o
+ .debug_abbrev  0x00000373      0x1b4 C:\cortex\gateway\out\stm32f10x_adc.o
+ .debug_abbrev  0x00000527      0x14f C:\cortex\gateway\out\stm32f10x_bkp.o
+ .debug_abbrev  0x00000676      0x1ec C:\cortex\gateway\out\stm32f10x_can.o
+ .debug_abbrev  0x00000862      0x116 C:\cortex\gateway\out\stm32f10x_crc.o
+ .debug_abbrev  0x00000978      0x155 C:\cortex\gateway\out\stm32f10x_dac.o
+ .debug_abbrev  0x00000acd       0xcb C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .debug_abbrev  0x00000b98      0x160 C:\cortex\gateway\out\stm32f10x_dma.o
+ .debug_abbrev  0x00000cf8      0x15a C:\cortex\gateway\out\stm32f10x_exti.o
+ .debug_abbrev  0x00000e52       0xa6 C:\cortex\gateway\out\stm32f10x_flash.o
+ .debug_abbrev  0x00000ef8      0x1c7 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .debug_abbrev  0x000010bf      0x1f5 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .debug_abbrev  0x000012b4      0x18b C:\cortex\gateway\out\stm32f10x_i2c.o
+ .debug_abbrev  0x0000143f       0xf8 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .debug_abbrev  0x00001537       0x1d C:\cortex\gateway\out\stm32f10x_lib.o
+ .debug_abbrev  0x00001554      0x22f C:\cortex\gateway\out\stm32f10x_nvic.o
+ .debug_abbrev  0x00001783      0x133 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .debug_abbrev  0x000018b6      0x1f6 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .debug_abbrev  0x00001aac      0x1a1 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .debug_abbrev  0x00001c4d      0x1ed C:\cortex\gateway\out\stm32f10x_sdio.o
+ .debug_abbrev  0x00001e3a      0x1b6 C:\cortex\gateway\out\stm32f10x_spi.o
+ .debug_abbrev  0x00001ff0      0x11d C:\cortex\gateway\out\stm32f10x_systick.o
+ .debug_abbrev  0x0000210d      0x230 C:\cortex\gateway\out\stm32f10x_tim.o
+ .debug_abbrev  0x0000233d      0x1c8 C:\cortex\gateway\out\stm32f10x_usart.o
+ .debug_abbrev  0x00002505      0x10d C:\cortex\gateway\out\stm32f10x_wwdg.o
+
+.debug_line     0x00000000     0x41ae
+ *(.debug_line)
+ .debug_line    0x00000000      0x5aa C:\cortex\gateway\out\stm32f10x_it.o
+ .debug_line    0x000005aa      0x30a C:\cortex\gateway\out\main.o
+ .debug_line    0x000008b4      0x3f0 C:\cortex\gateway\out\stm32f10x_adc.o
+ .debug_line    0x00000ca4      0x179 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .debug_line    0x00000e1d      0x2ea C:\cortex\gateway\out\stm32f10x_can.o
+ .debug_line    0x00001107      0x117 C:\cortex\gateway\out\stm32f10x_crc.o
+ .debug_line    0x0000121e      0x1a9 C:\cortex\gateway\out\stm32f10x_dac.o
+ .debug_line    0x000013c7       0xcf C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .debug_line    0x00001496      0x1b2 C:\cortex\gateway\out\stm32f10x_dma.o
+ .debug_line    0x00001648      0x158 C:\cortex\gateway\out\stm32f10x_exti.o
+ .debug_line    0x000017a0       0xd2 C:\cortex\gateway\out\stm32f10x_flash.o
+ .debug_line    0x00001872      0x315 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .debug_line    0x00001b87      0x259 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .debug_line    0x00001de0      0x3ad C:\cortex\gateway\out\stm32f10x_i2c.o
+ .debug_line    0x0000218d      0x106 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .debug_line    0x00002293       0x1d C:\cortex\gateway\out\stm32f10x_lib.o
+ .debug_line    0x000022b0      0x358 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .debug_line    0x00002608      0x158 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .debug_line    0x00002760      0x35b C:\cortex\gateway\out\stm32f10x_rcc.o
+ .debug_line    0x00002abb      0x1c2 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .debug_line    0x00002c7d      0x32f C:\cortex\gateway\out\stm32f10x_sdio.o
+ .debug_line    0x00002fac      0x2f7 C:\cortex\gateway\out\stm32f10x_spi.o
+ .debug_line    0x000032a3      0x112 C:\cortex\gateway\out\stm32f10x_systick.o
+ .debug_line    0x000033b5      0x971 C:\cortex\gateway\out\stm32f10x_tim.o
+ .debug_line    0x00003d26      0x357 C:\cortex\gateway\out\stm32f10x_usart.o
+ .debug_line    0x0000407d      0x131 C:\cortex\gateway\out\stm32f10x_wwdg.o
+
+.debug_frame    0x00000000     0x265c
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x490 C:\cortex\gateway\out\stm32f10x_it.o
+ .debug_frame   0x00000490      0x160 C:\cortex\gateway\out\main.o
+ .debug_frame   0x000005f0      0x284 C:\cortex\gateway\out\stm32f10x_adc.o
+ .debug_frame   0x00000874       0xd8 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .debug_frame   0x0000094c      0x15c C:\cortex\gateway\out\stm32f10x_can.o
+ .debug_frame   0x00000aa8       0x78 C:\cortex\gateway\out\stm32f10x_crc.o
+ .debug_frame   0x00000b20       0xe4 C:\cortex\gateway\out\stm32f10x_dac.o
+ .debug_frame   0x00000c04       0x40 C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .debug_frame   0x00000c44       0xbc C:\cortex\gateway\out\stm32f10x_dma.o
+ .debug_frame   0x00000d00       0x98 C:\cortex\gateway\out\stm32f10x_exti.o
+ .debug_frame   0x00000d98       0x40 C:\cortex\gateway\out\stm32f10x_flash.o
+ .debug_frame   0x00000dd8      0x168 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .debug_frame   0x00000f40      0x164 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .debug_frame   0x000010a4      0x238 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .debug_frame   0x000012dc       0x70 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .debug_frame   0x0000134c      0x208 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .debug_frame   0x00001554       0xa8 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .debug_frame   0x000015fc      0x224 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .debug_frame   0x00001820      0x108 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .debug_frame   0x00001928      0x208 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .debug_frame   0x00001b30      0x1b0 C:\cortex\gateway\out\stm32f10x_spi.o
+ .debug_frame   0x00001ce0       0x70 C:\cortex\gateway\out\stm32f10x_systick.o
+ .debug_frame   0x00001d50      0x67c C:\cortex\gateway\out\stm32f10x_tim.o
+ .debug_frame   0x000023cc      0x1f8 C:\cortex\gateway\out\stm32f10x_usart.o
+ .debug_frame   0x000025c4       0x98 C:\cortex\gateway\out\stm32f10x_wwdg.o
+
+.debug_str      0x00000000     0x4e5f
+ *(.debug_str)
+ .debug_str     0x00000000      0x716 C:\cortex\gateway\out\stm32f10x_it.o
+                                0x77a (size before relaxing)
+ .debug_str     0x00000716      0x516 C:\cortex\gateway\out\main.o
+                                0x738 (size before relaxing)
+ .debug_str     0x00000c2c      0x53d C:\cortex\gateway\out\stm32f10x_adc.o
+                                0x600 (size before relaxing)
+ .debug_str     0x00001169      0x396 C:\cortex\gateway\out\stm32f10x_bkp.o
+                                0x4bf (size before relaxing)
+ .debug_str     0x000014ff      0x403 C:\cortex\gateway\out\stm32f10x_can.o
+                                0x51d (size before relaxing)
+ .debug_str     0x00001902       0xaa C:\cortex\gateway\out\stm32f10x_crc.o
+                                0x13b (size before relaxing)
+ .debug_str     0x000019ac      0x202 C:\cortex\gateway\out\stm32f10x_dac.o
+                                0x2b4 (size before relaxing)
+ .debug_str     0x00001bae       0x85 C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+                                0x118 (size before relaxing)
+ .debug_str     0x00001c33      0x103 C:\cortex\gateway\out\stm32f10x_dma.o
+                                0x29e (size before relaxing)
+ .debug_str     0x00001d36      0x1b4 C:\cortex\gateway\out\stm32f10x_exti.o
+                                0x274 (size before relaxing)
+ .debug_str     0x00001eea       0xd1 C:\cortex\gateway\out\stm32f10x_flash.o
+                                0x141 (size before relaxing)
+ .debug_str     0x00001fbb      0x5c3 C:\cortex\gateway\out\stm32f10x_fsmc.o
+                                0x68d (size before relaxing)
+ .debug_str     0x0000257e      0x1f6 C:\cortex\gateway\out\stm32f10x_gpio.o
+                                0x3d8 (size before relaxing)
+ .debug_str     0x00002774      0x369 C:\cortex\gateway\out\stm32f10x_i2c.o
+                                0x548 (size before relaxing)
+ .debug_str     0x00002add       0xcf C:\cortex\gateway\out\stm32f10x_iwdg.o
+                                0x15c (size before relaxing)
+ .debug_str     0x00002bac       0x30 C:\cortex\gateway\out\stm32f10x_lib.o
+                                 0x9b (size before relaxing)
+ .debug_str     0x00002bdc      0x479 C:\cortex\gateway\out\stm32f10x_nvic.o
+                                0x5ea (size before relaxing)
+ .debug_str     0x00003055      0x103 C:\cortex\gateway\out\stm32f10x_pwr.o
+                                0x1bd (size before relaxing)
+ .debug_str     0x00003158      0x3bf C:\cortex\gateway\out\stm32f10x_rcc.o
+                                0x51f (size before relaxing)
+ .debug_str     0x00003517      0x187 C:\cortex\gateway\out\stm32f10x_rtc.o
+                                0x2a2 (size before relaxing)
+ .debug_str     0x0000369e      0x468 C:\cortex\gateway\out\stm32f10x_sdio.o
+                                0x549 (size before relaxing)
+ .debug_str     0x00003b06      0x34c C:\cortex\gateway\out\stm32f10x_spi.o
+                                0x4f1 (size before relaxing)
+ .debug_str     0x00003e52       0xf5 C:\cortex\gateway\out\stm32f10x_systick.o
+                                0x1b9 (size before relaxing)
+ .debug_str     0x00003f47      0xae9 C:\cortex\gateway\out\stm32f10x_tim.o
+                                0xcdd (size before relaxing)
+ .debug_str     0x00004a30      0x364 C:\cortex\gateway\out\stm32f10x_usart.o
+                                0x568 (size before relaxing)
+ .debug_str     0x00004d94       0xcb C:\cortex\gateway\out\stm32f10x_wwdg.o
+                                0x176 (size before relaxing)
+
+.debug_loc      0x00000000     0x4ce3
+ *(.debug_loc)
+ .debug_loc     0x00000000       0xa0 C:\cortex\gateway\out\stm32f10x_it.o
+ .debug_loc     0x000000a0      0x1f8 C:\cortex\gateway\out\main.o
+ .debug_loc     0x00000298      0x7b4 C:\cortex\gateway\out\stm32f10x_adc.o
+ .debug_loc     0x00000a4c       0x9a C:\cortex\gateway\out\stm32f10x_bkp.o
+ .debug_loc     0x00000ae6      0x420 C:\cortex\gateway\out\stm32f10x_can.o
+ .debug_loc     0x00000f06       0x89 C:\cortex\gateway\out\stm32f10x_crc.o
+ .debug_loc     0x00000f8f      0x1a8 C:\cortex\gateway\out\stm32f10x_dac.o
+ .debug_loc     0x00001137       0x1e C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .debug_loc     0x00001155      0x18c C:\cortex\gateway\out\stm32f10x_dma.o
+ .debug_loc     0x000012e1       0xca C:\cortex\gateway\out\stm32f10x_exti.o
+ .debug_loc     0x000013ab      0x356 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .debug_loc     0x00001701      0x471 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .debug_loc     0x00001b72      0x5a6 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .debug_loc     0x00002118       0x3d C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .debug_loc     0x00002155      0x755 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .debug_loc     0x000028aa      0x11d C:\cortex\gateway\out\stm32f10x_pwr.o
+ .debug_loc     0x000029c7      0x4f4 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .debug_loc     0x00002ebb      0x1b4 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .debug_loc     0x0000306f      0x1d6 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .debug_loc     0x00003245      0x3f1 C:\cortex\gateway\out\stm32f10x_spi.o
+ .debug_loc     0x00003636       0x51 C:\cortex\gateway\out\stm32f10x_systick.o
+ .debug_loc     0x00003687     0x1116 C:\cortex\gateway\out\stm32f10x_tim.o
+ .debug_loc     0x0000479d      0x499 C:\cortex\gateway\out\stm32f10x_usart.o
+ .debug_loc     0x00004c36       0xad C:\cortex\gateway\out\stm32f10x_wwdg.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+START GROUP
+LOAD c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2\libgcc.a
+LOAD c:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.5.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+END GROUP
+OUTPUT(C:\cortex\gateway\out\gateway.elf elf32-littlearm)
+
+.debug_pubtypes
+                0x00000000      0xf15
+ .debug_pubtypes
+                0x00000000       0x99 C:\cortex\gateway\out\stm32f10x_it.o
+ .debug_pubtypes
+                0x00000099      0x1a5 C:\cortex\gateway\out\main.o
+ .debug_pubtypes
+                0x0000023e       0x86 C:\cortex\gateway\out\stm32f10x_adc.o
+ .debug_pubtypes
+                0x000002c4       0x7b C:\cortex\gateway\out\stm32f10x_bkp.o
+ .debug_pubtypes
+                0x0000033f      0x106 C:\cortex\gateway\out\stm32f10x_can.o
+ .debug_pubtypes
+                0x00000445       0x39 C:\cortex\gateway\out\stm32f10x_crc.o
+ .debug_pubtypes
+                0x0000047e       0x63 C:\cortex\gateway\out\stm32f10x_dac.o
+ .debug_pubtypes
+                0x000004e1       0x41 C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .debug_pubtypes
+                0x00000522       0x8e C:\cortex\gateway\out\stm32f10x_dma.o
+ .debug_pubtypes
+                0x000005b0       0xa6 C:\cortex\gateway\out\stm32f10x_exti.o
+ .debug_pubtypes
+                0x00000656       0x2c C:\cortex\gateway\out\stm32f10x_flash.o
+ .debug_pubtypes
+                0x00000682      0x15e C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .debug_pubtypes
+                0x000007e0       0xb6 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .debug_pubtypes
+                0x00000896       0xb5 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .debug_pubtypes
+                0x0000094b       0x49 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .debug_pubtypes
+                0x00000994       0x12 C:\cortex\gateway\out\stm32f10x_lib.o
+ .debug_pubtypes
+                0x000009a6       0x89 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .debug_pubtypes
+                0x00000a2f       0x5d C:\cortex\gateway\out\stm32f10x_pwr.o
+ .debug_pubtypes
+                0x00000a8c       0xa0 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .debug_pubtypes
+                0x00000b2c       0x62 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .debug_pubtypes
+                0x00000b8e       0xb1 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .debug_pubtypes
+                0x00000c3f       0xa7 C:\cortex\gateway\out\stm32f10x_spi.o
+ .debug_pubtypes
+                0x00000ce6       0x58 C:\cortex\gateway\out\stm32f10x_systick.o
+ .debug_pubtypes
+                0x00000d3e       0xd2 C:\cortex\gateway\out\stm32f10x_tim.o
+ .debug_pubtypes
+                0x00000e10       0xbb C:\cortex\gateway\out\stm32f10x_usart.o
+ .debug_pubtypes
+                0x00000ecb       0x4a C:\cortex\gateway\out\stm32f10x_wwdg.o
+
+.debug_ranges   0x00000000     0x1190
+ .debug_ranges  0x00000000      0x230 C:\cortex\gateway\out\stm32f10x_it.o
+ .debug_ranges  0x00000230       0x68 C:\cortex\gateway\out\main.o
+ .debug_ranges  0x00000298      0x128 C:\cortex\gateway\out\stm32f10x_adc.o
+ .debug_ranges  0x000003c0       0x68 C:\cortex\gateway\out\stm32f10x_bkp.o
+ .debug_ranges  0x00000428       0x98 C:\cortex\gateway\out\stm32f10x_can.o
+ .debug_ranges  0x000004c0       0x38 C:\cortex\gateway\out\stm32f10x_crc.o
+ .debug_ranges  0x000004f8       0x68 C:\cortex\gateway\out\stm32f10x_dac.o
+ .debug_ranges  0x00000560       0x20 C:\cortex\gateway\out\stm32f10x_dbgmcu.o
+ .debug_ranges  0x00000580       0x58 C:\cortex\gateway\out\stm32f10x_dma.o
+ .debug_ranges  0x000005d8       0x48 C:\cortex\gateway\out\stm32f10x_exti.o
+ .debug_ranges  0x00000620       0x20 C:\cortex\gateway\out\stm32f10x_flash.o
+ .debug_ranges  0x00000640       0xa0 C:\cortex\gateway\out\stm32f10x_fsmc.o
+ .debug_ranges  0x000006e0       0x90 C:\cortex\gateway\out\stm32f10x_gpio.o
+ .debug_ranges  0x00000770      0x108 C:\cortex\gateway\out\stm32f10x_i2c.o
+ .debug_ranges  0x00000878       0x38 C:\cortex\gateway\out\stm32f10x_iwdg.o
+ .debug_ranges  0x000008b0       0xf8 C:\cortex\gateway\out\stm32f10x_nvic.o
+ .debug_ranges  0x000009a8       0x50 C:\cortex\gateway\out\stm32f10x_pwr.o
+ .debug_ranges  0x000009f8      0x108 C:\cortex\gateway\out\stm32f10x_rcc.o
+ .debug_ranges  0x00000b00       0x78 C:\cortex\gateway\out\stm32f10x_rtc.o
+ .debug_ranges  0x00000b78       0xf8 C:\cortex\gateway\out\stm32f10x_sdio.o
+ .debug_ranges  0x00000c70       0xc0 C:\cortex\gateway\out\stm32f10x_spi.o
+ .debug_ranges  0x00000d30       0x38 C:\cortex\gateway\out\stm32f10x_systick.o
+ .debug_ranges  0x00000d68      0x300 C:\cortex\gateway\out\stm32f10x_tim.o
+ .debug_ranges  0x00001068       0xe0 C:\cortex\gateway\out\stm32f10x_usart.o
+ .debug_ranges  0x00001148       0x48 C:\cortex\gateway\out\stm32f10x_wwdg.o

@@ -1,0 +1,1339 @@
+
+C:\cortex\gateway\out\stm32f10x_usart.o:     file format elf32-littlearm
+C:\cortex\gateway\out\stm32f10x_usart.o
+
+
+Disassembly of section .text.USART_DeInit:
+
+00000000 <USART_DeInit>:
+USART_DeInit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:91
+*                     - USART1, USART2, USART3, UART4 or UART5.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void USART_DeInit(USART_TypeDef* USARTx)
+{
+   0:	b507      	push	{r0, r1, r2, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:95
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+
+  switch (*(u32*)&USARTx)
+   2:	4b20      	ldr	r3, [pc, #128]	; (84 <USART_DeInit+0x84>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:91
+*                     - USART1, USART2, USART3, UART4 or UART5.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void USART_DeInit(USART_TypeDef* USARTx)
+{
+   4:	9001      	str	r0, [sp, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:95
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+
+  switch (*(u32*)&USARTx)
+   6:	4298      	cmp	r0, r3
+   8:	d028      	beq.n	5c <USART_DeInit+0x5c>
+   a:	d806      	bhi.n	1a <USART_DeInit+0x1a>
+   c:	4b1e      	ldr	r3, [pc, #120]	; (88 <USART_DeInit+0x88>)
+   e:	4298      	cmp	r0, r3
+  10:	d014      	beq.n	3c <USART_DeInit+0x3c>
+  12:	4b1e      	ldr	r3, [pc, #120]	; (8c <USART_DeInit+0x8c>)
+  14:	4298      	cmp	r0, r3
+  16:	d133      	bne.n	80 <USART_DeInit+0x80>
+  18:	e018      	b.n	4c <USART_DeInit+0x4c>
+  1a:	4b1d      	ldr	r3, [pc, #116]	; (90 <USART_DeInit+0x90>)
+  1c:	4298      	cmp	r0, r3
+  1e:	d025      	beq.n	6c <USART_DeInit+0x6c>
+  20:	4b1c      	ldr	r3, [pc, #112]	; (94 <USART_DeInit+0x94>)
+  22:	4298      	cmp	r0, r3
+  24:	d12c      	bne.n	80 <USART_DeInit+0x80>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:98
+  {
+    case USART1_BASE:
+      RCC_APB2PeriphResetCmd(RCC_APB2Periph_USART1, ENABLE);
+  26:	2101      	movs	r1, #1
+  28:	f44f 4080 	mov.w	r0, #16384	; 0x4000
+  2c:	f7ff fffe 	bl	0 <RCC_APB2PeriphResetCmd>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:99
+      RCC_APB2PeriphResetCmd(RCC_APB2Periph_USART1, DISABLE);
+  30:	f44f 4080 	mov.w	r0, #16384	; 0x4000
+  34:	2100      	movs	r1, #0
+  36:	f7ff fffe 	bl	0 <RCC_APB2PeriphResetCmd>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:100
+      break;
+  3a:	e021      	b.n	80 <USART_DeInit+0x80>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:103
+
+    case USART2_BASE:
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_USART2, ENABLE);
+  3c:	f44f 3000 	mov.w	r0, #131072	; 0x20000
+  40:	2101      	movs	r1, #1
+  42:	f7ff fffe 	bl	0 <RCC_APB1PeriphResetCmd>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:104
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_USART2, DISABLE);
+  46:	f44f 3000 	mov.w	r0, #131072	; 0x20000
+  4a:	e016      	b.n	7a <USART_DeInit+0x7a>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:108
+      break;
+
+    case USART3_BASE:
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_USART3, ENABLE);
+  4c:	f44f 2080 	mov.w	r0, #262144	; 0x40000
+  50:	2101      	movs	r1, #1
+  52:	f7ff fffe 	bl	0 <RCC_APB1PeriphResetCmd>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:109
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_USART3, DISABLE);
+  56:	f44f 2080 	mov.w	r0, #262144	; 0x40000
+  5a:	e00e      	b.n	7a <USART_DeInit+0x7a>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:113
+      break;
+    
+    case UART4_BASE:
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_UART4, ENABLE);
+  5c:	f44f 2000 	mov.w	r0, #524288	; 0x80000
+  60:	2101      	movs	r1, #1
+  62:	f7ff fffe 	bl	0 <RCC_APB1PeriphResetCmd>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:114
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_UART4, DISABLE);
+  66:	f44f 2000 	mov.w	r0, #524288	; 0x80000
+  6a:	e006      	b.n	7a <USART_DeInit+0x7a>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:118
+      break;
+    
+    case UART5_BASE:
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_UART5, ENABLE);
+  6c:	f44f 1080 	mov.w	r0, #1048576	; 0x100000
+  70:	2101      	movs	r1, #1
+  72:	f7ff fffe 	bl	0 <RCC_APB1PeriphResetCmd>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:119
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_UART5, DISABLE);
+  76:	f44f 1080 	mov.w	r0, #1048576	; 0x100000
+  7a:	2100      	movs	r1, #0
+  7c:	f7ff fffe 	bl	0 <RCC_APB1PeriphResetCmd>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:125
+      break;            
+
+    default:
+      break;
+  }
+}
+  80:	bd0e      	pop	{r1, r2, r3, pc}
+  82:	bf00      	nop
+  84:	40004c00 	.word	0x40004c00
+  88:	40004400 	.word	0x40004400
+  8c:	40004800 	.word	0x40004800
+  90:	40005000 	.word	0x40005000
+  94:	40013800 	.word	0x40013800
+
+Disassembly of section .text.USART_Init:
+
+00000000 <USART_Init>:
+USART_Init():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:141
+*                    specified USART peripheral.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void USART_Init(USART_TypeDef* USARTx, USART_InitTypeDef* USART_InitStruct)
+{
+   0:	b530      	push	{r4, r5, lr}
+   2:	b089      	sub	sp, #36	; 0x24
+   4:	9001      	str	r0, [sp, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:162
+  assert_param(IS_USART_PERIPH_HFC(USARTx, USART_InitStruct->USART_HardwareFlowControl));
+  
+  usartxbase = (*(u32*)&USARTx);
+
+/*---------------------------- USART CR2 Configuration -----------------------*/
+  tmpreg = USARTx->CR2;
+   6:	8a03      	ldrh	r3, [r0, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:168
+  /* Clear STOP[13:12] bits */
+  tmpreg &= CR2_STOP_CLEAR_Mask;
+
+  /* Configure the USART Stop Bits, Clock, CPOL, CPHA and LastBit ------------*/
+  /* Set STOP[13:12] bits according to USART_StopBits value */
+  tmpreg |= (u32)USART_InitStruct->USART_StopBits;
+   8:	88ca      	ldrh	r2, [r1, #6]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:164
+  usartxbase = (*(u32*)&USARTx);
+
+/*---------------------------- USART CR2 Configuration -----------------------*/
+  tmpreg = USARTx->CR2;
+  /* Clear STOP[13:12] bits */
+  tmpreg &= CR2_STOP_CLEAR_Mask;
+   a:	f423 5340 	bic.w	r3, r3, #12288	; 0x3000
+   e:	041b      	lsls	r3, r3, #16
+  10:	0c1b      	lsrs	r3, r3, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:171
+  /* Configure the USART Stop Bits, Clock, CPOL, CPHA and LastBit ------------*/
+  /* Set STOP[13:12] bits according to USART_StopBits value */
+  tmpreg |= (u32)USART_InitStruct->USART_StopBits;
+  
+  /* Write to USART CR2 */
+  USARTx->CR2 = (u16)tmpreg;
+  12:	4313      	orrs	r3, r2
+  14:	8203      	strh	r3, [r0, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:141
+*                    specified USART peripheral.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void USART_Init(USART_TypeDef* USARTx, USART_InitTypeDef* USART_InitStruct)
+{
+  16:	460d      	mov	r5, r1
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:174
+  
+  /* Write to USART CR2 */
+  USARTx->CR2 = (u16)tmpreg;
+
+/*---------------------------- USART CR1 Configuration -----------------------*/
+  tmpreg = USARTx->CR1;
+  18:	8983      	ldrh	r3, [r0, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:182
+
+  /* Configure the USART Word Length, Parity and mode ----------------------- */
+  /* Set the M bits according to USART_WordLength value */
+  /* Set PCE and PS bits according to USART_Parity value */
+  /* Set TE and RE bits according to USART_Mode value */
+  tmpreg |= (u32)USART_InitStruct->USART_WordLength | USART_InitStruct->USART_Parity |
+  1a:	8909      	ldrh	r1, [r1, #8]
+  1c:	88aa      	ldrh	r2, [r5, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:176
+  USARTx->CR2 = (u16)tmpreg;
+
+/*---------------------------- USART CR1 Configuration -----------------------*/
+  tmpreg = USARTx->CR1;
+  /* Clear M, PCE, PS, TE and RE bits */
+  tmpreg &= CR1_CLEAR_Mask;
+  1e:	f423 53b0 	bic.w	r3, r3, #5632	; 0x1600
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:182
+
+  /* Configure the USART Word Length, Parity and mode ----------------------- */
+  /* Set the M bits according to USART_WordLength value */
+  /* Set PCE and PS bits according to USART_Parity value */
+  /* Set TE and RE bits according to USART_Mode value */
+  tmpreg |= (u32)USART_InitStruct->USART_WordLength | USART_InitStruct->USART_Parity |
+  22:	ea41 0202 	orr.w	r2, r1, r2
+  26:	8969      	ldrh	r1, [r5, #10]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:176
+  USARTx->CR2 = (u16)tmpreg;
+
+/*---------------------------- USART CR1 Configuration -----------------------*/
+  tmpreg = USARTx->CR1;
+  /* Clear M, PCE, PS, TE and RE bits */
+  tmpreg &= CR1_CLEAR_Mask;
+  28:	f023 030c 	bic.w	r3, r3, #12
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:182
+
+  /* Configure the USART Word Length, Parity and mode ----------------------- */
+  /* Set the M bits according to USART_WordLength value */
+  /* Set PCE and PS bits according to USART_Parity value */
+  /* Set TE and RE bits according to USART_Mode value */
+  tmpreg |= (u32)USART_InitStruct->USART_WordLength | USART_InitStruct->USART_Parity |
+  2c:	430a      	orrs	r2, r1
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:176
+  USARTx->CR2 = (u16)tmpreg;
+
+/*---------------------------- USART CR1 Configuration -----------------------*/
+  tmpreg = USARTx->CR1;
+  /* Clear M, PCE, PS, TE and RE bits */
+  tmpreg &= CR1_CLEAR_Mask;
+  2e:	041b      	lsls	r3, r3, #16
+  30:	0c1b      	lsrs	r3, r3, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:182
+
+  /* Configure the USART Word Length, Parity and mode ----------------------- */
+  /* Set the M bits according to USART_WordLength value */
+  /* Set PCE and PS bits according to USART_Parity value */
+  /* Set TE and RE bits according to USART_Mode value */
+  tmpreg |= (u32)USART_InitStruct->USART_WordLength | USART_InitStruct->USART_Parity |
+  32:	b292      	uxth	r2, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:186
+            USART_InitStruct->USART_Mode;
+
+  /* Write to USART CR1 */
+  USARTx->CR1 = (u16)tmpreg;
+  34:	ea42 0303 	orr.w	r3, r2, r3
+  38:	8183      	strh	r3, [r0, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:189
+
+/*---------------------------- USART CR3 Configuration -----------------------*/  
+  tmpreg = USARTx->CR3;
+  3a:	8a83      	ldrh	r3, [r0, #20]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:195
+  /* Clear CTSE and RTSE bits */
+  tmpreg &= CR3_CLEAR_Mask;
+
+  /* Configure the USART HFC -------------------------------------------------*/
+  /* Set CTSE and RTSE bits according to USART_HardwareFlowControl value */
+  tmpreg |= USART_InitStruct->USART_HardwareFlowControl;
+  3c:	89aa      	ldrh	r2, [r5, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:191
+  USARTx->CR1 = (u16)tmpreg;
+
+/*---------------------------- USART CR3 Configuration -----------------------*/  
+  tmpreg = USARTx->CR3;
+  /* Clear CTSE and RTSE bits */
+  tmpreg &= CR3_CLEAR_Mask;
+  3e:	f423 7340 	bic.w	r3, r3, #768	; 0x300
+  42:	041b      	lsls	r3, r3, #16
+  44:	0c1b      	lsrs	r3, r3, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:198
+  /* Configure the USART HFC -------------------------------------------------*/
+  /* Set CTSE and RTSE bits according to USART_HardwareFlowControl value */
+  tmpreg |= USART_InitStruct->USART_HardwareFlowControl;
+
+  /* Write to USART CR3 */
+  USARTx->CR3 = (u16)tmpreg;
+  46:	4313      	orrs	r3, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:159
+  assert_param(IS_USART_MODE(USART_InitStruct->USART_Mode));
+  assert_param(IS_USART_HARDWARE_FLOW_CONTROL(USART_InitStruct->USART_HardwareFlowControl));
+  /* The hardware flow control is available only for USART1, USART2 and USART3 */          
+  assert_param(IS_USART_PERIPH_HFC(USARTx, USART_InitStruct->USART_HardwareFlowControl));
+  
+  usartxbase = (*(u32*)&USARTx);
+  48:	4604      	mov	r4, r0
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:198
+  /* Configure the USART HFC -------------------------------------------------*/
+  /* Set CTSE and RTSE bits according to USART_HardwareFlowControl value */
+  tmpreg |= USART_InitStruct->USART_HardwareFlowControl;
+
+  /* Write to USART CR3 */
+  USARTx->CR3 = (u16)tmpreg;
+  4a:	8283      	strh	r3, [r0, #20]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:202
+
+/*---------------------------- USART BRR Configuration -----------------------*/
+  /* Configure the USART Baud Rate -------------------------------------------*/
+  RCC_GetClocksFreq(&RCC_ClocksStatus);
+  4c:	a803      	add	r0, sp, #12
+  4e:	f7ff fffe 	bl	0 <RCC_GetClocksFreq>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:203
+  if (usartxbase == USART1_BASE)
+  52:	4b0f      	ldr	r3, [pc, #60]	; (90 <USART_Init+0x90>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:213
+  {
+    apbclock = RCC_ClocksStatus.PCLK1_Frequency;
+  }
+
+  /* Determine the integer part */
+  integerdivider = ((0x19 * apbclock) / (0x04 * (USART_InitStruct->USART_BaudRate)));
+  54:	682a      	ldr	r2, [r5, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:203
+  USARTx->CR3 = (u16)tmpreg;
+
+/*---------------------------- USART BRR Configuration -----------------------*/
+  /* Configure the USART Baud Rate -------------------------------------------*/
+  RCC_GetClocksFreq(&RCC_ClocksStatus);
+  if (usartxbase == USART1_BASE)
+  56:	429c      	cmp	r4, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:205
+  {
+    apbclock = RCC_ClocksStatus.PCLK2_Frequency;
+  58:	bf0c      	ite	eq
+  5a:	9b06      	ldreq	r3, [sp, #24]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:209
+  }
+  else
+  {
+    apbclock = RCC_ClocksStatus.PCLK1_Frequency;
+  5c:	9b05      	ldrne	r3, [sp, #20]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:213
+  }
+
+  /* Determine the integer part */
+  integerdivider = ((0x19 * apbclock) / (0x04 * (USART_InitStruct->USART_BaudRate)));
+  5e:	2119      	movs	r1, #25
+  60:	434b      	muls	r3, r1
+  62:	0092      	lsls	r2, r2, #2
+  64:	fbb3 f1f2 	udiv	r1, r3, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:214
+  tmpreg = (integerdivider / 0x64) << 0x04;
+  68:	2364      	movs	r3, #100	; 0x64
+  6a:	fbb1 f2f3 	udiv	r2, r1, r3
+  6e:	0112      	lsls	r2, r2, #4
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:217
+
+  /* Determine the fractional part */
+  fractionaldivider = integerdivider - (0x64 * (tmpreg >> 0x04));
+  70:	0910      	lsrs	r0, r2, #4
+  72:	fb03 1110 	mls	r1, r3, r0, r1
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:218
+  tmpreg |= ((((fractionaldivider * 0x10) + 0x32) / 0x64)) & ((u8)0x0F);
+  76:	0109      	lsls	r1, r1, #4
+  78:	3132      	adds	r1, #50	; 0x32
+  7a:	fbb1 f3f3 	udiv	r3, r1, r3
+  7e:	f003 030f 	and.w	r3, r3, #15
+  82:	ea43 0202 	orr.w	r2, r3, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:221
+
+  /* Write to USART BRR */
+  USARTx->BRR = (u16)tmpreg;
+  86:	b292      	uxth	r2, r2
+  88:	8122      	strh	r2, [r4, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:222
+}
+  8a:	b009      	add	sp, #36	; 0x24
+  8c:	bd30      	pop	{r4, r5, pc}
+  8e:	bf00      	nop
+  90:	40013800 	.word	0x40013800
+
+Disassembly of section .text.USART_StructInit:
+
+00000000 <USART_StructInit>:
+USART_StructInit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:235
+* Return         : None
+*******************************************************************************/
+void USART_StructInit(USART_InitTypeDef* USART_InitStruct)
+{
+  /* USART_InitStruct members default value */
+  USART_InitStruct->USART_BaudRate = 9600;
+   0:	f44f 5316 	mov.w	r3, #9600	; 0x2580
+   4:	6003      	str	r3, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:239
+  USART_InitStruct->USART_WordLength = USART_WordLength_8b;
+  USART_InitStruct->USART_StopBits = USART_StopBits_1;
+  USART_InitStruct->USART_Parity = USART_Parity_No ;
+  USART_InitStruct->USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+   6:	220c      	movs	r2, #12
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:236
+*******************************************************************************/
+void USART_StructInit(USART_InitTypeDef* USART_InitStruct)
+{
+  /* USART_InitStruct members default value */
+  USART_InitStruct->USART_BaudRate = 9600;
+  USART_InitStruct->USART_WordLength = USART_WordLength_8b;
+   8:	2300      	movs	r3, #0
+   a:	8083      	strh	r3, [r0, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:237
+  USART_InitStruct->USART_StopBits = USART_StopBits_1;
+   c:	80c3      	strh	r3, [r0, #6]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:238
+  USART_InitStruct->USART_Parity = USART_Parity_No ;
+   e:	8103      	strh	r3, [r0, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:239
+  USART_InitStruct->USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+  10:	8142      	strh	r2, [r0, #10]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:240
+  USART_InitStruct->USART_HardwareFlowControl = USART_HardwareFlowControl_None;  
+  12:	8183      	strh	r3, [r0, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:241
+}
+  14:	4770      	bx	lr
+
+Disassembly of section .text.USART_ClockInit:
+
+00000000 <USART_ClockInit>:
+USART_ClockInit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:277
+  /* Set CLKEN bit according to USART_Clock value */
+  /* Set CPOL bit according to USART_CPOL value */
+  /* Set CPHA bit according to USART_CPHA value */
+  /* Set LBCL bit according to USART_LastBit value */
+  tmpreg |= (u32)USART_ClockInitStruct->USART_Clock | USART_ClockInitStruct->USART_CPOL | 
+                 USART_ClockInitStruct->USART_CPHA | USART_ClockInitStruct->USART_LastBit;
+   0:	880a      	ldrh	r2, [r1, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:256
+*                    the specified USART peripheral.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void USART_ClockInit(USART_TypeDef* USARTx, USART_ClockInitTypeDef* USART_ClockInitStruct)
+{
+   2:	b510      	push	{r4, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:277
+  /* Set CLKEN bit according to USART_Clock value */
+  /* Set CPOL bit according to USART_CPOL value */
+  /* Set CPHA bit according to USART_CPHA value */
+  /* Set LBCL bit according to USART_LastBit value */
+  tmpreg |= (u32)USART_ClockInitStruct->USART_Clock | USART_ClockInitStruct->USART_CPOL | 
+                 USART_ClockInitStruct->USART_CPHA | USART_ClockInitStruct->USART_LastBit;
+   4:	884c      	ldrh	r4, [r1, #2]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:267
+  assert_param(IS_USART_CPOL(USART_ClockInitStruct->USART_CPOL));
+  assert_param(IS_USART_CPHA(USART_ClockInitStruct->USART_CPHA));
+  assert_param(IS_USART_LASTBIT(USART_ClockInitStruct->USART_LastBit));              
+  
+/*---------------------------- USART CR2 Configuration -----------------------*/
+  tmpreg = USARTx->CR2;
+   6:	8a03      	ldrh	r3, [r0, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:277
+  /* Set CLKEN bit according to USART_Clock value */
+  /* Set CPOL bit according to USART_CPOL value */
+  /* Set CPHA bit according to USART_CPHA value */
+  /* Set LBCL bit according to USART_LastBit value */
+  tmpreg |= (u32)USART_ClockInitStruct->USART_Clock | USART_ClockInitStruct->USART_CPOL | 
+                 USART_ClockInitStruct->USART_CPHA | USART_ClockInitStruct->USART_LastBit;
+   8:	ea44 0202 	orr.w	r2, r4, r2
+   c:	888c      	ldrh	r4, [r1, #4]
+   e:	88c9      	ldrh	r1, [r1, #6]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:269
+  assert_param(IS_USART_LASTBIT(USART_ClockInitStruct->USART_LastBit));              
+  
+/*---------------------------- USART CR2 Configuration -----------------------*/
+  tmpreg = USARTx->CR2;
+  /* Clear CLKEN, CPOL, CPHA and LBCL bits */
+  tmpreg &= CR2_CLOCK_CLEAR_Mask;
+  10:	f423 6370 	bic.w	r3, r3, #3840	; 0xf00
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:277
+  /* Set CLKEN bit according to USART_Clock value */
+  /* Set CPOL bit according to USART_CPOL value */
+  /* Set CPHA bit according to USART_CPHA value */
+  /* Set LBCL bit according to USART_LastBit value */
+  tmpreg |= (u32)USART_ClockInitStruct->USART_Clock | USART_ClockInitStruct->USART_CPOL | 
+                 USART_ClockInitStruct->USART_CPHA | USART_ClockInitStruct->USART_LastBit;
+  14:	4322      	orrs	r2, r4
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:269
+  assert_param(IS_USART_LASTBIT(USART_ClockInitStruct->USART_LastBit));              
+  
+/*---------------------------- USART CR2 Configuration -----------------------*/
+  tmpreg = USARTx->CR2;
+  /* Clear CLKEN, CPOL, CPHA and LBCL bits */
+  tmpreg &= CR2_CLOCK_CLEAR_Mask;
+  16:	041b      	lsls	r3, r3, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:277
+  /* Set CLKEN bit according to USART_Clock value */
+  /* Set CPOL bit according to USART_CPOL value */
+  /* Set CPHA bit according to USART_CPHA value */
+  /* Set LBCL bit according to USART_LastBit value */
+  tmpreg |= (u32)USART_ClockInitStruct->USART_Clock | USART_ClockInitStruct->USART_CPOL | 
+                 USART_ClockInitStruct->USART_CPHA | USART_ClockInitStruct->USART_LastBit;
+  18:	430a      	orrs	r2, r1
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:269
+  assert_param(IS_USART_LASTBIT(USART_ClockInitStruct->USART_LastBit));              
+  
+/*---------------------------- USART CR2 Configuration -----------------------*/
+  tmpreg = USARTx->CR2;
+  /* Clear CLKEN, CPOL, CPHA and LBCL bits */
+  tmpreg &= CR2_CLOCK_CLEAR_Mask;
+  1a:	0c1b      	lsrs	r3, r3, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:277
+  /* Set CLKEN bit according to USART_Clock value */
+  /* Set CPOL bit according to USART_CPOL value */
+  /* Set CPHA bit according to USART_CPHA value */
+  /* Set LBCL bit according to USART_LastBit value */
+  tmpreg |= (u32)USART_ClockInitStruct->USART_Clock | USART_ClockInitStruct->USART_CPOL | 
+                 USART_ClockInitStruct->USART_CPHA | USART_ClockInitStruct->USART_LastBit;
+  1c:	b292      	uxth	r2, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:280
+
+  /* Write to USART CR2 */
+  USARTx->CR2 = (u16)tmpreg;
+  1e:	ea42 0303 	orr.w	r3, r2, r3
+  22:	8203      	strh	r3, [r0, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:281
+}
+  24:	bd10      	pop	{r4, pc}
+
+Disassembly of section .text.USART_ClockStructInit:
+
+00000000 <USART_ClockStructInit>:
+USART_ClockStructInit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:294
+* Return         : None
+*******************************************************************************/
+void USART_ClockStructInit(USART_ClockInitTypeDef* USART_ClockInitStruct)
+{
+  /* USART_ClockInitStruct members default value */
+  USART_ClockInitStruct->USART_Clock = USART_Clock_Disable;
+   0:	2300      	movs	r3, #0
+   2:	8003      	strh	r3, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:295
+  USART_ClockInitStruct->USART_CPOL = USART_CPOL_Low;
+   4:	8043      	strh	r3, [r0, #2]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:296
+  USART_ClockInitStruct->USART_CPHA = USART_CPHA_1Edge;
+   6:	8083      	strh	r3, [r0, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:297
+  USART_ClockInitStruct->USART_LastBit = USART_LastBit_Disable;
+   8:	80c3      	strh	r3, [r0, #6]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:298
+}
+   a:	4770      	bx	lr
+
+Disassembly of section .text.USART_Cmd:
+
+00000000 <USART_Cmd>:
+USART_Cmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:317
+{
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <USART_Cmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:320
+  {
+    /* Enable the selected USART by setting the UE bit in the CR1 register */
+    USARTx->CR1 |= CR1_UE_Set;
+   2:	8983      	ldrh	r3, [r0, #12]
+   4:	b29b      	uxth	r3, r3
+   6:	f443 5300 	orr.w	r3, r3, #8192	; 0x2000
+   a:	e004      	b.n	16 <USART_Cmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:325
+  }
+  else
+  {
+    /* Disable the selected USART by clearing the UE bit in the CR1 register */
+    USARTx->CR1 &= CR1_UE_Reset;
+   c:	8983      	ldrh	r3, [r0, #12]
+   e:	f423 5300 	bic.w	r3, r3, #8192	; 0x2000
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8183      	strh	r3, [r0, #12]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.USART_ITConfig:
+
+00000000 <USART_ITConfig>:
+USART_ITConfig():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:355
+*                    This parameter can be: ENABLE or DISABLE.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void USART_ITConfig(USART_TypeDef* USARTx, u16 USART_IT, FunctionalState NewState)
+{
+   0:	b513      	push	{r0, r1, r4, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:368
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  usartxbase = (*(u32*)&(USARTx));
+
+  /* Get the USART register index */
+  usartreg = (((u8)USART_IT) >> 0x05);
+   2:	b2cb      	uxtb	r3, r1
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:373
+
+  /* Get the interrupt position */
+  itpos = USART_IT & IT_Mask;
+
+  itmask = (((u32)0x01) << itpos);
+   4:	2401      	movs	r4, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:368
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  usartxbase = (*(u32*)&(USARTx));
+
+  /* Get the USART register index */
+  usartreg = (((u8)USART_IT) >> 0x05);
+   6:	095b      	lsrs	r3, r3, #5
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:371
+
+  /* Get the interrupt position */
+  itpos = USART_IT & IT_Mask;
+   8:	f001 011f 	and.w	r1, r1, #31
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:373
+
+  itmask = (((u32)0x01) << itpos);
+   c:	fa14 f101 	lsls.w	r1, r4, r1
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:375
+    
+  if (usartreg == 0x01) /* The IT is in CR1 register */
+  10:	42a3      	cmp	r3, r4
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:355
+*                    This parameter can be: ENABLE or DISABLE.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void USART_ITConfig(USART_TypeDef* USARTx, u16 USART_IT, FunctionalState NewState)
+{
+  12:	9001      	str	r0, [sp, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:375
+  /* Get the interrupt position */
+  itpos = USART_IT & IT_Mask;
+
+  itmask = (((u32)0x01) << itpos);
+    
+  if (usartreg == 0x01) /* The IT is in CR1 register */
+  14:	d101      	bne.n	1a <USART_ITConfig+0x1a>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:377
+  {
+    usartxbase += 0x0C;
+  16:	300c      	adds	r0, #12
+  18:	e004      	b.n	24 <USART_ITConfig+0x24>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:379
+  }
+  else if (usartreg == 0x02) /* The IT is in CR2 register */
+  1a:	2b02      	cmp	r3, #2
+  1c:	d101      	bne.n	22 <USART_ITConfig+0x22>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:381
+  {
+    usartxbase += 0x10;
+  1e:	3010      	adds	r0, #16
+  20:	e000      	b.n	24 <USART_ITConfig+0x24>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:385
+  }
+  else /* The IT is in CR3 register */
+  {
+    usartxbase += 0x14; 
+  22:	3014      	adds	r0, #20
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:387
+  }
+  if (NewState != DISABLE)
+  24:	b11a      	cbz	r2, 2e <USART_ITConfig+0x2e>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:389
+  {
+    *(vu32*)usartxbase  |= itmask;
+  26:	6803      	ldr	r3, [r0, #0]
+  28:	ea43 0101 	orr.w	r1, r3, r1
+  2c:	e002      	b.n	34 <USART_ITConfig+0x34>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:393
+  }
+  else
+  {
+    *(vu32*)usartxbase &= ~itmask;
+  2e:	6803      	ldr	r3, [r0, #0]
+  30:	ea23 0101 	bic.w	r1, r3, r1
+  34:	6001      	str	r1, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:395
+  }
+}
+  36:	bd1c      	pop	{r2, r3, r4, pc}
+
+Disassembly of section .text.USART_DMACmd:
+
+00000000 <USART_DMACmd>:
+USART_DMACmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:420
+  /* Check the parameters */
+  assert_param(IS_USART_1234_PERIPH(USARTx));
+  assert_param(IS_USART_DMAREQ(USART_DMAReq));  
+  assert_param(IS_FUNCTIONAL_STATE(NewState)); 
+
+  if (NewState != DISABLE)
+   0:	b11a      	cbz	r2, a <USART_DMACmd+0xa>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:424
+  {
+    /* Enable the DMA transfer for selected requests by setting the DMAT and/or
+       DMAR bits in the USART CR3 register */
+    USARTx->CR3 |= USART_DMAReq;
+   2:	8a83      	ldrh	r3, [r0, #20]
+   4:	b29b      	uxth	r3, r3
+   6:	4319      	orrs	r1, r3
+   8:	e003      	b.n	12 <USART_DMACmd+0x12>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:430
+  }
+  else
+  {
+    /* Disable the DMA transfer for selected requests by clearing the DMAT and/or
+       DMAR bits in the USART CR3 register */
+    USARTx->CR3 &= (u16)~USART_DMAReq;
+   a:	8a83      	ldrh	r3, [r0, #20]
+   c:	b29b      	uxth	r3, r3
+   e:	ea23 0101 	bic.w	r1, r3, r1
+  12:	8281      	strh	r1, [r0, #20]
+  14:	4770      	bx	lr
+
+Disassembly of section .text.USART_SetAddress:
+
+00000000 <USART_SetAddress>:
+USART_SetAddress():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:451
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_USART_ADDRESS(USART_Address)); 
+    
+  /* Clear the USART address */
+  USARTx->CR2 &= CR2_Address_Mask;
+   0:	8a03      	ldrh	r3, [r0, #16]
+   2:	f023 030f 	bic.w	r3, r3, #15
+   6:	041b      	lsls	r3, r3, #16
+   8:	0c1b      	lsrs	r3, r3, #16
+   a:	8203      	strh	r3, [r0, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:453
+  /* Set the USART address node */
+  USARTx->CR2 |= USART_Address;
+   c:	8a03      	ldrh	r3, [r0, #16]
+   e:	b29b      	uxth	r3, r3
+  10:	ea41 0303 	orr.w	r3, r1, r3
+  14:	8203      	strh	r3, [r0, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:454
+}
+  16:	4770      	bx	lr
+
+Disassembly of section .text.USART_WakeUpConfig:
+
+00000000 <USART_WakeUpConfig>:
+USART_WakeUpConfig():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:475
+{
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_USART_WAKEUP(USART_WakeUp));
+  
+  USARTx->CR1 &= CR1_WAKE_Mask;
+   0:	8983      	ldrh	r3, [r0, #12]
+   2:	f423 6300 	bic.w	r3, r3, #2048	; 0x800
+   6:	041b      	lsls	r3, r3, #16
+   8:	0c1b      	lsrs	r3, r3, #16
+   a:	8183      	strh	r3, [r0, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:476
+  USARTx->CR1 |= USART_WakeUp;
+   c:	8983      	ldrh	r3, [r0, #12]
+   e:	b29b      	uxth	r3, r3
+  10:	ea41 0303 	orr.w	r3, r1, r3
+  14:	8183      	strh	r3, [r0, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:477
+}
+  16:	4770      	bx	lr
+
+Disassembly of section .text.USART_ReceiverWakeUpCmd:
+
+00000000 <USART_ReceiverWakeUpCmd>:
+USART_ReceiverWakeUpCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:496
+{
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState)); 
+  
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <USART_ReceiverWakeUpCmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:499
+  {
+    /* Enable the USART mute mode  by setting the RWU bit in the CR1 register */
+    USARTx->CR1 |= CR1_RWU_Set;
+   2:	8983      	ldrh	r3, [r0, #12]
+   4:	b29b      	uxth	r3, r3
+   6:	f043 0302 	orr.w	r3, r3, #2
+   a:	e004      	b.n	16 <USART_ReceiverWakeUpCmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:504
+  }
+  else
+  {
+    /* Disable the USART mute mode by clearing the RWU bit in the CR1 register */
+    USARTx->CR1 &= CR1_RWU_Reset;
+   c:	8983      	ldrh	r3, [r0, #12]
+   e:	f023 0302 	bic.w	r3, r3, #2
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8183      	strh	r3, [r0, #12]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.USART_LINBreakDetectLengthConfig:
+
+00000000 <USART_LINBreakDetectLengthConfig>:
+USART_LINBreakDetectLengthConfig():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:528
+{
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_USART_LIN_BREAK_DETECT_LENGTH(USART_LINBreakDetectLength));
+  
+  USARTx->CR2 &= CR2_LBDL_Mask;
+   0:	8a03      	ldrh	r3, [r0, #16]
+   2:	f023 0320 	bic.w	r3, r3, #32
+   6:	041b      	lsls	r3, r3, #16
+   8:	0c1b      	lsrs	r3, r3, #16
+   a:	8203      	strh	r3, [r0, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:529
+  USARTx->CR2 |= USART_LINBreakDetectLength;  
+   c:	8a03      	ldrh	r3, [r0, #16]
+   e:	b29b      	uxth	r3, r3
+  10:	ea41 0303 	orr.w	r3, r1, r3
+  14:	8203      	strh	r3, [r0, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:530
+}
+  16:	4770      	bx	lr
+
+Disassembly of section .text.USART_LINCmd:
+
+00000000 <USART_LINCmd>:
+USART_LINCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:549
+{
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <USART_LINCmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:552
+  {
+    /* Enable the LIN mode by setting the LINEN bit in the CR2 register */
+    USARTx->CR2 |= CR2_LINEN_Set;
+   2:	8a03      	ldrh	r3, [r0, #16]
+   4:	b29b      	uxth	r3, r3
+   6:	f443 4380 	orr.w	r3, r3, #16384	; 0x4000
+   a:	e004      	b.n	16 <USART_LINCmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:557
+  }
+  else
+  {
+    /* Disable the LIN mode by clearing the LINEN bit in the CR2 register */
+    USARTx->CR2 &= CR2_LINEN_Reset;
+   c:	8a03      	ldrh	r3, [r0, #16]
+   e:	f423 4380 	bic.w	r3, r3, #16384	; 0x4000
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8203      	strh	r3, [r0, #16]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.USART_SendData:
+
+00000000 <USART_SendData>:
+USART_SendData():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:578
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_USART_DATA(Data)); 
+    
+  /* Transmit Data */
+  USARTx->DR = (Data & (u16)0x01FF);
+   0:	05c9      	lsls	r1, r1, #23
+   2:	0dc9      	lsrs	r1, r1, #23
+   4:	8081      	strh	r1, [r0, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:579
+}
+   6:	4770      	bx	lr
+
+Disassembly of section .text.USART_ReceiveData:
+
+00000000 <USART_ReceiveData>:
+USART_ReceiveData():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:596
+{
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  
+  /* Receive Data */
+  return (u16)(USARTx->DR & (u16)0x01FF);
+   0:	8880      	ldrh	r0, [r0, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:597
+}
+   2:	05c0      	lsls	r0, r0, #23
+   4:	0dc0      	lsrs	r0, r0, #23
+   6:	4770      	bx	lr
+
+Disassembly of section .text.USART_SendBreak:
+
+00000000 <USART_SendBreak>:
+USART_SendBreak():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:614
+{
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  
+  /* Send break characters */
+  USARTx->CR1 |= CR1_SBK_Set;
+   0:	8983      	ldrh	r3, [r0, #12]
+   2:	b29b      	uxth	r3, r3
+   4:	f043 0301 	orr.w	r3, r3, #1
+   8:	8183      	strh	r3, [r0, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:615
+}
+   a:	4770      	bx	lr
+
+Disassembly of section .text.USART_SetGuardTime:
+
+00000000 <USART_SetGuardTime>:
+USART_SetGuardTime():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:633
+{    
+  /* Check the parameters */
+  assert_param(IS_USART_123_PERIPH(USARTx));
+  
+  /* Clear the USART Guard time */
+  USARTx->GTPR &= GTPR_LSB_Mask;
+   0:	8b03      	ldrh	r3, [r0, #24]
+   2:	b2db      	uxtb	r3, r3
+   4:	8303      	strh	r3, [r0, #24]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:635
+  /* Set the USART guard time */
+  USARTx->GTPR |= (u16)((u16)USART_GuardTime << 0x08);
+   6:	8b03      	ldrh	r3, [r0, #24]
+   8:	b29b      	uxth	r3, r3
+   a:	ea43 2301 	orr.w	r3, r3, r1, lsl #8
+   e:	8303      	strh	r3, [r0, #24]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:636
+}
+  10:	4770      	bx	lr
+
+Disassembly of section .text.USART_SetPrescaler:
+
+00000000 <USART_SetPrescaler>:
+USART_SetPrescaler():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:655
+{ 
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  
+  /* Clear the USART prescaler */
+  USARTx->GTPR &= GTPR_MSB_Mask;
+   0:	8b03      	ldrh	r3, [r0, #24]
+   2:	f403 437f 	and.w	r3, r3, #65280	; 0xff00
+   6:	8303      	strh	r3, [r0, #24]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:657
+  /* Set the USART prescaler */
+  USARTx->GTPR |= USART_Prescaler;
+   8:	8b03      	ldrh	r3, [r0, #24]
+   a:	b29b      	uxth	r3, r3
+   c:	ea41 0303 	orr.w	r3, r1, r3
+  10:	8303      	strh	r3, [r0, #24]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:658
+}
+  12:	4770      	bx	lr
+
+Disassembly of section .text.USART_SmartCardCmd:
+
+00000000 <USART_SmartCardCmd>:
+USART_SmartCardCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:677
+{
+  /* Check the parameters */
+  assert_param(IS_USART_123_PERIPH(USARTx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <USART_SmartCardCmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:680
+  {
+    /* Enable the SC mode by setting the SCEN bit in the CR3 register */
+    USARTx->CR3 |= CR3_SCEN_Set;
+   2:	8a83      	ldrh	r3, [r0, #20]
+   4:	b29b      	uxth	r3, r3
+   6:	f043 0320 	orr.w	r3, r3, #32
+   a:	e004      	b.n	16 <USART_SmartCardCmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:685
+  }
+  else
+  {
+    /* Disable the SC mode by clearing the SCEN bit in the CR3 register */
+    USARTx->CR3 &= CR3_SCEN_Reset;
+   c:	8a83      	ldrh	r3, [r0, #20]
+   e:	f023 0320 	bic.w	r3, r3, #32
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8283      	strh	r3, [r0, #20]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.USART_SmartCardNACKCmd:
+
+00000000 <USART_SmartCardNACKCmd>:
+USART_SmartCardNACKCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:706
+{
+  /* Check the parameters */
+  assert_param(IS_USART_123_PERIPH(USARTx));  
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <USART_SmartCardNACKCmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:709
+  {
+    /* Enable the NACK transmission by setting the NACK bit in the CR3 register */
+    USARTx->CR3 |= CR3_NACK_Set;
+   2:	8a83      	ldrh	r3, [r0, #20]
+   4:	b29b      	uxth	r3, r3
+   6:	f043 0310 	orr.w	r3, r3, #16
+   a:	e004      	b.n	16 <USART_SmartCardNACKCmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:714
+  }
+  else
+  {
+    /* Disable the NACK transmission by clearing the NACK bit in the CR3 register */
+    USARTx->CR3 &= CR3_NACK_Reset;
+   c:	8a83      	ldrh	r3, [r0, #20]
+   e:	f023 0310 	bic.w	r3, r3, #16
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8283      	strh	r3, [r0, #20]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.USART_HalfDuplexCmd:
+
+00000000 <USART_HalfDuplexCmd>:
+USART_HalfDuplexCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:735
+{
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <USART_HalfDuplexCmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:738
+  {
+    /* Enable the Half-Duplex mode by setting the HDSEL bit in the CR3 register */
+    USARTx->CR3 |= CR3_HDSEL_Set;
+   2:	8a83      	ldrh	r3, [r0, #20]
+   4:	b29b      	uxth	r3, r3
+   6:	f043 0308 	orr.w	r3, r3, #8
+   a:	e004      	b.n	16 <USART_HalfDuplexCmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:743
+  }
+  else
+  {
+    /* Disable the Half-Duplex mode by clearing the HDSEL bit in the CR3 register */
+    USARTx->CR3 &= CR3_HDSEL_Reset;
+   c:	8a83      	ldrh	r3, [r0, #20]
+   e:	f023 0308 	bic.w	r3, r3, #8
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8283      	strh	r3, [r0, #20]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.USART_IrDAConfig:
+
+00000000 <USART_IrDAConfig>:
+USART_IrDAConfig():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:766
+{
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_USART_IRDA_MODE(USART_IrDAMode));
+    
+  USARTx->CR3 &= CR3_IRLP_Mask;
+   0:	8a83      	ldrh	r3, [r0, #20]
+   2:	f023 0304 	bic.w	r3, r3, #4
+   6:	041b      	lsls	r3, r3, #16
+   8:	0c1b      	lsrs	r3, r3, #16
+   a:	8283      	strh	r3, [r0, #20]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:767
+  USARTx->CR3 |= USART_IrDAMode;
+   c:	8a83      	ldrh	r3, [r0, #20]
+   e:	b29b      	uxth	r3, r3
+  10:	ea41 0303 	orr.w	r3, r1, r3
+  14:	8283      	strh	r3, [r0, #20]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:768
+}
+  16:	4770      	bx	lr
+
+Disassembly of section .text.USART_IrDACmd:
+
+00000000 <USART_IrDACmd>:
+USART_IrDACmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:787
+{
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+    
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <USART_IrDACmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:790
+  {
+    /* Enable the IrDA mode by setting the IREN bit in the CR3 register */
+    USARTx->CR3 |= CR3_IREN_Set;
+   2:	8a83      	ldrh	r3, [r0, #20]
+   4:	b29b      	uxth	r3, r3
+   6:	f043 0302 	orr.w	r3, r3, #2
+   a:	e004      	b.n	16 <USART_IrDACmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:795
+  }
+  else
+  {
+    /* Disable the IrDA mode by clearing the IREN bit in the CR3 register */
+    USARTx->CR3 &= CR3_IREN_Reset;
+   c:	8a83      	ldrh	r3, [r0, #20]
+   e:	f023 0302 	bic.w	r3, r3, #2
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8283      	strh	r3, [r0, #20]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.USART_GetFlagStatus:
+
+00000000 <USART_GetFlagStatus>:
+USART_GetFlagStatus():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:830
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_USART_FLAG(USART_FLAG));
+  assert_param(IS_USART_PERIPH_FLAG(USARTx, USART_FLAG)); /* The CTS flag is not available for UART4 and UART5 */   
+
+  if ((USARTx->SR & USART_FLAG) != (u16)RESET)
+   0:	8803      	ldrh	r3, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:832
+  {
+    bitstatus = SET;
+   2:	4219      	tst	r1, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:839
+  else
+  {
+    bitstatus = RESET;
+  }
+  return bitstatus;
+}
+   4:	bf0c      	ite	eq
+   6:	2000      	moveq	r0, #0
+   8:	2001      	movne	r0, #1
+   a:	4770      	bx	lr
+
+Disassembly of section .text.USART_ClearFlag:
+
+00000000 <USART_ClearFlag>:
+USART_ClearFlag():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:880
+  /* Check the parameters */
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_USART_CLEAR_FLAG(USART_FLAG));
+  assert_param(IS_USART_PERIPH_FLAG(USARTx, USART_FLAG)); /* The CTS flag is not available for UART4 and UART5 */   
+   
+  USARTx->SR = (u16)~USART_FLAG;
+   0:	43c9      	mvns	r1, r1
+   2:	b289      	uxth	r1, r1
+   4:	8001      	strh	r1, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:881
+}
+   6:	4770      	bx	lr
+
+Disassembly of section .text.USART_GetITStatus:
+
+00000000 <USART_GetITStatus>:
+USART_GetITStatus():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:907
+*                       - USART_IT_PE:   Parity Error interrupt
+* Output         : None
+* Return         : The new state of USART_IT (SET or RESET).
+*******************************************************************************/
+ITStatus USART_GetITStatus(USART_TypeDef* USARTx, u16 USART_IT)
+{
+   0:	b510      	push	{r4, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:917
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_USART_GET_IT(USART_IT));
+  assert_param(IS_USART_PERIPH_IT(USARTx, USART_IT)); /* The CTS interrupt is not available for UART4 and UART5 */  
+  
+  /* Get the USART register index */
+  usartreg = (((u8)USART_IT) >> 0x05);
+   2:	b2cc      	uxtb	r4, r1
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:922
+
+  /* Get the interrupt position */
+  itmask = USART_IT & IT_Mask;
+
+  itmask = (u32)0x01 << itmask;
+   4:	2201      	movs	r2, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:917
+  assert_param(IS_USART_ALL_PERIPH(USARTx));
+  assert_param(IS_USART_GET_IT(USART_IT));
+  assert_param(IS_USART_PERIPH_IT(USARTx, USART_IT)); /* The CTS interrupt is not available for UART4 and UART5 */  
+  
+  /* Get the USART register index */
+  usartreg = (((u8)USART_IT) >> 0x05);
+   6:	0964      	lsrs	r4, r4, #5
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:920
+
+  /* Get the interrupt position */
+  itmask = USART_IT & IT_Mask;
+   8:	f001 031f 	and.w	r3, r1, #31
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:922
+
+  itmask = (u32)0x01 << itmask;
+   c:	409a      	lsls	r2, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:924
+  
+  if (usartreg == 0x01) /* The IT  is in CR1 register */
+   e:	2c01      	cmp	r4, #1
+  10:	d101      	bne.n	16 <USART_GetITStatus+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:926
+  {
+    itmask &= USARTx->CR1;
+  12:	8983      	ldrh	r3, [r0, #12]
+  14:	e003      	b.n	1e <USART_GetITStatus+0x1e>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:928
+  }
+  else if (usartreg == 0x02) /* The IT  is in CR2 register */
+  16:	2c02      	cmp	r4, #2
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:930
+  {
+    itmask &= USARTx->CR2;
+  18:	bf0c      	ite	eq
+  1a:	8a03      	ldrheq	r3, [r0, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:934
+  }
+  else /* The IT  is in CR3 register */
+  {
+    itmask &= USARTx->CR3;
+  1c:	8a83      	ldrhne	r3, [r0, #20]
+  1e:	b29b      	uxth	r3, r3
+  20:	ea02 0303 	and.w	r3, r2, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:940
+  }
+  
+  bitpos = USART_IT >> 0x08;
+
+  bitpos = (u32)0x01 << bitpos;
+  bitpos &= USARTx->SR;
+  24:	8802      	ldrh	r2, [r0, #0]
+  26:	b292      	uxth	r2, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:942
+
+  if ((itmask != (u16)RESET)&&(bitpos != (u16)RESET))
+  28:	b143      	cbz	r3, 3c <USART_GetITStatus+0x3c>
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:937
+  else /* The IT  is in CR3 register */
+  {
+    itmask &= USARTx->CR3;
+  }
+  
+  bitpos = USART_IT >> 0x08;
+  2a:	0a09      	lsrs	r1, r1, #8
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:939
+
+  bitpos = (u32)0x01 << bitpos;
+  2c:	2301      	movs	r3, #1
+  2e:	fa13 f101 	lsls.w	r1, r3, r1
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:906
+*                       - USART_IT_FE:   Framing Error interrupt
+*                       - USART_IT_PE:   Parity Error interrupt
+* Output         : None
+* Return         : The new state of USART_IT (SET or RESET).
+*******************************************************************************/
+ITStatus USART_GetITStatus(USART_TypeDef* USARTx, u16 USART_IT)
+  32:	4211      	tst	r1, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:944
+  bitpos = (u32)0x01 << bitpos;
+  bitpos &= USARTx->SR;
+
+  if ((itmask != (u16)RESET)&&(bitpos != (u16)RESET))
+  {
+    bitstatus = SET;
+  34:	bf0c      	ite	eq
+  36:	2000      	moveq	r0, #0
+  38:	2001      	movne	r0, #1
+  3a:	bd10      	pop	{r4, pc}
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:948
+  }
+  else
+  {
+    bitstatus = RESET;
+  3c:	4618      	mov	r0, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:952
+  }
+  
+  return bitstatus;  
+}
+  3e:	bd10      	pop	{r4, pc}
+
+Disassembly of section .text.USART_ClearITPendingBit:
+
+00000000 <USART_ClearITPendingBit>:
+USART_ClearITPendingBit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:997
+  assert_param(IS_USART_CLEAR_IT(USART_IT));
+  assert_param(IS_USART_PERIPH_IT(USARTx, USART_IT)); /* The CTS interrupt is not available for UART4 and UART5 */
+  
+  bitpos = USART_IT >> 0x08;
+
+  itmask = (u16)((u16)0x01 << bitpos);
+   0:	0a09      	lsrs	r1, r1, #8
+   2:	2301      	movs	r3, #1
+   4:	408b      	lsls	r3, r1
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:998
+  USARTx->SR = (u16)~itmask;
+   6:	43db      	mvns	r3, r3
+   8:	b29b      	uxth	r3, r3
+   a:	8003      	strh	r3, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_usart.c:999
+}
+   c:	4770      	bx	lr

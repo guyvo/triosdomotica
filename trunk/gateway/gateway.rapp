@@ -1,29 +1,86 @@
 
-<ApplicationBuild Header="gateway" Extern=".\gateway.rapp" Path=".\gateway.rapp" OutputFile=".\gateway.elf" sate="98" >
-	<Group Header="inc" Marker="-1" OutputFile="" sate="96" >
-		<NodeH Path=".\include\main.h" Header="main.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\stm32f10x_conf.h" Header="stm32f10x_conf.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\stm32f10x_it.h" Header="stm32f10x_it.h" Marker="-1" OutputFile="" sate="0" />
+<ApplicationBuild Header="gateway" Extern=".\gateway.rapp" Path=".\gateway.rapp" OutputFile=".\out\gateway.elf" sate="96" AsyncBuild="" >
+	<Group Header="inc" Marker="-1" OutputFile="" sate="96" AsyncBuild="" >
+		<NodeH Path=".\include\main.h" Header="main.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\stm32f10x_conf.h" Header="stm32f10x_conf.h" Marker="-1" OutputFile="" sate="2" AsyncBuild="" />
+		<NodeH Path=".\include\stm32f10x_it.h" Header="stm32f10x_it.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+																																							
+	</Group>
+	<Group Header="src" Marker="-1" OutputFile="" sate="96" AsyncBuild="" >
+		<NodeC Path=".\src\stm32f10x_it.c" Header="stm32f10x_it.c" Marker="-1" OutputFile=".\out\stm32f10x_it.o" sate="0" AsyncBuild="" />
+		<NodeC Path=".\src\main.c" Header="main.c" Marker="-1" OutputFile=".\out\main.o" sate="0" AsyncBuild="" />
+		<NodeASM Path=".\src\cortexm3_macro.s" Header="cortexm3_macro.s" Marker="-1" AsyncBuild="" OutputFile=".\out\cortexm3_macro.o" sate="0" />
 																																	
 	</Group>
-	<Group Header="src" Marker="-1" OutputFile="" sate="96" >
-		<NodeC Path=".\src\stm32f10x_it.c" Header="stm32f10x_it.c" Marker="-1" OutputFile=".\stm32f10x_it.o" sate="0" />
-		<NodeC Path=".\src\main.c" Header="main.c" Marker="-1" OutputFile=".\main.o" sate="0" />
-		<NodeC Path=".\src\stm32f10x_rcc.c" Header="stm32f10x_rcc.c" Marker="-1" OutputFile=".\stm32f10x_rcc.o" sate="0" />
-		<NodeC Path=".\src\stm32f10x_usart.c" Header="stm32f10x_usart.c" Marker="-1" OutputFile=".\stm32f10x_usart.o" sate="0" />
-		<NodeC Path=".\src\stm32f10x_i2c.c" Header="stm32f10x_i2c.c" Marker="-1" OutputFile=".\stm32f10x_i2c.o" sate="0" />
-																											
+	<Group Header="stinclude" Marker="-1" AsyncBuild="" OutputFile="" sate="0" >
+		<NodeH Path=".\stlibrary\inc\cortexm3_macro.h" Header="cortexm3_macro.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_adc.h" Header="stm32f10x_adc.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_bkp.h" Header="stm32f10x_bkp.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_can.h" Header="stm32f10x_can.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_crc.h" Header="stm32f10x_crc.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_dac.h" Header="stm32f10x_dac.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_dbgmcu.h" Header="stm32f10x_dbgmcu.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_dma.h" Header="stm32f10x_dma.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_exti.h" Header="stm32f10x_exti.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_flash.h" Header="stm32f10x_flash.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_fsmc.h" Header="stm32f10x_fsmc.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_gpio.h" Header="stm32f10x_gpio.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_i2c.h" Header="stm32f10x_i2c.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_iwdg.h" Header="stm32f10x_iwdg.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_lib.h" Header="stm32f10x_lib.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_map.h" Header="stm32f10x_map.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_nvic.h" Header="stm32f10x_nvic.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_pwr.h" Header="stm32f10x_pwr.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_rcc.h" Header="stm32f10x_rcc.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_rtc.h" Header="stm32f10x_rtc.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_sdio.h" Header="stm32f10x_sdio.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_spi.h" Header="stm32f10x_spi.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_systick.h" Header="stm32f10x_systick.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_tim.h" Header="stm32f10x_tim.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_type.h" Header="stm32f10x_type.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_usart.h" Header="stm32f10x_usart.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_wwdg.h" Header="stm32f10x_wwdg.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+			
+	</Group>
+	<Group Header="stsource" Marker="-1" AsyncBuild="" OutputFile="" sate="96" >
+		<NodeC Path=".\stlibrary\src\stm32f10x_adc.c" Header="stm32f10x_adc.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_adc.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_bkp.c" Header="stm32f10x_bkp.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_bkp.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_can.c" Header="stm32f10x_can.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_can.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_crc.c" Header="stm32f10x_crc.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_crc.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_dac.c" Header="stm32f10x_dac.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_dac.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_dbgmcu.c" Header="stm32f10x_dbgmcu.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_dbgmcu.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_dma.c" Header="stm32f10x_dma.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_dma.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_exti.c" Header="stm32f10x_exti.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_exti.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_flash.c" Header="stm32f10x_flash.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_flash.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_fsmc.c" Header="stm32f10x_fsmc.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_fsmc.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_gpio.c" Header="stm32f10x_gpio.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_gpio.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_i2c.c" Header="stm32f10x_i2c.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_i2c.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_iwdg.c" Header="stm32f10x_iwdg.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_iwdg.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_lib.c" Header="stm32f10x_lib.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_lib.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_nvic.c" Header="stm32f10x_nvic.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_nvic.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_pwr.c" Header="stm32f10x_pwr.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_pwr.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_rcc.c" Header="stm32f10x_rcc.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_rcc.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_rtc.c" Header="stm32f10x_rtc.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_rtc.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_sdio.c" Header="stm32f10x_sdio.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_sdio.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_spi.c" Header="stm32f10x_spi.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_spi.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_systick.c" Header="stm32f10x_systick.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_systick.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_tim.c" Header="stm32f10x_tim.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_tim.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_usart.c" Header="stm32f10x_usart.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_usart.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_wwdg.c" Header="stm32f10x_wwdg.c" Marker="-1" AsyncBuild="" OutputFile=".\out\stm32f10x_wwdg.o" sate="0" />
+			
 	</Group>
 	<Options>
 		<Config Header="Standard" >
 			<Set Header="ApplicationBuild" >
 				<Section Header="General" >
 					<Property Header="TargetFamily" Value="ARM" />
-																																																																																																																												
+																																																																																																																																														
 				</Section>
 				<Section Header="Directories" >
-					<Property Header="IncDir" Value=".;C:\cortex\gateway\include;C:\Program Files\Raisonance\Ride\Lib\ARM\include" Removable="1" />
-					<Property Header="LibDir" Value="C:\Program Files\Raisonance\Ride\Lib\ARM" Removable="1" />
+					<Property Header="IncDir" Value=".;C:\cortex\gateway\include;C:\cortex\gateway\stlibrary\inc" Removable="1" />
+					<Property Header="LibDir" Value="$(RkitLib)\ARM" Removable="1" />
+					<Property Header="OutDir" Value="$(ApplicationDir)\out" Removable="1" />
+					<Property Header="ListDir" Value="$(ApplicationDir)\lst" Removable="1" />
 							
 				</Section>
 					
@@ -31,46 +88,46 @@
 			<Set Header="Target" >
 				<Section Header="ProcessorARM" >
 					<Property Header="Processor" Value="STM32F103RET6" />
-																																																													
+																																																																															
 				</Section>
 				<Section Header="ToolSetARM" >
 					<Property Header="BuildToolSetARM" Value="ARM\GNU.config" Removable="1" />
-																																																																																																																												
+																																																																																																																																														
 				</Section>
-																																															
+																																																													
 			</Set>
 			<Set Header="LD" >
 				<Section Header="LIB" >
-					<Property Header="STM32LIB" Value="1" Removable="1" />
+					<Property Header="STM32LIB" Value="0" Removable="1" />
 					<Property Header="UART0PUTC" Value="0" Removable="1" />
 					<Property Header="PRINTFTYPE" Value="1" Removable="1" />
-																																																																															
+																
 				</Section>
 				<Section Header="Linker" >
 					<Property Header="WARNONCE" Value="-Wl,--warn-once" Removable="1" />
 					<Property Header="GC_SECTIONS" Value="-Wl,-static -Wl,--gc-sections" Removable="1" />
-																																																																																																	
+																																																																																																																			
 				</Section>
 				<Section Header="Startup" >
 					<Property Header="DEFAULTSTARTUP" Value="Yes" Removable="1" />
-																																																																																								
+																																																																																																										
 				</Section>
-																																																													
+												
 			</Set>
 			<Set Header="GCC" >
 				<Section Header="DEBUG" >
 					<Property Header="DEBUGINFO" Value="-g" Removable="1" />
-																																																																																								
+																																																																																																										
 				</Section>
 				<Section Header="OPTIMIZE" >
 					<Property Header="Optimize" Value="-Os" Removable="1" />
-																									
+																																											
 				</Section>
 				<Section Header="CODE" >
 					<Property Header="VPOINTERS" Value="" Removable="1" />
-																																		
+																																																				
 				</Section>
-																			
+																																	
 			</Set>
 		</Config>
 	</Options>

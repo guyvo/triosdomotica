@@ -17,6 +17,8 @@
 #ifndef __MAIN_H
 #define __MAIN_H
 
+
+#include "stm32f10x_lib.h"
 #include "stm32f10x_conf.h"
 #include "stm32f10x_i2c.h"
 #include "stm32f10x_rcc.h"

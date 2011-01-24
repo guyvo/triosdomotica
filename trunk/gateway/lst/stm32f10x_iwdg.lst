@@ -1,0 +1,132 @@
+
+C:\cortex\gateway\out\stm32f10x_iwdg.o:     file format elf32-littlearm
+C:\cortex\gateway\out\stm32f10x_iwdg.o
+
+
+Disassembly of section .text.IWDG_WriteAccessCmd:
+
+00000000 <IWDG_WriteAccessCmd>:
+IWDG_WriteAccessCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_iwdg.c:50
+void IWDG_WriteAccessCmd(u16 IWDG_WriteAccess)
+{
+  /* Check the parameters */
+  assert_param(IS_IWDG_WRITE_ACCESS(IWDG_WriteAccess));
+
+  IWDG->KR = IWDG_WriteAccess;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <IWDG_WriteAccessCmd+0x8>)
+   2:	6018      	str	r0, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_iwdg.c:51
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	40003000 	.word	0x40003000
+
+Disassembly of section .text.IWDG_SetPrescaler:
+
+00000000 <IWDG_SetPrescaler>:
+IWDG_SetPrescaler():
+C:\cortex\gateway\stlibrary\src/stm32f10x_iwdg.c:73
+void IWDG_SetPrescaler(u8 IWDG_Prescaler)
+{
+  /* Check the parameters */
+  assert_param(IS_IWDG_PRESCALER(IWDG_Prescaler));
+
+  IWDG->PR = IWDG_Prescaler;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <IWDG_SetPrescaler+0x8>)
+   2:	6058      	str	r0, [r3, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_iwdg.c:74
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	40003000 	.word	0x40003000
+
+Disassembly of section .text.IWDG_SetReload:
+
+00000000 <IWDG_SetReload>:
+IWDG_SetReload():
+C:\cortex\gateway\stlibrary\src/stm32f10x_iwdg.c:89
+void IWDG_SetReload(u16 Reload)
+{
+  /* Check the parameters */
+  assert_param(IS_IWDG_RELOAD(Reload));
+
+  IWDG->RLR = Reload;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <IWDG_SetReload+0x8>)
+   2:	6098      	str	r0, [r3, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_iwdg.c:90
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	40003000 	.word	0x40003000
+
+Disassembly of section .text.IWDG_ReloadCounter:
+
+00000000 <IWDG_ReloadCounter>:
+IWDG_ReloadCounter():
+C:\cortex\gateway\stlibrary\src/stm32f10x_iwdg.c:102
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void IWDG_ReloadCounter(void)
+{
+  IWDG->KR = KR_KEY_Reload;
+   0:	4b02      	ldr	r3, [pc, #8]	; (c <IWDG_ReloadCounter+0xc>)
+   2:	f64a 22aa 	movw	r2, #43690	; 0xaaaa
+   6:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_iwdg.c:103
+}
+   8:	4770      	bx	lr
+   a:	bf00      	nop
+   c:	40003000 	.word	0x40003000
+
+Disassembly of section .text.IWDG_Enable:
+
+00000000 <IWDG_Enable>:
+IWDG_Enable():
+C:\cortex\gateway\stlibrary\src/stm32f10x_iwdg.c:115
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void IWDG_Enable(void)
+{
+  IWDG->KR = KR_KEY_Enable;
+   0:	4b02      	ldr	r3, [pc, #8]	; (c <IWDG_Enable+0xc>)
+   2:	f64c 42cc 	movw	r2, #52428	; 0xcccc
+   6:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_iwdg.c:116
+}
+   8:	4770      	bx	lr
+   a:	bf00      	nop
+   c:	40003000 	.word	0x40003000
+
+Disassembly of section .text.IWDG_GetFlagStatus:
+
+00000000 <IWDG_GetFlagStatus>:
+IWDG_GetFlagStatus():
+C:\cortex\gateway\stlibrary\src/stm32f10x_iwdg.c:135
+  FlagStatus bitstatus = RESET;
+
+  /* Check the parameters */
+  assert_param(IS_IWDG_FLAG(IWDG_FLAG));
+
+  if ((IWDG->SR & IWDG_FLAG) != (u32)RESET)
+   0:	4b03      	ldr	r3, [pc, #12]	; (10 <IWDG_GetFlagStatus+0x10>)
+   2:	68db      	ldr	r3, [r3, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_iwdg.c:137
+  {
+    bitstatus = SET;
+   4:	4218      	tst	r0, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_iwdg.c:146
+    bitstatus = RESET;
+  }
+
+  /* Return the flag status */
+  return bitstatus;
+}
+   6:	bf0c      	ite	eq
+   8:	2000      	moveq	r0, #0
+   a:	2001      	movne	r0, #1
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	40003000 	.word	0x40003000

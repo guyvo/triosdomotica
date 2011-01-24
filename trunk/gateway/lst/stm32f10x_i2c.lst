@@ -1,0 +1,1500 @@
+
+C:\cortex\gateway\out\stm32f10x_i2c.o:     file format elf32-littlearm
+C:\cortex\gateway\out\stm32f10x_i2c.o
+
+
+Disassembly of section .text.I2C_DeInit:
+
+00000000 <I2C_DeInit>:
+I2C_DeInit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:113
+* Input          : - I2Cx: where x can be 1 or 2 to select the I2C peripheral.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void I2C_DeInit(I2C_TypeDef* I2Cx)
+{
+   0:	b507      	push	{r0, r1, r2, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:117
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+
+  switch (*(u32*)&I2Cx)
+   2:	4b0d      	ldr	r3, [pc, #52]	; (38 <I2C_DeInit+0x38>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:113
+* Input          : - I2Cx: where x can be 1 or 2 to select the I2C peripheral.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void I2C_DeInit(I2C_TypeDef* I2Cx)
+{
+   4:	9001      	str	r0, [sp, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:117
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+
+  switch (*(u32*)&I2Cx)
+   6:	4298      	cmp	r0, r3
+   8:	d003      	beq.n	12 <I2C_DeInit+0x12>
+   a:	4b0c      	ldr	r3, [pc, #48]	; (3c <I2C_DeInit+0x3c>)
+   c:	4298      	cmp	r0, r3
+   e:	d112      	bne.n	36 <I2C_DeInit+0x36>
+  10:	e007      	b.n	22 <I2C_DeInit+0x22>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:121
+  {
+    case I2C1_BASE:
+      /* Enable I2C1 reset state */
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_I2C1, ENABLE);
+  12:	f44f 1000 	mov.w	r0, #2097152	; 0x200000
+  16:	2101      	movs	r1, #1
+  18:	f7ff fffe 	bl	0 <RCC_APB1PeriphResetCmd>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:123
+      /* Release I2C1 from reset state */
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_I2C1, DISABLE);
+  1c:	f44f 1000 	mov.w	r0, #2097152	; 0x200000
+  20:	e006      	b.n	30 <I2C_DeInit+0x30>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:128
+      break;
+
+    case I2C2_BASE:
+      /* Enable I2C2 reset state */
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_I2C2, ENABLE);
+  22:	f44f 0080 	mov.w	r0, #4194304	; 0x400000
+  26:	2101      	movs	r1, #1
+  28:	f7ff fffe 	bl	0 <RCC_APB1PeriphResetCmd>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:130
+      /* Release I2C2 from reset state */
+      RCC_APB1PeriphResetCmd(RCC_APB1Periph_I2C2, DISABLE);
+  2c:	f44f 0080 	mov.w	r0, #4194304	; 0x400000
+  30:	2100      	movs	r1, #0
+  32:	f7ff fffe 	bl	0 <RCC_APB1PeriphResetCmd>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:136
+      break;
+
+    default:
+      break;
+  }
+}
+  36:	bd0e      	pop	{r1, r2, r3, pc}
+  38:	40005400 	.word	0x40005400
+  3c:	40005800 	.word	0x40005800
+
+Disassembly of section .text.I2C_Init:
+
+00000000 <I2C_Init>:
+I2C_Init():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:150
+*                    I2C peripheral.
+* Output         : None
+* Return         : None
+******************************************************************************/
+void I2C_Init(I2C_TypeDef* I2Cx, I2C_InitTypeDef* I2C_InitStruct)
+{
+   0:	b5f0      	push	{r4, r5, r6, r7, lr}
+   2:	b087      	sub	sp, #28
+   4:	4604      	mov	r4, r0
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:167
+  assert_param(IS_I2C_ACKNOWLEDGE_ADDRESS(I2C_InitStruct->I2C_AcknowledgedAddress));
+  assert_param(IS_I2C_CLOCK_SPEED(I2C_InitStruct->I2C_ClockSpeed));
+
+/*---------------------------- I2Cx CR2 Configuration ------------------------*/
+  /* Get the I2Cx CR2 value */
+  tmpreg = I2Cx->CR2;
+   6:	8886      	ldrh	r6, [r0, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:171
+  /* Clear frequency FREQ[5:0] bits */
+  tmpreg &= CR2_FREQ_Reset;
+  /* Get pclk1 frequency value */
+  RCC_GetClocksFreq(&rcc_clocks);
+   8:	a801      	add	r0, sp, #4
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:150
+*                    I2C peripheral.
+* Output         : None
+* Return         : None
+******************************************************************************/
+void I2C_Init(I2C_TypeDef* I2Cx, I2C_InitTypeDef* I2C_InitStruct)
+{
+   a:	460d      	mov	r5, r1
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:174
+  tmpreg &= CR2_FREQ_Reset;
+  /* Get pclk1 frequency value */
+  RCC_GetClocksFreq(&rcc_clocks);
+  pclk1 = rcc_clocks.PCLK1_Frequency;
+  /* Set frequency bits depending on pclk1 value */
+  freqrange = (u16)(pclk1 / 1000000);
+   c:	4f30      	ldr	r7, [pc, #192]	; (d0 <I2C_Init+0xd0>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:171
+  /* Get the I2Cx CR2 value */
+  tmpreg = I2Cx->CR2;
+  /* Clear frequency FREQ[5:0] bits */
+  tmpreg &= CR2_FREQ_Reset;
+  /* Get pclk1 frequency value */
+  RCC_GetClocksFreq(&rcc_clocks);
+   e:	f7ff fffe 	bl	0 <RCC_GetClocksFreq>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:172
+  pclk1 = rcc_clocks.PCLK1_Frequency;
+  12:	9803      	ldr	r0, [sp, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:169
+
+/*---------------------------- I2Cx CR2 Configuration ------------------------*/
+  /* Get the I2Cx CR2 value */
+  tmpreg = I2Cx->CR2;
+  /* Clear frequency FREQ[5:0] bits */
+  tmpreg &= CR2_FREQ_Reset;
+  14:	f026 063f 	bic.w	r6, r6, #63	; 0x3f
+  18:	0436      	lsls	r6, r6, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:174
+  /* Get pclk1 frequency value */
+  RCC_GetClocksFreq(&rcc_clocks);
+  pclk1 = rcc_clocks.PCLK1_Frequency;
+  /* Set frequency bits depending on pclk1 value */
+  freqrange = (u16)(pclk1 / 1000000);
+  1a:	fbb0 f7f7 	udiv	r7, r0, r7
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:169
+
+/*---------------------------- I2Cx CR2 Configuration ------------------------*/
+  /* Get the I2Cx CR2 value */
+  tmpreg = I2Cx->CR2;
+  /* Clear frequency FREQ[5:0] bits */
+  tmpreg &= CR2_FREQ_Reset;
+  1e:	0c36      	lsrs	r6, r6, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:174
+  /* Get pclk1 frequency value */
+  RCC_GetClocksFreq(&rcc_clocks);
+  pclk1 = rcc_clocks.PCLK1_Frequency;
+  /* Set frequency bits depending on pclk1 value */
+  freqrange = (u16)(pclk1 / 1000000);
+  20:	b2bf      	uxth	r7, r7
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:175
+  tmpreg |= freqrange;
+  22:	ea47 0606 	orr.w	r6, r7, r6
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:177
+  /* Write to I2Cx CR2 */
+  I2Cx->CR2 = tmpreg;
+  26:	80a6      	strh	r6, [r4, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:181
+
+/*---------------------------- I2Cx CCR Configuration ------------------------*/
+  /* Disable the selected I2C peripheral to configure TRISE */
+  I2Cx->CR1 &= CR1_PE_Reset;
+  28:	8821      	ldrh	r1, [r4, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:188
+  /* Reset tmpreg value */
+  /* Clear F/S, DUTY and CCR[11:0] bits */
+  tmpreg = 0;
+
+  /* Configure speed in standard mode */
+  if (I2C_InitStruct->I2C_ClockSpeed <= 100000)
+  2a:	68ea      	ldr	r2, [r5, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:181
+  /* Write to I2Cx CR2 */
+  I2Cx->CR2 = tmpreg;
+
+/*---------------------------- I2Cx CCR Configuration ------------------------*/
+  /* Disable the selected I2C peripheral to configure TRISE */
+  I2Cx->CR1 &= CR1_PE_Reset;
+  2c:	f021 0101 	bic.w	r1, r1, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:188
+  /* Reset tmpreg value */
+  /* Clear F/S, DUTY and CCR[11:0] bits */
+  tmpreg = 0;
+
+  /* Configure speed in standard mode */
+  if (I2C_InitStruct->I2C_ClockSpeed <= 100000)
+  30:	4b28      	ldr	r3, [pc, #160]	; (d4 <I2C_Init+0xd4>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:181
+  /* Write to I2Cx CR2 */
+  I2Cx->CR2 = tmpreg;
+
+/*---------------------------- I2Cx CCR Configuration ------------------------*/
+  /* Disable the selected I2C peripheral to configure TRISE */
+  I2Cx->CR1 &= CR1_PE_Reset;
+  32:	0409      	lsls	r1, r1, #16
+  34:	0c09      	lsrs	r1, r1, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:188
+  /* Reset tmpreg value */
+  /* Clear F/S, DUTY and CCR[11:0] bits */
+  tmpreg = 0;
+
+  /* Configure speed in standard mode */
+  if (I2C_InitStruct->I2C_ClockSpeed <= 100000)
+  36:	429a      	cmp	r2, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:181
+  /* Write to I2Cx CR2 */
+  I2Cx->CR2 = tmpreg;
+
+/*---------------------------- I2Cx CCR Configuration ------------------------*/
+  /* Disable the selected I2C peripheral to configure TRISE */
+  I2Cx->CR1 &= CR1_PE_Reset;
+  38:	8021      	strh	r1, [r4, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:188
+  /* Reset tmpreg value */
+  /* Clear F/S, DUTY and CCR[11:0] bits */
+  tmpreg = 0;
+
+  /* Configure speed in standard mode */
+  if (I2C_InitStruct->I2C_ClockSpeed <= 100000)
+  3a:	d80a      	bhi.n	52 <I2C_Init+0x52>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:191
+  {
+    /* Standard mode speed calculate */
+    result = (u16)(pclk1 / (I2C_InitStruct->I2C_ClockSpeed << 1));
+  3c:	0053      	lsls	r3, r2, #1
+  3e:	fbb0 f3f3 	udiv	r3, r0, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:201
+      result = 0x04;  
+    }
+    /* Set speed value for standard mode */
+    tmpreg |= result;	  
+    /* Set Maximum Rise Time for standard mode */
+    I2Cx->TRISE = freqrange + 1; 
+  42:	3701      	adds	r7, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:191
+
+  /* Configure speed in standard mode */
+  if (I2C_InitStruct->I2C_ClockSpeed <= 100000)
+  {
+    /* Standard mode speed calculate */
+    result = (u16)(pclk1 / (I2C_InitStruct->I2C_ClockSpeed << 1));
+  44:	b29b      	uxth	r3, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:201
+      result = 0x04;  
+    }
+    /* Set speed value for standard mode */
+    tmpreg |= result;	  
+    /* Set Maximum Rise Time for standard mode */
+    I2Cx->TRISE = freqrange + 1; 
+  46:	b2bf      	uxth	r7, r7
+  48:	8427      	strh	r7, [r4, #32]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:199
+    {
+      /* Set minimum allowed value */
+      result = 0x04;  
+    }
+    /* Set speed value for standard mode */
+    tmpreg |= result;	  
+  4a:	2b03      	cmp	r3, #3
+  4c:	bf98      	it	ls
+  4e:	2304      	movls	r3, #4
+  50:	e022      	b.n	98 <I2C_Init+0x98>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:206
+    I2Cx->TRISE = freqrange + 1; 
+  }
+  /* Configure speed in fast mode */
+  else /*(I2C_InitStruct->I2C_ClockSpeed <= 400000)*/
+  {
+    if (I2C_InitStruct->I2C_DutyCycle == I2C_DutyCycle_2)
+  52:	8869      	ldrh	r1, [r5, #2]
+  54:	f64b 73ff 	movw	r3, #49151	; 0xbfff
+  58:	4299      	cmp	r1, r3
+  5a:	d105      	bne.n	68 <I2C_Init+0x68>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:209
+    {
+      /* Fast mode speed calculate: Tlow/Thigh = 2 */
+      result = (u16)(pclk1 / (I2C_InitStruct->I2C_ClockSpeed * 3));
+  5c:	eb02 0242 	add.w	r2, r2, r2, lsl #1
+  60:	fbb0 f3f2 	udiv	r3, r0, r2
+  64:	b29b      	uxth	r3, r3
+  66:	e006      	b.n	76 <I2C_Init+0x76>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:214
+    }
+    else /*I2C_InitStruct->I2C_DutyCycle == I2C_DutyCycle_16_9*/
+    {
+      /* Fast mode speed calculate: Tlow/Thigh = 16/9 */
+      result = (u16)(pclk1 / (I2C_InitStruct->I2C_ClockSpeed * 25));
+  68:	2319      	movs	r3, #25
+  6a:	4353      	muls	r3, r2
+  6c:	fbb0 f3f3 	udiv	r3, r0, r3
+  70:	b29b      	uxth	r3, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:216
+      /* Set DUTY bit */
+      result |= I2C_DutyCycle_16_9;
+  72:	f443 4380 	orr.w	r3, r3, #16384	; 0x4000
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:219
+    }
+    /* Test if CCR value is under 0x1*/
+    if ((result & CCR_CCR_Set) == 0)
+  76:	051a      	lsls	r2, r3, #20
+  78:	0d12      	lsrs	r2, r2, #20
+  7a:	b90a      	cbnz	r2, 80 <I2C_Init+0x80>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:222
+    {
+      /* Set minimum allowed value */
+      result |= (u16)0x0001;  
+  7c:	f043 0301 	orr.w	r3, r3, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:227
+    }
+    /* Set speed value and set F/S bit for fast mode */
+    tmpreg |= result | CCR_FS_Set;
+    /* Set Maximum Rise Time for fast mode */
+    I2Cx->TRISE = (u16)(((freqrange * 300) / 1000) + 1);  
+  80:	f44f 7296 	mov.w	r2, #300	; 0x12c
+  84:	4357      	muls	r7, r2
+  86:	f44f 727a 	mov.w	r2, #1000	; 0x3e8
+  8a:	fb97 f7f2 	sdiv	r7, r7, r2
+  8e:	3701      	adds	r7, #1
+  90:	b2bf      	uxth	r7, r7
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:225
+    {
+      /* Set minimum allowed value */
+      result |= (u16)0x0001;  
+    }
+    /* Set speed value and set F/S bit for fast mode */
+    tmpreg |= result | CCR_FS_Set;
+  92:	f443 4300 	orr.w	r3, r3, #32768	; 0x8000
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:227
+    /* Set Maximum Rise Time for fast mode */
+    I2Cx->TRISE = (u16)(((freqrange * 300) / 1000) + 1);  
+  96:	8427      	strh	r7, [r4, #32]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:230
+  }
+  /* Write to I2Cx CCR */
+  I2Cx->CCR = tmpreg;
+  98:	83a3      	strh	r3, [r4, #28]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:233
+
+  /* Enable the selected I2C peripheral */
+  I2Cx->CR1 |= CR1_PE_Set;
+  9a:	8823      	ldrh	r3, [r4, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:243
+  /* Clear ACK, SMBTYPE and  SMBUS bits */
+  tmpreg &= CR1_CLEAR_Mask;
+  /* Configure I2Cx: mode and acknowledgement */
+  /* Set SMBTYPE and SMBUS bits according to I2C_Mode value */
+  /* Set ACK bit according to I2C_Ack value */
+  tmpreg |= (u16)((u32)I2C_InitStruct->I2C_Mode | I2C_InitStruct->I2C_Ack);
+  9c:	88e9      	ldrh	r1, [r5, #6]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:233
+  }
+  /* Write to I2Cx CCR */
+  I2Cx->CCR = tmpreg;
+
+  /* Enable the selected I2C peripheral */
+  I2Cx->CR1 |= CR1_PE_Set;
+  9e:	b29b      	uxth	r3, r3
+  a0:	f043 0301 	orr.w	r3, r3, #1
+  a4:	8023      	strh	r3, [r4, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:237
+
+/*---------------------------- I2Cx CR1 Configuration ------------------------*/
+  /* Get the I2Cx CR1 value */
+  tmpreg = I2Cx->CR1;
+  a6:	8823      	ldrh	r3, [r4, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:243
+  /* Clear ACK, SMBTYPE and  SMBUS bits */
+  tmpreg &= CR1_CLEAR_Mask;
+  /* Configure I2Cx: mode and acknowledgement */
+  /* Set SMBTYPE and SMBUS bits according to I2C_Mode value */
+  /* Set ACK bit according to I2C_Ack value */
+  tmpreg |= (u16)((u32)I2C_InitStruct->I2C_Mode | I2C_InitStruct->I2C_Ack);
+  a8:	882a      	ldrh	r2, [r5, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:239
+
+/*---------------------------- I2Cx CR1 Configuration ------------------------*/
+  /* Get the I2Cx CR1 value */
+  tmpreg = I2Cx->CR1;
+  /* Clear ACK, SMBTYPE and  SMBUS bits */
+  tmpreg &= CR1_CLEAR_Mask;
+  aa:	f423 6380 	bic.w	r3, r3, #1024	; 0x400
+  ae:	f023 030a 	bic.w	r3, r3, #10
+  b2:	041b      	lsls	r3, r3, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:243
+  /* Configure I2Cx: mode and acknowledgement */
+  /* Set SMBTYPE and SMBUS bits according to I2C_Mode value */
+  /* Set ACK bit according to I2C_Ack value */
+  tmpreg |= (u16)((u32)I2C_InitStruct->I2C_Mode | I2C_InitStruct->I2C_Ack);
+  b4:	ea41 0202 	orr.w	r2, r1, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:239
+
+/*---------------------------- I2Cx CR1 Configuration ------------------------*/
+  /* Get the I2Cx CR1 value */
+  tmpreg = I2Cx->CR1;
+  /* Clear ACK, SMBTYPE and  SMBUS bits */
+  tmpreg &= CR1_CLEAR_Mask;
+  b8:	0c1b      	lsrs	r3, r3, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:243
+  /* Configure I2Cx: mode and acknowledgement */
+  /* Set SMBTYPE and SMBUS bits according to I2C_Mode value */
+  /* Set ACK bit according to I2C_Ack value */
+  tmpreg |= (u16)((u32)I2C_InitStruct->I2C_Mode | I2C_InitStruct->I2C_Ack);
+  ba:	4313      	orrs	r3, r2
+  bc:	b29b      	uxth	r3, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:245
+  /* Write to I2Cx CR1 */
+  I2Cx->CR1 = tmpreg;
+  be:	8023      	strh	r3, [r4, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:249
+
+/*---------------------------- I2Cx OAR1 Configuration -----------------------*/
+  /* Set I2Cx Own Address1 and acknowledged address */
+  I2Cx->OAR1 = (I2C_InitStruct->I2C_AcknowledgedAddress | I2C_InitStruct->I2C_OwnAddress1);
+  c0:	88aa      	ldrh	r2, [r5, #4]
+  c2:	892b      	ldrh	r3, [r5, #8]
+  c4:	ea42 0303 	orr.w	r3, r2, r3
+  c8:	b29b      	uxth	r3, r3
+  ca:	8123      	strh	r3, [r4, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:250
+}
+  cc:	b007      	add	sp, #28
+  ce:	bdf0      	pop	{r4, r5, r6, r7, pc}
+  d0:	000f4240 	.word	0x000f4240
+  d4:	000186a0 	.word	0x000186a0
+
+Disassembly of section .text.I2C_StructInit:
+
+00000000 <I2C_StructInit>:
+I2C_StructInit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:264
+*******************************************************************************/
+void I2C_StructInit(I2C_InitTypeDef* I2C_InitStruct)
+{
+/*---------------- Reset I2C init structure parameters values ----------------*/
+  /* Initialize the I2C_Mode member */
+  I2C_InitStruct->I2C_Mode = I2C_Mode_I2C;
+   0:	2300      	movs	r3, #0
+   2:	8003      	strh	r3, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:270
+
+  /* Initialize the I2C_DutyCycle member */
+  I2C_InitStruct->I2C_DutyCycle = I2C_DutyCycle_2;
+
+  /* Initialize the I2C_OwnAddress1 member */
+  I2C_InitStruct->I2C_OwnAddress1 = 0;
+   4:	8083      	strh	r3, [r0, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:273
+
+  /* Initialize the I2C_Ack member */
+  I2C_InitStruct->I2C_Ack = I2C_Ack_Disable;
+   6:	80c3      	strh	r3, [r0, #6]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:276
+
+  /* Initialize the I2C_AcknowledgedAddress member */
+  I2C_InitStruct->I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
+   8:	f44f 4380 	mov.w	r3, #16384	; 0x4000
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:267
+/*---------------- Reset I2C init structure parameters values ----------------*/
+  /* Initialize the I2C_Mode member */
+  I2C_InitStruct->I2C_Mode = I2C_Mode_I2C;
+
+  /* Initialize the I2C_DutyCycle member */
+  I2C_InitStruct->I2C_DutyCycle = I2C_DutyCycle_2;
+   c:	f64b 72ff 	movw	r2, #49151	; 0xbfff
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:276
+
+  /* Initialize the I2C_Ack member */
+  I2C_InitStruct->I2C_Ack = I2C_Ack_Disable;
+
+  /* Initialize the I2C_AcknowledgedAddress member */
+  I2C_InitStruct->I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
+  10:	8103      	strh	r3, [r0, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:279
+
+  /* initialize the I2C_ClockSpeed member */
+  I2C_InitStruct->I2C_ClockSpeed = 5000;
+  12:	f241 3388 	movw	r3, #5000	; 0x1388
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:267
+/*---------------- Reset I2C init structure parameters values ----------------*/
+  /* Initialize the I2C_Mode member */
+  I2C_InitStruct->I2C_Mode = I2C_Mode_I2C;
+
+  /* Initialize the I2C_DutyCycle member */
+  I2C_InitStruct->I2C_DutyCycle = I2C_DutyCycle_2;
+  16:	8042      	strh	r2, [r0, #2]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:279
+
+  /* Initialize the I2C_AcknowledgedAddress member */
+  I2C_InitStruct->I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
+
+  /* initialize the I2C_ClockSpeed member */
+  I2C_InitStruct->I2C_ClockSpeed = 5000;
+  18:	60c3      	str	r3, [r0, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:280
+}
+  1a:	4770      	bx	lr
+
+Disassembly of section .text.I2C_Cmd:
+
+00000000 <I2C_Cmd>:
+I2C_Cmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:297
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <I2C_Cmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:300
+  {
+    /* Enable the selected I2C peripheral */
+    I2Cx->CR1 |= CR1_PE_Set;
+   2:	8803      	ldrh	r3, [r0, #0]
+   4:	b29b      	uxth	r3, r3
+   6:	f043 0301 	orr.w	r3, r3, #1
+   a:	e004      	b.n	16 <I2C_Cmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:305
+  }
+  else
+  {
+    /* Disable the selected I2C peripheral */
+    I2Cx->CR1 &= CR1_PE_Reset;
+   c:	8803      	ldrh	r3, [r0, #0]
+   e:	f023 0301 	bic.w	r3, r3, #1
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8003      	strh	r3, [r0, #0]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.I2C_DMACmd:
+
+00000000 <I2C_DMACmd>:
+I2C_DMACmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:324
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <I2C_DMACmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:327
+  {
+    /* Enable the selected I2C DMA requests */
+    I2Cx->CR2 |= CR2_DMAEN_Set;
+   2:	8883      	ldrh	r3, [r0, #4]
+   4:	b29b      	uxth	r3, r3
+   6:	f443 6300 	orr.w	r3, r3, #2048	; 0x800
+   a:	e004      	b.n	16 <I2C_DMACmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:332
+  }
+  else
+  {
+    /* Disable the selected I2C DMA requests */
+    I2Cx->CR2 &= CR2_DMAEN_Reset;
+   c:	8883      	ldrh	r3, [r0, #4]
+   e:	f423 6300 	bic.w	r3, r3, #2048	; 0x800
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8083      	strh	r3, [r0, #4]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.I2C_DMALastTransferCmd:
+
+00000000 <I2C_DMALastTransferCmd>:
+I2C_DMALastTransferCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:351
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <I2C_DMALastTransferCmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:354
+  {
+    /* Next DMA transfer is the last transfer */
+    I2Cx->CR2 |= CR2_LAST_Set;
+   2:	8883      	ldrh	r3, [r0, #4]
+   4:	b29b      	uxth	r3, r3
+   6:	f443 5380 	orr.w	r3, r3, #4096	; 0x1000
+   a:	e004      	b.n	16 <I2C_DMALastTransferCmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:359
+  }
+  else
+  {
+    /* Next DMA transfer is not the last transfer */
+    I2Cx->CR2 &= CR2_LAST_Reset;
+   c:	8883      	ldrh	r3, [r0, #4]
+   e:	f423 5380 	bic.w	r3, r3, #4096	; 0x1000
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8083      	strh	r3, [r0, #4]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.I2C_GenerateSTART:
+
+00000000 <I2C_GenerateSTART>:
+I2C_GenerateSTART():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:378
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <I2C_GenerateSTART+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:381
+  {
+    /* Generate a START condition */
+    I2Cx->CR1 |= CR1_START_Set;
+   2:	8803      	ldrh	r3, [r0, #0]
+   4:	b29b      	uxth	r3, r3
+   6:	f443 7380 	orr.w	r3, r3, #256	; 0x100
+   a:	e004      	b.n	16 <I2C_GenerateSTART+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:386
+  }
+  else
+  {
+    /* Disable the START condition generation */
+    I2Cx->CR1 &= CR1_START_Reset;
+   c:	8803      	ldrh	r3, [r0, #0]
+   e:	f423 7380 	bic.w	r3, r3, #256	; 0x100
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8003      	strh	r3, [r0, #0]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.I2C_GenerateSTOP:
+
+00000000 <I2C_GenerateSTOP>:
+I2C_GenerateSTOP():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:405
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <I2C_GenerateSTOP+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:408
+  {
+    /* Generate a STOP condition */
+    I2Cx->CR1 |= CR1_STOP_Set;
+   2:	8803      	ldrh	r3, [r0, #0]
+   4:	b29b      	uxth	r3, r3
+   6:	f443 7300 	orr.w	r3, r3, #512	; 0x200
+   a:	e004      	b.n	16 <I2C_GenerateSTOP+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:413
+  }
+  else
+  {
+    /* Disable the STOP condition generation */
+    I2Cx->CR1 &= CR1_STOP_Reset;
+   c:	8803      	ldrh	r3, [r0, #0]
+   e:	f423 7300 	bic.w	r3, r3, #512	; 0x200
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8003      	strh	r3, [r0, #0]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.I2C_AcknowledgeConfig:
+
+00000000 <I2C_AcknowledgeConfig>:
+I2C_AcknowledgeConfig():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:432
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <I2C_AcknowledgeConfig+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:435
+  {
+    /* Enable the acknowledgement */
+    I2Cx->CR1 |= CR1_ACK_Set;
+   2:	8803      	ldrh	r3, [r0, #0]
+   4:	b29b      	uxth	r3, r3
+   6:	f443 6380 	orr.w	r3, r3, #1024	; 0x400
+   a:	e004      	b.n	16 <I2C_AcknowledgeConfig+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:440
+  }
+  else
+  {
+    /* Disable the acknowledgement */
+    I2Cx->CR1 &= CR1_ACK_Reset;
+   c:	8803      	ldrh	r3, [r0, #0]
+   e:	f423 6380 	bic.w	r3, r3, #1024	; 0x400
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8003      	strh	r3, [r0, #0]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.I2C_OwnAddress2Config:
+
+00000000 <I2C_OwnAddress2Config>:
+I2C_OwnAddress2Config():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:460
+
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+
+  /* Get the old register value */
+  tmpreg = I2Cx->OAR2;
+   0:	8983      	ldrh	r3, [r0, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:464
+  /* Reset I2Cx Own address2 bit [7:1] */
+  tmpreg &= OAR2_ADD2_Reset;
+  /* Set I2Cx Own address2 */
+  tmpreg |= (u16)(Address & (u16)0x00FE);
+   2:	f001 01fe 	and.w	r1, r1, #254	; 0xfe
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:462
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+
+  /* Get the old register value */
+  tmpreg = I2Cx->OAR2;
+  /* Reset I2Cx Own address2 bit [7:1] */
+  tmpreg &= OAR2_ADD2_Reset;
+   6:	f023 03fe 	bic.w	r3, r3, #254	; 0xfe
+   a:	041b      	lsls	r3, r3, #16
+   c:	0c1b      	lsrs	r3, r3, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:464
+  /* Set I2Cx Own address2 */
+  tmpreg |= (u16)(Address & (u16)0x00FE);
+   e:	ea41 0303 	orr.w	r3, r1, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:466
+  /* Store the new register value */
+  I2Cx->OAR2 = tmpreg;
+  12:	8183      	strh	r3, [r0, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:467
+}
+  14:	4770      	bx	lr
+
+Disassembly of section .text.I2C_DualAddressCmd:
+
+00000000 <I2C_DualAddressCmd>:
+I2C_DualAddressCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:484
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <I2C_DualAddressCmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:487
+  {
+    /* Enable dual addressing mode */
+    I2Cx->OAR2 |= OAR2_ENDUAL_Set;
+   2:	8983      	ldrh	r3, [r0, #12]
+   4:	b29b      	uxth	r3, r3
+   6:	f043 0301 	orr.w	r3, r3, #1
+   a:	e004      	b.n	16 <I2C_DualAddressCmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:492
+  }
+  else
+  {
+    /* Disable dual addressing mode */
+    I2Cx->OAR2 &= OAR2_ENDUAL_Reset;
+   c:	8983      	ldrh	r3, [r0, #12]
+   e:	f023 0301 	bic.w	r3, r3, #1
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8183      	strh	r3, [r0, #12]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.I2C_GeneralCallCmd:
+
+00000000 <I2C_GeneralCallCmd>:
+I2C_GeneralCallCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:511
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <I2C_GeneralCallCmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:514
+  {
+    /* Enable generall call */
+    I2Cx->CR1 |= CR1_ENGC_Set;
+   2:	8803      	ldrh	r3, [r0, #0]
+   4:	b29b      	uxth	r3, r3
+   6:	f043 0340 	orr.w	r3, r3, #64	; 0x40
+   a:	e004      	b.n	16 <I2C_GeneralCallCmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:519
+  }
+  else
+  {
+    /* Disable generall call */
+    I2Cx->CR1 &= CR1_ENGC_Reset;
+   c:	8803      	ldrh	r3, [r0, #0]
+   e:	f023 0340 	bic.w	r3, r3, #64	; 0x40
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8003      	strh	r3, [r0, #0]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.I2C_ITConfig:
+
+00000000 <I2C_ITConfig>:
+I2C_ITConfig():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:545
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  assert_param(IS_I2C_CONFIG_IT(I2C_IT));
+  
+  if (NewState != DISABLE)
+   0:	b11a      	cbz	r2, a <I2C_ITConfig+0xa>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:548
+  {
+    /* Enable the selected I2C interrupts */
+    I2Cx->CR2 |= I2C_IT;
+   2:	8883      	ldrh	r3, [r0, #4]
+   4:	b29b      	uxth	r3, r3
+   6:	4319      	orrs	r1, r3
+   8:	e003      	b.n	12 <I2C_ITConfig+0x12>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:553
+  }
+  else
+  {
+    /* Disable the selected I2C interrupts */
+    I2Cx->CR2 &= (u16)~I2C_IT;
+   a:	8883      	ldrh	r3, [r0, #4]
+   c:	b29b      	uxth	r3, r3
+   e:	ea23 0101 	bic.w	r1, r3, r1
+  12:	8081      	strh	r1, [r0, #4]
+  14:	4770      	bx	lr
+
+Disassembly of section .text.I2C_SendData:
+
+00000000 <I2C_SendData>:
+I2C_SendData():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:571
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+
+  /* Write in the DR register the data to be sent */
+  I2Cx->DR = Data;
+   0:	8201      	strh	r1, [r0, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:572
+}
+   2:	4770      	bx	lr
+
+Disassembly of section .text.I2C_ReceiveData:
+
+00000000 <I2C_ReceiveData>:
+I2C_ReceiveData():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:587
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+
+  /* Return the data in the DR register */
+  return (u8)I2Cx->DR;
+   0:	8a00      	ldrh	r0, [r0, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:588
+}
+   2:	b2c0      	uxtb	r0, r0
+   4:	4770      	bx	lr
+
+Disassembly of section .text.I2C_Send7bitAddress:
+
+00000000 <I2C_Send7bitAddress>:
+I2C_Send7bitAddress():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:610
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_I2C_DIRECTION(I2C_Direction));
+
+  /* Test on the direction to set/reset the read/write bit */
+  if (I2C_Direction != I2C_Direction_Transmitter)
+   0:	b112      	cbz	r2, 8 <I2C_Send7bitAddress+0x8>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:613
+  {
+    /* Set the address bit0 for read */
+    Address |= OAR1_ADD0_Set;
+   2:	f041 0101 	orr.w	r1, r1, #1
+   6:	e001      	b.n	c <I2C_Send7bitAddress+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:618
+  }
+  else
+  {
+    /* Reset the address bit0 for write */
+    Address &= OAR1_ADD0_Reset;
+   8:	f001 01fe 	and.w	r1, r1, #254	; 0xfe
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:621
+  }
+  /* Send the address */
+  I2Cx->DR = Address;
+   c:	8201      	strh	r1, [r0, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:622
+}
+   e:	4770      	bx	lr
+
+Disassembly of section .text.I2C_ReadRegister:
+
+00000000 <I2C_ReadRegister>:
+I2C_ReadRegister():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:642
+*                       - I2C_Register_TRISE: TRISE register.
+* Output         : None
+* Return         : The value of the read register.
+*******************************************************************************/
+u16 I2C_ReadRegister(I2C_TypeDef* I2Cx, u8 I2C_Register)
+{
+   0:	b082      	sub	sp, #8
+   2:	9001      	str	r0, [sp, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:648
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_I2C_REGISTER(I2C_Register));
+
+  /* Return the selected register value */
+  return (*(vu16 *)(*((vu32 *)&I2Cx) + I2C_Register));
+   4:	9b01      	ldr	r3, [sp, #4]
+   6:	5ac8      	ldrh	r0, [r1, r3]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:649
+}
+   8:	b280      	uxth	r0, r0
+   a:	b002      	add	sp, #8
+   c:	4770      	bx	lr
+
+Disassembly of section .text.I2C_SoftwareResetCmd:
+
+00000000 <I2C_SoftwareResetCmd>:
+I2C_SoftwareResetCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:666
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b131      	cbz	r1, 10 <I2C_SoftwareResetCmd+0x10>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:669
+  {
+    /* Peripheral under reset */
+    I2Cx->CR1 |= CR1_SWRST_Set;
+   2:	8803      	ldrh	r3, [r0, #0]
+   4:	ea6f 4343 	mvn.w	r3, r3, lsl #17
+   8:	ea6f 4353 	mvn.w	r3, r3, lsr #17
+   c:	b29b      	uxth	r3, r3
+   e:	e002      	b.n	16 <I2C_SoftwareResetCmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:674
+  }
+  else
+  {
+    /* Peripheral not under reset */
+    I2Cx->CR1 &= CR1_SWRST_Reset;
+  10:	8803      	ldrh	r3, [r0, #0]
+  12:	045b      	lsls	r3, r3, #17
+  14:	0c5b      	lsrs	r3, r3, #17
+  16:	8003      	strh	r3, [r0, #0]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.I2C_SMBusAlertConfig:
+
+00000000 <I2C_SMBusAlertConfig>:
+I2C_SMBusAlertConfig():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:695
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_I2C_SMBUS_ALERT(I2C_SMBusAlert));
+
+  if (I2C_SMBusAlert == I2C_SMBusAlert_Low)
+   0:	f5b1 5f00 	cmp.w	r1, #8192	; 0x2000
+   4:	d104      	bne.n	10 <I2C_SMBusAlertConfig+0x10>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:698
+  {
+    /* Drive the SMBusAlert pin Low */
+    I2Cx->CR1 |= I2C_SMBusAlert_Low;
+   6:	8803      	ldrh	r3, [r0, #0]
+   8:	b29b      	uxth	r3, r3
+   a:	f443 5300 	orr.w	r3, r3, #8192	; 0x2000
+   e:	e004      	b.n	1a <I2C_SMBusAlertConfig+0x1a>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:703
+  }
+  else
+  {
+    /* Drive the SMBusAlert pin High  */
+    I2Cx->CR1 &= I2C_SMBusAlert_High;
+  10:	8803      	ldrh	r3, [r0, #0]
+  12:	f423 5300 	bic.w	r3, r3, #8192	; 0x2000
+  16:	041b      	lsls	r3, r3, #16
+  18:	0c1b      	lsrs	r3, r3, #16
+  1a:	8003      	strh	r3, [r0, #0]
+  1c:	4770      	bx	lr
+
+Disassembly of section .text.I2C_TransmitPEC:
+
+00000000 <I2C_TransmitPEC>:
+I2C_TransmitPEC():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:722
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <I2C_TransmitPEC+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:725
+  {
+    /* Enable the selected I2C PEC transmission */
+    I2Cx->CR1 |= CR1_PEC_Set;
+   2:	8803      	ldrh	r3, [r0, #0]
+   4:	b29b      	uxth	r3, r3
+   6:	f443 5380 	orr.w	r3, r3, #4096	; 0x1000
+   a:	e004      	b.n	16 <I2C_TransmitPEC+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:730
+  }
+  else
+  {
+    /* Disable the selected I2C PEC transmission */
+    I2Cx->CR1 &= CR1_PEC_Reset;
+   c:	8803      	ldrh	r3, [r0, #0]
+   e:	f423 5380 	bic.w	r3, r3, #4096	; 0x1000
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8003      	strh	r3, [r0, #0]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.I2C_PECPositionConfig:
+
+00000000 <I2C_PECPositionConfig>:
+I2C_PECPositionConfig():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:753
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_I2C_PEC_POSITION(I2C_PECPosition));
+
+  if (I2C_PECPosition == I2C_PECPosition_Next)
+   0:	f5b1 6f00 	cmp.w	r1, #2048	; 0x800
+   4:	d104      	bne.n	10 <I2C_PECPositionConfig+0x10>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:756
+  {
+    /* Next byte in shift register is PEC */
+    I2Cx->CR1 |= I2C_PECPosition_Next;
+   6:	8803      	ldrh	r3, [r0, #0]
+   8:	b29b      	uxth	r3, r3
+   a:	f443 6300 	orr.w	r3, r3, #2048	; 0x800
+   e:	e004      	b.n	1a <I2C_PECPositionConfig+0x1a>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:761
+  }
+  else
+  {
+    /* Current byte in shift register is PEC */
+    I2Cx->CR1 &= I2C_PECPosition_Current;
+  10:	8803      	ldrh	r3, [r0, #0]
+  12:	f423 6300 	bic.w	r3, r3, #2048	; 0x800
+  16:	041b      	lsls	r3, r3, #16
+  18:	0c1b      	lsrs	r3, r3, #16
+  1a:	8003      	strh	r3, [r0, #0]
+  1c:	4770      	bx	lr
+
+Disassembly of section .text.I2C_CalculatePEC:
+
+00000000 <I2C_CalculatePEC>:
+I2C_CalculatePEC():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:781
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <I2C_CalculatePEC+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:784
+  {
+    /* Enable the selected I2C PEC calculation */
+    I2Cx->CR1 |= CR1_ENPEC_Set;
+   2:	8803      	ldrh	r3, [r0, #0]
+   4:	b29b      	uxth	r3, r3
+   6:	f043 0320 	orr.w	r3, r3, #32
+   a:	e004      	b.n	16 <I2C_CalculatePEC+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:789
+  }
+  else
+  {
+    /* Disable the selected I2C PEC calculation */
+    I2Cx->CR1 &= CR1_ENPEC_Reset;
+   c:	8803      	ldrh	r3, [r0, #0]
+   e:	f023 0320 	bic.w	r3, r3, #32
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8003      	strh	r3, [r0, #0]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.I2C_GetPEC:
+
+00000000 <I2C_GetPEC>:
+I2C_GetPEC():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:806
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+
+  /* Return the selected I2C PEC value */
+  return ((I2Cx->SR2) >> 8);
+   0:	8b00      	ldrh	r0, [r0, #24]
+   2:	b280      	uxth	r0, r0
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:807
+}
+   4:	0a00      	lsrs	r0, r0, #8
+   6:	4770      	bx	lr
+
+Disassembly of section .text.I2C_ARPCmd:
+
+00000000 <I2C_ARPCmd>:
+I2C_ARPCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:824
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b121      	cbz	r1, c <I2C_ARPCmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:827
+  {
+    /* Enable the selected I2C ARP */
+    I2Cx->CR1 |= CR1_ENARP_Set;
+   2:	8803      	ldrh	r3, [r0, #0]
+   4:	b29b      	uxth	r3, r3
+   6:	f043 0310 	orr.w	r3, r3, #16
+   a:	e004      	b.n	16 <I2C_ARPCmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:832
+  }
+  else
+  {
+    /* Disable the selected I2C ARP */
+    I2Cx->CR1 &= CR1_ENARP_Reset;
+   c:	8803      	ldrh	r3, [r0, #0]
+   e:	f023 0310 	bic.w	r3, r3, #16
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8003      	strh	r3, [r0, #0]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.I2C_StretchClockCmd:
+
+00000000 <I2C_StretchClockCmd>:
+I2C_StretchClockCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:851
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState == DISABLE)
+   0:	b921      	cbnz	r1, c <I2C_StretchClockCmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:854
+  {
+    /* Enable the selected I2C Clock stretching */
+    I2Cx->CR1 |= CR1_NOSTRETCH_Set;
+   2:	8803      	ldrh	r3, [r0, #0]
+   4:	b29b      	uxth	r3, r3
+   6:	f043 0380 	orr.w	r3, r3, #128	; 0x80
+   a:	e004      	b.n	16 <I2C_StretchClockCmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:859
+  }
+  else
+  {
+    /* Disable the selected I2C Clock stretching */
+    I2Cx->CR1 &= CR1_NOSTRETCH_Reset;
+   c:	8803      	ldrh	r3, [r0, #0]
+   e:	f023 0380 	bic.w	r3, r3, #128	; 0x80
+  12:	041b      	lsls	r3, r3, #16
+  14:	0c1b      	lsrs	r3, r3, #16
+  16:	8003      	strh	r3, [r0, #0]
+  18:	4770      	bx	lr
+
+Disassembly of section .text.I2C_FastModeDutyCycleConfig:
+
+00000000 <I2C_FastModeDutyCycleConfig>:
+I2C_FastModeDutyCycleConfig():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:880
+{
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_I2C_DUTY_CYCLE(I2C_DutyCycle));
+
+  if (I2C_DutyCycle != I2C_DutyCycle_16_9)
+   0:	f5b1 4f80 	cmp.w	r1, #16384	; 0x4000
+   4:	d005      	beq.n	12 <I2C_FastModeDutyCycleConfig+0x12>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:883
+  {
+    /* I2C fast mode Tlow/Thigh=2 */
+    I2Cx->CCR &= I2C_DutyCycle_2;
+   6:	8b83      	ldrh	r3, [r0, #28]
+   8:	f423 4380 	bic.w	r3, r3, #16384	; 0x4000
+   c:	041b      	lsls	r3, r3, #16
+   e:	0c1b      	lsrs	r3, r3, #16
+  10:	e003      	b.n	1a <I2C_FastModeDutyCycleConfig+0x1a>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:888
+  }
+  else
+  {
+    /* I2C fast mode Tlow/Thigh=16/9 */
+    I2Cx->CCR |= I2C_DutyCycle_16_9;
+  12:	8b83      	ldrh	r3, [r0, #28]
+  14:	b29b      	uxth	r3, r3
+  16:	f443 4380 	orr.w	r3, r3, #16384	; 0x4000
+  1a:	8383      	strh	r3, [r0, #28]
+  1c:	4770      	bx	lr
+
+Disassembly of section .text.I2C_GetLastEvent:
+
+00000000 <I2C_GetLastEvent>:
+I2C_GetLastEvent():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:908
+
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+
+  /* Read the I2Cx status register */
+  flag1 = I2Cx->SR1;
+   0:	8a83      	ldrh	r3, [r0, #20]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:909
+  flag2 = I2Cx->SR2;
+   2:	8b00      	ldrh	r0, [r0, #24]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:908
+
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+
+  /* Read the I2Cx status register */
+  flag1 = I2Cx->SR1;
+   4:	b29b      	uxth	r3, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:913
+  flag2 = I2Cx->SR2;
+  flag2 = flag2 << 16;
+
+  /* Get the last event value from I2C status register */
+  lastevent = (flag1 | flag2) & FLAG_Mask;
+   6:	ea43 4000 	orr.w	r0, r3, r0, lsl #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:917
+
+  /* Return status */
+  return lastevent;
+}
+   a:	f020 407f 	bic.w	r0, r0, #4278190080	; 0xff000000
+   e:	4770      	bx	lr
+
+Disassembly of section .text.I2C_CheckEvent:
+
+00000000 <I2C_CheckEvent>:
+I2C_CheckEvent():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:952
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_I2C_EVENT(I2C_EVENT));
+
+  /* Read the I2Cx status register */
+  flag1 = I2Cx->SR1;
+   0:	8a83      	ldrh	r3, [r0, #20]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:953
+  flag2 = I2Cx->SR2;
+   2:	8b00      	ldrh	r0, [r0, #24]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:952
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_I2C_EVENT(I2C_EVENT));
+
+  /* Read the I2Cx status register */
+  flag1 = I2Cx->SR1;
+   4:	b29b      	uxth	r3, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:957
+  flag2 = I2Cx->SR2;
+  flag2 = flag2 << 16;
+
+  /* Get the last event value from I2C status register */
+  lastevent = (flag1 | flag2) & FLAG_Mask;
+   6:	ea43 4000 	orr.w	r0, r3, r0, lsl #16
+   a:	f020 407f 	bic.w	r0, r0, #4278190080	; 0xff000000
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:973
+    status = ERROR;
+  }
+
+  /* Return status */
+  return status;
+}
+   e:	1a43      	subs	r3, r0, r1
+  10:	4258      	negs	r0, r3
+  12:	eb40 0003 	adc.w	r0, r0, r3
+  16:	4770      	bx	lr
+
+Disassembly of section .text.I2C_GetFlagStatus:
+
+00000000 <I2C_GetFlagStatus>:
+I2C_GetFlagStatus():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1007
+*                       - I2C_FLAG_SB: Start bit flag (Master mode)
+* Output         : None
+* Return         : The new state of I2C_FLAG (SET or RESET).
+*******************************************************************************/
+FlagStatus I2C_GetFlagStatus(I2C_TypeDef* I2Cx, u32 I2C_FLAG)
+{
+   0:	b082      	sub	sp, #8
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1022
+  
+  /* Read flag register index */
+  i2creg = I2C_FLAG >> 28;
+  
+  /* Get bit[23:0] of the flag */
+  I2C_FLAG &= FLAG_Mask;
+   2:	f021 437f 	bic.w	r3, r1, #4278190080	; 0xff000000
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1024
+  
+  if(i2creg != 0)
+   6:	0f09      	lsrs	r1, r1, #28
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1007
+*                       - I2C_FLAG_SB: Start bit flag (Master mode)
+* Output         : None
+* Return         : The new state of I2C_FLAG (SET or RESET).
+*******************************************************************************/
+FlagStatus I2C_GetFlagStatus(I2C_TypeDef* I2Cx, u32 I2C_FLAG)
+{
+   8:	9001      	str	r0, [sp, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1024
+  i2creg = I2C_FLAG >> 28;
+  
+  /* Get bit[23:0] of the flag */
+  I2C_FLAG &= FLAG_Mask;
+  
+  if(i2creg != 0)
+   a:	d001      	beq.n	10 <I2C_GetFlagStatus+0x10>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1027
+  {
+    /* Get the I2Cx SR1 register address */
+    i2cxbase += 0x14;
+   c:	3014      	adds	r0, #20
+   e:	e001      	b.n	14 <I2C_GetFlagStatus+0x14>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1032
+  }
+  else
+  {
+    /* Flag in I2Cx SR2 Register */
+    I2C_FLAG = (u32)(I2C_FLAG >> 16);
+  10:	0c1b      	lsrs	r3, r3, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1034
+    /* Get the I2Cx SR2 register address */
+    i2cxbase += 0x18;
+  12:	3018      	adds	r0, #24
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1037
+  }
+  
+  if(((*(vu32 *)i2cxbase) & I2C_FLAG) != (u32)RESET)
+  14:	6802      	ldr	r2, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1040
+  {
+    /* I2C_FLAG is set */
+    bitstatus = SET;
+  16:	421a      	tst	r2, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1050
+    bitstatus = RESET;
+  }
+  
+  /* Return the I2C_FLAG status */
+  return  bitstatus;
+}
+  18:	bf0c      	ite	eq
+  1a:	2000      	moveq	r0, #0
+  1c:	2001      	movne	r0, #1
+  1e:	b002      	add	sp, #8
+  20:	4770      	bx	lr
+
+Disassembly of section .text.I2C_ClearFlag:
+
+00000000 <I2C_ClearFlag>:
+I2C_ClearFlag():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1104
+
+  /* Get the I2C flag position */
+  flagpos = I2C_FLAG & FLAG_Mask;
+
+  /* Clear the selected I2C flag */
+  I2Cx->SR1 = (u16)~flagpos;
+   0:	43c9      	mvns	r1, r1
+   2:	b289      	uxth	r1, r1
+   4:	8281      	strh	r1, [r0, #20]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1105
+}
+   6:	4770      	bx	lr
+
+Disassembly of section .text.I2C_GetITStatus:
+
+00000000 <I2C_GetITStatus>:
+I2C_GetITStatus():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1141
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_I2C_GET_IT(I2C_IT));
+
+  /* Check if the interrupt source is enabled or not */
+  enablestatus = (u32)(((I2C_IT & ITEN_Mask) >> 16) & (I2Cx->CR2)) ;  
+   0:	8883      	ldrh	r3, [r0, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1147
+
+  /* Get bit[23:0] of the flag */
+  I2C_IT &= FLAG_Mask;
+
+  /* Check the status of the specified I2C flag */
+  if (((I2Cx->SR1 & I2C_IT) != (u32)RESET) && enablestatus)
+   2:	8a80      	ldrh	r0, [r0, #20]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1141
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_I2C_GET_IT(I2C_IT));
+
+  /* Check if the interrupt source is enabled or not */
+  enablestatus = (u32)(((I2C_IT & ITEN_Mask) >> 16) & (I2Cx->CR2)) ;  
+   4:	b29b      	uxth	r3, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1144
+
+  /* Get bit[23:0] of the flag */
+  I2C_IT &= FLAG_Mask;
+   6:	b280      	uxth	r0, r0
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1147
+
+  /* Check the status of the specified I2C flag */
+  if (((I2Cx->SR1 & I2C_IT) != (u32)RESET) && enablestatus)
+   8:	4008      	ands	r0, r1
+   a:	d006      	beq.n	1a <I2C_GetITStatus+0x1a>
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1141
+  /* Check the parameters */
+  assert_param(IS_I2C_ALL_PERIPH(I2Cx));
+  assert_param(IS_I2C_GET_IT(I2C_IT));
+
+  /* Check if the interrupt source is enabled or not */
+  enablestatus = (u32)(((I2C_IT & ITEN_Mask) >> 16) & (I2Cx->CR2)) ;  
+   c:	f001 61e0 	and.w	r1, r1, #117440512	; 0x7000000
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1131
+*                                      Address matched flag (Slave mode)”ENDAD”
+*                       - I2C_IT_SB: Start bit flag (Master mode)
+* Output         : None
+* Return         : The new state of I2C_IT (SET or RESET).
+*******************************************************************************/
+ITStatus I2C_GetITStatus(I2C_TypeDef* I2Cx, u32 I2C_IT)
+  10:	ea13 4111 	ands.w	r1, r3, r1, lsr #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1150
+
+  /* Check the status of the specified I2C flag */
+  if (((I2Cx->SR1 & I2C_IT) != (u32)RESET) && enablestatus)
+  {
+    /* I2C_IT is set */
+    bitstatus = SET;
+  14:	bf0c      	ite	eq
+  16:	2000      	moveq	r0, #0
+  18:	2001      	movne	r0, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1159
+    /* I2C_IT is reset */
+    bitstatus = RESET;
+  }
+  /* Return the I2C_IT status */
+  return  bitstatus;
+}
+  1a:	4770      	bx	lr
+
+Disassembly of section .text.I2C_ClearITPendingBit:
+
+00000000 <I2C_ClearITPendingBit>:
+I2C_ClearITPendingBit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1213
+
+  /* Get the I2C flag position */
+  flagpos = I2C_IT & FLAG_Mask;
+
+  /* Clear the selected I2C flag */
+  I2Cx->SR1 = (u16)~flagpos;
+   0:	43c9      	mvns	r1, r1
+   2:	b289      	uxth	r1, r1
+   4:	8281      	strh	r1, [r0, #20]
+C:\cortex\gateway\stlibrary\src/stm32f10x_i2c.c:1214
+}
+   6:	4770      	bx	lr

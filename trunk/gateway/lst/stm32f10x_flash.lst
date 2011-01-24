@@ -1,0 +1,79 @@
+
+C:\cortex\gateway\out\stm32f10x_flash.o:     file format elf32-littlearm
+C:\cortex\gateway\out\stm32f10x_flash.o
+
+
+Disassembly of section .text.FLASH_SetLatency:
+
+00000000 <FLASH_SetLatency>:
+FLASH_SetLatency():
+C:\cortex\gateway\stlibrary\src/stm32f10x_flash.c:92
+{
+  /* Check the parameters */
+  assert_param(IS_FLASH_LATENCY(FLASH_Latency));
+  
+  /* Sets the Latency value */
+  FLASH->ACR &= ACR_LATENCY_Mask;
+   0:	4b04      	ldr	r3, [pc, #16]	; (14 <FLASH_SetLatency+0x14>)
+   2:	681a      	ldr	r2, [r3, #0]
+   4:	f002 0238 	and.w	r2, r2, #56	; 0x38
+   8:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_flash.c:93
+  FLASH->ACR |= FLASH_Latency;
+   a:	681a      	ldr	r2, [r3, #0]
+   c:	ea40 0202 	orr.w	r2, r0, r2
+  10:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_flash.c:94
+}
+  12:	4770      	bx	lr
+  14:	40022000 	.word	0x40022000
+
+Disassembly of section .text.FLASH_HalfCycleAccessCmd:
+
+00000000 <FLASH_HalfCycleAccessCmd>:
+FLASH_HalfCycleAccessCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_flash.c:112
+{
+  /* Check the parameters */
+  assert_param(IS_FLASH_HALFCYCLEACCESS_STATE(FLASH_HalfCycleAccess));
+  
+  /* Enable or disable the Half cycle access */
+  FLASH->ACR &= ACR_HLFCYA_Mask;
+   0:	4b04      	ldr	r3, [pc, #16]	; (14 <FLASH_HalfCycleAccessCmd+0x14>)
+   2:	681a      	ldr	r2, [r3, #0]
+   4:	f022 0208 	bic.w	r2, r2, #8
+   8:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_flash.c:113
+  FLASH->ACR |= FLASH_HalfCycleAccess;
+   a:	681a      	ldr	r2, [r3, #0]
+   c:	ea40 0202 	orr.w	r2, r0, r2
+  10:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_flash.c:114
+}
+  12:	4770      	bx	lr
+  14:	40022000 	.word	0x40022000
+
+Disassembly of section .text.FLASH_PrefetchBufferCmd:
+
+00000000 <FLASH_PrefetchBufferCmd>:
+FLASH_PrefetchBufferCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_flash.c:132
+{
+  /* Check the parameters */
+  assert_param(IS_FLASH_PREFETCHBUFFER_STATE(FLASH_PrefetchBuffer));
+  
+  /* Enable or disable the Prefetch Buffer */
+  FLASH->ACR &= ACR_PRFTBE_Mask;
+   0:	4b04      	ldr	r3, [pc, #16]	; (14 <FLASH_PrefetchBufferCmd+0x14>)
+   2:	681a      	ldr	r2, [r3, #0]
+   4:	f022 0210 	bic.w	r2, r2, #16
+   8:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_flash.c:133
+  FLASH->ACR |= FLASH_PrefetchBuffer;
+   a:	681a      	ldr	r2, [r3, #0]
+   c:	ea40 0202 	orr.w	r2, r0, r2
+  10:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_flash.c:134
+}
+  12:	4770      	bx	lr
+  14:	40022000 	.word	0x40022000
