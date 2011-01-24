@@ -2,6 +2,7 @@
 C:\cortex\dimmers\hex\dimmers_rtc.o:     file format elf32-littlearm
 C:\cortex\dimmers\hex\dimmers_rtc.o
 
+
 Disassembly of section .text.RtcInit:
 
 00000000 <RtcInit>:
@@ -39,7 +40,7 @@ C:\cortex\dimmers\src/dimmers_rtc.c:27
 C:\cortex\dimmers\src/dimmers_rtc.c:29
   /* Wait till LSE is ready */
   while (RCC_GetFlagStatus(RCC_FLAG_LSERDY) == RESET)
-  18:	2041      	movs	r0, #65
+  18:	2041      	movs	r0, #65	; 0x41
   1a:	f7ff fffe 	bl	0 <RCC_GetFlagStatus>
   1e:	2800      	cmp	r0, #0
   20:	d0fa      	beq.n	18 <RtcInit+0x18>
@@ -84,12 +85,17 @@ C:\cortex\dimmers\src/dimmers_rtc.c:51
   RTC_SetPrescaler(32767); /* RTC period = RTCCLK/RTC_PR = (32.768 KHz)/(32767+1) */
   44:	f647 70ff 	movw	r0, #32767	; 0x7fff
   48:	f7ff fffe 	bl	0 <RTC_SetPrescaler>
-C:\cortex\dimmers\src/dimmers_rtc.c:54
+C:\cortex\dimmers\src/dimmers_rtc.c:56
 
   /* Wait until last write operation on RTC registers has finished */
   RTC_WaitForLastTask();
-  4c:	f7ff fffe 	bl	0 <RTC_WaitForLastTask>
-C:\cortex\dimmers\src/dimmers_rtc.c:56
 
-  50:	bd10      	pop	{r4, pc}
-  52:	46c0      	nop			(mov r8, r8)
+  4c:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+C:\cortex\dimmers\src/dimmers_rtc.c:54
+
+  /* Set RTC prescaler: set RTC period to 1sec */
+  RTC_SetPrescaler(32767); /* RTC period = RTCCLK/RTC_PR = (32.768 KHz)/(32767+1) */
+
+  /* Wait until last write operation on RTC registers has finished */
+  RTC_WaitForLastTask();
+  50:	f7ff bffe 	b.w	0 <RTC_WaitForLastTask>

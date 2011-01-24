@@ -1,0 +1,678 @@
+
+C:\cortex\dimmers\hex\stm32f10x_dma.o:     file format elf32-littlearm
+C:\cortex\dimmers\hex\stm32f10x_dma.o
+
+
+Disassembly of section .text.DMA_DeInit:
+
+00000000 <DMA_DeInit>:
+DMA_DeInit():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:69
+{
+  /* Check the parameters */
+  assert_param(IS_DMA_ALL_PERIPH(DMAy_Channelx));
+
+  /* Disable the selected DMAy Channelx */
+  DMAy_Channelx->CCR &= CCR_ENABLE_Reset;
+   0:	6803      	ldr	r3, [r0, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:64
+*                    DMA Channel.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DMA_DeInit(DMA_Channel_TypeDef* DMAy_Channelx)
+{
+   2:	b082      	sub	sp, #8
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:69
+  /* Check the parameters */
+  assert_param(IS_DMA_ALL_PERIPH(DMAy_Channelx));
+
+  /* Disable the selected DMAy Channelx */
+  DMAy_Channelx->CCR &= CCR_ENABLE_Reset;
+   4:	f023 0301 	bic.w	r3, r3, #1
+   8:	6003      	str	r3, [r0, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:72
+
+  /* Reset DMAy Channelx control register */
+  DMAy_Channelx->CCR  = 0;
+   a:	2300      	movs	r3, #0
+   c:	6003      	str	r3, [r0, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:75
+  
+  /* Reset DMAy Channelx remaining bytes register */
+  DMAy_Channelx->CNDTR = 0;
+   e:	6043      	str	r3, [r0, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:78
+  
+  /* Reset DMAy Channelx peripheral address register */
+  DMAy_Channelx->CPAR  = 0;
+  10:	6083      	str	r3, [r0, #8]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:81
+  
+  /* Reset DMAy Channelx memory address register */
+  DMAy_Channelx->CMAR = 0;
+  12:	60c3      	str	r3, [r0, #12]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:83
+
+  switch (*(u32*)&DMAy_Channelx)
+  14:	4b2d      	ldr	r3, [pc, #180]	; (cc <DMA_DeInit+0xcc>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:64
+*                    DMA Channel.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DMA_DeInit(DMA_Channel_TypeDef* DMAy_Channelx)
+{
+  16:	9001      	str	r0, [sp, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:83
+  DMAy_Channelx->CPAR  = 0;
+  
+  /* Reset DMAy Channelx memory address register */
+  DMAy_Channelx->CMAR = 0;
+
+  switch (*(u32*)&DMAy_Channelx)
+  18:	4298      	cmp	r0, r3
+  1a:	d031      	beq.n	80 <DMA_DeInit+0x80>
+  1c:	d811      	bhi.n	42 <DMA_DeInit+0x42>
+  1e:	3b3c      	subs	r3, #60	; 0x3c
+  20:	4298      	cmp	r0, r3
+  22:	d027      	beq.n	74 <DMA_DeInit+0x74>
+  24:	d806      	bhi.n	34 <DMA_DeInit+0x34>
+  26:	3b28      	subs	r3, #40	; 0x28
+  28:	4298      	cmp	r0, r3
+  2a:	d01f      	beq.n	6c <DMA_DeInit+0x6c>
+  2c:	3314      	adds	r3, #20
+  2e:	4298      	cmp	r0, r3
+  30:	d149      	bne.n	c6 <DMA_DeInit+0xc6>
+  32:	e01d      	b.n	70 <DMA_DeInit+0x70>
+  34:	4b26      	ldr	r3, [pc, #152]	; (d0 <DMA_DeInit+0xd0>)
+  36:	4298      	cmp	r0, r3
+  38:	d01e      	beq.n	78 <DMA_DeInit+0x78>
+  3a:	3314      	adds	r3, #20
+  3c:	4298      	cmp	r0, r3
+  3e:	d142      	bne.n	c6 <DMA_DeInit+0xc6>
+  40:	e01c      	b.n	7c <DMA_DeInit+0x7c>
+  42:	4b24      	ldr	r3, [pc, #144]	; (d4 <DMA_DeInit+0xd4>)
+  44:	4298      	cmp	r0, r3
+  46:	d02a      	beq.n	9e <DMA_DeInit+0x9e>
+  48:	d806      	bhi.n	58 <DMA_DeInit+0x58>
+  4a:	4b23      	ldr	r3, [pc, #140]	; (d8 <DMA_DeInit+0xd8>)
+  4c:	4298      	cmp	r0, r3
+  4e:	d01c      	beq.n	8a <DMA_DeInit+0x8a>
+  50:	4b22      	ldr	r3, [pc, #136]	; (dc <DMA_DeInit+0xdc>)
+  52:	4298      	cmp	r0, r3
+  54:	d137      	bne.n	c6 <DMA_DeInit+0xc6>
+  56:	e01d      	b.n	94 <DMA_DeInit+0x94>
+  58:	4b21      	ldr	r3, [pc, #132]	; (e0 <DMA_DeInit+0xe0>)
+  5a:	4298      	cmp	r0, r3
+  5c:	d029      	beq.n	b2 <DMA_DeInit+0xb2>
+  5e:	3314      	adds	r3, #20
+  60:	4298      	cmp	r0, r3
+  62:	d02b      	beq.n	bc <DMA_DeInit+0xbc>
+  64:	3b28      	subs	r3, #40	; 0x28
+  66:	4298      	cmp	r0, r3
+  68:	d12d      	bne.n	c6 <DMA_DeInit+0xc6>
+  6a:	e01d      	b.n	a8 <DMA_DeInit+0xa8>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:87
+  {
+    case DMA1_Channel1_BASE:
+      /* Reset interrupt pending bits for DMA1 Channel1 */
+      DMA1->IFCR |= DMA1_Channel1_IT_Mask;
+  6c:	4b1d      	ldr	r3, [pc, #116]	; (e4 <DMA_DeInit+0xe4>)
+  6e:	e012      	b.n	96 <DMA_DeInit+0x96>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:92
+      break;
+
+    case DMA1_Channel2_BASE:
+      /* Reset interrupt pending bits for DMA1 Channel2 */
+      DMA1->IFCR |= DMA1_Channel2_IT_Mask;
+  70:	4b1c      	ldr	r3, [pc, #112]	; (e4 <DMA_DeInit+0xe4>)
+  72:	e015      	b.n	a0 <DMA_DeInit+0xa0>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:97
+      break;
+
+    case DMA1_Channel3_BASE:
+      /* Reset interrupt pending bits for DMA1 Channel3 */
+      DMA1->IFCR |= DMA1_Channel3_IT_Mask;
+  74:	4b1b      	ldr	r3, [pc, #108]	; (e4 <DMA_DeInit+0xe4>)
+  76:	e018      	b.n	aa <DMA_DeInit+0xaa>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:102
+      break;
+
+    case DMA1_Channel4_BASE:
+      /* Reset interrupt pending bits for DMA1 Channel4 */
+      DMA1->IFCR |= DMA1_Channel4_IT_Mask;
+  78:	4b1a      	ldr	r3, [pc, #104]	; (e4 <DMA_DeInit+0xe4>)
+  7a:	e01b      	b.n	b4 <DMA_DeInit+0xb4>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:107
+      break;
+
+    case DMA1_Channel5_BASE:
+      /* Reset interrupt pending bits for DMA1 Channel5 */
+      DMA1->IFCR |= DMA1_Channel5_IT_Mask;
+  7c:	4b19      	ldr	r3, [pc, #100]	; (e4 <DMA_DeInit+0xe4>)
+  7e:	e01e      	b.n	be <DMA_DeInit+0xbe>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:112
+      break;
+
+    case DMA1_Channel6_BASE:
+      /* Reset interrupt pending bits for DMA1 Channel6 */
+      DMA1->IFCR |= DMA1_Channel6_IT_Mask;
+  80:	4b18      	ldr	r3, [pc, #96]	; (e4 <DMA_DeInit+0xe4>)
+  82:	685a      	ldr	r2, [r3, #4]
+  84:	f442 0270 	orr.w	r2, r2, #15728640	; 0xf00000
+  88:	e01c      	b.n	c4 <DMA_DeInit+0xc4>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:117
+      break;
+
+    case DMA1_Channel7_BASE:
+      /* Reset interrupt pending bits for DMA1 Channel7 */
+      DMA1->IFCR |= DMA1_Channel7_IT_Mask;
+  8a:	4b16      	ldr	r3, [pc, #88]	; (e4 <DMA_DeInit+0xe4>)
+  8c:	685a      	ldr	r2, [r3, #4]
+  8e:	f042 6270 	orr.w	r2, r2, #251658240	; 0xf000000
+  92:	e017      	b.n	c4 <DMA_DeInit+0xc4>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:122
+      break;
+
+    case DMA2_Channel1_BASE:
+      /* Reset interrupt pending bits for DMA2 Channel1 */
+      DMA2->IFCR |= DMA2_Channel1_IT_Mask;
+  94:	4b14      	ldr	r3, [pc, #80]	; (e8 <DMA_DeInit+0xe8>)
+  96:	685a      	ldr	r2, [r3, #4]
+  98:	f042 020f 	orr.w	r2, r2, #15
+  9c:	e012      	b.n	c4 <DMA_DeInit+0xc4>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:127
+      break;
+
+    case DMA2_Channel2_BASE:
+      /* Reset interrupt pending bits for DMA2 Channel2 */
+      DMA2->IFCR |= DMA2_Channel2_IT_Mask;
+  9e:	4b12      	ldr	r3, [pc, #72]	; (e8 <DMA_DeInit+0xe8>)
+  a0:	685a      	ldr	r2, [r3, #4]
+  a2:	f042 02f0 	orr.w	r2, r2, #240	; 0xf0
+  a6:	e00d      	b.n	c4 <DMA_DeInit+0xc4>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:132
+      break;
+
+    case DMA2_Channel3_BASE:
+      /* Reset interrupt pending bits for DMA2 Channel3 */
+      DMA2->IFCR |= DMA2_Channel3_IT_Mask;
+  a8:	4b0f      	ldr	r3, [pc, #60]	; (e8 <DMA_DeInit+0xe8>)
+  aa:	685a      	ldr	r2, [r3, #4]
+  ac:	f442 6270 	orr.w	r2, r2, #3840	; 0xf00
+  b0:	e008      	b.n	c4 <DMA_DeInit+0xc4>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:137
+      break;
+
+    case DMA2_Channel4_BASE:
+      /* Reset interrupt pending bits for DMA2 Channel4 */
+      DMA2->IFCR |= DMA2_Channel4_IT_Mask;
+  b2:	4b0d      	ldr	r3, [pc, #52]	; (e8 <DMA_DeInit+0xe8>)
+  b4:	685a      	ldr	r2, [r3, #4]
+  b6:	f442 4270 	orr.w	r2, r2, #61440	; 0xf000
+  ba:	e003      	b.n	c4 <DMA_DeInit+0xc4>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:142
+      break;
+
+    case DMA2_Channel5_BASE:
+      /* Reset interrupt pending bits for DMA2 Channel5 */
+      DMA2->IFCR |= DMA2_Channel5_IT_Mask;
+  bc:	4b0a      	ldr	r3, [pc, #40]	; (e8 <DMA_DeInit+0xe8>)
+  be:	685a      	ldr	r2, [r3, #4]
+  c0:	f442 2270 	orr.w	r2, r2, #983040	; 0xf0000
+  c4:	605a      	str	r2, [r3, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:148
+      break;
+      
+    default:
+      break;
+  }
+}
+  c6:	b002      	add	sp, #8
+  c8:	4770      	bx	lr
+  ca:	bf00      	nop
+  cc:	4002006c 	.word	0x4002006c
+  d0:	40020044 	.word	0x40020044
+  d4:	4002041c 	.word	0x4002041c
+  d8:	40020080 	.word	0x40020080
+  dc:	40020408 	.word	0x40020408
+  e0:	40020444 	.word	0x40020444
+  e4:	40020000 	.word	0x40020000
+  e8:	40020400 	.word	0x40020400
+
+Disassembly of section .text.DMA_Init:
+
+00000000 <DMA_Init>:
+DMA_Init():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:193
+  /* Set MINC bit according to DMA_MemoryInc value */
+  /* Set PSIZE bits according to DMA_PeripheralDataSize value */
+  /* Set MSIZE bits according to DMA_MemoryDataSize value */
+  /* Set PL bits according to DMA_Priority value */
+  /* Set the MEM2MEM bit according to DMA_M2M value */
+  tmpreg |= DMA_InitStruct->DMA_DIR | DMA_InitStruct->DMA_Mode |
+   0:	688a      	ldr	r2, [r1, #8]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:164
+*                    DMA Channel.
+* Output         : None
+* Return         : None
+******************************************************************************/
+void DMA_Init(DMA_Channel_TypeDef* DMAy_Channelx, DMA_InitTypeDef* DMA_InitStruct)
+{
+   2:	b510      	push	{r4, lr}
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:193
+  /* Set MINC bit according to DMA_MemoryInc value */
+  /* Set PSIZE bits according to DMA_PeripheralDataSize value */
+  /* Set MSIZE bits according to DMA_MemoryDataSize value */
+  /* Set PL bits according to DMA_Priority value */
+  /* Set the MEM2MEM bit according to DMA_M2M value */
+  tmpreg |= DMA_InitStruct->DMA_DIR | DMA_InitStruct->DMA_Mode |
+   4:	6a0c      	ldr	r4, [r1, #32]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:181
+  assert_param(IS_DMA_PRIORITY(DMA_InitStruct->DMA_Priority));
+  assert_param(IS_DMA_M2M_STATE(DMA_InitStruct->DMA_M2M));
+
+/*--------------------------- DMAy Channelx CCR Configuration -----------------*/
+  /* Get the DMAy_Channelx CCR value */
+  tmpreg = DMAy_Channelx->CCR;
+   6:	6803      	ldr	r3, [r0, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:193
+  /* Set MINC bit according to DMA_MemoryInc value */
+  /* Set PSIZE bits according to DMA_PeripheralDataSize value */
+  /* Set MSIZE bits according to DMA_MemoryDataSize value */
+  /* Set PL bits according to DMA_Priority value */
+  /* Set the MEM2MEM bit according to DMA_M2M value */
+  tmpreg |= DMA_InitStruct->DMA_DIR | DMA_InitStruct->DMA_Mode |
+   8:	ea44 0202 	orr.w	r2, r4, r2
+   c:	690c      	ldr	r4, [r1, #16]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:183
+
+/*--------------------------- DMAy Channelx CCR Configuration -----------------*/
+  /* Get the DMAy_Channelx CCR value */
+  tmpreg = DMAy_Channelx->CCR;
+  /* Clear MEM2MEM, PL, MSIZE, PSIZE, MINC, PINC, CIRC and DIR bits */
+  tmpreg &= CCR_CLEAR_Mask;
+   e:	f423 43fe 	bic.w	r3, r3, #32512	; 0x7f00
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:193
+  /* Set MINC bit according to DMA_MemoryInc value */
+  /* Set PSIZE bits according to DMA_PeripheralDataSize value */
+  /* Set MSIZE bits according to DMA_MemoryDataSize value */
+  /* Set PL bits according to DMA_Priority value */
+  /* Set the MEM2MEM bit according to DMA_M2M value */
+  tmpreg |= DMA_InitStruct->DMA_DIR | DMA_InitStruct->DMA_Mode |
+  12:	4322      	orrs	r2, r4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:194
+            DMA_InitStruct->DMA_PeripheralInc | DMA_InitStruct->DMA_MemoryInc |
+  14:	694c      	ldr	r4, [r1, #20]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:183
+
+/*--------------------------- DMAy Channelx CCR Configuration -----------------*/
+  /* Get the DMAy_Channelx CCR value */
+  tmpreg = DMAy_Channelx->CCR;
+  /* Clear MEM2MEM, PL, MSIZE, PSIZE, MINC, PINC, CIRC and DIR bits */
+  tmpreg &= CCR_CLEAR_Mask;
+  16:	f023 03f0 	bic.w	r3, r3, #240	; 0xf0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:194
+  /* Set PSIZE bits according to DMA_PeripheralDataSize value */
+  /* Set MSIZE bits according to DMA_MemoryDataSize value */
+  /* Set PL bits according to DMA_Priority value */
+  /* Set the MEM2MEM bit according to DMA_M2M value */
+  tmpreg |= DMA_InitStruct->DMA_DIR | DMA_InitStruct->DMA_Mode |
+            DMA_InitStruct->DMA_PeripheralInc | DMA_InitStruct->DMA_MemoryInc |
+  1a:	4322      	orrs	r2, r4
+  1c:	698c      	ldr	r4, [r1, #24]
+  1e:	4322      	orrs	r2, r4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:195
+            DMA_InitStruct->DMA_PeripheralDataSize | DMA_InitStruct->DMA_MemoryDataSize |
+  20:	69cc      	ldr	r4, [r1, #28]
+  22:	4322      	orrs	r2, r4
+  24:	6a4c      	ldr	r4, [r1, #36]	; 0x24
+  26:	4322      	orrs	r2, r4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:196
+            DMA_InitStruct->DMA_Priority | DMA_InitStruct->DMA_M2M;
+  28:	6a8c      	ldr	r4, [r1, #40]	; 0x28
+  2a:	4322      	orrs	r2, r4
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:193
+  /* Set MINC bit according to DMA_MemoryInc value */
+  /* Set PSIZE bits according to DMA_PeripheralDataSize value */
+  /* Set MSIZE bits according to DMA_MemoryDataSize value */
+  /* Set PL bits according to DMA_Priority value */
+  /* Set the MEM2MEM bit according to DMA_M2M value */
+  tmpreg |= DMA_InitStruct->DMA_DIR | DMA_InitStruct->DMA_Mode |
+  2c:	ea42 0303 	orr.w	r3, r2, r3
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:198
+            DMA_InitStruct->DMA_PeripheralInc | DMA_InitStruct->DMA_MemoryInc |
+            DMA_InitStruct->DMA_PeripheralDataSize | DMA_InitStruct->DMA_MemoryDataSize |
+            DMA_InitStruct->DMA_Priority | DMA_InitStruct->DMA_M2M;
+  /* Write to DMAy Channelx CCR */
+  DMAy_Channelx->CCR = tmpreg;
+  30:	6003      	str	r3, [r0, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:202
+
+/*--------------------------- DMAy Channelx CNDTR Configuration ---------------*/
+  /* Write to DMAy Channelx CNDTR */
+  DMAy_Channelx->CNDTR = DMA_InitStruct->DMA_BufferSize;
+  32:	68cb      	ldr	r3, [r1, #12]
+  34:	6043      	str	r3, [r0, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:206
+
+/*--------------------------- DMAy Channelx CPAR Configuration ----------------*/
+  /* Write to DMAy Channelx CPAR */
+  DMAy_Channelx->CPAR = DMA_InitStruct->DMA_PeripheralBaseAddr;
+  36:	680b      	ldr	r3, [r1, #0]
+  38:	6083      	str	r3, [r0, #8]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:210
+
+/*--------------------------- DMAy Channelx CMAR Configuration ----------------*/
+  /* Write to DMAy Channelx CMAR */
+  DMAy_Channelx->CMAR = DMA_InitStruct->DMA_MemoryBaseAddr;
+  3a:	684b      	ldr	r3, [r1, #4]
+  3c:	60c3      	str	r3, [r0, #12]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:211
+}
+  3e:	bd10      	pop	{r4, pc}
+
+Disassembly of section .text.DMA_StructInit:
+
+00000000 <DMA_StructInit>:
+DMA_StructInit():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:225
+*******************************************************************************/
+void DMA_StructInit(DMA_InitTypeDef* DMA_InitStruct)
+{
+/*-------------- Reset DMA init structure parameters values ------------------*/
+  /* Initialize the DMA_PeripheralBaseAddr member */
+  DMA_InitStruct->DMA_PeripheralBaseAddr = 0;
+   0:	2300      	movs	r3, #0
+   2:	6003      	str	r3, [r0, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:228
+
+  /* Initialize the DMA_MemoryBaseAddr member */
+  DMA_InitStruct->DMA_MemoryBaseAddr = 0;
+   4:	6043      	str	r3, [r0, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:231
+
+  /* Initialize the DMA_DIR member */
+  DMA_InitStruct->DMA_DIR = DMA_DIR_PeripheralSRC;
+   6:	6083      	str	r3, [r0, #8]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:234
+
+  /* Initialize the DMA_BufferSize member */
+  DMA_InitStruct->DMA_BufferSize = 0;
+   8:	60c3      	str	r3, [r0, #12]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:237
+
+  /* Initialize the DMA_PeripheralInc member */
+  DMA_InitStruct->DMA_PeripheralInc = DMA_PeripheralInc_Disable;
+   a:	6103      	str	r3, [r0, #16]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:240
+
+  /* Initialize the DMA_MemoryInc member */
+  DMA_InitStruct->DMA_MemoryInc = DMA_MemoryInc_Disable;
+   c:	6143      	str	r3, [r0, #20]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:243
+
+  /* Initialize the DMA_PeripheralDataSize member */
+  DMA_InitStruct->DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
+   e:	6183      	str	r3, [r0, #24]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:246
+
+  /* Initialize the DMA_MemoryDataSize member */
+  DMA_InitStruct->DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
+  10:	61c3      	str	r3, [r0, #28]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:249
+
+  /* Initialize the DMA_Mode member */
+  DMA_InitStruct->DMA_Mode = DMA_Mode_Normal;
+  12:	6203      	str	r3, [r0, #32]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:252
+
+  /* Initialize the DMA_Priority member */
+  DMA_InitStruct->DMA_Priority = DMA_Priority_Low;
+  14:	6243      	str	r3, [r0, #36]	; 0x24
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:255
+
+  /* Initialize the DMA_M2M member */
+  DMA_InitStruct->DMA_M2M = DMA_M2M_Disable;
+  16:	6283      	str	r3, [r0, #40]	; 0x28
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:256
+}
+  18:	4770      	bx	lr
+
+Disassembly of section .text.DMA_Cmd:
+
+00000000 <DMA_Cmd>:
+DMA_Cmd():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:275
+{
+  /* Check the parameters */
+  assert_param(IS_DMA_ALL_PERIPH(DMAy_Channelx));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b119      	cbz	r1, a <DMA_Cmd+0xa>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:278
+  {
+    /* Enable the selected DMAy Channelx */
+    DMAy_Channelx->CCR |= CCR_ENABLE_Set;
+   2:	6803      	ldr	r3, [r0, #0]
+   4:	f043 0301 	orr.w	r3, r3, #1
+   8:	e002      	b.n	10 <DMA_Cmd+0x10>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:283
+  }
+  else
+  {
+    /* Disable the selected DMAy Channelx */
+    DMAy_Channelx->CCR &= CCR_ENABLE_Reset;
+   a:	6803      	ldr	r3, [r0, #0]
+   c:	f023 0301 	bic.w	r3, r3, #1
+  10:	6003      	str	r3, [r0, #0]
+  12:	4770      	bx	lr
+
+Disassembly of section .text.DMA_ITConfig:
+
+00000000 <DMA_ITConfig>:
+DMA_ITConfig():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:311
+  /* Check the parameters */
+  assert_param(IS_DMA_ALL_PERIPH(DMAy_Channelx));
+  assert_param(IS_DMA_CONFIG_IT(DMA_IT));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   0:	b112      	cbz	r2, 8 <DMA_ITConfig+0x8>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:314
+  {
+    /* Enable the selected DMA interrupts */
+    DMAy_Channelx->CCR |= DMA_IT;
+   2:	6803      	ldr	r3, [r0, #0]
+   4:	4319      	orrs	r1, r3
+   6:	e002      	b.n	e <DMA_ITConfig+0xe>
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:319
+  }
+  else
+  {
+    /* Disable the selected DMA interrupts */
+    DMAy_Channelx->CCR &= ~DMA_IT;
+   8:	6803      	ldr	r3, [r0, #0]
+   a:	ea23 0101 	bic.w	r1, r3, r1
+   e:	6001      	str	r1, [r0, #0]
+  10:	4770      	bx	lr
+
+Disassembly of section .text.DMA_GetCurrDataCounter:
+
+00000000 <DMA_GetCurrDataCounter>:
+DMA_GetCurrDataCounter():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:340
+{
+  /* Check the parameters */
+  assert_param(IS_DMA_ALL_PERIPH(DMAy_Channelx));
+
+  /* Return the number of remaining data units for DMAy Channelx */
+  return ((u16)(DMAy_Channelx->CNDTR));
+   0:	6840      	ldr	r0, [r0, #4]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:341
+}
+   2:	b280      	uxth	r0, r0
+   4:	4770      	bx	lr
+
+Disassembly of section .text.DMA_GetFlagStatus:
+
+00000000 <DMA_GetFlagStatus>:
+DMA_GetFlagStatus():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:408
+
+  /* Check the parameters */
+  assert_param(IS_DMA_GET_FLAG(DMA_FLAG));
+
+  /* Calculate the used DMA */
+  if ((DMA_FLAG & FLAG_Mask) != (u32)RESET)
+   0:	f010 5f80 	tst.w	r0, #268435456	; 0x10000000
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:411
+  {
+    /* Get DMA2 ISR register value */
+    tmpreg = DMA2->ISR ;
+   4:	bf14      	ite	ne
+   6:	4b04      	ldrne	r3, [pc, #16]	; (18 <DMA_GetFlagStatus+0x18>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:416
+  }
+  else
+  {
+    /* Get DMA1 ISR register value */
+    tmpreg = DMA1->ISR ;
+   8:	4b04      	ldreq	r3, [pc, #16]	; (1c <DMA_GetFlagStatus+0x1c>)
+   a:	681b      	ldr	r3, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:423
+
+  /* Check the status of the specified DMA flag */
+  if ((tmpreg & DMA_FLAG) != (u32)RESET)
+  {
+    /* DMA_FLAG is set */
+    bitstatus = SET;
+   c:	4203      	tst	r3, r0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:433
+    bitstatus = RESET;
+  }
+  
+  /* Return the DMA_FLAG status */
+  return  bitstatus;
+}
+   e:	bf0c      	ite	eq
+  10:	2000      	moveq	r0, #0
+  12:	2001      	movne	r0, #1
+  14:	4770      	bx	lr
+  16:	bf00      	nop
+  18:	40020400 	.word	0x40020400
+  1c:	40020000 	.word	0x40020000
+
+Disassembly of section .text.DMA_ClearFlag:
+
+00000000 <DMA_ClearFlag>:
+DMA_ClearFlag():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:498
+{
+  /* Check the parameters */
+  assert_param(IS_DMA_CLEAR_FLAG(DMA_FLAG));
+
+  /* Calculate the used DMA */
+  if ((DMA_FLAG & FLAG_Mask) != (u32)RESET)
+   0:	5f80f010 	.word	0x5f80f010
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:501
+  {
+    /* Clear the selected DMA flags */
+    DMA2->IFCR = DMA_FLAG;
+   4:	bf14      	ite	ne
+   6:	4b02      	ldrne	r3, [pc, #8]	; (10 <DMA_ClearFlag+0x10>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:506
+  }
+  else
+  {
+    /* Clear the selected DMA flags */
+    DMA1->IFCR = DMA_FLAG;
+   8:	4b02      	ldreq	r3, [pc, #8]	; (14 <DMA_ClearFlag+0x14>)
+   a:	6058      	str	r0, [r3, #4]
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	40020400 	.word	0x40020400
+  14:	40020000 	.word	0x40020000
+
+Disassembly of section .text.DMA_GetITStatus:
+
+00000000 <DMA_GetITStatus>:
+DMA_GetITStatus():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:576
+
+  /* Check the parameters */
+  assert_param(IS_DMA_GET_IT(DMA_IT));
+
+  /* Calculate the used DMA */
+  if ((DMA_IT & FLAG_Mask) != (u32)RESET)
+   0:	f010 5f80 	tst.w	r0, #268435456	; 0x10000000
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:579
+  {
+    /* Get DMA2 ISR register value */
+    tmpreg = DMA2->ISR ;
+   4:	bf14      	ite	ne
+   6:	4b04      	ldrne	r3, [pc, #16]	; (18 <DMA_GetITStatus+0x18>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:584
+  }
+  else
+  {
+    /* Get DMA1 ISR register value */
+    tmpreg = DMA1->ISR ;
+   8:	4b04      	ldreq	r3, [pc, #16]	; (1c <DMA_GetITStatus+0x1c>)
+   a:	681b      	ldr	r3, [r3, #0]
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:591
+
+  /* Check the status of the specified DMA interrupt */
+  if ((tmpreg & DMA_IT) != (u32)RESET)
+  {
+    /* DMA_IT is set */
+    bitstatus = SET;
+   c:	4203      	tst	r3, r0
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:600
+    /* DMA_IT is reset */
+    bitstatus = RESET;
+  }
+  /* Return the DMA_IT status */
+  return  bitstatus;
+}
+   e:	bf0c      	ite	eq
+  10:	2000      	moveq	r0, #0
+  12:	2001      	movne	r0, #1
+  14:	4770      	bx	lr
+  16:	bf00      	nop
+  18:	40020400 	.word	0x40020400
+  1c:	40020000 	.word	0x40020000
+
+Disassembly of section .text.DMA_ClearITPendingBit:
+
+00000000 <DMA_ClearITPendingBit>:
+DMA_ClearITPendingBit():
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:665
+{
+  /* Check the parameters */
+  assert_param(IS_DMA_CLEAR_IT(DMA_IT));
+
+  /* Calculate the used DMA */
+  if ((DMA_IT & FLAG_Mask) != (u32)RESET)
+   0:	5f80f010 	.word	0x5f80f010
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:668
+  {
+    /* Clear the selected DMA interrupt pending bits */
+    DMA2->IFCR = DMA_IT;
+   4:	bf14      	ite	ne
+   6:	4b02      	ldrne	r3, [pc, #8]	; (10 <DMA_ClearITPendingBit+0x10>)
+C:\cortex\dimmers\stlibrary\src/stm32f10x_dma.c:673
+  }
+  else
+  {
+    /* Clear the selected DMA interrupt pending bits */
+    DMA1->IFCR = DMA_IT;
+   8:	4b02      	ldreq	r3, [pc, #8]	; (14 <DMA_ClearITPendingBit+0x14>)
+   a:	6058      	str	r0, [r3, #4]
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	40020400 	.word	0x40020400
+  14:	40020000 	.word	0x40020000

@@ -2,19 +2,11 @@
 C:\cortex\dimmers\hex\list.o:     file format elf32-littlearm
 C:\cortex\dimmers\hex\list.o
 
+
 Disassembly of section .text.vListInitialise:
 
 00000000 <vListInitialise>:
 vListInitialise():
-C:\cortex\dimmers\rtos\src/list.c:70
-	as the only list entry. */
-	pxList->pxIndex = ( xListItem * ) &( pxList->xListEnd );
-
-	/* The list end value is the highest possible value in the list to
-	ensure it remains at the end of the list. */
-	pxList->xListEnd.xItemValue = portMAX_DELAY;
-   0:	f04f 33ff 	mov.w	r3, #4294967295	; 0xffffffff
-   4:	6083      	str	r3, [r0, #8]
 C:\cortex\dimmers\rtos\src/list.c:66
 void vListInitialise( xList *pxList )
 {
@@ -22,15 +14,22 @@ void vListInitialise( xList *pxList )
 	end of the list.  To initialise the list the list end is inserted
 	as the only list entry. */
 	pxList->pxIndex = ( xListItem * ) &( pxList->xListEnd );
-   6:	f100 0208 	add.w	r2, r0, #8	; 0x8
-C:\cortex\dimmers\rtos\src/list.c:77
-	/* The list end next and previous pointers point to itself so we know
-	when the list is empty. */
-	pxList->xListEnd.pxNext = ( xListItem * ) &( pxList->xListEnd );
-	pxList->xListEnd.pxPrevious = ( xListItem * ) &( pxList->xListEnd );
+   0:	f100 0308 	add.w	r3, r0, #8
+C:\cortex\dimmers\rtos\src/list.c:70
 
-	pxList->uxNumberOfItems = 0;
-   a:	3301      	adds	r3, #1
+	/* The list end value is the highest possible value in the list to
+	ensure it remains at the end of the list. */
+	pxList->xListEnd.xItemValue = portMAX_DELAY;
+   4:	f04f 32ff 	mov.w	r2, #4294967295
+   8:	6082      	str	r2, [r0, #8]
+C:\cortex\dimmers\rtos\src/list.c:66
+void vListInitialise( xList *pxList )
+{
+	/* The list structure contains a list item which is used to mark the
+	end of the list.  To initialise the list the list end is inserted
+	as the only list entry. */
+	pxList->pxIndex = ( xListItem * ) &( pxList->xListEnd );
+   a:	6043      	str	r3, [r0, #4]
 C:\cortex\dimmers\rtos\src/list.c:74
 	ensure it remains at the end of the list. */
 	pxList->xListEnd.xItemValue = portMAX_DELAY;
@@ -38,31 +37,19 @@ C:\cortex\dimmers\rtos\src/list.c:74
 	/* The list end next and previous pointers point to itself so we know
 	when the list is empty. */
 	pxList->xListEnd.pxNext = ( xListItem * ) &( pxList->xListEnd );
-   c:	60c2      	str	r2, [r0, #12]
-C:\cortex\dimmers\rtos\src/list.c:66
-void vListInitialise( xList *pxList )
-{
-	/* The list structure contains a list item which is used to mark the
-	end of the list.  To initialise the list the list end is inserted
-	as the only list entry. */
-	pxList->pxIndex = ( xListItem * ) &( pxList->xListEnd );
-   e:	6042      	str	r2, [r0, #4]
+   c:	60c3      	str	r3, [r0, #12]
 C:\cortex\dimmers\rtos\src/list.c:75
-	pxList->xListEnd.xItemValue = portMAX_DELAY;
-
-	/* The list end next and previous pointers point to itself so we know
-	when the list is empty. */
-	pxList->xListEnd.pxNext = ( xListItem * ) &( pxList->xListEnd );
 	pxList->xListEnd.pxPrevious = ( xListItem * ) &( pxList->xListEnd );
-  10:	6102      	str	r2, [r0, #16]
+   e:	6103      	str	r3, [r0, #16]
 C:\cortex\dimmers\rtos\src/list.c:77
 
 	pxList->uxNumberOfItems = 0;
+  10:	2300      	movs	r3, #0
   12:	6003      	str	r3, [r0, #0]
 C:\cortex\dimmers\rtos\src/list.c:78
 }
   14:	4770      	bx	lr
-  16:	46c0      	nop			(mov r8, r8)
+
 Disassembly of section .text.vListInitialiseItem:
 
 00000000 <vListInitialiseItem>:
@@ -79,7 +66,7 @@ void vListInitialiseItem( xListItem *pxItem )
 C:\cortex\dimmers\rtos\src/list.c:85
 }
    4:	4770      	bx	lr
-   6:	46c0      	nop			(mov r8, r8)
+
 Disassembly of section .text.vListInsertEnd:
 
 00000000 <vListInsertEnd>:
@@ -91,26 +78,14 @@ C:\cortex\dimmers\rtos\src/list.c:96
 	pvListGetOwnerOfNextEntry.  This means it has to be the item pointed to by
 	the pxIndex member. */
 	pxIndex = pxList->pxIndex;
-   0:	6842      	ldr	r2, [r0, #4]
-C:\cortex\dimmers\rtos\src/list.c:105
-	pxIndex->pxNext->pxPrevious = ( volatile xListItem * ) pxNewListItem;
-	pxIndex->pxNext = ( volatile xListItem * ) pxNewListItem;
-	pxList->pxIndex = ( volatile xListItem * ) pxNewListItem;
-
-	/* Remember which list the item is in. */
-	pxNewListItem->pvContainer = ( void * ) pxList;
-   2:	6108      	str	r0, [r1, #16]
+   0:	6843      	ldr	r3, [r0, #4]
 C:\cortex\dimmers\rtos\src/list.c:98
-	makes the new list item the last item to be removed by a call to
-	pvListGetOwnerOfNextEntry.  This means it has to be the item pointed to by
-	the pxIndex member. */
-	pxIndex = pxList->pxIndex;
 
 	pxNewListItem->pxNext = pxIndex->pxNext;
-   4:	6853      	ldr	r3, [r2, #4]
+   2:	685a      	ldr	r2, [r3, #4]
 C:\cortex\dimmers\rtos\src/list.c:99
 	pxNewListItem->pxPrevious = pxList->pxIndex;
-   6:	608a      	str	r2, [r1, #8]
+   4:	608b      	str	r3, [r1, #8]
 C:\cortex\dimmers\rtos\src/list.c:98
 	makes the new list item the last item to be removed by a call to
 	pvListGetOwnerOfNextEntry.  This means it has to be the item pointed to by
@@ -118,60 +93,53 @@ C:\cortex\dimmers\rtos\src/list.c:98
 	pxIndex = pxList->pxIndex;
 
 	pxNewListItem->pxNext = pxIndex->pxNext;
-   8:	604b      	str	r3, [r1, #4]
+   6:	604a      	str	r2, [r1, #4]
 C:\cortex\dimmers\rtos\src/list.c:100
 	pxNewListItem->pxPrevious = pxList->pxIndex;
 	pxIndex->pxNext->pxPrevious = ( volatile xListItem * ) pxNewListItem;
-   a:	6853      	ldr	r3, [r2, #4]
-   c:	6099      	str	r1, [r3, #8]
+   8:	685a      	ldr	r2, [r3, #4]
+   a:	6091      	str	r1, [r2, #8]
 C:\cortex\dimmers\rtos\src/list.c:101
 	pxIndex->pxNext = ( volatile xListItem * ) pxNewListItem;
-   e:	6051      	str	r1, [r2, #4]
-C:\cortex\dimmers\rtos\src/list.c:107
-	pxList->pxIndex = ( volatile xListItem * ) pxNewListItem;
-
-	/* Remember which list the item is in. */
-	pxNewListItem->pvContainer = ( void * ) pxList;
-
-	( pxList->uxNumberOfItems )++;
-  10:	6803      	ldr	r3, [r0, #0]
+   c:	6059      	str	r1, [r3, #4]
 C:\cortex\dimmers\rtos\src/list.c:102
-
-	pxNewListItem->pxNext = pxIndex->pxNext;
-	pxNewListItem->pxPrevious = pxList->pxIndex;
-	pxIndex->pxNext->pxPrevious = ( volatile xListItem * ) pxNewListItem;
-	pxIndex->pxNext = ( volatile xListItem * ) pxNewListItem;
 	pxList->pxIndex = ( volatile xListItem * ) pxNewListItem;
-  12:	6041      	str	r1, [r0, #4]
-C:\cortex\dimmers\rtos\src/list.c:107
+   e:	6041      	str	r1, [r0, #4]
+C:\cortex\dimmers\rtos\src/list.c:105
 
 	/* Remember which list the item is in. */
 	pxNewListItem->pvContainer = ( void * ) pxList;
+  10:	6108      	str	r0, [r1, #16]
+C:\cortex\dimmers\rtos\src/list.c:107
 
 	( pxList->uxNumberOfItems )++;
+  12:	6803      	ldr	r3, [r0, #0]
   14:	3301      	adds	r3, #1
   16:	6003      	str	r3, [r0, #0]
 C:\cortex\dimmers\rtos\src/list.c:108
 }
   18:	4770      	bx	lr
-  1a:	46c0      	nop			(mov r8, r8)
+
 Disassembly of section .text.vListInsert:
 
 00000000 <vListInsert>:
 vListInsert():
-C:\cortex\dimmers\rtos\src/list.c:112
-/*-----------------------------------------------------------*/
-
-void vListInsert( xList *pxList, xListItem *pxNewListItem )
-{
-   0:	b510      	push	{r4, lr}
 C:\cortex\dimmers\rtos\src/list.c:117
+{
 volatile xListItem *pxIterator;
 portTickType xValueOfInsertion;
 
 	/* Insert the new list item into the list, sorted in ulListItem order. */
 	xValueOfInsertion = pxNewListItem->xItemValue;
-   2:	680c      	ldr	r4, [r1, #0]
+   0:	680a      	ldr	r2, [r1, #0]
+C:\cortex\dimmers\rtos\src/list.c:112
+	( pxList->uxNumberOfItems )++;
+}
+/*-----------------------------------------------------------*/
+
+void vListInsert( xList *pxList, xListItem *pxNewListItem )
+{
+   2:	b510      	push	{r4, lr}
 C:\cortex\dimmers\rtos\src/list.c:126
 	are stored in ready lists (all of which have the same ulListItem value)
 	get an equal share of the CPU.  However, if the xItemValue is the same as 
@@ -179,24 +147,24 @@ C:\cortex\dimmers\rtos\src/list.c:126
 	to guard against this by checking the value first and modifying the 
 	algorithm slightly if necessary. */
 	if( xValueOfInsertion == portMAX_DELAY )
-   4:	f1b4 3fff 	cmp.w	r4, #4294967295	; 0xffffffff
+   4:	f1b2 3fff 	cmp.w	r2, #4294967295
    8:	d101      	bne.n	e <vListInsert+0xe>
 C:\cortex\dimmers\rtos\src/list.c:128
 	{
 		pxIterator = pxList->xListEnd.pxPrevious;
-   a:	6902      	ldr	r2, [r0, #16]
+   a:	6903      	ldr	r3, [r0, #16]
    c:	e007      	b.n	1e <vListInsert+0x1e>
 C:\cortex\dimmers\rtos\src/list.c:132
 	}
 	else
 	{
 		for( pxIterator = ( xListItem * ) &( pxList->xListEnd ); pxIterator->pxNext->xItemValue <= xValueOfInsertion; pxIterator = pxIterator->pxNext )
-   e:	f100 0208 	add.w	r2, r0, #8	; 0x8
+   e:	f100 0308 	add.w	r3, r0, #8
   12:	e000      	b.n	16 <vListInsert+0x16>
-  14:	6852      	ldr	r2, [r2, #4]
-  16:	6853      	ldr	r3, [r2, #4]
-  18:	681b      	ldr	r3, [r3, #0]
-  1a:	42a3      	cmp	r3, r4
+  14:	685b      	ldr	r3, [r3, #4]
+  16:	685c      	ldr	r4, [r3, #4]
+  18:	6824      	ldr	r4, [r4, #0]
+  1a:	4294      	cmp	r4, r2
   1c:	d9fa      	bls.n	14 <vListInsert+0x14>
 C:\cortex\dimmers\rtos\src/list.c:139
 			/* There is nothing to do here, we are just iterating to the
@@ -205,7 +173,7 @@ C:\cortex\dimmers\rtos\src/list.c:139
 	}
 
 	pxNewListItem->pxNext = pxIterator->pxNext;
-  1e:	6853      	ldr	r3, [r2, #4]
+  1e:	685a      	ldr	r2, [r3, #4]
 C:\cortex\dimmers\rtos\src/list.c:146
 	pxNewListItem->pxPrevious = pxIterator;
 	pxIterator->pxNext = ( volatile xListItem * ) pxNewListItem;
@@ -221,7 +189,7 @@ C:\cortex\dimmers\rtos\src/list.c:140
 
 	pxNewListItem->pxNext = pxIterator->pxNext;
 	pxNewListItem->pxNext->pxPrevious = ( volatile xListItem * ) pxNewListItem;
-  22:	6099      	str	r1, [r3, #8]
+  22:	6091      	str	r1, [r2, #8]
 C:\cortex\dimmers\rtos\src/list.c:139
 			/* There is nothing to do here, we are just iterating to the
 			wanted insertion position. */
@@ -229,28 +197,14 @@ C:\cortex\dimmers\rtos\src/list.c:139
 	}
 
 	pxNewListItem->pxNext = pxIterator->pxNext;
-  24:	604b      	str	r3, [r1, #4]
-C:\cortex\dimmers\rtos\src/list.c:142
-	pxNewListItem->pxNext->pxPrevious = ( volatile xListItem * ) pxNewListItem;
-	pxNewListItem->pxPrevious = pxIterator;
-	pxIterator->pxNext = ( volatile xListItem * ) pxNewListItem;
-  26:	6051      	str	r1, [r2, #4]
-C:\cortex\dimmers\rtos\src/list.c:148
-
-	/* Remember which list the item is in.  This allows fast removal of the
-	item later. */
-	pxNewListItem->pvContainer = ( void * ) pxList;
-
-	( pxList->uxNumberOfItems )++;
-  28:	6803      	ldr	r3, [r0, #0]
+  24:	604a      	str	r2, [r1, #4]
 C:\cortex\dimmers\rtos\src/list.c:141
-		}
-	}
-
-	pxNewListItem->pxNext = pxIterator->pxNext;
 	pxNewListItem->pxNext->pxPrevious = ( volatile xListItem * ) pxNewListItem;
 	pxNewListItem->pxPrevious = pxIterator;
-  2a:	608a      	str	r2, [r1, #8]
+  26:	608b      	str	r3, [r1, #8]
+C:\cortex\dimmers\rtos\src/list.c:142
+	pxIterator->pxNext = ( volatile xListItem * ) pxNewListItem;
+  28:	6059      	str	r1, [r3, #4]
 C:\cortex\dimmers\rtos\src/list.c:148
 
 	/* Remember which list the item is in.  This allows fast removal of the
@@ -258,12 +212,13 @@ C:\cortex\dimmers\rtos\src/list.c:148
 	pxNewListItem->pvContainer = ( void * ) pxList;
 
 	( pxList->uxNumberOfItems )++;
+  2a:	6803      	ldr	r3, [r0, #0]
   2c:	3301      	adds	r3, #1
   2e:	6003      	str	r3, [r0, #0]
 C:\cortex\dimmers\rtos\src/list.c:149
 }
   30:	bd10      	pop	{r4, pc}
-  32:	46c0      	nop			(mov r8, r8)
+
 Disassembly of section .text.vListRemove:
 
 00000000 <vListRemove>:
@@ -280,46 +235,36 @@ xList * pxList;
    4:	609a      	str	r2, [r3, #8]
 C:\cortex\dimmers\rtos\src/list.c:157
 	pxItemToRemove->pxPrevious->pxNext = pxItemToRemove->pxNext;
-   6:	6881      	ldr	r1, [r0, #8]
+   6:	6882      	ldr	r2, [r0, #8]
+   8:	6053      	str	r3, [r2, #4]
 C:\cortex\dimmers\rtos\src/list.c:161
 	
 	/* The list item knows which list it is in.  Obtain the list from the list
 	item. */
 	pxList = ( xList * ) pxItemToRemove->pvContainer;
-   8:	6902      	ldr	r2, [r0, #16]
-C:\cortex\dimmers\rtos\src/list.c:157
-void vListRemove( xListItem *pxItemToRemove )
-{
-xList * pxList;
-
-	pxItemToRemove->pxNext->pxPrevious = pxItemToRemove->pxPrevious;
-	pxItemToRemove->pxPrevious->pxNext = pxItemToRemove->pxNext;
-   a:	604b      	str	r3, [r1, #4]
+   a:	6903      	ldr	r3, [r0, #16]
 C:\cortex\dimmers\rtos\src/list.c:164
-	/* The list item knows which list it is in.  Obtain the list from the list
-	item. */
-	pxList = ( xList * ) pxItemToRemove->pvContainer;
 
 	/* Make sure the index is left pointing to a valid item. */
 	if( pxList->pxIndex == pxItemToRemove )
-   c:	6853      	ldr	r3, [r2, #4]
-   e:	4283      	cmp	r3, r0
+   c:	6859      	ldr	r1, [r3, #4]
+   e:	4281      	cmp	r1, r0
 C:\cortex\dimmers\rtos\src/list.c:166
 	{
 		pxList->pxIndex = pxItemToRemove->pxPrevious;
   10:	bf08      	it	eq
-  12:	6051      	streq	r1, [r2, #4]
+  12:	605a      	streq	r2, [r3, #4]
 C:\cortex\dimmers\rtos\src/list.c:169
 	}
 
 	pxItemToRemove->pvContainer = NULL;
-  14:	2300      	movs	r3, #0
-  16:	6103      	str	r3, [r0, #16]
+  14:	2200      	movs	r2, #0
+  16:	6102      	str	r2, [r0, #16]
 C:\cortex\dimmers\rtos\src/list.c:170
 	( pxList->uxNumberOfItems )--;
-  18:	6813      	ldr	r3, [r2, #0]
-  1a:	3b01      	subs	r3, #1
-  1c:	6013      	str	r3, [r2, #0]
+  18:	681a      	ldr	r2, [r3, #0]
+  1a:	3a01      	subs	r2, #1
+  1c:	601a      	str	r2, [r3, #0]
 C:\cortex\dimmers\rtos\src/list.c:171
 }
   1e:	4770      	bx	lr

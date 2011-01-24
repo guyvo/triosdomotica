@@ -75,7 +75,9 @@
         
 2.3.1   - remove led on when send task is done now toggle
         - ADC sensor time to ADC_SampleTime_28Cycles5
-       
+
+2.4.0   - recompile with ST lib in source files
+        - removed nvic local
 */
 
 /* Includes ------------------------------------------------------------------*/

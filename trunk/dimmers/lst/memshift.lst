@@ -2,6 +2,7 @@
 C:\cortex\dimmers\hex\memshift.o:     file format elf32-littlearm
 C:\cortex\dimmers\hex\memshift.o
 
+
 Disassembly of section .text:
 
 00000000 <mem_shift>:
@@ -19,10 +20,10 @@ C:\cortex\dimmers\src/memshift.s:34
    4:	4401      	add	r1, r0
 C:\cortex\dimmers\src/memshift.s:35
 		SUB		r1,r1,#4            /* r1 points to second last halfword */
-   6:	f1a1 0104 	sub.w	r1, r1, #4	; 0x4
+   6:	f1a1 0104 	sub.w	r1, r1, #4
 C:\cortex\dimmers\src/memshift.s:36
         ADD		r2,r1,#2            /* r2 points to last halfword */
-   a:	f101 0202 	add.w	r2, r1, #2	; 0x2
+   a:	f101 0202 	add.w	r2, r1, #2
 
 0000000e <shift1>:
 shift1():

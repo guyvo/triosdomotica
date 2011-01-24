@@ -1,199 +1,255 @@
 
-<ApplicationBuild Header="dimmers" Extern=".\dimmers.rapp" Path=".\dimmers.rapp" OutputFile=".\hex\dimmers.elf" sate="96" >
-	<Group Header="src" Marker="-1" OutputFile="" sate="0" >
-		<NodeC Path=".\src\dimmers_adc.c" Header="dimmers_adc.c" Marker="0" OutputFile=".\hex\dimmers_adc.o" sate="0" >
+<ApplicationBuild Header="dimmers" Extern=".\dimmers.rapp" Path=".\dimmers.rapp" OutputFile=".\hex\dimmers.elf" sate="96" AsyncBuild="" >
+	<Group Header="src" Marker="-1" OutputFile="" sate="64" AsyncBuild="" >
+		<NodeC Path=".\src\dimmers_adc.c" Header="dimmers_adc.c" Marker="0" OutputFile=".\hex\dimmers_adc.o" sate="0" AsyncBuild="" >
 			<Options>
 				<Config Header="Standard" >
 					<Set Header="GCC" >
 						<Section Header="OPTIMIZE" >
 							<Property Header="Optimize" Value="-Os" Removable="1" />
-																																			
+																																																																										
 						</Section>
-																													
+																																																														
 					</Set>
-																		
+																																													
 				</Config>
-														
+																																			
 			</Options>
-										
+																									
 		</NodeC>
-		<NodeC Path=".\src\dimmers_exti.c" Header="dimmers_exti.c" Marker="-1" OutputFile=".\hex\dimmers_exti.o" sate="0" />
-		<NodeC Path=".\src\dimmers_gpio.c" Header="dimmers_gpio.c" Marker="-1" OutputFile=".\hex\dimmers_gpio.o" sate="0" />
-		<NodeC Path=".\src\dimmers_nvic.c" Header="dimmers_nvic.c" Marker="-1" OutputFile=".\hex\dimmers_nvic.o" sate="0" />
-		<NodeC Path=".\src\dimmers_rcc.c" Header="dimmers_rcc.c" Marker="-1" OutputFile=".\hex\dimmers_rcc.o" sate="0" />
-		<NodeC Path=".\src\dimmers_tim.c" Header="dimmers_tim.c" Marker="-1" OutputFile=".\hex\dimmers_tim.o" sate="0" />
-		<NodeC Path=".\src\dimmers_wdg.c" Header="dimmers_wdg.c" Marker="-1" OutputFile=".\hex\dimmers_wdg.o" sate="0" />
-		<NodeASM Path=".\src\fir_stm32.s" Header="fir_stm32.s" Marker="-1" OutputFile=".\hex\fir_stm32.o" sate="0" />
-		<NodeC Path=".\src\main.c" Header="main.c" Marker="-1" OutputFile=".\hex\main.o" sate="0" />
-		<NodeASM Path=".\src\memshift.s" Header="memshift.s" Marker="-1" OutputFile=".\hex\memshift.o" sate="0" />
-		<NodeC Path=".\src\stm32f10x_it.c" Header="stm32f10x_it.c" Marker="0" OutputFile=".\hex\stm32f10x_it.o" sate="0" >
+		<NodeC Path=".\src\dimmers_exti.c" Header="dimmers_exti.c" Marker="-1" OutputFile=".\hex\dimmers_exti.o" sate="0" AsyncBuild="" />
+		<NodeC Path=".\src\dimmers_gpio.c" Header="dimmers_gpio.c" Marker="-1" OutputFile=".\hex\dimmers_gpio.o" sate="0" AsyncBuild="" />
+		<NodeC Path=".\src\dimmers_nvic.c" Header="dimmers_nvic.c" Marker="-1" OutputFile=".\hex\dimmers_nvic.o" sate="0" AsyncBuild="" />
+		<NodeC Path=".\src\dimmers_rcc.c" Header="dimmers_rcc.c" Marker="-1" OutputFile=".\hex\dimmers_rcc.o" sate="0" AsyncBuild="" />
+		<NodeC Path=".\src\dimmers_tim.c" Header="dimmers_tim.c" Marker="-1" OutputFile=".\hex\dimmers_tim.o" sate="0" AsyncBuild="" />
+		<NodeC Path=".\src\dimmers_wdg.c" Header="dimmers_wdg.c" Marker="-1" OutputFile=".\hex\dimmers_wdg.o" sate="0" AsyncBuild="" />
+		<NodeASM Path=".\src\fir_stm32.s" Header="fir_stm32.s" Marker="-1" OutputFile=".\hex\fir_stm32.o" sate="0" AsyncBuild="" />
+		<NodeC Path=".\src\main.c" Header="main.c" Marker="-1" OutputFile=".\hex\main.o" sate="0" AsyncBuild="" />
+		<NodeASM Path=".\src\memshift.s" Header="memshift.s" Marker="-1" OutputFile=".\hex\memshift.o" sate="0" AsyncBuild="" />
+		<NodeC Path=".\src\stm32f10x_it.c" Header="stm32f10x_it.c" Marker="0" OutputFile=".\hex\stm32f10x_it.o" sate="0" AsyncBuild="" >
 			<Options>
 				<Config Header="Standard" >
 					<Set Header="GCC" >
 						<Section Header="OPTIMIZE" >
 							<Property Header="Optimize" Value="-Os" Removable="1" />
-																																																																																																																																																																																															
+																																																																																																																																																																																																																																						
 						</Section>
-																																																																																																																																																																	
+																																																																																																																																																																																																		
 					</Set>
+																																																																																																																																																									
+				</Config>
+																																																																																																																							
+			</Options>
+																																																																																					
+		</NodeC>
+		<NodeC Path=".\src\stm32f10x_vector.c" Header="stm32f10x_vector.c" Marker="-1" OutputFile=".\hex\stm32f10x_vector.o" sate="0" AsyncBuild="" />
+		<NodeC Path=".\src\dimmers_i2c.c" Header="dimmers_i2c.c" Marker="-1" OutputFile=".\hex\dimmers_i2c.o" sate="0" AsyncBuild="" />
+		<NodeC Path=".\src\dimmers_bkp.c" Header="dimmers_bkp.c" Marker="-1" OutputFile=".\hex\dimmers_bkp.o" sate="0" AsyncBuild="" />
+		<NodeC Path=".\src\dimmers_rtc.c" Header="dimmers_rtc.c" Marker="-1" OutputFile=".\hex\dimmers_rtc.o" sate="0" AsyncBuild="" />
+		<NodeC Path=".\src\dimmers_storage.c" Header="dimmers_storage.c" Marker="0" OutputFile=".\hex\dimmers_storage.o" sate="0" AsyncBuild="" >
+			<Options>
+				<Config Header="Standard" >
+					<Set Header="GCC" >
+						<Section Header="OPTIMIZE" >
+							<Property Header="Optimize" Value="-Os" Removable="1" />
 																																																																																																																														
-				</Config>
-																																																																																																		
-			</Options>
-																																																																						
-		</NodeC>
-		<NodeC Path=".\src\stm32f10x_vector.c" Header="stm32f10x_vector.c" Marker="-1" OutputFile=".\hex\stm32f10x_vector.o" sate="0" />
-		<NodeC Path=".\src\dimmers_i2c.c" Header="dimmers_i2c.c" Marker="-1" OutputFile=".\hex\dimmers_i2c.o" sate="0" />
-		<NodeC Path=".\src\dimmers_bkp.c" Header="dimmers_bkp.c" Marker="-1" OutputFile=".\hex\dimmers_bkp.o" sate="0" />
-		<NodeC Path=".\src\dimmers_rtc.c" Header="dimmers_rtc.c" Marker="-1" OutputFile=".\hex\dimmers_rtc.o" sate="0" />
-		<NodeC Path=".\src\dimmers_storage.c" Header="dimmers_storage.c" Marker="0" OutputFile=".\hex\dimmers_storage.o" sate="0" >
-			<Options>
-				<Config Header="Standard" >
-					<Set Header="GCC" >
-						<Section Header="OPTIMIZE" >
-							<Property Header="Optimize" Value="-Os" Removable="1" />
-																																																																																							
 						</Section>
-																																																																									
+																																																																																																										
 					</Set>
-																																																						
+																																																																																	
 				</Config>
-																																										
+																																																															
 			</Options>
-																																			
+																																																		
 		</NodeC>
-																																																																																																						
+																																																																																																															
 	</Group>
-	<Group Header="include" Marker="-1" OutputFile="" sate="96" >
-		<NodeH Path=".\include\dimmers_adc.h" Header="dimmers_adc.h" Marker="-1" OutputFile="" sate="2" />
-		<NodeH Path=".\include\dimmers_exti.h" Header="dimmers_exti.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\dimmers_gpio.h" Header="dimmers_gpio.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\dimmers_nvic.h" Header="dimmers_nvic.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\dimmers_rcc.h" Header="dimmers_rcc.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\dimmers_wdg.h" Header="dimmers_wdg.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\stm32_dsp.h" Header="stm32_dsp.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\stm32f10x_conf.h" Header="stm32f10x_conf.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\stm32f10x_it.h" Header="stm32f10x_it.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\dimmers_i2c.h" Header="dimmers_i2c.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\dimmers_bkp.h" Header="dimmers_bkp.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\dimmers_rtc.h" Header="dimmers_rtc.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\dimmers_storage.h" Header="dimmers_storage.h" Marker="-1" OutputFile="" sate="0" />
-		<NodeH Path=".\include\dimmers_tim.h" Header="dimmers_tim.h" Marker="-1" OutputFile="" sate="0" />
-																																																																								
+	<Group Header="include" Marker="-1" OutputFile="" sate="0" AsyncBuild="" >
+		<NodeH Path=".\include\dimmers_adc.h" Header="dimmers_adc.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\dimmers_exti.h" Header="dimmers_exti.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\dimmers_gpio.h" Header="dimmers_gpio.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\dimmers_nvic.h" Header="dimmers_nvic.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\dimmers_rcc.h" Header="dimmers_rcc.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\dimmers_wdg.h" Header="dimmers_wdg.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\stm32_dsp.h" Header="stm32_dsp.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\stm32f10x_conf.h" Header="stm32f10x_conf.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\stm32f10x_it.h" Header="stm32f10x_it.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\dimmers_i2c.h" Header="dimmers_i2c.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\dimmers_bkp.h" Header="dimmers_bkp.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\dimmers_rtc.h" Header="dimmers_rtc.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\dimmers_storage.h" Header="dimmers_storage.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+		<NodeH Path=".\include\dimmers_tim.h" Header="dimmers_tim.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+																																																																																	
 	</Group>
-	<Group Header="lib" Marker="-1" OutputFile="" sate="0" />
-	<Group Header="rtos" Marker="0" OutputFile="" sate="0" >
-		<Group Header="src" Marker="-1" OutputFile="" sate="96" >
-			<NodeC Path=".\rtos\src\croutine.c" Header="croutine.c" Marker="-1" OutputFile=".\hex\croutine.o" sate="0" />
-			<NodeC Path=".\rtos\src\heap_2.c" Header="heap_2.c" Marker="-1" OutputFile=".\hex\heap_2.o" sate="0" />
-			<NodeC Path=".\rtos\src\list.c" Header="list.c" Marker="-1" OutputFile=".\hex\list.o" sate="0" />
-			<NodeC Path=".\rtos\src\port.c" Header="port.c" Marker="-1" OutputFile=".\hex\port.o" sate="0" />
-			<NodeC Path=".\rtos\src\queue.c" Header="queue.c" Marker="-1" OutputFile=".\hex\queue.o" sate="0" />
-			<NodeC Path=".\rtos\src\tasks.c" Header="tasks.c" Marker="-1" OutputFile=".\hex\tasks.o" sate="0" />
-																																																																																																									
+	<Group Header="lib" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+	<Group Header="rtos" Marker="0" OutputFile="" sate="96" AsyncBuild="" >
+		<Group Header="src" Marker="-1" OutputFile="" sate="0" AsyncBuild="" >
+			<NodeC Path=".\rtos\src\croutine.c" Header="croutine.c" Marker="-1" OutputFile=".\hex\croutine.o" sate="0" AsyncBuild="" />
+			<NodeC Path=".\rtos\src\heap_2.c" Header="heap_2.c" Marker="-1" OutputFile=".\hex\heap_2.o" sate="0" AsyncBuild="" />
+			<NodeC Path=".\rtos\src\list.c" Header="list.c" Marker="-1" OutputFile=".\hex\list.o" sate="0" AsyncBuild="" />
+			<NodeC Path=".\rtos\src\port.c" Header="port.c" Marker="-1" OutputFile=".\hex\port.o" sate="0" AsyncBuild="" />
+			<NodeC Path=".\rtos\src\queue.c" Header="queue.c" Marker="-1" OutputFile=".\hex\queue.o" sate="0" AsyncBuild="" />
+			<NodeC Path=".\rtos\src\tasks.c" Header="tasks.c" Marker="-1" OutputFile=".\hex\tasks.o" sate="0" AsyncBuild="" />
+																																																																																																																								
 		</Group>
-		<Group Header="include" Marker="-1" OutputFile="" sate="0" >
-			<NodeH Path=".\rtos\include\croutine.h" Header="croutine.h" Marker="-1" OutputFile="" sate="0" />
-			<NodeH Path=".\rtos\include\FreeRTOS.h" Header="FreeRTOS.h" Marker="-1" OutputFile="" sate="0" />
-			<NodeH Path=".\rtos\include\list.h" Header="list.h" Marker="-1" OutputFile="" sate="0" />
-			<NodeH Path=".\rtos\include\portable.h" Header="portable.h" Marker="-1" OutputFile="" sate="0" />
-			<NodeH Path=".\rtos\include\portmacro.h" Header="portmacro.h" Marker="-1" OutputFile="" sate="0" />
-			<NodeH Path=".\rtos\include\projdefs.h" Header="projdefs.h" Marker="-1" OutputFile="" sate="0" />
-			<NodeH Path=".\rtos\include\queue.h" Header="queue.h" Marker="-1" OutputFile="" sate="0" />
-			<NodeH Path=".\rtos\include\semphr.h" Header="semphr.h" Marker="-1" OutputFile="" sate="0" />
-			<NodeH Path=".\rtos\include\StackMacros.h" Header="StackMacros.h" Marker="-1" OutputFile="" sate="0" />
-			<NodeH Path=".\rtos\include\task.h" Header="task.h" Marker="-1" OutputFile="" sate="0" />
-			<NodeH Path=".\rtos\include\FreeRTOSConfig.h" Header="FreeRTOSConfig.h" Marker="-1" OutputFile="" sate="0" />
-																																																																																																									
+		<Group Header="include" Marker="-1" OutputFile="" sate="66" AsyncBuild="" >
+			<NodeH Path=".\rtos\include\croutine.h" Header="croutine.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+			<NodeH Path=".\rtos\include\FreeRTOS.h" Header="FreeRTOS.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+			<NodeH Path=".\rtos\include\list.h" Header="list.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+			<NodeH Path=".\rtos\include\portable.h" Header="portable.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+			<NodeH Path=".\rtos\include\portmacro.h" Header="portmacro.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+			<NodeH Path=".\rtos\include\projdefs.h" Header="projdefs.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+			<NodeH Path=".\rtos\include\queue.h" Header="queue.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+			<NodeH Path=".\rtos\include\semphr.h" Header="semphr.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+			<NodeH Path=".\rtos\include\StackMacros.h" Header="StackMacros.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+			<NodeH Path=".\rtos\include\task.h" Header="task.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+			<NodeH Path=".\rtos\include\FreeRTOSConfig.h" Header="FreeRTOSConfig.h" Marker="-1" OutputFile="" sate="0" AsyncBuild="" />
+																																																																																																																								
 		</Group>
 		<Options>
 			<Config Header="Standard" >
 				<Set Header="Group" >
 					<Section Header="Build" >
 						<Property Header="Exclude" Value="No" Removable="1" />
-																																																																																																																																																																																																																																				
+																																																																																																																																																																																																																																																																					
 					</Section>
-																																																																																																																																																																																										
+																																																																																																																																																																																																																					
 				</Set>
-																																																																																																																																												
+																																																																																																																																																																	
 			</Config>
-																																																																																																				
+																																																																																																																			
 		</Options>
-																																																															
+																																																																								
 	</Group>
-	<NodeC Path=".\src\stm32f10x_nvic.c" Header="stm32f10x_nvic.c" Marker="-1" OutputFile=".\hex\stm32f10x_nvic.o" sate="0" />
+	<Group Header="stinclude" Marker="-1" AsyncBuild="" OutputFile="" sate="64" >
+		<NodeH Path=".\stlibrary\inc\cortexm3_macro.h" Header="cortexm3_macro.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_adc.h" Header="stm32f10x_adc.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_bkp.h" Header="stm32f10x_bkp.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_can.h" Header="stm32f10x_can.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_crc.h" Header="stm32f10x_crc.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_dac.h" Header="stm32f10x_dac.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_dbgmcu.h" Header="stm32f10x_dbgmcu.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_dma.h" Header="stm32f10x_dma.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_exti.h" Header="stm32f10x_exti.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_flash.h" Header="stm32f10x_flash.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_fsmc.h" Header="stm32f10x_fsmc.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_gpio.h" Header="stm32f10x_gpio.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_i2c.h" Header="stm32f10x_i2c.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_iwdg.h" Header="stm32f10x_iwdg.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_lib.h" Header="stm32f10x_lib.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_map.h" Header="stm32f10x_map.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_nvic.h" Header="stm32f10x_nvic.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_pwr.h" Header="stm32f10x_pwr.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_rcc.h" Header="stm32f10x_rcc.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_rtc.h" Header="stm32f10x_rtc.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_sdio.h" Header="stm32f10x_sdio.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_spi.h" Header="stm32f10x_spi.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_systick.h" Header="stm32f10x_systick.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_tim.h" Header="stm32f10x_tim.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_type.h" Header="stm32f10x_type.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_usart.h" Header="stm32f10x_usart.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+		<NodeH Path=".\stlibrary\inc\stm32f10x_wwdg.h" Header="stm32f10x_wwdg.h" Marker="-1" AsyncBuild="" OutputFile="" sate="0" />
+			
+	</Group>
+	<Group Header="stsource" Marker="-1" AsyncBuild="" OutputFile="" sate="0" >
+		<NodeC Path=".\stlibrary\src\stm32f10x_adc.c" Header="stm32f10x_adc.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_adc.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_bkp.c" Header="stm32f10x_bkp.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_bkp.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_can.c" Header="stm32f10x_can.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_can.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_crc.c" Header="stm32f10x_crc.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_crc.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_dac.c" Header="stm32f10x_dac.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_dac.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_dbgmcu.c" Header="stm32f10x_dbgmcu.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_dbgmcu.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_dma.c" Header="stm32f10x_dma.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_dma.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_exti.c" Header="stm32f10x_exti.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_exti.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_flash.c" Header="stm32f10x_flash.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_flash.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_fsmc.c" Header="stm32f10x_fsmc.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_fsmc.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_gpio.c" Header="stm32f10x_gpio.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_gpio.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_i2c.c" Header="stm32f10x_i2c.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_i2c.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_iwdg.c" Header="stm32f10x_iwdg.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_iwdg.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_lib.c" Header="stm32f10x_lib.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_lib.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_nvic.c" Header="stm32f10x_nvic.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_nvic.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_pwr.c" Header="stm32f10x_pwr.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_pwr.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_rcc.c" Header="stm32f10x_rcc.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_rcc.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_rtc.c" Header="stm32f10x_rtc.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_rtc.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_sdio.c" Header="stm32f10x_sdio.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_sdio.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_spi.c" Header="stm32f10x_spi.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_spi.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_systick.c" Header="stm32f10x_systick.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_systick.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_tim.c" Header="stm32f10x_tim.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_tim.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_usart.c" Header="stm32f10x_usart.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_usart.o" sate="0" />
+		<NodeC Path=".\stlibrary\src\stm32f10x_wwdg.c" Header="stm32f10x_wwdg.c" Marker="-1" AsyncBuild="" OutputFile=".\hex\stm32f10x_wwdg.o" sate="0" />
+			
+	</Group>
 	<Options>
 		<Config Header="Standard" >
 			<Set Header="ApplicationBuild" >
 				<Section Header="General" >
 					<Property Header="TargetFamily" Value="ARM" />
-																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																				
 				</Section>
 				<Section Header="Directories" >
 					<Property Header="LinkerOutputDir" Value="Output Directory" Removable="1" />
 					<Property Header="OutDir" Value="C:\cortex\dimmers\hex" Removable="1" />
 					<Property Header="ListDir" Value="C:\cortex\dimmers\lst" Removable="1" />
-					<Property Header="IncDir" Value="$(ApplicationDir)\rtos\include;$(RkitLib)\ARM\include;$(ApplicationDir)\include" Removable="1" />
+					<Property Header="IncDir" Value="$(ApplicationDir)\rtos\include;$(ApplicationDir)\include;C:\cortex\dimmers\stlibrary\inc" Removable="1" />
 					<Property Header="LibDir" Value="$(RkitLib)\ARM;.\lib" Removable="1" />
-																									
+																
 				</Section>
-																			
+												
 			</Set>
 			<Set Header="Target" >
 				<Section Header="ProcessorARM" >
 					<Property Header="Processor" Value="STM32F103RET6" />
-																																																																																																																																																																																																																																								
+																																																																																																																																																																																																																																																																			
 				</Section>
 				<Section Header="ToolSetARM" >
 					<Property Header="BuildToolSetARM" Value="ARM\\GNU.config" Removable="1" />
-																																																																																																																																																																																																																																																																																																																									
+																																																																																																																																																																																																																																																																																																																																																				
 				</Section>
 				<Section Header="DebugARM" >
 					<Property Header="DebugTool_CORTEX" Value="RLINK_CORTEX" Removable="1" />
-																																											
+																																																																						
 				</Section>
-																																	
+																																																						
 			</Set>
 			<Set Header="LD" >
 				<Section Header="Linker" >
 					<Property Header="GC_SECTIONS" Value="-Wl,-static -Wl,--gc-sections" Removable="1" />
-																																																				
+																																																																															
 				</Section>
 				<Section Header="Scripts" >
 					<Property Header="SCRIPTFILES" Value="Yes" Removable="1" />
 					<Property Header="StarterKitLimit" Value="No" Removable="1" />
-																																																																																																																																																																																																																																																	
+																																																																																																																																																																																																																																																																												
 				</Section>
 				<Section Header="Startup" >
 					<Property Header="DEFAULTSTARTUP" Value="No" Removable="1" />
 					<Property Header="File" Value="" Removable="1" />
-																																																																																																																																																																																		
+																																																																																																																																																																																																													
 				</Section>
 				<Section Header="LIB" >
 					<Property Header="UART0PUTC" Value="0" Removable="1" />
-																																																																																																																																																																
+																																																																																																																																																																																											
 				</Section>
-																																								
+																																																													
 			</Set>
 			<Set Header="GCC" >
 				<Section Header="OPTIMIZE" >
 					<Property Header="Optimize" Value="-Os" Removable="1" />
 					<Property Header="INLINEFUNC" Value="" Removable="1" />
-																
+																																											
 				</Section>
 				<Section Header="Defines" >
 					<Property Header="Defines" Value="GCC_ARMCM3" Removable="1" />
-																																																																																																																																																																																		
+																																																																																																																																																																																																													
 				</Section>
-												
+																																	
 			</Set>
 			<Set Header="AS" >
 				<Section Header="Options" >
 					<Property Header="Debug" Value="-Wa,-gdwarf2" Removable="1" />
 					<Property Header="LocalLabel" Value="-Wa,-L" Removable="1" />
-																																																																																																																																																																																																																																																										
+																																																																																																																																																																																																																																																																																					
 				</Section>
-																																																																																																																																																																																																		
+																																																																																																																																																																																																																							
 			</Set>
 					
 		</Config>
