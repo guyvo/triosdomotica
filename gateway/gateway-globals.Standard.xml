@@ -1,111 +1,107 @@
 <!-- DWF2XML 2.00.01 - Raisonance Dwarf information extractor -->
-<aoffile Header="gateway" Path="C:\cortex\gateway\gateway.elf">
+<aoffile Header="gateway" Path="C:\cortex\gateway\out\gateway.elf">
  <Def>
   <Col Header="DeclFile" Desc="File"/>
   <Col Header="Type" Desc="Type"/>
   <Col Header="Header" Desc="Name"/>
  </Def>
- <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
- <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="65" Pointer="No"/>
- <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
- <type Header="bool" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="80" Pointer="No"/>
- <type Header="TI2Ccommand" Icon="1" Type="type" Desc=": struct TI2CCOMMAND" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="73" Pointer="No"/>
- <func Header="NMIException" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="75"/>
- <func Header="HardFaultException" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="86"/>
- <func Header="MemManageException" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="101"/>
- <func Header="BusFaultException" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="116"/>
- <func Header="UsageFaultException" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="131"/>
- <func Header="DebugMonitor" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="146"/>
- <func Header="SVCHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="157"/>
- <func Header="PendSVC" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="168"/>
- <func Header="SysTickHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="179"/>
- <func Header="PVD_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="205"/>
- <func Header="TAMPER_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="216"/>
- <func Header="RTC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="227"/>
- <func Header="FLASH_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="238"/>
- <func Header="RCC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="249"/>
- <func Header="EXTI0_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="260"/>
- <func Header="EXTI1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="271"/>
- <func Header="EXTI2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="282"/>
- <func Header="EXTI3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="293"/>
- <func Header="EXTI4_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="304"/>
- <func Header="DMA1_Channel1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="315"/>
- <func Header="DMA1_Channel2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="326"/>
- <func Header="DMA1_Channel3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="337"/>
- <func Header="DMA1_Channel6_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="394"/>
- <func Header="DMA1_Channel7_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="405"/>
- <func Header="ADC1_2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="416"/>
- <func Header="USB_HP_CAN_TX_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="428"/>
- <func Header="USB_LP_CAN_RX0_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="440"/>
- <func Header="CAN_RX1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="451"/>
- <func Header="CAN_SCE_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="462"/>
- <func Header="EXTI9_5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="473"/>
- <func Header="TIM1_BRK_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="484"/>
- <func Header="TIM1_UP_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="496"/>
- <func Header="TIM1_TRG_COM_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="508"/>
- <func Header="TIM1_CC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="519"/>
- <func Header="TIM2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="530"/>
- <func Header="TIM3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="541"/>
- <func Header="TIM4_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="552"/>
- <func Header="I2C1_EV_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="563"/>
- <func Header="I2C1_ER_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="574"/>
- <func Header="SPI1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="678"/>
- <func Header="SPI2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="689"/>
- <func Header="USART1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="700"/>
- <func Header="USART2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="711"/>
- <func Header="USART3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="722"/>
- <func Header="EXTI15_10_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="733"/>
- <func Header="RTCAlarm_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="744"/>
- <func Header="USBWakeUp_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="755"/>
- <func Header="TIM8_BRK_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="766"/>
- <func Header="TIM8_UP_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="778"/>
- <func Header="TIM8_TRG_COM_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="790"/>
- <func Header="TIM8_CC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="801"/>
- <func Header="ADC3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="812"/>
- <func Header="FSMC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="823"/>
- <func Header="SDIO_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="834"/>
- <func Header="TIM5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="845"/>
- <func Header="SPI3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="856"/>
- <func Header="UART4_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="867"/>
- <func Header="UART5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="878"/>
- <func Header="TIM6_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="889"/>
- <func Header="TIM7_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="900"/>
- <func Header="DMA2_Channel1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="911"/>
- <func Header="DMA2_Channel2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="922"/>
- <func Header="DMA2_Channel3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="933"/>
- <func Header="DMA2_Channel4_5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="945"/>
- <func Header="I2C2_ER_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="651"/>
- <func Header="I2C2_EV_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="585"/>
- <func Header="DMA1_Channel5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="371"/>
- <func Header="DMA1_Channel4_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="348"/>
- <func Header="WWDG_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="190"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="bool" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="55" Pointer="No"/>
+ <type Header="DMA_Channel_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="248" Pointer="No"/>
+ <type Header="GPIO_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="343" Pointer="No"/>
+ <type Header="I2C_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="373" Pointer="No"/>
+ <type Header="BitAction" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_gpio.h" DeclLine="73" Pointer="No"/>
+ <type Header="TI2Ccommand" Icon="1" Type="type" Desc=": struct TI2CCOMMAND" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="75" Pointer="No"/>
+ <func Header="WWDG_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="189"/>
+ <func Header="PVD_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="204"/>
+ <func Header="TAMPER_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="215"/>
+ <func Header="RTC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="226"/>
+ <func Header="FLASH_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="237"/>
+ <func Header="RCC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="248"/>
+ <func Header="EXTI0_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="259"/>
+ <func Header="EXTI1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="270"/>
+ <func Header="EXTI2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="281"/>
+ <func Header="EXTI3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="292"/>
+ <func Header="EXTI4_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="303"/>
+ <func Header="DMA1_Channel1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="314"/>
+ <func Header="DMA1_Channel2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="325"/>
+ <func Header="DMA1_Channel3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="336"/>
+ <func Header="DMA1_Channel4_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="347"/>
+ <func Header="DMA1_Channel5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="370"/>
+ <func Header="DMA1_Channel6_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="393"/>
+ <func Header="DMA1_Channel7_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="404"/>
+ <func Header="ADC1_2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="415"/>
+ <func Header="EXTI9_5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="472"/>
+ <func Header="TIM1_BRK_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="483"/>
+ <func Header="TIM1_UP_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="495"/>
+ <func Header="TIM1_TRG_COM_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="507"/>
+ <func Header="TIM1_CC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="518"/>
+ <func Header="TIM2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="529"/>
+ <func Header="TIM3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="540"/>
+ <func Header="TIM4_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="551"/>
+ <func Header="I2C1_EV_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="562"/>
+ <func Header="I2C1_ER_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="573"/>
+ <func Header="I2C2_EV_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="584"/>
+ <func Header="I2C2_ER_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="650"/>
+ <func Header="SPI1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="677"/>
+ <func Header="SPI2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="688"/>
+ <func Header="USART1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="699"/>
+ <func Header="USART2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="710"/>
+ <func Header="USART3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="721"/>
+ <func Header="EXTI15_10_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="732"/>
+ <func Header="RTCAlarm_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="743"/>
+ <func Header="USBWakeUp_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="754"/>
+ <func Header="TIM8_BRK_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="765"/>
+ <func Header="TIM8_UP_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="777"/>
+ <func Header="TIM8_TRG_COM_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="789"/>
+ <func Header="TIM8_CC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="800"/>
+ <func Header="ADC3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="811"/>
+ <func Header="FSMC_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="822"/>
+ <func Header="SDIO_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="833"/>
+ <func Header="TIM5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="844"/>
+ <func Header="SPI3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="855"/>
+ <func Header="UART4_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="866"/>
+ <func Header="UART5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="877"/>
+ <func Header="TIM6_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="888"/>
+ <func Header="TIM7_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="899"/>
+ <func Header="DMA2_Channel1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="910"/>
+ <func Header="DMA2_Channel2_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="921"/>
+ <func Header="DMA2_Channel3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="932"/>
+ <func Header="DMA2_Channel4_5_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="944"/>
  <variable Header="RxCounter" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="52" Pointer="No"/>
  <variable Header="CurrDataCounterEnd" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="C:\cortex\gateway\src\stm32f10x_it.c" DeclLine="53" Pointer="No"/>
- <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
- <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="65" Pointer="No"/>
- <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
- <type Header="bool" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="80" Pointer="No"/>
- <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="84" Pointer="No"/>
- <type Header="ErrorStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="87" Pointer="No"/>
- <type Header="I2C_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_i2c.h" DeclLine="59" Pointer="No"/>
- <type Header="GPIOSpeed_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_gpio.h" DeclLine="64" Pointer="No"/>
- <type Header="GPIOMode_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_gpio.h" DeclLine="79" Pointer="No"/>
- <type Header="GPIO_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_gpio.h" DeclLine="92" Pointer="No"/>
- <type Header="NVIC_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_nvic.h" DeclLine="57" Pointer="No"/>
- <type Header="USART_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_usart.h" DeclLine="59" Pointer="No"/>
- <type Header="DMA_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_dma.h" DeclLine="64" Pointer="No"/>
- <type Header="TestStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="56" Pointer="No"/>
- <type Header="TBKPData" Icon="1" Type="type" Desc=": struct TBKPData" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="60" Pointer="No"/>
- <type Header="TMessage" Icon="1" Type="type" Desc=": struct TMESSAGE" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="64" Pointer="No"/>
- <type Header="TI2Ccommand" Icon="1" Type="type" Desc=": struct TI2CCOMMAND" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="73" Pointer="No"/>
- <func Header="__io_putchar" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="458"/>
- <func Header="DMA_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="388"/>
- <func Header="NVIC_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="326"/>
- <func Header="GPIO_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="276"/>
- <func Header="RCC_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="215"/>
- <func Header="USART_Init1" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="189"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="bool" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="55" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="ErrorStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="62" Pointer="No"/>
+ <type Header="DMA_Channel_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="248" Pointer="No"/>
+ <type Header="GPIO_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="343" Pointer="No"/>
+ <type Header="I2C_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="373" Pointer="No"/>
+ <type Header="USART_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="584" Pointer="No"/>
+ <type Header="DMA_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_dma.h" DeclLine="39" Pointer="No"/>
+ <type Header="GPIOSpeed_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_gpio.h" DeclLine="39" Pointer="No"/>
+ <type Header="GPIOMode_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_gpio.h" DeclLine="54" Pointer="No"/>
+ <type Header="GPIO_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_gpio.h" DeclLine="67" Pointer="No"/>
+ <type Header="BitAction" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_gpio.h" DeclLine="73" Pointer="No"/>
+ <type Header="I2C_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_i2c.h" DeclLine="34" Pointer="No"/>
+ <type Header="NVIC_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_nvic.h" DeclLine="32" Pointer="No"/>
+ <type Header="USART_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_usart.h" DeclLine="34" Pointer="No"/>
+ <type Header="TestStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="58" Pointer="No"/>
+ <type Header="TBKPData" Icon="1" Type="type" Desc=": struct TBKPData" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="62" Pointer="No"/>
+ <type Header="TMessage" Icon="1" Type="type" Desc=": struct TMESSAGE" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="66" Pointer="No"/>
+ <type Header="TI2Ccommand" Icon="1" Type="type" Desc=": struct TI2CCOMMAND" DeclFile="C:\cortex\gateway\include\main.h" DeclLine="75" Pointer="No"/>
  <func Header="I2C_Initialize" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="155"/>
- <func Header="main" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="79"/>
+ <func Header="USART_Init1" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="189"/>
+ <func Header="RCC_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="214"/>
+ <func Header="GPIO_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="275"/>
+ <func Header="NVIC_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="325"/>
+ <func Header="DMA_Configuration" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="387"/>
+ <func Header="main" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="78"/>
+ <func Header="__io_putchar" Icon="3" Type="func" Desc=":   long" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="457"/>
  <variable Header="Commands" Icon="2" Type="variable" Desc=":   struct TMESSAGE[8]" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="33" Pointer="No"/>
  <variable Header="Command" Icon="2" Type="variable" Desc=":   struct TI2CCOMMAND" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="35" Pointer="No"/>
  <variable Header="ExternData" Icon="2" Type="variable" Desc=":   struct TBKPData" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="37" Pointer="No"/>
@@ -122,67 +118,248 @@
  <variable Header="TransferStatus1" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="54" Pointer="No"/>
  <variable Header="TransferStatus2" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="54" Pointer="No"/>
  <variable Header="HSEStartUpStatus" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\main.c" DeclLine="55" Pointer="No"/>
- <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
- <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
- <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="82" Pointer="No"/>
- <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="82" Pointer="No"/>
- <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="84" Pointer="No"/>
- <type Header="ErrorStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="87" Pointer="No"/>
- <type Header="RCC_ClocksTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_rcc.h" DeclLine="57" Pointer="No"/>
- <func Header="RCC_HSEConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="160"/>
- <func Header="RCC_PLLConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="288"/>
- <func Header="RCC_PLLCmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="317"/>
- <func Header="RCC_SYSCLKConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="336"/>
- <func Header="RCC_GetSYSCLKSource" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="366"/>
- <func Header="RCC_HCLKConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="389"/>
- <func Header="RCC_PCLK1Config" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="422"/>
- <func Header="RCC_PCLK2Config" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="455"/>
- <func Header="RCC_GetClocksFreq" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="669"/>
- <func Header="RCC_AHBPeriphClockCmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="769"/>
- <func Header="RCC_APB2PeriphClockCmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="802"/>
- <func Header="RCC_APB1PeriphClockCmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="836"/>
- <func Header="RCC_GetFlagStatus" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="990"/>
- <func Header="RCC_WaitForHSEStartUp" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="199"/>
- <variable Header="APBAHBPrescTable" Icon="2" Type="variable" Desc=":   unsigned char[16]" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="111" Pointer="No"/>
- <variable Header="ADCPrescTable" Icon="2" Type="variable" Desc=":   unsigned char[4]" DeclFile="C:\cortex\gateway\src\stm32f10x_rcc.c" DeclLine="112" Pointer="No"/>
- <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
- <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="65" Pointer="No"/>
- <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
- <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="82" Pointer="No"/>
- <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="82" Pointer="No"/>
- <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="84" Pointer="No"/>
- <type Header="USART_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_map.h" DeclLine="609" Pointer="No"/>
- <type Header="USART_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_usart.h" DeclLine="59" Pointer="No"/>
- <type Header="USART_ClockInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_usart.h" DeclLine="68" Pointer="No"/>
- <type Header="RCC_ClocksTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_rcc.h" DeclLine="57" Pointer="No"/>
- <func Header="USART_Cmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_usart.c" DeclLine="312"/>
- <func Header="USART_DMACmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_usart.c" DeclLine="414"/>
- <func Header="USART_SendData" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_usart.c" DeclLine="572"/>
- <func Header="USART_GetFlagStatus" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\stm32f10x_usart.c" DeclLine="822"/>
- <func Header="USART_Init" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_usart.c" DeclLine="141"/>
- <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="64" Pointer="No"/>
- <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="65" Pointer="No"/>
- <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="66" Pointer="No"/>
- <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="82" Pointer="No"/>
- <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="82" Pointer="No"/>
- <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="84" Pointer="No"/>
- <type Header="ErrorStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_type.h" DeclLine="87" Pointer="No"/>
- <type Header="I2C_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_map.h" DeclLine="398" Pointer="No"/>
- <type Header="I2C_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_i2c.h" DeclLine="59" Pointer="No"/>
- <type Header="RCC_ClocksTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\Program Files\Raisonance\Ride\Lib\ARM\include\stm32f10x_rcc.h" DeclLine="57" Pointer="No"/>
- <func Header="I2C_Cmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="292"/>
- <func Header="I2C_GenerateSTART" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="373"/>
- <func Header="I2C_GenerateSTOP" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="400"/>
- <func Header="I2C_AcknowledgeConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="427"/>
- <func Header="I2C_ITConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="539"/>
- <func Header="I2C_SendData" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="566"/>
- <func Header="I2C_ReceiveData" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="582"/>
- <func Header="I2C_Send7bitAddress" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="604"/>
- <func Header="I2C_StretchClockCmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="846"/>
- <func Header="I2C_GetLastEvent" Icon="3" Type="func" Desc=":   unsigned long" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="900"/>
- <func Header="I2C_ClearFlag" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="1093"/>
- <func Header="I2C_GetITStatus" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="1132"/>
- <func Header="I2C_ClearITPendingBit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="1202"/>
- <func Header="I2C_Init" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\src\stm32f10x_i2c.c" DeclLine="150"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="vu32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="47" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="ADC_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="58" Pointer="No"/>
+ <type Header="ADC_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_adc.h" DeclLine="34" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="vu32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="47" Pointer="No"/>
+ <type Header="vu16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="48" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="BKP_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="154" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="CAN_TxMailBox_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="163" Pointer="No"/>
+ <type Header="CAN_FIFOMailBox_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="171" Pointer="No"/>
+ <type Header="CAN_FilterRegister_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="177" Pointer="No"/>
+ <type Header="CAN_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="203" Pointer="No"/>
+ <type Header="CAN_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_can.h" DeclLine="39" Pointer="No"/>
+ <type Header="CAN_FilterInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_can.h" DeclLine="53" Pointer="No"/>
+ <type Header="CanTxMsg" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_can.h" DeclLine="64" Pointer="No"/>
+ <type Header="CanRxMsg" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_can.h" DeclLine="76" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="CRC_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="213" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="vu32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="47" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="DAC_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="232" Pointer="No"/>
+ <type Header="DAC_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_dac.h" DeclLine="32" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="DBGMCU_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="239" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="DMA_Channel_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="248" Pointer="No"/>
+ <type Header="DMA_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="254" Pointer="No"/>
+ <type Header="DMA_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_dma.h" DeclLine="39" Pointer="No"/>
+ <func Header="DMA_DeInit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" DeclLine="63"/>
+ <func Header="DMA_Init" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" DeclLine="163"/>
+ <func Header="DMA_Cmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" DeclLine="269"/>
+ <func Header="DMA_ITConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" DeclLine="304"/>
+ <func Header="DMA_GetITStatus" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" DeclLine="567"/>
+ <func Header="DMA_ClearITPendingBit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" DeclLine="659"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="vu32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="47" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="EXTI_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="265" Pointer="No"/>
+ <type Header="EXTIMode_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_exti.h" DeclLine="30" Pointer="No"/>
+ <type Header="EXTITrigger_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_exti.h" DeclLine="40" Pointer="No"/>
+ <type Header="EXTI_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_exti.h" DeclLine="53" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="FLASH_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="279" Pointer="No"/>
+ <func Header="FLASH_SetLatency" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_flash.c" DeclLine="86"/>
+ <func Header="FLASH_PrefetchBufferCmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_flash.c" DeclLine="126"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="FSMC_Bank1_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="297" Pointer="No"/>
+ <type Header="FSMC_Bank1E_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="302" Pointer="No"/>
+ <type Header="FSMC_Bank2_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="312" Pointer="No"/>
+ <type Header="FSMC_Bank3_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="322" Pointer="No"/>
+ <type Header="FSMC_Bank4_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="331" Pointer="No"/>
+ <type Header="FSMC_NORSRAMTimingInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_fsmc.h" DeclLine="35" Pointer="No"/>
+ <type Header="FSMC_NORSRAMInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_fsmc.h" DeclLine="56" Pointer="No"/>
+ <type Header="FSMC_NAND_PCCARDTimingInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_fsmc.h" DeclLine="65" Pointer="No"/>
+ <type Header="FSMC_NANDInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_fsmc.h" DeclLine="82" Pointer="No"/>
+ <type Header="FSMC_PCCARDInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_fsmc.h" DeclLine="97" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="vu32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="47" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="GPIO_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="343" Pointer="No"/>
+ <type Header="AFIO_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="350" Pointer="No"/>
+ <type Header="GPIOSpeed_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_gpio.h" DeclLine="39" Pointer="No"/>
+ <type Header="GPIOMode_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_gpio.h" DeclLine="54" Pointer="No"/>
+ <type Header="GPIO_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_gpio.h" DeclLine="67" Pointer="No"/>
+ <type Header="BitAction" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_gpio.h" DeclLine="73" Pointer="No"/>
+ <func Header="GPIO_Init" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" DeclLine="124"/>
+ <func Header="GPIO_ReadOutputDataBit" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" DeclLine="289"/>
+ <func Header="GPIO_WriteBit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" DeclLine="374"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="vu32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="47" Pointer="No"/>
+ <type Header="vu16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="48" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="ErrorStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="62" Pointer="No"/>
+ <type Header="I2C_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="373" Pointer="No"/>
+ <type Header="I2C_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_i2c.h" DeclLine="34" Pointer="No"/>
+ <type Header="RCC_ClocksTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_rcc.h" DeclLine="32" Pointer="No"/>
+ <func Header="I2C_Init" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="149"/>
+ <func Header="I2C_Cmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="291"/>
+ <func Header="I2C_GenerateSTART" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="372"/>
+ <func Header="I2C_GenerateSTOP" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="399"/>
+ <func Header="I2C_AcknowledgeConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="426"/>
+ <func Header="I2C_ITConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="538"/>
+ <func Header="I2C_SendData" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="565"/>
+ <func Header="I2C_ReceiveData" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="581"/>
+ <func Header="I2C_Send7bitAddress" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="603"/>
+ <func Header="I2C_StretchClockCmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="845"/>
+ <func Header="I2C_GetLastEvent" Icon="3" Type="func" Desc=":   unsigned long" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="899"/>
+ <func Header="I2C_ClearFlag" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="1092"/>
+ <func Header="I2C_GetITStatus" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="1131"/>
+ <func Header="I2C_ClearITPendingBit" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" DeclLine="1201"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="IWDG_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="382" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="vu32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="47" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="NVIC_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="398" Pointer="No"/>
+ <type Header="SCB_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="416" Pointer="No"/>
+ <type Header="NVIC_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_nvic.h" DeclLine="32" Pointer="No"/>
+ <func Header="NVIC_PriorityGroupConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" DeclLine="97"/>
+ <func Header="NVIC_Init" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" DeclLine="116"/>
+ <func Header="NVIC_SetVectorTable" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" DeclLine="393"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="vu32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="47" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="PWR_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="423" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="vu32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="47" Pointer="No"/>
+ <type Header="vu8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="49" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="ErrorStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="62" Pointer="No"/>
+ <type Header="RCC_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="438" Pointer="No"/>
+ <type Header="RCC_ClocksTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_rcc.h" DeclLine="32" Pointer="No"/>
+ <func Header="RCC_HSEConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="159"/>
+ <func Header="RCC_PLLConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="287"/>
+ <func Header="RCC_PLLCmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="316"/>
+ <func Header="RCC_SYSCLKConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="335"/>
+ <func Header="RCC_GetSYSCLKSource" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="365"/>
+ <func Header="RCC_HCLKConfig" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="388"/>
+ <func Header="RCC_PCLK1Config" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="421"/>
+ <func Header="RCC_PCLK2Config" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="454"/>
+ <func Header="RCC_GetClocksFreq" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="668"/>
+ <func Header="RCC_AHBPeriphClockCmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="768"/>
+ <func Header="RCC_APB2PeriphClockCmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="801"/>
+ <func Header="RCC_APB1PeriphClockCmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="835"/>
+ <func Header="RCC_GetFlagStatus" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="989"/>
+ <func Header="RCC_WaitForHSEStartUp" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="198"/>
+ <variable Header="APBAHBPrescTable" Icon="2" Type="variable" Desc=":   unsigned char[16]" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="111" Pointer="No"/>
+ <variable Header="ADCPrescTable" Icon="2" Type="variable" Desc=":   unsigned char[4]" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" DeclLine="112" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="RTC_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="463" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="vu32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="47" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="SDIO_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="488" Pointer="No"/>
+ <type Header="SDIO_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_sdio.h" DeclLine="33" Pointer="No"/>
+ <type Header="SDIO_CmdInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_sdio.h" DeclLine="42" Pointer="No"/>
+ <type Header="SDIO_DataInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_sdio.h" DeclLine="52" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="SPI_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="511" Pointer="No"/>
+ <type Header="SPI_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_spi.h" DeclLine="37" Pointer="No"/>
+ <type Header="I2S_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_spi.h" DeclLine="48" Pointer="No"/>
+ <type Header="RCC_ClocksTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_rcc.h" DeclLine="32" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="SysTick_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="520" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="vu32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="47" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="TIM_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="565" Pointer="No"/>
+ <type Header="TIM_TimeBaseInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_tim.h" DeclLine="34" Pointer="No"/>
+ <type Header="TIM_OCInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_tim.h" DeclLine="47" Pointer="No"/>
+ <type Header="TIM_ICInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_tim.h" DeclLine="57" Pointer="No"/>
+ <type Header="TIM_BDTRInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_tim.h" DeclLine="69" Pointer="No"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u16" Icon="1" Type="type" Desc=": unsigned int" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="40" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="vu32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="47" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="59" Pointer="No"/>
+ <type Header="USART_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="584" Pointer="No"/>
+ <type Header="USART_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_usart.h" DeclLine="34" Pointer="No"/>
+ <type Header="USART_ClockInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_usart.h" DeclLine="43" Pointer="No"/>
+ <type Header="RCC_ClocksTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_rcc.h" DeclLine="32" Pointer="No"/>
+ <func Header="USART_Init" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" DeclLine="140"/>
+ <func Header="USART_Cmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" DeclLine="311"/>
+ <func Header="USART_DMACmd" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" DeclLine="413"/>
+ <func Header="USART_SendData" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" DeclLine="571"/>
+ <func Header="USART_GetFlagStatus" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" DeclLine="821"/>
+ <type Header="u32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="39" Pointer="No"/>
+ <type Header="u8" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="41" Pointer="No"/>
+ <type Header="vu32" Icon="1" Type="type" Desc=": unsigned long" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="47" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_type.h" DeclLine="57" Pointer="No"/>
+ <type Header="WWDG_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" DeclLine="592" Pointer="No"/>
+ <func Header="WWDG_SetCounter" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_wwdg.c" DeclLine="134"/>
+ <func Header="WWDG_ClearFlag" Icon="3" Type="func" Desc=":   void" DeclFile="C:\cortex\gateway\stlibrary\src\stm32f10x_wwdg.c" DeclLine="180"/>
 </aoffile>
 

@@ -2,673 +2,1775 @@
 <aoffile Filename="gateway" dwarf="1">
  <modulelist>
   <module Name="C:\cortex\gateway\src\stm32f10x_it.c" >
-   <type Family="Base" Name="long int" ID="37"/>
-   <type Family="Base" Name="short int" ID="44"/>
-   <type Family="Base" Name="signed char" ID="51"/>
-   <type Family="Base" Name="long unsigned int" ID="69"/>
-   <type Family="typedef" Name="u32" Line="64" ID="58" toTI="69"/>
-   <type Family="Base" Name="short unsigned int" ID="87"/>
-   <type Family="typedef" Name="u16" Line="65" ID="76" toTI="87"/>
-   <type Family="Base" Name="unsigned char" ID="104"/>
-   <type Family="typedef" Name="u8" Line="66" ID="94" toTI="104"/>
-   <type Family="typedef" Name="bool" Line="80" ID="142" toTI="121"/>
-   <type Family="ComponentList" Line="268" ID="198">
-    <Component Name="CCR" TI="207" Line="269" Offs="0"/>
-    <Component Name="CNDTR" TI="222" Line="270" Offs="4"/>
-    <Component Name="CPAR" TI="237" Line="271" Offs="8"/>
-    <Component Name="CMAR" TI="252" Line="272" Offs="12"/>
+   <type Family="Base" Name="long int" ID="41"/>
+   <type Family="Base" Name="short int" ID="48"/>
+   <type Family="Base" Name="signed char" ID="55"/>
+   <type Family="Base" Name="long unsigned int" ID="73"/>
+   <type Family="typedef" Name="u32" Line="39" ID="62" toTI="73"/>
+   <type Family="Base" Name="short unsigned int" ID="91"/>
+   <type Family="typedef" Name="u16" Line="40" ID="80" toTI="91"/>
+   <type Family="Base" Name="unsigned char" ID="108"/>
+   <type Family="typedef" Name="u8" Line="41" ID="98" toTI="108"/>
+   <type Family="typedef" Name="bool" Line="55" ID="146" toTI="125"/>
+   <type Family="Base" Name="unsigned int" ID="199"/>
+   <type Family="ComponentList" Line="242" ID="206">
+    <Component Name="CCR" TI="214" Line="244" Offs="0"/>
+    <Component Name="CNDTR" TI="228" Line="245" Offs="4"/>
+    <Component Name="CPAR" TI="242" Line="246" Offs="8"/>
+    <Component Name="CMAR" TI="256" Line="247" Offs="12"/>
    </type>
-   <type Family="ComponentList" Line="360" ID="268">
-    <Component Name="CRL" TI="277" Line="361" Offs="0"/>
-    <Component Name="CRH" TI="292" Line="362" Offs="4"/>
-    <Component Name="IDR" TI="307" Line="363" Offs="8"/>
-    <Component Name="ODR" TI="322" Line="364" Offs="12"/>
-    <Component Name="BSRR" TI="337" Line="365" Offs="16"/>
-    <Component Name="BRR" TI="352" Line="366" Offs="20"/>
-    <Component Name="LCKR" TI="367" Line="367" Offs="24"/>
+   <type Family="typedef" Name="DMA_Channel_TypeDef" Line="248" ID="271" toTI="206"/>
+   <type Family="ComponentList" Line="334" ID="282">
+    <Component Name="CRL" TI="291" Line="336" Offs="0"/>
+    <Component Name="CRH" TI="306" Line="337" Offs="4"/>
+    <Component Name="IDR" TI="321" Line="338" Offs="8"/>
+    <Component Name="ODR" TI="336" Line="339" Offs="12"/>
+    <Component Name="BSRR" TI="351" Line="340" Offs="16"/>
+    <Component Name="BRR" TI="366" Line="341" Offs="20"/>
+    <Component Name="LCKR" TI="381" Line="342" Offs="24"/>
    </type>
-   <type Family="ComponentList" Line="379" ID="383">
-    <Component Name="CR1" TI="392" Line="380" Offs="0"/>
-    <Component Name="RESERVED0" TI="407" Line="381" Offs="2"/>
-    <Component Name="CR2" TI="422" Line="382" Offs="4"/>
-    <Component Name="RESERVED1" TI="437" Line="383" Offs="6"/>
-    <Component Name="OAR1" TI="452" Line="384" Offs="8"/>
-    <Component Name="RESERVED2" TI="467" Line="385" Offs="10"/>
-    <Component Name="OAR2" TI="482" Line="386" Offs="12"/>
-    <Component Name="RESERVED3" TI="497" Line="387" Offs="14"/>
-    <Component Name="DR" TI="512" Line="388" Offs="16"/>
-    <Component Name="RESERVED4" TI="526" Line="389" Offs="18"/>
-    <Component Name="SR1" TI="541" Line="390" Offs="20"/>
-    <Component Name="RESERVED5" TI="556" Line="391" Offs="22"/>
-    <Component Name="SR2" TI="571" Line="392" Offs="24"/>
-    <Component Name="RESERVED6" TI="586" Line="393" Offs="26"/>
-    <Component Name="CCR" TI="601" Line="394" Offs="28"/>
-    <Component Name="RESERVED7" TI="616" Line="395" Offs="30"/>
-    <Component Name="TRISE" TI="631" Line="396" Offs="32"/>
-    <Component Name="RESERVED8" TI="646" Line="397" Offs="34"/>
+   <type Family="typedef" Name="GPIO_TypeDef" Line="343" ID="397" toTI="282"/>
+   <type Family="ComponentList" Line="353" ID="409">
+    <Component Name="CR1" TI="418" Line="355" Offs="0"/>
+    <Component Name="RESERVED0" TI="433" Line="356" Offs="2"/>
+    <Component Name="CR2" TI="448" Line="357" Offs="4"/>
+    <Component Name="RESERVED1" TI="463" Line="358" Offs="6"/>
+    <Component Name="OAR1" TI="478" Line="359" Offs="8"/>
+    <Component Name="RESERVED2" TI="493" Line="360" Offs="10"/>
+    <Component Name="OAR2" TI="508" Line="361" Offs="12"/>
+    <Component Name="RESERVED3" TI="523" Line="362" Offs="14"/>
+    <Component Name="DR" TI="538" Line="363" Offs="16"/>
+    <Component Name="RESERVED4" TI="552" Line="364" Offs="18"/>
+    <Component Name="SR1" TI="567" Line="365" Offs="20"/>
+    <Component Name="RESERVED5" TI="582" Line="366" Offs="22"/>
+    <Component Name="SR2" TI="597" Line="367" Offs="24"/>
+    <Component Name="RESERVED6" TI="612" Line="368" Offs="26"/>
+    <Component Name="CCR" TI="627" Line="369" Offs="28"/>
+    <Component Name="RESERVED7" TI="642" Line="370" Offs="30"/>
+    <Component Name="TRISE" TI="657" Line="371" Offs="32"/>
+    <Component Name="RESERVED8" TI="672" Line="372" Offs="34"/>
    </type>
-   <type Family="Base" Name="unsigned int" ID="683"/>
-   <type Family="Base" Name="int" ID="690"/>
-   <type Family="Base" Name="long long int" ID="697"/>
-   <type Family="Base" Name="long long unsigned int" ID="704"/>
-   <type Family="Base" Name="char" ID="711"/>
-   <type Family="ComponentList" Name="TI2CCOMMAND" Line="66" ID="718">
-    <Component Name="command" TI="730" Line="67" Offs="0"/>
-    <Component Name="address" TI="744" Line="68" Offs="1"/>
-    <Component Name="len_control" TI="758" Line="69" Offs="2"/>
-   <type Family="Pointer" TI="815" toTI="94"/>
-    <Component Name="control" TI="772" Line="70" Offs="4"/>
-    <Component Name="len_data" TI="786" Line="71" Offs="8"/>
-    <Component Name="data" TI="800" Line="72" Offs="12"/>
+   <type Family="typedef" Name="I2C_TypeDef" Line="373" ID="688" toTI="409"/>
+   <type Family="typedef" Name="BitAction" Line="73" ID="721" toTI="700"/>
+   <type Family="Base" Name="int" ID="732"/>
+   <type Family="Base" Name="long long int" ID="739"/>
+   <type Family="Base" Name="long long unsigned int" ID="746"/>
+   <type Family="Base" Name="char" ID="753"/>
+   <type Family="ComponentList" Name="TI2CCOMMAND" Line="68" ID="760">
+    <Component Name="command" TI="772" Line="69" Offs="0"/>
+    <Component Name="address" TI="786" Line="70" Offs="1"/>
+    <Component Name="len_control" TI="800" Line="71" Offs="2"/>
+   <type Family="Pointer" TI="857" toTI="98"/>
+    <Component Name="control" TI="814" Line="72" Offs="4"/>
+    <Component Name="len_data" TI="828" Line="73" Offs="8"/>
+    <Component Name="data" TI="842" Line="74" Offs="12"/>
    </type>
-   <type Family="typedef" Name="TI2Ccommand" Line="73" ID="821" toTI="718"/>
-   <function Name="NMIException" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="75">
+   <type Family="typedef" Name="TI2Ccommand" Line="75" ID="863" toTI="760"/>
+   <function Name="WWDG_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="189">
    </function >
-   <function Name="HardFaultException" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="86">
+   <function Name="PVD_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="204">
    </function >
-   <function Name="MemManageException" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="101">
+   <function Name="TAMPER_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="215">
    </function >
-   <function Name="BusFaultException" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="116">
+   <function Name="RTC_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="226">
    </function >
-   <function Name="UsageFaultException" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="131">
+   <function Name="FLASH_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="237">
    </function >
-   <function Name="DebugMonitor" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="146">
+   <function Name="RCC_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="248">
    </function >
-   <function Name="SVCHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="157">
+   <function Name="EXTI0_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="259">
    </function >
-   <function Name="PendSVC" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="168">
+   <function Name="EXTI1_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="270">
    </function >
-   <function Name="SysTickHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="179">
+   <function Name="EXTI2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="281">
    </function >
-   <function Name="PVD_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="205">
+   <function Name="EXTI3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="292">
    </function >
-   <function Name="TAMPER_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="216">
+   <function Name="EXTI4_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="303">
    </function >
-   <function Name="RTC_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="227">
+   <function Name="DMA1_Channel1_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="314">
    </function >
-   <function Name="FLASH_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="238">
+   <function Name="DMA1_Channel2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="325">
    </function >
-   <function Name="RCC_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="249">
+   <function Name="DMA1_Channel3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="336">
    </function >
-   <function Name="EXTI0_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="260">
+   <function Name="DMA1_Channel4_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="347">
    </function >
-   <function Name="EXTI1_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="271">
+   <function Name="DMA1_Channel5_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="370">
    </function >
-   <function Name="EXTI2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="282">
+   <function Name="DMA1_Channel6_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="393">
    </function >
-   <function Name="EXTI3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="293">
+   <function Name="DMA1_Channel7_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="404">
    </function >
-   <function Name="EXTI4_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="304">
+   <function Name="ADC1_2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="415">
    </function >
-   <function Name="DMA1_Channel1_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="315">
+   <function Name="EXTI9_5_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="472">
    </function >
-   <function Name="DMA1_Channel2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="326">
+   <function Name="TIM1_BRK_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="483">
    </function >
-   <function Name="DMA1_Channel3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="337">
+   <function Name="TIM1_UP_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="495">
    </function >
-   <function Name="DMA1_Channel6_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="394">
+   <function Name="TIM1_TRG_COM_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="507">
    </function >
-   <function Name="DMA1_Channel7_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="405">
+   <function Name="TIM1_CC_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="518">
    </function >
-   <function Name="ADC1_2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="416">
+   <function Name="TIM2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="529">
    </function >
-   <function Name="USB_HP_CAN_TX_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="428">
+   <function Name="TIM3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="540">
    </function >
-   <function Name="USB_LP_CAN_RX0_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="440">
+   <function Name="TIM4_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="551">
    </function >
-   <function Name="CAN_RX1_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="451">
+   <function Name="I2C1_EV_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="562">
    </function >
-   <function Name="CAN_SCE_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="462">
+   <function Name="I2C1_ER_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="573">
    </function >
-   <function Name="EXTI9_5_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="473">
+   <function Name="I2C2_EV_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="584">
+    <variable Name="evt" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="586" Addr="0x200000F4" TI="62"/>
    </function >
-   <function Name="TIM1_BRK_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="484">
+   <function Name="I2C2_ER_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="650">
    </function >
-   <function Name="TIM1_UP_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="496">
+   <function Name="SPI1_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="677">
    </function >
-   <function Name="TIM1_TRG_COM_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="508">
+   <function Name="SPI2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="688">
    </function >
-   <function Name="TIM1_CC_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="519">
+   <function Name="USART1_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="699">
    </function >
-   <function Name="TIM2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="530">
+   <function Name="USART2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="710">
    </function >
-   <function Name="TIM3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="541">
+   <function Name="USART3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="721">
    </function >
-   <function Name="TIM4_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="552">
+   <function Name="EXTI15_10_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="732">
    </function >
-   <function Name="I2C1_EV_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="563">
+   <function Name="RTCAlarm_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="743">
    </function >
-   <function Name="I2C1_ER_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="574">
+   <function Name="USBWakeUp_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="754">
    </function >
-   <function Name="SPI1_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="678">
+   <function Name="TIM8_BRK_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="765">
    </function >
-   <function Name="SPI2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="689">
+   <function Name="TIM8_UP_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="777">
    </function >
-   <function Name="USART1_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="700">
+   <function Name="TIM8_TRG_COM_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="789">
    </function >
-   <function Name="USART2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="711">
+   <function Name="TIM8_CC_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="800">
    </function >
-   <function Name="USART3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="722">
+   <function Name="ADC3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="811">
    </function >
-   <function Name="EXTI15_10_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="733">
+   <function Name="FSMC_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="822">
    </function >
-   <function Name="RTCAlarm_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="744">
+   <function Name="SDIO_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="833">
    </function >
-   <function Name="USBWakeUp_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="755">
+   <function Name="TIM5_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="844">
    </function >
-   <function Name="TIM8_BRK_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="766">
+   <function Name="SPI3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="855">
    </function >
-   <function Name="TIM8_UP_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="778">
+   <function Name="UART4_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="866">
    </function >
-   <function Name="TIM8_TRG_COM_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="790">
+   <function Name="UART5_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="877">
    </function >
-   <function Name="TIM8_CC_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="801">
+   <function Name="TIM6_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="888">
    </function >
-   <function Name="ADC3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="812">
+   <function Name="TIM7_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="899">
    </function >
-   <function Name="FSMC_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="823">
+   <function Name="DMA2_Channel1_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="910">
    </function >
-   <function Name="SDIO_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="834">
+   <function Name="DMA2_Channel2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="921">
    </function >
-   <function Name="TIM5_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="845">
+   <function Name="DMA2_Channel3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="932">
    </function >
-   <function Name="SPI3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="856">
+   <function Name="DMA2_Channel4_5_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="944">
    </function >
-   <function Name="UART4_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="867">
-   </function >
-   <function Name="UART5_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="878">
-   </function >
-   <function Name="TIM6_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="889">
-   </function >
-   <function Name="TIM7_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="900">
-   </function >
-   <function Name="DMA2_Channel1_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="911">
-   </function >
-   <function Name="DMA2_Channel2_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="922">
-   </function >
-   <function Name="DMA2_Channel3_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="933">
-   </function >
-   <function Name="DMA2_Channel4_5_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="945">
-   </function >
-   <function Name="I2C2_ER_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="651">
-   </function >
-   <function Name="I2C2_EV_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="585">
-    <variable Name="evt" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="586" Addr="0x200000F4" TI="58"/>
-   </function >
-   <function Name="DMA1_Channel5_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="371">
-   </function >
-   <function Name="DMA1_Channel4_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="348">
-   </function >
-   <function Name="WWDG_IRQHandler" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="190">
-   </function >
-   <variable Name="RxCounter" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="52" Addr="0x200000F8" TI="94"/>
-   <variable Name="CurrDataCounterEnd" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="53" Addr="0x0" TI="116"/>
+   <variable Name="RxCounter" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="52" Addr="0x200000F8" TI="98"/>
+   <variable Name="CurrDataCounterEnd" FileName="C:\cortex\gateway\src\stm32f10x_it.c" Line="53" Addr="0x0" TI="120"/>
   </module>
   <module Name="C:\cortex\gateway\src\main.c" >
-   <type Family="Base" Name="long int" ID="2400"/>
-   <type Family="Base" Name="short int" ID="2407"/>
-   <type Family="Base" Name="signed char" ID="2414"/>
-   <type Family="Base" Name="long unsigned int" ID="2432"/>
-   <type Family="typedef" Name="u32" Line="64" ID="2421" toTI="2432"/>
-   <type Family="Base" Name="short unsigned int" ID="2450"/>
-   <type Family="typedef" Name="u16" Line="65" ID="2439" toTI="2450"/>
-   <type Family="Base" Name="unsigned char" ID="2467"/>
-   <type Family="typedef" Name="u8" Line="66" ID="2457" toTI="2467"/>
-   <type Family="typedef" Name="bool" Line="80" ID="2505" toTI="2484"/>
-   <type Family="typedef" Name="FunctionalState" Line="84" ID="2558" toTI="2537"/>
-   <type Family="typedef" Name="ErrorStatus" Line="87" ID="2590" toTI="2569"/>
-   <type Family="ComponentList" Line="268" ID="2604">
-    <Component Name="CCR" TI="2613" Line="269" Offs="0"/>
-    <Component Name="CNDTR" TI="2628" Line="270" Offs="4"/>
-    <Component Name="CPAR" TI="2643" Line="271" Offs="8"/>
-    <Component Name="CMAR" TI="2658" Line="272" Offs="12"/>
+   <type Family="Base" Name="long int" ID="2601"/>
+   <type Family="Base" Name="short int" ID="2608"/>
+   <type Family="Base" Name="signed char" ID="2615"/>
+   <type Family="Base" Name="long unsigned int" ID="2633"/>
+   <type Family="typedef" Name="u32" Line="39" ID="2622" toTI="2633"/>
+   <type Family="Base" Name="short unsigned int" ID="2651"/>
+   <type Family="typedef" Name="u16" Line="40" ID="2640" toTI="2651"/>
+   <type Family="Base" Name="unsigned char" ID="2668"/>
+   <type Family="typedef" Name="u8" Line="41" ID="2658" toTI="2668"/>
+   <type Family="typedef" Name="bool" Line="55" ID="2706" toTI="2685"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="2759" toTI="2738"/>
+   <type Family="typedef" Name="ErrorStatus" Line="62" ID="2791" toTI="2770"/>
+   <type Family="Base" Name="unsigned int" ID="2802"/>
+   <type Family="ComponentList" Line="242" ID="2809">
+    <Component Name="CCR" TI="2817" Line="244" Offs="0"/>
+    <Component Name="CNDTR" TI="2831" Line="245" Offs="4"/>
+    <Component Name="CPAR" TI="2845" Line="246" Offs="8"/>
+    <Component Name="CMAR" TI="2859" Line="247" Offs="12"/>
    </type>
-   <type Family="ComponentList" Line="360" ID="2674">
-    <Component Name="CRL" TI="2683" Line="361" Offs="0"/>
-    <Component Name="CRH" TI="2698" Line="362" Offs="4"/>
-    <Component Name="IDR" TI="2713" Line="363" Offs="8"/>
-    <Component Name="ODR" TI="2728" Line="364" Offs="12"/>
-    <Component Name="BSRR" TI="2743" Line="365" Offs="16"/>
-    <Component Name="BRR" TI="2758" Line="366" Offs="20"/>
-    <Component Name="LCKR" TI="2773" Line="367" Offs="24"/>
+   <type Family="typedef" Name="DMA_Channel_TypeDef" Line="248" ID="2874" toTI="2809"/>
+   <type Family="ComponentList" Line="334" ID="2885">
+    <Component Name="CRL" TI="2894" Line="336" Offs="0"/>
+    <Component Name="CRH" TI="2909" Line="337" Offs="4"/>
+    <Component Name="IDR" TI="2924" Line="338" Offs="8"/>
+    <Component Name="ODR" TI="2939" Line="339" Offs="12"/>
+    <Component Name="BSRR" TI="2954" Line="340" Offs="16"/>
+    <Component Name="BRR" TI="2969" Line="341" Offs="20"/>
+    <Component Name="LCKR" TI="2984" Line="342" Offs="24"/>
    </type>
-   <type Family="ComponentList" Line="379" ID="2789">
-    <Component Name="CR1" TI="2798" Line="380" Offs="0"/>
-    <Component Name="RESERVED0" TI="2813" Line="381" Offs="2"/>
-    <Component Name="CR2" TI="2828" Line="382" Offs="4"/>
-    <Component Name="RESERVED1" TI="2843" Line="383" Offs="6"/>
-    <Component Name="OAR1" TI="2858" Line="384" Offs="8"/>
-    <Component Name="RESERVED2" TI="2873" Line="385" Offs="10"/>
-    <Component Name="OAR2" TI="2888" Line="386" Offs="12"/>
-    <Component Name="RESERVED3" TI="2903" Line="387" Offs="14"/>
-    <Component Name="DR" TI="2918" Line="388" Offs="16"/>
-    <Component Name="RESERVED4" TI="2932" Line="389" Offs="18"/>
-    <Component Name="SR1" TI="2947" Line="390" Offs="20"/>
-    <Component Name="RESERVED5" TI="2962" Line="391" Offs="22"/>
-    <Component Name="SR2" TI="2977" Line="392" Offs="24"/>
-    <Component Name="RESERVED6" TI="2992" Line="393" Offs="26"/>
-    <Component Name="CCR" TI="3007" Line="394" Offs="28"/>
-    <Component Name="RESERVED7" TI="3022" Line="395" Offs="30"/>
-    <Component Name="TRISE" TI="3037" Line="396" Offs="32"/>
-    <Component Name="RESERVED8" TI="3052" Line="397" Offs="34"/>
+   <type Family="typedef" Name="GPIO_TypeDef" Line="343" ID="3000" toTI="2885"/>
+   <type Family="ComponentList" Line="353" ID="3012">
+    <Component Name="CR1" TI="3021" Line="355" Offs="0"/>
+    <Component Name="RESERVED0" TI="3036" Line="356" Offs="2"/>
+    <Component Name="CR2" TI="3051" Line="357" Offs="4"/>
+    <Component Name="RESERVED1" TI="3066" Line="358" Offs="6"/>
+    <Component Name="OAR1" TI="3081" Line="359" Offs="8"/>
+    <Component Name="RESERVED2" TI="3096" Line="360" Offs="10"/>
+    <Component Name="OAR2" TI="3111" Line="361" Offs="12"/>
+    <Component Name="RESERVED3" TI="3126" Line="362" Offs="14"/>
+    <Component Name="DR" TI="3141" Line="363" Offs="16"/>
+    <Component Name="RESERVED4" TI="3155" Line="364" Offs="18"/>
+    <Component Name="SR1" TI="3170" Line="365" Offs="20"/>
+    <Component Name="RESERVED5" TI="3185" Line="366" Offs="22"/>
+    <Component Name="SR2" TI="3200" Line="367" Offs="24"/>
+    <Component Name="RESERVED6" TI="3215" Line="368" Offs="26"/>
+    <Component Name="CCR" TI="3230" Line="369" Offs="28"/>
+    <Component Name="RESERVED7" TI="3245" Line="370" Offs="30"/>
+    <Component Name="TRISE" TI="3260" Line="371" Offs="32"/>
+    <Component Name="RESERVED8" TI="3275" Line="372" Offs="34"/>
    </type>
-   <type Family="ComponentList" Line="594" ID="3068">
-    <Component Name="SR" TI="3077" Line="595" Offs="0"/>
-    <Component Name="RESERVED0" TI="3091" Line="596" Offs="2"/>
-    <Component Name="DR" TI="3106" Line="597" Offs="4"/>
-    <Component Name="RESERVED1" TI="3120" Line="598" Offs="6"/>
-    <Component Name="BRR" TI="3135" Line="599" Offs="8"/>
-    <Component Name="RESERVED2" TI="3150" Line="600" Offs="10"/>
-    <Component Name="CR1" TI="3165" Line="601" Offs="12"/>
-    <Component Name="RESERVED3" TI="3180" Line="602" Offs="14"/>
-    <Component Name="CR2" TI="3195" Line="603" Offs="16"/>
-    <Component Name="RESERVED4" TI="3210" Line="604" Offs="18"/>
-    <Component Name="CR3" TI="3225" Line="605" Offs="20"/>
-    <Component Name="RESERVED5" TI="3240" Line="606" Offs="22"/>
-    <Component Name="GTPR" TI="3255" Line="607" Offs="24"/>
-    <Component Name="RESERVED6" TI="3270" Line="608" Offs="26"/>
+   <type Family="typedef" Name="I2C_TypeDef" Line="373" ID="3291" toTI="3012"/>
+   <type Family="ComponentList" Line="568" ID="3303">
+    <Component Name="SR" TI="3312" Line="570" Offs="0"/>
+    <Component Name="RESERVED0" TI="3326" Line="571" Offs="2"/>
+    <Component Name="DR" TI="3341" Line="572" Offs="4"/>
+    <Component Name="RESERVED1" TI="3355" Line="573" Offs="6"/>
+    <Component Name="BRR" TI="3370" Line="574" Offs="8"/>
+    <Component Name="RESERVED2" TI="3385" Line="575" Offs="10"/>
+    <Component Name="CR1" TI="3400" Line="576" Offs="12"/>
+    <Component Name="RESERVED3" TI="3415" Line="577" Offs="14"/>
+    <Component Name="CR2" TI="3430" Line="578" Offs="16"/>
+    <Component Name="RESERVED4" TI="3445" Line="579" Offs="18"/>
+    <Component Name="CR3" TI="3460" Line="580" Offs="20"/>
+    <Component Name="RESERVED5" TI="3475" Line="581" Offs="22"/>
+    <Component Name="GTPR" TI="3490" Line="582" Offs="24"/>
+    <Component Name="RESERVED6" TI="3505" Line="583" Offs="26"/>
    </type>
-   <type Family="ComponentList" Line="52" ID="3286">
-    <Component Name="I2C_Mode" TI="3294" Line="53" Offs="0"/>
-    <Component Name="I2C_DutyCycle" TI="3308" Line="54" Offs="2"/>
-    <Component Name="I2C_OwnAddress1" TI="3322" Line="55" Offs="4"/>
-    <Component Name="I2C_Ack" TI="3336" Line="56" Offs="6"/>
-    <Component Name="I2C_AcknowledgedAddress" TI="3350" Line="57" Offs="8"/>
-    <Component Name="I2C_ClockSpeed" TI="3364" Line="58" Offs="12"/>
+   <type Family="typedef" Name="USART_TypeDef" Line="584" ID="3521" toTI="3303"/>
+   <type Family="ComponentList" Line="26" ID="3533">
+    <Component Name="DMA_PeripheralBaseAddr" TI="3541" Line="28" Offs="0"/>
+    <Component Name="DMA_MemoryBaseAddr" TI="3555" Line="29" Offs="4"/>
+    <Component Name="DMA_DIR" TI="3569" Line="30" Offs="8"/>
+    <Component Name="DMA_BufferSize" TI="3583" Line="31" Offs="12"/>
+    <Component Name="DMA_PeripheralInc" TI="3597" Line="32" Offs="16"/>
+    <Component Name="DMA_MemoryInc" TI="3611" Line="33" Offs="20"/>
+    <Component Name="DMA_PeripheralDataSize" TI="3625" Line="34" Offs="24"/>
+    <Component Name="DMA_MemoryDataSize" TI="3639" Line="35" Offs="28"/>
+    <Component Name="DMA_Mode" TI="3653" Line="36" Offs="32"/>
+    <Component Name="DMA_Priority" TI="3667" Line="37" Offs="36"/>
+    <Component Name="DMA_M2M" TI="3681" Line="38" Offs="40"/>
    </type>
-   <type Family="typedef" Name="I2C_InitTypeDef" Line="59" ID="3379" toTI="3286"/>
-   <type Family="typedef" Name="GPIOSpeed_TypeDef" Line="64" ID="3417" toTI="3390"/>
-   <type Family="typedef" Name="GPIOMode_TypeDef" Line="79" ID="3486" toTI="3428"/>
-   <type Family="ComponentList" Line="88" ID="3497">
-    <Component Name="GPIO_Pin" TI="3505" Line="89" Offs="0"/>
-    <Component Name="GPIO_Speed" TI="3519" Line="90" Offs="2"/>
-    <Component Name="GPIO_Mode" TI="3533" Line="91" Offs="3"/>
+   <type Family="typedef" Name="DMA_InitTypeDef" Line="39" ID="3696" toTI="3533"/>
+   <type Family="typedef" Name="GPIOSpeed_TypeDef" Line="39" ID="3734" toTI="3707"/>
+   <type Family="typedef" Name="GPIOMode_TypeDef" Line="54" ID="3803" toTI="3745"/>
+   <type Family="ComponentList" Line="62" ID="3814">
+    <Component Name="GPIO_Pin" TI="3822" Line="64" Offs="0"/>
+    <Component Name="GPIO_Speed" TI="3836" Line="65" Offs="2"/>
+    <Component Name="GPIO_Mode" TI="3850" Line="66" Offs="3"/>
    </type>
-   <type Family="typedef" Name="GPIO_InitTypeDef" Line="92" ID="3548" toTI="3497"/>
-   <type Family="ComponentList" Line="52" ID="3580">
-    <Component Name="NVIC_IRQChannel" TI="3588" Line="53" Offs="0"/>
-    <Component Name="NVIC_IRQChannelPreemptionPriority" TI="3602" Line="54" Offs="1"/>
-    <Component Name="NVIC_IRQChannelSubPriority" TI="3616" Line="55" Offs="2"/>
-    <Component Name="NVIC_IRQChannelCmd" TI="3630" Line="56" Offs="3"/>
+   <type Family="typedef" Name="GPIO_InitTypeDef" Line="67" ID="3865" toTI="3814"/>
+   <type Family="typedef" Name="BitAction" Line="73" ID="3897" toTI="3876"/>
+   <type Family="ComponentList" Line="26" ID="3908">
+    <Component Name="I2C_Mode" TI="3916" Line="28" Offs="0"/>
+    <Component Name="I2C_DutyCycle" TI="3930" Line="29" Offs="2"/>
+    <Component Name="I2C_OwnAddress1" TI="3944" Line="30" Offs="4"/>
+    <Component Name="I2C_Ack" TI="3958" Line="31" Offs="6"/>
+    <Component Name="I2C_AcknowledgedAddress" TI="3972" Line="32" Offs="8"/>
+    <Component Name="I2C_ClockSpeed" TI="3986" Line="33" Offs="12"/>
    </type>
-   <type Family="typedef" Name="NVIC_InitTypeDef" Line="57" ID="3645" toTI="3580"/>
-   <type Family="ComponentList" Line="52" ID="3656">
-    <Component Name="USART_BaudRate" TI="3664" Line="53" Offs="0"/>
-    <Component Name="USART_WordLength" TI="3678" Line="54" Offs="4"/>
-    <Component Name="USART_StopBits" TI="3692" Line="55" Offs="6"/>
-    <Component Name="USART_Parity" TI="3706" Line="56" Offs="8"/>
-    <Component Name="USART_Mode" TI="3720" Line="57" Offs="10"/>
-    <Component Name="USART_HardwareFlowControl" TI="3734" Line="58" Offs="12"/>
+   <type Family="typedef" Name="I2C_InitTypeDef" Line="34" ID="4001" toTI="3908"/>
+   <type Family="ComponentList" Line="26" ID="4012">
+    <Component Name="NVIC_IRQChannel" TI="4020" Line="28" Offs="0"/>
+    <Component Name="NVIC_IRQChannelPreemptionPriority" TI="4034" Line="29" Offs="1"/>
+    <Component Name="NVIC_IRQChannelSubPriority" TI="4048" Line="30" Offs="2"/>
+    <Component Name="NVIC_IRQChannelCmd" TI="4062" Line="31" Offs="3"/>
    </type>
-   <type Family="typedef" Name="USART_InitTypeDef" Line="59" ID="3749" toTI="3656"/>
-   <type Family="ComponentList" Line="52" ID="3760">
-    <Component Name="DMA_PeripheralBaseAddr" TI="3768" Line="53" Offs="0"/>
-    <Component Name="DMA_MemoryBaseAddr" TI="3782" Line="54" Offs="4"/>
-    <Component Name="DMA_DIR" TI="3796" Line="55" Offs="8"/>
-    <Component Name="DMA_BufferSize" TI="3810" Line="56" Offs="12"/>
-    <Component Name="DMA_PeripheralInc" TI="3824" Line="57" Offs="16"/>
-    <Component Name="DMA_MemoryInc" TI="3838" Line="58" Offs="20"/>
-    <Component Name="DMA_PeripheralDataSize" TI="3852" Line="59" Offs="24"/>
-    <Component Name="DMA_MemoryDataSize" TI="3866" Line="60" Offs="28"/>
-    <Component Name="DMA_Mode" TI="3880" Line="61" Offs="32"/>
-    <Component Name="DMA_Priority" TI="3894" Line="62" Offs="36"/>
-    <Component Name="DMA_M2M" TI="3908" Line="63" Offs="40"/>
+   <type Family="typedef" Name="NVIC_InitTypeDef" Line="32" ID="4077" toTI="4012"/>
+   <type Family="ComponentList" Line="26" ID="4088">
+    <Component Name="USART_BaudRate" TI="4096" Line="28" Offs="0"/>
+    <Component Name="USART_WordLength" TI="4110" Line="29" Offs="4"/>
+    <Component Name="USART_StopBits" TI="4124" Line="30" Offs="6"/>
+    <Component Name="USART_Parity" TI="4138" Line="31" Offs="8"/>
+    <Component Name="USART_Mode" TI="4152" Line="32" Offs="10"/>
+    <Component Name="USART_HardwareFlowControl" TI="4166" Line="33" Offs="12"/>
    </type>
-   <type Family="typedef" Name="DMA_InitTypeDef" Line="64" ID="3923" toTI="3760"/>
-   <type Family="Base" Name="unsigned int" ID="3934"/>
-   <type Family="Base" Name="int" ID="3941"/>
-   <type Family="Base" Name="long long int" ID="3948"/>
-   <type Family="Base" Name="long long unsigned int" ID="3955"/>
-   <type Family="Base" Name="char" ID="3962"/>
-   <type Family="typedef" Name="TestStatus" Line="56" ID="3990" toTI="3969"/>
-   <type Family="ComponentList" Name="TBKPData" Line="58" ID="4001">
-   <type Family="array" ID="4028" toTI="2457"/>
-    <Component Name="values" TI="4013" Line="59" Offs="0"/>
+   <type Family="typedef" Name="USART_InitTypeDef" Line="34" ID="4181" toTI="4088"/>
+   <type Family="Base" Name="int" ID="4192"/>
+   <type Family="Base" Name="long long int" ID="4199"/>
+   <type Family="Base" Name="long long unsigned int" ID="4206"/>
+   <type Family="Base" Name="char" ID="4213"/>
+   <type Family="typedef" Name="TestStatus" Line="58" ID="4241" toTI="4220"/>
+   <type Family="ComponentList" Name="TBKPData" Line="60" ID="4252">
+   <type Family="array" ID="4279" toTI="2658"/>
+    <Component Name="values" TI="4264" Line="61" Offs="0"/>
    </type>
-   <type Family="typedef" Name="TBKPData" Line="60" ID="4044" toTI="4001"/>
-   <type Family="ComponentList" Name="TMESSAGE" Line="62" ID="4055">
-   <type Family="array" ID="4082" toTI="2457"/>
-    <Component Name="msg" TI="4067" Line="63" Offs="0"/>
+   <type Family="typedef" Name="TBKPData" Line="62" ID="4295" toTI="4252"/>
+   <type Family="ComponentList" Name="TMESSAGE" Line="64" ID="4306">
+   <type Family="array" ID="4333" toTI="2658"/>
+    <Component Name="msg" TI="4318" Line="65" Offs="0"/>
    </type>
-   <type Family="typedef" Name="TMessage" Line="64" ID="4098" toTI="4055"/>
-   <type Family="ComponentList" Name="TI2CCOMMAND" Line="66" ID="4109">
-    <Component Name="command" TI="4121" Line="67" Offs="0"/>
-    <Component Name="address" TI="4135" Line="68" Offs="1"/>
-    <Component Name="len_control" TI="4149" Line="69" Offs="2"/>
-   <type Family="Pointer" TI="4206" toTI="2457"/>
-    <Component Name="control" TI="4163" Line="70" Offs="4"/>
-    <Component Name="len_data" TI="4177" Line="71" Offs="8"/>
-    <Component Name="data" TI="4191" Line="72" Offs="12"/>
+   <type Family="typedef" Name="TMessage" Line="66" ID="4349" toTI="4306"/>
+   <type Family="ComponentList" Name="TI2CCOMMAND" Line="68" ID="4360">
+    <Component Name="command" TI="4372" Line="69" Offs="0"/>
+    <Component Name="address" TI="4386" Line="70" Offs="1"/>
+    <Component Name="len_control" TI="4400" Line="71" Offs="2"/>
+   <type Family="Pointer" TI="4457" toTI="2658"/>
+    <Component Name="control" TI="4414" Line="72" Offs="4"/>
+    <Component Name="len_data" TI="4428" Line="73" Offs="8"/>
+    <Component Name="data" TI="4442" Line="74" Offs="12"/>
    </type>
-   <type Family="typedef" Name="TI2Ccommand" Line="73" ID="4212" toTI="4109"/>
-   <function Name="__io_putchar" TI="3941" FileName="C:\cortex\gateway\src\main.c" Line="458">
-    <parameter Name="ch" TI="3941" FileName="C:\cortex\gateway\src\main.c" Line="458" Addr="0x0" Param="Yes"/>
-   </function >
-   <function Name="DMA_Configuration" TI="0" FileName="C:\cortex\gateway\src\main.c" Line="388">
-    <variable Name="DMA_InitStructure" FileName="C:\cortex\gateway\src\main.c" Line="389" Addr="0x34000004" TI="3923"/>
-   </function >
-   <function Name="NVIC_Configuration" TI="0" FileName="C:\cortex\gateway\src\main.c" Line="326">
-   </function >
-   <function Name="GPIO_Configuration" TI="0" FileName="C:\cortex\gateway\src\main.c" Line="276">
-    <variable Name="GPIO_InitStructure" FileName="C:\cortex\gateway\src\main.c" Line="277" Addr="0x34000004" TI="3548"/>
-   </function >
-   <function Name="RCC_Configuration" TI="0" FileName="C:\cortex\gateway\src\main.c" Line="215">
+   <type Family="typedef" Name="TI2Ccommand" Line="75" ID="4463" toTI="4360"/>
+   <function Name="I2C_Initialize" TI="0" FileName="C:\cortex\gateway\src\main.c" Line="155">
    </function >
    <function Name="USART_Init1" TI="0" FileName="C:\cortex\gateway\src\main.c" Line="189">
    </function >
-   <function Name="I2C_Initialize" TI="0" FileName="C:\cortex\gateway\src\main.c" Line="155">
+   <function Name="RCC_Configuration" TI="0" FileName="C:\cortex\gateway\src\main.c" Line="214">
    </function >
-   <function Name="main" TI="3941" FileName="C:\cortex\gateway\src\main.c" Line="79">
+   <function Name="GPIO_Configuration" TI="0" FileName="C:\cortex\gateway\src\main.c" Line="275">
+    <variable Name="GPIO_InitStructure" FileName="C:\cortex\gateway\src\main.c" Line="277" Addr="0x34000004" TI="3865"/>
    </function >
-   <type Family="array" ID="4661" toTI="4098"/>
-   <variable Name="Commands" FileName="C:\cortex\gateway\src\main.c" Line="33" Addr="0x2000011C" TI="4695"/>
-   <variable Name="Command" FileName="C:\cortex\gateway\src\main.c" Line="35" Addr="0x200005D8" TI="4718"/>
-   <variable Name="ExternData" FileName="C:\cortex\gateway\src\main.c" Line="37" Addr="0x2000051C" TI="4044"/>
-   <variable Name="InternData" FileName="C:\cortex\gateway\src\main.c" Line="38" Addr="0x20000570" TI="4044"/>
-   <variable Name="RxIdx" FileName="C:\cortex\gateway\src\main.c" Line="40" Addr="0x20000104" TI="2439"/>
-   <variable Name="TxIdx" FileName="C:\cortex\gateway\src\main.c" Line="41" Addr="0x20000100" TI="2439"/>
-   <variable Name="Transmitter" FileName="C:\cortex\gateway\src\main.c" Line="43" Addr="0x200000FD" TI="2505"/>
-   <variable Name="ReceivedOK" FileName="C:\cortex\gateway\src\main.c" Line="44" Addr="0x200000FC" TI="2505"/>
-   <variable Name="I2CTxDone" FileName="C:\cortex\gateway\src\main.c" Line="45" Addr="0x200000FE" TI="2505"/>
-   <variable Name="I2CRxDone" FileName="C:\cortex\gateway\src\main.c" Line="46" Addr="0x20000102" TI="2505"/>
-   <variable Name="I2C_InitStructure" FileName="C:\cortex\gateway\src\main.c" Line="50" Addr="0x2000010C" TI="3379"/>
-   <variable Name="NVIC_InitStructure" FileName="C:\cortex\gateway\src\main.c" Line="51" Addr="0x200005D4" TI="3645"/>
-   <variable Name="USART_InitStructure" FileName="C:\cortex\gateway\src\main.c" Line="52" Addr="0x200005C4" TI="3749"/>
-   <variable Name="TransferStatus1" FileName="C:\cortex\gateway\src\main.c" Line="54" Addr="0x20000106" TI="4939"/>
-   <variable Name="TransferStatus2" FileName="C:\cortex\gateway\src\main.c" Line="54" Addr="0x20000107" TI="4939"/>
-   <variable Name="HSEStartUpStatus" FileName="C:\cortex\gateway\src\main.c" Line="55" Addr="0x20000108" TI="2590"/>
+   <function Name="NVIC_Configuration" TI="0" FileName="C:\cortex\gateway\src\main.c" Line="325">
+   </function >
+   <function Name="DMA_Configuration" TI="0" FileName="C:\cortex\gateway\src\main.c" Line="387">
+    <variable Name="DMA_InitStructure" FileName="C:\cortex\gateway\src\main.c" Line="389" Addr="0x34000004" TI="3696"/>
+   </function >
+   <function Name="main" TI="4192" FileName="C:\cortex\gateway\src\main.c" Line="78">
+    <variable Name="command_idx" FileName="C:\cortex\gateway\src\main.c" Line="80" Addr="0x0" TI="2658"/>
+   </function >
+   <function Name="__io_putchar" TI="4192" FileName="C:\cortex\gateway\src\main.c" Line="457">
+    <parameter Name="ch" TI="4192" FileName="C:\cortex\gateway\src\main.c" Line="457" Addr="0x0" Param="Yes"/>
+   </function >
+   <type Family="array" ID="4916" toTI="4349"/>
+   <variable Name="Commands" FileName="C:\cortex\gateway\src\main.c" Line="33" Addr="0x2000011C" TI="5103"/>
+   <variable Name="Command" FileName="C:\cortex\gateway\src\main.c" Line="35" Addr="0x200005D8" TI="4963"/>
+   <variable Name="ExternData" FileName="C:\cortex\gateway\src\main.c" Line="37" Addr="0x2000051C" TI="4295"/>
+   <variable Name="InternData" FileName="C:\cortex\gateway\src\main.c" Line="38" Addr="0x20000570" TI="4295"/>
+   <variable Name="RxIdx" FileName="C:\cortex\gateway\src\main.c" Line="40" Addr="0x20000104" TI="2640"/>
+   <variable Name="TxIdx" FileName="C:\cortex\gateway\src\main.c" Line="41" Addr="0x20000100" TI="2640"/>
+   <variable Name="Transmitter" FileName="C:\cortex\gateway\src\main.c" Line="43" Addr="0x200000FD" TI="2706"/>
+   <variable Name="ReceivedOK" FileName="C:\cortex\gateway\src\main.c" Line="44" Addr="0x200000FC" TI="2706"/>
+   <variable Name="I2CTxDone" FileName="C:\cortex\gateway\src\main.c" Line="45" Addr="0x200000FE" TI="2706"/>
+   <variable Name="I2CRxDone" FileName="C:\cortex\gateway\src\main.c" Line="46" Addr="0x20000102" TI="2706"/>
+   <variable Name="I2C_InitStructure" FileName="C:\cortex\gateway\src\main.c" Line="50" Addr="0x2000010C" TI="4001"/>
+   <variable Name="NVIC_InitStructure" FileName="C:\cortex\gateway\src\main.c" Line="51" Addr="0x200005D4" TI="4077"/>
+   <variable Name="USART_InitStructure" FileName="C:\cortex\gateway\src\main.c" Line="52" Addr="0x200005C4" TI="4181"/>
+   <variable Name="TransferStatus1" FileName="C:\cortex\gateway\src\main.c" Line="54" Addr="0x20000106" TI="5342"/>
+   <variable Name="TransferStatus2" FileName="C:\cortex\gateway\src\main.c" Line="54" Addr="0x20000107" TI="5342"/>
+   <variable Name="HSEStartUpStatus" FileName="C:\cortex\gateway\src\main.c" Line="55" Addr="0x20000108" TI="2791"/>
   </module>
-  <module Name="C:\cortex\gateway\src\stm32f10x_rcc.c" >
-   <type Family="Base" Name="long int" ID="5018"/>
-   <type Family="Base" Name="short int" ID="5025"/>
-   <type Family="Base" Name="signed char" ID="5032"/>
-   <type Family="Base" Name="long unsigned int" ID="5050"/>
-   <type Family="typedef" Name="u32" Line="64" ID="5039" toTI="5050"/>
-   <type Family="Base" Name="short unsigned int" ID="5057"/>
-   <type Family="Base" Name="unsigned char" ID="5074"/>
-   <type Family="typedef" Name="u8" Line="66" ID="5064" toTI="5074"/>
-   <type Family="typedef" Name="FlagStatus" Line="82" ID="5107" toTI="5086"/>
-   <type Family="typedef" Name="ITStatus" Line="82" ID="5118" toTI="5086"/>
-   <type Family="typedef" Name="FunctionalState" Line="84" ID="5150" toTI="5129"/>
-   <type Family="typedef" Name="ErrorStatus" Line="87" ID="5182" toTI="5161"/>
-   <type Family="ComponentList" Line="452" ID="5196">
-    <Component Name="CR" TI="5205" Line="453" Offs="0"/>
-    <Component Name="CFGR" TI="5219" Line="454" Offs="4"/>
-    <Component Name="CIR" TI="5234" Line="455" Offs="8"/>
-    <Component Name="APB2RSTR" TI="5249" Line="456" Offs="12"/>
-    <Component Name="APB1RSTR" TI="5264" Line="457" Offs="16"/>
-    <Component Name="AHBENR" TI="5279" Line="458" Offs="20"/>
-    <Component Name="APB2ENR" TI="5294" Line="459" Offs="24"/>
-    <Component Name="APB1ENR" TI="5309" Line="460" Offs="28"/>
-    <Component Name="BDCR" TI="5324" Line="461" Offs="32"/>
-    <Component Name="CSR" TI="5339" Line="462" Offs="36"/>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_adc.c" >
+   <type Family="Base" Name="long int" ID="5421"/>
+   <type Family="Base" Name="short int" ID="5428"/>
+   <type Family="Base" Name="signed char" ID="5435"/>
+   <type Family="Base" Name="long unsigned int" ID="5453"/>
+   <type Family="typedef" Name="u32" Line="39" ID="5442" toTI="5453"/>
+   <type Family="Base" Name="short unsigned int" ID="5471"/>
+   <type Family="typedef" Name="u16" Line="40" ID="5460" toTI="5471"/>
+   <type Family="Base" Name="unsigned char" ID="5488"/>
+   <type Family="typedef" Name="u8" Line="41" ID="5478" toTI="5488"/>
+   <type Family="typedef" Name="vu32" Line="47" ID="5495" toTI="5506"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="5532" toTI="5511"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="5543" toTI="5511"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="5575" toTI="5554"/>
+   <type Family="ComponentList" Line="36" ID="5586">
+    <Component Name="SR" TI="5594" Line="38" Offs="0"/>
+    <Component Name="CR1" TI="5607" Line="39" Offs="4"/>
+    <Component Name="CR2" TI="5621" Line="40" Offs="8"/>
+    <Component Name="SMPR1" TI="5635" Line="41" Offs="12"/>
+    <Component Name="SMPR2" TI="5649" Line="42" Offs="16"/>
+    <Component Name="JOFR1" TI="5663" Line="43" Offs="20"/>
+    <Component Name="JOFR2" TI="5677" Line="44" Offs="24"/>
+    <Component Name="JOFR3" TI="5691" Line="45" Offs="28"/>
+    <Component Name="JOFR4" TI="5705" Line="46" Offs="32"/>
+    <Component Name="HTR" TI="5719" Line="47" Offs="36"/>
+    <Component Name="LTR" TI="5733" Line="48" Offs="40"/>
+    <Component Name="SQR1" TI="5747" Line="49" Offs="44"/>
+    <Component Name="SQR2" TI="5761" Line="50" Offs="48"/>
+    <Component Name="SQR3" TI="5775" Line="51" Offs="52"/>
+    <Component Name="JSQR" TI="5789" Line="52" Offs="56"/>
+    <Component Name="JDR1" TI="5803" Line="53" Offs="60"/>
+    <Component Name="JDR2" TI="5817" Line="54" Offs="64"/>
+    <Component Name="JDR3" TI="5831" Line="55" Offs="68"/>
+    <Component Name="JDR4" TI="5845" Line="56" Offs="72"/>
+    <Component Name="DR" TI="5859" Line="57" Offs="76"/>
    </type>
-   <type Family="ComponentList" Line="51" ID="5355">
-    <Component Name="SYSCLK_Frequency" TI="5363" Line="52" Offs="0"/>
-    <Component Name="HCLK_Frequency" TI="5377" Line="53" Offs="4"/>
-    <Component Name="PCLK1_Frequency" TI="5391" Line="54" Offs="8"/>
-    <Component Name="PCLK2_Frequency" TI="5405" Line="55" Offs="12"/>
-    <Component Name="ADCCLK_Frequency" TI="5419" Line="56" Offs="16"/>
+   <type Family="typedef" Name="ADC_TypeDef" Line="58" ID="5873" toTI="5586"/>
+   <type Family="Base" Name="unsigned int" ID="5884"/>
+   <type Family="ComponentList" Line="26" ID="5891">
+    <Component Name="ADC_Mode" TI="5899" Line="28" Offs="0"/>
+    <Component Name="ADC_ScanConvMode" TI="5913" Line="29" Offs="4"/>
+    <Component Name="ADC_ContinuousConvMode" TI="5927" Line="30" Offs="5"/>
+    <Component Name="ADC_ExternalTrigConv" TI="5941" Line="31" Offs="8"/>
+    <Component Name="ADC_DataAlign" TI="5955" Line="32" Offs="12"/>
+    <Component Name="ADC_NbrOfChannel" TI="5969" Line="33" Offs="16"/>
    </type>
-   <type Family="typedef" Name="RCC_ClocksTypeDef" Line="57" ID="5434" toTI="5355"/>
-   <function Name="RCC_HSEConfig" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="160">
-    <parameter Name="RCC_HSE" TI="5039" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="160" Addr="0x0" Param="Yes"/>
-   </function >
-   <function Name="RCC_PLLConfig" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="288">
-    <parameter Name="RCC_PLLSource" TI="5039" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="288" Addr="0x0" Param="Yes"/>
-    <parameter Name="RCC_PLLMul" TI="5039" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="288" Addr="0x1" Param="Yes"/>
-    <variable Name="tmpreg" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="289" Addr="0x2" TI="5039"/>
-   </function >
-   <function Name="RCC_PLLCmd" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="317">
-    <parameter Name="NewState" TI="5150" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="317" Addr="0x0" Param="Yes"/>
-   </function >
-   <function Name="RCC_SYSCLKConfig" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="336">
-    <parameter Name="RCC_SYSCLKSource" TI="5039" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="336" Addr="0x0" Param="Yes"/>
-    <variable Name="tmpreg" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="337" Addr="0x2" TI="5039"/>
-   </function >
-   <function Name="RCC_GetSYSCLKSource" TI="5064" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="366">
-   </function >
-   <function Name="RCC_HCLKConfig" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="389">
-    <parameter Name="RCC_SYSCLK" TI="5039" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="389" Addr="0x0" Param="Yes"/>
-    <variable Name="tmpreg" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="390" Addr="0x2" TI="5039"/>
-   </function >
-   <function Name="RCC_PCLK1Config" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="422">
-    <parameter Name="RCC_HCLK" TI="5039" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="422" Addr="0x0" Param="Yes"/>
-    <variable Name="tmpreg" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="423" Addr="0x2" TI="5039"/>
-   </function >
-   <function Name="RCC_PCLK2Config" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="455">
-    <parameter Name="RCC_HCLK" TI="5039" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="455" Addr="0x0" Param="Yes"/>
-    <variable Name="tmpreg" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="456" Addr="0x3" TI="5039"/>
-   </function >
-   <function Name="RCC_GetClocksFreq" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="669">
-   <type Family="Pointer" TI="6350" toTI="5434"/>
-    <parameter Name="RCC_Clocks" TI="6350" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="669" Addr="0x0" Param="Yes"/>
-    <variable Name="pllmull" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="670" Addr="0x2" TI="5039"/>
-   </function >
-   <function Name="RCC_AHBPeriphClockCmd" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="769">
-    <parameter Name="RCC_AHBPeriph" TI="5039" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="769" Addr="0x0" Param="Yes"/>
-    <parameter Name="NewState" TI="5150" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="769" Addr="0x1" Param="Yes"/>
-   </function >
-   <function Name="RCC_APB2PeriphClockCmd" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="802">
-    <parameter Name="RCC_APB2Periph" TI="5039" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="802" Addr="0x0" Param="Yes"/>
-    <parameter Name="NewState" TI="5150" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="802" Addr="0x1" Param="Yes"/>
-   </function >
-   <function Name="RCC_APB1PeriphClockCmd" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="836">
-    <parameter Name="RCC_APB1Periph" TI="5039" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="836" Addr="0x0" Param="Yes"/>
-    <parameter Name="NewState" TI="5150" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="836" Addr="0x1" Param="Yes"/>
-   </function >
-   <function Name="RCC_GetFlagStatus" TI="5107" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="990">
-    <parameter Name="RCC_FLAG" TI="5064" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="990" Addr="0x0" Param="Yes"/>
-    <variable Name="tmp" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="991" Addr="0x3" TI="5039"/>
-    <variable Name="statusreg" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="992" Addr="0x3" TI="5039"/>
-   </function >
-   <function Name="RCC_WaitForHSEStartUp" TI="5182" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="199">
-    <variable Name="StartUpCounter" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="200" Addr="0x34000014" TI="5081"/>
-   </function >
-   <type Family="array" ID="7010" toTI="5074"/>
-   <variable Name="APBAHBPrescTable" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="111" Addr="0x80045CC" TI="7043"/>
-   <type Family="array" ID="7048" toTI="5074"/>
-   <variable Name="ADCPrescTable" FileName="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="112" Addr="0x80045DC" TI="7081"/>
+   <type Family="typedef" Name="ADC_InitTypeDef" Line="34" ID="5984" toTI="5891"/>
+   <type Family="Pointer" TI="6036" toTI="5873"/>
+   <type Family="Pointer" TI="6124" toTI="5984"/>
   </module>
-  <module Name="C:\cortex\gateway\src\stm32f10x_usart.c" >
-   <type Family="Base" Name="long int" ID="7124"/>
-   <type Family="Base" Name="short int" ID="7131"/>
-   <type Family="Base" Name="signed char" ID="7138"/>
-   <type Family="Base" Name="long unsigned int" ID="7156"/>
-   <type Family="typedef" Name="u32" Line="64" ID="7145" toTI="7156"/>
-   <type Family="Base" Name="short unsigned int" ID="7174"/>
-   <type Family="typedef" Name="u16" Line="65" ID="7163" toTI="7174"/>
-   <type Family="Base" Name="unsigned char" ID="7191"/>
-   <type Family="typedef" Name="u8" Line="66" ID="7181" toTI="7191"/>
-   <type Family="typedef" Name="FlagStatus" Line="82" ID="7224" toTI="7203"/>
-   <type Family="typedef" Name="ITStatus" Line="82" ID="7235" toTI="7203"/>
-   <type Family="typedef" Name="FunctionalState" Line="84" ID="7267" toTI="7246"/>
-   <type Family="ComponentList" Line="594" ID="7281">
-    <Component Name="SR" TI="7290" Line="595" Offs="0"/>
-    <Component Name="RESERVED0" TI="7304" Line="596" Offs="2"/>
-    <Component Name="DR" TI="7319" Line="597" Offs="4"/>
-    <Component Name="RESERVED1" TI="7333" Line="598" Offs="6"/>
-    <Component Name="BRR" TI="7348" Line="599" Offs="8"/>
-    <Component Name="RESERVED2" TI="7363" Line="600" Offs="10"/>
-    <Component Name="CR1" TI="7378" Line="601" Offs="12"/>
-    <Component Name="RESERVED3" TI="7393" Line="602" Offs="14"/>
-    <Component Name="CR2" TI="7408" Line="603" Offs="16"/>
-    <Component Name="RESERVED4" TI="7423" Line="604" Offs="18"/>
-    <Component Name="CR3" TI="7438" Line="605" Offs="20"/>
-    <Component Name="RESERVED5" TI="7453" Line="606" Offs="22"/>
-    <Component Name="GTPR" TI="7468" Line="607" Offs="24"/>
-    <Component Name="RESERVED6" TI="7483" Line="608" Offs="26"/>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_bkp.c" >
+   <type Family="Base" Name="long int" ID="8361"/>
+   <type Family="Base" Name="short int" ID="8368"/>
+   <type Family="Base" Name="signed char" ID="8375"/>
+   <type Family="Base" Name="long unsigned int" ID="8393"/>
+   <type Family="typedef" Name="u32" Line="39" ID="8382" toTI="8393"/>
+   <type Family="Base" Name="short unsigned int" ID="8411"/>
+   <type Family="typedef" Name="u16" Line="40" ID="8400" toTI="8411"/>
+   <type Family="Base" Name="unsigned char" ID="8428"/>
+   <type Family="typedef" Name="u8" Line="41" ID="8418" toTI="8428"/>
+   <type Family="typedef" Name="vu32" Line="47" ID="8435" toTI="8446"/>
+   <type Family="typedef" Name="vu16" Line="48" ID="8451" toTI="8462"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="8488" toTI="8467"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="8499" toTI="8467"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="8531" toTI="8510"/>
+   <type Family="ComponentList" Line="61" ID="8542">
+    <Component Name="RESERVED0" TI="8550" Line="63" Offs="0"/>
+    <Component Name="DR1" TI="8564" Line="64" Offs="4"/>
+    <Component Name="RESERVED1" TI="8578" Line="65" Offs="6"/>
+    <Component Name="DR2" TI="8592" Line="66" Offs="8"/>
+    <Component Name="RESERVED2" TI="8606" Line="67" Offs="10"/>
+    <Component Name="DR3" TI="8620" Line="68" Offs="12"/>
+    <Component Name="RESERVED3" TI="8634" Line="69" Offs="14"/>
+    <Component Name="DR4" TI="8648" Line="70" Offs="16"/>
+    <Component Name="RESERVED4" TI="8662" Line="71" Offs="18"/>
+    <Component Name="DR5" TI="8676" Line="72" Offs="20"/>
+    <Component Name="RESERVED5" TI="8690" Line="73" Offs="22"/>
+    <Component Name="DR6" TI="8704" Line="74" Offs="24"/>
+    <Component Name="RESERVED6" TI="8718" Line="75" Offs="26"/>
+    <Component Name="DR7" TI="8732" Line="76" Offs="28"/>
+    <Component Name="RESERVED7" TI="8746" Line="77" Offs="30"/>
+    <Component Name="DR8" TI="8760" Line="78" Offs="32"/>
+    <Component Name="RESERVED8" TI="8774" Line="79" Offs="34"/>
+    <Component Name="DR9" TI="8788" Line="80" Offs="36"/>
+    <Component Name="RESERVED9" TI="8802" Line="81" Offs="38"/>
+    <Component Name="DR10" TI="8816" Line="82" Offs="40"/>
+    <Component Name="RESERVED10" TI="8830" Line="83" Offs="42"/>
+    <Component Name="RTCCR" TI="8844" Line="84" Offs="44"/>
+    <Component Name="RESERVED11" TI="8858" Line="85" Offs="46"/>
+    <Component Name="CR" TI="8872" Line="86" Offs="48"/>
+    <Component Name="RESERVED12" TI="8885" Line="87" Offs="50"/>
+    <Component Name="CSR" TI="8899" Line="88" Offs="52"/>
+   <type Family="array" ID="9856" toTI="8400"/>
+    <Component Name="RESERVED13" TI="8913" Line="89" Offs="54"/>
+    <Component Name="DR11" TI="8927" Line="90" Offs="64"/>
+    <Component Name="RESERVED14" TI="8941" Line="91" Offs="66"/>
+    <Component Name="DR12" TI="8955" Line="92" Offs="68"/>
+    <Component Name="RESERVED15" TI="8969" Line="93" Offs="70"/>
+    <Component Name="DR13" TI="8983" Line="94" Offs="72"/>
+    <Component Name="RESERVED16" TI="8997" Line="95" Offs="74"/>
+    <Component Name="DR14" TI="9011" Line="96" Offs="76"/>
+    <Component Name="RESERVED17" TI="9025" Line="97" Offs="78"/>
+    <Component Name="DR15" TI="9039" Line="98" Offs="80"/>
+    <Component Name="RESERVED18" TI="9053" Line="99" Offs="82"/>
+    <Component Name="DR16" TI="9067" Line="100" Offs="84"/>
+    <Component Name="RESERVED19" TI="9081" Line="101" Offs="86"/>
+    <Component Name="DR17" TI="9095" Line="102" Offs="88"/>
+    <Component Name="RESERVED20" TI="9109" Line="103" Offs="90"/>
+    <Component Name="DR18" TI="9123" Line="104" Offs="92"/>
+    <Component Name="RESERVED21" TI="9137" Line="105" Offs="94"/>
+    <Component Name="DR19" TI="9151" Line="106" Offs="96"/>
+    <Component Name="RESERVED22" TI="9165" Line="107" Offs="98"/>
+    <Component Name="DR20" TI="9179" Line="108" Offs="100"/>
+    <Component Name="RESERVED23" TI="9193" Line="109" Offs="102"/>
+    <Component Name="DR21" TI="9207" Line="110" Offs="104"/>
+    <Component Name="RESERVED24" TI="9221" Line="111" Offs="106"/>
+    <Component Name="DR22" TI="9235" Line="112" Offs="108"/>
+    <Component Name="RESERVED25" TI="9249" Line="113" Offs="110"/>
+    <Component Name="DR23" TI="9263" Line="114" Offs="112"/>
+    <Component Name="RESERVED26" TI="9277" Line="115" Offs="114"/>
+    <Component Name="DR24" TI="9291" Line="116" Offs="116"/>
+    <Component Name="RESERVED27" TI="9305" Line="117" Offs="118"/>
+    <Component Name="DR25" TI="9319" Line="118" Offs="120"/>
+    <Component Name="RESERVED28" TI="9333" Line="119" Offs="122"/>
+    <Component Name="DR26" TI="9347" Line="120" Offs="124"/>
+    <Component Name="RESERVED29" TI="9361" Line="121" Offs="126"/>
+    <Component Name="DR27" TI="9375" Line="122" Offs="128"/>
+    <Component Name="RESERVED30" TI="9390" Line="123" Offs="130"/>
+    <Component Name="DR28" TI="9405" Line="124" Offs="132"/>
+    <Component Name="RESERVED31" TI="9420" Line="125" Offs="134"/>
+    <Component Name="DR29" TI="9435" Line="126" Offs="136"/>
+    <Component Name="RESERVED32" TI="9450" Line="127" Offs="138"/>
+    <Component Name="DR30" TI="9465" Line="128" Offs="140"/>
+    <Component Name="RESERVED33" TI="9480" Line="129" Offs="142"/>
+    <Component Name="DR31" TI="9495" Line="130" Offs="144"/>
+    <Component Name="RESERVED34" TI="9510" Line="131" Offs="146"/>
+    <Component Name="DR32" TI="9525" Line="132" Offs="148"/>
+    <Component Name="RESERVED35" TI="9540" Line="133" Offs="150"/>
+    <Component Name="DR33" TI="9555" Line="134" Offs="152"/>
+    <Component Name="RESERVED36" TI="9570" Line="135" Offs="154"/>
+    <Component Name="DR34" TI="9585" Line="136" Offs="156"/>
+    <Component Name="RESERVED37" TI="9600" Line="137" Offs="158"/>
+    <Component Name="DR35" TI="9615" Line="138" Offs="160"/>
+    <Component Name="RESERVED38" TI="9630" Line="139" Offs="162"/>
+    <Component Name="DR36" TI="9645" Line="140" Offs="164"/>
+    <Component Name="RESERVED39" TI="9660" Line="141" Offs="166"/>
+    <Component Name="DR37" TI="9675" Line="142" Offs="168"/>
+    <Component Name="RESERVED40" TI="9690" Line="143" Offs="170"/>
+    <Component Name="DR38" TI="9705" Line="144" Offs="172"/>
+    <Component Name="RESERVED41" TI="9720" Line="145" Offs="174"/>
+    <Component Name="DR39" TI="9735" Line="146" Offs="176"/>
+    <Component Name="RESERVED42" TI="9750" Line="147" Offs="178"/>
+    <Component Name="DR40" TI="9765" Line="148" Offs="180"/>
+    <Component Name="RESERVED43" TI="9780" Line="149" Offs="182"/>
+    <Component Name="DR41" TI="9795" Line="150" Offs="184"/>
+    <Component Name="RESERVED44" TI="9810" Line="151" Offs="186"/>
+    <Component Name="DR42" TI="9825" Line="152" Offs="188"/>
+    <Component Name="RESERVED45" TI="9840" Line="153" Offs="190"/>
    </type>
-   <type Family="typedef" Name="USART_TypeDef" Line="609" ID="7499" toTI="7281"/>
-   <type Family="ComponentList" Line="52" ID="7511">
-    <Component Name="USART_BaudRate" TI="7519" Line="53" Offs="0"/>
-    <Component Name="USART_WordLength" TI="7533" Line="54" Offs="4"/>
-    <Component Name="USART_StopBits" TI="7547" Line="55" Offs="6"/>
-    <Component Name="USART_Parity" TI="7561" Line="56" Offs="8"/>
-    <Component Name="USART_Mode" TI="7575" Line="57" Offs="10"/>
-    <Component Name="USART_HardwareFlowControl" TI="7589" Line="58" Offs="12"/>
+   <type Family="Base" Name="unsigned int" ID="9872"/>
+   <type Family="typedef" Name="BKP_TypeDef" Line="154" ID="9879" toTI="8542"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_can.c" >
+   <type Family="Base" Name="long int" ID="10355"/>
+   <type Family="Base" Name="short int" ID="10362"/>
+   <type Family="Base" Name="signed char" ID="10369"/>
+   <type Family="Base" Name="long unsigned int" ID="10387"/>
+   <type Family="typedef" Name="u32" Line="39" ID="10376" toTI="10387"/>
+   <type Family="Base" Name="short unsigned int" ID="10405"/>
+   <type Family="typedef" Name="u16" Line="40" ID="10394" toTI="10405"/>
+   <type Family="Base" Name="unsigned char" ID="10422"/>
+   <type Family="typedef" Name="u8" Line="41" ID="10412" toTI="10422"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="10455" toTI="10434"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="10466" toTI="10434"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="10498" toTI="10477"/>
+   <type Family="Base" Name="unsigned int" ID="10509"/>
+   <type Family="ComponentList" Line="157" ID="10516">
+    <Component Name="TIR" TI="10524" Line="159" Offs="0"/>
+    <Component Name="TDTR" TI="10538" Line="160" Offs="4"/>
+    <Component Name="TDLR" TI="10552" Line="161" Offs="8"/>
+    <Component Name="TDHR" TI="10566" Line="162" Offs="12"/>
    </type>
-   <type Family="typedef" Name="USART_InitTypeDef" Line="59" ID="7604" toTI="7511"/>
-   <type Family="ComponentList" Line="63" ID="7615">
-    <Component Name="USART_Clock" TI="7623" Line="64" Offs="0"/>
-    <Component Name="USART_CPOL" TI="7637" Line="65" Offs="2"/>
-    <Component Name="USART_CPHA" TI="7651" Line="66" Offs="4"/>
-    <Component Name="USART_LastBit" TI="7665" Line="67" Offs="6"/>
+   <type Family="typedef" Name="CAN_TxMailBox_TypeDef" Line="163" ID="10581" toTI="10516"/>
+   <type Family="ComponentList" Line="165" ID="10592">
+    <Component Name="RIR" TI="10600" Line="167" Offs="0"/>
+    <Component Name="RDTR" TI="10614" Line="168" Offs="4"/>
+    <Component Name="RDLR" TI="10628" Line="169" Offs="8"/>
+    <Component Name="RDHR" TI="10642" Line="170" Offs="12"/>
    </type>
-   <type Family="typedef" Name="USART_ClockInitTypeDef" Line="68" ID="7680" toTI="7615"/>
-   <type Family="ComponentList" Line="51" ID="7691">
-    <Component Name="SYSCLK_Frequency" TI="7699" Line="52" Offs="0"/>
-    <Component Name="HCLK_Frequency" TI="7713" Line="53" Offs="4"/>
-    <Component Name="PCLK1_Frequency" TI="7727" Line="54" Offs="8"/>
-    <Component Name="PCLK2_Frequency" TI="7741" Line="55" Offs="12"/>
-    <Component Name="ADCCLK_Frequency" TI="7755" Line="56" Offs="16"/>
+   <type Family="typedef" Name="CAN_FIFOMailBox_TypeDef" Line="171" ID="10657" toTI="10592"/>
+   <type Family="ComponentList" Line="173" ID="10668">
+    <Component Name="FR1" TI="10676" Line="175" Offs="0"/>
+    <Component Name="FR2" TI="10690" Line="176" Offs="4"/>
    </type>
-   <type Family="typedef" Name="RCC_ClocksTypeDef" Line="57" ID="7770" toTI="7691"/>
-   <type Family="Pointer" TI="7818" toTI="7604"/>
-   <type Family="Pointer" TI="7893" toTI="7499"/>
-   <type Family="Pointer" TI="7899" toTI="7680"/>
-   <function Name="USART_Cmd" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="312">
-    <parameter Name="USARTx" TI="7893" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="312" Addr="0x0" Param="Yes"/>
-    <parameter Name="NewState" TI="7267" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="312" Addr="0x1" Param="Yes"/>
+   <type Family="typedef" Name="CAN_FilterRegister_TypeDef" Line="177" ID="10705" toTI="10668"/>
+   <type Family="ComponentList" Line="179" ID="10716">
+    <Component Name="MCR" TI="10725" Line="181" Offs="0"/>
+    <Component Name="MSR" TI="10739" Line="182" Offs="4"/>
+    <Component Name="TSR" TI="10753" Line="183" Offs="8"/>
+    <Component Name="RF0R" TI="10767" Line="184" Offs="12"/>
+    <Component Name="RF1R" TI="10781" Line="185" Offs="16"/>
+    <Component Name="IER" TI="10795" Line="186" Offs="20"/>
+    <Component Name="ESR" TI="10809" Line="187" Offs="24"/>
+    <Component Name="BTR" TI="10823" Line="188" Offs="28"/>
+   <type Family="array" ID="11047" toTI="10376"/>
+    <Component Name="RESERVED0" TI="10837" Line="189" Offs="32"/>
+   <type Family="array" ID="11063" toTI="10581"/>
+    <Component Name="sTxMailBox" TI="10851" Line="190" Offs="384"/>
+   <type Family="array" ID="11079" toTI="10657"/>
+    <Component Name="sFIFOMailBox" TI="10866" Line="191" Offs="432"/>
+   <type Family="array" ID="11095" toTI="10376"/>
+    <Component Name="RESERVED1" TI="10881" Line="192" Offs="464"/>
+    <Component Name="FMR" TI="10896" Line="193" Offs="512"/>
+    <Component Name="FM1R" TI="10911" Line="194" Offs="516"/>
+    <Component Name="RESERVED2" TI="10926" Line="195" Offs="520"/>
+    <Component Name="FS1R" TI="10941" Line="196" Offs="524"/>
+    <Component Name="RESERVED3" TI="10956" Line="197" Offs="528"/>
+    <Component Name="FFA1R" TI="10971" Line="198" Offs="532"/>
+    <Component Name="RESERVED4" TI="10986" Line="199" Offs="536"/>
+    <Component Name="FA1R" TI="11001" Line="200" Offs="540"/>
+   <type Family="array" ID="11111" toTI="10376"/>
+    <Component Name="RESERVED5" TI="11016" Line="201" Offs="544"/>
+   <type Family="array" ID="11127" toTI="10705"/>
+    <Component Name="sFilterRegister" TI="11031" Line="202" Offs="576"/>
+   </type>
+   <type Family="typedef" Name="CAN_TypeDef" Line="203" ID="11143" toTI="10716"/>
+   <type Family="ComponentList" Line="26" ID="11154">
+    <Component Name="CAN_TTCM" TI="11162" Line="28" Offs="0"/>
+    <Component Name="CAN_ABOM" TI="11176" Line="29" Offs="1"/>
+    <Component Name="CAN_AWUM" TI="11190" Line="30" Offs="2"/>
+    <Component Name="CAN_NART" TI="11204" Line="31" Offs="3"/>
+    <Component Name="CAN_RFLM" TI="11218" Line="32" Offs="4"/>
+    <Component Name="CAN_TXFP" TI="11232" Line="33" Offs="5"/>
+    <Component Name="CAN_Mode" TI="11246" Line="34" Offs="6"/>
+    <Component Name="CAN_SJW" TI="11260" Line="35" Offs="7"/>
+    <Component Name="CAN_BS1" TI="11274" Line="36" Offs="8"/>
+    <Component Name="CAN_BS2" TI="11288" Line="37" Offs="9"/>
+    <Component Name="CAN_Prescaler" TI="11302" Line="38" Offs="10"/>
+   </type>
+   <type Family="typedef" Name="CAN_InitTypeDef" Line="39" ID="11317" toTI="11154"/>
+   <type Family="ComponentList" Line="42" ID="11328">
+    <Component Name="CAN_FilterNumber" TI="11336" Line="44" Offs="0"/>
+    <Component Name="CAN_FilterMode" TI="11350" Line="45" Offs="1"/>
+    <Component Name="CAN_FilterScale" TI="11364" Line="46" Offs="2"/>
+    <Component Name="CAN_FilterIdHigh" TI="11378" Line="47" Offs="4"/>
+    <Component Name="CAN_FilterIdLow" TI="11392" Line="48" Offs="6"/>
+    <Component Name="CAN_FilterMaskIdHigh" TI="11406" Line="49" Offs="8"/>
+    <Component Name="CAN_FilterMaskIdLow" TI="11420" Line="50" Offs="10"/>
+    <Component Name="CAN_FilterFIFOAssignment" TI="11434" Line="51" Offs="12"/>
+    <Component Name="CAN_FilterActivation" TI="11448" Line="52" Offs="14"/>
+   </type>
+   <type Family="typedef" Name="CAN_FilterInitTypeDef" Line="53" ID="11463" toTI="11328"/>
+   <type Family="ComponentList" Line="56" ID="11474">
+    <Component Name="StdId" TI="11482" Line="58" Offs="0"/>
+    <Component Name="ExtId" TI="11496" Line="59" Offs="4"/>
+    <Component Name="IDE" TI="11510" Line="60" Offs="8"/>
+    <Component Name="RTR" TI="11524" Line="61" Offs="9"/>
+    <Component Name="DLC" TI="11538" Line="62" Offs="10"/>
+   <type Family="array" ID="11567" toTI="10412"/>
+    <Component Name="Data" TI="11552" Line="63" Offs="11"/>
+   </type>
+   <type Family="typedef" Name="CanTxMsg" Line="64" ID="11583" toTI="11474"/>
+   <type Family="ComponentList" Line="67" ID="11594">
+    <Component Name="StdId" TI="11602" Line="69" Offs="0"/>
+    <Component Name="ExtId" TI="11616" Line="70" Offs="4"/>
+    <Component Name="IDE" TI="11630" Line="71" Offs="8"/>
+    <Component Name="RTR" TI="11644" Line="72" Offs="9"/>
+    <Component Name="DLC" TI="11658" Line="73" Offs="10"/>
+    <Component Name="Data" TI="11672" Line="74" Offs="11"/>
+    <Component Name="FMI" TI="11686" Line="75" Offs="19"/>
+   </type>
+   <type Family="typedef" Name="CanRxMsg" Line="76" ID="11701" toTI="11594"/>
+   <type Family="Pointer" TI="11882" toTI="11317"/>
+   <type Family="Pointer" TI="11942" toTI="11463"/>
+   <type Family="Pointer" TI="12107" toTI="11583"/>
+   <type Family="Pointer" TI="12376" toTI="11701"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_crc.c" >
+   <type Family="Base" Name="long int" ID="12709"/>
+   <type Family="Base" Name="short int" ID="12716"/>
+   <type Family="Base" Name="signed char" ID="12723"/>
+   <type Family="Base" Name="long unsigned int" ID="12741"/>
+   <type Family="typedef" Name="u32" Line="39" ID="12730" toTI="12741"/>
+   <type Family="Base" Name="short unsigned int" ID="12759"/>
+   <type Family="typedef" Name="u16" Line="40" ID="12748" toTI="12759"/>
+   <type Family="Base" Name="unsigned char" ID="12776"/>
+   <type Family="typedef" Name="u8" Line="41" ID="12766" toTI="12776"/>
+   <type Family="Base" Name="unsigned int" ID="12793"/>
+   <type Family="ComponentList" Line="206" ID="12800">
+    <Component Name="DR" TI="12808" Line="208" Offs="0"/>
+    <Component Name="IDR" TI="12821" Line="209" Offs="4"/>
+    <Component Name="RESERVED0" TI="12835" Line="210" Offs="5"/>
+    <Component Name="RESERVED1" TI="12849" Line="211" Offs="6"/>
+    <Component Name="CR" TI="12863" Line="212" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="CRC_TypeDef" Line="213" ID="12877" toTI="12800"/>
+   <type Family="Pointer" TI="13025" toTI="12730"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_dac.c" >
+   <type Family="Base" Name="long int" ID="13155"/>
+   <type Family="Base" Name="short int" ID="13162"/>
+   <type Family="Base" Name="signed char" ID="13169"/>
+   <type Family="Base" Name="long unsigned int" ID="13187"/>
+   <type Family="typedef" Name="u32" Line="39" ID="13176" toTI="13187"/>
+   <type Family="Base" Name="short unsigned int" ID="13205"/>
+   <type Family="typedef" Name="u16" Line="40" ID="13194" toTI="13205"/>
+   <type Family="Base" Name="unsigned char" ID="13212"/>
+   <type Family="typedef" Name="vu32" Line="47" ID="13219" toTI="13230"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="13256" toTI="13235"/>
+   <type Family="Base" Name="unsigned int" ID="13267"/>
+   <type Family="ComponentList" Line="217" ID="13274">
+    <Component Name="CR" TI="13282" Line="219" Offs="0"/>
+    <Component Name="SWTRIGR" TI="13295" Line="220" Offs="4"/>
+    <Component Name="DHR12R1" TI="13309" Line="221" Offs="8"/>
+    <Component Name="DHR12L1" TI="13323" Line="222" Offs="12"/>
+    <Component Name="DHR8R1" TI="13337" Line="223" Offs="16"/>
+    <Component Name="DHR12R2" TI="13351" Line="224" Offs="20"/>
+    <Component Name="DHR12L2" TI="13365" Line="225" Offs="24"/>
+    <Component Name="DHR8R2" TI="13379" Line="226" Offs="28"/>
+    <Component Name="DHR12RD" TI="13393" Line="227" Offs="32"/>
+    <Component Name="DHR12LD" TI="13407" Line="228" Offs="36"/>
+    <Component Name="DHR8RD" TI="13421" Line="229" Offs="40"/>
+    <Component Name="DOR1" TI="13435" Line="230" Offs="44"/>
+    <Component Name="DOR2" TI="13449" Line="231" Offs="48"/>
+   </type>
+   <type Family="typedef" Name="DAC_TypeDef" Line="232" ID="13464" toTI="13274"/>
+   <type Family="ComponentList" Line="26" ID="13475">
+    <Component Name="DAC_Trigger" TI="13483" Line="28" Offs="0"/>
+    <Component Name="DAC_WaveGeneration" TI="13497" Line="29" Offs="4"/>
+    <Component Name="DAC_LFSRUnmask_TriangleAmplitude" TI="13511" Line="30" Offs="8"/>
+    <Component Name="DAC_OutputBuffer" TI="13525" Line="31" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="DAC_InitTypeDef" Line="32" ID="13540" toTI="13475"/>
+   <type Family="Pointer" TI="13658" toTI="13540"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_dbgmcu.c" >
+   <type Family="Base" Name="long int" ID="14247"/>
+   <type Family="Base" Name="short int" ID="14254"/>
+   <type Family="Base" Name="signed char" ID="14261"/>
+   <type Family="Base" Name="long unsigned int" ID="14279"/>
+   <type Family="typedef" Name="u32" Line="39" ID="14268" toTI="14279"/>
+   <type Family="Base" Name="short unsigned int" ID="14286"/>
+   <type Family="Base" Name="unsigned char" ID="14293"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="14326" toTI="14305"/>
+   <type Family="Base" Name="unsigned int" ID="14337"/>
+   <type Family="ComponentList" Line="235" ID="14344">
+    <Component Name="IDCODE" TI="14352" Line="237" Offs="0"/>
+    <Component Name="CR" TI="14366" Line="238" Offs="4"/>
+   </type>
+   <type Family="typedef" Name="DBGMCU_TypeDef" Line="239" ID="14380" toTI="14344"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" >
+   <type Family="Base" Name="long int" ID="14526"/>
+   <type Family="Base" Name="short int" ID="14533"/>
+   <type Family="Base" Name="signed char" ID="14540"/>
+   <type Family="Base" Name="long unsigned int" ID="14558"/>
+   <type Family="typedef" Name="u32" Line="39" ID="14547" toTI="14558"/>
+   <type Family="Base" Name="short unsigned int" ID="14576"/>
+   <type Family="typedef" Name="u16" Line="40" ID="14565" toTI="14576"/>
+   <type Family="Base" Name="unsigned char" ID="14583"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="14616" toTI="14595"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="14627" toTI="14595"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="14659" toTI="14638"/>
+   <type Family="Base" Name="unsigned int" ID="14670"/>
+   <type Family="ComponentList" Line="242" ID="14677">
+    <Component Name="CCR" TI="14685" Line="244" Offs="0"/>
+    <Component Name="CNDTR" TI="14699" Line="245" Offs="4"/>
+    <Component Name="CPAR" TI="14713" Line="246" Offs="8"/>
+    <Component Name="CMAR" TI="14727" Line="247" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="DMA_Channel_TypeDef" Line="248" ID="14742" toTI="14677"/>
+   <type Family="ComponentList" Line="250" ID="14753">
+    <Component Name="ISR" TI="14761" Line="252" Offs="0"/>
+    <Component Name="IFCR" TI="14775" Line="253" Offs="4"/>
+   </type>
+   <type Family="typedef" Name="DMA_TypeDef" Line="254" ID="14790" toTI="14753"/>
+   <type Family="ComponentList" Line="26" ID="14801">
+    <Component Name="DMA_PeripheralBaseAddr" TI="14809" Line="28" Offs="0"/>
+    <Component Name="DMA_MemoryBaseAddr" TI="14823" Line="29" Offs="4"/>
+    <Component Name="DMA_DIR" TI="14837" Line="30" Offs="8"/>
+    <Component Name="DMA_BufferSize" TI="14851" Line="31" Offs="12"/>
+    <Component Name="DMA_PeripheralInc" TI="14865" Line="32" Offs="16"/>
+    <Component Name="DMA_MemoryInc" TI="14879" Line="33" Offs="20"/>
+    <Component Name="DMA_PeripheralDataSize" TI="14893" Line="34" Offs="24"/>
+    <Component Name="DMA_MemoryDataSize" TI="14907" Line="35" Offs="28"/>
+    <Component Name="DMA_Mode" TI="14921" Line="36" Offs="32"/>
+    <Component Name="DMA_Priority" TI="14935" Line="37" Offs="36"/>
+    <Component Name="DMA_M2M" TI="14949" Line="38" Offs="40"/>
+   </type>
+   <type Family="typedef" Name="DMA_InitTypeDef" Line="39" ID="14964" toTI="14801"/>
+   <function Name="DMA_DeInit" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="63">
+   <type Family="Pointer" TI="15016" toTI="14742"/>
+    <parameter Name="DMAy_Channelx" TI="15016" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="63" Addr="0x0" Param="Yes"/>
    </function >
-   <function Name="USART_DMACmd" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="414">
-    <parameter Name="USARTx" TI="7893" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="414" Addr="0x0" Param="Yes"/>
-    <parameter Name="USART_DMAReq" TI="7163" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="414" Addr="0x1" Param="Yes"/>
-    <parameter Name="NewState" TI="7267" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="414" Addr="0x2" Param="Yes"/>
+   <function Name="DMA_Init" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="163">
+    <parameter Name="DMAy_Channelx" TI="15016" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="163" Addr="0x0" Param="Yes"/>
+   <type Family="Pointer" TI="15089" toTI="14964"/>
+    <parameter Name="DMA_InitStruct" TI="15089" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="163" Addr="0x1" Param="Yes"/>
+    <variable Name="tmpreg" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="165" Addr="0x0" TI="14547"/>
    </function >
-   <function Name="USART_SendData" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="572">
-    <parameter Name="USARTx" TI="7893" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="572" Addr="0x0" Param="Yes"/>
-    <parameter Name="Data" TI="7163" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="572" Addr="0x1" Param="Yes"/>
+   <function Name="DMA_Cmd" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="269">
+    <parameter Name="DMAy_Channelx" TI="15016" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="269" Addr="0x0" Param="Yes"/>
+    <parameter Name="NewState" TI="14659" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="269" Addr="0x1" Param="Yes"/>
    </function >
-   <function Name="USART_GetFlagStatus" TI="7224" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="822">
-    <parameter Name="USARTx" TI="7893" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="822" Addr="0x0" Param="Yes"/>
-    <parameter Name="USART_FLAG" TI="7163" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="822" Addr="0x1" Param="Yes"/>
+   <function Name="DMA_ITConfig" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="304">
+    <parameter Name="DMAy_Channelx" TI="15016" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="304" Addr="0x0" Param="Yes"/>
+    <parameter Name="DMA_IT" TI="14547" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="304" Addr="0x1" Param="Yes"/>
+    <parameter Name="NewState" TI="14659" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="304" Addr="0x2" Param="Yes"/>
    </function >
-   <function Name="USART_Init" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="141">
-    <parameter Name="USARTx" TI="7893" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="141" Addr="0x0" Param="Yes"/>
-    <parameter Name="USART_InitStruct" TI="7818" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="141" Addr="0x1" Param="Yes"/>
-    <variable Name="tmpreg" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="142" Addr="0x3" TI="7145"/>
-    <variable Name="apbclock" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="142" Addr="0x3" TI="7145"/>
-    <variable Name="integerdivider" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="143" Addr="0x2" TI="7145"/>
-    <variable Name="usartxbase" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="145" Addr="0x0" TI="7145"/>
-    <variable Name="RCC_ClocksStatus" FileName="C:\cortex\gateway\src\stm32f10x_usart.c" Line="146" Addr="0x3400000C" TI="7770"/>
+   <function Name="DMA_GetITStatus" TI="14627" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="567">
+    <parameter Name="DMA_IT" TI="14547" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="567" Addr="0x0" Param="Yes"/>
+    <variable Name="bitstatus" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="569" Addr="0x0" TI="14627"/>
+    <variable Name="tmpreg" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="570" Addr="0x0" TI="14547"/>
+   </function >
+   <function Name="DMA_ClearITPendingBit" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="659">
+    <parameter Name="DMA_IT" TI="14547" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_dma.c" Line="659" Addr="0x0" Param="Yes"/>
    </function >
   </module>
-  <module Name="C:\cortex\gateway\src\stm32f10x_i2c.c" >
-   <type Family="Base" Name="long int" ID="9516"/>
-   <type Family="Base" Name="short int" ID="9523"/>
-   <type Family="Base" Name="signed char" ID="9530"/>
-   <type Family="Base" Name="long unsigned int" ID="9548"/>
-   <type Family="typedef" Name="u32" Line="64" ID="9537" toTI="9548"/>
-   <type Family="Base" Name="short unsigned int" ID="9566"/>
-   <type Family="typedef" Name="u16" Line="65" ID="9555" toTI="9566"/>
-   <type Family="Base" Name="unsigned char" ID="9583"/>
-   <type Family="typedef" Name="u8" Line="66" ID="9573" toTI="9583"/>
-   <type Family="typedef" Name="FlagStatus" Line="82" ID="9616" toTI="9595"/>
-   <type Family="typedef" Name="ITStatus" Line="82" ID="9627" toTI="9595"/>
-   <type Family="typedef" Name="FunctionalState" Line="84" ID="9659" toTI="9638"/>
-   <type Family="typedef" Name="ErrorStatus" Line="87" ID="9691" toTI="9670"/>
-   <type Family="ComponentList" Line="379" ID="9705">
-    <Component Name="CR1" TI="9714" Line="380" Offs="0"/>
-    <Component Name="RESERVED0" TI="9729" Line="381" Offs="2"/>
-    <Component Name="CR2" TI="9744" Line="382" Offs="4"/>
-    <Component Name="RESERVED1" TI="9759" Line="383" Offs="6"/>
-    <Component Name="OAR1" TI="9774" Line="384" Offs="8"/>
-    <Component Name="RESERVED2" TI="9789" Line="385" Offs="10"/>
-    <Component Name="OAR2" TI="9804" Line="386" Offs="12"/>
-    <Component Name="RESERVED3" TI="9819" Line="387" Offs="14"/>
-    <Component Name="DR" TI="9834" Line="388" Offs="16"/>
-    <Component Name="RESERVED4" TI="9848" Line="389" Offs="18"/>
-    <Component Name="SR1" TI="9863" Line="390" Offs="20"/>
-    <Component Name="RESERVED5" TI="9878" Line="391" Offs="22"/>
-    <Component Name="SR2" TI="9893" Line="392" Offs="24"/>
-    <Component Name="RESERVED6" TI="9908" Line="393" Offs="26"/>
-    <Component Name="CCR" TI="9923" Line="394" Offs="28"/>
-    <Component Name="RESERVED7" TI="9938" Line="395" Offs="30"/>
-    <Component Name="TRISE" TI="9953" Line="396" Offs="32"/>
-    <Component Name="RESERVED8" TI="9968" Line="397" Offs="34"/>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_exti.c" >
+   <type Family="Base" Name="long int" ID="15573"/>
+   <type Family="Base" Name="short int" ID="15580"/>
+   <type Family="Base" Name="signed char" ID="15587"/>
+   <type Family="Base" Name="long unsigned int" ID="15605"/>
+   <type Family="typedef" Name="u32" Line="39" ID="15594" toTI="15605"/>
+   <type Family="Base" Name="short unsigned int" ID="15612"/>
+   <type Family="Base" Name="unsigned char" ID="15619"/>
+   <type Family="typedef" Name="vu32" Line="47" ID="15626" toTI="15637"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="15663" toTI="15642"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="15674" toTI="15642"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="15706" toTI="15685"/>
+   <type Family="Base" Name="unsigned int" ID="15717"/>
+   <type Family="ComponentList" Line="257" ID="15724">
+    <Component Name="IMR" TI="15733" Line="259" Offs="0"/>
+    <Component Name="EMR" TI="15748" Line="260" Offs="4"/>
+    <Component Name="RTSR" TI="15763" Line="261" Offs="8"/>
+    <Component Name="FTSR" TI="15778" Line="262" Offs="12"/>
+    <Component Name="SWIER" TI="15793" Line="263" Offs="16"/>
+    <Component Name="PR" TI="15808" Line="264" Offs="20"/>
    </type>
-   <type Family="typedef" Name="I2C_TypeDef" Line="398" ID="9984" toTI="9705"/>
-   <type Family="ComponentList" Line="52" ID="9996">
-    <Component Name="I2C_Mode" TI="10004" Line="53" Offs="0"/>
-    <Component Name="I2C_DutyCycle" TI="10018" Line="54" Offs="2"/>
-    <Component Name="I2C_OwnAddress1" TI="10032" Line="55" Offs="4"/>
-    <Component Name="I2C_Ack" TI="10046" Line="56" Offs="6"/>
-    <Component Name="I2C_AcknowledgedAddress" TI="10060" Line="57" Offs="8"/>
-    <Component Name="I2C_ClockSpeed" TI="10074" Line="58" Offs="12"/>
+   <type Family="typedef" Name="EXTI_TypeDef" Line="265" ID="15823" toTI="15724"/>
+   <type Family="typedef" Name="EXTIMode_TypeDef" Line="30" ID="15856" toTI="15835"/>
+   <type Family="typedef" Name="EXTITrigger_TypeDef" Line="40" ID="15894" toTI="15867"/>
+   <type Family="ComponentList" Line="47" ID="15905">
+    <Component Name="EXTI_Line" TI="15913" Line="49" Offs="0"/>
+    <Component Name="EXTI_Mode" TI="15927" Line="50" Offs="4"/>
+    <Component Name="EXTI_Trigger" TI="15941" Line="51" Offs="5"/>
+    <Component Name="EXTI_LineCmd" TI="15955" Line="52" Offs="6"/>
    </type>
-   <type Family="typedef" Name="I2C_InitTypeDef" Line="59" ID="10089" toTI="9996"/>
-   <type Family="ComponentList" Line="51" ID="10100">
-    <Component Name="SYSCLK_Frequency" TI="10108" Line="52" Offs="0"/>
-    <Component Name="HCLK_Frequency" TI="10122" Line="53" Offs="4"/>
-    <Component Name="PCLK1_Frequency" TI="10136" Line="54" Offs="8"/>
-    <Component Name="PCLK2_Frequency" TI="10150" Line="55" Offs="12"/>
-    <Component Name="ADCCLK_Frequency" TI="10164" Line="56" Offs="16"/>
+   <type Family="typedef" Name="EXTI_InitTypeDef" Line="53" ID="15970" toTI="15905"/>
+   <type Family="Pointer" TI="16040" toTI="15970"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_flash.c" >
+   <type Family="Base" Name="long int" ID="16365"/>
+   <type Family="Base" Name="short int" ID="16372"/>
+   <type Family="Base" Name="signed char" ID="16379"/>
+   <type Family="Base" Name="long unsigned int" ID="16397"/>
+   <type Family="typedef" Name="u32" Line="39" ID="16386" toTI="16397"/>
+   <type Family="Base" Name="short unsigned int" ID="16404"/>
+   <type Family="Base" Name="unsigned char" ID="16411"/>
+   <type Family="Base" Name="unsigned int" ID="16423"/>
+   <type Family="ComponentList" Line="268" ID="16430">
+    <Component Name="ACR" TI="16439" Line="270" Offs="0"/>
+    <Component Name="KEYR" TI="16454" Line="271" Offs="4"/>
+    <Component Name="OPTKEYR" TI="16469" Line="272" Offs="8"/>
+    <Component Name="SR" TI="16484" Line="273" Offs="12"/>
+    <Component Name="CR" TI="16498" Line="274" Offs="16"/>
+    <Component Name="AR" TI="16512" Line="275" Offs="20"/>
+    <Component Name="RESERVED" TI="16526" Line="276" Offs="24"/>
+    <Component Name="OBR" TI="16541" Line="277" Offs="28"/>
+    <Component Name="WRPR" TI="16556" Line="278" Offs="32"/>
    </type>
-   <type Family="typedef" Name="RCC_ClocksTypeDef" Line="57" ID="10179" toTI="10100"/>
-   <type Family="Pointer" TI="10229" toTI="10089"/>
-   <function Name="I2C_Cmd" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="292">
-   <type Family="Pointer" TI="10288" toTI="9984"/>
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="292" Addr="0x0" Param="Yes"/>
-    <parameter Name="NewState" TI="9659" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="292" Addr="0x1" Param="Yes"/>
+   <type Family="typedef" Name="FLASH_TypeDef" Line="279" ID="16572" toTI="16430"/>
+   <function Name="FLASH_SetLatency" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_flash.c" Line="86">
+    <parameter Name="FLASH_Latency" TI="16386" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_flash.c" Line="86" Addr="0x0" Param="Yes"/>
    </function >
-   <function Name="I2C_GenerateSTART" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="373">
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="373" Addr="0x0" Param="Yes"/>
-    <parameter Name="NewState" TI="9659" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="373" Addr="0x1" Param="Yes"/>
+   <function Name="FLASH_PrefetchBufferCmd" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_flash.c" Line="126">
+    <parameter Name="FLASH_PrefetchBuffer" TI="16386" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_flash.c" Line="126" Addr="0x0" Param="Yes"/>
    </function >
-   <function Name="I2C_GenerateSTOP" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="400">
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="400" Addr="0x0" Param="Yes"/>
-    <parameter Name="NewState" TI="9659" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="400" Addr="0x1" Param="Yes"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_fsmc.c" >
+   <type Family="Base" Name="long int" ID="16732"/>
+   <type Family="Base" Name="short int" ID="16739"/>
+   <type Family="Base" Name="signed char" ID="16746"/>
+   <type Family="Base" Name="long unsigned int" ID="16764"/>
+   <type Family="typedef" Name="u32" Line="39" ID="16753" toTI="16764"/>
+   <type Family="Base" Name="short unsigned int" ID="16782"/>
+   <type Family="typedef" Name="u16" Line="40" ID="16771" toTI="16782"/>
+   <type Family="Base" Name="unsigned char" ID="16789"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="16822" toTI="16801"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="16833" toTI="16801"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="16865" toTI="16844"/>
+   <type Family="Base" Name="unsigned int" ID="16876"/>
+   <type Family="ComponentList" Line="294" ID="16883">
+   <type Family="array" ID="16908" toTI="16764"/>
+    <Component Name="BTCR" TI="16892" Line="296" Offs="0"/>
+   </type>
+   <type Family="typedef" Name="FSMC_Bank1_TypeDef" Line="297" ID="16929" toTI="16883"/>
+   <type Family="ComponentList" Line="299" ID="16941">
+   <type Family="array" ID="16966" toTI="16764"/>
+    <Component Name="BWTR" TI="16950" Line="301" Offs="0"/>
+   </type>
+   <type Family="typedef" Name="FSMC_Bank1E_TypeDef" Line="302" ID="16987" toTI="16941"/>
+   <type Family="ComponentList" Line="304" ID="16999">
+    <Component Name="PCR2" TI="17008" Line="306" Offs="0"/>
+    <Component Name="SR2" TI="17023" Line="307" Offs="4"/>
+    <Component Name="PMEM2" TI="17038" Line="308" Offs="8"/>
+    <Component Name="PATT2" TI="17053" Line="309" Offs="12"/>
+    <Component Name="RESERVED0" TI="17068" Line="310" Offs="16"/>
+    <Component Name="ECCR2" TI="17083" Line="311" Offs="20"/>
+   </type>
+   <type Family="typedef" Name="FSMC_Bank2_TypeDef" Line="312" ID="17099" toTI="16999"/>
+   <type Family="ComponentList" Line="314" ID="17111">
+    <Component Name="PCR3" TI="17120" Line="316" Offs="0"/>
+    <Component Name="SR3" TI="17135" Line="317" Offs="4"/>
+    <Component Name="PMEM3" TI="17150" Line="318" Offs="8"/>
+    <Component Name="PATT3" TI="17165" Line="319" Offs="12"/>
+    <Component Name="RESERVED0" TI="17180" Line="320" Offs="16"/>
+    <Component Name="ECCR3" TI="17195" Line="321" Offs="20"/>
+   </type>
+   <type Family="typedef" Name="FSMC_Bank3_TypeDef" Line="322" ID="17211" toTI="17111"/>
+   <type Family="ComponentList" Line="324" ID="17223">
+    <Component Name="PCR4" TI="17232" Line="326" Offs="0"/>
+    <Component Name="SR4" TI="17247" Line="327" Offs="4"/>
+    <Component Name="PMEM4" TI="17262" Line="328" Offs="8"/>
+    <Component Name="PATT4" TI="17277" Line="329" Offs="12"/>
+    <Component Name="PIO4" TI="17292" Line="330" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="FSMC_Bank4_TypeDef" Line="331" ID="17308" toTI="17223"/>
+   <type Family="ComponentList" Line="26" ID="17320">
+    <Component Name="FSMC_AddressSetupTime" TI="17328" Line="28" Offs="0"/>
+    <Component Name="FSMC_AddressHoldTime" TI="17342" Line="29" Offs="4"/>
+    <Component Name="FSMC_DataSetupTime" TI="17356" Line="30" Offs="8"/>
+    <Component Name="FSMC_BusTurnAroundDuration" TI="17370" Line="31" Offs="12"/>
+    <Component Name="FSMC_CLKDivision" TI="17384" Line="32" Offs="16"/>
+    <Component Name="FSMC_DataLatency" TI="17398" Line="33" Offs="20"/>
+    <Component Name="FSMC_AccessMode" TI="17412" Line="34" Offs="24"/>
+   </type>
+   <type Family="typedef" Name="FSMC_NORSRAMTimingInitTypeDef" Line="35" ID="17427" toTI="17320"/>
+   <type Family="ComponentList" Line="38" ID="17438">
+    <Component Name="FSMC_Bank" TI="17446" Line="40" Offs="0"/>
+    <Component Name="FSMC_DataAddressMux" TI="17460" Line="41" Offs="4"/>
+    <Component Name="FSMC_MemoryType" TI="17474" Line="42" Offs="8"/>
+    <Component Name="FSMC_MemoryDataWidth" TI="17488" Line="43" Offs="12"/>
+    <Component Name="FSMC_BurstAccessMode" TI="17502" Line="44" Offs="16"/>
+    <Component Name="FSMC_WaitSignalPolarity" TI="17516" Line="45" Offs="20"/>
+    <Component Name="FSMC_WrapMode" TI="17530" Line="46" Offs="24"/>
+    <Component Name="FSMC_WaitSignalActive" TI="17544" Line="47" Offs="28"/>
+    <Component Name="FSMC_WriteOperation" TI="17558" Line="48" Offs="32"/>
+    <Component Name="FSMC_WaitSignal" TI="17572" Line="49" Offs="36"/>
+    <Component Name="FSMC_ExtendedMode" TI="17586" Line="50" Offs="40"/>
+    <Component Name="FSMC_WriteBurst" TI="17600" Line="51" Offs="44"/>
+   <type Family="Pointer" TI="17643" toTI="17427"/>
+    <Component Name="FSMC_ReadWriteTimingStruct" TI="17614" Line="53" Offs="48"/>
+    <Component Name="FSMC_WriteTimingStruct" TI="17628" Line="55" Offs="52"/>
+   </type>
+   <type Family="typedef" Name="FSMC_NORSRAMInitTypeDef" Line="56" ID="17649" toTI="17438"/>
+   <type Family="ComponentList" Line="59" ID="17660">
+    <Component Name="FSMC_SetupTime" TI="17668" Line="61" Offs="0"/>
+    <Component Name="FSMC_WaitSetupTime" TI="17682" Line="62" Offs="4"/>
+    <Component Name="FSMC_HoldSetupTime" TI="17696" Line="63" Offs="8"/>
+    <Component Name="FSMC_HiZSetupTime" TI="17710" Line="64" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="FSMC_NAND_PCCARDTimingInitTypeDef" Line="65" ID="17725" toTI="17660"/>
+   <type Family="ComponentList" Line="68" ID="17736">
+    <Component Name="FSMC_Bank" TI="17744" Line="70" Offs="0"/>
+    <Component Name="FSMC_Waitfeature" TI="17758" Line="71" Offs="4"/>
+    <Component Name="FSMC_MemoryDataWidth" TI="17772" Line="72" Offs="8"/>
+    <Component Name="FSMC_ECC" TI="17786" Line="73" Offs="12"/>
+    <Component Name="FSMC_ECCPageSize" TI="17800" Line="74" Offs="16"/>
+    <Component Name="FSMC_AddressLowMapping" TI="17814" Line="75" Offs="20"/>
+    <Component Name="FSMC_TCLRSetupTime" TI="17828" Line="76" Offs="24"/>
+    <Component Name="FSMC_TARSetupTime" TI="17842" Line="77" Offs="28"/>
+   <type Family="Pointer" TI="17885" toTI="17725"/>
+    <Component Name="FSMC_CommonSpaceTimingStruct" TI="17856" Line="79" Offs="32"/>
+    <Component Name="FSMC_AttributeSpaceTimingStruct" TI="17870" Line="81" Offs="36"/>
+   </type>
+   <type Family="typedef" Name="FSMC_NANDInitTypeDef" Line="82" ID="17891" toTI="17736"/>
+   <type Family="ComponentList" Line="85" ID="17902">
+    <Component Name="FSMC_Waitfeature" TI="17910" Line="87" Offs="0"/>
+    <Component Name="FSMC_AddressLowMapping" TI="17924" Line="88" Offs="4"/>
+    <Component Name="FSMC_TCLRSetupTime" TI="17938" Line="89" Offs="8"/>
+    <Component Name="FSMC_TARSetupTime" TI="17952" Line="90" Offs="12"/>
+    <Component Name="FSMC_CommonSpaceTimingStruct" TI="17966" Line="92" Offs="16"/>
+    <Component Name="FSMC_AttributeSpaceTimingStruct" TI="17980" Line="94" Offs="20"/>
+    <Component Name="FSMC_IOSpaceTimingStruct" TI="17994" Line="96" Offs="24"/>
+   </type>
+   <type Family="typedef" Name="FSMC_PCCARDInitTypeDef" Line="97" ID="18009" toTI="17902"/>
+   <type Family="Pointer" TI="18157" toTI="17649"/>
+   <type Family="Pointer" TI="18247" toTI="17891"/>
+   <type Family="Pointer" TI="18296" toTI="18009"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" >
+   <type Family="Base" Name="long int" ID="19129"/>
+   <type Family="Base" Name="short int" ID="19136"/>
+   <type Family="Base" Name="signed char" ID="19143"/>
+   <type Family="Base" Name="long unsigned int" ID="19161"/>
+   <type Family="typedef" Name="u32" Line="39" ID="19150" toTI="19161"/>
+   <type Family="Base" Name="short unsigned int" ID="19179"/>
+   <type Family="typedef" Name="u16" Line="40" ID="19168" toTI="19179"/>
+   <type Family="Base" Name="unsigned char" ID="19196"/>
+   <type Family="typedef" Name="u8" Line="41" ID="19186" toTI="19196"/>
+   <type Family="typedef" Name="vu32" Line="47" ID="19203" toTI="19214"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="19240" toTI="19219"/>
+   <type Family="Base" Name="unsigned int" ID="19251"/>
+   <type Family="ComponentList" Line="334" ID="19258">
+    <Component Name="CRL" TI="19267" Line="336" Offs="0"/>
+    <Component Name="CRH" TI="19282" Line="337" Offs="4"/>
+    <Component Name="IDR" TI="19297" Line="338" Offs="8"/>
+    <Component Name="ODR" TI="19312" Line="339" Offs="12"/>
+    <Component Name="BSRR" TI="19327" Line="340" Offs="16"/>
+    <Component Name="BRR" TI="19342" Line="341" Offs="20"/>
+    <Component Name="LCKR" TI="19357" Line="342" Offs="24"/>
+   </type>
+   <type Family="typedef" Name="GPIO_TypeDef" Line="343" ID="19373" toTI="19258"/>
+   <type Family="ComponentList" Line="345" ID="19385">
+    <Component Name="EVCR" TI="19394" Line="347" Offs="0"/>
+    <Component Name="MAPR" TI="19409" Line="348" Offs="4"/>
+   <type Family="array" ID="19440" toTI="19161"/>
+    <Component Name="EXTICR" TI="19424" Line="349" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="AFIO_TypeDef" Line="350" ID="19461" toTI="19385"/>
+   <type Family="typedef" Name="GPIOSpeed_TypeDef" Line="39" ID="19500" toTI="19473"/>
+   <type Family="typedef" Name="GPIOMode_TypeDef" Line="54" ID="19569" toTI="19511"/>
+   <type Family="ComponentList" Line="62" ID="19580">
+    <Component Name="GPIO_Pin" TI="19588" Line="64" Offs="0"/>
+    <Component Name="GPIO_Speed" TI="19602" Line="65" Offs="2"/>
+    <Component Name="GPIO_Mode" TI="19616" Line="66" Offs="3"/>
+   </type>
+   <type Family="typedef" Name="GPIO_InitTypeDef" Line="67" ID="19631" toTI="19580"/>
+   <type Family="typedef" Name="BitAction" Line="73" ID="19663" toTI="19642"/>
+   <type Family="Pointer" TI="19715" toTI="19373"/>
+   <function Name="GPIO_Init" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="124">
+    <parameter Name="GPIOx" TI="19715" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="124" Addr="0x0" Param="Yes"/>
+   <type Family="Pointer" TI="19884" toTI="19631"/>
+    <parameter Name="GPIO_InitStruct" TI="19884" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="124" Addr="0x1" Param="Yes"/>
+    <variable Name="currentmode" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="126" Addr="0x0" TI="19150"/>
+    <variable Name="currentpin" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="126" Addr="0x0" TI="19150"/>
+    <variable Name="pinpos" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="126" Addr="0x0" TI="19150"/>
+    <variable Name="pos" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="126" Addr="0x0" TI="19150"/>
+    <variable Name="tmpreg" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="127" Addr="0x0" TI="19150"/>
+    <variable Name="pinmask" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="127" Addr="0x0" TI="19150"/>
    </function >
-   <function Name="I2C_AcknowledgeConfig" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="427">
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="427" Addr="0x0" Param="Yes"/>
-    <parameter Name="NewState" TI="9659" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="427" Addr="0x1" Param="Yes"/>
+   <function Name="GPIO_ReadOutputDataBit" TI="19186" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="289">
+    <parameter Name="GPIOx" TI="19715" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="289" Addr="0x0" Param="Yes"/>
+    <parameter Name="GPIO_Pin" TI="19168" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="289" Addr="0x1" Param="Yes"/>
+    <variable Name="bitstatus" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="291" Addr="0x0" TI="19186"/>
    </function >
-   <function Name="I2C_ITConfig" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="539">
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="539" Addr="0x0" Param="Yes"/>
-    <parameter Name="I2C_IT" TI="9555" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="539" Addr="0x1" Param="Yes"/>
-    <parameter Name="NewState" TI="9659" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="539" Addr="0x2" Param="Yes"/>
+   <function Name="GPIO_WriteBit" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="374">
+    <parameter Name="GPIOx" TI="19715" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="374" Addr="0x0" Param="Yes"/>
+    <parameter Name="GPIO_Pin" TI="19168" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="374" Addr="0x1" Param="Yes"/>
+    <parameter Name="BitVal" TI="19663" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_gpio.c" Line="374" Addr="0x2" Param="Yes"/>
    </function >
-   <function Name="I2C_SendData" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="566">
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="566" Addr="0x0" Param="Yes"/>
-    <parameter Name="Data" TI="9573" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="566" Addr="0x1" Param="Yes"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" >
+   <type Family="Base" Name="long int" ID="20809"/>
+   <type Family="Base" Name="short int" ID="20816"/>
+   <type Family="Base" Name="signed char" ID="20823"/>
+   <type Family="Base" Name="long unsigned int" ID="20841"/>
+   <type Family="typedef" Name="u32" Line="39" ID="20830" toTI="20841"/>
+   <type Family="Base" Name="short unsigned int" ID="20859"/>
+   <type Family="typedef" Name="u16" Line="40" ID="20848" toTI="20859"/>
+   <type Family="Base" Name="unsigned char" ID="20876"/>
+   <type Family="typedef" Name="u8" Line="41" ID="20866" toTI="20876"/>
+   <type Family="typedef" Name="vu32" Line="47" ID="20883" toTI="20894"/>
+   <type Family="typedef" Name="vu16" Line="48" ID="20899" toTI="20910"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="20936" toTI="20915"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="20947" toTI="20915"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="20979" toTI="20958"/>
+   <type Family="typedef" Name="ErrorStatus" Line="62" ID="21011" toTI="20990"/>
+   <type Family="Base" Name="unsigned int" ID="21022"/>
+   <type Family="ComponentList" Line="353" ID="21029">
+    <Component Name="CR1" TI="21038" Line="355" Offs="0"/>
+    <Component Name="RESERVED0" TI="21053" Line="356" Offs="2"/>
+    <Component Name="CR2" TI="21068" Line="357" Offs="4"/>
+    <Component Name="RESERVED1" TI="21083" Line="358" Offs="6"/>
+    <Component Name="OAR1" TI="21098" Line="359" Offs="8"/>
+    <Component Name="RESERVED2" TI="21113" Line="360" Offs="10"/>
+    <Component Name="OAR2" TI="21128" Line="361" Offs="12"/>
+    <Component Name="RESERVED3" TI="21143" Line="362" Offs="14"/>
+    <Component Name="DR" TI="21158" Line="363" Offs="16"/>
+    <Component Name="RESERVED4" TI="21172" Line="364" Offs="18"/>
+    <Component Name="SR1" TI="21187" Line="365" Offs="20"/>
+    <Component Name="RESERVED5" TI="21202" Line="366" Offs="22"/>
+    <Component Name="SR2" TI="21217" Line="367" Offs="24"/>
+    <Component Name="RESERVED6" TI="21232" Line="368" Offs="26"/>
+    <Component Name="CCR" TI="21247" Line="369" Offs="28"/>
+    <Component Name="RESERVED7" TI="21262" Line="370" Offs="30"/>
+    <Component Name="TRISE" TI="21277" Line="371" Offs="32"/>
+    <Component Name="RESERVED8" TI="21292" Line="372" Offs="34"/>
+   </type>
+   <type Family="typedef" Name="I2C_TypeDef" Line="373" ID="21308" toTI="21029"/>
+   <type Family="ComponentList" Line="26" ID="21320">
+    <Component Name="I2C_Mode" TI="21328" Line="28" Offs="0"/>
+    <Component Name="I2C_DutyCycle" TI="21342" Line="29" Offs="2"/>
+    <Component Name="I2C_OwnAddress1" TI="21356" Line="30" Offs="4"/>
+    <Component Name="I2C_Ack" TI="21370" Line="31" Offs="6"/>
+    <Component Name="I2C_AcknowledgedAddress" TI="21384" Line="32" Offs="8"/>
+    <Component Name="I2C_ClockSpeed" TI="21398" Line="33" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="I2C_InitTypeDef" Line="34" ID="21413" toTI="21320"/>
+   <type Family="ComponentList" Line="25" ID="21424">
+    <Component Name="SYSCLK_Frequency" TI="21432" Line="27" Offs="0"/>
+    <Component Name="HCLK_Frequency" TI="21446" Line="28" Offs="4"/>
+    <Component Name="PCLK1_Frequency" TI="21460" Line="29" Offs="8"/>
+    <Component Name="PCLK2_Frequency" TI="21474" Line="30" Offs="12"/>
+    <Component Name="ADCCLK_Frequency" TI="21488" Line="31" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="RCC_ClocksTypeDef" Line="32" ID="21503" toTI="21424"/>
+   <type Family="Pointer" TI="21555" toTI="21308"/>
+   <function Name="I2C_Init" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="149">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="149" Addr="0x0" Param="Yes"/>
+   <type Family="Pointer" TI="21691" toTI="21413"/>
+    <parameter Name="I2C_InitStruct" TI="21691" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="149" Addr="0x1" Param="Yes"/>
+    <variable Name="tmpreg" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="151" Addr="0x0" TI="20848"/>
+    <variable Name="freqrange" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="151" Addr="0x0" TI="20848"/>
+    <variable Name="result" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="152" Addr="0x0" TI="20848"/>
+    <variable Name="pclk1" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="153" Addr="0x0" TI="20830"/>
+    <variable Name="rcc_clocks" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="154" Addr="0x34000004" TI="21503"/>
    </function >
-   <function Name="I2C_ReceiveData" TI="9573" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="582">
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="582" Addr="0x0" Param="Yes"/>
+   <function Name="I2C_Cmd" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="291">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="291" Addr="0x0" Param="Yes"/>
+    <parameter Name="NewState" TI="20979" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="291" Addr="0x1" Param="Yes"/>
    </function >
-   <function Name="I2C_Send7bitAddress" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="604">
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="604" Addr="0x0" Param="Yes"/>
-    <parameter Name="Address" TI="9573" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="604" Addr="0x1" Param="Yes"/>
-    <parameter Name="I2C_Direction" TI="9573" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="604" Addr="0x2" Param="Yes"/>
+   <function Name="I2C_GenerateSTART" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="372">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="372" Addr="0x0" Param="Yes"/>
+    <parameter Name="NewState" TI="20979" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="372" Addr="0x1" Param="Yes"/>
    </function >
-   <function Name="I2C_StretchClockCmd" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="846">
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="846" Addr="0x0" Param="Yes"/>
-    <parameter Name="NewState" TI="9659" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="846" Addr="0x1" Param="Yes"/>
+   <function Name="I2C_GenerateSTOP" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="399">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="399" Addr="0x0" Param="Yes"/>
+    <parameter Name="NewState" TI="20979" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="399" Addr="0x1" Param="Yes"/>
    </function >
-   <function Name="I2C_GetLastEvent" TI="9537" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="900">
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="900" Addr="0x0" Param="Yes"/>
+   <function Name="I2C_AcknowledgeConfig" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="426">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="426" Addr="0x0" Param="Yes"/>
+    <parameter Name="NewState" TI="20979" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="426" Addr="0x1" Param="Yes"/>
    </function >
-   <function Name="I2C_ClearFlag" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="1093">
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="1093" Addr="0x0" Param="Yes"/>
-    <parameter Name="I2C_FLAG" TI="9537" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="1093" Addr="0x1" Param="Yes"/>
+   <function Name="I2C_ITConfig" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="538">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="538" Addr="0x0" Param="Yes"/>
+    <parameter Name="I2C_IT" TI="20848" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="538" Addr="0x1" Param="Yes"/>
+    <parameter Name="NewState" TI="20979" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="538" Addr="0x2" Param="Yes"/>
    </function >
-   <function Name="I2C_GetITStatus" TI="9627" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="1132">
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="1132" Addr="0x0" Param="Yes"/>
-    <parameter Name="I2C_IT" TI="9537" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="1132" Addr="0x1" Param="Yes"/>
-    <variable Name="bitstatus" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="1133" Addr="0x0" TI="9627"/>
+   <function Name="I2C_SendData" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="565">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="565" Addr="0x0" Param="Yes"/>
+    <parameter Name="Data" TI="20866" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="565" Addr="0x1" Param="Yes"/>
    </function >
-   <function Name="I2C_ClearITPendingBit" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="1202">
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="1202" Addr="0x0" Param="Yes"/>
-    <parameter Name="I2C_IT" TI="9537" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="1202" Addr="0x1" Param="Yes"/>
+   <function Name="I2C_ReceiveData" TI="20866" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="581">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="581" Addr="0x0" Param="Yes"/>
    </function >
-   <function Name="I2C_Init" TI="0" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="150">
-    <parameter Name="I2Cx" TI="10288" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="150" Addr="0x0" Param="Yes"/>
-    <parameter Name="I2C_InitStruct" TI="10229" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="150" Addr="0x1" Param="Yes"/>
-    <variable Name="tmpreg" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="151" Addr="0x4" TI="9555"/>
-    <variable Name="freqrange" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="151" Addr="0xE" TI="9555"/>
-    <variable Name="result" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="152" Addr="0x2" TI="9555"/>
-    <variable Name="pclk1" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="153" Addr="0x0" TI="9537"/>
-    <variable Name="rcc_clocks" FileName="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="154" Addr="0x34000004" TI="10179"/>
+   <function Name="I2C_Send7bitAddress" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="603">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="603" Addr="0x0" Param="Yes"/>
+    <parameter Name="Address" TI="20866" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="603" Addr="0x1" Param="Yes"/>
+    <parameter Name="I2C_Direction" TI="20866" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="603" Addr="0x2" Param="Yes"/>
+   </function >
+   <function Name="I2C_StretchClockCmd" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="845">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="845" Addr="0x0" Param="Yes"/>
+    <parameter Name="NewState" TI="20979" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="845" Addr="0x1" Param="Yes"/>
+   </function >
+   <function Name="I2C_GetLastEvent" TI="20830" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="899">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="899" Addr="0x0" Param="Yes"/>
+    <variable Name="lastevent" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="901" Addr="0x0" TI="20830"/>
+    <variable Name="flag1" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="902" Addr="0x0" TI="20830"/>
+    <variable Name="flag2" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="902" Addr="0x0" TI="20830"/>
+   </function >
+   <function Name="I2C_ClearFlag" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="1092">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="1092" Addr="0x0" Param="Yes"/>
+    <parameter Name="I2C_FLAG" TI="20830" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="1092" Addr="0x1" Param="Yes"/>
+    <variable Name="flagpos" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="1094" Addr="0x4000000" TI="20830"/>
+   </function >
+   <function Name="I2C_GetITStatus" TI="20947" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="1131">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="1131" Addr="0x0" Param="Yes"/>
+    <parameter Name="I2C_IT" TI="20830" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="1131" Addr="0x1" Param="Yes"/>
+    <variable Name="bitstatus" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="1133" Addr="0x0" TI="20947"/>
+    <variable Name="enablestatus" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="1134" Addr="0x0" TI="20830"/>
+   </function >
+   <function Name="I2C_ClearITPendingBit" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="1201">
+    <parameter Name="I2Cx" TI="21555" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="1201" Addr="0x0" Param="Yes"/>
+    <parameter Name="I2C_IT" TI="20830" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="1201" Addr="0x1" Param="Yes"/>
+    <variable Name="flagpos" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_i2c.c" Line="1203" Addr="0x4000000" TI="20830"/>
+   </function >
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_iwdg.c" >
+   <type Family="Base" Name="long int" ID="23621"/>
+   <type Family="Base" Name="short int" ID="23628"/>
+   <type Family="Base" Name="signed char" ID="23635"/>
+   <type Family="Base" Name="long unsigned int" ID="23653"/>
+   <type Family="typedef" Name="u32" Line="39" ID="23642" toTI="23653"/>
+   <type Family="Base" Name="short unsigned int" ID="23671"/>
+   <type Family="typedef" Name="u16" Line="40" ID="23660" toTI="23671"/>
+   <type Family="Base" Name="unsigned char" ID="23688"/>
+   <type Family="typedef" Name="u8" Line="41" ID="23678" toTI="23688"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="23721" toTI="23700"/>
+   <type Family="Base" Name="unsigned int" ID="23732"/>
+   <type Family="ComponentList" Line="376" ID="23739">
+    <Component Name="KR" TI="23748" Line="378" Offs="0"/>
+    <Component Name="PR" TI="23762" Line="379" Offs="4"/>
+    <Component Name="RLR" TI="23776" Line="380" Offs="8"/>
+    <Component Name="SR" TI="23791" Line="381" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="IWDG_TypeDef" Line="382" ID="23806" toTI="23739"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_lib.c" >
+   <type Family="Base" Name="long int" ID="24061"/>
+   <type Family="Base" Name="short int" ID="24068"/>
+   <type Family="Base" Name="signed char" ID="24075"/>
+   <type Family="Base" Name="long unsigned int" ID="24082"/>
+   <type Family="Base" Name="short unsigned int" ID="24089"/>
+   <type Family="Base" Name="unsigned char" ID="24096"/>
+   <type Family="Base" Name="unsigned int" ID="24103"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" >
+   <type Family="Base" Name="long int" ID="24148"/>
+   <type Family="Base" Name="short int" ID="24155"/>
+   <type Family="Base" Name="signed char" ID="24162"/>
+   <type Family="Base" Name="long unsigned int" ID="24180"/>
+   <type Family="typedef" Name="u32" Line="39" ID="24169" toTI="24180"/>
+   <type Family="Base" Name="short unsigned int" ID="24198"/>
+   <type Family="typedef" Name="u16" Line="40" ID="24187" toTI="24198"/>
+   <type Family="Base" Name="unsigned char" ID="24215"/>
+   <type Family="typedef" Name="u8" Line="41" ID="24205" toTI="24215"/>
+   <type Family="typedef" Name="vu32" Line="47" ID="24222" toTI="24233"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="24264" toTI="24243"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="24296" toTI="24275"/>
+   <type Family="Base" Name="unsigned int" ID="24307"/>
+   <type Family="ComponentList" Line="385" ID="24314">
+   <type Family="array" ID="24499" toTI="24180"/>
+    <Component Name="ISER" TI="24324" Line="387" Offs="0"/>
+   <type Family="array" ID="24520" toTI="24169"/>
+    <Component Name="RESERVED0" TI="24339" Line="388" Offs="8"/>
+    <Component Name="ICER" TI="24354" Line="389" Offs="128"/>
+    <Component Name="RSERVED1" TI="24370" Line="390" Offs="136"/>
+    <Component Name="ISPR" TI="24386" Line="391" Offs="256"/>
+    <Component Name="RESERVED2" TI="24402" Line="392" Offs="264"/>
+    <Component Name="ICPR" TI="24418" Line="393" Offs="384"/>
+    <Component Name="RESERVED3" TI="24434" Line="394" Offs="392"/>
+    <Component Name="IABR" TI="24450" Line="395" Offs="512"/>
+   <type Family="array" ID="24556" toTI="24169"/>
+    <Component Name="RESERVED4" TI="24466" Line="396" Offs="520"/>
+   <type Family="array" ID="24572" toTI="24180"/>
+    <Component Name="IPR" TI="24482" Line="397" Offs="768"/>
+   </type>
+   <type Family="typedef" Name="NVIC_TypeDef" Line="398" ID="24593" toTI="24314"/>
+   <type Family="ComponentList" Line="400" ID="24605">
+    <Component Name="CPUID" TI="24614" Line="402" Offs="0"/>
+    <Component Name="ICSR" TI="24629" Line="403" Offs="4"/>
+    <Component Name="VTOR" TI="24644" Line="404" Offs="8"/>
+    <Component Name="AIRCR" TI="24659" Line="405" Offs="12"/>
+    <Component Name="SCR" TI="24674" Line="406" Offs="16"/>
+    <Component Name="CCR" TI="24689" Line="407" Offs="20"/>
+   <type Family="array" ID="24825" toTI="24180"/>
+    <Component Name="SHPR" TI="24704" Line="408" Offs="24"/>
+    <Component Name="SHCSR" TI="24719" Line="409" Offs="36"/>
+    <Component Name="CFSR" TI="24734" Line="410" Offs="40"/>
+    <Component Name="HFSR" TI="24749" Line="411" Offs="44"/>
+    <Component Name="DFSR" TI="24764" Line="412" Offs="48"/>
+    <Component Name="MMFAR" TI="24779" Line="413" Offs="52"/>
+    <Component Name="BFAR" TI="24794" Line="414" Offs="56"/>
+    <Component Name="AFSR" TI="24809" Line="415" Offs="60"/>
+   </type>
+   <type Family="typedef" Name="SCB_TypeDef" Line="416" ID="24846" toTI="24605"/>
+   <type Family="ComponentList" Line="26" ID="24858">
+    <Component Name="NVIC_IRQChannel" TI="24866" Line="28" Offs="0"/>
+    <Component Name="NVIC_IRQChannelPreemptionPriority" TI="24880" Line="29" Offs="1"/>
+    <Component Name="NVIC_IRQChannelSubPriority" TI="24894" Line="30" Offs="2"/>
+    <Component Name="NVIC_IRQChannelCmd" TI="24908" Line="31" Offs="3"/>
+   </type>
+   <type Family="typedef" Name="NVIC_InitTypeDef" Line="32" ID="24923" toTI="24858"/>
+   <function Name="NVIC_PriorityGroupConfig" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" Line="97">
+    <parameter Name="NVIC_PriorityGroup" TI="24169" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" Line="97" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="NVIC_Init" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" Line="116">
+   <type Family="Pointer" TI="25170" toTI="24923"/>
+    <parameter Name="NVIC_InitStruct" TI="25170" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" Line="116" Addr="0x0" Param="Yes"/>
+    <variable Name="tmppriority" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" Line="118" Addr="0x0" TI="24169"/>
+    <variable Name="tmpreg" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" Line="118" Addr="0x0" TI="24169"/>
+    <variable Name="tmpmask" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" Line="118" Addr="0x0" TI="24169"/>
+    <variable Name="tmppre" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" Line="119" Addr="0x0" TI="24169"/>
+    <variable Name="tmpsub" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" Line="119" Addr="0x0" TI="24169"/>
+   </function >
+   <function Name="NVIC_SetVectorTable" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" Line="393">
+    <parameter Name="NVIC_VectTab" TI="24169" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" Line="393" Addr="0x0" Param="Yes"/>
+    <parameter Name="Offset" TI="24169" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_nvic.c" Line="393" Addr="0x1" Param="Yes"/>
+   </function >
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_pwr.c" >
+   <type Family="Base" Name="long int" ID="26546"/>
+   <type Family="Base" Name="short int" ID="26553"/>
+   <type Family="Base" Name="signed char" ID="26560"/>
+   <type Family="Base" Name="long unsigned int" ID="26578"/>
+   <type Family="typedef" Name="u32" Line="39" ID="26567" toTI="26578"/>
+   <type Family="Base" Name="short unsigned int" ID="26585"/>
+   <type Family="Base" Name="unsigned char" ID="26602"/>
+   <type Family="typedef" Name="u8" Line="41" ID="26592" toTI="26602"/>
+   <type Family="typedef" Name="vu32" Line="47" ID="26609" toTI="26620"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="26646" toTI="26625"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="26678" toTI="26657"/>
+   <type Family="Base" Name="unsigned int" ID="26689"/>
+   <type Family="ComponentList" Line="419" ID="26696">
+    <Component Name="CR" TI="26705" Line="421" Offs="0"/>
+    <Component Name="CSR" TI="26719" Line="422" Offs="4"/>
+   </type>
+   <type Family="typedef" Name="PWR_TypeDef" Line="423" ID="26735" toTI="26696"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" >
+   <type Family="Base" Name="long int" ID="27158"/>
+   <type Family="Base" Name="short int" ID="27165"/>
+   <type Family="Base" Name="signed char" ID="27172"/>
+   <type Family="Base" Name="long unsigned int" ID="27190"/>
+   <type Family="typedef" Name="u32" Line="39" ID="27179" toTI="27190"/>
+   <type Family="Base" Name="short unsigned int" ID="27208"/>
+   <type Family="typedef" Name="u16" Line="40" ID="27197" toTI="27208"/>
+   <type Family="Base" Name="unsigned char" ID="27225"/>
+   <type Family="typedef" Name="u8" Line="41" ID="27215" toTI="27225"/>
+   <type Family="typedef" Name="vu32" Line="47" ID="27232" toTI="27243"/>
+   <type Family="typedef" Name="vu8" Line="49" ID="27248" toTI="27259"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="27285" toTI="27264"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="27296" toTI="27264"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="27328" toTI="27307"/>
+   <type Family="typedef" Name="ErrorStatus" Line="62" ID="27360" toTI="27339"/>
+   <type Family="Base" Name="unsigned int" ID="27371"/>
+   <type Family="ComponentList" Line="426" ID="27378">
+    <Component Name="CR" TI="27387" Line="428" Offs="0"/>
+    <Component Name="CFGR" TI="27401" Line="429" Offs="4"/>
+    <Component Name="CIR" TI="27416" Line="430" Offs="8"/>
+    <Component Name="APB2RSTR" TI="27431" Line="431" Offs="12"/>
+    <Component Name="APB1RSTR" TI="27446" Line="432" Offs="16"/>
+    <Component Name="AHBENR" TI="27461" Line="433" Offs="20"/>
+    <Component Name="APB2ENR" TI="27476" Line="434" Offs="24"/>
+    <Component Name="APB1ENR" TI="27491" Line="435" Offs="28"/>
+    <Component Name="BDCR" TI="27506" Line="436" Offs="32"/>
+    <Component Name="CSR" TI="27521" Line="437" Offs="36"/>
+   </type>
+   <type Family="typedef" Name="RCC_TypeDef" Line="438" ID="27537" toTI="27378"/>
+   <type Family="ComponentList" Line="25" ID="27549">
+    <Component Name="SYSCLK_Frequency" TI="27557" Line="27" Offs="0"/>
+    <Component Name="HCLK_Frequency" TI="27571" Line="28" Offs="4"/>
+    <Component Name="PCLK1_Frequency" TI="27585" Line="29" Offs="8"/>
+    <Component Name="PCLK2_Frequency" TI="27599" Line="30" Offs="12"/>
+    <Component Name="ADCCLK_Frequency" TI="27613" Line="31" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="RCC_ClocksTypeDef" Line="32" ID="27628" toTI="27549"/>
+   <function Name="RCC_HSEConfig" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="159">
+    <parameter Name="RCC_HSE" TI="27179" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="159" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="RCC_PLLConfig" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="287">
+    <parameter Name="RCC_PLLSource" TI="27179" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="287" Addr="0x0" Param="Yes"/>
+    <parameter Name="RCC_PLLMul" TI="27179" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="287" Addr="0x1" Param="Yes"/>
+    <variable Name="tmpreg" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="289" Addr="0x0" TI="27179"/>
+   </function >
+   <function Name="RCC_PLLCmd" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="316">
+    <parameter Name="NewState" TI="27328" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="316" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="RCC_SYSCLKConfig" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="335">
+    <parameter Name="RCC_SYSCLKSource" TI="27179" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="335" Addr="0x0" Param="Yes"/>
+    <variable Name="tmpreg" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="337" Addr="0x0" TI="27179"/>
+   </function >
+   <function Name="RCC_GetSYSCLKSource" TI="27215" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="365">
+   </function >
+   <function Name="RCC_HCLKConfig" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="388">
+    <parameter Name="RCC_SYSCLK" TI="27179" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="388" Addr="0x0" Param="Yes"/>
+    <variable Name="tmpreg" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="390" Addr="0x0" TI="27179"/>
+   </function >
+   <function Name="RCC_PCLK1Config" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="421">
+    <parameter Name="RCC_HCLK" TI="27179" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="421" Addr="0x0" Param="Yes"/>
+    <variable Name="tmpreg" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="423" Addr="0x0" TI="27179"/>
+   </function >
+   <function Name="RCC_PCLK2Config" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="454">
+    <parameter Name="RCC_HCLK" TI="27179" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="454" Addr="0x0" Param="Yes"/>
+    <variable Name="tmpreg" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="456" Addr="0x0" TI="27179"/>
+   </function >
+   <function Name="RCC_GetClocksFreq" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="668">
+   <type Family="Pointer" TI="28566" toTI="27628"/>
+    <parameter Name="RCC_Clocks" TI="28566" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="668" Addr="0x0" Param="Yes"/>
+    <variable Name="tmp" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="670" Addr="0x0" TI="27179"/>
+    <variable Name="pllmull" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="670" Addr="0x0" TI="27179"/>
+    <variable Name="pllsource" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="670" Addr="0x0" TI="27179"/>
+    <variable Name="presc" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="670" Addr="0x0" TI="27179"/>
+   </function >
+   <function Name="RCC_AHBPeriphClockCmd" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="768">
+    <parameter Name="RCC_AHBPeriph" TI="27179" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="768" Addr="0x0" Param="Yes"/>
+    <parameter Name="NewState" TI="27328" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="768" Addr="0x1" Param="Yes"/>
+   </function >
+   <function Name="RCC_APB2PeriphClockCmd" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="801">
+    <parameter Name="RCC_APB2Periph" TI="27179" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="801" Addr="0x0" Param="Yes"/>
+    <parameter Name="NewState" TI="27328" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="801" Addr="0x1" Param="Yes"/>
+   </function >
+   <function Name="RCC_APB1PeriphClockCmd" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="835">
+    <parameter Name="RCC_APB1Periph" TI="27179" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="835" Addr="0x0" Param="Yes"/>
+    <parameter Name="NewState" TI="27328" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="835" Addr="0x1" Param="Yes"/>
+   </function >
+   <function Name="RCC_GetFlagStatus" TI="27285" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="989">
+    <parameter Name="RCC_FLAG" TI="27215" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="989" Addr="0x0" Param="Yes"/>
+    <variable Name="tmp" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="991" Addr="0x0" TI="27179"/>
+    <variable Name="statusreg" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="992" Addr="0x0" TI="27179"/>
+    <variable Name="bitstatus" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="993" Addr="0x0" TI="27285"/>
+   </function >
+   <function Name="RCC_WaitForHSEStartUp" TI="27360" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="198">
+    <variable Name="StartUpCounter" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="200" Addr="0x34000004" TI="27243"/>
+    <variable Name="status" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="201" Addr="0x48000010" TI="27360"/>
+    <variable Name="HSEStatus" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="202" Addr="0x0" TI="27285"/>
+   </function >
+   <type Family="array" ID="29264" toTI="27225"/>
+   <variable Name="APBAHBPrescTable" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="111" Addr="0x80048C4" TI="29297"/>
+   <type Family="array" ID="29302" toTI="27225"/>
+   <variable Name="ADCPrescTable" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_rcc.c" Line="112" Addr="0x80048D4" TI="29335"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_rtc.c" >
+   <type Family="Base" Name="long int" ID="29378"/>
+   <type Family="Base" Name="short int" ID="29385"/>
+   <type Family="Base" Name="signed char" ID="29392"/>
+   <type Family="Base" Name="long unsigned int" ID="29410"/>
+   <type Family="typedef" Name="u32" Line="39" ID="29399" toTI="29410"/>
+   <type Family="Base" Name="short unsigned int" ID="29428"/>
+   <type Family="typedef" Name="u16" Line="40" ID="29417" toTI="29428"/>
+   <type Family="Base" Name="unsigned char" ID="29435"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="29468" toTI="29447"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="29479" toTI="29447"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="29511" toTI="29490"/>
+   <type Family="Base" Name="unsigned int" ID="29522"/>
+   <type Family="ComponentList" Line="441" ID="29529">
+    <Component Name="CRH" TI="29538" Line="443" Offs="0"/>
+    <Component Name="RESERVED0" TI="29553" Line="444" Offs="2"/>
+    <Component Name="CRL" TI="29568" Line="445" Offs="4"/>
+    <Component Name="RESERVED1" TI="29583" Line="446" Offs="6"/>
+    <Component Name="PRLH" TI="29598" Line="447" Offs="8"/>
+    <Component Name="RESERVED2" TI="29613" Line="448" Offs="10"/>
+    <Component Name="PRLL" TI="29628" Line="449" Offs="12"/>
+    <Component Name="RESERVED3" TI="29643" Line="450" Offs="14"/>
+    <Component Name="DIVH" TI="29658" Line="451" Offs="16"/>
+    <Component Name="RESERVED4" TI="29673" Line="452" Offs="18"/>
+    <Component Name="DIVL" TI="29688" Line="453" Offs="20"/>
+    <Component Name="RESERVED5" TI="29703" Line="454" Offs="22"/>
+    <Component Name="CNTH" TI="29718" Line="455" Offs="24"/>
+    <Component Name="RESERVED6" TI="29733" Line="456" Offs="26"/>
+    <Component Name="CNTL" TI="29748" Line="457" Offs="28"/>
+    <Component Name="RESERVED7" TI="29763" Line="458" Offs="30"/>
+    <Component Name="ALRH" TI="29778" Line="459" Offs="32"/>
+    <Component Name="RESERVED8" TI="29793" Line="460" Offs="34"/>
+    <Component Name="ALRL" TI="29808" Line="461" Offs="36"/>
+    <Component Name="RESERVED9" TI="29823" Line="462" Offs="38"/>
+   </type>
+   <type Family="typedef" Name="RTC_TypeDef" Line="463" ID="29839" toTI="29529"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_sdio.c" >
+   <type Family="Base" Name="long int" ID="30430"/>
+   <type Family="Base" Name="short int" ID="30437"/>
+   <type Family="Base" Name="signed char" ID="30444"/>
+   <type Family="Base" Name="long unsigned int" ID="30462"/>
+   <type Family="typedef" Name="u32" Line="39" ID="30451" toTI="30462"/>
+   <type Family="Base" Name="short unsigned int" ID="30469"/>
+   <type Family="Base" Name="unsigned char" ID="30486"/>
+   <type Family="typedef" Name="u8" Line="41" ID="30476" toTI="30486"/>
+   <type Family="typedef" Name="vu32" Line="47" ID="30493" toTI="30504"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="30535" toTI="30514"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="30546" toTI="30514"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="30578" toTI="30557"/>
+   <type Family="Base" Name="unsigned int" ID="30589"/>
+   <type Family="ComponentList" Line="466" ID="30596">
+    <Component Name="POWER" TI="30605" Line="468" Offs="0"/>
+    <Component Name="CLKCR" TI="30620" Line="469" Offs="4"/>
+    <Component Name="ARG" TI="30635" Line="470" Offs="8"/>
+    <Component Name="CMD" TI="30650" Line="471" Offs="12"/>
+    <Component Name="RESPCMD" TI="30665" Line="472" Offs="16"/>
+    <Component Name="RESP1" TI="30680" Line="473" Offs="20"/>
+    <Component Name="RESP2" TI="30695" Line="474" Offs="24"/>
+    <Component Name="RESP3" TI="30710" Line="475" Offs="28"/>
+    <Component Name="RESP4" TI="30725" Line="476" Offs="32"/>
+    <Component Name="DTIMER" TI="30740" Line="477" Offs="36"/>
+    <Component Name="DLEN" TI="30755" Line="478" Offs="40"/>
+    <Component Name="DCTRL" TI="30770" Line="479" Offs="44"/>
+    <Component Name="DCOUNT" TI="30785" Line="480" Offs="48"/>
+    <Component Name="STA" TI="30800" Line="481" Offs="52"/>
+    <Component Name="ICR" TI="30815" Line="482" Offs="56"/>
+    <Component Name="MASK" TI="30830" Line="483" Offs="60"/>
+   <type Family="array" ID="30907" toTI="30451"/>
+    <Component Name="RESERVED0" TI="30845" Line="484" Offs="64"/>
+    <Component Name="FIFOCNT" TI="30860" Line="485" Offs="72"/>
+   <type Family="array" ID="30923" toTI="30451"/>
+    <Component Name="RESERVED1" TI="30875" Line="486" Offs="76"/>
+    <Component Name="FIFO" TI="30890" Line="487" Offs="128"/>
+   </type>
+   <type Family="typedef" Name="SDIO_TypeDef" Line="488" ID="30939" toTI="30596"/>
+   <type Family="ComponentList" Line="25" ID="30951">
+    <Component Name="SDIO_ClockDiv" TI="30959" Line="27" Offs="0"/>
+    <Component Name="SDIO_ClockEdge" TI="30973" Line="28" Offs="4"/>
+    <Component Name="SDIO_ClockBypass" TI="30987" Line="29" Offs="8"/>
+    <Component Name="SDIO_ClockPowerSave" TI="31001" Line="30" Offs="12"/>
+    <Component Name="SDIO_BusWide" TI="31015" Line="31" Offs="16"/>
+    <Component Name="SDIO_HardwareFlowControl" TI="31029" Line="32" Offs="20"/>
+   </type>
+   <type Family="typedef" Name="SDIO_InitTypeDef" Line="33" ID="31044" toTI="30951"/>
+   <type Family="ComponentList" Line="35" ID="31055">
+    <Component Name="SDIO_Argument" TI="31063" Line="37" Offs="0"/>
+    <Component Name="SDIO_CmdIndex" TI="31077" Line="38" Offs="4"/>
+    <Component Name="SDIO_Response" TI="31091" Line="39" Offs="8"/>
+    <Component Name="SDIO_Wait" TI="31105" Line="40" Offs="12"/>
+    <Component Name="SDIO_CPSM" TI="31119" Line="41" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="SDIO_CmdInitTypeDef" Line="42" ID="31134" toTI="31055"/>
+   <type Family="ComponentList" Line="44" ID="31145">
+    <Component Name="SDIO_DataTimeOut" TI="31153" Line="46" Offs="0"/>
+    <Component Name="SDIO_DataLength" TI="31167" Line="47" Offs="4"/>
+    <Component Name="SDIO_DataBlockSize" TI="31181" Line="48" Offs="8"/>
+    <Component Name="SDIO_TransferDir" TI="31195" Line="49" Offs="12"/>
+    <Component Name="SDIO_TransferMode" TI="31209" Line="50" Offs="16"/>
+    <Component Name="SDIO_DPSM" TI="31223" Line="51" Offs="20"/>
+   </type>
+   <type Family="typedef" Name="SDIO_DataInitTypeDef" Line="52" ID="31238" toTI="31145"/>
+   <type Family="Pointer" TI="31323" toTI="31044"/>
+   <type Family="Pointer" TI="31622" toTI="31134"/>
+   <type Family="Pointer" TI="31798" toTI="31238"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_spi.c" >
+   <type Family="Base" Name="long int" ID="32519"/>
+   <type Family="Base" Name="short int" ID="32526"/>
+   <type Family="Base" Name="signed char" ID="32533"/>
+   <type Family="Base" Name="long unsigned int" ID="32551"/>
+   <type Family="typedef" Name="u32" Line="39" ID="32540" toTI="32551"/>
+   <type Family="Base" Name="short unsigned int" ID="32569"/>
+   <type Family="typedef" Name="u16" Line="40" ID="32558" toTI="32569"/>
+   <type Family="Base" Name="unsigned char" ID="32586"/>
+   <type Family="typedef" Name="u8" Line="41" ID="32576" toTI="32586"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="32619" toTI="32598"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="32630" toTI="32598"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="32662" toTI="32641"/>
+   <type Family="Base" Name="unsigned int" ID="32673"/>
+   <type Family="ComponentList" Line="491" ID="32680">
+    <Component Name="CR1" TI="32689" Line="493" Offs="0"/>
+    <Component Name="RESERVED0" TI="32704" Line="494" Offs="2"/>
+    <Component Name="CR2" TI="32719" Line="495" Offs="4"/>
+    <Component Name="RESERVED1" TI="32734" Line="496" Offs="6"/>
+    <Component Name="SR" TI="32749" Line="497" Offs="8"/>
+    <Component Name="RESERVED2" TI="32763" Line="498" Offs="10"/>
+    <Component Name="DR" TI="32778" Line="499" Offs="12"/>
+    <Component Name="RESERVED3" TI="32792" Line="500" Offs="14"/>
+    <Component Name="CRCPR" TI="32807" Line="501" Offs="16"/>
+    <Component Name="RESERVED4" TI="32822" Line="502" Offs="18"/>
+    <Component Name="RXCRCR" TI="32837" Line="503" Offs="20"/>
+    <Component Name="RESERVED5" TI="32852" Line="504" Offs="22"/>
+    <Component Name="TXCRCR" TI="32867" Line="505" Offs="24"/>
+    <Component Name="RESERVED6" TI="32882" Line="506" Offs="26"/>
+    <Component Name="I2SCFGR" TI="32897" Line="507" Offs="28"/>
+    <Component Name="RESERVED7" TI="32912" Line="508" Offs="30"/>
+    <Component Name="I2SPR" TI="32927" Line="509" Offs="32"/>
+    <Component Name="RESERVED8" TI="32942" Line="510" Offs="34"/>
+   </type>
+   <type Family="typedef" Name="SPI_TypeDef" Line="511" ID="32958" toTI="32680"/>
+   <type Family="ComponentList" Line="26" ID="32970">
+    <Component Name="SPI_Direction" TI="32978" Line="28" Offs="0"/>
+    <Component Name="SPI_Mode" TI="32992" Line="29" Offs="2"/>
+    <Component Name="SPI_DataSize" TI="33006" Line="30" Offs="4"/>
+    <Component Name="SPI_CPOL" TI="33020" Line="31" Offs="6"/>
+    <Component Name="SPI_CPHA" TI="33034" Line="32" Offs="8"/>
+    <Component Name="SPI_NSS" TI="33048" Line="33" Offs="10"/>
+    <Component Name="SPI_BaudRatePrescaler" TI="33062" Line="34" Offs="12"/>
+    <Component Name="SPI_FirstBit" TI="33076" Line="35" Offs="14"/>
+    <Component Name="SPI_CRCPolynomial" TI="33090" Line="36" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="SPI_InitTypeDef" Line="37" ID="33105" toTI="32970"/>
+   <type Family="ComponentList" Line="40" ID="33116">
+    <Component Name="I2S_Mode" TI="33124" Line="42" Offs="0"/>
+    <Component Name="I2S_Standard" TI="33138" Line="43" Offs="2"/>
+    <Component Name="I2S_DataFormat" TI="33152" Line="44" Offs="4"/>
+    <Component Name="I2S_MCLKOutput" TI="33166" Line="45" Offs="6"/>
+    <Component Name="I2S_AudioFreq" TI="33180" Line="46" Offs="8"/>
+    <Component Name="I2S_CPOL" TI="33194" Line="47" Offs="10"/>
+   </type>
+   <type Family="typedef" Name="I2S_InitTypeDef" Line="48" ID="33209" toTI="33116"/>
+   <type Family="ComponentList" Line="25" ID="33220">
+    <Component Name="SYSCLK_Frequency" TI="33228" Line="27" Offs="0"/>
+    <Component Name="HCLK_Frequency" TI="33242" Line="28" Offs="4"/>
+    <Component Name="PCLK1_Frequency" TI="33256" Line="29" Offs="8"/>
+    <Component Name="PCLK2_Frequency" TI="33270" Line="30" Offs="12"/>
+    <Component Name="ADCCLK_Frequency" TI="33284" Line="31" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="RCC_ClocksTypeDef" Line="32" ID="33299" toTI="33220"/>
+   <type Family="Pointer" TI="33351" toTI="32958"/>
+   <type Family="Pointer" TI="33424" toTI="33105"/>
+   <type Family="Pointer" TI="33575" toTI="33209"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_systick.c" >
+   <type Family="Base" Name="long int" ID="34832"/>
+   <type Family="Base" Name="short int" ID="34839"/>
+   <type Family="Base" Name="signed char" ID="34846"/>
+   <type Family="Base" Name="long unsigned int" ID="34864"/>
+   <type Family="typedef" Name="u32" Line="39" ID="34853" toTI="34864"/>
+   <type Family="Base" Name="short unsigned int" ID="34871"/>
+   <type Family="Base" Name="unsigned char" ID="34888"/>
+   <type Family="typedef" Name="u8" Line="41" ID="34878" toTI="34888"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="34926" toTI="34905"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="34958" toTI="34937"/>
+   <type Family="Base" Name="unsigned int" ID="34969"/>
+   <type Family="ComponentList" Line="514" ID="34976">
+    <Component Name="CTRL" TI="34985" Line="516" Offs="0"/>
+    <Component Name="LOAD" TI="35000" Line="517" Offs="4"/>
+    <Component Name="VAL" TI="35015" Line="518" Offs="8"/>
+    <Component Name="CALIB" TI="35030" Line="519" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="SysTick_TypeDef" Line="520" ID="35046" toTI="34976"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_tim.c" >
+   <type Family="Base" Name="long int" ID="35353"/>
+   <type Family="Base" Name="short int" ID="35360"/>
+   <type Family="Base" Name="signed char" ID="35367"/>
+   <type Family="Base" Name="long unsigned int" ID="35385"/>
+   <type Family="typedef" Name="u32" Line="39" ID="35374" toTI="35385"/>
+   <type Family="Base" Name="short unsigned int" ID="35403"/>
+   <type Family="typedef" Name="u16" Line="40" ID="35392" toTI="35403"/>
+   <type Family="Base" Name="unsigned char" ID="35420"/>
+   <type Family="typedef" Name="u8" Line="41" ID="35410" toTI="35420"/>
+   <type Family="typedef" Name="vu32" Line="47" ID="35427" toTI="35438"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="35469" toTI="35448"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="35480" toTI="35448"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="35512" toTI="35491"/>
+   <type Family="Base" Name="unsigned int" ID="35523"/>
+   <type Family="ComponentList" Line="523" ID="35530">
+    <Component Name="CR1" TI="35539" Line="525" Offs="0"/>
+    <Component Name="RESERVED0" TI="35554" Line="526" Offs="2"/>
+    <Component Name="CR2" TI="35569" Line="527" Offs="4"/>
+    <Component Name="RESERVED1" TI="35584" Line="528" Offs="6"/>
+    <Component Name="SMCR" TI="35599" Line="529" Offs="8"/>
+    <Component Name="RESERVED2" TI="35614" Line="530" Offs="10"/>
+    <Component Name="DIER" TI="35629" Line="531" Offs="12"/>
+    <Component Name="RESERVED3" TI="35644" Line="532" Offs="14"/>
+    <Component Name="SR" TI="35659" Line="533" Offs="16"/>
+    <Component Name="RESERVED4" TI="35673" Line="534" Offs="18"/>
+    <Component Name="EGR" TI="35688" Line="535" Offs="20"/>
+    <Component Name="RESERVED5" TI="35703" Line="536" Offs="22"/>
+    <Component Name="CCMR1" TI="35718" Line="537" Offs="24"/>
+    <Component Name="RESERVED6" TI="35733" Line="538" Offs="26"/>
+    <Component Name="CCMR2" TI="35748" Line="539" Offs="28"/>
+    <Component Name="RESERVED7" TI="35763" Line="540" Offs="30"/>
+    <Component Name="CCER" TI="35778" Line="541" Offs="32"/>
+    <Component Name="RESERVED8" TI="35793" Line="542" Offs="34"/>
+    <Component Name="CNT" TI="35808" Line="543" Offs="36"/>
+    <Component Name="RESERVED9" TI="35823" Line="544" Offs="38"/>
+    <Component Name="PSC" TI="35838" Line="545" Offs="40"/>
+    <Component Name="RESERVED10" TI="35853" Line="546" Offs="42"/>
+    <Component Name="ARR" TI="35868" Line="547" Offs="44"/>
+    <Component Name="RESERVED11" TI="35883" Line="548" Offs="46"/>
+    <Component Name="RCR" TI="35898" Line="549" Offs="48"/>
+    <Component Name="RESERVED12" TI="35913" Line="550" Offs="50"/>
+    <Component Name="CCR1" TI="35928" Line="551" Offs="52"/>
+    <Component Name="RESERVED13" TI="35943" Line="552" Offs="54"/>
+    <Component Name="CCR2" TI="35958" Line="553" Offs="56"/>
+    <Component Name="RESERVED14" TI="35973" Line="554" Offs="58"/>
+    <Component Name="CCR3" TI="35988" Line="555" Offs="60"/>
+    <Component Name="RESERVED15" TI="36003" Line="556" Offs="62"/>
+    <Component Name="CCR4" TI="36018" Line="557" Offs="64"/>
+    <Component Name="RESERVED16" TI="36033" Line="558" Offs="66"/>
+    <Component Name="BDTR" TI="36048" Line="559" Offs="68"/>
+    <Component Name="RESERVED17" TI="36063" Line="560" Offs="70"/>
+    <Component Name="DCR" TI="36078" Line="561" Offs="72"/>
+    <Component Name="RESERVED18" TI="36093" Line="562" Offs="74"/>
+    <Component Name="DMAR" TI="36108" Line="563" Offs="76"/>
+    <Component Name="RESERVED19" TI="36123" Line="564" Offs="78"/>
+   </type>
+   <type Family="typedef" Name="TIM_TypeDef" Line="565" ID="36139" toTI="35530"/>
+   <type Family="ComponentList" Line="27" ID="36151">
+    <Component Name="TIM_Prescaler" TI="36159" Line="29" Offs="0"/>
+    <Component Name="TIM_CounterMode" TI="36173" Line="30" Offs="2"/>
+    <Component Name="TIM_Period" TI="36187" Line="31" Offs="4"/>
+    <Component Name="TIM_ClockDivision" TI="36201" Line="32" Offs="6"/>
+    <Component Name="TIM_RepetitionCounter" TI="36215" Line="33" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="TIM_TimeBaseInitTypeDef" Line="34" ID="36230" toTI="36151"/>
+   <type Family="ComponentList" Line="37" ID="36241">
+    <Component Name="TIM_OCMode" TI="36249" Line="39" Offs="0"/>
+    <Component Name="TIM_OutputState" TI="36263" Line="40" Offs="2"/>
+    <Component Name="TIM_OutputNState" TI="36277" Line="41" Offs="4"/>
+    <Component Name="TIM_Pulse" TI="36291" Line="42" Offs="6"/>
+    <Component Name="TIM_OCPolarity" TI="36305" Line="43" Offs="8"/>
+    <Component Name="TIM_OCNPolarity" TI="36319" Line="44" Offs="10"/>
+    <Component Name="TIM_OCIdleState" TI="36333" Line="45" Offs="12"/>
+    <Component Name="TIM_OCNIdleState" TI="36347" Line="46" Offs="14"/>
+   </type>
+   <type Family="typedef" Name="TIM_OCInitTypeDef" Line="47" ID="36362" toTI="36241"/>
+   <type Family="ComponentList" Line="50" ID="36373">
+    <Component Name="TIM_Channel" TI="36381" Line="52" Offs="0"/>
+    <Component Name="TIM_ICPolarity" TI="36395" Line="53" Offs="2"/>
+    <Component Name="TIM_ICSelection" TI="36409" Line="54" Offs="4"/>
+    <Component Name="TIM_ICPrescaler" TI="36423" Line="55" Offs="6"/>
+    <Component Name="TIM_ICFilter" TI="36437" Line="56" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="TIM_ICInitTypeDef" Line="57" ID="36452" toTI="36373"/>
+   <type Family="ComponentList" Line="60" ID="36463">
+    <Component Name="TIM_OSSRState" TI="36471" Line="62" Offs="0"/>
+    <Component Name="TIM_OSSIState" TI="36485" Line="63" Offs="2"/>
+    <Component Name="TIM_LOCKLevel" TI="36499" Line="64" Offs="4"/>
+    <Component Name="TIM_DeadTime" TI="36513" Line="65" Offs="6"/>
+    <Component Name="TIM_Break" TI="36527" Line="66" Offs="8"/>
+    <Component Name="TIM_BreakPolarity" TI="36541" Line="67" Offs="10"/>
+    <Component Name="TIM_AutomaticOutput" TI="36555" Line="68" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="TIM_BDTRInitTypeDef" Line="69" ID="36570" toTI="36463"/>
+   <type Family="Pointer" TI="36695" toTI="36139"/>
+   <type Family="Pointer" TI="36926" toTI="36230"/>
+   <type Family="Pointer" TI="37033" toTI="36362"/>
+   <type Family="Pointer" TI="37410" toTI="36570"/>
+   <type Family="Pointer" TI="37536" toTI="36452"/>
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" >
+   <type Family="Base" Name="long int" ID="42927"/>
+   <type Family="Base" Name="short int" ID="42934"/>
+   <type Family="Base" Name="signed char" ID="42941"/>
+   <type Family="Base" Name="long unsigned int" ID="42959"/>
+   <type Family="typedef" Name="u32" Line="39" ID="42948" toTI="42959"/>
+   <type Family="Base" Name="short unsigned int" ID="42977"/>
+   <type Family="typedef" Name="u16" Line="40" ID="42966" toTI="42977"/>
+   <type Family="Base" Name="unsigned char" ID="42994"/>
+   <type Family="typedef" Name="u8" Line="41" ID="42984" toTI="42994"/>
+   <type Family="typedef" Name="vu32" Line="47" ID="43001" toTI="43012"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="43043" toTI="43022"/>
+   <type Family="typedef" Name="ITStatus" Line="57" ID="43054" toTI="43022"/>
+   <type Family="typedef" Name="FunctionalState" Line="59" ID="43086" toTI="43065"/>
+   <type Family="Base" Name="unsigned int" ID="43097"/>
+   <type Family="ComponentList" Line="568" ID="43104">
+    <Component Name="SR" TI="43113" Line="570" Offs="0"/>
+    <Component Name="RESERVED0" TI="43127" Line="571" Offs="2"/>
+    <Component Name="DR" TI="43142" Line="572" Offs="4"/>
+    <Component Name="RESERVED1" TI="43156" Line="573" Offs="6"/>
+    <Component Name="BRR" TI="43171" Line="574" Offs="8"/>
+    <Component Name="RESERVED2" TI="43186" Line="575" Offs="10"/>
+    <Component Name="CR1" TI="43201" Line="576" Offs="12"/>
+    <Component Name="RESERVED3" TI="43216" Line="577" Offs="14"/>
+    <Component Name="CR2" TI="43231" Line="578" Offs="16"/>
+    <Component Name="RESERVED4" TI="43246" Line="579" Offs="18"/>
+    <Component Name="CR3" TI="43261" Line="580" Offs="20"/>
+    <Component Name="RESERVED5" TI="43276" Line="581" Offs="22"/>
+    <Component Name="GTPR" TI="43291" Line="582" Offs="24"/>
+    <Component Name="RESERVED6" TI="43306" Line="583" Offs="26"/>
+   </type>
+   <type Family="typedef" Name="USART_TypeDef" Line="584" ID="43322" toTI="43104"/>
+   <type Family="ComponentList" Line="26" ID="43334">
+    <Component Name="USART_BaudRate" TI="43342" Line="28" Offs="0"/>
+    <Component Name="USART_WordLength" TI="43356" Line="29" Offs="4"/>
+    <Component Name="USART_StopBits" TI="43370" Line="30" Offs="6"/>
+    <Component Name="USART_Parity" TI="43384" Line="31" Offs="8"/>
+    <Component Name="USART_Mode" TI="43398" Line="32" Offs="10"/>
+    <Component Name="USART_HardwareFlowControl" TI="43412" Line="33" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="USART_InitTypeDef" Line="34" ID="43427" toTI="43334"/>
+   <type Family="ComponentList" Line="37" ID="43438">
+    <Component Name="USART_Clock" TI="43446" Line="39" Offs="0"/>
+    <Component Name="USART_CPOL" TI="43460" Line="40" Offs="2"/>
+    <Component Name="USART_CPHA" TI="43474" Line="41" Offs="4"/>
+    <Component Name="USART_LastBit" TI="43488" Line="42" Offs="6"/>
+   </type>
+   <type Family="typedef" Name="USART_ClockInitTypeDef" Line="43" ID="43503" toTI="43438"/>
+   <type Family="ComponentList" Line="25" ID="43514">
+    <Component Name="SYSCLK_Frequency" TI="43522" Line="27" Offs="0"/>
+    <Component Name="HCLK_Frequency" TI="43536" Line="28" Offs="4"/>
+    <Component Name="PCLK1_Frequency" TI="43550" Line="29" Offs="8"/>
+    <Component Name="PCLK2_Frequency" TI="43564" Line="30" Offs="12"/>
+    <Component Name="ADCCLK_Frequency" TI="43578" Line="31" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="RCC_ClocksTypeDef" Line="32" ID="43593" toTI="43514"/>
+   <type Family="Pointer" TI="43645" toTI="43322"/>
+   <function Name="USART_Init" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="140">
+    <parameter Name="USARTx" TI="43645" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="140" Addr="0x0" Param="Yes"/>
+   <type Family="Pointer" TI="43796" toTI="43427"/>
+    <parameter Name="USART_InitStruct" TI="43796" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="140" Addr="0x1" Param="Yes"/>
+    <variable Name="tmpreg" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="142" Addr="0x0" TI="42948"/>
+    <variable Name="apbclock" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="142" Addr="0x0" TI="42948"/>
+    <variable Name="integerdivider" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="143" Addr="0x0" TI="42948"/>
+    <variable Name="fractionaldivider" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="144" Addr="0x0" TI="42948"/>
+    <variable Name="usartxbase" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="145" Addr="0x0" TI="42948"/>
+    <variable Name="RCC_ClocksStatus" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="146" Addr="0x400000C" TI="43593"/>
+   </function >
+   <type Family="Pointer" TI="43910" toTI="43503"/>
+   <function Name="USART_Cmd" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="311">
+    <parameter Name="USARTx" TI="43645" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="311" Addr="0x0" Param="Yes"/>
+    <parameter Name="NewState" TI="43086" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="311" Addr="0x1" Param="Yes"/>
+   </function >
+   <function Name="USART_DMACmd" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="413">
+    <parameter Name="USARTx" TI="43645" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="413" Addr="0x0" Param="Yes"/>
+    <parameter Name="USART_DMAReq" TI="42966" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="413" Addr="0x1" Param="Yes"/>
+    <parameter Name="NewState" TI="43086" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="413" Addr="0x2" Param="Yes"/>
+   </function >
+   <function Name="USART_SendData" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="571">
+    <parameter Name="USARTx" TI="43645" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="571" Addr="0x0" Param="Yes"/>
+    <parameter Name="Data" TI="42966" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="571" Addr="0x1" Param="Yes"/>
+   </function >
+   <function Name="USART_GetFlagStatus" TI="43043" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="821">
+    <parameter Name="USARTx" TI="43645" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="821" Addr="0x0" Param="Yes"/>
+    <parameter Name="USART_FLAG" TI="42966" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="821" Addr="0x1" Param="Yes"/>
+    <variable Name="bitstatus" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_usart.c" Line="823" Addr="0x0" TI="43043"/>
+   </function >
+  </module>
+  <module Name="C:\cortex\gateway\stlibrary\src\stm32f10x_wwdg.c" >
+   <type Family="Base" Name="long int" ID="45388"/>
+   <type Family="Base" Name="short int" ID="45395"/>
+   <type Family="Base" Name="signed char" ID="45402"/>
+   <type Family="Base" Name="long unsigned int" ID="45420"/>
+   <type Family="typedef" Name="u32" Line="39" ID="45409" toTI="45420"/>
+   <type Family="Base" Name="short unsigned int" ID="45427"/>
+   <type Family="Base" Name="unsigned char" ID="45444"/>
+   <type Family="typedef" Name="u8" Line="41" ID="45434" toTI="45444"/>
+   <type Family="typedef" Name="vu32" Line="47" ID="45451" toTI="45462"/>
+   <type Family="typedef" Name="FlagStatus" Line="57" ID="45488" toTI="45467"/>
+   <type Family="Base" Name="unsigned int" ID="45520"/>
+   <type Family="ComponentList" Line="587" ID="45527">
+    <Component Name="CR" TI="45536" Line="589" Offs="0"/>
+    <Component Name="CFR" TI="45550" Line="590" Offs="4"/>
+    <Component Name="SR" TI="45565" Line="591" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="WWDG_TypeDef" Line="592" ID="45580" toTI="45527"/>
+   <function Name="WWDG_SetCounter" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_wwdg.c" Line="134">
+    <parameter Name="Counter" TI="45434" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_wwdg.c" Line="134" Addr="0x0" Param="Yes"/>
+   </function >
+   <function Name="WWDG_ClearFlag" TI="0" FileName="C:\cortex\gateway\stlibrary\src\stm32f10x_wwdg.c" Line="180">
    </function >
   </module>
  </modulelist>

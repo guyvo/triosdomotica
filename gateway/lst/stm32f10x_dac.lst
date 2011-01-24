@@ -1,0 +1,460 @@
+
+C:\cortex\gateway\out\stm32f10x_dac.o:     file format elf32-littlearm
+C:\cortex\gateway\out\stm32f10x_dac.o
+
+
+Disassembly of section .text.DAC_DeInit:
+
+00000000 <DAC_DeInit>:
+DAC_DeInit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:62
+* Return         : None
+*******************************************************************************/
+void DAC_DeInit(void)
+{
+  /* Enable DAC reset state */
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_DAC, ENABLE);
+   0:	2101      	movs	r1, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:60
+* Input          : None.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DAC_DeInit(void)
+{
+   2:	b510      	push	{r4, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:62
+  /* Enable DAC reset state */
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_DAC, ENABLE);
+   4:	f04f 5000 	mov.w	r0, #536870912	; 0x20000000
+   8:	f7ff fffe 	bl	0 <RCC_APB1PeriphResetCmd>
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:64
+  /* Release DAC from reset state */
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_DAC, DISABLE);
+   c:	f04f 5000 	mov.w	r0, #536870912	; 0x20000000
+  10:	2100      	movs	r1, #0
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:65
+}
+  12:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:64
+void DAC_DeInit(void)
+{
+  /* Enable DAC reset state */
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_DAC, ENABLE);
+  /* Release DAC from reset state */
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_DAC, DISABLE);
+  16:	f7ff bffe 	b.w	0 <RCC_APB1PeriphResetCmd>
+
+Disassembly of section .text.DAC_Init:
+
+00000000 <DAC_Init>:
+DAC_Init():
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:95
+
+/*---------------------------- DAC CR Configuration --------------------------*/
+  /* Get the DAC CR value */
+  tmpreg1 = DAC->CR;
+  /* Clear BOFFx, TENx, TSELx, WAVEx and MAMPx bits */
+  tmpreg1 &= ~(CR_CLEAR_Mask << DAC_Channel);
+   0:	f640 72fe 	movw	r2, #4094	; 0xffe
+   4:	4082      	lsls	r2, r0
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:82
+*                    DAC channel.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DAC_Init(u32 DAC_Channel, DAC_InitTypeDef* DAC_InitStruct)
+{
+   6:	b530      	push	{r4, r5, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:93
+  assert_param(IS_DAC_LFSR_UNMASK_TRIANGLE_AMPLITUDE(DAC_InitStruct->DAC_LFSRUnmask_TriangleAmplitude));
+  assert_param(IS_DAC_OUTPUT_BUFFER_STATE(DAC_InitStruct->DAC_OutputBuffer));
+
+/*---------------------------- DAC CR Configuration --------------------------*/
+  /* Get the DAC CR value */
+  tmpreg1 = DAC->CR;
+   8:	4b08      	ldr	r3, [pc, #32]	; (2c <DAC_Init+0x2c>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:102
+     mask/amplitude for wave genration */
+  /* Set TSELx and TENx bits according to DAC_Trigger value */
+  /* Set WAVEx bits according to DAC_WaveGeneration value */
+  /* Set MAMPx bits according to DAC_LFSRUnmask_TriangleAmplitude value */ 
+  /* Set BOFFx bit according to DAC_OutputBuffer value */   
+  tmpreg2 = (DAC_InitStruct->DAC_Trigger | DAC_InitStruct->DAC_WaveGeneration |
+   a:	684d      	ldr	r5, [r1, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:93
+  assert_param(IS_DAC_LFSR_UNMASK_TRIANGLE_AMPLITUDE(DAC_InitStruct->DAC_LFSRUnmask_TriangleAmplitude));
+  assert_param(IS_DAC_OUTPUT_BUFFER_STATE(DAC_InitStruct->DAC_OutputBuffer));
+
+/*---------------------------- DAC CR Configuration --------------------------*/
+  /* Get the DAC CR value */
+  tmpreg1 = DAC->CR;
+   c:	681c      	ldr	r4, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:95
+  /* Clear BOFFx, TENx, TSELx, WAVEx and MAMPx bits */
+  tmpreg1 &= ~(CR_CLEAR_Mask << DAC_Channel);
+   e:	ea24 0202 	bic.w	r2, r4, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:102
+     mask/amplitude for wave genration */
+  /* Set TSELx and TENx bits according to DAC_Trigger value */
+  /* Set WAVEx bits according to DAC_WaveGeneration value */
+  /* Set MAMPx bits according to DAC_LFSRUnmask_TriangleAmplitude value */ 
+  /* Set BOFFx bit according to DAC_OutputBuffer value */   
+  tmpreg2 = (DAC_InitStruct->DAC_Trigger | DAC_InitStruct->DAC_WaveGeneration |
+  12:	680c      	ldr	r4, [r1, #0]
+  14:	4325      	orrs	r5, r4
+  16:	688c      	ldr	r4, [r1, #8]
+  18:	4325      	orrs	r5, r4
+  1a:	68cc      	ldr	r4, [r1, #12]
+  1c:	ea45 0104 	orr.w	r1, r5, r4
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:105
+             DAC_InitStruct->DAC_LFSRUnmask_TriangleAmplitude | DAC_InitStruct->DAC_OutputBuffer);
+  /* Calculate CR register value depending on DAC_Channel */
+  tmpreg1 |= tmpreg2 << DAC_Channel;
+  20:	fa11 f000 	lsls.w	r0, r1, r0
+  24:	ea42 0000 	orr.w	r0, r2, r0
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:107
+  /* Write to DAC CR */
+  DAC->CR = tmpreg1;
+  28:	6018      	str	r0, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:108
+}
+  2a:	bd30      	pop	{r4, r5, pc}
+  2c:	40007400 	.word	0x40007400
+
+Disassembly of section .text.DAC_StructInit:
+
+00000000 <DAC_StructInit>:
+DAC_StructInit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:122
+*******************************************************************************/
+void DAC_StructInit(DAC_InitTypeDef* DAC_InitStruct)
+{
+/*--------------- Reset DAC init structure parameters values -----------------*/
+  /* Initialize the DAC_Trigger member */
+  DAC_InitStruct->DAC_Trigger = DAC_Trigger_None;
+   0:	2300      	movs	r3, #0
+   2:	6003      	str	r3, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:125
+
+  /* Initialize the DAC_WaveGeneration member */
+  DAC_InitStruct->DAC_WaveGeneration = DAC_WaveGeneration_None;
+   4:	6043      	str	r3, [r0, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:128
+
+  /* Initialize the DAC_LFSRUnmask_TriangleAmplitude member */
+  DAC_InitStruct->DAC_LFSRUnmask_TriangleAmplitude = DAC_LFSRUnmask_Bit0;
+   6:	6083      	str	r3, [r0, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:131
+
+  /* Initialize the DAC_OutputBuffer member */
+  DAC_InitStruct->DAC_OutputBuffer = DAC_OutputBuffer_Enable;
+   8:	60c3      	str	r3, [r0, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:132
+}
+   a:	4770      	bx	lr
+
+Disassembly of section .text.DAC_Cmd:
+
+00000000 <DAC_Cmd>:
+DAC_Cmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:147
+*                    This parameter can be: ENABLE or DISABLE.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DAC_Cmd(u32 DAC_Channel, FunctionalState NewState)
+{
+   0:	4b06      	ldr	r3, [pc, #24]	; (1c <DAC_Cmd+0x1c>)
+   2:	2201      	movs	r2, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:152
+  /* Check the parameters */
+  assert_param(IS_DAC_CHANNEL(DAC_Channel));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   4:	b119      	cbz	r1, e <DAC_Cmd+0xe>
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:155
+  {
+    /* Enable the selected DAC channel */
+    DAC->CR |= CR_EN_Set << DAC_Channel;
+   6:	4082      	lsls	r2, r0
+   8:	6819      	ldr	r1, [r3, #0]
+   a:	430a      	orrs	r2, r1
+   c:	e003      	b.n	16 <DAC_Cmd+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:160
+  }
+  else
+  {
+    /* Disable the selected DAC channel */
+    DAC->CR &= ~(CR_EN_Set << DAC_Channel);
+   e:	4082      	lsls	r2, r0
+  10:	6819      	ldr	r1, [r3, #0]
+  12:	ea21 0202 	bic.w	r2, r1, r2
+  16:	601a      	str	r2, [r3, #0]
+  18:	4770      	bx	lr
+  1a:	bf00      	nop
+  1c:	40007400 	.word	0x40007400
+
+Disassembly of section .text.DAC_DMACmd:
+
+00000000 <DAC_DMACmd>:
+DAC_DMACmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:177
+*                    This parameter can be: ENABLE or DISABLE.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DAC_DMACmd(u32 DAC_Channel, FunctionalState NewState)
+{
+   0:	4b06      	ldr	r3, [pc, #24]	; (1c <DAC_DMACmd+0x1c>)
+   2:	f44f 5280 	mov.w	r2, #4096	; 0x1000
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:182
+  /* Check the parameters */
+  assert_param(IS_DAC_CHANNEL(DAC_Channel));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   6:	b119      	cbz	r1, 10 <DAC_DMACmd+0x10>
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:185
+  {
+    /* Enable the selected DAC channel DMA request */
+    DAC->CR |= CR_DMAEN_Set << DAC_Channel;
+   8:	4082      	lsls	r2, r0
+   a:	6819      	ldr	r1, [r3, #0]
+   c:	430a      	orrs	r2, r1
+   e:	e003      	b.n	18 <DAC_DMACmd+0x18>
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:190
+  }
+  else
+  {
+    /* Disable the selected DAC channel DMA request */
+    DAC->CR &= ~(CR_DMAEN_Set << DAC_Channel);
+  10:	4082      	lsls	r2, r0
+  12:	6819      	ldr	r1, [r3, #0]
+  14:	ea21 0202 	bic.w	r2, r1, r2
+  18:	601a      	str	r2, [r3, #0]
+  1a:	4770      	bx	lr
+  1c:	40007400 	.word	0x40007400
+
+Disassembly of section .text.DAC_SoftwareTriggerCmd:
+
+00000000 <DAC_SoftwareTriggerCmd>:
+DAC_SoftwareTriggerCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:207
+*                    This parameter can be: ENABLE or DISABLE.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DAC_SoftwareTriggerCmd(u32 DAC_Channel, FunctionalState NewState)
+{
+   0:	4b06      	ldr	r3, [pc, #24]	; (1c <DAC_SoftwareTriggerCmd+0x1c>)
+   2:	0900      	lsrs	r0, r0, #4
+   4:	2201      	movs	r2, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:212
+  /* Check the parameters */
+  assert_param(IS_DAC_CHANNEL(DAC_Channel));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   6:	b119      	cbz	r1, 10 <DAC_SoftwareTriggerCmd+0x10>
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:215
+  {
+    /* Enable software trigger for the selected DAC channel */
+    DAC->SWTRIGR |= SWTRIGR_SWTRIG_Set << (DAC_Channel >> 4);
+   8:	4082      	lsls	r2, r0
+   a:	6859      	ldr	r1, [r3, #4]
+   c:	430a      	orrs	r2, r1
+   e:	e003      	b.n	18 <DAC_SoftwareTriggerCmd+0x18>
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:220
+  }
+  else
+  {
+    /* Disable software trigger for the selected DAC channel */
+    DAC->SWTRIGR &= ~(SWTRIGR_SWTRIG_Set << (DAC_Channel >> 4));
+  10:	4082      	lsls	r2, r0
+  12:	6859      	ldr	r1, [r3, #4]
+  14:	ea21 0202 	bic.w	r2, r1, r2
+  18:	605a      	str	r2, [r3, #4]
+  1a:	4770      	bx	lr
+  1c:	40007400 	.word	0x40007400
+
+Disassembly of section .text.DAC_DualSoftwareTriggerCmd:
+
+00000000 <DAC_DualSoftwareTriggerCmd>:
+DAC_DualSoftwareTriggerCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:234
+*                    This parameter can be: ENABLE or DISABLE.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DAC_DualSoftwareTriggerCmd(FunctionalState NewState)
+{
+   0:	b1184b05 	.word	0xb1184b05
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:241
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+  {
+    /* Enable software trigger for both DAC channels */
+    DAC->SWTRIGR |= DUAL_SWTRIG_Set ;
+   4:	685a      	ldr	r2, [r3, #4]
+   6:	f042 0203 	orr.w	r2, r2, #3
+   a:	e002      	b.n	12 <DAC_DualSoftwareTriggerCmd+0x12>
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:246
+  }
+  else
+  {
+    /* Disable software trigger for both DAC channels */
+    DAC->SWTRIGR &= DUAL_SWTRIG_Reset;
+   c:	685a      	ldr	r2, [r3, #4]
+   e:	f022 0203 	bic.w	r2, r2, #3
+  12:	605a      	str	r2, [r3, #4]
+  14:	4770      	bx	lr
+  16:	bf00      	nop
+  18:	40007400 	.word	0x40007400
+
+Disassembly of section .text.DAC_WaveGenerationCmd:
+
+00000000 <DAC_WaveGenerationCmd>:
+DAC_WaveGenerationCmd():
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:267
+*                    This parameter can be: ENABLE or DISABLE.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void DAC_WaveGenerationCmd(u32 DAC_Channel, u32 DAC_Wave, FunctionalState NewState)
+{
+   0:	4b05      	ldr	r3, [pc, #20]	; (18 <DAC_WaveGenerationCmd+0x18>)
+   2:	4081      	lsls	r1, r0
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:273
+  /* Check the parameters */
+  assert_param(IS_DAC_CHANNEL(DAC_Channel));
+  assert_param(IS_DAC_WAVE(DAC_Wave)); 
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   4:	b112      	cbz	r2, c <DAC_WaveGenerationCmd+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:276
+  {
+    /* Enable the selected wave generation for the selected DAC channel */
+    DAC->CR |= DAC_Wave << DAC_Channel;
+   6:	681a      	ldr	r2, [r3, #0]
+   8:	4311      	orrs	r1, r2
+   a:	e002      	b.n	12 <DAC_WaveGenerationCmd+0x12>
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:281
+  }
+  else
+  {
+    /* Disable the selected wave generation for the selected DAC channel */
+    DAC->CR &= ~(DAC_Wave << DAC_Channel);
+   c:	681a      	ldr	r2, [r3, #0]
+   e:	ea22 0101 	bic.w	r1, r2, r1
+  12:	6019      	str	r1, [r3, #0]
+  14:	4770      	bx	lr
+  16:	bf00      	nop
+  18:	40007400 	.word	0x40007400
+
+Disassembly of section .text.DAC_SetChannel1Data:
+
+00000000 <DAC_SetChannel1Data>:
+DAC_SetChannel1Data():
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:305
+  /* Check the parameters */
+  assert_param(IS_DAC_ALIGN(DAC_Align));
+  assert_param(IS_DAC_DATA(Data));
+
+  /* Set the DAC channel1 selected data holding register */
+  *((vu32 *)(DAC_BASE + DHR12R1_Offset + DAC_Align)) = (u32)Data;
+   0:	50c14b01 	.word	0x50c14b01
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:306
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	40007408 	.word	0x40007408
+
+Disassembly of section .text.DAC_SetChannel2Data:
+
+00000000 <DAC_SetChannel2Data>:
+DAC_SetChannel2Data():
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:328
+  /* Check the parameters */
+  assert_param(IS_DAC_ALIGN(DAC_Align));
+  assert_param(IS_DAC_DATA(Data));
+
+  /* Set the DAC channel2 selected data holding register */
+  *((vu32 *)(DAC_BASE + DHR12R2_Offset + DAC_Align)) = (u32)Data;
+   0:	4b01      	ldr	r3, [pc, #4]	; (8 <DAC_SetChannel2Data+0x8>)
+   2:	50c1      	str	r1, [r0, r3]
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:329
+}
+   4:	4770      	bx	lr
+   6:	bf00      	nop
+   8:	40007414 	.word	0x40007414
+
+Disassembly of section .text.DAC_SetDualChannelData:
+
+00000000 <DAC_SetDualChannelData>:
+DAC_SetDualChannelData():
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:357
+  assert_param(IS_DAC_ALIGN(DAC_Align));
+  assert_param(IS_DAC_DATA(Data1));
+  assert_param(IS_DAC_DATA(Data2));
+  
+  /* Calculate and set dual DAC data holding register value */
+  if (DAC_Align == DAC_Align_8b_R)
+   0:	2808      	cmp	r0, #8
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:367
+  {
+    data = ((u32)Data2 << 16) | Data1;
+  }
+
+  /* Set the dual DAC selected data holding register */
+  *((vu32 *)(DAC_BASE + DHR12RD_Offset + DAC_Align)) = data;
+   2:	4b04      	ldr	r3, [pc, #16]	; (14 <DAC_SetDualChannelData+0x14>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:359
+  assert_param(IS_DAC_DATA(Data2));
+  
+  /* Calculate and set dual DAC data holding register value */
+  if (DAC_Align == DAC_Align_8b_R)
+  {
+    data = ((u32)Data2 << 8) | Data1; 
+   4:	bf0c      	ite	eq
+   6:	ea42 2101 	orreq.w	r1, r2, r1, lsl #8
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:363
+  }
+  else
+  {
+    data = ((u32)Data2 << 16) | Data1;
+   a:	ea42 4101 	orrne.w	r1, r2, r1, lsl #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:367
+  }
+
+  /* Set the dual DAC selected data holding register */
+  *((vu32 *)(DAC_BASE + DHR12RD_Offset + DAC_Align)) = data;
+   e:	50c1      	str	r1, [r0, r3]
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:368
+}
+  10:	4770      	bx	lr
+  12:	bf00      	nop
+  14:	40007420 	.word	0x40007420
+
+Disassembly of section .text.DAC_GetDataOutputValue:
+
+00000000 <DAC_GetDataOutputValue>:
+DAC_GetDataOutputValue():
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:386
+{
+  /* Check the parameters */
+  assert_param(IS_DAC_CHANNEL(DAC_Channel));
+
+  /* Returns the DAC channel data output register value */
+  return (u16) (*(vu32*)(DAC_BASE + DOR_Offset + ((u32)DAC_Channel >> 2)));
+   0:	08804b02 	.word	0x08804b02
+   4:	58c0      	ldr	r0, [r0, r3]
+C:\cortex\gateway\stlibrary\src/stm32f10x_dac.c:387
+}
+   6:	b280      	uxth	r0, r0
+   8:	4770      	bx	lr
+   a:	bf00      	nop
+   c:	4000742c 	.word	0x4000742c

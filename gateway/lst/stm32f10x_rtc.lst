@@ -1,0 +1,508 @@
+
+C:\cortex\gateway\out\stm32f10x_rtc.o:     file format elf32-littlearm
+C:\cortex\gateway\out\stm32f10x_rtc.o
+
+
+Disassembly of section .text.RTC_ITConfig:
+
+00000000 <RTC_ITConfig>:
+RTC_ITConfig():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:46
+*                    This parameter can be: ENABLE or DISABLE.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void RTC_ITConfig(u16 RTC_IT, FunctionalState NewState)
+{
+   0:	4b05      	ldr	r3, [pc, #20]	; (18 <RTC_ITConfig+0x18>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:51
+  /* Check the parameters */
+  assert_param(IS_RTC_IT(RTC_IT));  
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  if (NewState != DISABLE)
+   2:	b119      	cbz	r1, c <RTC_ITConfig+0xc>
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:53
+  {
+    RTC->CRH |= RTC_IT;
+   4:	881a      	ldrh	r2, [r3, #0]
+   6:	b292      	uxth	r2, r2
+   8:	4310      	orrs	r0, r2
+   a:	e003      	b.n	14 <RTC_ITConfig+0x14>
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:57
+  }
+  else
+  {
+    RTC->CRH &= (u16)~RTC_IT;
+   c:	881a      	ldrh	r2, [r3, #0]
+   e:	b292      	uxth	r2, r2
+  10:	ea22 0000 	bic.w	r0, r2, r0
+  14:	8018      	strh	r0, [r3, #0]
+  16:	4770      	bx	lr
+  18:	40002800 	.word	0x40002800
+
+Disassembly of section .text.RTC_EnterConfigMode:
+
+00000000 <RTC_EnterConfigMode>:
+RTC_EnterConfigMode():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:71
+* Return         : None
+*******************************************************************************/
+void RTC_EnterConfigMode(void)
+{
+  /* Set the CNF flag to enter in the Configuration Mode */
+  RTC->CRL |= CRL_CNF_Set;
+   0:	889a4b03 	.word	0x889a4b03
+   4:	b292      	uxth	r2, r2
+   6:	f042 0210 	orr.w	r2, r2, #16
+   a:	809a      	strh	r2, [r3, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:72
+}
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	40002800 	.word	0x40002800
+
+Disassembly of section .text.RTC_ExitConfigMode:
+
+00000000 <RTC_ExitConfigMode>:
+RTC_ExitConfigMode():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:84
+* Return         : None
+*******************************************************************************/
+void RTC_ExitConfigMode(void)
+{
+  /* Reset the CNF flag to exit from the Configuration Mode */
+  RTC->CRL &= CRL_CNF_Reset;
+   0:	4a03      	ldr	r2, [pc, #12]	; (10 <RTC_ExitConfigMode+0x10>)
+   2:	8893      	ldrh	r3, [r2, #4]
+   4:	f023 0310 	bic.w	r3, r3, #16
+   8:	041b      	lsls	r3, r3, #16
+   a:	0c1b      	lsrs	r3, r3, #16
+   c:	8093      	strh	r3, [r2, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:85
+}
+   e:	4770      	bx	lr
+  10:	40002800 	.word	0x40002800
+
+Disassembly of section .text.RTC_GetCounter:
+
+00000000 <RTC_GetCounter>:
+RTC_GetCounter():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:97
+* Return         : RTC counter value.
+*******************************************************************************/
+u32 RTC_GetCounter(void)
+{
+  u16 tmp = 0;
+  tmp = RTC->CNTL;
+   0:	4b03      	ldr	r3, [pc, #12]	; (10 <RTC_GetCounter+0x10>)
+   2:	8b9a      	ldrh	r2, [r3, #28]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:99
+
+  return (((u32)RTC->CNTH << 16 ) | tmp) ;
+   4:	8b18      	ldrh	r0, [r3, #24]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:97
+* Return         : RTC counter value.
+*******************************************************************************/
+u32 RTC_GetCounter(void)
+{
+  u16 tmp = 0;
+  tmp = RTC->CNTL;
+   6:	b292      	uxth	r2, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:100
+
+  return (((u32)RTC->CNTH << 16 ) | tmp) ;
+}
+   8:	ea42 4000 	orr.w	r0, r2, r0, lsl #16
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	40002800 	.word	0x40002800
+
+Disassembly of section .text.RTC_SetCounter:
+
+00000000 <RTC_SetCounter>:
+RTC_SetCounter():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:110
+* Input          : - CounterValue: RTC counter new value.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void RTC_SetCounter(u32 CounterValue)
+{ 
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:111
+  RTC_EnterConfigMode();
+   4:	f7ff fffe 	bl	0 <RTC_SetCounter>
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:114
+
+  /* Set RTC COUNTER MSB word */
+  RTC->CNTH = CounterValue >> 16;
+   8:	4b04      	ldr	r3, [pc, #16]	; (1c <RTC_SetCounter+0x1c>)
+   a:	0c22      	lsrs	r2, r4, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:116
+  /* Set RTC COUNTER LSB word */
+  RTC->CNTL = (CounterValue & RTC_LSB_Mask);
+   c:	b2a4      	uxth	r4, r4
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:114
+void RTC_SetCounter(u32 CounterValue)
+{ 
+  RTC_EnterConfigMode();
+
+  /* Set RTC COUNTER MSB word */
+  RTC->CNTH = CounterValue >> 16;
+   e:	831a      	strh	r2, [r3, #24]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:116
+  /* Set RTC COUNTER LSB word */
+  RTC->CNTL = (CounterValue & RTC_LSB_Mask);
+  10:	839c      	strh	r4, [r3, #28]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:119
+
+  RTC_ExitConfigMode();
+}
+  12:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:118
+  /* Set RTC COUNTER MSB word */
+  RTC->CNTH = CounterValue >> 16;
+  /* Set RTC COUNTER LSB word */
+  RTC->CNTL = (CounterValue & RTC_LSB_Mask);
+
+  RTC_ExitConfigMode();
+  16:	f7ff bffe 	b.w	0 <RTC_SetCounter>
+  1a:	bf00      	nop
+  1c:	40002800 	.word	0x40002800
+
+Disassembly of section .text.RTC_SetPrescaler:
+
+00000000 <RTC_SetPrescaler>:
+RTC_SetPrescaler():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:129
+* Input          : - PrescalerValue: RTC prescaler new value.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void RTC_SetPrescaler(u32 PrescalerValue)
+{
+   0:	b510      	push	{r4, lr}
+   2:	4604      	mov	r4, r0
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:133
+  /* Check the parameters */
+  assert_param(IS_RTC_PRESCALER(PrescalerValue));
+  
+  RTC_EnterConfigMode();
+   4:	f7ff fffe 	bl	0 <RTC_SetPrescaler>
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:136
+
+  /* Set RTC PRESCALER MSB word */
+  RTC->PRLH = (PrescalerValue & PRLH_MSB_Mask) >> 16;
+   8:	4b05      	ldr	r3, [pc, #20]	; (20 <RTC_SetPrescaler+0x20>)
+   a:	f404 2270 	and.w	r2, r4, #983040	; 0xf0000
+   e:	0c12      	lsrs	r2, r2, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:138
+  /* Set RTC PRESCALER LSB word */
+  RTC->PRLL = (PrescalerValue & RTC_LSB_Mask);
+  10:	b2a4      	uxth	r4, r4
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:136
+  assert_param(IS_RTC_PRESCALER(PrescalerValue));
+  
+  RTC_EnterConfigMode();
+
+  /* Set RTC PRESCALER MSB word */
+  RTC->PRLH = (PrescalerValue & PRLH_MSB_Mask) >> 16;
+  12:	811a      	strh	r2, [r3, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:138
+  /* Set RTC PRESCALER LSB word */
+  RTC->PRLL = (PrescalerValue & RTC_LSB_Mask);
+  14:	819c      	strh	r4, [r3, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:141
+
+  RTC_ExitConfigMode();
+}
+  16:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:140
+  /* Set RTC PRESCALER MSB word */
+  RTC->PRLH = (PrescalerValue & PRLH_MSB_Mask) >> 16;
+  /* Set RTC PRESCALER LSB word */
+  RTC->PRLL = (PrescalerValue & RTC_LSB_Mask);
+
+  RTC_ExitConfigMode();
+  1a:	f7ff bffe 	b.w	0 <RTC_SetPrescaler>
+  1e:	bf00      	nop
+  20:	40002800 	.word	0x40002800
+
+Disassembly of section .text.RTC_SetAlarm:
+
+00000000 <RTC_SetAlarm>:
+RTC_SetAlarm():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:151
+* Input          : - AlarmValue: RTC alarm new value.
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void RTC_SetAlarm(u32 AlarmValue)
+{  
+   0:	4604b510 	.word	0x4604b510
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:152
+  RTC_EnterConfigMode();
+   4:	f7ff fffe 	bl	0 <RTC_SetAlarm>
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:155
+
+  /* Set the ALARM MSB word */
+  RTC->ALRH = AlarmValue >> 16;
+   8:	4b04      	ldr	r3, [pc, #16]	; (1c <RTC_SetAlarm+0x1c>)
+   a:	0c22      	lsrs	r2, r4, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:157
+  /* Set the ALARM LSB word */
+  RTC->ALRL = (AlarmValue & RTC_LSB_Mask);
+   c:	b2a4      	uxth	r4, r4
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:155
+void RTC_SetAlarm(u32 AlarmValue)
+{  
+  RTC_EnterConfigMode();
+
+  /* Set the ALARM MSB word */
+  RTC->ALRH = AlarmValue >> 16;
+   e:	841a      	strh	r2, [r3, #32]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:157
+  /* Set the ALARM LSB word */
+  RTC->ALRL = (AlarmValue & RTC_LSB_Mask);
+  10:	849c      	strh	r4, [r3, #36]	; 0x24
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:160
+
+  RTC_ExitConfigMode();
+}
+  12:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:159
+  /* Set the ALARM MSB word */
+  RTC->ALRH = AlarmValue >> 16;
+  /* Set the ALARM LSB word */
+  RTC->ALRL = (AlarmValue & RTC_LSB_Mask);
+
+  RTC_ExitConfigMode();
+  16:	f7ff bffe 	b.w	0 <RTC_SetAlarm>
+  1a:	bf00      	nop
+  1c:	40002800 	.word	0x40002800
+
+Disassembly of section .text.RTC_GetDivider:
+
+00000000 <RTC_GetDivider>:
+RTC_GetDivider():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:173
+*******************************************************************************/
+u32 RTC_GetDivider(void)
+{
+  u32 tmp = 0x00;
+
+  tmp = ((u32)RTC->DIVH & (u32)0x000F) << 16;
+   0:	8a184b04 	.word	0x8a184b04
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:174
+  tmp |= RTC->DIVL;
+   4:	8a9b      	ldrh	r3, [r3, #20]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:173
+*******************************************************************************/
+u32 RTC_GetDivider(void)
+{
+  u32 tmp = 0x00;
+
+  tmp = ((u32)RTC->DIVH & (u32)0x000F) << 16;
+   6:	f000 000f 	and.w	r0, r0, #15
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:174
+  tmp |= RTC->DIVL;
+   a:	b29b      	uxth	r3, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:177
+
+  return tmp;
+}
+   c:	ea43 4000 	orr.w	r0, r3, r0, lsl #16
+  10:	4770      	bx	lr
+  12:	bf00      	nop
+  14:	40002800 	.word	0x40002800
+
+Disassembly of section .text.RTC_WaitForLastTask:
+
+00000000 <RTC_WaitForLastTask>:
+RTC_WaitForLastTask():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:190
+* Return         : None
+*******************************************************************************/
+void RTC_WaitForLastTask(void)
+{
+  /* Loop until RTOFF flag is set */
+  while ((RTC->CRL & RTC_FLAG_RTOFF) == (u16)RESET)
+   0:	889b4b02 	.word	0x889b4b02
+   4:	f013 0f20 	tst.w	r3, #32
+   8:	d0fa      	beq.n	0 <RTC_WaitForLastTask>
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:193
+  {
+  }
+}
+   a:	4770      	bx	lr
+   c:	40002800 	.word	0x40002800
+
+Disassembly of section .text.RTC_WaitForSynchro:
+
+00000000 <RTC_WaitForSynchro>:
+RTC_WaitForSynchro():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:208
+* Return         : None
+*******************************************************************************/
+void RTC_WaitForSynchro(void)
+{
+  /* Clear RSF flag */
+  RTC->CRL &= (u16)~RTC_FLAG_RSF;
+   0:	4a06      	ldr	r2, [pc, #24]	; (1c <RTC_WaitForSynchro+0x1c>)
+   2:	8893      	ldrh	r3, [r2, #4]
+   4:	f023 0308 	bic.w	r3, r3, #8
+   8:	041b      	lsls	r3, r3, #16
+   a:	0c1b      	lsrs	r3, r3, #16
+   c:	8093      	strh	r3, [r2, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:211
+
+  /* Loop until RSF flag is set */
+  while ((RTC->CRL & RTC_FLAG_RSF) == (u16)RESET)
+   e:	4b03      	ldr	r3, [pc, #12]	; (1c <RTC_WaitForSynchro+0x1c>)
+  10:	889b      	ldrh	r3, [r3, #4]
+  12:	f013 0f08 	tst.w	r3, #8
+  16:	d0fa      	beq.n	e <RTC_WaitForSynchro+0xe>
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:214
+  {
+  }
+}
+  18:	4770      	bx	lr
+  1a:	bf00      	nop
+  1c:	40002800 	.word	0x40002800
+
+Disassembly of section .text.RTC_GetFlagStatus:
+
+00000000 <RTC_GetFlagStatus>:
+RTC_GetFlagStatus():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:236
+  FlagStatus bitstatus = RESET;
+  
+  /* Check the parameters */
+  assert_param(IS_RTC_GET_FLAG(RTC_FLAG)); 
+  
+  if ((RTC->CRL & RTC_FLAG) != (u16)RESET)
+   0:	889b4b03 	.word	0x889b4b03
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:238
+  {
+    bitstatus = SET;
+   4:	4218      	tst	r0, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:245
+  else
+  {
+    bitstatus = RESET;
+  }
+  return bitstatus;
+}
+   6:	bf0c      	ite	eq
+   8:	2000      	moveq	r0, #0
+   a:	2001      	movne	r0, #1
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	40002800 	.word	0x40002800
+
+Disassembly of section .text.RTC_ClearFlag:
+
+00000000 <RTC_ClearFlag>:
+RTC_ClearFlag():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:266
+{
+  /* Check the parameters */
+  assert_param(IS_RTC_CLEAR_FLAG(RTC_FLAG)); 
+    
+  /* Clear the coressponding RTC flag */
+  RTC->CRL &= (u16)~RTC_FLAG;
+   0:	4b03      	ldr	r3, [pc, #12]	; (10 <RTC_ClearFlag+0x10>)
+   2:	889a      	ldrh	r2, [r3, #4]
+   4:	b292      	uxth	r2, r2
+   6:	ea22 0200 	bic.w	r2, r2, r0
+   a:	809a      	strh	r2, [r3, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:267
+}
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	40002800 	.word	0x40002800
+
+Disassembly of section .text.RTC_GetITStatus:
+
+00000000 <RTC_GetITStatus>:
+RTC_GetITStatus():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:287
+  ITStatus bitstatus = RESET;
+
+  /* Check the parameters */
+  assert_param(IS_RTC_GET_IT(RTC_IT)); 
+  
+  bitstatus = (ITStatus)(RTC->CRL & RTC_IT);
+   0:	4b07      	ldr	r3, [pc, #28]	; (20 <RTC_GetITStatus+0x20>)
+   2:	889a      	ldrh	r2, [r3, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:289
+
+  if (((RTC->CRH & RTC_IT) != (u16)RESET) && (bitstatus != (u16)RESET))
+   4:	881b      	ldrh	r3, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:287
+  ITStatus bitstatus = RESET;
+
+  /* Check the parameters */
+  assert_param(IS_RTC_GET_IT(RTC_IT)); 
+  
+  bitstatus = (ITStatus)(RTC->CRL & RTC_IT);
+   6:	b292      	uxth	r2, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:289
+
+  if (((RTC->CRH & RTC_IT) != (u16)RESET) && (bitstatus != (u16)RESET))
+   8:	4003      	ands	r3, r0
+   a:	d006      	beq.n	1a <RTC_GetITStatus+0x1a>
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:287
+  ITStatus bitstatus = RESET;
+
+  /* Check the parameters */
+  assert_param(IS_RTC_GET_IT(RTC_IT)); 
+  
+  bitstatus = (ITStatus)(RTC->CRL & RTC_IT);
+   c:	4010      	ands	r0, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:291
+
+  if (((RTC->CRH & RTC_IT) != (u16)RESET) && (bitstatus != (u16)RESET))
+  {
+    bitstatus = SET;
+   e:	f010 0fff 	tst.w	r0, #255	; 0xff
+  12:	bf0c      	ite	eq
+  14:	2000      	moveq	r0, #0
+  16:	2001      	movne	r0, #1
+  18:	4770      	bx	lr
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:295
+  }
+  else
+  {
+    bitstatus = RESET;
+  1a:	4618      	mov	r0, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:298
+  }
+  return bitstatus;
+}
+  1c:	4770      	bx	lr
+  1e:	bf00      	nop
+  20:	40002800 	.word	0x40002800
+
+Disassembly of section .text.RTC_ClearITPendingBit:
+
+00000000 <RTC_ClearITPendingBit>:
+RTC_ClearITPendingBit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:317
+{
+  /* Check the parameters */
+  assert_param(IS_RTC_IT(RTC_IT));  
+  
+  /* Clear the coressponding RTC pending bit */
+  RTC->CRL &= (u16)~RTC_IT;
+   0:	889a4b03 	.word	0x889a4b03
+   4:	b292      	uxth	r2, r2
+   6:	ea22 0200 	bic.w	r2, r2, r0
+   a:	809a      	strh	r2, [r3, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_rtc.c:318
+}
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	40002800 	.word	0x40002800

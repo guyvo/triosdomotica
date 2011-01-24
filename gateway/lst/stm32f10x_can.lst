@@ -1,0 +1,1845 @@
+
+C:\cortex\gateway\out\stm32f10x_can.o:     file format elf32-littlearm
+C:\cortex\gateway\out\stm32f10x_can.o
+
+
+Disassembly of section .text.CheckITStatus:
+
+00000000 <CheckITStatus>:
+CheckITStatus():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:896
+  ITStatus pendingbitstatus = RESET;
+
+  if ((CAN_Reg & It_Bit) != (u32)RESET)
+  {
+    /* CAN_IT is set */
+    pendingbitstatus = SET;
+   0:	4201      	tst	r1, r0
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:905
+    /* CAN_IT is reset */
+    pendingbitstatus = RESET;
+  }
+
+  return pendingbitstatus;
+}
+   2:	bf0c      	ite	eq
+   4:	2000      	moveq	r0, #0
+   6:	2001      	movne	r0, #1
+   8:	4770      	bx	lr
+
+Disassembly of section .text.CAN_DeInit:
+
+00000000 <CAN_DeInit>:
+CAN_DeInit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:91
+* Return         : None.
+*******************************************************************************/
+void CAN_DeInit(void)
+{
+  /* Enable CAN reset state */
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_CAN, ENABLE);
+   0:	2101      	movs	r1, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:89
+* Input          : None.
+* Output         : None.
+* Return         : None.
+*******************************************************************************/
+void CAN_DeInit(void)
+{
+   2:	b510      	push	{r4, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:91
+  /* Enable CAN reset state */
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_CAN, ENABLE);
+   4:	f04f 7000 	mov.w	r0, #33554432	; 0x2000000
+   8:	f7ff fffe 	bl	0 <RCC_APB1PeriphResetCmd>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:93
+  /* Release CAN from reset state */
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_CAN, DISABLE);
+   c:	f04f 7000 	mov.w	r0, #33554432	; 0x2000000
+  10:	2100      	movs	r1, #0
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:94
+}
+  12:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:93
+void CAN_DeInit(void)
+{
+  /* Enable CAN reset state */
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_CAN, ENABLE);
+  /* Release CAN from reset state */
+  RCC_APB1PeriphResetCmd(RCC_APB1Periph_CAN, DISABLE);
+  16:	f7ff bffe 	b.w	0 <RCC_APB1PeriphResetCmd>
+
+Disassembly of section .text.CAN_Init:
+
+00000000 <CAN_Init>:
+CAN_Init():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:125
+  assert_param(IS_CAN_BS1(CAN_InitStruct->CAN_BS1));
+  assert_param(IS_CAN_BS2(CAN_InitStruct->CAN_BS2));
+  assert_param(IS_CAN_PRESCALER(CAN_InitStruct->CAN_Prescaler));
+
+  /* Request initialisation */
+  CAN->MCR = MCR_INRQ;
+   0:	4b2e      	ldr	r3, [pc, #184]	; (bc <CAN_Init+0xbc>)
+   2:	2201      	movs	r2, #1
+   4:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:128
+
+  /* ...and check acknowledged */
+  if ((CAN->MSR & MSR_INAK) == 0)
+   6:	685a      	ldr	r2, [r3, #4]
+   8:	f012 0201 	ands.w	r2, r2, #1
+   c:	d054      	beq.n	b8 <CAN_Init+0xb8>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:135
+    InitStatus = CANINITFAILED;
+  }
+  else
+  {
+    /* Set the time triggered communication mode */
+    if (CAN_InitStruct->CAN_TTCM == ENABLE)
+   e:	7802      	ldrb	r2, [r0, #0]
+  10:	2a01      	cmp	r2, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:137
+    {
+      CAN->MCR |= MCR_TTCM;
+  12:	681a      	ldr	r2, [r3, #0]
+  14:	bf0c      	ite	eq
+  16:	f042 0280 	orreq.w	r2, r2, #128	; 0x80
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:141
+    }
+    else
+    {
+      CAN->MCR &= ~MCR_TTCM;
+  1a:	f022 0280 	bicne.w	r2, r2, #128	; 0x80
+  1e:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:145
+    }
+
+    /* Set the automatic bus-off management */
+    if (CAN_InitStruct->CAN_ABOM == ENABLE)
+  20:	7843      	ldrb	r3, [r0, #1]
+  22:	2b01      	cmp	r3, #1
+  24:	4b25      	ldr	r3, [pc, #148]	; (bc <CAN_Init+0xbc>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:147
+    {
+      CAN->MCR |= MCR_ABOM;
+  26:	681a      	ldr	r2, [r3, #0]
+  28:	bf0c      	ite	eq
+  2a:	f042 0240 	orreq.w	r2, r2, #64	; 0x40
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:151
+    }
+    else
+    {
+      CAN->MCR &= ~MCR_ABOM;
+  2e:	f022 0240 	bicne.w	r2, r2, #64	; 0x40
+  32:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:155
+    }
+
+    /* Set the automatic wake-up mode */
+    if (CAN_InitStruct->CAN_AWUM == ENABLE)
+  34:	7883      	ldrb	r3, [r0, #2]
+  36:	2b01      	cmp	r3, #1
+  38:	4b20      	ldr	r3, [pc, #128]	; (bc <CAN_Init+0xbc>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:157
+    {
+      CAN->MCR |= MCR_AWUM;
+  3a:	681a      	ldr	r2, [r3, #0]
+  3c:	bf0c      	ite	eq
+  3e:	f042 0220 	orreq.w	r2, r2, #32
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:161
+    }
+    else
+    {
+      CAN->MCR &= ~MCR_AWUM;
+  42:	f022 0220 	bicne.w	r2, r2, #32
+  46:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:165
+    }
+
+    /* Set the no automatic retransmission */
+    if (CAN_InitStruct->CAN_NART == ENABLE)
+  48:	78c3      	ldrb	r3, [r0, #3]
+  4a:	2b01      	cmp	r3, #1
+  4c:	4b1b      	ldr	r3, [pc, #108]	; (bc <CAN_Init+0xbc>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:167
+    {
+      CAN->MCR |= MCR_NART;
+  4e:	681a      	ldr	r2, [r3, #0]
+  50:	bf0c      	ite	eq
+  52:	f042 0210 	orreq.w	r2, r2, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:171
+    }
+    else
+    {
+      CAN->MCR &= ~MCR_NART;
+  56:	f022 0210 	bicne.w	r2, r2, #16
+  5a:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:175
+    }
+
+    /* Set the receive FIFO locked mode */
+    if (CAN_InitStruct->CAN_RFLM == ENABLE)
+  5c:	7903      	ldrb	r3, [r0, #4]
+  5e:	2b01      	cmp	r3, #1
+  60:	4b16      	ldr	r3, [pc, #88]	; (bc <CAN_Init+0xbc>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:177
+    {
+      CAN->MCR |= MCR_RFLM;
+  62:	681a      	ldr	r2, [r3, #0]
+  64:	bf0c      	ite	eq
+  66:	f042 0208 	orreq.w	r2, r2, #8
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:181
+    }
+    else
+    {
+      CAN->MCR &= ~MCR_RFLM;
+  6a:	f022 0208 	bicne.w	r2, r2, #8
+  6e:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:185
+    }
+
+    /* Set the transmit FIFO priority */
+    if (CAN_InitStruct->CAN_TXFP == ENABLE)
+  70:	7943      	ldrb	r3, [r0, #5]
+  72:	2b01      	cmp	r3, #1
+  74:	4b11      	ldr	r3, [pc, #68]	; (bc <CAN_Init+0xbc>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:187
+    {
+      CAN->MCR |= MCR_TXFP;
+  76:	681a      	ldr	r2, [r3, #0]
+  78:	bf0c      	ite	eq
+  7a:	f042 0204 	orreq.w	r2, r2, #4
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:191
+    }
+    else
+    {
+      CAN->MCR &= ~MCR_TXFP;
+  7e:	f022 0204 	bicne.w	r2, r2, #4
+  82:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:195
+    }
+
+    /* Set the bit timing register */
+    CAN->BTR = (u32)((u32)CAN_InitStruct->CAN_Mode << 30) | ((u32)CAN_InitStruct->CAN_SJW << 24) |
+  84:	7982      	ldrb	r2, [r0, #6]
+  86:	79c3      	ldrb	r3, [r0, #7]
+  88:	0792      	lsls	r2, r2, #30
+  8a:	ea42 6203 	orr.w	r2, r2, r3, lsl #24
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:196
+               ((u32)CAN_InitStruct->CAN_BS1 << 16) | ((u32)CAN_InitStruct->CAN_BS2 << 20) |
+  8e:	7a03      	ldrb	r3, [r0, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:195
+    {
+      CAN->MCR &= ~MCR_TXFP;
+    }
+
+    /* Set the bit timing register */
+    CAN->BTR = (u32)((u32)CAN_InitStruct->CAN_Mode << 30) | ((u32)CAN_InitStruct->CAN_SJW << 24) |
+  90:	ea42 4203 	orr.w	r2, r2, r3, lsl #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:196
+               ((u32)CAN_InitStruct->CAN_BS1 << 16) | ((u32)CAN_InitStruct->CAN_BS2 << 20) |
+  94:	7a43      	ldrb	r3, [r0, #9]
+  96:	ea42 5203 	orr.w	r2, r2, r3, lsl #20
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:197
+               ((u32)CAN_InitStruct->CAN_Prescaler - 1);
+  9a:	8943      	ldrh	r3, [r0, #10]
+  9c:	3b01      	subs	r3, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:196
+      CAN->MCR &= ~MCR_TXFP;
+    }
+
+    /* Set the bit timing register */
+    CAN->BTR = (u32)((u32)CAN_InitStruct->CAN_Mode << 30) | ((u32)CAN_InitStruct->CAN_SJW << 24) |
+               ((u32)CAN_InitStruct->CAN_BS1 << 16) | ((u32)CAN_InitStruct->CAN_BS2 << 20) |
+  9e:	431a      	orrs	r2, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:195
+    {
+      CAN->MCR &= ~MCR_TXFP;
+    }
+
+    /* Set the bit timing register */
+    CAN->BTR = (u32)((u32)CAN_InitStruct->CAN_Mode << 30) | ((u32)CAN_InitStruct->CAN_SJW << 24) |
+  a0:	4b06      	ldr	r3, [pc, #24]	; (bc <CAN_Init+0xbc>)
+  a2:	61da      	str	r2, [r3, #28]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:202
+               ((u32)CAN_InitStruct->CAN_Prescaler - 1);
+
+    InitStatus = CANINITOK;
+
+    /* Request leave initialisation */
+    CAN->MCR &= ~MCR_INRQ;
+  a4:	681a      	ldr	r2, [r3, #0]
+  a6:	f022 0201 	bic.w	r2, r2, #1
+  aa:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:210
+    for(WaitAck = 0x400; WaitAck > 0x0; WaitAck--)
+    {
+    }
+    
+    /* ...and check acknowledged */
+    if ((CAN->MSR & MSR_INAK) == MSR_INAK)
+  ac:	6858      	ldr	r0, [r3, #4]
+  ae:	f000 0001 	and.w	r0, r0, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:130
+  CAN->MCR = MCR_INRQ;
+
+  /* ...and check acknowledged */
+  if ((CAN->MSR & MSR_INAK) == 0)
+  {
+    InitStatus = CANINITFAILED;
+  b2:	f080 0001 	eor.w	r0, r0, #1
+  b6:	4770      	bx	lr
+  b8:	4610      	mov	r0, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:218
+    }
+  }
+
+  /* At this step, return the status of initialization */
+  return InitStatus;
+}
+  ba:	4770      	bx	lr
+  bc:	40006400 	.word	0x40006400
+
+Disassembly of section .text.CAN_FilterInit:
+
+00000000 <CAN_FilterInit>:
+CAN_FilterInit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:241
+  assert_param(IS_CAN_FILTER_SCALE(CAN_FilterInitStruct->CAN_FilterScale));
+  assert_param(IS_CAN_FILTER_FIFO(CAN_FilterInitStruct->CAN_FilterFIFOAssignment));
+  assert_param(IS_FUNCTIONAL_STATE(CAN_FilterInitStruct->CAN_FilterActivation));
+
+  FilterNumber_BitPos = 
+  (u16)(((u16)0x0001) << ((u16)CAN_FilterInitStruct->CAN_FilterNumber));
+   0:	7803      	ldrb	r3, [r0, #0]
+   2:	2201      	movs	r2, #1
+   4:	409a      	lsls	r2, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:230
+*                  structure that contains the configuration information.
+* Output         : None.
+* Return         : None.
+*******************************************************************************/
+void CAN_FilterInit(CAN_FilterInitTypeDef* CAN_FilterInitStruct)
+{
+   6:	b570      	push	{r4, r5, r6, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:244
+
+  FilterNumber_BitPos = 
+  (u16)(((u16)0x0001) << ((u16)CAN_FilterInitStruct->CAN_FilterNumber));
+
+  /* Initialisation mode for the filter */
+  CAN->FMR |= FMR_FINIT;
+   8:	4b38      	ldr	r3, [pc, #224]	; (ec <CAN_FilterInit+0xec>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:240
+  assert_param(IS_CAN_FILTER_MODE(CAN_FilterInitStruct->CAN_FilterMode));
+  assert_param(IS_CAN_FILTER_SCALE(CAN_FilterInitStruct->CAN_FilterScale));
+  assert_param(IS_CAN_FILTER_FIFO(CAN_FilterInitStruct->CAN_FilterFIFOAssignment));
+  assert_param(IS_FUNCTIONAL_STATE(CAN_FilterInitStruct->CAN_FilterActivation));
+
+  FilterNumber_BitPos = 
+   a:	b292      	uxth	r2, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:244
+  (u16)(((u16)0x0001) << ((u16)CAN_FilterInitStruct->CAN_FilterNumber));
+
+  /* Initialisation mode for the filter */
+  CAN->FMR |= FMR_FINIT;
+   c:	f8d3 1200 	ldr.w	r1, [r3, #512]	; 0x200
+  10:	f041 0101 	orr.w	r1, r1, #1
+  14:	f8c3 1200 	str.w	r1, [r3, #512]	; 0x200
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:247
+
+  /* Filter Deactivation */
+  CAN->FA1R &= ~(u32)FilterNumber_BitPos;
+  18:	f8d3 421c 	ldr.w	r4, [r3, #540]	; 0x21c
+  1c:	43d1      	mvns	r1, r2
+  1e:	ea01 0404 	and.w	r4, r1, r4
+  22:	f8c3 421c 	str.w	r4, [r3, #540]	; 0x21c
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:250
+
+  /* Filter Scale */
+  if (CAN_FilterInitStruct->CAN_FilterScale == CAN_FilterScale_16bit)
+  26:	7884      	ldrb	r4, [r0, #2]
+  28:	b9b4      	cbnz	r4, 58 <CAN_FilterInit+0x58>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:253
+  {
+    /* 16-bit scale for the filter */
+    CAN->FS1R &= ~(u32)FilterNumber_BitPos;
+  2a:	f8d3 420c 	ldr.w	r4, [r3, #524]	; 0x20c
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:258
+
+    /* First 16-bit identifier and First 16-bit mask */
+    /* Or First 16-bit identifier and Second 16-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR1 = 
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdLow) << 16) |
+  2e:	8946      	ldrh	r6, [r0, #10]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:253
+
+  /* Filter Scale */
+  if (CAN_FilterInitStruct->CAN_FilterScale == CAN_FilterScale_16bit)
+  {
+    /* 16-bit scale for the filter */
+    CAN->FS1R &= ~(u32)FilterNumber_BitPos;
+  30:	ea01 0404 	and.w	r4, r1, r4
+  34:	f8c3 420c 	str.w	r4, [r3, #524]	; 0x20c
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:257
+
+    /* First 16-bit identifier and First 16-bit mask */
+    /* Or First 16-bit identifier and Second 16-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR1 = 
+  38:	7804      	ldrb	r4, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:259
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdLow) << 16) |
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdLow);
+  3a:	88c5      	ldrh	r5, [r0, #6]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:257
+    /* 16-bit scale for the filter */
+    CAN->FS1R &= ~(u32)FilterNumber_BitPos;
+
+    /* First 16-bit identifier and First 16-bit mask */
+    /* Or First 16-bit identifier and Second 16-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR1 = 
+  3c:	3448      	adds	r4, #72	; 0x48
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:258
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdLow) << 16) |
+  3e:	ea45 4506 	orr.w	r5, r5, r6, lsl #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:257
+    /* 16-bit scale for the filter */
+    CAN->FS1R &= ~(u32)FilterNumber_BitPos;
+
+    /* First 16-bit identifier and First 16-bit mask */
+    /* Or First 16-bit identifier and Second 16-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR1 = 
+  42:	f843 5034 	str.w	r5, [r3, r4, lsl #3]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:265
+
+    /* Second 16-bit identifier and Second 16-bit mask */
+    /* Or Third 16-bit identifier and Fourth 16-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR2 = 
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdHigh) << 16) |
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdHigh);
+  46:	8883      	ldrh	r3, [r0, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:264
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdLow);
+
+    /* Second 16-bit identifier and Second 16-bit mask */
+    /* Or Third 16-bit identifier and Fourth 16-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR2 = 
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdHigh) << 16) |
+  48:	8904      	ldrh	r4, [r0, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:263
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdLow) << 16) |
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdLow);
+
+    /* Second 16-bit identifier and Second 16-bit mask */
+    /* Or Third 16-bit identifier and Fourth 16-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR2 = 
+  4a:	7805      	ldrb	r5, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:264
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdHigh) << 16) |
+  4c:	ea43 4404 	orr.w	r4, r3, r4, lsl #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:263
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdLow) << 16) |
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdLow);
+
+    /* Second 16-bit identifier and Second 16-bit mask */
+    /* Or Third 16-bit identifier and Fourth 16-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR2 = 
+  50:	4b27      	ldr	r3, [pc, #156]	; (f0 <CAN_FilterInit+0xf0>)
+  52:	00ed      	lsls	r5, r5, #3
+  54:	18eb      	adds	r3, r5, r3
+  56:	605c      	str	r4, [r3, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:267
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdHigh) << 16) |
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdHigh);
+  }
+  if (CAN_FilterInitStruct->CAN_FilterScale == CAN_FilterScale_32bit)
+  58:	7883      	ldrb	r3, [r0, #2]
+  5a:	2b01      	cmp	r3, #1
+  5c:	d117      	bne.n	8e <CAN_FilterInit+0x8e>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:270
+  {
+    /* 32-bit scale for the filter */
+    CAN->FS1R |= FilterNumber_BitPos;
+  5e:	4b23      	ldr	r3, [pc, #140]	; (ec <CAN_FilterInit+0xec>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:274
+
+    /* 32-bit identifier or First 32-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR1 = 
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdHigh) << 16) |
+  60:	8886      	ldrh	r6, [r0, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:270
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdHigh);
+  }
+  if (CAN_FilterInitStruct->CAN_FilterScale == CAN_FilterScale_32bit)
+  {
+    /* 32-bit scale for the filter */
+    CAN->FS1R |= FilterNumber_BitPos;
+  62:	f8d3 420c 	ldr.w	r4, [r3, #524]	; 0x20c
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:275
+
+    /* 32-bit identifier or First 32-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR1 = 
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdHigh) << 16) |
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdLow);
+  66:	88c5      	ldrh	r5, [r0, #6]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:270
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdHigh);
+  }
+  if (CAN_FilterInitStruct->CAN_FilterScale == CAN_FilterScale_32bit)
+  {
+    /* 32-bit scale for the filter */
+    CAN->FS1R |= FilterNumber_BitPos;
+  68:	ea42 0404 	orr.w	r4, r2, r4
+  6c:	f8c3 420c 	str.w	r4, [r3, #524]	; 0x20c
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:273
+
+    /* 32-bit identifier or First 32-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR1 = 
+  70:	7804      	ldrb	r4, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:274
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdHigh) << 16) |
+  72:	ea45 4506 	orr.w	r5, r5, r6, lsl #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:273
+  {
+    /* 32-bit scale for the filter */
+    CAN->FS1R |= FilterNumber_BitPos;
+
+    /* 32-bit identifier or First 32-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR1 = 
+  76:	3448      	adds	r4, #72	; 0x48
+  78:	f843 5034 	str.w	r5, [r3, r4, lsl #3]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:280
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdLow);
+
+    /* 32-bit mask or Second 32-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR2 = 
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdHigh) << 16) |
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdLow);
+  7c:	8943      	ldrh	r3, [r0, #10]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:279
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdHigh) << 16) |
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdLow);
+
+    /* 32-bit mask or Second 32-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR2 = 
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdHigh) << 16) |
+  7e:	8904      	ldrh	r4, [r0, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:278
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR1 = 
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdHigh) << 16) |
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdLow);
+
+    /* 32-bit mask or Second 32-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR2 = 
+  80:	7805      	ldrb	r5, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:279
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdHigh) << 16) |
+  82:	ea43 4404 	orr.w	r4, r3, r4, lsl #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:278
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR1 = 
+    ((u32)((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdHigh) << 16) |
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterIdLow);
+
+    /* 32-bit mask or Second 32-bit identifier */
+    CAN->sFilterRegister[CAN_FilterInitStruct->CAN_FilterNumber].FR2 = 
+  86:	4b1a      	ldr	r3, [pc, #104]	; (f0 <CAN_FilterInit+0xf0>)
+  88:	00ed      	lsls	r5, r5, #3
+  8a:	18eb      	adds	r3, r5, r3
+  8c:	605c      	str	r4, [r3, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:285
+        ((u32)0x0000FFFF & CAN_FilterInitStruct->CAN_FilterMaskIdLow);
+
+  }
+
+  /* Filter Mode */
+  if (CAN_FilterInitStruct->CAN_FilterMode == CAN_FilterMode_IdMask)
+  8e:	7844      	ldrb	r4, [r0, #1]
+  90:	4b16      	ldr	r3, [pc, #88]	; (ec <CAN_FilterInit+0xec>)
+  92:	b924      	cbnz	r4, 9e <CAN_FilterInit+0x9e>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:288
+  {
+    /*Id/Mask mode for the filter*/
+    CAN->FM1R &= ~(u32)FilterNumber_BitPos;
+  94:	f8d3 4204 	ldr.w	r4, [r3, #516]	; 0x204
+  98:	ea01 0404 	and.w	r4, r1, r4
+  9c:	e003      	b.n	a6 <CAN_FilterInit+0xa6>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:293
+  }
+  else /* CAN_FilterInitStruct->CAN_FilterMode == CAN_FilterMode_IdList */
+  {
+    /*Identifier list mode for the filter*/
+    CAN->FM1R |= (u32)FilterNumber_BitPos;
+  9e:	f8d3 4204 	ldr.w	r4, [r3, #516]	; 0x204
+  a2:	ea42 0404 	orr.w	r4, r2, r4
+  a6:	f8c3 4204 	str.w	r4, [r3, #516]	; 0x204
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:297
+  }
+
+  /* Filter FIFO assignment */
+  if (CAN_FilterInitStruct->CAN_FilterFIFOAssignment == CAN_FilterFIFO0)
+  aa:	8984      	ldrh	r4, [r0, #12]
+  ac:	4b0f      	ldr	r3, [pc, #60]	; (ec <CAN_FilterInit+0xec>)
+  ae:	b91c      	cbnz	r4, b8 <CAN_FilterInit+0xb8>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:300
+  {
+    /* FIFO 0 assignation for the filter */
+    CAN->FFA1R &= ~(u32)FilterNumber_BitPos;
+  b0:	f8d3 4214 	ldr.w	r4, [r3, #532]	; 0x214
+  b4:	4021      	ands	r1, r4
+  b6:	e005      	b.n	c4 <CAN_FilterInit+0xc4>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:302
+  }
+  if (CAN_FilterInitStruct->CAN_FilterFIFOAssignment == CAN_FilterFIFO1)
+  b8:	2c01      	cmp	r4, #1
+  ba:	d105      	bne.n	c8 <CAN_FilterInit+0xc8>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:305
+  {
+    /* FIFO 1 assignation for the filter */
+    CAN->FFA1R |= (u32)FilterNumber_BitPos;
+  bc:	f8d3 1214 	ldr.w	r1, [r3, #532]	; 0x214
+  c0:	ea42 0101 	orr.w	r1, r2, r1
+  c4:	f8c3 1214 	str.w	r1, [r3, #532]	; 0x214
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:309
+  }
+  
+  /* Filter activation */
+  if (CAN_FilterInitStruct->CAN_FilterActivation == ENABLE)
+  c8:	7b83      	ldrb	r3, [r0, #14]
+  ca:	2b01      	cmp	r3, #1
+  cc:	d105      	bne.n	da <CAN_FilterInit+0xda>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:311
+  {
+    CAN->FA1R |= FilterNumber_BitPos;
+  ce:	4b07      	ldr	r3, [pc, #28]	; (ec <CAN_FilterInit+0xec>)
+  d0:	f8d3 121c 	ldr.w	r1, [r3, #540]	; 0x21c
+  d4:	430a      	orrs	r2, r1
+  d6:	f8c3 221c 	str.w	r2, [r3, #540]	; 0x21c
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:315
+  }
+
+  /* Leave the initialisation mode for the filter */
+  CAN->FMR &= ~FMR_FINIT;
+  da:	4b04      	ldr	r3, [pc, #16]	; (ec <CAN_FilterInit+0xec>)
+  dc:	f8d3 2200 	ldr.w	r2, [r3, #512]	; 0x200
+  e0:	f022 0201 	bic.w	r2, r2, #1
+  e4:	f8c3 2200 	str.w	r2, [r3, #512]	; 0x200
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:316
+}
+  e8:	bd70      	pop	{r4, r5, r6, pc}
+  ea:	bf00      	nop
+  ec:	40006400 	.word	0x40006400
+  f0:	40006640 	.word	0x40006640
+
+Disassembly of section .text.CAN_StructInit:
+
+00000000 <CAN_StructInit>:
+CAN_StructInit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:331
+void CAN_StructInit(CAN_InitTypeDef* CAN_InitStruct)
+{
+  /* Reset CAN init structure parameters values */
+
+  /* Initialize the time triggered communication mode */
+  CAN_InitStruct->CAN_TTCM = DISABLE;
+   0:	2300      	movs	r3, #0
+   2:	7003      	strb	r3, [r0, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:334
+
+  /* Initialize the automatic bus-off management */
+  CAN_InitStruct->CAN_ABOM = DISABLE;
+   4:	7043      	strb	r3, [r0, #1]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:337
+
+  /* Initialize the automatic wake-up mode */
+  CAN_InitStruct->CAN_AWUM = DISABLE;
+   6:	7083      	strb	r3, [r0, #2]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:340
+
+  /* Initialize the no automatic retransmission */
+  CAN_InitStruct->CAN_NART = DISABLE;
+   8:	70c3      	strb	r3, [r0, #3]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:343
+
+  /* Initialize the receive FIFO locked mode */
+  CAN_InitStruct->CAN_RFLM = DISABLE;
+   a:	7103      	strb	r3, [r0, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:346
+
+  /* Initialize the transmit FIFO priority */
+  CAN_InitStruct->CAN_TXFP = DISABLE;
+   c:	7143      	strb	r3, [r0, #5]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:349
+
+  /* Initialize the CAN_Mode member */
+  CAN_InitStruct->CAN_Mode = CAN_Mode_Normal;
+   e:	7183      	strb	r3, [r0, #6]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:352
+
+  /* Initialize the CAN_SJW member */
+  CAN_InitStruct->CAN_SJW = CAN_SJW_1tq;
+  10:	71c3      	strb	r3, [r0, #7]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:355
+
+  /* Initialize the CAN_BS1 member */
+  CAN_InitStruct->CAN_BS1 = CAN_BS1_4tq;
+  12:	3303      	adds	r3, #3
+  14:	7203      	strb	r3, [r0, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:358
+
+  /* Initialize the CAN_BS2 member */
+  CAN_InitStruct->CAN_BS2 = CAN_BS2_3tq;
+  16:	3b01      	subs	r3, #1
+  18:	7243      	strb	r3, [r0, #9]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:361
+
+  /* Initialize the CAN_Prescaler member */
+  CAN_InitStruct->CAN_Prescaler = 1;
+  1a:	2301      	movs	r3, #1
+  1c:	8143      	strh	r3, [r0, #10]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:362
+}
+  1e:	4770      	bx	lr
+
+Disassembly of section .text.CAN_ITConfig:
+
+00000000 <CAN_ITConfig>:
+CAN_ITConfig():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:380
+*                    This parameter can be: ENABLE or DISABLE.
+* Output         : None.
+* Return         : None.
+*******************************************************************************/
+void CAN_ITConfig(u32 CAN_IT, FunctionalState NewState)
+{
+   0:	4b04      	ldr	r3, [pc, #16]	; (14 <CAN_ITConfig+0x14>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:385
+  /* Check the parameters */
+  assert_param(IS_CAN_ITConfig(CAN_IT));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   2:	b111      	cbz	r1, a <CAN_ITConfig+0xa>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:388
+  {
+    /* Enable the selected CAN interrupt */
+    CAN->IER |= CAN_IT;
+   4:	695a      	ldr	r2, [r3, #20]
+   6:	4310      	orrs	r0, r2
+   8:	e002      	b.n	10 <CAN_ITConfig+0x10>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:393
+  }
+  else
+  {
+    /* Disable the selected CAN interrupt */
+    CAN->IER &= ~CAN_IT;
+   a:	695a      	ldr	r2, [r3, #20]
+   c:	ea22 0000 	bic.w	r0, r2, r0
+  10:	6158      	str	r0, [r3, #20]
+  12:	4770      	bx	lr
+  14:	40006400 	.word	0x40006400
+
+Disassembly of section .text.CAN_Transmit:
+
+00000000 <CAN_Transmit>:
+CAN_Transmit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:407
+* Output         : None.
+* Return         : The number of the mailbox that is used for transmission
+*                  or CAN_NO_MB if there is no empty mailbox.
+*******************************************************************************/
+u8 CAN_Transmit(CanTxMsg* TxMessage)
+{
+   0:	b5f0      	push	{r4, r5, r6, r7, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:418
+  assert_param(IS_CAN_IDTYPE(TxMessage->IDE));
+  assert_param(IS_CAN_RTR(TxMessage->RTR));
+  assert_param(IS_CAN_DLC(TxMessage->DLC));
+
+  /* Select one empty transmit mailbox */
+  if ((CAN->TSR&TSR_TME0) == TSR_TME0)
+   2:	4a30      	ldr	r2, [pc, #192]	; (c4 <CAN_Transmit+0xc4>)
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:407
+* Output         : None.
+* Return         : The number of the mailbox that is used for transmission
+*                  or CAN_NO_MB if there is no empty mailbox.
+*******************************************************************************/
+u8 CAN_Transmit(CanTxMsg* TxMessage)
+{
+   4:	4603      	mov	r3, r0
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:418
+  assert_param(IS_CAN_IDTYPE(TxMessage->IDE));
+  assert_param(IS_CAN_RTR(TxMessage->RTR));
+  assert_param(IS_CAN_DLC(TxMessage->DLC));
+
+  /* Select one empty transmit mailbox */
+  if ((CAN->TSR&TSR_TME0) == TSR_TME0)
+   6:	6891      	ldr	r1, [r2, #8]
+   8:	f011 6f80 	tst.w	r1, #67108864	; 0x4000000
+   c:	d109      	bne.n	22 <CAN_Transmit+0x22>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:422
+  {
+    TransmitMailbox = 0;
+  }
+  else if ((CAN->TSR&TSR_TME1) == TSR_TME1)
+   e:	6891      	ldr	r1, [r2, #8]
+  10:	f011 6f00 	tst.w	r1, #134217728	; 0x8000000
+  14:	d107      	bne.n	26 <CAN_Transmit+0x26>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:426
+  {
+    TransmitMailbox = 1;
+  }
+  else if ((CAN->TSR&TSR_TME2) == TSR_TME2)
+  16:	6892      	ldr	r2, [r2, #8]
+  18:	f012 5f80 	tst.w	r2, #268435456	; 0x10000000
+  1c:	d04f      	beq.n	be <CAN_Transmit+0xbe>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:428
+  {
+    TransmitMailbox = 2;
+  1e:	2002      	movs	r0, #2
+  20:	e002      	b.n	28 <CAN_Transmit+0x28>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:420
+  assert_param(IS_CAN_DLC(TxMessage->DLC));
+
+  /* Select one empty transmit mailbox */
+  if ((CAN->TSR&TSR_TME0) == TSR_TME0)
+  {
+    TransmitMailbox = 0;
+  22:	2000      	movs	r0, #0
+  24:	e000      	b.n	28 <CAN_Transmit+0x28>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:424
+  }
+  else if ((CAN->TSR&TSR_TME1) == TSR_TME1)
+  {
+    TransmitMailbox = 1;
+  26:	2001      	movs	r0, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:438
+  }
+
+  if (TransmitMailbox != CAN_NO_MB)
+  {
+    /* Set up the Id */
+    CAN->sTxMailBox[TransmitMailbox].TIR &= TMIDxR_TXRQ;
+  28:	4926      	ldr	r1, [pc, #152]	; (c4 <CAN_Transmit+0xc4>)
+  2a:	f100 0218 	add.w	r2, r0, #24
+  2e:	0112      	lsls	r2, r2, #4
+  30:	588c      	ldr	r4, [r1, r2]
+  32:	f004 0401 	and.w	r4, r4, #1
+  36:	508c      	str	r4, [r1, r2]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:439
+    if (TxMessage->IDE == CAN_ID_STD)
+  38:	7a1d      	ldrb	r5, [r3, #8]
+  3a:	b92d      	cbnz	r5, 48 <CAN_Transmit+0x48>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:441
+    {
+      TxMessage->StdId &= (u32)0x000007FF;
+  3c:	681c      	ldr	r4, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:444
+      TxMessage->StdId = TxMessage->StdId << 21;
+      
+      CAN->sTxMailBox[TransmitMailbox].TIR |= (TxMessage->StdId | TxMessage->IDE |
+  3e:	7a5e      	ldrb	r6, [r3, #9]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:442
+    /* Set up the Id */
+    CAN->sTxMailBox[TransmitMailbox].TIR &= TMIDxR_TXRQ;
+    if (TxMessage->IDE == CAN_ID_STD)
+    {
+      TxMessage->StdId &= (u32)0x000007FF;
+      TxMessage->StdId = TxMessage->StdId << 21;
+  40:	0564      	lsls	r4, r4, #21
+  42:	601c      	str	r4, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:444
+      
+      CAN->sTxMailBox[TransmitMailbox].TIR |= (TxMessage->StdId | TxMessage->IDE |
+  44:	588d      	ldr	r5, [r1, r2]
+  46:	e005      	b.n	54 <CAN_Transmit+0x54>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:449
+                                               TxMessage->RTR);
+    }
+    else
+    {
+      TxMessage->ExtId &= (u32)0x1FFFFFFF;
+  48:	685c      	ldr	r4, [r3, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:452
+      TxMessage->ExtId <<= 3;
+
+      CAN->sTxMailBox[TransmitMailbox].TIR |= (TxMessage->ExtId | TxMessage->IDE | 
+  4a:	7a5f      	ldrb	r7, [r3, #9]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:450
+                                               TxMessage->RTR);
+    }
+    else
+    {
+      TxMessage->ExtId &= (u32)0x1FFFFFFF;
+      TxMessage->ExtId <<= 3;
+  4c:	00e4      	lsls	r4, r4, #3
+  4e:	605c      	str	r4, [r3, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:452
+
+      CAN->sTxMailBox[TransmitMailbox].TIR |= (TxMessage->ExtId | TxMessage->IDE | 
+  50:	588e      	ldr	r6, [r1, r2]
+  52:	433d      	orrs	r5, r7
+  54:	4335      	orrs	r5, r6
+  56:	ea45 0404 	orr.w	r4, r5, r4
+  5a:	508c      	str	r4, [r1, r2]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:457
+                                               TxMessage->RTR);
+    }
+    
+    /* Set up the DLC */
+    TxMessage->DLC &= (u8)0x0000000F;
+  5c:	7a9a      	ldrb	r2, [r3, #10]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:458
+    CAN->sTxMailBox[TransmitMailbox].TDTR &= (u32)0xFFFFFFF0;
+  5e:	4c19      	ldr	r4, [pc, #100]	; (c4 <CAN_Transmit+0xc4>)
+  60:	f100 0118 	add.w	r1, r0, #24
+  64:	0109      	lsls	r1, r1, #4
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:457
+      CAN->sTxMailBox[TransmitMailbox].TIR |= (TxMessage->ExtId | TxMessage->IDE | 
+                                               TxMessage->RTR);
+    }
+    
+    /* Set up the DLC */
+    TxMessage->DLC &= (u8)0x0000000F;
+  66:	f002 020f 	and.w	r2, r2, #15
+  6a:	729a      	strb	r2, [r3, #10]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:458
+    CAN->sTxMailBox[TransmitMailbox].TDTR &= (u32)0xFFFFFFF0;
+  6c:	190a      	adds	r2, r1, r4
+  6e:	6855      	ldr	r5, [r2, #4]
+  70:	f025 050f 	bic.w	r5, r5, #15
+  74:	6055      	str	r5, [r2, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:459
+    CAN->sTxMailBox[TransmitMailbox].TDTR |= TxMessage->DLC;
+  76:	6855      	ldr	r5, [r2, #4]
+  78:	7a9e      	ldrb	r6, [r3, #10]
+  7a:	ea46 0505 	orr.w	r5, r6, r5
+  7e:	6055      	str	r5, [r2, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:463
+
+    /* Set up the data field */
+    CAN->sTxMailBox[TransmitMailbox].TDLR = (((u32)TxMessage->Data[3] << 24) | 
+                                             ((u32)TxMessage->Data[2] << 16) |
+  80:	7b5d      	ldrb	r5, [r3, #13]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:462
+    TxMessage->DLC &= (u8)0x0000000F;
+    CAN->sTxMailBox[TransmitMailbox].TDTR &= (u32)0xFFFFFFF0;
+    CAN->sTxMailBox[TransmitMailbox].TDTR |= TxMessage->DLC;
+
+    /* Set up the data field */
+    CAN->sTxMailBox[TransmitMailbox].TDLR = (((u32)TxMessage->Data[3] << 24) | 
+  82:	7b9a      	ldrb	r2, [r3, #14]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:463
+                                             ((u32)TxMessage->Data[2] << 16) |
+  84:	042d      	lsls	r5, r5, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:462
+    TxMessage->DLC &= (u8)0x0000000F;
+    CAN->sTxMailBox[TransmitMailbox].TDTR &= (u32)0xFFFFFFF0;
+    CAN->sTxMailBox[TransmitMailbox].TDTR |= TxMessage->DLC;
+
+    /* Set up the data field */
+    CAN->sTxMailBox[TransmitMailbox].TDLR = (((u32)TxMessage->Data[3] << 24) | 
+  86:	ea45 6502 	orr.w	r5, r5, r2, lsl #24
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:465
+                                             ((u32)TxMessage->Data[2] << 16) |
+                                             ((u32)TxMessage->Data[1] << 8) | 
+                                             ((u32)TxMessage->Data[0]));
+  8a:	7ada      	ldrb	r2, [r3, #11]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:463
+    CAN->sTxMailBox[TransmitMailbox].TDTR &= (u32)0xFFFFFFF0;
+    CAN->sTxMailBox[TransmitMailbox].TDTR |= TxMessage->DLC;
+
+    /* Set up the data field */
+    CAN->sTxMailBox[TransmitMailbox].TDLR = (((u32)TxMessage->Data[3] << 24) | 
+                                             ((u32)TxMessage->Data[2] << 16) |
+  8c:	4315      	orrs	r5, r2
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:464
+                                             ((u32)TxMessage->Data[1] << 8) | 
+  8e:	7b1a      	ldrb	r2, [r3, #12]
+  90:	ea45 2502 	orr.w	r5, r5, r2, lsl #8
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:462
+    TxMessage->DLC &= (u8)0x0000000F;
+    CAN->sTxMailBox[TransmitMailbox].TDTR &= (u32)0xFFFFFFF0;
+    CAN->sTxMailBox[TransmitMailbox].TDTR |= TxMessage->DLC;
+
+    /* Set up the data field */
+    CAN->sTxMailBox[TransmitMailbox].TDLR = (((u32)TxMessage->Data[3] << 24) | 
+  94:	0102      	lsls	r2, r0, #4
+  96:	1912      	adds	r2, r2, r4
+  98:	f8c2 5188 	str.w	r5, [r2, #392]	; 0x188
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:467
+                                             ((u32)TxMessage->Data[2] << 16) |
+                                             ((u32)TxMessage->Data[1] << 8) | 
+                                             ((u32)TxMessage->Data[0]));
+    CAN->sTxMailBox[TransmitMailbox].TDHR = (((u32)TxMessage->Data[7] << 24) | 
+                                             ((u32)TxMessage->Data[6] << 16) |
+  9c:	7c5d      	ldrb	r5, [r3, #17]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:466
+    /* Set up the data field */
+    CAN->sTxMailBox[TransmitMailbox].TDLR = (((u32)TxMessage->Data[3] << 24) | 
+                                             ((u32)TxMessage->Data[2] << 16) |
+                                             ((u32)TxMessage->Data[1] << 8) | 
+                                             ((u32)TxMessage->Data[0]));
+    CAN->sTxMailBox[TransmitMailbox].TDHR = (((u32)TxMessage->Data[7] << 24) | 
+  9e:	7c9e      	ldrb	r6, [r3, #18]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:467
+                                             ((u32)TxMessage->Data[6] << 16) |
+  a0:	042d      	lsls	r5, r5, #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:466
+    /* Set up the data field */
+    CAN->sTxMailBox[TransmitMailbox].TDLR = (((u32)TxMessage->Data[3] << 24) | 
+                                             ((u32)TxMessage->Data[2] << 16) |
+                                             ((u32)TxMessage->Data[1] << 8) | 
+                                             ((u32)TxMessage->Data[0]));
+    CAN->sTxMailBox[TransmitMailbox].TDHR = (((u32)TxMessage->Data[7] << 24) | 
+  a2:	ea45 6506 	orr.w	r5, r5, r6, lsl #24
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:469
+                                             ((u32)TxMessage->Data[6] << 16) |
+                                             ((u32)TxMessage->Data[5] << 8) |
+                                             ((u32)TxMessage->Data[4]));
+  a6:	7bde      	ldrb	r6, [r3, #15]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:468
+                                             ((u32)TxMessage->Data[2] << 16) |
+                                             ((u32)TxMessage->Data[1] << 8) | 
+                                             ((u32)TxMessage->Data[0]));
+    CAN->sTxMailBox[TransmitMailbox].TDHR = (((u32)TxMessage->Data[7] << 24) | 
+                                             ((u32)TxMessage->Data[6] << 16) |
+                                             ((u32)TxMessage->Data[5] << 8) |
+  a8:	7c1b      	ldrb	r3, [r3, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:467
+    CAN->sTxMailBox[TransmitMailbox].TDLR = (((u32)TxMessage->Data[3] << 24) | 
+                                             ((u32)TxMessage->Data[2] << 16) |
+                                             ((u32)TxMessage->Data[1] << 8) | 
+                                             ((u32)TxMessage->Data[0]));
+    CAN->sTxMailBox[TransmitMailbox].TDHR = (((u32)TxMessage->Data[7] << 24) | 
+                                             ((u32)TxMessage->Data[6] << 16) |
+  aa:	4335      	orrs	r5, r6
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:468
+                                             ((u32)TxMessage->Data[5] << 8) |
+  ac:	ea45 2303 	orr.w	r3, r5, r3, lsl #8
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:466
+    /* Set up the data field */
+    CAN->sTxMailBox[TransmitMailbox].TDLR = (((u32)TxMessage->Data[3] << 24) | 
+                                             ((u32)TxMessage->Data[2] << 16) |
+                                             ((u32)TxMessage->Data[1] << 8) | 
+                                             ((u32)TxMessage->Data[0]));
+    CAN->sTxMailBox[TransmitMailbox].TDHR = (((u32)TxMessage->Data[7] << 24) | 
+  b0:	f8c2 318c 	str.w	r3, [r2, #396]	; 0x18c
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:472
+                                             ((u32)TxMessage->Data[6] << 16) |
+                                             ((u32)TxMessage->Data[5] << 8) |
+                                             ((u32)TxMessage->Data[4]));
+
+    /* Request transmission */
+    CAN->sTxMailBox[TransmitMailbox].TIR |= TMIDxR_TXRQ;
+  b4:	5863      	ldr	r3, [r4, r1]
+  b6:	f043 0301 	orr.w	r3, r3, #1
+  ba:	5063      	str	r3, [r4, r1]
+  bc:	bdf0      	pop	{r4, r5, r6, r7, pc}
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:432
+  {
+    TransmitMailbox = 2;
+  }
+  else
+  {
+    TransmitMailbox = CAN_NO_MB;
+  be:	2004      	movs	r0, #4
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:476
+    /* Request transmission */
+    CAN->sTxMailBox[TransmitMailbox].TIR |= TMIDxR_TXRQ;
+  }
+
+  return TransmitMailbox;
+}
+  c0:	bdf0      	pop	{r4, r5, r6, r7, pc}
+  c2:	bf00      	nop
+  c4:	40006400 	.word	0x40006400
+
+Disassembly of section .text.CAN_TransmitStatus:
+
+00000000 <CAN_TransmitStatus>:
+CAN_TransmitStatus():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:495
+  u8 State = 0;
+
+  /* Check the parameters */
+  assert_param(IS_CAN_TRANSMITMAILBOX(TransmitMailbox));
+
+  switch (TransmitMailbox)
+   0:	d0122801 	.word	0xd0122801
+   4:	d302      	bcc.n	c <CAN_TransmitStatus+0xc>
+   6:	2802      	cmp	r0, #2
+   8:	d131      	bne.n	6e <CAN_TransmitStatus+0x6e>
+   a:	e01e      	b.n	4a <CAN_TransmitStatus+0x4a>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:497
+  {
+    case (0): State |= (u8)((CAN->TSR & TSR_RQCP0) << 2);
+   c:	4a19      	ldr	r2, [pc, #100]	; (74 <CAN_TransmitStatus+0x74>)
+   e:	6891      	ldr	r1, [r2, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:498
+      State |= (u8)((CAN->TSR & TSR_TXOK0) >> 0);
+  10:	6893      	ldr	r3, [r2, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:497
+  /* Check the parameters */
+  assert_param(IS_CAN_TRANSMITMAILBOX(TransmitMailbox));
+
+  switch (TransmitMailbox)
+  {
+    case (0): State |= (u8)((CAN->TSR & TSR_RQCP0) << 2);
+  12:	f001 0101 	and.w	r1, r1, #1
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:498
+      State |= (u8)((CAN->TSR & TSR_TXOK0) >> 0);
+  16:	f003 0302 	and.w	r3, r3, #2
+  1a:	ea43 0181 	orr.w	r1, r3, r1, lsl #2
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:499
+      State |= (u8)((CAN->TSR & TSR_TME0) >> 26);
+  1e:	6893      	ldr	r3, [r2, #8]
+  20:	f003 6380 	and.w	r3, r3, #67108864	; 0x4000000
+  24:	ea41 6393 	orr.w	r3, r1, r3, lsr #26
+  28:	e01e      	b.n	68 <CAN_TransmitStatus+0x68>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:501
+      break;
+    case (1): State |= (u8)((CAN->TSR & TSR_RQCP1) >> 6);
+  2a:	4a12      	ldr	r2, [pc, #72]	; (74 <CAN_TransmitStatus+0x74>)
+  2c:	6891      	ldr	r1, [r2, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:502
+      State |= (u8)((CAN->TSR & TSR_TXOK1) >> 8);
+  2e:	6893      	ldr	r3, [r2, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:501
+  {
+    case (0): State |= (u8)((CAN->TSR & TSR_RQCP0) << 2);
+      State |= (u8)((CAN->TSR & TSR_TXOK0) >> 0);
+      State |= (u8)((CAN->TSR & TSR_TME0) >> 26);
+      break;
+    case (1): State |= (u8)((CAN->TSR & TSR_RQCP1) >> 6);
+  30:	f401 7180 	and.w	r1, r1, #256	; 0x100
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:502
+      State |= (u8)((CAN->TSR & TSR_TXOK1) >> 8);
+  34:	f403 7300 	and.w	r3, r3, #512	; 0x200
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:501
+  {
+    case (0): State |= (u8)((CAN->TSR & TSR_RQCP0) << 2);
+      State |= (u8)((CAN->TSR & TSR_TXOK0) >> 0);
+      State |= (u8)((CAN->TSR & TSR_TME0) >> 26);
+      break;
+    case (1): State |= (u8)((CAN->TSR & TSR_RQCP1) >> 6);
+  38:	0989      	lsrs	r1, r1, #6
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:502
+      State |= (u8)((CAN->TSR & TSR_TXOK1) >> 8);
+  3a:	ea41 2113 	orr.w	r1, r1, r3, lsr #8
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:503
+      State |= (u8)((CAN->TSR & TSR_TME1) >> 27);
+  3e:	6893      	ldr	r3, [r2, #8]
+  40:	f003 6300 	and.w	r3, r3, #134217728	; 0x8000000
+  44:	ea41 63d3 	orr.w	r3, r1, r3, lsr #27
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:504
+      break;
+  48:	e00e      	b.n	68 <CAN_TransmitStatus+0x68>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:505
+    case (2): State |= (u8)((CAN->TSR & TSR_RQCP2) >> 14);
+  4a:	4a0a      	ldr	r2, [pc, #40]	; (74 <CAN_TransmitStatus+0x74>)
+  4c:	6891      	ldr	r1, [r2, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:506
+      State |= (u8)((CAN->TSR & TSR_TXOK2) >> 16);
+  4e:	6893      	ldr	r3, [r2, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:505
+      break;
+    case (1): State |= (u8)((CAN->TSR & TSR_RQCP1) >> 6);
+      State |= (u8)((CAN->TSR & TSR_TXOK1) >> 8);
+      State |= (u8)((CAN->TSR & TSR_TME1) >> 27);
+      break;
+    case (2): State |= (u8)((CAN->TSR & TSR_RQCP2) >> 14);
+  50:	f401 3180 	and.w	r1, r1, #65536	; 0x10000
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:506
+      State |= (u8)((CAN->TSR & TSR_TXOK2) >> 16);
+  54:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:505
+      break;
+    case (1): State |= (u8)((CAN->TSR & TSR_RQCP1) >> 6);
+      State |= (u8)((CAN->TSR & TSR_TXOK1) >> 8);
+      State |= (u8)((CAN->TSR & TSR_TME1) >> 27);
+      break;
+    case (2): State |= (u8)((CAN->TSR & TSR_RQCP2) >> 14);
+  58:	0b89      	lsrs	r1, r1, #14
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:506
+      State |= (u8)((CAN->TSR & TSR_TXOK2) >> 16);
+  5a:	ea41 4113 	orr.w	r1, r1, r3, lsr #16
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:507
+      State |= (u8)((CAN->TSR & TSR_TME2) >> 28);
+  5e:	6893      	ldr	r3, [r2, #8]
+  60:	f003 5380 	and.w	r3, r3, #268435456	; 0x10000000
+  64:	ea41 7313 	orr.w	r3, r1, r3, lsr #28
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:508
+      break;
+  68:	4a03      	ldr	r2, [pc, #12]	; (78 <CAN_TransmitStatus+0x78>)
+  6a:	5cd0      	ldrb	r0, [r2, r3]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:531
+      State = CANTXFAILED;
+      break;
+  }
+
+  return State;
+}
+  6c:	4770      	bx	lr
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:510
+    case (2): State |= (u8)((CAN->TSR & TSR_RQCP2) >> 14);
+      State |= (u8)((CAN->TSR & TSR_TXOK2) >> 16);
+      State |= (u8)((CAN->TSR & TSR_TME2) >> 28);
+      break;
+    default:
+      State = CANTXFAILED;
+  6e:	2300      	movs	r3, #0
+  70:	e7fa      	b.n	68 <CAN_TransmitStatus+0x68>
+  72:	bf00      	nop
+  74:	40006400 	.word	0x40006400
+  78:	00000000 	.word	0x00000000
+
+Disassembly of section .text.CAN_CancelTransmit:
+
+00000000 <CAN_CancelTransmit>:
+CAN_CancelTransmit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:546
+{
+  /* Check the parameters */
+  assert_param(IS_CAN_TRANSMITMAILBOX(Mailbox));
+
+  /* abort transmission */
+  switch (Mailbox)
+   0:	d0082801 	.word	0xd0082801
+   4:	d302      	bcc.n	c <CAN_CancelTransmit+0xc>
+   6:	2802      	cmp	r0, #2
+   8:	d110      	bne.n	2c <CAN_CancelTransmit+0x2c>
+   a:	e00a      	b.n	22 <CAN_CancelTransmit+0x22>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:548
+  {
+    case (0): CAN->TSR |= TSR_ABRQ0;
+   c:	4b08      	ldr	r3, [pc, #32]	; (30 <CAN_CancelTransmit+0x30>)
+   e:	689a      	ldr	r2, [r3, #8]
+  10:	f042 0280 	orr.w	r2, r2, #128	; 0x80
+  14:	e003      	b.n	1e <CAN_CancelTransmit+0x1e>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:550
+      break;
+    case (1): CAN->TSR |= TSR_ABRQ1;
+  16:	4b06      	ldr	r3, [pc, #24]	; (30 <CAN_CancelTransmit+0x30>)
+  18:	689a      	ldr	r2, [r3, #8]
+  1a:	f442 4200 	orr.w	r2, r2, #32768	; 0x8000
+  1e:	609a      	str	r2, [r3, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:551
+      break;
+  20:	4770      	bx	lr
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:552
+    case (2): CAN->TSR |= TSR_ABRQ2;
+  22:	4b03      	ldr	r3, [pc, #12]	; (30 <CAN_CancelTransmit+0x30>)
+  24:	689a      	ldr	r2, [r3, #8]
+  26:	f442 0200 	orr.w	r2, r2, #8388608	; 0x800000
+  2a:	609a      	str	r2, [r3, #8]
+  2c:	4770      	bx	lr
+  2e:	bf00      	nop
+  30:	40006400 	.word	0x40006400
+
+Disassembly of section .text.CAN_FIFORelease:
+
+00000000 <CAN_FIFORelease>:
+CAN_FIFORelease():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:567
+* Input          : FIFONumber: FIFO to release, CAN_FIFO0 or CAN_FIFO1.
+* Output         : None.
+* Return         : None.
+*******************************************************************************/
+void CAN_FIFORelease(u8 FIFONumber)
+{
+   0:	22204b03 	.word	0x22204b03
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:572
+  /* Check the parameters */
+  assert_param(IS_CAN_FIFO(FIFONumber));
+
+  /* Release FIFO0 */
+  if (FIFONumber == CAN_FIFO0)
+   4:	b908      	cbnz	r0, a <CAN_FIFORelease+0xa>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:574
+  {
+    CAN->RF0R = RF0R_RFOM0;
+   6:	60da      	str	r2, [r3, #12]
+   8:	4770      	bx	lr
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:579
+  }
+  /* Release FIFO1 */
+  else /* FIFONumber == CAN_FIFO1 */
+  {
+    CAN->RF1R = RF1R_RFOM1;
+   a:	611a      	str	r2, [r3, #16]
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	40006400 	.word	0x40006400
+
+Disassembly of section .text.CAN_MessagePending:
+
+00000000 <CAN_MessagePending>:
+CAN_MessagePending():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:597
+  u8 MessagePending=0;
+
+  /* Check the parameters */
+  assert_param(IS_CAN_FIFO(FIFONumber));
+
+  if (FIFONumber == CAN_FIFO0)
+   0:	b910      	cbnz	r0, 8 <CAN_MessagePending+0x8>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:599
+  {
+    MessagePending = (u8)(CAN->RF0R&(u32)0x03);
+   2:	4b06      	ldr	r3, [pc, #24]	; (1c <CAN_MessagePending+0x1c>)
+   4:	68d8      	ldr	r0, [r3, #12]
+   6:	e003      	b.n	10 <CAN_MessagePending+0x10>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:601
+  }
+  else if (FIFONumber == CAN_FIFO1)
+   8:	2801      	cmp	r0, #1
+   a:	d104      	bne.n	16 <CAN_MessagePending+0x16>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:603
+  {
+    MessagePending = (u8)(CAN->RF1R&(u32)0x03);
+   c:	4b03      	ldr	r3, [pc, #12]	; (1c <CAN_MessagePending+0x1c>)
+   e:	6918      	ldr	r0, [r3, #16]
+  10:	f000 0003 	and.w	r0, r0, #3
+  14:	4770      	bx	lr
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:607
+  }
+  else
+  {
+    MessagePending = 0;
+  16:	2000      	movs	r0, #0
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:610
+  }
+  return MessagePending;
+}
+  18:	4770      	bx	lr
+  1a:	bf00      	nop
+  1c:	40006400 	.word	0x40006400
+
+Disassembly of section .text.CAN_Receive:
+
+00000000 <CAN_Receive>:
+CAN_Receive():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:621
+* Output         : RxMessage: pointer to a structure which contains CAN Id,
+*                  CAN DLC, CAN datas and FMI number.
+* Return         : None.
+*******************************************************************************/
+void CAN_Receive(u8 FIFONumber, CanRxMsg* RxMessage)
+{
+   0:	b510      	push	{r4, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:626
+  /* Check the parameters */
+  assert_param(IS_CAN_FIFO(FIFONumber));
+
+  /* Get the Id */
+  RxMessage->IDE = (u8)0x04 & CAN->sFIFOMailBox[FIFONumber].RIR;
+   2:	4a25      	ldr	r2, [pc, #148]	; (98 <CAN_Receive+0x98>)
+   4:	f100 031b 	add.w	r3, r0, #27
+   8:	011b      	lsls	r3, r3, #4
+   a:	58d4      	ldr	r4, [r2, r3]
+   c:	f004 0404 	and.w	r4, r4, #4
+  10:	b2e4      	uxtb	r4, r4
+  12:	720c      	strb	r4, [r1, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:627
+  if (RxMessage->IDE == CAN_ID_STD)
+  14:	b91c      	cbnz	r4, 1e <CAN_Receive+0x1e>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:629
+  {
+    RxMessage->StdId = (u32)0x000007FF & (CAN->sFIFOMailBox[FIFONumber].RIR >> 21);
+  16:	58d3      	ldr	r3, [r2, r3]
+  18:	0d5b      	lsrs	r3, r3, #21
+  1a:	600b      	str	r3, [r1, #0]
+  1c:	e002      	b.n	24 <CAN_Receive+0x24>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:633
+  }
+  else
+  {
+    RxMessage->ExtId = (u32)0x1FFFFFFF & (CAN->sFIFOMailBox[FIFONumber].RIR >> 3);
+  1e:	58d3      	ldr	r3, [r2, r3]
+  20:	08db      	lsrs	r3, r3, #3
+  22:	604b      	str	r3, [r1, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:636
+  }
+  
+  RxMessage->RTR = (u8)0x02 & CAN->sFIFOMailBox[FIFONumber].RIR;
+  24:	f100 041b 	add.w	r4, r0, #27
+  28:	0124      	lsls	r4, r4, #4
+  2a:	5912      	ldr	r2, [r2, r4]
+  2c:	f104 4380 	add.w	r3, r4, #1073741824	; 0x40000000
+  30:	f002 0202 	and.w	r2, r2, #2
+  34:	724a      	strb	r2, [r1, #9]
+  36:	f503 43c8 	add.w	r3, r3, #25600	; 0x6400
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:639
+
+  /* Get the DLC */
+  RxMessage->DLC = (u8)0x0F & CAN->sFIFOMailBox[FIFONumber].RDTR;
+  3a:	685a      	ldr	r2, [r3, #4]
+  3c:	f002 020f 	and.w	r2, r2, #15
+  40:	728a      	strb	r2, [r1, #10]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:642
+
+  /* Get the FMI */
+  RxMessage->FMI = (u8)0xFF & (CAN->sFIFOMailBox[FIFONumber].RDTR >> 8);
+  42:	685b      	ldr	r3, [r3, #4]
+  44:	0a1b      	lsrs	r3, r3, #8
+  46:	74cb      	strb	r3, [r1, #19]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:645
+
+  /* Get the data field */
+  RxMessage->Data[0] = (u8)0xFF & CAN->sFIFOMailBox[FIFONumber].RDLR;
+  48:	0103      	lsls	r3, r0, #4
+  4a:	f103 4380 	add.w	r3, r3, #1073741824	; 0x40000000
+  4e:	f503 43c8 	add.w	r3, r3, #25600	; 0x6400
+  52:	f8d3 21b8 	ldr.w	r2, [r3, #440]	; 0x1b8
+  56:	72ca      	strb	r2, [r1, #11]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:646
+  RxMessage->Data[1] = (u8)0xFF & (CAN->sFIFOMailBox[FIFONumber].RDLR >> 8);
+  58:	f8d3 21b8 	ldr.w	r2, [r3, #440]	; 0x1b8
+  5c:	0a12      	lsrs	r2, r2, #8
+  5e:	730a      	strb	r2, [r1, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:647
+  RxMessage->Data[2] = (u8)0xFF & (CAN->sFIFOMailBox[FIFONumber].RDLR >> 16);
+  60:	f8d3 21b8 	ldr.w	r2, [r3, #440]	; 0x1b8
+  64:	0c12      	lsrs	r2, r2, #16
+  66:	734a      	strb	r2, [r1, #13]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:648
+  RxMessage->Data[3] = (u8)0xFF & (CAN->sFIFOMailBox[FIFONumber].RDLR >> 24);
+  68:	f8d3 21b8 	ldr.w	r2, [r3, #440]	; 0x1b8
+  6c:	0e12      	lsrs	r2, r2, #24
+  6e:	738a      	strb	r2, [r1, #14]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:650
+
+  RxMessage->Data[4] = (u8)0xFF & CAN->sFIFOMailBox[FIFONumber].RDHR;
+  70:	f8d3 21bc 	ldr.w	r2, [r3, #444]	; 0x1bc
+  74:	73ca      	strb	r2, [r1, #15]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:651
+  RxMessage->Data[5] = (u8)0xFF & (CAN->sFIFOMailBox[FIFONumber].RDHR >> 8);
+  76:	f8d3 21bc 	ldr.w	r2, [r3, #444]	; 0x1bc
+  7a:	0a12      	lsrs	r2, r2, #8
+  7c:	740a      	strb	r2, [r1, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:652
+  RxMessage->Data[6] = (u8)0xFF & (CAN->sFIFOMailBox[FIFONumber].RDHR >> 16);
+  7e:	f8d3 21bc 	ldr.w	r2, [r3, #444]	; 0x1bc
+  82:	0c12      	lsrs	r2, r2, #16
+  84:	744a      	strb	r2, [r1, #17]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:653
+  RxMessage->Data[7] = (u8)0xFF & (CAN->sFIFOMailBox[FIFONumber].RDHR >> 24);
+  86:	f8d3 31bc 	ldr.w	r3, [r3, #444]	; 0x1bc
+  8a:	0e1b      	lsrs	r3, r3, #24
+  8c:	748b      	strb	r3, [r1, #18]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:657
+
+  /* Release the FIFO */
+  CAN_FIFORelease(FIFONumber);
+}
+  8e:	e8bd 4010 	ldmia.w	sp!, {r4, lr}
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:656
+  RxMessage->Data[5] = (u8)0xFF & (CAN->sFIFOMailBox[FIFONumber].RDHR >> 8);
+  RxMessage->Data[6] = (u8)0xFF & (CAN->sFIFOMailBox[FIFONumber].RDHR >> 16);
+  RxMessage->Data[7] = (u8)0xFF & (CAN->sFIFOMailBox[FIFONumber].RDHR >> 24);
+
+  /* Release the FIFO */
+  CAN_FIFORelease(FIFONumber);
+  92:	f7ff bffe 	b.w	0 <CAN_Receive>
+  96:	bf00      	nop
+  98:	40006400 	.word	0x40006400
+
+Disassembly of section .text.CAN_Sleep:
+
+00000000 <CAN_Sleep>:
+CAN_Sleep():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:671
+u8 CAN_Sleep(void)
+{
+  u8 SleepStatus = 0;
+
+  /* Sleep mode entering request */
+  CAN->MCR |= MCR_SLEEP;
+   0:	681a4b04 	.word	0x681a4b04
+   4:	f042 0202 	orr.w	r2, r2, #2
+   8:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:675
+  SleepStatus = CANSLEEPOK;
+
+  /* Sleep mode status */
+  if ((CAN->MCR&MCR_SLEEP) == 0)
+   a:	6818      	ldr	r0, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:683
+    SleepStatus = CANSLEEPFAILED;
+  }
+
+  /* At this step, sleep mode status */
+  return SleepStatus;
+}
+   c:	f3c0 0040 	ubfx	r0, r0, #1, #1
+  10:	4770      	bx	lr
+  12:	bf00      	nop
+  14:	40006400 	.word	0x40006400
+
+Disassembly of section .text.CAN_WakeUp:
+
+00000000 <CAN_WakeUp>:
+CAN_WakeUp():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:698
+u8 CAN_WakeUp(void)
+{
+  u8 WakeUpStatus = 0;
+
+  /* Wake up request */
+  CAN->MCR &= ~MCR_SLEEP;
+   0:	4b06      	ldr	r3, [pc, #24]	; (1c <CAN_WakeUp+0x1c>)
+   2:	681a      	ldr	r2, [r3, #0]
+   4:	f022 0202 	bic.w	r2, r2, #2
+   8:	601a      	str	r2, [r3, #0]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:702
+  WakeUpStatus = CANWAKEUPFAILED;
+
+  /* Sleep mode status */
+  if ((CAN->MCR&MCR_SLEEP) == 0)
+   a:	6818      	ldr	r0, [r3, #0]
+   c:	f000 0002 	and.w	r0, r0, #2
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:710
+    WakeUpStatus = CANWAKEUPOK;
+  }
+
+  /* At this step, sleep mode status */
+  return WakeUpStatus;
+}
+  10:	f1d0 0001 	rsbs	r0, r0, #1
+  14:	bf38      	it	cc
+  16:	2000      	movcc	r0, #0
+  18:	4770      	bx	lr
+  1a:	bf00      	nop
+  1c:	40006400 	.word	0x40006400
+
+Disassembly of section .text.CAN_GetFlagStatus:
+
+00000000 <CAN_GetFlagStatus>:
+CAN_GetFlagStatus():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:729
+
+  /* Check the parameters */
+  assert_param(IS_CAN_FLAG(CAN_FLAG));
+
+  /* Check the status of the specified CAN flag */
+  if ((CAN->ESR & CAN_FLAG) != (u32)RESET)
+   0:	699b4b03 	.word	0x699b4b03
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:732
+  {
+    /* CAN_FLAG is set */
+    bitstatus = SET;
+   4:	4218      	tst	r0, r3
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:741
+    /* CAN_FLAG is reset */
+    bitstatus = RESET;
+  }
+  /* Return the CAN_FLAG status */
+  return  bitstatus;
+}
+   6:	bf0c      	ite	eq
+   8:	2000      	moveq	r0, #0
+   a:	2001      	movne	r0, #1
+   c:	4770      	bx	lr
+   e:	bf00      	nop
+  10:	40006400 	.word	0x40006400
+
+Disassembly of section .text.CAN_ClearFlag:
+
+00000000 <CAN_ClearFlag>:
+CAN_ClearFlag():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:756
+{
+  /* Check the parameters */
+  assert_param(IS_CAN_FLAG(CAN_FLAG));
+
+  /* Clear the selected CAN flags */
+  CAN->ESR &= ~CAN_FLAG;
+   0:	699a4b02 	.word	0x699a4b02
+   4:	ea22 0200 	bic.w	r2, r2, r0
+   8:	619a      	str	r2, [r3, #24]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:757
+}
+   a:	4770      	bx	lr
+   c:	40006400 	.word	0x40006400
+
+Disassembly of section .text.CAN_GetITStatus:
+
+00000000 <CAN_GetITStatus>:
+CAN_GetITStatus():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:778
+  ITStatus pendingbitstatus = RESET;
+
+  /* Check the parameters */
+  assert_param(IS_CAN_ITStatus(CAN_IT));
+
+  switch (CAN_IT)
+   0:	2820      	cmp	r0, #32
+   2:	d034      	beq.n	6e <CAN_GetITStatus+0x6e>
+   4:	d80c      	bhi.n	20 <CAN_GetITStatus+0x20>
+   6:	2806      	cmp	r0, #6
+   8:	d021      	beq.n	4e <CAN_GetITStatus+0x4e>
+   a:	d804      	bhi.n	16 <CAN_GetITStatus+0x16>
+   c:	2804      	cmp	r0, #4
+   e:	d028      	beq.n	62 <CAN_GetITStatus+0x62>
+  10:	2805      	cmp	r0, #5
+  12:	d147      	bne.n	a4 <CAN_GetITStatus+0xa4>
+  14:	e018      	b.n	48 <CAN_GetITStatus+0x48>
+  16:	2807      	cmp	r0, #7
+  18:	d01e      	beq.n	58 <CAN_GetITStatus+0x58>
+  1a:	2808      	cmp	r0, #8
+  1c:	d142      	bne.n	a4 <CAN_GetITStatus+0xa4>
+  1e:	e023      	b.n	68 <CAN_GetITStatus+0x68>
+  20:	f5b0 7f00 	cmp.w	r0, #512	; 0x200
+  24:	d02d      	beq.n	82 <CAN_GetITStatus+0x82>
+  26:	d805      	bhi.n	34 <CAN_GetITStatus+0x34>
+  28:	2840      	cmp	r0, #64	; 0x40
+  2a:	d023      	beq.n	74 <CAN_GetITStatus+0x74>
+  2c:	f5b0 7f80 	cmp.w	r0, #256	; 0x100
+  30:	d138      	bne.n	a4 <CAN_GetITStatus+0xa4>
+  32:	e022      	b.n	7a <CAN_GetITStatus+0x7a>
+  34:	f5b0 3f80 	cmp.w	r0, #65536	; 0x10000
+  38:	d02f      	beq.n	9a <CAN_GetITStatus+0x9a>
+  3a:	f5b0 3f00 	cmp.w	r0, #131072	; 0x20000
+  3e:	d028      	beq.n	92 <CAN_GetITStatus+0x92>
+  40:	f5b0 6f80 	cmp.w	r0, #1024	; 0x400
+  44:	d12e      	bne.n	a4 <CAN_GetITStatus+0xa4>
+  46:	e020      	b.n	8a <CAN_GetITStatus+0x8a>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:781
+  {
+    case CAN_IT_RQCP0:
+      pendingbitstatus = CheckITStatus(CAN->TSR, TSR_RQCP0);
+  48:	4b17      	ldr	r3, [pc, #92]	; (a8 <CAN_GetITStatus+0xa8>)
+  4a:	6898      	ldr	r0, [r3, #8]
+  4c:	e017      	b.n	7e <CAN_GetITStatus+0x7e>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:784
+      break;
+    case CAN_IT_RQCP1:
+      pendingbitstatus = CheckITStatus(CAN->TSR, TSR_RQCP1);
+  4e:	4b16      	ldr	r3, [pc, #88]	; (a8 <CAN_GetITStatus+0xa8>)
+  50:	f44f 7180 	mov.w	r1, #256	; 0x100
+  54:	6898      	ldr	r0, [r3, #8]
+  56:	e023      	b.n	a0 <CAN_GetITStatus+0xa0>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:787
+      break;
+    case CAN_IT_RQCP2:
+      pendingbitstatus = CheckITStatus(CAN->TSR, TSR_RQCP2);
+  58:	4b13      	ldr	r3, [pc, #76]	; (a8 <CAN_GetITStatus+0xa8>)
+  5a:	f44f 3180 	mov.w	r1, #65536	; 0x10000
+  5e:	6898      	ldr	r0, [r3, #8]
+  60:	e01e      	b.n	a0 <CAN_GetITStatus+0xa0>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:790
+      break;
+    case CAN_IT_FF0:
+      pendingbitstatus = CheckITStatus(CAN->RF0R, RF0R_FULL0);
+  62:	4b11      	ldr	r3, [pc, #68]	; (a8 <CAN_GetITStatus+0xa8>)
+  64:	68d8      	ldr	r0, [r3, #12]
+  66:	e01a      	b.n	9e <CAN_GetITStatus+0x9e>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:793
+      break;
+    case CAN_IT_FOV0:
+      pendingbitstatus = CheckITStatus(CAN->RF0R, RF0R_FOVR0);
+  68:	4b0f      	ldr	r3, [pc, #60]	; (a8 <CAN_GetITStatus+0xa8>)
+  6a:	68d8      	ldr	r0, [r3, #12]
+  6c:	e013      	b.n	96 <CAN_GetITStatus+0x96>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:796
+      break;
+    case CAN_IT_FF1:
+      pendingbitstatus = CheckITStatus(CAN->RF1R, RF1R_FULL1);
+  6e:	4b0e      	ldr	r3, [pc, #56]	; (a8 <CAN_GetITStatus+0xa8>)
+  70:	6918      	ldr	r0, [r3, #16]
+  72:	e014      	b.n	9e <CAN_GetITStatus+0x9e>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:799
+      break;
+    case CAN_IT_FOV1:
+      pendingbitstatus = CheckITStatus(CAN->RF1R, RF1R_FOVR1);
+  74:	4b0c      	ldr	r3, [pc, #48]	; (a8 <CAN_GetITStatus+0xa8>)
+  76:	6918      	ldr	r0, [r3, #16]
+  78:	e00d      	b.n	96 <CAN_GetITStatus+0x96>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:802
+      break;
+    case CAN_IT_EWG:
+      pendingbitstatus = CheckITStatus(CAN->ESR, ESR_EWGF);
+  7a:	4b0b      	ldr	r3, [pc, #44]	; (a8 <CAN_GetITStatus+0xa8>)
+  7c:	6998      	ldr	r0, [r3, #24]
+  7e:	2101      	movs	r1, #1
+  80:	e00e      	b.n	a0 <CAN_GetITStatus+0xa0>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:805
+      break;
+    case CAN_IT_EPV:
+      pendingbitstatus = CheckITStatus(CAN->ESR, ESR_EPVF);
+  82:	4b09      	ldr	r3, [pc, #36]	; (a8 <CAN_GetITStatus+0xa8>)
+  84:	2102      	movs	r1, #2
+  86:	6998      	ldr	r0, [r3, #24]
+  88:	e00a      	b.n	a0 <CAN_GetITStatus+0xa0>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:808
+      break;
+    case CAN_IT_BOF:
+      pendingbitstatus = CheckITStatus(CAN->ESR, ESR_BOFF);
+  8a:	4b07      	ldr	r3, [pc, #28]	; (a8 <CAN_GetITStatus+0xa8>)
+  8c:	2104      	movs	r1, #4
+  8e:	6998      	ldr	r0, [r3, #24]
+  90:	e006      	b.n	a0 <CAN_GetITStatus+0xa0>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:811
+      break;
+    case CAN_IT_SLK:
+      pendingbitstatus = CheckITStatus(CAN->MSR, MSR_SLAKI);
+  92:	4b05      	ldr	r3, [pc, #20]	; (a8 <CAN_GetITStatus+0xa8>)
+  94:	6858      	ldr	r0, [r3, #4]
+  96:	2110      	movs	r1, #16
+  98:	e002      	b.n	a0 <CAN_GetITStatus+0xa0>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:814
+      break;
+    case CAN_IT_WKU:
+      pendingbitstatus = CheckITStatus(CAN->MSR, MSR_WKUI);
+  9a:	4b03      	ldr	r3, [pc, #12]	; (a8 <CAN_GetITStatus+0xa8>)
+  9c:	6858      	ldr	r0, [r3, #4]
+  9e:	2108      	movs	r1, #8
+  a0:	f7ff bffe 	b.w	0 <CAN_GetITStatus>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:824
+      break;
+  }
+
+  /* Return the CAN_IT status */
+  return  pendingbitstatus;
+}
+  a4:	2000      	movs	r0, #0
+  a6:	4770      	bx	lr
+  a8:	40006400 	.word	0x40006400
+
+Disassembly of section .text.CAN_ClearITPendingBit:
+
+00000000 <CAN_ClearITPendingBit>:
+CAN_ClearITPendingBit():
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:838
+void CAN_ClearITPendingBit(u32 CAN_IT)
+{
+  /* Check the parameters */
+  assert_param(IS_CAN_ITStatus(CAN_IT));
+
+  switch (CAN_IT)
+   0:	d0312820 	.word	0xd0312820
+   4:	d80c      	bhi.n	20 <CAN_ClearITPendingBit+0x20>
+   6:	2806      	cmp	r0, #6
+   8:	d020      	beq.n	4c <CAN_ClearITPendingBit+0x4c>
+   a:	d804      	bhi.n	16 <CAN_ClearITPendingBit+0x16>
+   c:	2804      	cmp	r0, #4
+   e:	d025      	beq.n	5c <CAN_ClearITPendingBit+0x5c>
+  10:	2805      	cmp	r0, #5
+  12:	d146      	bne.n	a2 <CAN_ClearITPendingBit+0xa2>
+  14:	e018      	b.n	48 <CAN_ClearITPendingBit+0x48>
+  16:	2807      	cmp	r0, #7
+  18:	d01b      	beq.n	52 <CAN_ClearITPendingBit+0x52>
+  1a:	2808      	cmp	r0, #8
+  1c:	d141      	bne.n	a2 <CAN_ClearITPendingBit+0xa2>
+  1e:	e01f      	b.n	60 <CAN_ClearITPendingBit+0x60>
+  20:	f5b0 7f00 	cmp.w	r0, #512	; 0x200
+  24:	d02b      	beq.n	7e <CAN_ClearITPendingBit+0x7e>
+  26:	d805      	bhi.n	34 <CAN_ClearITPendingBit+0x34>
+  28:	2840      	cmp	r0, #64	; 0x40
+  2a:	d01f      	beq.n	6c <CAN_ClearITPendingBit+0x6c>
+  2c:	f5b0 7f80 	cmp.w	r0, #256	; 0x100
+  30:	d137      	bne.n	a2 <CAN_ClearITPendingBit+0xa2>
+  32:	e01f      	b.n	74 <CAN_ClearITPendingBit+0x74>
+  34:	f5b0 3f80 	cmp.w	r0, #65536	; 0x10000
+  38:	d02c      	beq.n	94 <CAN_ClearITPendingBit+0x94>
+  3a:	f5b0 3f00 	cmp.w	r0, #131072	; 0x20000
+  3e:	d02d      	beq.n	9c <CAN_ClearITPendingBit+0x9c>
+  40:	f5b0 6f80 	cmp.w	r0, #1024	; 0x400
+  44:	d12d      	bne.n	a2 <CAN_ClearITPendingBit+0xa2>
+  46:	e01f      	b.n	88 <CAN_ClearITPendingBit+0x88>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:841
+  {
+    case CAN_IT_RQCP0:
+      CAN->TSR = TSR_RQCP0; /* rc_w1*/
+  48:	2201      	movs	r2, #1
+  4a:	e004      	b.n	56 <CAN_ClearITPendingBit+0x56>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:844
+      break;
+    case CAN_IT_RQCP1:
+      CAN->TSR = TSR_RQCP1; /* rc_w1*/
+  4c:	f44f 7280 	mov.w	r2, #256	; 0x100
+  50:	e001      	b.n	56 <CAN_ClearITPendingBit+0x56>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:847
+      break;
+    case CAN_IT_RQCP2:
+      CAN->TSR = TSR_RQCP2; /* rc_w1*/
+  52:	f44f 3280 	mov.w	r2, #65536	; 0x10000
+  56:	4b13      	ldr	r3, [pc, #76]	; (a4 <CAN_ClearITPendingBit+0xa4>)
+  58:	609a      	str	r2, [r3, #8]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:848
+      break;
+  5a:	4770      	bx	lr
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:850
+    case CAN_IT_FF0:
+      CAN->RF0R = RF0R_FULL0; /* rc_w1*/
+  5c:	2208      	movs	r2, #8
+  5e:	e000      	b.n	62 <CAN_ClearITPendingBit+0x62>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:853
+      break;
+    case CAN_IT_FOV0:
+      CAN->RF0R = RF0R_FOVR0; /* rc_w1*/
+  60:	2210      	movs	r2, #16
+  62:	4b10      	ldr	r3, [pc, #64]	; (a4 <CAN_ClearITPendingBit+0xa4>)
+  64:	60da      	str	r2, [r3, #12]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:854
+      break;
+  66:	4770      	bx	lr
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:856
+    case CAN_IT_FF1:
+      CAN->RF1R = RF1R_FULL1; /* rc_w1*/
+  68:	2208      	movs	r2, #8
+  6a:	e000      	b.n	6e <CAN_ClearITPendingBit+0x6e>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:859
+      break;
+    case CAN_IT_FOV1:
+      CAN->RF1R = RF1R_FOVR1; /* rc_w1*/
+  6c:	2210      	movs	r2, #16
+  6e:	4b0d      	ldr	r3, [pc, #52]	; (a4 <CAN_ClearITPendingBit+0xa4>)
+  70:	611a      	str	r2, [r3, #16]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:860
+      break;
+  72:	4770      	bx	lr
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:862
+    case CAN_IT_EWG:
+      CAN->ESR &= ~ ESR_EWGF; /* rw */
+  74:	4b0b      	ldr	r3, [pc, #44]	; (a4 <CAN_ClearITPendingBit+0xa4>)
+  76:	699a      	ldr	r2, [r3, #24]
+  78:	f022 0201 	bic.w	r2, r2, #1
+  7c:	e008      	b.n	90 <CAN_ClearITPendingBit+0x90>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:865
+      break;
+    case CAN_IT_EPV:
+      CAN->ESR &= ~ ESR_EPVF; /* rw */
+  7e:	4b09      	ldr	r3, [pc, #36]	; (a4 <CAN_ClearITPendingBit+0xa4>)
+  80:	699a      	ldr	r2, [r3, #24]
+  82:	f022 0202 	bic.w	r2, r2, #2
+  86:	e003      	b.n	90 <CAN_ClearITPendingBit+0x90>
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:868
+      break;
+    case CAN_IT_BOF:
+      CAN->ESR &= ~ ESR_BOFF; /* rw */
+  88:	4b06      	ldr	r3, [pc, #24]	; (a4 <CAN_ClearITPendingBit+0xa4>)
+  8a:	699a      	ldr	r2, [r3, #24]
+  8c:	f022 0204 	bic.w	r2, r2, #4
+  90:	619a      	str	r2, [r3, #24]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:869
+      break;
+  92:	4770      	bx	lr
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:871
+    case CAN_IT_WKU:
+      CAN->MSR = MSR_WKUI;  /* rc_w1*/
+  94:	4b03      	ldr	r3, [pc, #12]	; (a4 <CAN_ClearITPendingBit+0xa4>)
+  96:	2208      	movs	r2, #8
+  98:	605a      	str	r2, [r3, #4]
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:872
+      break;
+  9a:	4770      	bx	lr
+C:\cortex\gateway\stlibrary\src/stm32f10x_can.c:874
+    case CAN_IT_SLK:
+      CAN->MSR = MSR_SLAKI;  /* rc_w1*/
+  9c:	4b01      	ldr	r3, [pc, #4]	; (a4 <CAN_ClearITPendingBit+0xa4>)
+  9e:	2210      	movs	r2, #16
+  a0:	605a      	str	r2, [r3, #4]
+  a2:	4770      	bx	lr
+  a4:	40006400 	.word	0x40006400
