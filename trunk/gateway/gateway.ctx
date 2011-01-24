@@ -9,12 +9,12 @@
 				<3>289</3>
 				<4>52</4>
 				<5>111</5>
-																																																								
+																																																																																				
 			</CodeReport>
-																																								
+																																																												
 		</CodeView>
 		<MemoryView Focus="536870952" TopRow="536870944" NbPerLine="16" />
-																								
+																																				
 	</gateway>
 	<Flags>
 		<Report>
@@ -38,21 +38,18 @@
 			
 	</Flags>
 	<Views>
-		<View File="C:\cortex\gateway\src\main.c" Line="15" Index="0" focus="1" />
+		<View File="C:\cortex\gateway\src\main.c" Line="13" Index="0" focus="1" />
 		<View File="C:\cortex\gateway\src\stm32f10x_it.c" Line="0" Index="1" />
 		<View File="C:\cortex\gateway\include\stm32f10x_it.h" Line="0" Index="2" />
 		<View File="C:\cortex\gateway\include\stm32f10x_conf.h" Line="0" Index="3" />
-		<View File="C:\cortex\gateway\src\stm32f10x_rcc.c" Line="0" Index="4" />
-		<View File="C:\cortex\gateway\src\stm32f10x_usart.c" Line="0" Index="5" />
-		<View File="C:\cortex\gateway\include\main.h" Line="0" Index="6" />
-		<View File="C:\cortex\gateway\src\stm32f10x_i2c.c" Line="1134" Index="7" />
-		<View File="C:\cortex\gateway\stlibrary\src\stm32f10x_adc.c" Line="1258" Index="8" />
-		<View File="C:\cortex\gateway\stlibrary\inc\stm32f10x_adc.h" Line="0" Index="9" />
-		<View File="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" Line="816" Index="10" />
-		<View File="C:\cortex\gateway\stlibrary\src\stm32f10x_pwr.c" Line="198" Index="11" />
-		<View File="C:\cortex\gateway\stlibrary\inc\stm32f10x_lib.h" Line="0" Index="12" />
-		<View File="C:\cortex\gateway\stlibrary\inc\cortexm3_macro.h" Line="0" Index="13" />
-		<View File="C:\cortex\gateway\src\cortexm3_macro.s" Line="0" Index="14" />
+		<View File="C:\cortex\gateway\include\main.h" Line="0" Index="4" />
+		<View File="C:\cortex\gateway\stlibrary\src\stm32f10x_adc.c" Line="1256" Index="5" />
+		<View File="C:\cortex\gateway\stlibrary\inc\stm32f10x_adc.h" Line="0" Index="6" />
+		<View File="C:\cortex\gateway\stlibrary\inc\stm32f10x_map.h" Line="814" Index="7" />
+		<View File="C:\cortex\gateway\stlibrary\src\stm32f10x_pwr.c" Line="196" Index="8" />
+		<View File="C:\cortex\gateway\stlibrary\inc\stm32f10x_lib.h" Line="0" Index="9" />
+		<View File="C:\cortex\gateway\stlibrary\inc\cortexm3_macro.h" Line="0" Index="10" />
+		<View File="C:\cortex\gateway\src\cortexm3_macro.s" Line="0" Index="11" />
 	</Views>
 	<Grep>
 		<GrepIncludeSub>yes</GrepIncludeSub>
