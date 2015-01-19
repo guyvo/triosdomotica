@@ -477,7 +477,7 @@ void vI2C2ReceiveTask ( void * params ){
 * Input          : None
 * Output         : None
 * Return         : None
-* worload 150µs
+* workload 150Âµs
 *
 *   
 *******************************************************************************/
